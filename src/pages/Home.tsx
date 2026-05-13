@@ -2,8 +2,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 import Layout from "@/components/Layout";
-import monogram from "@/assets/monogram.png";
-import heroImage from "@/assets/hero-ink-light.png";
+import monogram from "@/assets/monogram-balanced.png";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -83,26 +82,45 @@ const Home = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Side - Atmospheric Hero Image (40% presence) */}
+          {/* Right Side - Balanced Monogram (40% presence) */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 1.2, delay: 0.4, ease }}
-            className="md:col-span-2 relative aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/3] overflow-hidden md:translate-y-8"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.8, delay: 0.6, ease }}
+            className="md:col-span-2 relative flex items-center justify-center md:translate-y-8"
           >
-            <img
-              src={heroImage}
-              alt="Atmospheric ink and light composition"
-              width={600}
-              height={800}
-              loading="eager"
-              decoding="async"
-              className="w-full h-full object-cover object-center"
-              style={{
-                objectPosition: 'center 60%',
-                filter: 'contrast(1.02) brightness(1.01)',
-              }}
-            />
+            <div className="relative w-full max-w-xs md:max-w-sm lg:max-w-md aspect-square">
+              {/* Subtle environmental texture */}
+              <div 
+                className="absolute inset-0 rounded-full bg-gradient-to-br from-foreground/5 via-transparent to-foreground/3"
+                style={{
+                  filter: 'blur(40px)',
+                }}
+              />
+              
+              {/* Monogram with refined lighting */}
+              <motion.img
+                src={monogram}
+                alt="Echo in Ink monogram"
+                width={400}
+                height={400}
+                loading="eager"
+                decoding="async"
+                className="relative w-full h-full object-contain z-10"
+                style={{
+                  filter: 'contrast(1.1) brightness(1.05) saturate(0.9)',
+                }}
+                initial={{ opacity: 0, rotate: -5 }}
+                animate={{ opacity: 0.8, rotate: 0 }}
+                transition={{ duration: 2.4, delay: 0.8, ease }}
+              />
+              
+              {/* Soft depth shadow */}
+              <div 
+                className="absolute inset-0 rounded-full bg-foreground/8 blur-2xl scale-95 translate-y-2"
+                style={{ filter: 'blur(24px)' }}
+              />
+            </div>
           </motion.div>
         </div>
 
