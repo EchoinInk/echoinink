@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useRef } from "react";
 import Layout from "@/components/Layout";
 import monogram from "@/assets/monogram.png";
+import heroImage from "@/assets/hero-ink-light.png";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
