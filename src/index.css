@@ -83,16 +83,48 @@
 }
 
 @layer base {
-  * { @apply border-border; }
-  html { scroll-behavior: smooth; }
+  * {
+    @apply border-border;
+  }
   body {
-    @apply bg-background text-foreground antialiased;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-weight: 300;
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: 'Inter', sans-serif;
     letter-spacing: 0.003em;
     line-height: 1.65;
+    contain: layout style paint;
   }
   ::selection { background: hsl(var(--grad-violet) / 0.25); }
+  
+  /* Reduce CLS with containment */
+  img, video, iframe, embed, object {
+    contain: layout;
+  }
+  
+  /* Prevent layout shift during font loading */
+  .font-serif-display,
+  .font-sans {
+    font-display: swap;
+  }
+  
+  /* Motion performance optimizations */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* GPU acceleration for smooth animations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
 }
 
 @layer components {

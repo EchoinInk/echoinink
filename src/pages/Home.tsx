@@ -36,6 +36,10 @@ const Home = () => {
           src={monogram}
           alt=""
           aria-hidden
+          width={32}
+          height={32}
+          loading="eager"
+          decoding="async"
           initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 0.06, scale: 1 }}
           transition={{ duration: 1.8, ease }}
@@ -276,6 +280,10 @@ const Home = () => {
           src={monogram}
           alt=""
           aria-hidden
+          width={32}
+          height={32}
+          loading="lazy"
+          decoding="async"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.08 }}
           viewport={{ once: true }}

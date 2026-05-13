@@ -16,9 +16,11 @@ const Nav = () => {
   const location = useLocation();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
     onScroll();
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
@@ -33,13 +35,21 @@ const Nav = () => {
     >
       <nav className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={monogram} alt="Echo in Ink" className="w-8 h-8 object-contain transition-all duration-600 group-hover:scale-[1.02] group-hover:opacity-90" />
+          <img 
+            src={monogram} 
+            alt="Echo in Ink" 
+            width={32}
+            height={32}
+            loading="eager"
+            decoding="async"
+            className="w-8 h-8 object-contain transition-all duration-600 group-hover:scale-[1.02] group-hover:opacity-90" 
+          />
           <span className="font-serif-display text-base tracking-tight transition-all duration-600">Echo in Ink</span>
         </Link>
 
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden md:flex items-center gap-8" role="menubar">
           {links.map((l) => (
-            <li key={l.to}>
+            <li key={l.to} role="none">
               <NavLink
                 to={l.to}
                 end={l.to === "/"}
@@ -48,6 +58,7 @@ const Nav = () => {
                     isActive ? "text-foreground" : "text-foreground/55 hover:text-foreground/70"
                   }`
                 }
+                role="menuitem"
               >
                 {l.label}
               </NavLink>
@@ -59,16 +70,17 @@ const Nav = () => {
           Say hello →
         </Link>
       </nav>
-      <div className="md:hidden px-6 pb-4 flex gap-5 text-sm overflow-x-auto">
+      <nav className="md:hidden px-6 pb-4 flex gap-5 text-sm overflow-x-auto" aria-label="Mobile navigation" role="navigation">
         {links.map((l) => (
           <NavLink key={l.to} to={l.to} end={l.to === "/"}
-            className={({ isActive }) => `whitespace-nowrap transition-all duration-600 ${isActive ? "text-foreground" : "text-foreground/55 hover:text-foreground/70"}`}>
+            className={({ isActive }) => `whitespace-nowrap transition-all duration-600 ${isActive ? "text-foreground" : "text-foreground/55 hover:text-foreground/70"}`}
+            role="menuitem">
             {l.label}
           </NavLink>
         ))}
-      </div>
+      </nav>
       <div className="hairline" />
-      <div className="sr-only">Current path: {location.pathname}</div>
+        <div className="sr-only" role="status" aria-live="polite">Current page: {location.pathname}</div>
     </motion.header>
   );
 };
