@@ -22,8 +22,8 @@ const Section = ({ children, className = "", width = "reading", id }: SectionPro
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.15 }}
-      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-      className={`${widths[width]} mx-auto px-6 md:px-10 py-20 md:py-28 ${className}`}
+      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+      className={`${widths[width]} mx-auto px-6 md:px-12 py-24 md:py-36 ${className}`}
     >
       {children}
     </motion.section>

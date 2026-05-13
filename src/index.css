@@ -43,13 +43,13 @@
     --warm-grey: 33 14% 80%;
 
     /* Accent gradient stops: pink → violet → blue */
-    --grad-pink: 340 80% 78%;
-    --grad-violet: 268 55% 65%;
-    --grad-blue: 220 70% 70%;
+    --grad-pink: 340 75% 75%;
+    --grad-violet: 268 50% 62%;
+    --grad-blue: 220 65% 65%;
 
-    --gradient-soft: radial-gradient(ellipse at 30% 20%, hsl(var(--grad-pink) / 0.35), transparent 55%),
-                     radial-gradient(ellipse at 80% 60%, hsl(var(--grad-violet) / 0.30), transparent 60%),
-                     radial-gradient(ellipse at 50% 90%, hsl(var(--grad-blue) / 0.22), transparent 60%);
+    --gradient-soft: radial-gradient(ellipse at 25% 15%, hsl(var(--grad-pink) / 0.28), transparent 60%),
+                     radial-gradient(ellipse at 85% 55%, hsl(var(--grad-violet) / 0.25), transparent 65%),
+                     radial-gradient(ellipse at 45% 95%, hsl(var(--grad-blue) / 0.18), transparent 65%);
 
     --sidebar-background: 36 30% 94%;
     --sidebar-foreground: 240 8% 8%;
@@ -89,41 +89,46 @@
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     font-weight: 300;
-    letter-spacing: 0.005em;
+    letter-spacing: 0.003em;
+    line-height: 1.65;
   }
-  ::selection { background: hsl(var(--grad-violet) / 0.3); }
+  ::selection { background: hsl(var(--grad-violet) / 0.25); }
 }
 
 @layer components {
   .font-serif-display {
     font-family: 'Fraunces', Georgia, serif;
     font-optical-sizing: auto;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.015em;
+    font-weight: 400;
   }
 
   .eyebrow {
     font-family: 'Inter', sans-serif;
-    @apply text-xs uppercase tracking-[0.25em] font-normal;
+    @apply text-xs uppercase tracking-[0.28em] font-light;
     color: hsl(var(--grad-violet));
+    letter-spacing: 0.28em;
   }
 
   .lede {
-    @apply text-lg md:text-xl leading-relaxed font-light;
-    color: hsl(var(--foreground) / 0.78);
+    @apply text-lg md:text-xl leading-[1.7] font-light;
+    color: hsl(var(--foreground) / 0.75);
+    max-width: 48rem;
   }
 
   .body-prose {
-    @apply text-base md:text-[17px] leading-[1.75] font-light;
-    color: hsl(var(--foreground) / 0.75);
+    @apply text-base md:text-[17px] leading-[1.78] font-light;
+    color: hsl(var(--foreground) / 0.72);
+    max-width: 42rem;
   }
 
   .quiet-link {
-    @apply inline-flex items-center gap-2 text-sm tracking-wide transition-all duration-500;
-    color: hsl(var(--foreground) / 0.7);
+    @apply inline-flex items-center gap-2 text-sm tracking-wide transition-all duration-700;
+    color: hsl(var(--foreground) / 0.65);
   }
   .quiet-link:hover {
     color: hsl(var(--foreground));
-    letter-spacing: 0.04em;
+    letter-spacing: 0.035em;
   }
 
   .hairline {
@@ -132,18 +137,20 @@
   }
 
   .btn-quiet {
-    @apply inline-flex items-center gap-3 px-6 py-3 text-sm tracking-wide transition-all duration-500;
-    border: 1px solid hsl(var(--foreground) / 0.15);
+    @apply inline-flex items-center gap-3 px-7 py-[0.875rem] text-sm tracking-wide transition-all duration-700;
+    border: 1px solid hsl(var(--foreground) / 0.12);
     border-radius: 999px;
     background: transparent;
+    font-weight: 300;
   }
   .btn-quiet:hover {
-    border-color: hsl(var(--foreground) / 0.4);
-    box-shadow: 0 0 30px hsl(var(--grad-violet) / 0.18);
+    border-color: hsl(var(--foreground) / 0.35);
+    box-shadow: 0 0 40px hsl(var(--grad-violet) / 0.12);
+    transform: translateY(-1px);
   }
 
   .gradient-text {
-    background: linear-gradient(110deg, hsl(var(--grad-pink)), hsl(var(--grad-violet)) 50%, hsl(var(--grad-blue)));
+    background: linear-gradient(115deg, hsl(var(--grad-pink)), hsl(var(--grad-violet)) 45%, hsl(var(--grad-blue)) 85%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
