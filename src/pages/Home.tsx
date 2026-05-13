@@ -1,73 +1,120 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 import Layout from "@/components/Layout";
-import Section from "@/components/Section";
-import heroArch from "@/assets/hero-arch.png";
+import monogram from "@/assets/monogram.png";
+
+const ease = [0.22, 1, 0.36, 1] as const;
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 28 },
   visible: (i = 0) => ({
-    opacity: 1, y: 0,
-    transition: { duration: 1.1, delay: 0.15 * i, ease: [0.22, 1, 0.36, 1] as const }
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.4, delay: 0.18 * i, ease },
   }),
 };
 
 const Home = () => {
+  const heroRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  const heroY = useTransform(scrollYProgress, [0, 1], [0, 80]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
+
   return (
     <Layout>
-      {/* HERO */}
-      <section className="relative min-h-[90vh] flex items-center px-6 md:px-10">
-        <div className="max-w-7xl mx-auto w-full grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <motion.div initial="hidden" animate="visible" className="md:py-12">
-            <motion.p variants={fadeUp} custom={0} className="eyebrow mb-8">Where</motion.p>
+      {/* ───────────────────────────── HERO ───────────────────────────── */}
+      <section
+        ref={heroRef}
+        className="relative min-h-[92vh] flex items-center justify-center px-6 md:px-10 -mt-28 pt-28"
+      >
+        {/* faint signature monogram — atmospheric, not focal */}
+        <motion.img
+          src={monogram}
+          alt=""
+          aria-hidden
+          initial={{ opacity: 0, scale: 1.08 }}
+          animate={{ opacity: 0.06, scale: 1 }}
+          transition={{ duration: 3.6, ease }}
+          className="pointer-events-none absolute right-[6%] top-[18%] w-[34vw] max-w-[420px] min-w-[220px] select-none"
+        />
+
+        <motion.div
+          style={{ y: heroY, opacity: heroOpacity }}
+          className="relative max-w-4xl mx-auto text-center"
+        >
+          <motion.div initial="hidden" animate="visible">
+            <motion.p variants={fadeUp} custom={0} className="eyebrow mb-10">
+              A studio of quiet intention
+            </motion.p>
+
             <motion.h1
-              variants={fadeUp} custom={1}
-              className="font-serif-display text-5xl md:text-6xl lg:text-7xl leading-[1.02] text-foreground"
+              variants={fadeUp}
+              custom={1}
+              className="font-serif-display text-[12vw] sm:text-[9vw] md:text-[7.5vw] lg:text-[6.5rem] leading-[0.98] text-foreground"
             >
-              Ink Meets <em className="not-italic gradient-text">Light</em>
+              Where ink
+              <br />
+              meets <em className="not-italic gradient-text">light</em>
             </motion.h1>
 
-            <motion.div variants={fadeUp} custom={2} className="mt-10 max-w-md space-y-2 lede">
+            <motion.div
+              variants={fadeUp}
+              custom={2}
+              className="mt-12 mx-auto max-w-xl lede space-y-1 italic font-serif-display"
+            >
               <p>Ideas flow. Stories resonate.</p>
               <p>Emotions take shape.</p>
               <p>Design leaves an echo.</p>
             </motion.div>
 
-            <motion.div variants={fadeUp} custom={3} className="mt-12 flex items-center gap-6">
+            <motion.div
+              variants={fadeUp}
+              custom={3}
+              className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-8"
+            >
               <Link to="/work" className="btn-quiet">
-                Explore our world
+                Enter the studio
                 <span aria-hidden>→</span>
               </Link>
-              <Link to="/contact" className="quiet-link">Start a conversation</Link>
+              <Link to="/contact" className="quiet-link">
+                Begin a conversation
+              </Link>
             </motion.div>
           </motion.div>
+        </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 1.02 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.6, ease: "easeOut" }}
-            className="relative"
-          >
-            <div className="aspect-[4/5] md:aspect-[5/6] overflow-hidden rounded-sm">
-              <img src={heroArch} alt="A quiet archway opening onto a luminous horizon" className="w-full h-full object-cover" />
-            </div>
-            <div className="absolute -bottom-6 -left-6 px-4 py-2 text-xs tracking-[0.2em] uppercase bg-background/80 backdrop-blur-sm text-foreground/60">
-              Studio · Est. 2024
-            </div>
-          </motion.div>
-        </div>
+        {/* slow scroll cue */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.5 }}
+          transition={{ delay: 2.4, duration: 2 }}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.4em] uppercase text-foreground/40"
+        >
+          Scroll gently
+        </motion.div>
       </section>
 
-      {/* PHILOSOPHY */}
-      <Section width="reading">
-        <p className="eyebrow mb-8">Studio philosophy</p>
-        <h2 className="font-serif-display text-3xl md:text-4xl leading-snug text-foreground">
-          We believe great work begins in stillness — in the space between the brief
-          and the first mark on the page.
-        </h2>
-        <div className="mt-10 hairline" />
-        <div className="mt-10 grid md:grid-cols-2 gap-10 body-prose">
-          <p>
+      {/* ────────────────────── PHILOSOPHY (drifting) ────────────────── */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1.4, ease }}
+        className="relative max-w-[760px] mx-auto px-6 md:px-10 py-32 md:py-44"
+      >
+        <p className="eyebrow mb-10">A studio philosophy</p>
+        <p className="font-serif-display text-3xl md:text-[2.6rem] leading-[1.25] text-foreground/90">
+          We believe great work begins in
+          <em className="not-italic gradient-text"> stillness</em> — in the space between
+          the brief and the first mark on the page.
+        </p>
+
+        <div className="mt-20 grid md:grid-cols-2 gap-12 md:gap-20 body-prose">
+          <p className="md:translate-y-6">
             Echo in Ink is a small, founder-led studio. We make digital tools, brand
             systems, and quiet interfaces for people who care about the texture of
             their work as much as its outcome.
@@ -77,85 +124,203 @@ const Home = () => {
             intention. We build only what needs to exist — and we polish what stays.
           </p>
         </div>
-      </Section>
+      </motion.section>
 
-      {/* FEATURED WORK */}
-      <Section width="wide">
-        <div className="flex items-end justify-between mb-12">
-          <div>
-            <p className="eyebrow mb-3">Selected work</p>
-            <h2 className="font-serif-display text-3xl md:text-4xl">A handful of recent stories.</h2>
-          </div>
-          <Link to="/work" className="quiet-link hidden md:inline-flex">All work →</Link>
-        </div>
+      {/* ──────────────────── SELECTED WORK (editorial) ──────────────── */}
+      <section className="relative max-w-6xl mx-auto px-6 md:px-10 py-24 md:py-32">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 1.2, ease }}
+          className="max-w-md mb-20 md:mb-28"
+        >
+          <p className="eyebrow mb-4">Selected work</p>
+          <h2 className="font-serif-display text-3xl md:text-4xl leading-snug">
+            A handful of recent stories — each one shaped slowly, with care.
+          </h2>
+        </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-x-8 gap-y-16">
+        <div className="space-y-32 md:space-y-44">
           {featured.map((p, i) => (
-            <motion.div
+            <motion.article
               key={p.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 1.1, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className={i % 2 === 1 ? "md:mt-24" : ""}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 1.4, ease }}
+              className={`grid md:grid-cols-12 gap-8 md:gap-14 items-end ${
+                i % 2 === 0 ? "" : "md:[&>*:first-child]:order-2"
+              }`}
             >
-              <div className="aspect-[4/5] overflow-hidden rounded-sm mb-6 group" style={{ background: p.gradient }}>
-                <div className="w-full h-full backdrop-blur-3xl flex items-center justify-center transition-transform duration-[1.4s] group-hover:scale-[1.03]">
-                  <span className="font-serif-display italic text-7xl text-foreground/15">{p.mark}</span>
+              <div
+                className={`md:col-span-7 ${
+                  i % 2 === 0 ? "md:col-start-1" : "md:col-start-6"
+                }`}
+              >
+                <div
+                  className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden group"
+                  style={{
+                    background: p.gradient,
+                    borderRadius: "2px",
+                    boxShadow: "0 30px 80px -40px hsl(var(--grad-violet) / 0.35)",
+                  }}
+                >
+                  {/* watercolor wash inside frame */}
+                  <div className="absolute inset-0 bg-atmosphere opacity-50 mix-blend-soft-light" />
+                  <div className="absolute inset-0 flex items-center justify-center transition-transform duration-[1.8s] ease-out group-hover:scale-[1.04]">
+                    <span className="font-serif-display italic text-[8rem] md:text-[10rem] text-foreground/15">
+                      {p.mark}
+                    </span>
+                  </div>
+                  {/* edge softening */}
+                  <div
+                    className="absolute inset-0 pointer-events-none"
+                    style={{
+                      boxShadow:
+                        "inset 0 0 80px 20px hsl(var(--background) / 0.35)",
+                    }}
+                  />
                 </div>
               </div>
-              <p className="eyebrow mb-2">{p.kind}</p>
-              <h3 className="font-serif-display text-2xl md:text-3xl mb-2">{p.title}</h3>
-              <p className="body-prose">{p.note}</p>
-            </motion.div>
+
+              <div
+                className={`md:col-span-4 ${
+                  i % 2 === 0
+                    ? "md:col-start-9 md:translate-y-8"
+                    : "md:col-start-1 md:translate-y-8"
+                }`}
+              >
+                <p className="eyebrow mb-3">{p.kind}</p>
+                <h3 className="font-serif-display text-2xl md:text-[1.9rem] leading-tight mb-4">
+                  {p.title}
+                </h3>
+                <p className="body-prose">{p.note}</p>
+                <Link to="/work" className="quiet-link mt-6">
+                  Read the story →
+                </Link>
+              </div>
+            </motion.article>
           ))}
         </div>
-      </Section>
 
-      {/* SERVICES PREVIEW */}
-      <Section width="reading">
-        <p className="eyebrow mb-8">What we do</p>
-        <h2 className="font-serif-display text-3xl md:text-4xl mb-12">A small set of practices, deeply considered.</h2>
-        <ul className="divide-y divide-foreground/10">
-          {services.map((s) => (
-            <li key={s.title} className="py-7 flex items-baseline gap-6">
-              <span className="font-serif-display italic text-foreground/40 text-sm w-10">0{s.n}</span>
+        <div className="mt-28 text-center">
+          <Link to="/work" className="quiet-link">
+            See all selected work →
+          </Link>
+        </div>
+      </section>
+
+      {/* ───────────────────────── PRACTICE ──────────────────────────── */}
+      <motion.section
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 1.4, ease }}
+        className="relative max-w-[860px] mx-auto px-6 md:px-10 py-32 md:py-44"
+      >
+        <p className="eyebrow mb-8">Our practice</p>
+        <h2 className="font-serif-display text-3xl md:text-4xl mb-16 max-w-xl">
+          A small set of practices, deeply considered.
+        </h2>
+        <ul>
+          {services.map((s, i) => (
+            <motion.li
+              key={s.title}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{ duration: 1, delay: i * 0.08, ease }}
+              className="group py-8 flex items-baseline gap-8 border-t border-foreground/10 last:border-b"
+            >
+              <span className="font-serif-display italic text-foreground/35 text-sm w-10">
+                0{s.n}
+              </span>
               <div className="flex-1">
-                <h3 className="font-serif-display text-xl md:text-2xl">{s.title}</h3>
-                <p className="text-sm text-foreground/60 mt-1">{s.line}</p>
+                <h3 className="font-serif-display text-xl md:text-2xl transition-all duration-700 group-hover:tracking-wide">
+                  {s.title}
+                </h3>
+                <p className="text-sm text-foreground/55 mt-2 max-w-md">{s.line}</p>
               </div>
-            </li>
+              <span className="text-foreground/30 transition-all duration-700 group-hover:text-foreground/70 group-hover:translate-x-1">
+                →
+              </span>
+            </motion.li>
           ))}
         </ul>
-        <div className="mt-12">
-          <Link to="/services" className="quiet-link">Read more about our practice →</Link>
+        <div className="mt-14">
+          <Link to="/services" className="quiet-link">
+            Read more about our practice →
+          </Link>
         </div>
-      </Section>
+      </motion.section>
 
-      {/* QUIET CTA */}
-      <Section width="reading" className="text-center">
-        <div className="hairline mb-16" />
-        <p className="eyebrow mb-8">A quiet invitation</p>
-        <h2 className="font-serif-display text-4xl md:text-5xl leading-tight">
-          If your work is ready for a little more <em className="gradient-text not-italic">breathing room</em>, we'd love to hear from you.
+      {/* ─────────────────────── QUIET INVITATION ────────────────────── */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 1.6, ease }}
+        className="relative max-w-3xl mx-auto px-6 md:px-10 py-40 md:py-56 text-center"
+      >
+        <p className="eyebrow mb-10">A quiet invitation</p>
+        <h2 className="font-serif-display text-4xl md:text-[3.4rem] leading-[1.1]">
+          If your work is ready for a little more{" "}
+          <em className="gradient-text not-italic">breathing room</em>, we'd love to hear from you.
         </h2>
-        <div className="mt-12">
-          <Link to="/contact" className="btn-quiet">Begin a conversation →</Link>
+        <div className="mt-16">
+          <Link to="/contact" className="btn-quiet">
+            Begin a conversation →
+          </Link>
         </div>
-      </Section>
+        <motion.img
+          src={monogram}
+          alt=""
+          aria-hidden
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 0.08 }}
+          viewport={{ once: true }}
+          transition={{ duration: 2.4, ease }}
+          className="mx-auto mt-24 w-10 opacity-50"
+        />
+      </motion.section>
     </Layout>
   );
 };
 
 const featured = [
-  { title: "Lumen Journal", kind: "Brand & Product", mark: "L", note: "A reflective writing companion designed for end-of-day calm.",
-    gradient: "linear-gradient(135deg, hsl(340 70% 88%), hsl(268 45% 80%) 60%, hsl(220 60% 82%))" },
-  { title: "North Atelier", kind: "Identity", mark: "N", note: "An editorial identity for an independent ceramics studio in Maine.",
-    gradient: "linear-gradient(160deg, hsl(36 30% 90%), hsl(33 18% 78%))" },
-  { title: "Field Notes OS", kind: "Design system", mark: "F", note: "A design system built around quiet legibility and slow rhythm.",
-    gradient: "linear-gradient(180deg, hsl(220 50% 86%), hsl(290 40% 80%))" },
-  { title: "Mira & Co.", kind: "Digital experience", mark: "M", note: "A spacious commerce experience for a botanical perfumery.",
-    gradient: "linear-gradient(135deg, hsl(290 35% 82%), hsl(340 60% 86%))" },
+  {
+    title: "Lumen Journal",
+    kind: "Brand & Product",
+    mark: "L",
+    note: "A reflective writing companion designed for end-of-day calm.",
+    gradient:
+      "linear-gradient(135deg, hsl(340 70% 90%), hsl(268 45% 82%) 60%, hsl(220 60% 84%))",
+  },
+  {
+    title: "North Atelier",
+    kind: "Identity",
+    mark: "N",
+    note: "An editorial identity for an independent ceramics studio in Maine.",
+    gradient:
+      "linear-gradient(160deg, hsl(36 30% 92%), hsl(33 18% 80%))",
+  },
+  {
+    title: "Field Notes OS",
+    kind: "Design system",
+    mark: "F",
+    note: "A design system built around quiet legibility and slow rhythm.",
+    gradient:
+      "linear-gradient(180deg, hsl(220 50% 88%), hsl(290 40% 82%))",
+  },
+  {
+    title: "Mira & Co.",
+    kind: "Digital experience",
+    mark: "M",
+    note: "A spacious commerce experience for a botanical perfumery.",
+    gradient:
+      "linear-gradient(135deg, hsl(290 35% 84%), hsl(340 60% 88%))",
+  },
 ];
 
 const services = [
