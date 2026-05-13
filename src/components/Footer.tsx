@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import monogram from "../src/assets/monogram.png";
+import monogram from "../assets/monogram.png";
 
 const Footer = () => {
   return (
