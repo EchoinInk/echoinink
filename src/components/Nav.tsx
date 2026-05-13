@@ -47,9 +47,9 @@ const Nav = () => {
           <span className="font-serif-display text-base tracking-tight transition-all duration-600">Echo in Ink</span>
         </Link>
 
-        <ul className="hidden md:flex items-center gap-8" role="menubar">
+        <ul className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <li key={l.to} role="none">
+            <li key={l.to}>
               <NavLink
                 to={l.to}
                 end={l.to === "/"}
@@ -58,7 +58,6 @@ const Nav = () => {
                     isActive ? "text-foreground" : "text-foreground/55 hover:text-foreground/70"
                   }`
                 }
-                role="menuitem"
               >
                 {l.label}
               </NavLink>
@@ -70,17 +69,16 @@ const Nav = () => {
           Say hello →
         </Link>
       </nav>
-      <nav className="md:hidden px-6 pb-4 flex gap-5 text-sm overflow-x-auto" aria-label="Mobile navigation" role="navigation">
+      <nav className="md:hidden px-6 pb-4 flex gap-5 text-sm overflow-x-auto" aria-label="Mobile navigation">
         {links.map((l) => (
           <NavLink key={l.to} to={l.to} end={l.to === "/"}
-            className={({ isActive }) => `whitespace-nowrap transition-all duration-600 ${isActive ? "text-foreground" : "text-foreground/55 hover:text-foreground/70"}`}
-            role="menuitem">
+            className={({ isActive }) => `whitespace-nowrap transition-all duration-600 ${isActive ? "text-foreground" : "text-foreground/55 hover:text-foreground/70"}`}>
             {l.label}
           </NavLink>
         ))}
       </nav>
       <div className="hairline" />
-        <div className="sr-only" role="status" aria-live="polite">Current page: {location.pathname}</div>
+        <div className="sr-only" aria-live="polite">Current page: {location.pathname}</div>
     </motion.header>
   );
 };
