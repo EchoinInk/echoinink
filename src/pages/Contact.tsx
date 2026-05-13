@@ -24,8 +24,8 @@ const Contact = () => {
           <div className="space-y-8">
             <div>
               <p className="eyebrow mb-3">Email</p>
-              <a href="mailto:hello@echoinink.studio" className="font-serif-display text-2xl md:text-3xl hover:gradient-text transition">
-                hello@echoinink.studio
+              <a href="mailto:alex@echoin.ink" className="font-serif-display text-2xl md:text-3xl hover:gradient-text transition">
+                alex@echoin.ink
               </a>
             </div>
             <div>
