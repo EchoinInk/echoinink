@@ -30,76 +30,92 @@ const Home = () => {
       {/* ───────────────────────────── HERO ───────────────────────────── */}
       <section
         ref={heroRef}
-        className="relative min-h-[95vh] flex items-center justify-center px-6 md:px-12 -mt-28 pt-28"
+        className="relative min-h-[85vh] md:min-h-[90vh] flex items-center px-6 md:px-12 py-16 md:py-20"
       >
-        {/* faint signature monogram — atmospheric, not focal */}
-        <motion.img
-          src={monogram}
-          alt=""
-          aria-hidden
-          width={32}
-          height={32}
-          loading="eager"
-          decoding="async"
-          initial={{ opacity: 0, scale: 1.08 }}
-          animate={{ opacity: 0.06, scale: 1 }}
-          transition={{ duration: 1.8, ease }}
-          className="pointer-events-none absolute right-[6%] top-[18%] w-[34vw] max-w-[420px] min-w-[220px] select-none"
-        />
-
-        <motion.div
-          style={{ y: heroY, opacity: heroOpacity }}
-          className="relative max-w-4xl mx-auto text-center"
-        >
-          <motion.div initial="hidden" animate="visible">
-            <motion.p variants={fadeUp} custom={0} className="eyebrow mb-12">
-              Thoughtful digital tools
-            </motion.p>
-
-            <motion.h1
-              variants={fadeUp}
-              custom={1}
-              className="font-serif-display text-[11vw] sm:text-[8.5vw] md:text-[7vw] lg:text-[5.8rem] leading-[1.04] text-foreground text-left md:text-center"
-            >
-              and emotionally
-              <br />
-              intelligent <em className="not-italic gradient-text">systems</em>
-            </motion.h1>
-
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center w-full">
+          {/* Left Side - Editorial Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.2, ease }}
+            className="text-left md:pr-8"
+          >
             <motion.div
-              variants={fadeUp}
-              custom={2}
-              className="mt-16 mx-auto max-w-lg lede space-y-3 italic font-serif-display text-left md:text-center"
+              initial="hidden"
+              animate="visible"
+              className="space-y-6 md:space-y-8"
             >
-              <p>Ideas flow. Stories resonate.</p>
-              <p>Emotions take shape.</p>
-              <p>Design leaves an echo.</p>
-            </motion.div>
+              <motion.p variants={fadeUp} custom={0} className="eyebrow">
+                WHERE
+              </motion.p>
 
-            <motion.div
-              variants={fadeUp}
-              custom={3}
-              className="mt-20 flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-center gap-8 sm:gap-10"
-            >
-              <Link to="/work" className="btn-quiet">
-                See the work
-                <span aria-hidden>→</span>
-              </Link>
-              <Link to="/contact" className="quiet-link">
-                Or just say hello
-              </Link>
+              <motion.h1
+                variants={fadeUp}
+                custom={1}
+                className="font-serif-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.1] md:leading-[1.08] text-foreground"
+              >
+                Ink Meets <em className="not-italic gradient-text">Light</em>
+              </motion.h1>
+
+              <motion.div
+                variants={fadeUp}
+                custom={2}
+                className="space-y-3 lede max-w-lg"
+              >
+                <p>Ideas flow. Stories resonate.</p>
+                <p>Emotions take shape.</p>
+                <p>Design leaves an echo.</p>
+              </motion.div>
+
+              <motion.div
+                variants={fadeUp}
+                custom={3}
+                className="pt-4"
+              >
+                <Link to="/work" className="btn-quiet">
+                  Explore our world
+                  <span aria-hidden>→</span>
+                </Link>
+              </motion.div>
             </motion.div>
           </motion.div>
-        </motion.div>
 
-        {/* slow scroll cue */}
+          {/* Right Side - Atmospheric Hero Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.4, ease }}
+            className="relative aspect-[4/3] md:aspect-[3/2] lg:aspect-[5/4] overflow-hidden"
+          >
+            <img
+              src={heroImage}
+              alt="Atmospheric ink and light composition"
+              width={800}
+              height={600}
+              loading="eager"
+              decoding="async"
+              className="w-full h-full object-cover object-center"
+              style={{
+                filter: 'contrast(1.05) brightness(1.02)',
+              }}
+            />
+            
+            {/* Subtle atmospheric overlay */}
+            <div 
+              className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-background/10 mix-blend-multiply"
+              aria-hidden="true"
+            />
+          </motion.div>
+        </div>
+
+        {/* Subtle scroll indicator */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.5 }}
-          transition={{ delay: 2.4, duration: 2 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[10px] tracking-[0.4em] uppercase text-foreground/40"
+          animate={{ opacity: 0.3 }}
+          transition={{ delay: 2.0, duration: 1.5 }}
+          className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
-          Scroll gently
+          <div className="w-px h-12 bg-foreground/15" />
         </motion.div>
       </section>
 
