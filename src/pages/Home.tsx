@@ -11,7 +11,7 @@ const fadeUp = {
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 2.0, delay: 0.32 * i + Math.random() * 0.1, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 2.0, delay: 0.32 * i + (i === 1 ? 0.08 : 0), ease: [0.22, 1, 0.36, 1] as const },
   }),
 };
 
@@ -31,18 +31,18 @@ const Home = () => {
         ref={heroRef}
         className="relative min-h-[85vh] md:min-h-[90vh] flex items-center px-6 md:px-12 py-16 md:py-20"
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-5 gap-16 md:gap-20 lg:gap-24 items-start w-full">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-[1.15fr_0.85fr] gap-12 md:gap-16 items-start w-full">
           {/* Left Side - Editorial Content (60% presence) */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease }}
-            className="md:col-span-3 text-left md:pr-12 lg:pr-16"
+            className="text-left md:pr-8"
           >
             <motion.div
               initial="hidden"
               animate="visible"
-              className="space-y-6 md:space-y-8 max-w-2xl"
+              className="space-y-6 md:space-y-8 max-w-xl"
             >
               <motion.p variants={fadeUp} custom={0} className="eyebrow">
                 WHERE
@@ -87,7 +87,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.8, delay: 0.6, ease }}
-            className="md:col-span-2 relative flex items-end justify-end md:translate-y-12 md:translate-x-4"
+            className="relative flex items-end justify-end md:translate-y-12 md:translate-x-4"
           >
             <div className="relative w-full max-w-[240px] md:max-w-[280px] lg:max-w-[320px] aspect-square">
               {/* Subtle atmospheric texture */}
