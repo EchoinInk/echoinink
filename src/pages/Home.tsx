@@ -11,7 +11,7 @@ const fadeUp = {
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 2.0, delay: 0.28 * i, ease: [0.22, 1, 0.36, 1] as const },
+    transition: { duration: 2.0, delay: 0.32 * i + Math.random() * 0.1, ease: [0.22, 1, 0.36, 1] as const },
   }),
 };
 
@@ -54,7 +54,7 @@ const Home = () => {
             <motion.h1
               variants={fadeUp}
               custom={1}
-              className="font-serif-display text-[11vw] sm:text-[8.5vw] md:text-[7vw] lg:text-[6rem] leading-[1.02] text-foreground"
+              className="font-serif-display text-[11vw] sm:text-[8.5vw] md:text-[7vw] lg:text-[5.8rem] leading-[1.04] text-foreground text-left md:text-center"
             >
               and emotionally
               <br />
@@ -64,7 +64,7 @@ const Home = () => {
             <motion.div
               variants={fadeUp}
               custom={2}
-              className="mt-16 mx-auto max-w-lg lede space-y-3 italic font-serif-display"
+              className="mt-16 mx-auto max-w-lg lede space-y-3 italic font-serif-display text-left md:text-center"
             >
               <p>Ideas flow. Stories resonate.</p>
               <p>Emotions take shape.</p>
@@ -74,14 +74,14 @@ const Home = () => {
             <motion.div
               variants={fadeUp}
               custom={3}
-              className="mt-20 flex flex-col sm:flex-row items-center justify-center gap-10"
+              className="mt-20 flex flex-col sm:flex-row items-start sm:items-center justify-start sm:justify-center gap-8 sm:gap-10"
             >
               <Link to="/work" className="btn-quiet">
-                Enter the studio
+                See the work
                 <span aria-hidden>→</span>
               </Link>
               <Link to="/contact" className="quiet-link">
-                Begin a conversation
+                Or just say hello
               </Link>
             </motion.div>
           </motion.div>
@@ -107,13 +107,13 @@ const Home = () => {
         className="relative max-w-[820px] mx-auto px-6 md:px-12 py-36 md:py-48"
       >
         <p className="eyebrow mb-12">A studio philosophy</p>
-        <p className="font-serif-display text-3xl md:text-[2.5rem] leading-[1.28] text-foreground/90">
+        <p className="font-serif-display text-3xl md:text-[2.5rem] leading-[1.32] text-foreground/90 text-left md:text-center">
           We believe great work begins in
           <em className="not-italic gradient-text"> stillness</em> — in the space between
           the brief and the first mark on the page.
         </p>
 
-        <div className="mt-24 grid md:grid-cols-2 gap-16 md:gap-28 body-prose">
+        <div className="mt-24 grid md:grid-cols-2 gap-16 md:gap-28 body-prose text-left md:text-left">
           <p className="md:translate-y-6">
             Echo in Ink is a small, founder-led studio. We make digital tools, brand
             systems, and quiet interfaces for people who care about the texture of
@@ -141,14 +141,14 @@ const Home = () => {
           </h2>
         </motion.div>
 
-        <div className="space-y-40 md:space-y-56">
+        <div className="space-y-36 md:space-y-48">
           {featured.map((p, i) => (
             <motion.article
               key={p.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 2.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 2.8, delay: i * 0.18 + Math.random() * 0.15, ease: [0.22, 1, 0.36, 1] }}
               className={`grid md:grid-cols-12 gap-8 md:gap-14 items-end ${
                 i % 2 === 0 ? "" : "md:[&>*:first-child]:order-2"
               }`}
@@ -163,13 +163,13 @@ const Home = () => {
                   style={{
                     background: p.gradient,
                     borderRadius: "1px",
-                    boxShadow: "0 20px 60px -30px hsl(var(--grad-violet) / 0.15)",
+                    boxShadow: "0 16px 48px -24px hsl(var(--grad-violet) / 0.12)",
                   }}
                 >
                   {/* watercolor wash inside frame */}
                   <div className="absolute inset-0 bg-atmosphere opacity-50 mix-blend-soft-light" />
-                  <div className="absolute inset-0 flex items-center justify-center transition-transform duration-[3200ms] ease-out group-hover:scale-[1.02]">
-                    <span className="font-serif-display italic text-[8rem] md:text-[10rem] text-foreground/12">
+                  <div className="absolute inset-0 flex items-center justify-center transition-transform duration-[3400ms] ease-out group-hover:scale-[1.015]">
+                    <span className="font-serif-display italic text-[7.5rem] md:text-[9.5rem] text-foreground/10">
                       {p.mark}
                     </span>
                   </div>
@@ -204,7 +204,7 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="mt-32 text-center">
+        <div className="mt-28 text-left md:text-center">
           <Link to="/work" className="quiet-link">
             See all selected work →
           </Link>
@@ -220,8 +220,8 @@ const Home = () => {
         className="relative max-w-[920px] mx-auto px-6 md:px-12 py-36 md:py-48"
       >
         <p className="eyebrow mb-8">Our practice</p>
-        <h2 className="font-serif-display text-3xl md:text-[3.8rem] leading-[1.08] mb-16 max-w-lg">
-          A small set of practices, deeply considered.
+        <h2 className="font-serif-display text-3xl md:text-[3.6rem] leading-[1.12] mb-16 max-w-lg">
+          A few things we do, thoughtfully.
         </h2>
         <ul>
           {services.map((s, i) => (
@@ -230,7 +230,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 1.6, delay: i * 0.16, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1.8, delay: i * 0.14 + Math.random() * 0.08, ease: [0.22, 1, 0.36, 1] }}
               className="group py-8 flex items-baseline gap-8 border-t border-foreground/10 last:border-b"
             >
               <span className="font-serif-display italic text-foreground/35 text-sm w-10">
@@ -260,17 +260,16 @@ const Home = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 2.0, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         className="relative max-w-3xl mx-auto px-6 md:px-12 py-44 md:py-64 text-center"
       >
         <p className="eyebrow mb-12">A quiet invitation</p>
-        <h2 className="font-serif-display text-4xl md:text-[3.6rem] leading-[1.12]">
-          If your work is ready for a little more{" "}
-          <em className="gradient-text not-italic">breathing room</em>, we'd love to hear from you.
+        <h2 className="font-serif-display text-4xl md:text-[3.4rem] leading-[1.15]">
+          If your work needs a little more space to breathe, I'd love to hear about it.
         </h2>
-        <div className="mt-20">
+        <div className="mt-18">
           <Link to="/contact" className="btn-quiet">
-            Begin a conversation →
+            Say hello →
           </Link>
         </div>
         <motion.img
@@ -280,7 +279,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.08 }}
           viewport={{ once: true }}
-          transition={{ duration: 3.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 3.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto mt-28 w-10 opacity-50"
         />
       </motion.section>

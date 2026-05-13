@@ -99,24 +99,24 @@
   .font-serif-display {
     font-family: 'Fraunces', Georgia, serif;
     font-optical-sizing: auto;
-    letter-spacing: -0.012em;
+    letter-spacing: -0.008em;
     font-weight: 400;
-    line-height: 1.05;
+    line-height: 1.06;
   }
 
   .eyebrow {
     font-family: 'Inter', sans-serif;
-    @apply text-xs uppercase tracking-[0.32em] font-light;
+    @apply text-xs uppercase tracking-[0.28em] font-light;
     color: hsl(var(--grad-violet));
-    letter-spacing: 0.32em;
-    line-height: 1.4;
+    letter-spacing: 0.28em;
+    line-height: 1.45;
   }
 
   .lede {
-    @apply text-lg md:text-xl leading-[1.72] font-light;
+    @apply text-lg md:text-xl leading-[1.68] font-light;
     color: hsl(var(--foreground) / 0.75);
-    max-width: 46rem;
-    line-height: 1.72;
+    max-width: 44rem;
+    line-height: 1.68;
   }
 
   .body-prose {
@@ -128,12 +128,12 @@
 
   .quiet-link {
     @apply inline-flex items-center gap-2 text-sm tracking-wide transition-all duration-700;
-    color: hsl(var(--foreground) / 0.60);
-    line-height: 1.5;
+    color: hsl(var(--foreground) / 0.58);
+    line-height: 1.52;
   }
   .quiet-link:hover {
     color: hsl(var(--foreground));
-    letter-spacing: 0.032em;
+    letter-spacing: 0.028em;
   }
 
   .hairline {
