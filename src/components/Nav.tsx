@@ -27,14 +27,14 @@ const Nav = () => {
       initial={{ opacity: 0, y: -8 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.2, ease: "easeOut" }}
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-900 ${
-        scrolled ? "backdrop-blur-lg bg-background/50" : "bg-transparent"
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-700 ${
+        scrolled ? "backdrop-blur-xl bg-background/40" : "bg-transparent"
       }`}
     >
       <nav className="max-w-7xl mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3 group">
-          <img src={monogram} alt="Echo in Ink" className="w-8 h-8 object-contain transition-all duration-900 group-hover:scale-105 group-hover:opacity-90" />
-          <span className="font-serif-display text-base tracking-tight transition-all duration-900 group-hover:tracking-tight">Echo in Ink</span>
+          <img src={monogram} alt="Echo in Ink" className="w-8 h-8 object-contain transition-all duration-700 group-hover:scale-[1.03] group-hover:opacity-85" />
+          <span className="font-serif-display text-base tracking-tight transition-all duration-700 group-hover:tracking-tight">Echo in Ink</span>
         </Link>
 
         <ul className="hidden md:flex items-center gap-8">
@@ -44,8 +44,8 @@ const Nav = () => {
                 to={l.to}
                 end={l.to === "/"}
                 className={({ isActive }) =>
-                  `text-sm tracking-wide transition-all duration-900 ${
-                    isActive ? "text-foreground" : "text-foreground/55 hover:text-foreground/80"
+                  `text-sm tracking-wide transition-all duration-700 ${
+                    isActive ? "text-foreground" : "text-foreground/55 hover:text-foreground/75"
                   }`
                 }
               >
@@ -55,14 +55,14 @@ const Nav = () => {
           ))}
         </ul>
 
-        <Link to="/contact" className="hidden md:inline-block text-sm tracking-wide text-foreground/65 hover:text-foreground/85 transition-all duration-900">
+        <Link to="/contact" className="hidden md:inline-block text-sm tracking-wide text-foreground/60 hover:text-foreground/80 transition-all duration-700">
           Say hello →
         </Link>
       </nav>
       <div className="md:hidden px-6 pb-4 flex gap-5 text-sm overflow-x-auto">
         {links.map((l) => (
           <NavLink key={l.to} to={l.to} end={l.to === "/"}
-            className={({ isActive }) => `whitespace-nowrap transition-all duration-900 ${isActive ? "text-foreground" : "text-foreground/55 hover:text-foreground/80"}`}>
+            className={({ isActive }) => `whitespace-nowrap transition-all duration-700 ${isActive ? "text-foreground" : "text-foreground/55 hover:text-foreground/75"}`}>
             {l.label}
           </NavLink>
         ))}

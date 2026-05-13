@@ -10,7 +10,7 @@ interface SectionProps {
 
 const widths = {
   narrow: "max-w-2xl",
-  reading: "max-w-[760px]",
+  reading: "max-w-[720px]",
   wide: "max-w-5xl",
   full: "max-w-7xl",
 };

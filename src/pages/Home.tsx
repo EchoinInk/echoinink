@@ -7,11 +7,11 @@ import monogram from "@/assets/monogram.png";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 32 },
+  hidden: { opacity: 0, y: 28 },
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 1.8, delay: 0.24 * i, ease },
+    transition: { duration: 2.0, delay: 0.28 * i, ease: [0.22, 1, 0.36, 1] as const },
   }),
 };
 
@@ -54,7 +54,7 @@ const Home = () => {
             <motion.h1
               variants={fadeUp}
               custom={1}
-              className="font-serif-display text-[12vw] sm:text-[9vw] md:text-[7.5vw] lg:text-[6.5rem] leading-[0.98] text-foreground"
+              className="font-serif-display text-[11vw] sm:text-[8.5vw] md:text-[7vw] lg:text-[6rem] leading-[1.02] text-foreground"
             >
               and emotionally
               <br />
@@ -64,7 +64,7 @@ const Home = () => {
             <motion.div
               variants={fadeUp}
               custom={2}
-              className="mt-16 mx-auto max-w-xl lede space-y-2 italic font-serif-display"
+              className="mt-16 mx-auto max-w-lg lede space-y-3 italic font-serif-display"
             >
               <p>Ideas flow. Stories resonate.</p>
               <p>Emotions take shape.</p>
@@ -107,13 +107,13 @@ const Home = () => {
         className="relative max-w-[820px] mx-auto px-6 md:px-12 py-36 md:py-48"
       >
         <p className="eyebrow mb-12">A studio philosophy</p>
-        <p className="font-serif-display text-3xl md:text-[2.6rem] leading-[1.25] text-foreground/90">
+        <p className="font-serif-display text-3xl md:text-[2.5rem] leading-[1.28] text-foreground/90">
           We believe great work begins in
           <em className="not-italic gradient-text"> stillness</em> — in the space between
           the brief and the first mark on the page.
         </p>
 
-        <div className="mt-24 grid md:grid-cols-2 gap-16 md:gap-24 body-prose">
+        <div className="mt-24 grid md:grid-cols-2 gap-16 md:gap-28 body-prose">
           <p className="md:translate-y-6">
             Echo in Ink is a small, founder-led studio. We make digital tools, brand
             systems, and quiet interfaces for people who care about the texture of
@@ -148,7 +148,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 2.4, ease }}
+              transition={{ duration: 2.6, ease: [0.22, 1, 0.36, 1] }}
               className={`grid md:grid-cols-12 gap-8 md:gap-14 items-end ${
                 i % 2 === 0 ? "" : "md:[&>*:first-child]:order-2"
               }`}
@@ -220,7 +220,7 @@ const Home = () => {
         className="relative max-w-[920px] mx-auto px-6 md:px-12 py-36 md:py-48"
       >
         <p className="eyebrow mb-8">Our practice</p>
-        <h2 className="font-serif-display text-3xl md:text-4xl mb-16 max-w-xl">
+        <h2 className="font-serif-display text-3xl md:text-[3.8rem] leading-[1.08] mb-16 max-w-lg">
           A small set of practices, deeply considered.
         </h2>
         <ul>
@@ -230,7 +230,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 1.4, delay: i * 0.12, ease }}
+              transition={{ duration: 1.6, delay: i * 0.16, ease: [0.22, 1, 0.36, 1] }}
               className="group py-8 flex items-baseline gap-8 border-t border-foreground/10 last:border-b"
             >
               <span className="font-serif-display italic text-foreground/35 text-sm w-10">
@@ -260,11 +260,11 @@ const Home = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 1.6, ease }}
+        transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
         className="relative max-w-3xl mx-auto px-6 md:px-12 py-44 md:py-64 text-center"
       >
         <p className="eyebrow mb-12">A quiet invitation</p>
-        <h2 className="font-serif-display text-4xl md:text-[3.4rem] leading-[1.1]">
+        <h2 className="font-serif-display text-4xl md:text-[3.6rem] leading-[1.12]">
           If your work is ready for a little more{" "}
           <em className="gradient-text not-italic">breathing room</em>, we'd love to hear from you.
         </h2>
@@ -280,7 +280,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.08 }}
           viewport={{ once: true }}
-          transition={{ duration: 2.8, ease }}
+          transition={{ duration: 3.2, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto mt-28 w-10 opacity-50"
         />
       </motion.section>

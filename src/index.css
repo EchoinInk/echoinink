@@ -43,13 +43,13 @@
     --warm-grey: 33 14% 80%;
 
     /* Accent gradient stops: pink → violet → blue */
-    --grad-pink: 340 75% 75%;
-    --grad-violet: 268 50% 62%;
-    --grad-blue: 220 65% 65%;
+    --grad-pink: 340 70% 72%;
+    --grad-violet: 268 45% 58%;
+    --grad-blue: 220 60% 60%;
 
-    --gradient-soft: radial-gradient(ellipse at 25% 15%, hsl(var(--grad-pink) / 0.28), transparent 60%),
-                     radial-gradient(ellipse at 85% 55%, hsl(var(--grad-violet) / 0.25), transparent 65%),
-                     radial-gradient(ellipse at 45% 95%, hsl(var(--grad-blue) / 0.18), transparent 65%);
+    --gradient-soft: radial-gradient(ellipse at 25% 15%, hsl(var(--grad-pink) / 0.22), transparent 65%),
+                     radial-gradient(ellipse at 85% 55%, hsl(var(--grad-violet) / 0.20), transparent 70%),
+                     radial-gradient(ellipse at 45% 95%, hsl(var(--grad-blue) / 0.15), transparent 70%);
 
     --sidebar-background: 36 30% 94%;
     --sidebar-foreground: 240 8% 8%;
@@ -99,36 +99,41 @@
   .font-serif-display {
     font-family: 'Fraunces', Georgia, serif;
     font-optical-sizing: auto;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.012em;
     font-weight: 400;
+    line-height: 1.05;
   }
 
   .eyebrow {
     font-family: 'Inter', sans-serif;
-    @apply text-xs uppercase tracking-[0.28em] font-light;
+    @apply text-xs uppercase tracking-[0.32em] font-light;
     color: hsl(var(--grad-violet));
-    letter-spacing: 0.28em;
+    letter-spacing: 0.32em;
+    line-height: 1.4;
   }
 
   .lede {
-    @apply text-lg md:text-xl leading-[1.7] font-light;
+    @apply text-lg md:text-xl leading-[1.72] font-light;
     color: hsl(var(--foreground) / 0.75);
-    max-width: 48rem;
+    max-width: 46rem;
+    line-height: 1.72;
   }
 
   .body-prose {
-    @apply text-base md:text-[17px] leading-[1.78] font-light;
-    color: hsl(var(--foreground) / 0.72);
-    max-width: 42rem;
+    @apply text-base md:text-[17px] leading-[1.82] font-light;
+    color: hsl(var(--foreground) / 0.70);
+    max-width: 40rem;
+    line-height: 1.82;
   }
 
   .quiet-link {
     @apply inline-flex items-center gap-2 text-sm tracking-wide transition-all duration-700;
-    color: hsl(var(--foreground) / 0.65);
+    color: hsl(var(--foreground) / 0.60);
+    line-height: 1.5;
   }
   .quiet-link:hover {
     color: hsl(var(--foreground));
-    letter-spacing: 0.035em;
+    letter-spacing: 0.032em;
   }
 
   .hairline {
@@ -137,15 +142,15 @@
   }
 
   .btn-quiet {
-    @apply inline-flex items-center gap-3 px-7 py-[0.875rem] text-sm tracking-wide transition-all duration-700;
+    @apply inline-flex items-center gap-3 px-7 py-[0.875rem] text-sm tracking-wide transition-all duration-500;
     border: 1px solid hsl(var(--foreground) / 0.12);
     border-radius: 999px;
     background: transparent;
     font-weight: 300;
   }
   .btn-quiet:hover {
-    border-color: hsl(var(--foreground) / 0.35);
-    box-shadow: 0 0 40px hsl(var(--grad-violet) / 0.12);
+    border-color: hsl(var(--foreground) / 0.30);
+    box-shadow: 0 0 32px hsl(var(--grad-violet) / 0.08);
     transform: translateY(-1px);
   }
 
