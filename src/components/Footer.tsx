@@ -1,43 +1,47 @@
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import monogram from "@/assets/monogram.png";
 
 const Footer = () => {
-  const navItems = [
-    { number: "1", label: "Work" },
-    { number: "2", label: "About" },
-    { number: "3", label: "Education" },
-    { number: "4", label: "Contact" },
-  ];
-
   return (
-    <motion.footer 
-      className="py-16 px-8"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
-    >
-      {/* Bottom Navigation */}
-      <div className="max-w-4xl mx-auto">
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-16">
-          {navItems.map((item) => (
-            <a
-              key={item.label}
-              href={`#${item.label.toLowerCase()}`}
-              className="flex items-center gap-3 text-mono text-sm text-foreground/70 hover:text-foreground transition-colors duration-200"
-            >
-              <span className="text-foreground/50">{item.number}</span>
-              <span>{item.label}</span>
-            </a>
-          ))}
+    <footer className="relative mt-32 pt-20 pb-10 px-6 md:px-10">
+      <div className="hairline mb-20" />
+      <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-16">
+        <div>
+          <Link to="/" className="flex items-center gap-3">
+            <img src={monogram} alt="" className="w-10 h-10" />
+            <span className="font-serif-display text-lg">Echo in Ink</span>
+          </Link>
+          <p className="mt-6 text-sm text-foreground/60 max-w-xs leading-relaxed">
+            A small studio for thoughtful digital work. Breathing room for creative ideas.
+          </p>
         </div>
 
-        {/* Copyright */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 pt-8 border-t border-foreground/10">
-          <p className="text-mono text-xs text-foreground/50">© Maya Chen 2024</p>
-          <p className="text-mono text-xs text-foreground/50">Made in California</p>
+        <div>
+          <p className="eyebrow mb-5">Pages</p>
+          <ul className="space-y-3 text-sm text-foreground/70">
+            <li><Link to="/work" className="hover:text-foreground transition">Selected work</Link></li>
+            <li><Link to="/services" className="hover:text-foreground transition">Services</Link></li>
+            <li><Link to="/about" className="hover:text-foreground transition">About the studio</Link></li>
+            <li><Link to="/contact" className="hover:text-foreground transition">Contact</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="eyebrow mb-5">Elsewhere</p>
+          <ul className="space-y-3 text-sm text-foreground/70">
+            <li><a href="mailto:hello@echoinink.studio" className="hover:text-foreground transition">hello@echoinink.studio</a></li>
+            <li><a href="#" className="hover:text-foreground transition">Read.cv</a></li>
+            <li><a href="#" className="hover:text-foreground transition">Are.na</a></li>
+            <li><a href="#" className="hover:text-foreground transition">Instagram</a></li>
+          </ul>
         </div>
       </div>
-    </motion.footer>
+
+      <div className="max-w-6xl mx-auto mt-20 flex flex-col md:flex-row justify-between gap-3 text-xs text-foreground/45">
+        <p>© {new Date().getFullYear()} Echo in Ink. Made with quiet attention.</p>
+        <p className="italic font-serif-display">Where ink meets light.</p>
+      </div>
+    </footer>
   );
 };
 

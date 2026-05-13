@@ -1,0 +1,17 @@
+import { ReactNode } from "react";
+import Nav from "./Nav";
+import Footer from "./Footer";
+import GradientBackground from "./GradientBackground";
+
+const Layout = ({ children }: { children: ReactNode }) => {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <GradientBackground />
+      <Nav />
+      <main className="flex-1 pt-28">{children}</main>
+      <Footer />
+    </div>
+  );
+};
+
+export default Layout;
