@@ -69,14 +69,14 @@ const Home = () => {
               <motion.div
                 variants={fadeUp}
                 custom={3}
-                className="pt-6"
+                className="pt-8"
               >
                 <Link 
                   to="/work" 
-                  className="group inline-flex items-center gap-2 text-sm tracking-wide border-b border-foreground/20 transition-all duration-700 hover:border-foreground/60 hover:gap-3"
+                  className="group inline-flex items-center gap-2 text-sm font-light tracking-wide border-b border-foreground/15 transition-all duration-800 hover:border-foreground/40 hover:gap-3"
                 >
                   Explore our world
-                  <span className="transition-transform duration-700 group-hover:translate-x-1">→</span>
+                  <span className="transition-transform duration-800 group-hover:translate-x-0.5">→</span>
                 </Link>
               </motion.div>
             </motion.div>
@@ -87,14 +87,23 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.8, delay: 0.6, ease }}
-            className="md:col-span-2 relative flex items-center justify-center md:translate-y-8"
+            className="md:col-span-2 relative flex items-end justify-end md:translate-y-12 md:translate-x-4"
           >
-            <div className="relative w-full max-w-xs md:max-w-sm lg:max-w-md aspect-square">
-              {/* Subtle environmental texture */}
+            <div className="relative w-full max-w-[240px] md:max-w-[280px] lg:max-w-[320px] aspect-square">
+              {/* Subtle atmospheric texture */}
               <div 
-                className="absolute inset-0 rounded-full bg-gradient-to-br from-foreground/5 via-transparent to-foreground/3"
+                className="absolute inset-0 rounded-full bg-gradient-to-br from-foreground/3 via-transparent to-foreground/2"
                 style={{
-                  filter: 'blur(40px)',
+                  filter: 'blur(60px)',
+                }}
+              />
+              
+              {/* Extremely subtle ink diffusion */}
+              <div 
+                className="absolute inset-0 rounded-full bg-gradient-to-tr from-grad-violet/5 via-transparent to-grad-indigo/3"
+                style={{
+                  filter: 'blur(80px)',
+                  mixBlendMode: 'soft-light',
                 }}
               />
               
@@ -102,23 +111,23 @@ const Home = () => {
               <motion.img
                 src={monogram}
                 alt="Echo in Ink monogram"
-                width={400}
-                height={400}
+                width={320}
+                height={320}
                 loading="eager"
                 decoding="async"
                 className="relative w-full h-full object-contain z-10"
                 style={{
-                  filter: 'contrast(1.1) brightness(1.05) saturate(0.9)',
+                  filter: 'contrast(1.05) brightness(1.02) saturate(0.85)',
                 }}
-                initial={{ opacity: 0, rotate: -5 }}
-                animate={{ opacity: 0.8, rotate: 0 }}
-                transition={{ duration: 2.4, delay: 0.8, ease }}
+                initial={{ opacity: 0, rotate: -3 }}
+                animate={{ opacity: 0.75, rotate: 0 }}
+                transition={{ duration: 2.8, delay: 0.8, ease }}
               />
               
               {/* Soft depth shadow */}
               <div 
-                className="absolute inset-0 rounded-full bg-foreground/8 blur-2xl scale-95 translate-y-2"
-                style={{ filter: 'blur(24px)' }}
+                className="absolute inset-0 rounded-full bg-foreground/6 blur-3xl scale-90 translate-y-3"
+                style={{ filter: 'blur(32px)' }}
               />
             </div>
           </motion.div>
