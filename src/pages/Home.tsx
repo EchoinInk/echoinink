@@ -32,18 +32,18 @@ const Home = () => {
         ref={heroRef}
         className="relative min-h-[85vh] md:min-h-[90vh] flex items-center px-6 md:px-12 py-16 md:py-20"
       >
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 lg:gap-20 items-center w-full">
-          {/* Left Side - Editorial Content */}
+        <div className="max-w-7xl mx-auto grid md:grid-cols-5 gap-16 md:gap-20 lg:gap-24 items-start w-full">
+          {/* Left Side - Editorial Content (60% presence) */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.2, ease }}
-            className="text-left md:pr-8"
+            className="md:col-span-3 text-left md:pr-12 lg:pr-16"
           >
             <motion.div
               initial="hidden"
               animate="visible"
-              className="space-y-6 md:space-y-8"
+              className="space-y-6 md:space-y-8 max-w-2xl"
             >
               <motion.p variants={fadeUp} custom={0} className="eyebrow">
                 WHERE
@@ -60,7 +60,7 @@ const Home = () => {
               <motion.div
                 variants={fadeUp}
                 custom={2}
-                className="space-y-3 lede max-w-lg"
+                className="space-y-3 lede"
               >
                 <p>Ideas flow. Stories resonate.</p>
                 <p>Emotions take shape.</p>
@@ -70,40 +70,38 @@ const Home = () => {
               <motion.div
                 variants={fadeUp}
                 custom={3}
-                className="pt-4"
+                className="pt-6"
               >
-                <Link to="/work" className="btn-quiet">
+                <Link 
+                  to="/work" 
+                  className="group inline-flex items-center gap-2 text-sm tracking-wide border-b border-foreground/20 transition-all duration-700 hover:border-foreground/60 hover:gap-3"
+                >
                   Explore our world
-                  <span aria-hidden>→</span>
+                  <span className="transition-transform duration-700 group-hover:translate-x-1">→</span>
                 </Link>
               </motion.div>
             </motion.div>
           </motion.div>
 
-          {/* Right Side - Atmospheric Hero Image */}
+          {/* Right Side - Atmospheric Hero Image (40% presence) */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2, delay: 0.4, ease }}
-            className="relative aspect-[4/3] md:aspect-[3/2] lg:aspect-[5/4] overflow-hidden"
+            className="md:col-span-2 relative aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/3] overflow-hidden md:translate-y-8"
           >
             <img
               src={heroImage}
               alt="Atmospheric ink and light composition"
-              width={800}
-              height={600}
+              width={600}
+              height={800}
               loading="eager"
               decoding="async"
               className="w-full h-full object-cover object-center"
               style={{
-                filter: 'contrast(1.05) brightness(1.02)',
+                objectPosition: 'center 60%',
+                filter: 'contrast(1.02) brightness(1.01)',
               }}
-            />
-            
-            {/* Subtle atmospheric overlay */}
-            <div 
-              className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-background/10 mix-blend-multiply"
-              aria-hidden="true"
             />
           </motion.div>
         </div>
