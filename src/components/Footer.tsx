@@ -20,8 +20,8 @@ const Footer = () => {
           <p className="eyebrow mb-5">Pages</p>
           <ul className="space-y-3 text-sm text-foreground/70">
             <li><Link to="/work" className="hover:text-foreground transition">Selected work</Link></li>
-            <li><Link to="/services" className="hover:text-foreground transition">Services</Link></li>
-            <li><Link to="/about" className="hover:text-foreground transition">About the studio</Link></li>
+            <li><Link to="/process" className="hover:text-foreground transition">Process</Link></li>
+            <li><Link to="/studio" className="hover:text-foreground transition">About the studio</Link></li>
             <li><Link to="/contact" className="hover:text-foreground transition">Contact</Link></li>
           </ul>
         </div>
@@ -29,7 +29,7 @@ const Footer = () => {
         <div>
           <p className="eyebrow mb-5">Elsewhere</p>
           <ul className="space-y-3 text-sm text-foreground/70">
-            <li><a href="mailto:hello@echoinink.studio" className="hover:text-foreground transition">hello@echoinink.studio</a></li>
+            <li><a href="mailto:alex@echoin.ink" className="hover:text-foreground transition">alex@echoin.ink</a></li>
             <li><a href="#" className="hover:text-foreground transition">Read.cv</a></li>
             <li><a href="#" className="hover:text-foreground transition">Are.na</a></li>
             <li><a href="#" className="hover:text-foreground transition">Instagram</a></li>

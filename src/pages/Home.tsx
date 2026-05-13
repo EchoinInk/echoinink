@@ -48,7 +48,7 @@ const Home = () => {
         >
           <motion.div initial="hidden" animate="visible">
             <motion.p variants={fadeUp} custom={0} className="eyebrow mb-10">
-              A studio of quiet intention
+              Thoughtful digital tools
             </motion.p>
 
             <motion.h1
@@ -56,9 +56,9 @@ const Home = () => {
               custom={1}
               className="font-serif-display text-[12vw] sm:text-[9vw] md:text-[7.5vw] lg:text-[6.5rem] leading-[0.98] text-foreground"
             >
-              Where ink
+              and emotionally
               <br />
-              meets <em className="not-italic gradient-text">light</em>
+              intelligent <em className="not-italic gradient-text">systems</em>
             </motion.h1>
 
             <motion.div
@@ -249,7 +249,7 @@ const Home = () => {
           ))}
         </ul>
         <div className="mt-14">
-          <Link to="/services" className="quiet-link">
+          <Link to="/process" className="quiet-link">
             Read more about our practice →
           </Link>
         </div>

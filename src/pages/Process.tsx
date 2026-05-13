@@ -20,17 +20,17 @@ const services = [
     deliverables: ["Product design", "Interaction studies", "Prototyping", "Hand-off & build support"] },
 ];
 
-const Services = () => {
+const Process = () => {
   return (
     <Layout>
       <Section width="reading" className="pt-12">
-        <p className="eyebrow mb-8">Services</p>
+        <p className="eyebrow mb-8">Process</p>
         <h1 className="font-serif-display text-5xl md:text-6xl leading-[1.05]">
-          A small set of practices.
+          How we work together.
         </h1>
         <p className="lede mt-10">
-          We keep the studio's offering deliberately narrow. Each engagement is shaped
-          to the project — but our work tends to live in five quiet places.
+          Our process is collaborative and unhurried. We believe the best work emerges
+          from deep listening and careful consideration.
         </p>
       </Section>
 
@@ -59,7 +59,7 @@ const Services = () => {
       <Section width="reading" className="text-center">
         <div className="hairline mb-16" />
         <h2 className="font-serif-display text-3xl md:text-4xl">
-          Working together usually starts with a short note.
+          Working together usually starts with a conversation about your vision.
         </h2>
         <Link to="/contact" className="btn-quiet mt-10">Begin a conversation →</Link>
       </Section>
@@ -67,4 +67,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Process;

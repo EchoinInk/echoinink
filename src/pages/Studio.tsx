@@ -3,11 +3,11 @@ import Section from "@/components/Section";
 import { Link } from "react-router-dom";
 import monogram from "@/assets/monogram.png";
 
-const About = () => {
+const Studio = () => {
   return (
     <Layout>
       <Section width="reading" className="pt-12">
-        <p className="eyebrow mb-8">About the studio</p>
+        <p className="eyebrow mb-8">The studio</p>
         <h1 className="font-serif-display text-5xl md:text-6xl leading-[1.05]">
           A small studio with a steady hand.
         </h1>
@@ -73,4 +73,4 @@ const principles = [
   { title: "Stay close to the craft.", body: "The same hands that draw the early sketches finish the final files. Nothing is handed off into a void." },
 ];
 
-export default About;
+export default Studio;
