@@ -37,15 +37,12 @@ export function Hero() {
         </div>
 
         {/* Heading */}
-        <h1 className="font-editorial text-4xl md:text-5xl lg:text-7xl text-white mb-4 md:mb-5 tracking-wide">
+        <h1 className="font-editorial text-4xl md:text-5xl lg:text-7xl text-white mb-3 md:mb-4 tracking-wide">
           Echo in Ink
         </h1>
-
-        <StarDivider />
-
-        {/* Tagline */}
+ {/* Tagline */}
         <p
-          className="font-structural text-[10px] md:text-[11px] tracking-[0.3em] uppercase mb-6 md:mb-8"
+          className="font-structural text-[15px] md:text-[16px] tracking-[0.3em] uppercase mb-1 md:mb-2"
           style={{
             background: 'linear-gradient(90deg, #E879F9, #1EC8FF, #6366F1, #A78BFA)',
             WebkitBackgroundClip: 'text',
@@ -55,13 +52,13 @@ export function Hero() {
         >
           DESIGN. EMOTION. ECHO.
         </p>
-
+        <StarDivider />
         {/* Subcopy */}
-        <div className="leading-relaxed mb-10 md:mb-12 max-w-2xl">
+        <div className="leading-relaxed mb-5 md:mb-7 max-w-2xl">
           <p className="font-editorial text-xl md:text-5xl text-white/90">
             Where ideas find resonance.
           </p>
-          <p className="font-structural text-lg md:text-2xl font-light text-white/60 mt-2">
+          <p className="font-structural text-xl md:text-xl font-light text-white/60 mt-2">
             Where stories find form.
           </p>
         </div>
