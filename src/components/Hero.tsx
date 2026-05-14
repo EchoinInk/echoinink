@@ -36,7 +36,7 @@ export function Hero() {
         </div>
 
         {/* Heading */}
-        <h1 className="font-editorial text-3xl md:text-4xl lg:text-5xl text-white mb-4 md:mb-5 tracking-wide">
+        <h1 className="font-editorial text-3xl md:text-4xl lg:text-7xl text-white mb-4 md:mb-5 tracking-wide">
           Echo in Ink
         </h1>
 
@@ -54,11 +54,11 @@ export function Hero() {
         </p>
 
         {/* Subcopy */}
-        <div className="leading-relaxed mb-10 md:mb-12 max-w-md">
-          <p className="font-editorial text-xl md:text-2xl text-white/60">
+        <div className="leading-relaxed mb-10 md:mb-12 max-w-lg">
+          <p className="font-editorial text-xl md:text-4xl text-white/60">
             Where ideas find resonance.
           </p>
-          <p className="font-structural text-sm md:text-base font-light text-white/40 mt-2">
+          <p className="font-structural text-md md:text-base font-light text-white/40 mt-2">
             Where stories find form.
           </p>
         </div>
