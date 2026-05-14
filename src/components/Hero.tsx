@@ -1,6 +1,7 @@
 import { BackgroundLayer } from './BackgroundLayer';
 import { Button } from './Button';
 import { Footer } from './Footer';
+import { StarDivider } from './StarDivider';
 import monogram from '@/assets/monogram-balanced.png';
 
 export function Hero() {
@@ -39,6 +40,8 @@ export function Hero() {
         <h1 className="font-editorial text-3xl md:text-4xl lg:text-7xl text-white mb-4 md:mb-5 tracking-wide">
           Echo in Ink
         </h1>
+
+        <StarDivider />
 
         {/* Tagline */}
         <p
