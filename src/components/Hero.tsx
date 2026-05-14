@@ -1,7 +1,7 @@
 import { BackgroundLayer } from './BackgroundLayer';
 import { Button } from './Button';
 import { Footer } from './Footer';
-import monogram from '@/assets/monogram_balanced.png';
+import monogram from '@/assets/monogram-balanced.png';
 
 export function Hero() {
   return (
