@@ -1,7 +1,7 @@
 import { BackgroundLayer } from './BackgroundLayer';
 import { Button } from './Button';
 import { Footer } from './Footer';
-import monogram from '@/assets/monogram_elevated.png';
+import monogram from '@/assets/monogram_balanced.png';
 
 export function Hero() {
   return (
@@ -11,11 +11,14 @@ export function Hero() {
       <div className="relative z-10 flex flex-col items-center text-center px-6">
         {/* Monogram */}
         <div className="relative mb-8 md:mb-10">
-          {/* Glow sphere */}
+          {/* Glow halo */}
           <div
-            className="absolute inset-0 pointer-events-none"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none rounded-full"
             style={{
-              background: 'radial-gradient(circle at center, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.10) 40%, rgba(255,255,255,0.05) 70%, transparent 100%)',
+              width: 'clamp(300px, 45vw, 700px)',
+              height: 'clamp(300px, 45vw, 700px)',
+              background: 'radial-gradient(circle, rgba(167,139,250,0.28) 0%, rgba(99,102,241,0.22) 35%, rgba(56,189,248,0.12) 60%, transparent 100%)',
+              filter: 'blur(90px)',
               mixBlendMode: 'screen',
               zIndex: 1,
             }}
@@ -38,14 +41,26 @@ export function Hero() {
         </h1>
 
         {/* Tagline */}
-        <p className="font-structural text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-white/60 mb-6 md:mb-8">
+        <p
+          className="font-structural text-[10px] md:text-[11px] tracking-[0.3em] uppercase mb-6 md:mb-8"
+          style={{
+            background: 'linear-gradient(90deg, #1EC8FF, #6366F1, #A78BFA, #E879F9)',
+            WebkitBackgroundClip: 'text',
+            WebkitTextFillColor: 'transparent',
+            backgroundClip: 'text',
+          }}
+        >
           DESIGN. EMOTION. ECHO.
         </p>
 
         {/* Subcopy */}
-        <div className="font-structural text-sm md:text-base text-white/50 leading-relaxed mb-10 md:mb-12 max-w-md">
-          <p>Where ideas find resonance.</p>
-          <p>Where stories find form.</p>
+        <div className="leading-relaxed mb-10 md:mb-12 max-w-md">
+          <p className="font-editorial text-base md:text-lg text-white/60">
+            Where ideas find resonance.
+          </p>
+          <p className="font-structural text-xs md:text-sm text-white/40 mt-1">
+            Where stories find form.
+          </p>
         </div>
 
         {/* CTA */}
