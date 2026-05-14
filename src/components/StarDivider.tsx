@@ -1,7 +1,7 @@
 export function StarDivider() {
   return (
     <div className="flex justify-center my-4 md:my-6">
-      <svg version="1.1" id="svg1" width="2017.6001" height="70.561401" viewBox="0 0 2017.6001 70.561401" xmlns="http://www.w3.org/2000/svg" style={{ transform: 'scale(0.5)', transformOrigin: 'center' }}>
+      <svg version="1.1" id="svg1" width="2017.6001" height="70.561401" viewBox="0 0 2017.6001 70.561401" xmlns="http://www.w3.org/2000/svg" style={{ transform: 'scale(0.25)', transformOrigin: 'center' }}>
   <defs>
     <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stopColor="#FF4DDB" />
