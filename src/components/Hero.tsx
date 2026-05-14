@@ -11,7 +11,7 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-col items-center text-center px-6">
         {/* Monogram */}
-        <div className="relative mt-12 md:mt-14 mb-8 md:mb-10">
+        <div className="relative mt-28 md:mt-32 mb-8 md:mb-10">
           {/* Glow halo */}
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none rounded-full"
@@ -37,7 +37,7 @@ export function Hero() {
         </div>
 
         {/* Heading */}
-        <h1 className="font-editorial text-3xl md:text-4xl lg:text-7xl text-white mb-4 md:mb-5 tracking-wide">
+        <h1 className="font-editorial text-4xl md:text-5xl lg:text-7xl text-white mb-4 md:mb-5 tracking-wide">
           Echo in Ink
         </h1>
 
@@ -57,11 +57,11 @@ export function Hero() {
         </p>
 
         {/* Subcopy */}
-        <div className="leading-relaxed mb-10 md:mb-12 max-w-lg">
-          <p className="font-editorial text-xl md:text-4xl text-white/60">
+        <div className="leading-relaxed mb-10 md:mb-12 max-w-2xl">
+          <p className="font-editorial text-xl md:text-5xl text-white/90">
             Where ideas find resonance.
           </p>
-          <p className="font-structural text-md md:text-base font-light text-white/40 mt-2">
+          <p className="font-structural text-lg md:text-2xl font-light text-white/60 mt-2">
             Where stories find form.
           </p>
         </div>
