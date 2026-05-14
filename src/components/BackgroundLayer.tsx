@@ -1,10 +1,56 @@
-const BackgroundLayer = () => {
-  return (
-    <div
-      className="absolute inset-0 hero-bg -z-10"
-      aria-hidden="true"
-    />
-  );
-};
+import { useEffect, useState } from 'react';
+import bgMobile from '@/assets/ei-hero-bg-dark-mobile-9x16.png';
+import bgStandard from '@/assets/ei-hero-bg-dark-16x9.png';
+import bgWide from '@/assets/ei-hero-bg-dark-21x9.png';
 
-export default BackgroundLayer;
+export function BackgroundLayer() {
+  const [bgImage, setBgImage] = useState<string>(bgStandard);
+
+  useEffect(() => {
+    const updateBg = () => {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const aspect = width / height;
+
+      if (aspect < 0.75) {
+        setBgImage(bgMobile);
+      } else if (aspect > 2.0) {
+        setBgImage(bgWide);
+      } else {
+        setBgImage(bgStandard);
+      }
+    };
+
+    updateBg();
+    window.addEventListener('resize', updateBg);
+    return () => window.removeEventListener('resize', updateBg);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-700"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      />
+      {/* Radial glow overlays */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at 50% 30%, rgba(30, 200, 255, 0.12) 0%, transparent 60%)',
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse at 70% 80%, rgba(167, 139, 250, 0.08) 0%, transparent 50%)',
+        }}
+      />
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'linear-gradient(180deg, rgba(15, 18, 32, 0.3) 0%, rgba(15, 18, 32, 0.85) 100%)',
+        }}
+      />
+    </div>
+  );
+}

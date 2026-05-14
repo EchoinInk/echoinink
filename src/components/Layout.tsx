@@ -1,17 +1,15 @@
-import { ReactNode } from "react";
-import Nav from "./Nav";
-import Footer from "./Footer";
-import GradientBackground from "./GradientBackground";
+import type { ReactNode } from 'react';
+import { Header } from './Header';
 
-const Layout = ({ children }: { children: ReactNode }) => {
+interface LayoutProps {
+  children: ReactNode;
+}
+
+export function Layout({ children }: LayoutProps) {
   return (
-    <div className="min-h-screen flex flex-col">
-      <GradientBackground />
-      <Nav />
-      <main className="flex-1 pt-28">{children}</main>
-      <Footer />
+    <div className="relative min-h-screen bg-[var(--ei-ink-black)]">
+      <Header />
+      <main>{children}</main>
     </div>
   );
-};
-
-export default Layout;
+}

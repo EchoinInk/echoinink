@@ -1,78 +1,46 @@
-import { Link } from "react-router-dom";
-import BackgroundLayer from "./BackgroundLayer";
-import "../styles/hero.css";
+import { BackgroundLayer } from './BackgroundLayer';
+import { Button } from './Button';
+import { Footer } from './Footer';
 
-const Hero = () => {
+export function Hero() {
   return (
-    <section className="relative min-h-screen -mt-28 pt-28 flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <BackgroundLayer />
 
-      {/* Nebula color wash */}
-      <div className="absolute inset-0 hero-nebula" aria-hidden="true" />
-
-      {/* Central luminous glow */}
-      <div className="absolute inset-0 hero-glow" aria-hidden="true" />
-
-      {/* Edge vignette */}
-      <div className="absolute inset-0 hero-vignette" aria-hidden="true" />
-
-      {/* Subtle grain */}
-      <div className="absolute inset-0 hero-grain" aria-hidden="true" />
-
-      {/* Content */}
-      <div className="relative z-10 flex flex-col items-center text-center px-6 pb-12">
+      <div className="relative z-10 flex flex-col items-center text-center px-6">
         {/* Monogram */}
-        <img
-          src="/monogram-elevated.png"
-          alt="Echo in Ink monogram"
-          className="hero-monogram mb-10 md:mb-14"
-          width={360}
-          height={360}
-          loading="eager"
-          decoding="async"
-        />
+        <div className="mb-8 md:mb-10">
+          <span
+            className="font-editorial text-7xl md:text-8xl lg:text-9xl text-white/90"
+            style={{
+              textShadow: '0 0 40px rgba(30, 200, 255, 0.3), 0 0 80px rgba(167, 139, 250, 0.2)',
+            }}
+          >
+            Ei
+          </span>
+        </div>
 
-        {/* Typography */}
-        <div className="max-w-[40ch] space-y-5 md:space-y-7">
-          <h1 className="font-serif-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-[1.08]">
-            Echo in Ink
-          </h1>
-          <p className="font-sans font-light text-lg md:text-xl tracking-[0.14em] uppercase text-foreground/75">
-            Design. Emotion. Echo.
-          </p>
-          <div className="space-y-1.5">
-            <p className="font-sans text-sm md:text-base text-foreground/55 font-light tracking-wide">
-              Where ideas find resonance.
-            </p>
-            <p className="font-sans text-sm md:text-base text-foreground/45 font-light tracking-wide">
-              Where stories find form.
-            </p>
-          </div>
+        {/* Heading */}
+        <h1 className="font-editorial text-3xl md:text-4xl lg:text-5xl text-white mb-4 md:mb-5 tracking-wide">
+          Echo in Ink
+        </h1>
+
+        {/* Tagline */}
+        <p className="font-structural text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-white/60 mb-6 md:mb-8">
+          DESIGN. EMOTION. ECHO.
+        </p>
+
+        {/* Subcopy */}
+        <div className="font-structural text-sm md:text-base text-white/50 leading-relaxed mb-10 md:mb-12 max-w-md">
+          <p>Where ideas find resonance.</p>
+          <p>Where stories find form.</p>
         </div>
 
         {/* CTA */}
-        <div className="mt-10 md:mt-14">
-          <Link to="/work" className="hero-cta-border">
-            <span className="hero-cta-inner">ENTER THE SANCTUARY</span>
-          </Link>
-        </div>
+        <Button>ENTER THE SANCTUARY</Button>
       </div>
 
-      {/* Microcopy bottom-left */}
-      <div className="absolute bottom-6 left-6 md:bottom-8 md:left-8 z-10">
-        <p className="font-sans text-xs uppercase tracking-widest text-foreground/40">
-          INK MEETS LIGHT.
-        </p>
-      </div>
-
-      {/* Microcopy bottom-right */}
-      <div className="absolute bottom-6 right-6 md:bottom-8 md:right-8 z-10">
-        <p className="font-sans text-xs uppercase tracking-widest text-foreground/40">
-          EMOTIONS BECOME DESIGN.
-        </p>
-      </div>
+      <Footer />
     </section>
   );
-};
-
-export default Hero;
+}

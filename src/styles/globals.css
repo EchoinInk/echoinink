@@ -1,0 +1,27 @@
+@import './tokens.css' layer(base);
+@import './typography.css' layer(base);
+@import './layout.css' layer(base);
+@import './hero.css' layer(components);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--ei-ink-black);
+    color: var(--ei-paper-white);
+    font-family: 'Suisse Intl', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(30, 200, 255, 0.25);
+    color: #ffffff;
+  }
+}
