@@ -46,7 +46,7 @@ export function BackgroundLayer() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'linear-gradient(180deg, rgba(15, 18, 32, 0.3) 0%, rgba(15, 18, 32, 0.85) 100%)',
+          background: 'linear-gradient(180deg, rgba(15, 18, 32, 0.15) 0%, rgba(15, 18, 32, 0.55) 100%)',
         }}
       />
     </div>
