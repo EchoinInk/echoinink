@@ -1,6 +1,7 @@
 import { BackgroundLayer } from './BackgroundLayer';
 import { Button } from './Button';
 import { Footer } from './Footer';
+import monogram from '@/assets/monogram_elevated.png';
 
 export function Hero() {
   return (
@@ -9,15 +10,26 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-col items-center text-center px-6">
         {/* Monogram */}
-        <div className="mb-8 md:mb-10">
-          <span
-            className="font-editorial text-7xl md:text-8xl lg:text-9xl text-white/90"
+        <div className="relative mb-8 md:mb-10">
+          {/* Glow sphere */}
+          <div
+            className="absolute inset-0 pointer-events-none"
             style={{
-              textShadow: '0 0 40px rgba(30, 200, 255, 0.3), 0 0 80px rgba(167, 139, 250, 0.2)',
+              background: 'radial-gradient(circle at center, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.10) 40%, rgba(255,255,255,0.05) 70%, transparent 100%)',
+              mixBlendMode: 'screen',
+              zIndex: 1,
             }}
-          >
-            Ei
-          </span>
+          />
+          <img
+            src={monogram}
+            alt="Ei monogram"
+            className="relative mx-auto"
+            style={{
+              width: 'clamp(180px, 30vw, 360px)',
+              filter: 'drop-shadow(0 0 24px rgba(167, 139, 250, 0.5)) drop-shadow(0 0 48px rgba(99, 102, 241, 0.3))',
+              zIndex: 2,
+            }}
+          />
         </div>
 
         {/* Heading */}
