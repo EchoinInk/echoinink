@@ -10,7 +10,7 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-col items-center text-center px-6">
         {/* Monogram */}
-        <div className="relative mb-8 md:mb-10">
+        <div className="relative mt-12 md:mt-14 mb-8 md:mb-10">
           {/* Glow halo */}
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none rounded-full"
@@ -28,7 +28,7 @@ export function Hero() {
             alt="Ei monogram"
             className="relative mx-auto"
             style={{
-              width: 'clamp(180px, 30vw, 360px)',
+              width: 'clamp(135px, 22vw, 260px)',
               filter: 'drop-shadow(0 0 24px rgba(167, 139, 250, 0.5)) drop-shadow(0 0 48px rgba(99, 102, 241, 0.3))',
               zIndex: 2,
             }}
@@ -44,7 +44,7 @@ export function Hero() {
         <p
           className="font-structural text-[10px] md:text-[11px] tracking-[0.3em] uppercase mb-6 md:mb-8"
           style={{
-            background: 'linear-gradient(90deg, #1EC8FF, #6366F1, #A78BFA, #E879F9)',
+            background: 'linear-gradient(90deg, #E879F9, #1EC8FF, #6366F1, #A78BFA)',
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             backgroundClip: 'text',
@@ -55,10 +55,10 @@ export function Hero() {
 
         {/* Subcopy */}
         <div className="leading-relaxed mb-10 md:mb-12 max-w-md">
-          <p className="font-editorial text-base md:text-lg text-white/60">
+          <p className="font-editorial text-xl md:text-2xl text-white/60">
             Where ideas find resonance.
           </p>
-          <p className="font-structural text-xs md:text-sm text-white/40 mt-1">
+          <p className="font-structural text-sm md:text-base font-light text-white/40 mt-2">
             Where stories find form.
           </p>
         </div>
