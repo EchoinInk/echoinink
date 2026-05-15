@@ -2,7 +2,7 @@ import { BackgroundLayer } from './BackgroundLayer';
 import { Button } from './Button';
 import { Footer } from './Footer';
 import { StarDivider } from './StarDivider';
-import monogram from '@/assets/monogram-balanced-3.png';
+import monogram from '@/assets/monogram-balanced.png';
 
 export function Hero() {
   return (
@@ -24,21 +24,12 @@ export function Hero() {
               zIndex: 1,
             }}
           />
-          <img
-            src={monogram}
-            alt="Ei monogram"
-            className="relative mx-auto"
-            style={{
-              width: 'clamp(135px, 22vw, 260px)',
-              filter: 'drop-shadow(0 0 24px rgba(167, 139, 250, 0.5)) drop-shadow(0 0 48px rgba(99, 102, 241, 0.3))',
-              zIndex: 2,
-            }}
-          />
+        
         </div>
 
         {/* Heading */}
         <h1
-          className="font-editorial text-4xl md:text-5xl lg:text-7xl text-[#F0F4FF] mb-1 md:mb-2 tracking-wide"
+          className="font-editorial text-4xl md:text-5xl lg:text-7xl text-[#F0F4FF] mt-11 mb-1 md:mb-2 tracking-wide"
           style={{ WebkitTextStroke: '0.25px #24294A' }}
         >
           Echo in Ink

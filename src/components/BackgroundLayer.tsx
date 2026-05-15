@@ -15,7 +15,7 @@ export function BackgroundLayer() {
       if (aspect < 0.75) {
         setBgImage(bgMobile);   // phones only
       } else {
-        setBgImage(bgWide);     // everything else
+        setBgImage(bgStandard);     // everything else
       }
     };
 
