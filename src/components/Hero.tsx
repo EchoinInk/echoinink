@@ -132,7 +132,7 @@ export function Hero() {
             className="relative mx-auto"
             style={{
               width: 'clamp(155px, 29vh, 382px)',
-              filter: 'drop-shadow(0 0 12px rgba(232, 121, 249, 0.26)) drop-shadow(0 0 34px rgba(168, 85, 247, 0.22)) drop-shadow(0 0 88px rgba(99, 102, 241, 0.13)) drop-shadow(0 0 150px rgba(168, 85, 247, 0.06))',
+              filter: 'brightness(0.94) contrast(0.90) saturate(1.10) drop-shadow(0 0 11px rgba(232, 121, 249, 0.22)) drop-shadow(-1px 1px 36px rgba(168, 85, 247, 0.20)) drop-shadow(-2px 2px 90px rgba(99, 102, 241, 0.12)) drop-shadow(0 0 150px rgba(168, 85, 247, 0.06))',
               zIndex: 2,
             }}
           />
