@@ -24,7 +24,16 @@ export function Hero() {
               zIndex: 1,
             }}
           />
-        
+        <img
+            src={monogram}
+            alt="Ei monogram"
+            className="relative mx-auto"
+            style={{
+              width: 'clamp(135px, 22vw, 260px)',
+              filter: 'drop-shadow(0 0 24px rgba(167, 139, 250, 0.5)) drop-shadow(0 0 48px rgba(99, 102, 241, 0.3))',
+              zIndex: 2,
+            }}
+          />
         </div>
 
         {/* Heading */}
