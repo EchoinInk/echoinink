@@ -31,24 +31,7 @@ export function BackgroundLayer() {
         style={{ backgroundImage: `url(${bgImage})` }}
       />
       {/* Radial glow overlays */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse at 50% 30%, rgba(30, 200, 255, 0.12) 0%, transparent 60%)',
-        }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse at 70% 80%, rgba(167, 139, 250, 0.08) 0%, transparent 50%)',
-        }}
-      />
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'linear-gradient(180deg, rgba(15, 18, 32, 0.15) 0%, rgba(15, 18, 32, 0.55) 100%)',
-        }}
-      />
+    
     </div>
   );
 }
