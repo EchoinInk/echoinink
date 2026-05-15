@@ -17,6 +17,46 @@ export function Hero() {
         }}
       />
 
+      {/* Secondary Energy Zone 1: Upper-left nebula cloud pocket */}
+      <div
+        className="absolute pointer-events-none z-[3]"
+        style={{
+          top: '5%',
+          left: '2%',
+          width: 'clamp(180px, 28vw, 420px)',
+          height: 'clamp(140px, 20vw, 300px)',
+          background: 'radial-gradient(ellipse 68% 62% at 35% 40%, rgba(168,85,247,0.10) 0%, rgba(120,55,200,0.06) 50%, transparent 80%)',
+          filter: 'blur(58px)',
+          mixBlendMode: 'screen',
+        }}
+      />
+      {/* Secondary Energy Zone 2: Right-side indigo nebula depth */}
+      <div
+        className="absolute pointer-events-none z-[3]"
+        style={{
+          top: '28%',
+          right: '3%',
+          width: 'clamp(160px, 22vw, 360px)',
+          height: 'clamp(200px, 28vw, 440px)',
+          background: 'radial-gradient(ellipse 58% 70% at 62% 44%, rgba(30,140,255,0.09) 0%, rgba(99,102,241,0.05) 55%, transparent 82%)',
+          filter: 'blur(65px)',
+          mixBlendMode: 'screen',
+        }}
+      />
+      {/* Secondary Energy Zone 3: Lower-left violet atmospheric pool */}
+      <div
+        className="absolute pointer-events-none z-[3]"
+        style={{
+          bottom: '22%',
+          left: '5%',
+          width: 'clamp(200px, 30vw, 460px)',
+          height: 'clamp(110px, 16vw, 260px)',
+          background: 'radial-gradient(ellipse 72% 58% at 32% 55%, rgba(180,75,240,0.08) 0%, rgba(99,102,241,0.04) 52%, transparent 80%)',
+          filter: 'blur(72px)',
+          mixBlendMode: 'screen',
+        }}
+      />
+
       {/* Water surface reflection — monogram light caught on the water below */}
       <div
         className="absolute pointer-events-none z-[4]"
@@ -77,7 +117,7 @@ export function Hero() {
             style={{
               width: 'clamp(80px, 9vw, 155px)',
               height: 'clamp(85px, 10vw, 170px)',
-              background: 'radial-gradient(ellipse, rgba(255,255,255,0.18) 0%, rgba(232,121,249,0.22) 45%, transparent 100%)',
+              background: 'radial-gradient(ellipse, rgba(255,255,255,0.12) 0%, rgba(232,121,249,0.20) 45%, transparent 100%)',
               filter: 'blur(14px)',
               mixBlendMode: 'screen',
               zIndex: 1,
@@ -123,6 +163,67 @@ export function Hero() {
               filter: 'blur(20px)',
               mixBlendMode: 'screen',
               zIndex: 3,
+            }}
+          />
+
+          {/* Reciprocal edge tinting — nebula haze coloring logo edges, transparent at center */}
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: 'clamp(165px, 28vw, 420px)',
+              height: 'clamp(175px, 30vw, 460px)',
+              background: 'radial-gradient(ellipse 92% 92% at 50% 50%, transparent 20%, rgba(110,50,200,0.26) 50%, rgba(40,110,240,0.16) 72%, transparent 100%)',
+              filter: 'blur(10px)',
+              mixBlendMode: 'multiply',
+              zIndex: 4,
+            }}
+          />
+          {/* Upper-left atmospheric depth — cool nebula feeding light into upper-left logo edge */}
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-82%, -68%)',
+              width: 'clamp(80px, 12vw, 180px)',
+              height: 'clamp(100px, 16vw, 240px)',
+              background: 'radial-gradient(ellipse 80% 82% at 82% 60%, rgba(30,150,255,0.20) 0%, rgba(90,100,240,0.12) 55%, transparent 100%)',
+              filter: 'blur(14px)',
+              mixBlendMode: 'multiply',
+              zIndex: 4,
+            }}
+          />
+          {/* Lower-right atmospheric depth — warm violet contaminating lower-right logo edge */}
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-22%, -32%)',
+              width: 'clamp(70px, 10vw, 160px)',
+              height: 'clamp(90px, 14vw, 210px)',
+              background: 'radial-gradient(ellipse 78% 80% at 20% 30%, rgba(180,70,230,0.18) 0%, rgba(99,60,220,0.10) 55%, transparent 100%)',
+              filter: 'blur(13px)',
+              mixBlendMode: 'multiply',
+              zIndex: 4,
+            }}
+          />
+          {/* Particulate shimmer — faint energy scatter around brightest logo zones */}
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: 'clamp(140px, 20vw, 320px)',
+              height: 'clamp(150px, 22vw, 350px)',
+              background: 'radial-gradient(circle at 18% 32%, rgba(255,255,255,0.07) 0%, transparent 32%), radial-gradient(circle at 78% 22%, rgba(232,121,249,0.06) 0%, transparent 26%), radial-gradient(circle at 62% 75%, rgba(30,200,255,0.05) 0%, transparent 30%), radial-gradient(circle at 28% 80%, rgba(168,85,247,0.06) 0%, transparent 24%), radial-gradient(circle at 90% 55%, rgba(255,255,255,0.04) 0%, transparent 20%)',
+              filter: 'blur(5px)',
+              mixBlendMode: 'screen',
+              zIndex: 4,
             }}
           />
         </div>
