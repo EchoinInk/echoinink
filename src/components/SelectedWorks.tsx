@@ -66,25 +66,51 @@ const works = [
 ] as const;
 
 type Work = (typeof works)[number];
+type WorkVariant = 'featured' | 'standard' | 'landscape' | 'square';
 
 function WorkPanel({
   work,
-  full = false,
+  variant = 'landscape',
   delay = 0,
 }: {
   work: Work;
-  full?: boolean;
+  variant?: WorkVariant;
   delay?: number;
 }) {
+  const isFull = variant === 'featured' || variant === 'standard';
+
+  const aspectClass = {
+    featured: 'aspect-[4/3] md:aspect-[16/9]',
+    standard: 'aspect-[4/3] md:aspect-[21/9]',
+    landscape: 'aspect-[4/3]',
+    square: 'aspect-[1/1]',
+  }[variant];
+
+  const titleClass = {
+    featured:
+      'font-editorial text-[1.65rem] md:text-[2.2rem] lg:text-[2.75rem] text-[#E8EAF6]/90 leading-[1.12] mb-1.5',
+    standard:
+      'font-editorial text-[1.45rem] md:text-[1.9rem] text-[#E8EAF6]/85 leading-[1.15] mb-1.5',
+    landscape:
+      'font-editorial text-[1.15rem] md:text-[1.45rem] text-[#E8EAF6]/80 leading-[1.15] mb-1.5',
+    square:
+      'font-editorial text-[1.1rem] md:text-[1.35rem] text-[#E8EAF6]/75 leading-[1.18] mb-1.5',
+  }[variant];
+
+  const padClass = {
+    featured: 'p-6 md:p-10',
+    standard: 'p-5 md:p-8',
+    landscape: 'p-5 md:p-6',
+    square: 'p-5 md:p-6',
+  }[variant];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 1.2, ease: EASE, delay }}
-      className={`relative overflow-hidden group cursor-pointer ${
-        full ? 'aspect-[16/9] md:aspect-[21/9]' : 'aspect-[4/3]'
-      }`}
+      className={`relative overflow-hidden group cursor-pointer ${aspectClass}`}
     >
       {/* Atmospheric gradient background */}
       <div
@@ -105,13 +131,13 @@ function WorkPanel({
       <div
         className="absolute bottom-0 left-0 right-0 pointer-events-none"
         style={{
-          height: '65%',
-          background: 'linear-gradient(to bottom, transparent, rgba(4,5,14,0.90) 100%)',
+          height: isFull ? '60%' : '72%',
+          background: 'linear-gradient(to bottom, transparent, rgba(4,5,14,0.92) 100%)',
         }}
       />
 
       {/* Text overlay */}
-      <div className="absolute bottom-0 left-0 right-0 p-5 md:p-7">
+      <div className={`absolute bottom-0 left-0 right-0 ${padClass}`}>
         {/* Description — revealed on hover */}
         <p className="font-structural text-[11px] md:text-[12px] text-white/35 leading-[1.78] mb-4 max-w-xs opacity-0 translate-y-2 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:translate-y-0">
           {work.description}
@@ -120,10 +146,7 @@ function WorkPanel({
         <span className="block font-structural text-[9px] tracking-[0.32em] text-white/25 mb-2">
           {work.index}
         </span>
-        <h3
-          className="font-editorial text-[1.2rem] md:text-[1.5rem] text-[#E8EAF6]/80 leading-[1.15] mb-1.5"
-          style={{ letterSpacing: '-0.008em' }}
-        >
+        <h3 className={titleClass} style={{ letterSpacing: '-0.008em' }}>
           {work.title}
         </h3>
         <span className="block font-structural text-[9px] tracking-[0.22em] uppercase text-white/30">
@@ -171,22 +194,22 @@ export function SelectedWorks() {
       {/* Gallery */}
       <div className="ei-container">
         <div className="space-y-3 md:space-y-4">
-          {/* 01 — full width */}
-          <WorkPanel work={works[0]} full />
+          {/* 01 — featured hero panel */}
+          <WorkPanel work={works[0]} variant="featured" />
 
-          {/* 02–03 — side by side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-            <WorkPanel work={works[1]} delay={0.05} />
-            <WorkPanel work={works[2]} delay={0.1} />
+          {/* 02–03 — landscape + square, editorially asymmetric */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-start">
+            <WorkPanel work={works[1]} variant="landscape" delay={0.05} />
+            <WorkPanel work={works[2]} variant="square" delay={0.1} />
           </div>
 
-          {/* 04 — full width */}
-          <WorkPanel work={works[3]} full />
+          {/* 04 — standard featured panel */}
+          <WorkPanel work={works[3]} variant="standard" />
 
-          {/* 05–06 — side by side */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4">
-            <WorkPanel work={works[4]} delay={0.05} />
-            <WorkPanel work={works[5]} delay={0.1} />
+          {/* 05–06 — square + landscape (mirrored rhythm) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-start">
+            <WorkPanel work={works[4]} variant="square" delay={0.05} />
+            <WorkPanel work={works[5]} variant="landscape" delay={0.1} />
           </div>
         </div>
 

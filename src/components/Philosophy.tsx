@@ -49,7 +49,7 @@ export function Philosophy() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 1.3, ease: EASE, delay: 0.1 }}
-            className="font-editorial text-[1.6rem] md:text-[2.1rem] lg:text-[2.5rem] text-[#E8EAF6]/75 leading-[1.38] mb-16 md:mb-24 max-w-[36rem]"
+            className="font-editorial text-[1.6rem] md:text-[2.1rem] lg:text-[2.5rem] text-[#E8EAF6]/85 leading-[1.38] mb-16 md:mb-24 max-w-[36rem]"
             style={{ letterSpacing: '-0.01em' }}
           >
             I believe creativity is a form of worldbuilding — a way of translating
@@ -76,7 +76,7 @@ export function Philosophy() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 1.0, ease: EASE, delay: 0.22 + i * 0.1 }}
-                  className="font-editorial text-[1.25rem] md:text-[1.55rem] text-[#E8EAF6]/60 leading-[1.85]"
+                  className="font-editorial text-[1.25rem] md:text-[1.55rem] text-[#E8EAF6]/70 leading-[1.85]"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {line}

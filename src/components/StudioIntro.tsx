@@ -47,7 +47,7 @@ export function StudioIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 1.15, ease: EASE, delay: 0.12 }}
-            className="font-editorial text-[2rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.17] mb-10 md:mb-14"
+            className="font-editorial text-[2rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/85 leading-[1.17] mb-10 md:mb-14"
             style={{ letterSpacing: '-0.012em' }}
           >
             A studio built on authorship
@@ -72,7 +72,7 @@ export function StudioIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 1.1, ease: EASE, delay: 0.36 }}
-            className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.88] max-w-[28rem]"
+            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.88] max-w-[28rem]"
           >
             A place where ideas take shape in ink and unfold into luminous digital experiences.
           </motion.p>
