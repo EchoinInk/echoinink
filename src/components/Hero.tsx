@@ -37,7 +37,10 @@ export function Hero() {
         </div>
 
         {/* Heading */}
-        <h1 className="font-editorial text-4xl md:text-5xl lg:text-7xl text-white mb-3 md:mb-4 tracking-wide">
+        <h1
+          className="font-editorial text-4xl md:text-5xl lg:text-7xl text-[#F0F4FF] mb-1 md:mb-2 tracking-wide"
+          style={{ WebkitTextStroke: '0.25px #24294A' }}
+        >
           Echo in Ink
         </h1>
  {/* Tagline */}
