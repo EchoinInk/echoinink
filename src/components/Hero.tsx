@@ -2,7 +2,7 @@ import { BackgroundLayer } from './BackgroundLayer';
 import { Button } from './Button';
 import { Footer } from './Footer';
 import { StarDivider } from './StarDivider';
-import monogram from '@/assets/monogram-balanced-1.png';
+import monogram from '@/assets/monogram-balanced-2.png';
 
 export function Hero() {
   return (
