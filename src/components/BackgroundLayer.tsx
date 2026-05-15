@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import bgMobile from '@/assets/ei-hero-bg-dark-mobile-9x16.png';
-import bgStandard from '@/assets/ei-hero-bg-dark-21x9.png';
+import bgStandard from '@/assets/ei-hero-bg-dark-16x9.png';
 import bgWide from '@/assets/ei-hero-bg-dark-21x9.png';
 
 export function BackgroundLayer() {
@@ -15,7 +15,7 @@ export function BackgroundLayer() {
       if (aspect < 0.75) {
         setBgImage(bgMobile);   // phones only
       } else {
-        setBgImage(bgStandard);     // everything else
+        setBgImage(bgWide);     // everything else
       }
     };
 
