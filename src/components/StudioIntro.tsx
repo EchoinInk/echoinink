@@ -47,12 +47,14 @@ export function StudioIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 1.15, ease: EASE, delay: 0.12 }}
-            className="font-editorial text-[2rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/85 leading-[1.17] mb-10 md:mb-14"
+            className="font-editorial text-[2rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/85 leading-[1.24] mb-10 md:mb-14"
             style={{ letterSpacing: '-0.012em' }}
           >
-            A studio built on authorship
+            Echo in Ink is a cinematic creative studio
             <br className="hidden md:block" />
-            and atmosphere.
+            shaped by curiosity, identity,
+            <br className="hidden md:block" />
+            and the emotional gravity of storytelling.
           </motion.h2>
 
           <motion.p
@@ -60,7 +62,7 @@ export function StudioIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 1.1, ease: EASE, delay: 0.24 }}
-            className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.88] max-w-[30rem] mb-6 md:mb-8"
+            className="font-structural text-[14px] md:text-[15px] text-white/45 leading-[1.88] max-w-[62ch] mb-6 md:mb-8"
           >
             I work at the intersection of art, design, and digital expression —
             crafting visuals, narratives, and immersive worlds that feel intentional,
@@ -72,9 +74,9 @@ export function StudioIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 1.1, ease: EASE, delay: 0.36 }}
-            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.88] max-w-[28rem]"
+            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.88] max-w-[58ch]"
           >
-            A place where ideas take shape in ink and unfold into luminous digital experiences.
+            This is a studio built on authorship and atmosphere — a place where ideas take shape in ink and unfold into luminous digital experiences.
           </motion.p>
         </div>
       </div>
