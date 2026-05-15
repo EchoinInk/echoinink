@@ -80,7 +80,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-6">
+      <div className="relative z-10 flex flex-col items-center text-center px-6" style={{ transform: 'translateY(3vh)' }}>
         {/* Monogram */}
         <div className="relative mt-14 md:mt-16 mb-3 md:mb-5">
           {/* Layer 1: Wide atmospheric haze — fills the surrounding environment with magenta-blue diffusion */}
@@ -277,19 +277,26 @@ export function Hero() {
 
         <StarDivider />
 
-        {/* Subcopy */}
-        <div className="leading-relaxed mb-4 md:mb-6 max-w-2xl">
-          <p className="font-editorial text-xl md:text-5xl text-white/90">
-            Where ideas find resonance.
-          </p>
-          <p className="font-structural text-xl md:text-xl font-light text-white/60 mt-1.5">
-            Where stories find form.
-          </p>
-        </div>
+        {/* Studio description */}
+        <p
+          className="font-structural text-[14px] md:text-[15px] text-white/45 leading-[1.85] mb-7 md:mb-9 text-center"
+          style={{ maxWidth: '26rem' }}
+        >
+          A creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media.
+        </p>
 
         {/* CTA */}
-        <Button>ENTER THE SANCTUARY</Button>
+        <Button>EXPLORE THE WORLD</Button>
       </div>
+
+      {/* Bottom atmospheric fade — cinematic dissolve into page */}
+      <div
+        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[7]"
+        style={{
+          height: '32vh',
+          background: 'linear-gradient(to bottom, transparent, rgba(15,18,32,0.45) 40%, rgba(15,18,32,0.80) 72%, #0F1220 100%)',
+        }}
+      />
 
       <Footer />
     </section>
