@@ -80,9 +80,9 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-6" style={{ transform: 'translateY(3vh)' }}>
+      <div className="relative z-10 flex flex-col items-center text-center px-6" style={{ transform: 'translateY(6vh)' }}>
         {/* Monogram */}
-        <div className="relative mt-14 md:mt-16 mb-3 md:mb-5">
+        <div className="relative mt-4 md:mt-6 mb-2 md:mb-4">
           {/* Layer 1: Wide atmospheric haze — fills the surrounding environment with magenta-blue diffusion */}
           <div
             className="absolute top-1/2 left-1/2 pointer-events-none"
@@ -90,7 +90,7 @@ export function Hero() {
               transform: 'translate(calc(-50% - 2.5vw), calc(-50% + 4vh))',
               width: 'clamp(580px, 88vw, 1300px)',
               height: 'clamp(260px, 44vw, 680px)',
-              background: 'radial-gradient(ellipse 62% 48% at 44% 65%, rgba(232,121,249,0.13) 0%, rgba(168,85,247,0.07) 40%, rgba(99,102,241,0.04) 65%, transparent 80%)',
+              background: 'radial-gradient(ellipse 62% 48% at 44% 65%, rgba(232,121,249,0.09) 0%, rgba(168,85,247,0.05) 40%, rgba(99,102,241,0.025) 65%, transparent 80%)',
               filter: 'blur(90px)',
               mixBlendMode: 'screen',
               zIndex: 1,
@@ -140,7 +140,7 @@ export function Hero() {
             className="relative mx-auto"
             style={{
               width: 'clamp(155px, 29vh, 382px)',
-              filter: 'brightness(0.94) contrast(0.90) saturate(1.10) drop-shadow(0 0 11px rgba(232, 121, 249, 0.22)) drop-shadow(-1px 1px 36px rgba(168, 85, 247, 0.20)) drop-shadow(-2px 2px 90px rgba(99, 102, 241, 0.12)) drop-shadow(0 0 150px rgba(168, 85, 247, 0.06))',
+              filter: 'brightness(0.91) contrast(0.87) saturate(1.08) drop-shadow(0 0 10px rgba(232, 121, 249, 0.18)) drop-shadow(-1px 1px 32px rgba(168, 85, 247, 0.16)) drop-shadow(-2px 2px 80px rgba(99, 102, 241, 0.10)) drop-shadow(0 0 140px rgba(168, 85, 247, 0.05))',
               zIndex: 2,
             }}
           />
@@ -256,7 +256,7 @@ export function Hero() {
 
         {/* Heading */}
         <h1
-          className="font-editorial text-4xl md:text-5xl lg:text-7xl text-[#F0F4FF] mt-4 md:mt-6 mb-0.5 md:mb-1 tracking-wide"
+          className="font-editorial text-4xl md:text-5xl lg:text-7xl text-[#F0F4FF] mt-2 md:mt-3 mb-0.5 md:mb-1 tracking-wide"
           style={{ WebkitTextStroke: '0.25px #24294A' }}
         >
           Echo in Ink
@@ -279,8 +279,8 @@ export function Hero() {
 
         {/* Studio description */}
         <p
-          className="font-structural text-[14px] md:text-[15px] text-white/45 leading-[1.85] mb-7 md:mb-9 text-center"
-          style={{ maxWidth: '26rem' }}
+          className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95] mb-4 md:mb-5 text-center"
+          style={{ maxWidth: '18rem' }}
         >
           A creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media.
         </p>
