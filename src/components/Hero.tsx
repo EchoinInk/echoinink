@@ -45,7 +45,7 @@ export function Hero() {
         </h1>
  {/* Tagline */}
         <p
-          className="font-structural text-[15px] md:text-[16px] tracking-[0.3em] uppercase mb-0 md:mb-0.5"
+          className="font-structural text-[15px] md:text-[16px] tracking-[0.45em] uppercase mb-0 md:mb-0.5"
           style={{
             background: 'linear-gradient(90deg, #E879F9, #1EC8FF, #6366F1, #A78BFA)',
             WebkitBackgroundClip: 'text',
