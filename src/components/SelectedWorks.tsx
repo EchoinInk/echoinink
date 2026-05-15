@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import watercolor from '@/assets/watercolor.png';
-import monogramGlow from '@/assets/monogram-balanced-glow.png';
-import monogramThree from '@/assets/monogram-balanced-3.png';
+import monogramHero from '@/assets/monogram-hero.png';
+import inkLight from '@/assets/hero-ink-light.png';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -23,7 +23,7 @@ const works = [
     category: 'Atmospheric Media',
     description:
       'A world constructed from light and language — where observation changes the observed, and luminosity becomes narrative.',
-    image: monogramGlow,
+    image: monogramHero,
     imageAlt: 'Luminous Archive',
     overlayGradient:
       'radial-gradient(ellipse 65% 75% at 48% 52%, rgba(30,200,255,0.14) 0%, rgba(99,102,241,0.08) 55%, transparent 82%)',
@@ -34,7 +34,7 @@ const works = [
     category: 'Immersive Experience',
     description:
       'A digital garden where language dissolves into texture. An invitation to wander — through symbol, form, and silence.',
-    image: monogramThree,
+    image: inkLight,
     imageAlt: 'Ink Garden',
     overlayGradient:
       'radial-gradient(ellipse 72% 70% at 44% 55%, rgba(232,121,249,0.16) 0%, rgba(168,85,247,0.09) 50%, transparent 80%)',
