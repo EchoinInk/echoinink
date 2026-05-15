@@ -13,7 +13,7 @@ export function Hero() {
       <div
         className="absolute inset-0 pointer-events-none z-[5]"
         style={{
-          background: 'radial-gradient(ellipse 65% 55% at 50% 42%, rgba(8,10,22,0.6) 0%, rgba(8,10,22,0.25) 40%, transparent 72%)',
+          background: 'radial-gradient(ellipse 65% 64% at 50% 45%, rgba(8,10,22,0.68) 0%, rgba(8,10,22,0.30) 42%, transparent 72%)',
         }}
       />
 
@@ -25,8 +25,8 @@ export function Hero() {
           left: '2%',
           width: 'clamp(180px, 28vw, 420px)',
           height: 'clamp(140px, 20vw, 300px)',
-          background: 'radial-gradient(ellipse 68% 62% at 35% 40%, rgba(168,85,247,0.10) 0%, rgba(120,55,200,0.06) 50%, transparent 80%)',
-          filter: 'blur(58px)',
+          background: 'radial-gradient(ellipse 68% 62% at 35% 40%, rgba(168,85,247,0.07) 0%, rgba(120,55,200,0.04) 50%, transparent 80%)',
+          filter: 'blur(64px)',
           mixBlendMode: 'screen',
         }}
       />
@@ -38,8 +38,8 @@ export function Hero() {
           right: '3%',
           width: 'clamp(160px, 22vw, 360px)',
           height: 'clamp(200px, 28vw, 440px)',
-          background: 'radial-gradient(ellipse 58% 70% at 62% 44%, rgba(30,140,255,0.09) 0%, rgba(99,102,241,0.05) 55%, transparent 82%)',
-          filter: 'blur(65px)',
+          background: 'radial-gradient(ellipse 58% 70% at 62% 44%, rgba(30,140,255,0.06) 0%, rgba(99,102,241,0.03) 55%, transparent 82%)',
+          filter: 'blur(76px)',
           mixBlendMode: 'screen',
         }}
       />
@@ -51,8 +51,8 @@ export function Hero() {
           left: '5%',
           width: 'clamp(200px, 30vw, 460px)',
           height: 'clamp(110px, 16vw, 260px)',
-          background: 'radial-gradient(ellipse 72% 58% at 32% 55%, rgba(180,75,240,0.08) 0%, rgba(99,102,241,0.04) 52%, transparent 80%)',
-          filter: 'blur(72px)',
+          background: 'radial-gradient(ellipse 72% 58% at 32% 55%, rgba(180,75,240,0.05) 0%, rgba(99,102,241,0.03) 52%, transparent 80%)',
+          filter: 'blur(82px)',
           mixBlendMode: 'screen',
         }}
       />
@@ -66,19 +66,20 @@ export function Hero() {
           transform: 'translateX(-50%)',
           width: 'clamp(240px, 50vw, 720px)',
           height: 'clamp(50px, 14vh, 160px)',
-          background: 'radial-gradient(ellipse 75% 50% at 50% 55%, rgba(168,85,247,0.16) 0%, rgba(30,200,255,0.09) 45%, rgba(232,121,249,0.05) 70%, transparent 100%)',
-          filter: 'blur(52px)',
+          background: 'radial-gradient(ellipse 84% 38% at 48% 58%, rgba(168,85,247,0.10) 0%, rgba(30,200,255,0.06) 48%, rgba(232,121,249,0.03) 72%, transparent 100%)',
+          filter: 'blur(70px)',
           mixBlendMode: 'screen',
         }}
       />
 
       <div className="relative z-10 flex flex-col items-center text-center px-6">
         {/* Monogram */}
-        <div className="relative mt-10 md:mt-12 mb-2 md:mb-3">
+        <div className="relative mt-10 md:mt-12 mb-3 md:mb-5">
           {/* Layer 1: Wide atmospheric haze — fills the surrounding environment with magenta-blue diffusion */}
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className="absolute top-1/2 left-1/2 pointer-events-none"
             style={{
+              transform: 'translate(calc(-50% - 2.5vw), calc(-50% + 1.8vh))',
               width: 'clamp(580px, 88vw, 1300px)',
               height: 'clamp(320px, 55vw, 840px)',
               background: 'radial-gradient(ellipse 62% 48% at 48% 52%, rgba(232,121,249,0.13) 0%, rgba(168,85,247,0.07) 40%, rgba(99,102,241,0.04) 65%, transparent 80%)',
@@ -89,8 +90,9 @@ export function Hero() {
           />
           {/* Layer 2: Lateral nebula-blue spread — illuminates surrounding fog and clouds */}
           <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className="absolute top-1/2 left-1/2 pointer-events-none"
             style={{
+              transform: 'translate(calc(-50% + 2vw), calc(-50% - 1.2vh))',
               width: 'clamp(380px, 62vw, 900px)',
               height: 'clamp(200px, 36vw, 540px)',
               background: 'radial-gradient(ellipse 72% 42% at 52% 50%, rgba(30,200,255,0.11) 0%, rgba(99,102,241,0.07) 48%, transparent 78%)',
@@ -105,8 +107,8 @@ export function Hero() {
             style={{
               width: 'clamp(190px, 26vw, 400px)',
               height: 'clamp(210px, 30vw, 460px)',
-              background: 'radial-gradient(ellipse 52% 62% at 50% 47%, rgba(232,121,249,0.34) 0%, rgba(168,85,247,0.21) 38%, rgba(99,102,241,0.1) 62%, transparent 100%)',
-              filter: 'blur(30px)',
+              background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.25) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
+              filter: 'blur(38px)',
               mixBlendMode: 'screen',
               zIndex: 1,
             }}
@@ -117,7 +119,7 @@ export function Hero() {
             style={{
               width: 'clamp(80px, 9vw, 155px)',
               height: 'clamp(85px, 10vw, 170px)',
-              background: 'radial-gradient(ellipse, rgba(255,255,255,0.12) 0%, rgba(232,121,249,0.20) 45%, transparent 100%)',
+              background: 'radial-gradient(ellipse at 44% 50%, rgba(255,255,255,0.07) 0%, rgba(232,121,249,0.16) 45%, transparent 100%)',
               filter: 'blur(14px)',
               mixBlendMode: 'screen',
               zIndex: 1,
@@ -130,7 +132,7 @@ export function Hero() {
             className="relative mx-auto"
             style={{
               width: 'clamp(155px, 29vh, 382px)',
-              filter: 'drop-shadow(0 0 14px rgba(232, 121, 249, 0.48)) drop-shadow(0 0 36px rgba(168, 85, 247, 0.32)) drop-shadow(0 0 88px rgba(99, 102, 241, 0.16)) drop-shadow(0 0 150px rgba(168, 85, 247, 0.07))',
+              filter: 'drop-shadow(0 0 12px rgba(232, 121, 249, 0.26)) drop-shadow(0 0 34px rgba(168, 85, 247, 0.22)) drop-shadow(0 0 88px rgba(99, 102, 241, 0.13)) drop-shadow(0 0 150px rgba(168, 85, 247, 0.06))',
               zIndex: 2,
             }}
           />
@@ -144,7 +146,7 @@ export function Hero() {
               transform: 'translate(-38%, -44%)',
               width: 'clamp(160px, 24vw, 360px)',
               height: 'clamp(60px, 10vw, 150px)',
-              background: 'radial-gradient(ellipse 85% 55% at 25% 60%, rgba(120,80,200,0.13) 0%, rgba(30,180,255,0.07) 55%, transparent 100%)',
+              background: 'radial-gradient(ellipse 85% 55% at 25% 60%, rgba(120,80,200,0.09) 0%, rgba(30,180,255,0.05) 55%, transparent 100%)',
               filter: 'blur(24px)',
               mixBlendMode: 'screen',
               zIndex: 3,
@@ -175,8 +177,8 @@ export function Hero() {
               transform: 'translate(-50%, -50%)',
               width: 'clamp(165px, 28vw, 420px)',
               height: 'clamp(175px, 30vw, 460px)',
-              background: 'radial-gradient(ellipse 92% 92% at 50% 50%, transparent 20%, rgba(110,50,200,0.26) 50%, rgba(40,110,240,0.16) 72%, transparent 100%)',
-              filter: 'blur(10px)',
+              background: 'radial-gradient(ellipse 90% 94% at 47% 52%, transparent 20%, rgba(110,50,200,0.20) 50%, rgba(40,110,240,0.12) 72%, transparent 100%)',
+              filter: 'blur(12px)',
               mixBlendMode: 'multiply',
               zIndex: 4,
             }}
@@ -190,7 +192,7 @@ export function Hero() {
               transform: 'translate(-82%, -68%)',
               width: 'clamp(80px, 12vw, 180px)',
               height: 'clamp(100px, 16vw, 240px)',
-              background: 'radial-gradient(ellipse 80% 82% at 82% 60%, rgba(30,150,255,0.20) 0%, rgba(90,100,240,0.12) 55%, transparent 100%)',
+              background: 'radial-gradient(ellipse 80% 82% at 82% 60%, rgba(30,150,255,0.15) 0%, rgba(90,100,240,0.09) 55%, transparent 100%)',
               filter: 'blur(14px)',
               mixBlendMode: 'multiply',
               zIndex: 4,
@@ -205,7 +207,7 @@ export function Hero() {
               transform: 'translate(-22%, -32%)',
               width: 'clamp(70px, 10vw, 160px)',
               height: 'clamp(90px, 14vw, 210px)',
-              background: 'radial-gradient(ellipse 78% 80% at 20% 30%, rgba(180,70,230,0.18) 0%, rgba(99,60,220,0.10) 55%, transparent 100%)',
+              background: 'radial-gradient(ellipse 78% 80% at 20% 30%, rgba(180,70,230,0.13) 0%, rgba(99,60,220,0.07) 55%, transparent 100%)',
               filter: 'blur(13px)',
               mixBlendMode: 'multiply',
               zIndex: 4,
@@ -226,11 +228,27 @@ export function Hero() {
               zIndex: 4,
             }}
           />
+
+          {/* Ambient surface tint — pale cinematic grade pulling peak whites toward nebula hue */}
+          <div
+            className="absolute pointer-events-none"
+            style={{
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: 'clamp(155px, 29vh, 382px)',
+              height: 'clamp(155px, 29vh, 382px)',
+              background: 'radial-gradient(ellipse 83% 88% at 52% 49%, rgba(200,170,230,0.06) 0%, rgba(160,130,215,0.16) 60%, rgba(140,110,200,0.22) 88%, transparent 100%)',
+              filter: 'blur(6px)',
+              mixBlendMode: 'multiply',
+              zIndex: 5,
+            }}
+          />
         </div>
 
         {/* Heading */}
         <h1
-          className="font-editorial text-4xl md:text-5xl lg:text-7xl text-[#F0F4FF] mt-3 md:mt-4 mb-0.5 md:mb-1 tracking-wide"
+          className="font-editorial text-4xl md:text-5xl lg:text-7xl text-[#F0F4FF] mt-4 md:mt-6 mb-0.5 md:mb-1 tracking-wide"
           style={{ WebkitTextStroke: '0.25px #24294A' }}
         >
           Echo in Ink
