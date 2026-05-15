@@ -12,6 +12,8 @@ const works = [
     gradient:
       'radial-gradient(ellipse 70% 65% at 38% 55%, rgba(232,121,249,0.28) 0%, rgba(168,85,247,0.16) 32%, rgba(99,102,241,0.07) 62%, transparent 82%), radial-gradient(ellipse 40% 50% at 75% 30%, rgba(30,200,255,0.10) 0%, transparent 65%)',
     bg: '#05040D',
+    scene:
+      'radial-gradient(ellipse 22% 50% at 68% 30%, rgba(255,240,200,0.07) 0%, transparent 65%), radial-gradient(ellipse 30% 25% at 18% 82%, rgba(180,80,160,0.07) 0%, transparent 60%)',
   },
   {
     index: '02',
@@ -22,6 +24,8 @@ const works = [
     gradient:
       'radial-gradient(ellipse 65% 72% at 58% 42%, rgba(30,200,255,0.22) 0%, rgba(99,102,241,0.12) 42%, transparent 72%)',
     bg: '#03060F',
+    scene:
+      'linear-gradient(172deg, rgba(30,180,255,0.08) 0%, transparent 38%), radial-gradient(ellipse 16% 62% at 56% 8%, rgba(200,230,255,0.07) 0%, transparent 70%)',
   },
   {
     index: '03',
@@ -32,6 +36,8 @@ const works = [
     gradient:
       'radial-gradient(ellipse 68% 60% at 42% 60%, rgba(168,85,247,0.24) 0%, rgba(99,102,241,0.12) 45%, transparent 88%)',
     bg: '#06040E',
+    scene:
+      'radial-gradient(circle at 22% 28%, rgba(210,180,250,0.06) 0%, transparent 28%), radial-gradient(circle at 74% 62%, rgba(170,130,240,0.05) 0%, transparent 24%), radial-gradient(circle at 85% 20%, rgba(180,150,230,0.04) 0%, transparent 18%)',
   },
   {
     index: '04',
@@ -42,6 +48,8 @@ const works = [
     gradient:
       'radial-gradient(ellipse 55% 70% at 62% 38%, rgba(30,200,255,0.20) 0%, rgba(30,80,200,0.12) 40%, transparent 70%), radial-gradient(ellipse 45% 45% at 18% 72%, rgba(232,121,249,0.12) 0%, transparent 62%)',
     bg: '#030810',
+    scene:
+      'repeating-linear-gradient(90deg, transparent, transparent 48px, rgba(30,200,255,0.013) 48px, rgba(30,200,255,0.013) 49px), linear-gradient(118deg, transparent 28%, rgba(255,255,255,0.04) 44%, transparent 62%)',
   },
   {
     index: '05',
@@ -52,6 +60,8 @@ const works = [
     gradient:
       'radial-gradient(ellipse 72% 65% at 44% 52%, rgba(232,121,249,0.20) 0%, rgba(168,85,247,0.11) 42%, transparent 86%)',
     bg: '#07040C',
+    scene:
+      'radial-gradient(ellipse 38% 28% at 22% 72%, rgba(220,150,60,0.08) 0%, transparent 60%), radial-gradient(ellipse 25% 35% at 82% 22%, rgba(180,90,200,0.07) 0%, transparent 55%)',
   },
   {
     index: '06',
@@ -62,6 +72,8 @@ const works = [
     gradient:
       'radial-gradient(ellipse 58% 74% at 52% 44%, rgba(255,255,255,0.07) 0%, rgba(200,180,240,0.14) 25%, rgba(168,85,247,0.18) 50%, rgba(99,102,241,0.08) 72%, transparent 88%)',
     bg: '#060608',
+    scene:
+      'linear-gradient(78deg, transparent 18%, rgba(220,200,255,0.06) 36%, rgba(168,85,247,0.04) 52%, transparent 68%), linear-gradient(78deg, transparent 42%, rgba(200,180,240,0.04) 58%, transparent 74%)',
   },
 ] as const;
 
@@ -118,6 +130,12 @@ function WorkPanel({
         style={{ background: work.gradient, backgroundColor: work.bg }}
       />
 
+      {/* Scene layer — emotional identity fragment per work */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: work.scene }}
+      />
+
       {/* Edge vignette */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -138,20 +156,25 @@ function WorkPanel({
 
       {/* Text overlay */}
       <div className={`absolute bottom-0 left-0 right-0 ${padClass}`}>
-        {/* Description — revealed on hover */}
-        <p className="font-structural text-[11px] md:text-[12px] text-white/35 leading-[1.78] mb-4 max-w-xs opacity-0 translate-y-2 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:translate-y-0">
+        {/* Description — revealed on hover, slides up into caption */}
+        <p className="font-structural text-[11px] md:text-[12px] text-white/30 leading-[1.78] mb-3 max-w-xs opacity-0 translate-y-1 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:translate-y-0">
           {work.description}
         </p>
 
-        <span className="block font-structural text-[9px] tracking-[0.32em] text-white/25 mb-2">
-          {work.index}
-        </span>
+        {/* Title */}
         <h3 className={titleClass} style={{ letterSpacing: '-0.008em' }}>
           {work.title}
         </h3>
-        <span className="block font-structural text-[9px] tracking-[0.22em] uppercase text-white/30">
-          {work.category}
-        </span>
+
+        {/* Editorial subtitle — category + index on one credited line */}
+        <div className="flex items-baseline gap-3 mt-2">
+          <span className="font-structural text-[9px] tracking-[0.22em] uppercase text-white/30">
+            {work.category}
+          </span>
+          <span className="font-structural text-[8px] tracking-[0.2em] text-white/15">
+            {work.index}
+          </span>
+        </div>
       </div>
     </motion.div>
   );
