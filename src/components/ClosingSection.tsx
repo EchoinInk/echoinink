@@ -52,11 +52,35 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.4, ease: EASE, delay: 0.12 }}
-          className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-14 max-w-[28rem]"
+          className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-10 max-w-[28rem]"
           style={{ letterSpacing: '-0.01em' }}
         >
           Step deeper into the world.
         </motion.h2>
+
+        {/* Body paragraphs */}
+        <motion.p
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.1, ease: EASE, delay: 0.26 }}
+          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[22rem] mb-5"
+        >
+          Echo in Ink is an ongoing exploration — a living archive of stories,
+          atmospheres, and luminous digital experiments.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.0, ease: EASE, delay: 0.36 }}
+          className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[20rem] mb-12"
+        >
+          If something here resonates, stay a while. Wander.
+          <br />
+          There's more to discover in the quiet.
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 14 }}

@@ -50,9 +50,9 @@ export function StudioIntro() {
             className="font-editorial text-[2rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.17] mb-10 md:mb-14"
             style={{ letterSpacing: '-0.012em' }}
           >
-            Where identity meets atmosphere,
+            A studio built on authorship
             <br className="hidden md:block" />
-            and stories find their form.
+            and atmosphere.
           </motion.h2>
 
           <motion.p
@@ -60,12 +60,21 @@ export function StudioIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-60px' }}
             transition={{ duration: 1.1, ease: EASE, delay: 0.24 }}
-            className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.88] max-w-[28rem]"
+            className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.88] max-w-[30rem] mb-6 md:mb-8"
           >
-            Echo in Ink is a creative studio at the intersection of art, emotion,
-            and digital world-building. We craft immersive experiences, atmospheric
-            narratives, and experimental visual media — work that lives at the edge
-            of feeling and form.
+            I work at the intersection of art, design, and digital expression —
+            crafting visuals, narratives, and immersive worlds that feel intentional,
+            atmospheric, and full of light.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 1.1, ease: EASE, delay: 0.36 }}
+            className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.88] max-w-[28rem]"
+          >
+            A place where ideas take shape in ink and unfold into luminous digital experiences.
           </motion.p>
         </div>
       </div>
