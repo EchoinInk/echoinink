@@ -9,6 +9,14 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <BackgroundLayer />
 
+      {/* Cinematic top frame — atmospheric darkness framing the navigation region */}
+      <div
+        className="absolute inset-0 pointer-events-none z-[6]"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(5,7,16,0.50) 0%, rgba(5,7,16,0.14) 11%, transparent 24%)',
+        }}
+      />
+
       {/* Vignette to darken busy background behind the focal area */}
       <div
         className="absolute inset-0 pointer-events-none z-[5]"
@@ -74,15 +82,15 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-col items-center text-center px-6">
         {/* Monogram */}
-        <div className="relative mt-10 md:mt-12 mb-3 md:mb-5">
+        <div className="relative mt-14 md:mt-16 mb-3 md:mb-5">
           {/* Layer 1: Wide atmospheric haze — fills the surrounding environment with magenta-blue diffusion */}
           <div
             className="absolute top-1/2 left-1/2 pointer-events-none"
             style={{
-              transform: 'translate(calc(-50% - 2.5vw), calc(-50% + 1.8vh))',
+              transform: 'translate(calc(-50% - 2.5vw), calc(-50% + 4vh))',
               width: 'clamp(580px, 88vw, 1300px)',
-              height: 'clamp(320px, 55vw, 840px)',
-              background: 'radial-gradient(ellipse 62% 48% at 48% 52%, rgba(232,121,249,0.13) 0%, rgba(168,85,247,0.07) 40%, rgba(99,102,241,0.04) 65%, transparent 80%)',
+              height: 'clamp(260px, 44vw, 680px)',
+              background: 'radial-gradient(ellipse 62% 48% at 44% 65%, rgba(232,121,249,0.13) 0%, rgba(168,85,247,0.07) 40%, rgba(99,102,241,0.04) 65%, transparent 80%)',
               filter: 'blur(90px)',
               mixBlendMode: 'screen',
               zIndex: 1,
