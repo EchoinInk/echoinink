@@ -261,7 +261,13 @@ export function SignatureCaseStudy() {
           </div>
 
           {/* Right — bullet list */}
-          <motion.ul {...fade(0.14)} className="space-y-5 pt-1">
+          <motion.ul
+            className="space-y-5 pt-1"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-30px' }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1, delayChildren: 0.15 } } }}
+          >
             {[
               'Users described existing apps as demanding and loud',
               'Mental load was the primary barrier — not feature gaps',
@@ -269,12 +275,16 @@ export function SignatureCaseStudy() {
               'The brand had to feel like a presence, not a tool',
               'Emotional safety was the first UX principle',
             ].map((item) => (
-              <li key={item} className="flex items-start gap-4">
+              <motion.li
+                key={item}
+                variants={{ hidden: { opacity: 0, y: 4 }, visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: EASE } } }}
+                className="flex items-start gap-4"
+              >
                 <span className="mt-[7px] shrink-0 w-1 h-1 rounded-full bg-white/20" />
                 <span className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.85]">
                   {item}
                 </span>
-              </li>
+              </motion.li>
             ))}
           </motion.ul>
         </div>
@@ -297,7 +307,13 @@ export function SignatureCaseStudy() {
           </motion.span>
 
           <div className="max-w-2xl mx-auto">
-            <motion.ul {...fade(0.1)} className="space-y-4 mb-14 md:mb-20">
+            <motion.ul
+              className="space-y-4 mb-14 md:mb-20"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: '-30px' }}
+              variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.11, delayChildren: 0.1 } } }}
+            >
               {[
                 'A visual system built from restraint, not decoration',
                 'Typography that whispers rather than announces',
@@ -305,12 +321,16 @@ export function SignatureCaseStudy() {
                 'Motion as breath — never jarring, always intentional',
                 'Silence as a design element with its own weight',
               ].map((item) => (
-                <li key={item} className="flex items-start gap-4">
+                <motion.li
+                  key={item}
+                  variants={{ hidden: { opacity: 0, y: 4 }, visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: EASE } } }}
+                  className="flex items-start gap-4"
+                >
                   <span className="mt-[7px] shrink-0 w-1 h-1 rounded-full bg-white/20" />
                   <span className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.85]">
                     {item}
                   </span>
-                </li>
+                </motion.li>
               ))}
             </motion.ul>
 
@@ -486,24 +506,30 @@ export function SignatureCaseStudy() {
             06 — The Transformation
           </motion.span>
 
-          <ul className="flex flex-col items-center gap-6 text-center">
+          <motion.ul
+            className="flex flex-col items-center gap-6 text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15, delayChildren: 0.1 } } }}
+          >
             {[
               'From tool to companion',
               'From interface to atmosphere',
               'From feature-set to feeling',
               'From downloading to belonging',
               'From overwhelm to presence',
-            ].map((item, i) => (
+            ].map((item) => (
               <motion.li
                 key={item}
-                {...fade(0.08 * i)}
+                variants={{ hidden: { opacity: 0, y: 6 }, visible: { opacity: 1, y: 0, transition: { duration: 1.9, ease: EASE } } }}
                 className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[#E8EAF6]/60 leading-[1.35]"
                 style={{ letterSpacing: '-0.008em' }}
               >
                 {item}
               </motion.li>
             ))}
-          </ul>
+          </motion.ul>
         </div>
       </section>
 
@@ -520,7 +546,13 @@ export function SignatureCaseStudy() {
             07 — The Outcome
           </motion.span>
 
-          <ul className="space-y-5 mb-14 md:mb-20">
+          <motion.ul
+            className="space-y-5 mb-14 md:mb-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-40px' }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1, delayChildren: 0.05 } } }}
+          >
             {[
               '87% of early users described the experience as calming within seconds',
               'Retention at 90 days was 3× the industry average',
@@ -528,14 +560,18 @@ export function SignatureCaseStudy() {
               'Zero negative reviews citing confusion or overwhelm in the first year',
               'The design system was adopted by the internal team without a single revision request',
             ].map((item) => (
-              <motion.li key={item} {...fade(0)} className="flex items-start gap-5">
+              <motion.li
+                key={item}
+                variants={{ hidden: { opacity: 0, y: 5 }, visible: { opacity: 1, y: 0, transition: { duration: 1.4, ease: EASE } } }}
+                className="flex items-start gap-5"
+              >
                 <span className="mt-[8px] shrink-0 w-1 h-1 rounded-full bg-white/20" />
                 <span className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95]">
                   {item}
                 </span>
               </motion.li>
             ))}
-          </ul>
+          </motion.ul>
 
           <motion.p
             {...fade(0.12)}
