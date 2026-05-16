@@ -1,12 +1,36 @@
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
+const vp = (margin = '-40px') => ({ once: true, margin });
+
 const fade = (delay = 0) => ({
-  initial: { opacity: 0, y: 14 },
+  initial: { opacity: 0, y: 8 },
   whileInView: { opacity: 1, y: 0 } as { opacity: number; y: number },
-  viewport: { once: true, margin: '-50px' },
-  transition: { duration: 1.1, ease: EASE, delay },
+  viewport: vp(),
+  transition: { duration: 1.6, ease: EASE, delay },
+});
+
+const envFade = (delay = 0) => ({
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 } as { opacity: number },
+  viewport: vp('-80px'),
+  transition: { duration: 2.0, ease: EASE, delay },
+});
+
+const headFade = (delay = 0) => ({
+  initial: { opacity: 0, y: 6 },
+  whileInView: { opacity: 1, y: 0 } as { opacity: number; y: number },
+  viewport: vp('-40px'),
+  transition: { duration: 1.9, ease: EASE, delay },
+});
+
+const labelFade = (delay = 0) => ({
+  initial: { opacity: 0 },
+  whileInView: { opacity: 1 } as { opacity: number },
+  viewport: vp('-60px'),
+  transition: { duration: 1.4, ease: EASE, delay },
 });
 
 function Separator() {
