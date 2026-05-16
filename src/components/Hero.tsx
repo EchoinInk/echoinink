@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { BackgroundLayer } from './BackgroundLayer';
 import { Button } from './Button';
 import { Footer } from './Footer';
@@ -109,18 +110,23 @@ export function Hero() {
               zIndex: 1,
             }}
           />
-          {/* Layer 3: Core volumetric bloom — primary radiance emanating from the monogram */}
+          {/* Layer 3: Core volumetric bloom — primary radiance, slow echo pulse */}
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-            style={{
-              width: 'clamp(190px, 26vw, 400px)',
-              height: 'clamp(210px, 30vw, 460px)',
-              background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.25) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
-              filter: 'blur(38px)',
-              mixBlendMode: 'screen',
-              zIndex: 1,
-            }}
-          />
+            style={{ zIndex: 1 }}
+          >
+            <motion.div
+              animate={{ opacity: [0.75, 1, 0.75], scale: [0.97, 1.03, 0.97] }}
+              transition={{ duration: 9, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
+              style={{
+                width: 'clamp(190px, 26vw, 400px)',
+                height: 'clamp(210px, 30vw, 460px)',
+                background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.25) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
+                filter: 'blur(38px)',
+                mixBlendMode: 'screen',
+              }}
+            />
+          </div>
           {/* Layer 4: Inner hot core — luminous source point */}
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"

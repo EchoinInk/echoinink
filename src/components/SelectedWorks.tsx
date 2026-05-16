@@ -182,7 +182,7 @@ function WorkPanel({
 
 export function SelectedWorks() {
   return (
-    <section className="relative ei-section py-20 md:py-32 overflow-hidden">
+    <section className="relative ei-section py-24 md:py-36 overflow-hidden">
       {/* Section header */}
       <div className="ei-container mb-10 md:mb-14">
         <div className="flex items-baseline justify-between">
@@ -216,7 +216,7 @@ export function SelectedWorks() {
 
       {/* Gallery */}
       <div className="ei-container">
-        <div className="space-y-3 md:space-y-4">
+        <div className="space-y-4 md:space-y-6">
           {/* 01 — featured hero panel */}
           <WorkPanel work={works[0]} variant="featured" />
 
@@ -244,7 +244,7 @@ export function SelectedWorks() {
           transition={{ duration: 1.0, ease: EASE, delay: 0.1 }}
           className="flex justify-center mt-14 md:mt-20"
         >
-          <button className="ei-gradient-border-btn relative inline-flex items-center gap-3 px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/75 transition-all duration-500 hover:text-white hover:scale-[1.02]">
+          <button className="ei-gradient-border-btn relative inline-flex items-center gap-3 px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/65 transition-all duration-500 hover:text-white hover:scale-[1.02]">
             <span className="relative z-10">View All Works</span>
           </button>
         </motion.div>

@@ -2,6 +2,7 @@ import { Hero } from '@/components/Hero';
 import { StudioIntro } from '@/components/StudioIntro';
 import { SelectedWorks } from '@/components/SelectedWorks';
 import { Philosophy } from '@/components/Philosophy';
+import { WorkWithStudio } from '@/components/WorkWithStudio';
 import { ClosingSection } from '@/components/ClosingSection';
 
 export function Home() {
@@ -11,6 +12,7 @@ export function Home() {
       <StudioIntro />
       <SelectedWorks />
       <Philosophy />
+      <WorkWithStudio />
       <ClosingSection />
     </div>
   );

@@ -64,7 +64,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.1, ease: EASE, delay: 0.26 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[22rem] mb-5"
+          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[38ch] mb-5"
         >
           Echo in Ink is an ongoing exploration — a living archive of stories,
           atmospheres, and luminous digital experiments.
@@ -75,7 +75,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 1.0, ease: EASE, delay: 0.36 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[20rem] mb-12"
+          className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[34ch] mb-12"
         >
           If something here resonates, stay a while. Wander.
           <br />
@@ -86,7 +86,7 @@ export function ClosingSection() {
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1.1, ease: EASE, delay: 0.3 }}
+          transition={{ duration: 1.1, ease: EASE, delay: 0.48 }}
         >
           <button className="ei-gradient-border-btn relative inline-flex items-center justify-center px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/85 transition-all duration-500 hover:text-white hover:scale-[1.02]">
             <span className="relative z-10">Enter the Archive</span>

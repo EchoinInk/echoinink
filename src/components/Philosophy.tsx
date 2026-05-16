@@ -10,7 +10,7 @@ const principles = [
 
 export function Philosophy() {
   return (
-    <section className="relative ei-section py-32 md:py-52 overflow-hidden">
+    <section className="relative ei-section py-20 md:py-52 overflow-hidden">
       {/* Faint indigo atmospheric center */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -21,7 +21,7 @@ export function Philosophy() {
       />
 
       {/* Thin separator above */}
-      <div className="ei-container mb-24 md:mb-36">
+      <div className="ei-container mb-14 md:mb-36">
         <div
           className="w-full h-px"
           style={{
@@ -54,6 +54,18 @@ export function Philosophy() {
           >
             I believe creativity is a form of worldbuilding — a way of translating
             memory, identity, and emotion into something you can step inside.
+          </motion.p>
+
+          {/* Middle paragraph */}
+          <motion.p
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 1.1, ease: EASE, delay: 0.2 }}
+            className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[55ch] mb-16 md:mb-24"
+          >
+            Every piece begins with a feeling: a fragment of self, a moment of
+            resonance, a story waiting to surface.
           </motion.p>
 
           {/* Principles triptych */}
@@ -91,11 +103,24 @@ export function Philosophy() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 1.1, ease: EASE, delay: 0.18 }}
-            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[28rem]"
+            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[55ch]"
           >
             I create slowly, cinematically, letting each idea breathe into form.
             The goal is not perfection, but presence — work that feels lived-in,
             luminous, and quietly transformative.
+          </motion.p>
+
+          {/* Human signal */}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, margin: '-20px' }}
+            transition={{ duration: 1.5, ease: EASE, delay: 0.22 }}
+            className="font-structural text-[12px] md:text-[13px] text-white/25 leading-[1.9] max-w-[44ch] mt-14 md:mt-20"
+          >
+            I create worlds for people who feel too much and think too deeply.
+            <br />
+            If that’s you, you’re home.
           </motion.p>
         </div>
       </div>

@@ -4,7 +4,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function StudioIntro() {
   return (
-    <section className="relative ei-section py-32 md:py-48 lg:py-56 overflow-hidden">
+    <section className="relative ei-section py-20 md:py-48 lg:py-56 overflow-hidden">
       {/* Atmospheric depth accent — soft violet cloud, right side */}
       <div
         className="absolute pointer-events-none"

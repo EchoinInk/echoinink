@@ -1,0 +1,163 @@
+import { motion } from 'framer-motion';
+
+const EASE = [0.22, 1, 0.36, 1] as const;
+
+const offerings = [
+  {
+    index: '01',
+    title: 'Atmospheric Identity Kits',
+    description:
+      'Emotional identity direction for brands, creators, and projects that need a coherent visual and narrative atmosphere — without a full rebrand.',
+    cta: 'Begin an Identity',
+  },
+  {
+    index: '02',
+    title: 'Echo Sessions',
+    description:
+      '60-minute creative direction sessions for clarity, narrative cohesion, and aesthetic alignment across your work or project.',
+    cta: 'Enter a Session',
+  },
+  {
+    index: '03',
+    title: 'Creative Universe Building',
+    description:
+      'Deep, selective collaborations to shape a full emotional and narrative world around a brand, release, or creative body of work.',
+    cta: 'Start a World',
+  },
+] as const;
+
+export function WorkWithStudio() {
+  return (
+    <section className="relative ei-section py-24 md:py-40 overflow-hidden">
+      {/* Atmospheric accent — faint indigo, left */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          top: '12%',
+          left: '-6%',
+          width: 'clamp(280px, 38vw, 560px)',
+          height: 'clamp(280px, 38vw, 560px)',
+          background:
+            'radial-gradient(ellipse 68% 68% at 32% 52%, rgba(99,102,241,0.045) 0%, transparent 72%)',
+          filter: 'blur(100px)',
+        }}
+      />
+      {/* Atmospheric accent — faint violet, right */}
+      <div
+        className="absolute pointer-events-none"
+        style={{
+          bottom: '10%',
+          right: '-4%',
+          width: 'clamp(200px, 28vw, 440px)',
+          height: 'clamp(200px, 28vw, 440px)',
+          background:
+            'radial-gradient(ellipse 70% 70% at 68% 44%, rgba(168,85,247,0.04) 0%, transparent 70%)',
+          filter: 'blur(90px)',
+        }}
+      />
+
+      {/* Section entry separator */}
+      <div className="ei-container mb-16 md:mb-24">
+        <div
+          className="w-full h-px"
+          style={{
+            background:
+              'linear-gradient(90deg, transparent, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.06) 75%, transparent)',
+          }}
+        />
+      </div>
+
+      <div className="ei-container">
+        <div className="max-w-4xl">
+          {/* Section label */}
+          <motion.span
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 1.1, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
+          >
+            Work With the Studio
+          </motion.span>
+
+          {/* Display heading */}
+          <motion.h2
+            initial={{ opacity: 0, y: 22 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 1.2, ease: EASE, delay: 0.1 }}
+            className="font-editorial text-[1.9rem] md:text-[2.5rem] lg:text-[3rem] text-[#E8EAF6]/80 leading-[1.22] mb-8 md:mb-10"
+            style={{ letterSpacing: '-0.012em' }}
+          >
+            Authored creative direction
+            <br className="hidden md:block" />
+            for founders, artists, and makers.
+          </motion.h2>
+
+          {/* Subheading */}
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 1.1, ease: EASE, delay: 0.18 }}
+            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[55ch] mb-16 md:mb-20"
+          >
+            Echo in Ink offers authored creative direction for founders, artists,
+            and makers seeking clarity, identity, and atmosphere.
+          </motion.p>
+
+          {/* Top rule */}
+          <div
+            className="w-full h-px"
+            style={{
+              background:
+                'linear-gradient(90deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.07) 65%, transparent 100%)',
+            }}
+          />
+
+          {/* Offerings */}
+          <div>
+            {offerings.map((item, i) => (
+              <motion.div
+                key={item.index}
+                initial={{ opacity: 0, y: 18 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 1.1, ease: EASE, delay: 0.08 * i }}
+              >
+                <div className="flex gap-6 md:gap-10 items-start py-10 md:py-14">
+                  <span className="font-structural text-[9px] tracking-[0.28em] text-white/20 mt-2 shrink-0 w-5">
+                    {item.index}
+                  </span>
+                  <div className="flex-1">
+                    <h3
+                      className="font-editorial text-[1.4rem] md:text-[1.8rem] text-[#E8EAF6]/75 leading-[1.2] mb-4 md:mb-5"
+                      style={{ letterSpacing: '-0.008em' }}
+                    >
+                      {item.title}
+                    </h3>
+                    <p className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.88] max-w-[52ch] mb-7 md:mb-8">
+                      {item.description}
+                    </p>
+                    <button className="ei-gradient-border-btn inline-flex items-center justify-center px-6 py-2.5 font-structural text-[10px] tracking-[0.22em] uppercase text-white/65 transition-all duration-500 hover:text-white hover:scale-[1.02]">
+                      <span className="relative z-10">{item.cta}</span>
+                    </button>
+                  </div>
+                </div>
+                {i < offerings.length - 1 && (
+                  <div
+                    className="w-full h-px"
+                    style={{
+                      background:
+                        'linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.05) 60%, transparent 100%)',
+                    }}
+                  />
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
