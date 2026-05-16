@@ -64,21 +64,26 @@ function ImagePlaceholder({
   label?: string;
   tint?: keyof typeof TINTS;
 }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
+  const rawY = useTransform(scrollYProgress, [0, 1], [14, -14]);
+  const y = useSpring(rawY, { stiffness: 30, damping: 42, restDelta: 0.001 });
+
   return (
-    <div className={`relative w-full ${aspect} overflow-hidden`} style={{ backgroundColor: '#06070e' }}>
-      {/* Atmospheric base depth */}
-      <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 85% 75% at 50% 58%, #0c0e1d 0%, #05070f 55%, #020409 100%)' }} />
-      {/* Section colour bloom */}
-      <div className="absolute inset-0" style={{ background: TINTS[tint] }} />
-      {/* Counter-light — upper right */}
-      <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 30% 34% at 82% 16%, rgba(255,255,255,0.03) 0%, transparent 62%)' }} />
-      {/* Grain */}
-      <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: GRAIN, backgroundRepeat: 'repeat', backgroundSize: '200px 200px', opacity: 0.055, mixBlendMode: 'overlay' }} />
-      {/* Edge vignette */}
-      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 86% 82% at 50% 50%, transparent 30%, rgba(2,3,10,0.80) 100%)' }} />
-      {/* Bottom fade for caption */}
-      <div className="absolute bottom-0 left-0 right-0 h-2/5 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(3,4,12,0.55), transparent)' }} />
-      {/* Label */}
+    <div ref={ref} className={`relative w-full ${aspect} overflow-hidden`} style={{ backgroundColor: '#06070e' }}>
+      {/* Parallax atmospheric layers */}
+      <motion.div
+        className="pointer-events-none"
+        style={{ position: 'absolute', top: '-5%', left: '-3%', right: '-3%', bottom: '-5%', y }}
+      >
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 85% 75% at 50% 58%, #0c0e1d 0%, #05070f 55%, #020409 100%)' }} />
+        <div className="absolute inset-0" style={{ background: TINTS[tint] }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 30% 34% at 82% 16%, rgba(255,255,255,0.03) 0%, transparent 62%)' }} />
+        <div className="absolute inset-0" style={{ backgroundImage: GRAIN, backgroundRepeat: 'repeat', backgroundSize: '200px 200px', opacity: 0.055, mixBlendMode: 'overlay' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 86% 82% at 50% 50%, transparent 30%, rgba(2,3,10,0.80) 100%)' }} />
+        <div className="absolute bottom-0 left-0 right-0 h-2/5" style={{ background: 'linear-gradient(to top, rgba(3,4,12,0.55), transparent)' }} />
+      </motion.div>
+      {/* Label — fixed, outside parallax */}
       {label && (
         <div className="absolute bottom-0 left-0 p-4 md:p-5">
           <span className="font-structural text-[8px] tracking-[0.35em] uppercase text-white/15">{label}</span>
@@ -155,13 +160,13 @@ export function SignatureCaseStudy() {
         <Separator />
         <div className="pt-16 md:pt-24 max-w-4xl">
           <motion.span
-            {...fade(0)}
+            {...labelFade(0)}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-10 md:mb-14"
           >
             Signature Case Study
           </motion.span>
           <motion.h2
-            {...fade(0.1)}
+            {...headFade(0.15)}
             className="font-editorial text-[2rem] md:text-[3rem] lg:text-[3.8rem] text-[#E8EAF6]/85 leading-[1.18] mb-6"
             style={{ letterSpacing: '-0.015em' }}
           >
@@ -181,7 +186,7 @@ export function SignatureCaseStudy() {
       {/* ── 01 — THE BEGINNING ──────────────────────────────────────── */}
       <section className="relative overflow-hidden pb-20 md:pb-32">
         <div className="absolute pointer-events-none" style={{ bottom: '12%', left: '-10%', width: 'clamp(280px, 40vw, 560px)', height: 'clamp(280px, 40vw, 560px)', background: 'radial-gradient(ellipse 65% 65% at 34% 56%, rgba(168,85,247,0.05) 0%, transparent 72%)', filter: 'blur(90px)' }} />
-        <motion.div {...fade(0)}>
+        <motion.div {...envFade(0)}>
           <ImagePlaceholder aspect="aspect-[21/9]" label="Lumo — Opening Visual" tint="violet" />
         </motion.div>
 
@@ -194,7 +199,7 @@ export function SignatureCaseStudy() {
               01 — The Beginning: A Feeling, Not a Brief
             </motion.span>
             <motion.p
-              {...fade(0.1)}
+              {...headFade(0.12)}
               className="font-editorial text-[1.35rem] md:text-[1.75rem] text-[#E8EAF6]/80 leading-[1.4] mb-8"
               style={{ letterSpacing: '-0.01em' }}
             >
@@ -279,7 +284,7 @@ export function SignatureCaseStudy() {
       {/* ── 03 — THE IDENTITY BENEATH THE IDENTITY ──────────────────── */}
       <section className="relative overflow-hidden pb-16 md:pb-28">
         <div className="absolute pointer-events-none" style={{ top: '20%', right: '-12%', width: 'clamp(350px, 50vw, 680px)', height: 'clamp(350px, 50vw, 680px)', background: 'radial-gradient(ellipse 62% 62% at 64% 40%, rgba(99,102,241,0.06) 0%, transparent 72%)', filter: 'blur(90px)' }} />
-        <motion.div {...fade(0)}>
+        <motion.div {...envFade(0)}>
           <ImagePlaceholder aspect="aspect-[21/9]" label="Identity Exploration" tint="indigo" />
         </motion.div>
 
@@ -311,7 +316,7 @@ export function SignatureCaseStudy() {
 
             {/* Pull-quote — cinematic isolation */}
             <motion.blockquote
-              {...fade(0.2)}
+              {...headFade(0.1)}
               className="text-center font-editorial text-[1.55rem] md:text-[2.1rem] lg:text-[2.5rem] text-[#E8EAF6]/65 leading-[1.38] mt-16 md:mt-24 pt-12 md:pt-16"
               style={{
                 letterSpacing: '-0.012em',
@@ -556,27 +561,27 @@ export function SignatureCaseStudy() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 30% 28% at 50% 42%, rgba(232,121,249,0.045) 0%, transparent 65%)' }} />
         <div className="ei-container max-w-xl mx-auto">
           <motion.span
-            {...fade(0)}
+            {...labelFade(0)}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/15 mb-14"
           >
             08 — The Echo in Ink Signature
           </motion.span>
 
           <motion.p
-            {...fade(0.1)}
+            {...headFade(0.2)}
             className="font-editorial text-[1.3rem] md:text-[1.7rem] text-[#E8EAF6]/70 leading-[1.52] mb-7"
             style={{ letterSpacing: '-0.01em' }}
           >
             LUMO was not a design project. It was an act of care.
           </motion.p>
           <motion.p
-            {...fade(0.18)}
+            {...fade(0.55)}
             className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] mb-5"
           >
             Echo in Ink built a world where overwhelmed humans could finally breathe.
           </motion.p>
           <motion.p
-            {...fade(0.26)}
+            {...fade(0.85)}
             className="font-structural text-[12px] md:text-[13px] text-white/25 leading-[1.95]"
           >
             This is what we mean when we say design is emotional architecture.
