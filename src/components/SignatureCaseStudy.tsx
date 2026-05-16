@@ -21,17 +21,43 @@ function Separator() {
   );
 }
 
-function ImagePlaceholder({ aspect = 'aspect-[16/9]', label = '' }: { aspect?: string; label?: string }) {
+const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E")`;
+
+const TINTS = {
+  violet:  'radial-gradient(ellipse 58% 55% at 36% 46%, rgba(168,85,247,0.20) 0%, transparent 68%)',
+  aqua:    'radial-gradient(ellipse 55% 50% at 63% 37%, rgba(30,200,255,0.16) 0%, transparent 65%)',
+  pink:    'radial-gradient(ellipse 50% 55% at 44% 52%, rgba(232,121,249,0.17) 0%, transparent 66%)',
+  indigo:  'radial-gradient(ellipse 58% 52% at 52% 42%, rgba(99,102,241,0.18) 0%, transparent 70%)',
+  neutral: 'radial-gradient(ellipse 50% 50% at 50% 45%, rgba(180,185,210,0.07) 0%, transparent 70%)',
+} as const;
+
+function ImagePlaceholder({
+  aspect = 'aspect-[16/9]',
+  label = '',
+  tint = 'violet' as keyof typeof TINTS,
+}: {
+  aspect?: string;
+  label?: string;
+  tint?: keyof typeof TINTS;
+}) {
   return (
-    <div
-      className={`relative w-full ${aspect} overflow-hidden`}
-      style={{ background: 'linear-gradient(160deg, #0c0e1c 0%, #10122a 55%, #0a0c1a 100%)' }}
-    >
+    <div className={`relative w-full ${aspect} overflow-hidden`} style={{ backgroundColor: '#06070e' }}>
+      {/* Atmospheric base depth */}
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 85% 75% at 50% 58%, #0c0e1d 0%, #05070f 55%, #020409 100%)' }} />
+      {/* Section colour bloom */}
+      <div className="absolute inset-0" style={{ background: TINTS[tint] }} />
+      {/* Counter-light — upper right */}
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 30% 34% at 82% 16%, rgba(255,255,255,0.03) 0%, transparent 62%)' }} />
+      {/* Grain */}
+      <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: GRAIN, backgroundRepeat: 'repeat', backgroundSize: '200px 200px', opacity: 0.055, mixBlendMode: 'overlay' }} />
+      {/* Edge vignette */}
+      <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 86% 82% at 50% 50%, transparent 30%, rgba(2,3,10,0.80) 100%)' }} />
+      {/* Bottom fade for caption */}
+      <div className="absolute bottom-0 left-0 right-0 h-2/5 pointer-events-none" style={{ background: 'linear-gradient(to top, rgba(3,4,12,0.55), transparent)' }} />
+      {/* Label */}
       {label && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <span className="font-structural text-[9px] tracking-[0.3em] uppercase text-white/15">
-            {label}
-          </span>
+        <div className="absolute bottom-0 left-0 p-4 md:p-5">
+          <span className="font-structural text-[8px] tracking-[0.35em] uppercase text-white/15">{label}</span>
         </div>
       )}
     </div>
@@ -95,6 +121,10 @@ const snapshots = [
 export function SignatureCaseStudy() {
   return (
     <article className="relative overflow-hidden">
+      {/* Global film-grain layer */}
+      <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: GRAIN, backgroundRepeat: 'repeat', backgroundSize: '200px 200px', opacity: 0.02, mixBlendMode: 'overlay', zIndex: 10 }} />
+      {/* Header ambient bloom — violet, upper right */}
+      <div className="absolute pointer-events-none" style={{ top: '-8%', right: '-10%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)', background: 'radial-gradient(ellipse 60% 60% at 64% 36%, rgba(168,85,247,0.055) 0%, transparent 70%)', filter: 'blur(80px)' }} />
 
       {/* ── SECTION HEADER ──────────────────────────────────────────── */}
       <div className="ei-container py-16 md:py-28">
@@ -125,9 +155,10 @@ export function SignatureCaseStudy() {
       </div>
 
       {/* ── 01 — THE BEGINNING ──────────────────────────────────────── */}
-      <section className="relative pb-20 md:pb-32">
+      <section className="relative overflow-hidden pb-20 md:pb-32">
+        <div className="absolute pointer-events-none" style={{ bottom: '12%', left: '-10%', width: 'clamp(280px, 40vw, 560px)', height: 'clamp(280px, 40vw, 560px)', background: 'radial-gradient(ellipse 65% 65% at 34% 56%, rgba(168,85,247,0.05) 0%, transparent 72%)', filter: 'blur(90px)' }} />
         <motion.div {...fade(0)}>
-          <ImagePlaceholder aspect="aspect-[21/9]" label="Lumo — Opening Visual" />
+          <ImagePlaceholder aspect="aspect-[21/9]" label="Lumo — Opening Visual" tint="violet" />
         </motion.div>
 
         <div className="ei-container pt-14 md:pt-20">
@@ -169,7 +200,9 @@ export function SignatureCaseStudy() {
       </section>
 
       {/* ── 02 — THE WORLD WE FOUND ─────────────────────────────────── */}
-      <section className="ei-container py-16 md:py-28">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 55% 60% at 76% 56%, rgba(30,200,255,0.045) 0%, transparent 70%)' }} />
+        <div className="ei-container py-16 md:py-28">
         <motion.span
           {...fade(0)}
           className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
@@ -216,12 +249,14 @@ export function SignatureCaseStudy() {
             ))}
           </motion.ul>
         </div>
+        </div>
       </section>
 
       {/* ── 03 — THE IDENTITY BENEATH THE IDENTITY ──────────────────── */}
-      <section className="relative pb-16 md:pb-28">
+      <section className="relative overflow-hidden pb-16 md:pb-28">
+        <div className="absolute pointer-events-none" style={{ top: '20%', right: '-12%', width: 'clamp(350px, 50vw, 680px)', height: 'clamp(350px, 50vw, 680px)', background: 'radial-gradient(ellipse 62% 62% at 64% 40%, rgba(99,102,241,0.06) 0%, transparent 72%)', filter: 'blur(90px)' }} />
         <motion.div {...fade(0)}>
-          <ImagePlaceholder aspect="aspect-[21/9]" label="Identity Exploration" />
+          <ImagePlaceholder aspect="aspect-[21/9]" label="Identity Exploration" tint="indigo" />
         </motion.div>
 
         <div className="ei-container pt-14 md:pt-20">
@@ -271,7 +306,9 @@ export function SignatureCaseStudy() {
       </section>
 
       {/* ── 04 — THE SYSTEM WE BUILT ────────────────────────────────── */}
-      <section className="ei-container py-16 md:py-28">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 48% 55% at 23% 44%, rgba(99,102,241,0.038) 0%, transparent 68%)' }} />
+        <div className="ei-container py-16 md:py-28">
         <motion.span
           {...fade(0)}
           className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
@@ -321,10 +358,12 @@ export function SignatureCaseStudy() {
         >
           This wasn't a feature set. It was a feeling set.
         </motion.p>
+        </div>
       </section>
 
       {/* ── 05 — THE WORK (SELECTED SNAPSHOTS) ──────────────────────── */}
-      <section className="relative pb-16 md:pb-28">
+      <section className="relative overflow-hidden pb-16 md:pb-28">
+        <div className="absolute pointer-events-none" style={{ top: '18%', left: '-8%', width: 'clamp(280px, 38vw, 520px)', height: 'clamp(280px, 38vw, 520px)', background: 'radial-gradient(ellipse 65% 65% at 30% 48%, rgba(232,121,249,0.03) 0%, transparent 70%)', filter: 'blur(90px)' }} />
         <div className="ei-container mb-12 md:mb-16">
           <Separator />
           <div className="pt-14 md:pt-20">
@@ -341,7 +380,7 @@ export function SignatureCaseStudy() {
           {/* Row 1: Identity System (wide landscape) + Mobile Experience (portrait) */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 mb-5 md:mb-6 items-start">
             <motion.div className="md:col-span-3" {...fade(0)}>
-              <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[0].title} />
+              <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[0].title} tint="violet" />
               <div className="pt-5 pb-2">
                 <h3
                   className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
@@ -355,7 +394,7 @@ export function SignatureCaseStudy() {
               </div>
             </motion.div>
             <motion.div className="md:col-span-2" {...fade(0.07)}>
-              <ImagePlaceholder aspect="aspect-[2/3]" label={snapshots[1].title} />
+              <ImagePlaceholder aspect="aspect-[2/3]" label={snapshots[1].title} tint="aqua" />
               <div className="pt-5 pb-2">
                 <h3
                   className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
@@ -372,7 +411,7 @@ export function SignatureCaseStudy() {
           {/* Row 2: Narrative Architecture (portrait) + Design System (wide landscape) */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 items-start">
             <motion.div className="md:col-span-2" {...fade(0.07)}>
-              <ImagePlaceholder aspect="aspect-[3/4]" label={snapshots[2].title} />
+              <ImagePlaceholder aspect="aspect-[3/4]" label={snapshots[2].title} tint="pink" />
               <div className="pt-5 pb-2">
                 <h3
                   className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
@@ -386,7 +425,7 @@ export function SignatureCaseStudy() {
               </div>
             </motion.div>
             <motion.div className="md:col-span-3" {...fade(0.14)}>
-              <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[3].title} />
+              <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[3].title} tint="neutral" />
               <div className="pt-5 pb-2">
                 <h3
                   className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
@@ -405,9 +444,11 @@ export function SignatureCaseStudy() {
 
       {/* ── 06 — THE TRANSFORMATION ─────────────────────────────────── */}
       <section
-        className="relative py-24 md:py-48"
-        style={{ background: 'linear-gradient(180deg, #0a0c18 0%, #0d0f22 50%, #0a0c18 100%)' }}
+        className="relative overflow-hidden py-24 md:py-48"
+        style={{ background: 'linear-gradient(180deg, #060810 0%, #0b0d1f 50%, #060810 100%)' }}
       >
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 52% 48% at 50% 50%, rgba(99,102,241,0.08) 0%, transparent 70%)' }} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 28% 25% at 50% 48%, rgba(168,85,247,0.05) 0%, transparent 65%)' }} />
         <div className="ei-container">
           <motion.span
             {...fade(0)}
@@ -438,7 +479,9 @@ export function SignatureCaseStudy() {
       </section>
 
       {/* ── 07 — THE OUTCOME ────────────────────────────────────────── */}
-      <section className="ei-container py-16 md:py-28">
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 44% 50% at 74% 36%, rgba(168,85,247,0.04) 0%, transparent 65%)' }} />
+        <div className="ei-container py-16 md:py-28">
         <Separator />
         <div className="pt-14 md:pt-20 max-w-2xl">
           <motion.span
@@ -477,13 +520,16 @@ export function SignatureCaseStudy() {
             The product didn't just work. It held people.
           </motion.p>
         </div>
+        </div>
       </section>
 
       {/* ── 08 — THE ECHO IN INK SIGNATURE ──────────────────────────── */}
       <section
         className="relative py-24 md:py-40 text-center overflow-hidden"
-        style={{ background: 'linear-gradient(180deg, #0a0c18 0%, #0d1028 45%, #0a0c18 100%)' }}
+        style={{ background: 'linear-gradient(180deg, #060810 0%, #090b1e 45%, #060810 100%)' }}
       >
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 58% 52% at 50% 44%, rgba(167,139,250,0.08) 0%, rgba(99,102,241,0.04) 48%, transparent 72%)' }} />
+        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 30% 28% at 50% 42%, rgba(232,121,249,0.045) 0%, transparent 65%)' }} />
         <div className="ei-container max-w-xl mx-auto">
           <motion.span
             {...fade(0)}
