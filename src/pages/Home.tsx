@@ -2,6 +2,7 @@ import { Hero } from '@/components/Hero';
 import { StudioIntro } from '@/components/StudioIntro';
 import { SelectedWorks } from '@/components/SelectedWorks';
 import { Philosophy } from '@/components/Philosophy';
+import { SignatureCaseStudy } from '@/components/SignatureCaseStudy';
 import { StudioNotes } from '@/components/StudioNotes';
 import { WorkWithStudio } from '@/components/WorkWithStudio';
 import { ClosingSection } from '@/components/ClosingSection';
@@ -13,6 +14,7 @@ export function Home() {
       <StudioIntro />
       <SelectedWorks />
       <Philosophy />
+      <SignatureCaseStudy />
       <StudioNotes />
       <WorkWithStudio />
       <ClosingSection />
