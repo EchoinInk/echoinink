@@ -250,11 +250,15 @@ export function SignatureCaseStudy() {
               ))}
             </motion.ul>
 
-            {/* Pull-quote */}
+            {/* Pull-quote — cinematic isolation */}
             <motion.blockquote
               {...fade(0.2)}
-              className="text-center font-editorial text-[1.4rem] md:text-[1.9rem] text-[#E8EAF6]/65 leading-[1.38]"
-              style={{ letterSpacing: '-0.01em', fontStyle: 'italic' }}
+              className="text-center font-editorial text-[1.55rem] md:text-[2.1rem] lg:text-[2.5rem] text-[#E8EAF6]/65 leading-[1.38] mt-16 md:mt-24 pt-12 md:pt-16"
+              style={{
+                letterSpacing: '-0.012em',
+                fontStyle: 'italic',
+                borderTop: '1px solid rgba(255,255,255,0.05)',
+              }}
             >
               "Design as emotional architecture."
             </motion.blockquote>
@@ -275,14 +279,17 @@ export function SignatureCaseStudy() {
           04 — The System We Built
         </motion.span>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6 mb-14 md:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-14 md:gap-x-24 md:gap-y-16 mb-16 md:mb-24">
           {systemCards.map((card, i) => (
             <motion.div
               key={card.title}
               {...fade(0.07 * i)}
-              className="border border-white/5 p-7 md:p-9"
-              style={{ background: 'rgba(255,255,255,0.015)' }}
+              className="pt-7"
+              style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}
             >
+              <span className="block font-structural text-[9px] tracking-[0.28em] uppercase text-white/20 mb-5">
+                0{i + 1}
+              </span>
               <h3
                 className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.24] mb-6"
                 style={{ letterSpacing: '-0.006em' }}
@@ -305,8 +312,12 @@ export function SignatureCaseStudy() {
 
         <motion.p
           {...fade(0.1)}
-          className="font-editorial text-[1rem] md:text-[1.15rem] text-[#E8EAF6]/40 leading-[1.5]"
-          style={{ letterSpacing: '-0.004em', fontStyle: 'italic' }}
+          className="font-editorial text-[1.05rem] md:text-[1.2rem] text-[#E8EAF6]/40 leading-[1.5] pt-10 md:pt-14"
+          style={{
+            letterSpacing: '-0.005em',
+            fontStyle: 'italic',
+            borderTop: '1px solid rgba(255,255,255,0.05)',
+          }}
         >
           This wasn't a feature set. It was a feeling set.
         </motion.p>
@@ -326,29 +337,75 @@ export function SignatureCaseStudy() {
           </div>
         </div>
 
-        <div className="ei-container grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
-          {snapshots.map((snap, i) => (
-            <motion.div key={snap.title} {...fade(0.07 * i)}>
-              <ImagePlaceholder aspect="aspect-[4/3]" label={snap.title} />
+        <div className="ei-container">
+          {/* Row 1: Identity System (wide landscape) + Mobile Experience (portrait) */}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 mb-5 md:mb-6 items-start">
+            <motion.div className="md:col-span-3" {...fade(0)}>
+              <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[0].title} />
               <div className="pt-5 pb-2">
                 <h3
                   className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
-                  {snap.title}
+                  {snapshots[0].title}
                 </h3>
                 <p className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.85]">
-                  {snap.desc}
+                  {snapshots[0].desc}
                 </p>
               </div>
             </motion.div>
-          ))}
+            <motion.div className="md:col-span-2" {...fade(0.07)}>
+              <ImagePlaceholder aspect="aspect-[2/3]" label={snapshots[1].title} />
+              <div className="pt-5 pb-2">
+                <h3
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
+                  style={{ letterSpacing: '-0.006em' }}
+                >
+                  {snapshots[1].title}
+                </h3>
+                <p className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.85]">
+                  {snapshots[1].desc}
+                </p>
+              </div>
+            </motion.div>
+          </div>
+          {/* Row 2: Narrative Architecture (portrait) + Design System (wide landscape) */}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 items-start">
+            <motion.div className="md:col-span-2" {...fade(0.07)}>
+              <ImagePlaceholder aspect="aspect-[3/4]" label={snapshots[2].title} />
+              <div className="pt-5 pb-2">
+                <h3
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
+                  style={{ letterSpacing: '-0.006em' }}
+                >
+                  {snapshots[2].title}
+                </h3>
+                <p className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.85]">
+                  {snapshots[2].desc}
+                </p>
+              </div>
+            </motion.div>
+            <motion.div className="md:col-span-3" {...fade(0.14)}>
+              <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[3].title} />
+              <div className="pt-5 pb-2">
+                <h3
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
+                  style={{ letterSpacing: '-0.006em' }}
+                >
+                  {snapshots[3].title}
+                </h3>
+                <p className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.85]">
+                  {snapshots[3].desc}
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* ── 06 — THE TRANSFORMATION ─────────────────────────────────── */}
       <section
-        className="relative py-20 md:py-36"
+        className="relative py-24 md:py-48"
         style={{ background: 'linear-gradient(180deg, #0a0c18 0%, #0d0f22 50%, #0a0c18 100%)' }}
       >
         <div className="ei-container">
@@ -410,8 +467,12 @@ export function SignatureCaseStudy() {
 
           <motion.p
             {...fade(0.12)}
-            className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[#E8EAF6]/70 leading-[1.38]"
-            style={{ letterSpacing: '-0.008em', fontStyle: 'italic' }}
+            className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[#E8EAF6]/70 leading-[1.38] pt-10 md:pt-14"
+            style={{
+              letterSpacing: '-0.008em',
+              fontStyle: 'italic',
+              borderTop: '1px solid rgba(255,255,255,0.06)',
+            }}
           >
             The product didn't just work. It held people.
           </motion.p>
