@@ -193,7 +193,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container pt-14 md:pt-20">
           <div className="max-w-3xl">
             <motion.span
-              {...fade(0)}
+              {...labelFade(0)}
               className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-10"
             >
               01 — The Beginning: A Feeling, Not a Brief
@@ -233,7 +233,7 @@ export function SignatureCaseStudy() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 55% 60% at 76% 56%, rgba(30,200,255,0.045) 0%, transparent 70%)' }} />
         <div className="ei-container py-16 md:py-28">
         <motion.span
-          {...fade(0)}
+          {...labelFade(0)}
           className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
         >
           02 — The World We Found
@@ -300,7 +300,7 @@ export function SignatureCaseStudy() {
 
         <div className="ei-container pt-14 md:pt-20">
           <motion.span
-            {...fade(0)}
+            {...labelFade(0)}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 text-center"
           >
             03 — The Identity Beneath the Identity
@@ -359,7 +359,7 @@ export function SignatureCaseStudy() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 48% 55% at 23% 44%, rgba(99,102,241,0.038) 0%, transparent 68%)' }} />
         <div className="ei-container py-16 md:py-28">
         <motion.span
-          {...fade(0)}
+          {...labelFade(0)}
           className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
         >
           04 — The System We Built
@@ -397,7 +397,7 @@ export function SignatureCaseStudy() {
         </div>
 
         <motion.p
-          {...fade(0.1)}
+          {...headFade(0.1)}
           className="font-editorial text-[1.05rem] md:text-[1.2rem] text-[#E8EAF6]/40 leading-[1.5] pt-10 md:pt-14"
           style={{
             letterSpacing: '-0.005em',
@@ -412,12 +412,12 @@ export function SignatureCaseStudy() {
 
       {/* ── 05 — THE WORK (SELECTED SNAPSHOTS) ──────────────────────── */}
       <section className="relative overflow-hidden pb-16 md:pb-28">
-        <div className="absolute pointer-events-none" style={{ top: '18%', left: '-8%', width: 'clamp(280px, 38vw, 520px)', height: 'clamp(280px, 38vw, 520px)', background: 'radial-gradient(ellipse 65% 65% at 30% 48%, rgba(232,121,249,0.03) 0%, transparent 70%)', filter: 'blur(90px)' }} />
+        <div className="absolute pointer-events-none" style={{ top: '18%', left: '-8%', width: 'clamp(280px, 38vw, 520px)', height: 'clamp(280px, 38vw, 520px)', background: 'radial-gradient(ellipse 65% 65% at 30% 48%, rgba(232,121,249,0.055) 0%, transparent 70%)', filter: 'blur(90px)' }} />
         <div className="ei-container mb-12 md:mb-16">
           <Separator />
           <div className="pt-14 md:pt-20">
             <motion.span
-              {...fade(0)}
+              {...labelFade(0)}
               className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12"
             >
               05 — The Work (Selected Snapshots)
@@ -427,8 +427,8 @@ export function SignatureCaseStudy() {
 
         <div className="ei-container">
           {/* Row 1: Identity System (wide landscape) + Mobile Experience (portrait) */}
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 mb-5 md:mb-6 items-start">
-            <motion.div className="md:col-span-3" {...fade(0)}>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 mb-12 md:mb-16 items-start">
+            <motion.div className="md:col-span-3" {...envFade(0)}>
               <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[0].title} tint="violet" />
               <div className="pt-5 pb-2">
                 <h3
@@ -442,7 +442,7 @@ export function SignatureCaseStudy() {
                 </p>
               </div>
             </motion.div>
-            <motion.div className="md:col-span-2" {...fade(0.07)}>
+            <motion.div className="md:col-span-2" {...envFade(0.07)}>
               <ImagePlaceholder aspect="aspect-[2/3]" label={snapshots[1].title} tint="aqua" />
               <div className="pt-5 pb-2">
                 <h3
@@ -459,7 +459,7 @@ export function SignatureCaseStudy() {
           </div>
           {/* Row 2: Narrative Architecture (portrait) + Design System (wide landscape) */}
           <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 items-start">
-            <motion.div className="md:col-span-2" {...fade(0.07)}>
+            <motion.div className="md:col-span-2" {...envFade(0.07)}>
               <ImagePlaceholder aspect="aspect-[3/4]" label={snapshots[2].title} tint="pink" />
               <div className="pt-5 pb-2">
                 <h3
@@ -473,7 +473,7 @@ export function SignatureCaseStudy() {
                 </p>
               </div>
             </motion.div>
-            <motion.div className="md:col-span-3" {...fade(0.14)}>
+            <motion.div className="md:col-span-3" {...envFade(0.14)}>
               <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[3].title} tint="neutral" />
               <div className="pt-5 pb-2">
                 <h3
@@ -500,7 +500,7 @@ export function SignatureCaseStudy() {
         <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 28% 25% at 50% 48%, rgba(168,85,247,0.05) 0%, transparent 65%)' }} />
         <div className="ei-container">
           <motion.span
-            {...fade(0)}
+            {...labelFade(0)}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-14 text-center"
           >
             06 — The Transformation
@@ -540,7 +540,7 @@ export function SignatureCaseStudy() {
         <Separator />
         <div className="pt-14 md:pt-20 max-w-2xl">
           <motion.span
-            {...fade(0)}
+            {...labelFade(0)}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12"
           >
             07 — The Outcome
@@ -574,7 +574,7 @@ export function SignatureCaseStudy() {
           </motion.ul>
 
           <motion.p
-            {...fade(0.12)}
+            {...headFade(0.12)}
             className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[#E8EAF6]/70 leading-[1.38] pt-10 md:pt-14"
             style={{
               letterSpacing: '-0.008em',
