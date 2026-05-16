@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -7,22 +8,25 @@ const offerings = [
     index: '01',
     title: 'Atmospheric Identity Kits',
     description:
-      'Emotional identity direction for brands, creators, and projects that need a coherent visual and narrative atmosphere — without a full rebrand.',
-    cta: 'Begin an Identity',
+      'Curated identity systems shaped through atmosphere, emotion, and visual storytelling — for creators, founders, and brands seeking clarity that feels authentically theirs.',
+    cta: 'Explore Identity Systems',
+    href: '/identity',
   },
   {
     index: '02',
     title: 'Echo Sessions',
     description:
-      '60-minute creative direction sessions for clarity, narrative cohesion, and aesthetic alignment across your work or project.',
-    cta: 'Enter a Session',
+      'Premium 1:1 creative direction experiences for identity clarity, narrative positioning, and aesthetic alignment — when your work needs a witness and a direction.',
+    cta: 'Begin a Session',
+    href: '/sessions',
   },
   {
     index: '03',
     title: 'Creative Universe Building',
     description:
-      'Deep, selective collaborations to shape a full emotional and narrative world around a brand, release, or creative body of work.',
-    cta: 'Start a World',
+      'Rare, selective collaborations to build immersive worlds around a brand, release, or creative vision — for those ready to invest in something that will be remembered.',
+    cta: 'Build a World',
+    href: '/worlds',
   },
 ] as const;
 
@@ -139,9 +143,12 @@ export function WorkWithStudio() {
                     <p className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.88] max-w-[52ch] mb-7 md:mb-8">
                       {item.description}
                     </p>
-                    <button className="ei-gradient-border-btn inline-flex items-center justify-center px-6 py-2.5 font-structural text-[10px] tracking-[0.22em] uppercase text-white/65 transition-all duration-500 hover:text-white hover:scale-[1.02]">
+                    <Link
+                      to={item.href}
+                      className="ei-gradient-border-btn inline-flex items-center justify-center px-6 py-2.5 font-structural text-[10px] tracking-[0.22em] uppercase text-white/65 transition-all duration-500 hover:text-white hover:scale-[1.02]"
+                    >
                       <span className="relative z-10">{item.cta}</span>
-                    </button>
+                    </Link>
                   </div>
                 </div>
                 {i < offerings.length - 1 && (

@@ -293,7 +293,7 @@ export function Hero() {
         </p>
 
         {/* CTA */}
-        <Button>EXPLORE THE WORLD</Button>
+        <Button to="/works">EXPLORE THE WORLD</Button>
       </div>
 
       {/* Bottom atmospheric fade — cinematic dissolve into page */}

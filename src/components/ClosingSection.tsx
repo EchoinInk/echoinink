@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import bgWide from '@/assets/ei-hero-bg-dark-21x9.png';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -88,9 +89,12 @@ export function ClosingSection() {
           viewport={{ once: true }}
           transition={{ duration: 1.1, ease: EASE, delay: 0.48 }}
         >
-          <button className="ei-gradient-border-btn relative inline-flex items-center justify-center px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/85 transition-all duration-500 hover:text-white hover:scale-[1.02]">
+          <Link
+            to="/works"
+            className="ei-gradient-border-btn relative inline-flex items-center justify-center px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/85 transition-all duration-500 hover:text-white hover:scale-[1.02]"
+          >
             <span className="relative z-10">Enter the Archive</span>
-          </button>
+          </Link>
         </motion.div>
       </div>
 
