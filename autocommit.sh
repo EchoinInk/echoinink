@@ -1,11 +1,7 @@
 #!/bin/bash
 
-cd "$(dirname "$0")/.."
-
 while true
 do
-    git pull origin main --rebase
-
     git add .
 
     if ! git diff --cached --quiet; then
