@@ -180,7 +180,7 @@ function WorkPanel({
   );
 }
 
-export function SelectedWorks() {
+export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }) {
   return (
     <section className="relative ei-section py-24 md:py-36 overflow-hidden">
       {/* Section header */}
@@ -237,17 +237,19 @@ export function SelectedWorks() {
         </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.0, ease: EASE, delay: 0.1 }}
-          className="flex justify-center mt-14 md:mt-20"
-        >
-          <button className="ei-gradient-border-btn relative inline-flex items-center gap-3 px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/65 transition-all duration-500 hover:text-white hover:scale-[1.02]">
-            <span className="relative z-10">View All Works</span>
-          </button>
-        </motion.div>
+        {!hideViewAll && (
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.0, ease: EASE, delay: 0.1 }}
+            className="flex justify-center mt-14 md:mt-20"
+          >
+            <button className="ei-gradient-border-btn relative inline-flex items-center gap-3 px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/65 transition-all duration-500 hover:text-white hover:scale-[1.02]">
+              <span className="relative z-10">View Selected Works</span>
+            </button>
+          </motion.div>
+        )}
       </div>
     </section>
   );
