@@ -385,6 +385,125 @@ function BreathingIdentityAtmosphere() {
   );
 }
 
+function HumaneFrameworkAtmosphere() {
+  return (
+    <div
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      aria-hidden="true"
+    >
+      {/* Warm charcoal environmental tone */}
+      <div
+        style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(145deg, rgba(16,13,22,0.38) 0%, rgba(11,10,20,0.16) 55%, transparent 85%)',
+        }}
+      />
+
+      {/* Node 1 — upper-left, anchor pulse */}
+      <motion.div
+        animate={{ opacity: [0.60, 1, 0.60] }}
+        transition={{ duration: 24, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
+        style={{
+          position: 'absolute',
+          top: '5%', left: '-4%',
+          width: 'clamp(200px, 28vw, 380px)',
+          height: 'clamp(200px, 28vw, 380px)',
+          background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(105,88,175,0.078) 0%, rgba(90,75,158,0.030) 55%, transparent 72%)',
+          filter: 'blur(48px)',
+        }}
+      />
+
+      {/* Node 2 — upper-right */}
+      <motion.div
+        animate={{ opacity: [0.45, 0.88, 0.45] }}
+        transition={{ duration: 31, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 6 }}
+        style={{
+          position: 'absolute',
+          top: '8%', right: '-2%',
+          width: 'clamp(200px, 26vw, 360px)',
+          height: 'clamp(200px, 26vw, 360px)',
+          background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(98,82,168,0.070) 0%, rgba(84,70,148,0.026) 55%, transparent 72%)',
+          filter: 'blur(44px)',
+        }}
+      />
+
+      {/* Node 3 — lower-left */}
+      <motion.div
+        animate={{ opacity: [0.50, 0.85, 0.50] }}
+        transition={{ duration: 36, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 11 }}
+        style={{
+          position: 'absolute',
+          bottom: '12%', left: '2%',
+          width: 'clamp(180px, 24vw, 340px)',
+          height: 'clamp(180px, 24vw, 340px)',
+          background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(90,76,162,0.065) 0%, rgba(78,65,145,0.024) 55%, transparent 72%)',
+          filter: 'blur(42px)',
+        }}
+      />
+
+      {/* Node 4 — lower-right */}
+      <motion.div
+        animate={{ opacity: [0.55, 0.90, 0.55] }}
+        transition={{ duration: 28, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 16 }}
+        style={{
+          position: 'absolute',
+          bottom: '8%', right: '4%',
+          width: 'clamp(180px, 24vw, 340px)',
+          height: 'clamp(180px, 24vw, 340px)',
+          background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(102,86,172,0.072) 0%, rgba(88,74,152,0.026) 55%, transparent 72%)',
+          filter: 'blur(46px)',
+        }}
+      />
+
+      {/* Faint curved connective arcs between nodes */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 1000 700"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{
+          position: 'absolute', inset: 0,
+          width: '100%', height: '100%',
+          filter: 'blur(1.2px)',
+        }}
+      >
+        {/* N1 → N2 — top arc, bowing gently upward */}
+        <path
+          d="M 220 195 Q 500 140 760 178"
+          stroke="rgba(120,100,210,0.048)"
+          strokeWidth="0.8"
+          fill="none"
+          strokeLinecap="round"
+        />
+        {/* N1 → N3 — left arc, slight outward bow */}
+        <path
+          d="M 214 248 Q 148 420 218 568"
+          stroke="rgba(112,94,200,0.040)"
+          strokeWidth="0.7"
+          fill="none"
+          strokeLinecap="round"
+        />
+        {/* N2 → N4 — right arc */}
+        <path
+          d="M 768 228 Q 840 390 752 548"
+          stroke="rgba(108,90,196,0.040)"
+          strokeWidth="0.7"
+          fill="none"
+          strokeLinecap="round"
+        />
+        {/* N3 → N4 — bottom arc, gentle bow */}
+        <path
+          d="M 268 572 Q 500 620 748 554"
+          stroke="rgba(116,96,205,0.044)"
+          strokeWidth="0.6"
+          fill="none"
+          strokeLinecap="round"
+        />
+      </svg>
+    </div>
+  );
+}
+
 const systemCards = [
   {
     title: 'The Adaptive Behavioral System',
@@ -646,9 +765,9 @@ export function SignatureCaseStudy() {
         </div>
       </section>
 
-      {/* ── 04 — THE SYSTEM WE BUILT ────────────────────────────────── */}
+      {/* ── 04 — THE SYSTEM WE BUILT ──────────────────────────────────── */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 48% 55% at 23% 44%, rgba(99,102,241,0.038) 0%, transparent 68%)' }} />
+        <HumaneFrameworkAtmosphere />
         <div className="ei-container py-16 md:py-28">
         <motion.span
           {...labelFade(0)}
