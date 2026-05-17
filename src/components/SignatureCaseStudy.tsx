@@ -504,6 +504,75 @@ function HumaneFrameworkAtmosphere() {
   );
 }
 
+function FragmentsAtmosphere() {
+  return (
+    <div
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      aria-hidden="true"
+    >
+      {/* Environmental backdrop bloom — left-center, embracing the composition */}
+      <motion.div
+        animate={{ opacity: [0.55, 0.88, 0.55] }}
+        transition={{ duration: 32, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
+        style={{
+          position: 'absolute',
+          top: '-5%', left: '-10%',
+          width: 'clamp(500px, 68vw, 900px)',
+          height: 'clamp(500px, 68vw, 900px)',
+          background: 'radial-gradient(ellipse 55% 52% at 40% 46%, rgba(110,78,210,0.065) 0%, rgba(90,62,185,0.028) 52%, transparent 72%)',
+          filter: 'blur(88px)',
+        }}
+      />
+
+      {/* Secondary depth bloom — right side, row-2 zone */}
+      <motion.div
+        animate={{ opacity: [0.40, 0.72, 0.40] }}
+        transition={{ duration: 38, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 10 }}
+        style={{
+          position: 'absolute',
+          bottom: '15%', right: '-6%',
+          width: 'clamp(280px, 38vw, 560px)',
+          height: 'clamp(280px, 38vw, 560px)',
+          background: 'radial-gradient(ellipse 55% 52% at 50% 50%, rgba(95,68,195,0.055) 0%, rgba(78,55,172,0.022) 52%, transparent 72%)',
+          filter: 'blur(80px)',
+        }}
+      />
+
+      {/* Inter-row fog — soft horizontal atmosphere in the gallery gap */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '46%', left: 0, right: 0,
+          height: '12%',
+          background: 'linear-gradient(180deg, transparent 0%, rgba(5,4,14,0.10) 50%, transparent 100%)',
+          filter: 'blur(18px)',
+        }}
+      />
+
+      {/* Cinematic vignette — shapes gallery as suspended space */}
+      <div
+        style={{
+          position: 'absolute', inset: 0,
+          background: 'radial-gradient(ellipse 80% 72% at 50% 48%, transparent 40%, rgba(4,3,12,0.10) 72%, rgba(3,2,10,0.15) 100%)',
+        }}
+      />
+
+      {/* Faint drifting grain */}
+      <motion.div
+        animate={{ opacity: [0.016, 0.040, 0.016] }}
+        transition={{ duration: 28, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 5 }}
+        style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '180px 180px',
+          mixBlendMode: 'overlay',
+        }}
+      />
+    </div>
+  );
+}
+
 const systemCards = [
   {
     title: 'The Adaptive Behavioral System',
@@ -823,7 +892,7 @@ export function SignatureCaseStudy() {
 
       {/* ── 05 — THE WORK (SELECTED SNAPSHOTS) ──────────────────────── */}
       <section className="relative overflow-hidden pb-16 md:pb-28">
-        <div className="absolute pointer-events-none" style={{ top: '18%', left: '-8%', width: 'clamp(280px, 38vw, 520px)', height: 'clamp(280px, 38vw, 520px)', background: 'radial-gradient(ellipse 65% 65% at 30% 48%, rgba(232,121,249,0.055) 0%, transparent 70%)', filter: 'blur(90px)' }} />
+        <FragmentsAtmosphere />
         <div className="ei-container mb-12 md:mb-16">
           <Separator />
           <div className="pt-14 md:pt-20">
