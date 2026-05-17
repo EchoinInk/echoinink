@@ -573,6 +573,102 @@ function FragmentsAtmosphere() {
   );
 }
 
+function BecomingAtmosphere() {
+  return (
+    <div
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      aria-hidden="true"
+    >
+      {/* Cool-to-warm tonal shift — barely perceptible warmth rising at base */}
+      <div
+        style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(180deg, transparent 28%, rgba(18,12,8,0.10) 100%)',
+        }}
+      />
+
+      {/* Large-scale environmental diffusion — largest glow in the system */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%', left: '50%',
+          width: 'clamp(640px, 92vw, 1240px)',
+          height: 'clamp(640px, 92vw, 1240px)',
+          transform: 'translate(-50%, -50%)',
+        }}
+      >
+        <motion.div
+          animate={{ opacity: [0.60, 1, 0.60], scale: [1, 1.024, 1] }}
+          transition={{ duration: 30, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
+          style={{
+            position: 'absolute', inset: 0,
+            background: 'radial-gradient(ellipse 54% 50% at 50% 50%, rgba(99,82,210,0.092) 0%, rgba(82,68,185,0.036) 48%, transparent 72%)',
+            filter: 'blur(90px)',
+            transformOrigin: 'center center',
+          }}
+        />
+      </div>
+
+      {/* Soft horizon glow — lower visual field, wide and diffuse */}
+      <motion.div
+        animate={{ opacity: [0.50, 0.82, 0.50] }}
+        transition={{ duration: 38, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 8 }}
+        style={{
+          position: 'absolute',
+          bottom: '-8%', left: '-15%', right: '-15%',
+          height: 'clamp(320px, 44vw, 640px)',
+          background: 'radial-gradient(ellipse 88% 48% at 50% 82%, rgba(108,82,196,0.075) 0%, rgba(90,68,176,0.030) 50%, transparent 74%)',
+          filter: 'blur(88px)',
+        }}
+      />
+
+      {/* Circular echo formation — centered, emerging slowly */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%', left: '50%',
+          width: 'clamp(380px, 54vw, 760px)',
+          height: 'clamp(380px, 54vw, 760px)',
+          transform: 'translate(-50%, -50%)',
+        }}
+      >
+        <motion.div
+          animate={{ opacity: [0.48, 0.88, 0.48], scale: [0.974, 1.022, 0.974] }}
+          transition={{ duration: 36, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 5 }}
+          style={{
+            position: 'absolute', inset: 0,
+            transformOrigin: 'center center',
+          }}
+        >
+          <svg
+            width="100%" height="100%"
+            viewBox="0 0 600 600"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="300" cy="300" r="268" stroke="rgba(115,94,218,0.042)" strokeWidth="0.8" />
+            <circle cx="300" cy="300" r="210" stroke="rgba(115,94,218,0.032)" strokeWidth="0.6" />
+            <circle cx="300" cy="300" r="152" stroke="rgba(115,94,218,0.024)" strokeWidth="0.5" />
+          </svg>
+        </motion.div>
+      </div>
+
+      {/* Projector dust grain — fine tile, slow drift cycle */}
+      <motion.div
+        animate={{ opacity: [0.018, 0.042, 0.018] }}
+        transition={{ duration: 26, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 3 }}
+        style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '120px 120px',
+          mixBlendMode: 'overlay',
+        }}
+      />
+    </div>
+  );
+}
+
 const systemCards = [
   {
     title: 'The Adaptive Behavioral System',
@@ -976,8 +1072,7 @@ export function SignatureCaseStudy() {
         className="relative overflow-hidden py-24 md:py-48"
         style={{ background: 'linear-gradient(180deg, #060810 0%, #0b0d1f 50%, #060810 100%)' }}
       >
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 52% 48% at 50% 50%, rgba(99,102,241,0.08) 0%, transparent 70%)' }} />
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 28% 25% at 50% 48%, rgba(168,85,247,0.05) 0%, transparent 65%)' }} />
+        <BecomingAtmosphere />
         <div className="ei-container">
           <motion.span
             {...labelFade(0)}
