@@ -14,7 +14,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 const vp = (margin = '-40px') => ({ once: true, margin });
 
 const fade = (delay = 0) => ({
-  initial: { opacity: 0, y: 8 },
+  initial: { opacity: 0, y: 5 },
   whileInView: { opacity: 1, y: 0 } as { opacity: number; y: number },
   viewport: vp(),
   transition: { duration: 1.6, ease: EASE, delay },
@@ -28,7 +28,7 @@ const envFade = (delay = 0) => ({
 });
 
 const headFade = (delay = 0) => ({
-  initial: { opacity: 0, y: 6 },
+  initial: { opacity: 0, y: 4 },
   whileInView: { opacity: 1, y: 0 } as { opacity: number; y: number },
   viewport: vp('-40px'),
   transition: { duration: 1.9, ease: EASE, delay },
@@ -265,16 +265,16 @@ function FragmentsAtmosphere() {
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
       <GlowField
         style={{ top: '-5%', left: '-10%', width: 'clamp(500px, 68vw, 900px)', height: 'clamp(500px, 68vw, 900px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 40% 46%, rgba(110,78,210,0.065) 0%, rgba(90,62,185,0.028) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 40% 46%, rgba(110,78,210,0.080) 0%, rgba(90,62,185,0.033) 52%, transparent 72%)"
         blur={88}
-        anim={{ opacity: [0.55, 0.88, 0.55] }}
+        anim={{ opacity: [0.60, 0.94, 0.60] }}
         duration={32}
       />
       <GlowField
         style={{ bottom: '15%', right: '-6%', width: 'clamp(280px, 38vw, 560px)', height: 'clamp(280px, 38vw, 560px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 50% 50%, rgba(95,68,195,0.055) 0%, rgba(78,55,172,0.022) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 50% 50%, rgba(95,68,195,0.068) 0%, rgba(78,55,172,0.028) 52%, transparent 72%)"
         blur={80}
-        anim={{ opacity: [0.40, 0.72, 0.40] }}
+        anim={{ opacity: [0.48, 0.80, 0.48] }}
         duration={38} delay={10}
       />
       <div style={{ position: 'absolute', top: '46%', left: 0, right: 0, height: '12%', background: 'linear-gradient(180deg, transparent 0%, rgba(5,4,14,0.10) 50%, transparent 100%)', filter: 'blur(18px)' }} />
@@ -683,8 +683,8 @@ export function SignatureCaseStudy() {
         </div>
 
         <motion.p
-          {...headFade(0.1)}
-          className="font-editorial text-[1.05rem] md:text-[1.2rem] text-[#E8EAF6]/40 leading-[1.5] pt-10 md:pt-14"
+          {...envFade(0.2)}
+          className="font-editorial text-[1.15rem] md:text-[1.35rem] text-[#E8EAF6]/55 leading-[1.5] pt-14 md:pt-20"
           style={{
             letterSpacing: '-0.005em',
             fontStyle: 'italic',
@@ -713,7 +713,7 @@ export function SignatureCaseStudy() {
 
         <div className="ei-container">
           {/* Row 1: Identity System (wide landscape) + Mobile Experience (portrait) */}
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 mb-12 md:mb-16 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 md:gap-6 mb-20 md:mb-28 items-start">
             <motion.div className="md:col-span-3" {...envFade(0)}>
               <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[0].title} tint="violet" />
               <div className="pt-5 pb-2">
@@ -796,7 +796,7 @@ export function SignatureCaseStudy() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
-            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.15, delayChildren: 0.1 } } }}
+            variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.20, delayChildren: 0.15 } } }}
           >
             {[
               'From tool to companion',
@@ -807,7 +807,7 @@ export function SignatureCaseStudy() {
             ].map((item) => (
               <motion.li
                 key={item}
-                variants={{ hidden: { opacity: 0, y: 6 }, visible: { opacity: 1, y: 0, transition: { duration: 1.9, ease: EASE } } }}
+                variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 2.2, ease: EASE } } }}
                 className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[#E8EAF6]/60 leading-[1.35]"
                 style={{ letterSpacing: '-0.008em' }}
               >
@@ -859,8 +859,8 @@ export function SignatureCaseStudy() {
           </motion.ul>
 
           <motion.p
-            {...headFade(0.12)}
-            className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[#E8EAF6]/70 leading-[1.38] pt-10 md:pt-14"
+            {...envFade(0.2)}
+            className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[#E8EAF6]/75 leading-[1.38] pt-14 md:pt-20"
             style={{
               letterSpacing: '-0.008em',
               fontStyle: 'italic',
