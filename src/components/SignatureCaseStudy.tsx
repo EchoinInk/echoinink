@@ -165,6 +165,117 @@ function OriginPulseAtmosphere() {
   );
 }
 
+function CognitiveLandscapeAtmosphere() {
+  return (
+    <div
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      aria-hidden="true"
+    >
+      {/* Charcoal-violet environmental undertone */}
+      <div
+        style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(138deg, rgba(12,10,26,0.42) 0%, rgba(8,8,20,0.16) 52%, rgba(14,11,28,0.10) 100%)',
+        }}
+      />
+
+      {/* Soft right-side ambient — violet undertone */}
+      <div
+        style={{
+          position: 'absolute', inset: 0,
+          background: 'radial-gradient(ellipse 52% 58% at 78% 54%, rgba(78,62,155,0.065) 0%, transparent 68%)',
+          filter: 'blur(40px)',
+        }}
+      />
+
+      {/* Ultra-faint contour SVG sweeps — 3 gentle horizontal curves */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 1000 600"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{
+          position: 'absolute', inset: 0,
+          width: '100%', height: '100%',
+          filter: 'blur(1.5px)',
+        }}
+      >
+        <path
+          d="M -40 228 Q 240 196 490 238 T 1040 212"
+          stroke="rgba(140,120,230,0.052)"
+          strokeWidth="1"
+          fill="none"
+        />
+        <path
+          d="M -40 332 Q 300 290 558 334 T 1040 314"
+          stroke="rgba(128,108,220,0.042)"
+          strokeWidth="0.7"
+          fill="none"
+        />
+        <path
+          d="M -40 418 Q 185 388 448 430 T 1040 408"
+          stroke="rgba(115,96,210,0.040)"
+          strokeWidth="0.6"
+          fill="none"
+        />
+      </svg>
+
+      {/* Friction zone glow — right cluster */}
+      <motion.div
+        animate={{ opacity: [0.65, 1, 0.65] }}
+        transition={{ duration: 28, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
+        style={{
+          position: 'absolute',
+          top: '20%', right: '8%',
+          width: 'clamp(200px, 26vw, 360px)',
+          height: 'clamp(200px, 26vw, 360px)',
+          background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(95,78,198,0.075) 0%, rgba(80,62,175,0.03) 55%, transparent 72%)',
+          filter: 'blur(44px)',
+        }}
+      />
+
+      {/* Friction zone glow — left, secondary */}
+      <motion.div
+        animate={{ opacity: [0.45, 0.82, 0.45] }}
+        transition={{ duration: 36, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 9 }}
+        style={{
+          position: 'absolute',
+          top: '48%', left: '15%',
+          width: 'clamp(160px, 20vw, 280px)',
+          height: 'clamp(160px, 20vw, 280px)',
+          background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(75,60,172,0.058) 0%, transparent 70%)',
+          filter: 'blur(38px)',
+        }}
+      />
+
+      {/* Echo ripple rings — memory-like, right side */}
+      <motion.div
+        animate={{ opacity: [0.55, 0.95, 0.55], scale: [0.975, 1.028, 0.975] }}
+        transition={{ duration: 34, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 5 }}
+        style={{
+          position: 'absolute',
+          top: '10%', right: '4%',
+          width: 'clamp(260px, 34vw, 500px)',
+          height: 'clamp(220px, 28vw, 420px)',
+          transformOrigin: '50% 50%',
+        }}
+      >
+        <svg
+          width="100%" height="100%"
+          viewBox="0 0 400 320"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <ellipse cx="200" cy="160" rx="185" ry="145" stroke="rgba(108,88,208,0.042)" strokeWidth="0.8" />
+          <ellipse cx="200" cy="160" rx="145" ry="112" stroke="rgba(108,88,208,0.032)" strokeWidth="0.6" />
+          <ellipse cx="200" cy="160" rx="105" ry="80"  stroke="rgba(108,88,208,0.024)" strokeWidth="0.5" />
+        </svg>
+      </motion.div>
+    </div>
+  );
+}
+
 const systemCards = [
   {
     title: 'The Adaptive Behavioral System',
@@ -302,7 +413,7 @@ export function SignatureCaseStudy() {
 
       {/* ── 02 — THE WORLD WE FOUND ─────────────────────────────────── */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 55% 60% at 76% 56%, rgba(30,200,255,0.045) 0%, transparent 70%)' }} />
+        <CognitiveLandscapeAtmosphere />
         <div className="ei-container py-16 md:py-28">
         <motion.span
           {...labelFade(0)}
