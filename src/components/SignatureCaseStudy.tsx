@@ -6,6 +6,7 @@ import {
   GrainOverlay,
   VerticalBeam,
   ContourField,
+  AtmosphericBloom,
 } from './AtmosphericSystem';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
@@ -215,188 +216,70 @@ function BreathingIdentityAtmosphere() {
 
 function HumaneFrameworkAtmosphere() {
   return (
-    <div
-      className="absolute inset-0 pointer-events-none overflow-hidden"
-      aria-hidden="true"
-    >
-      {/* Warm charcoal environmental tone */}
-      <div
-        style={{
-          position: 'absolute', inset: 0,
-          background: 'linear-gradient(145deg, rgba(16,13,22,0.38) 0%, rgba(11,10,20,0.16) 55%, transparent 85%)',
-        }}
+    <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(145deg, rgba(16,13,22,0.38) 0%, rgba(11,10,20,0.16) 55%, transparent 85%)' }} />
+      <GlowField
+        style={{ top: '5%', left: '-4%', width: 'clamp(200px, 28vw, 380px)', height: 'clamp(200px, 28vw, 380px)' }}
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgba(105,88,175,0.078) 0%, rgba(90,75,158,0.030) 55%, transparent 72%)"
+        blur={48}
+        anim={{ opacity: [0.60, 1, 0.60] }}
+        duration={24}
       />
-
-      {/* Node 1 — upper-left, anchor pulse */}
-      <motion.div
-        animate={{ opacity: [0.60, 1, 0.60] }}
-        transition={{ duration: 24, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
-        style={{
-          position: 'absolute',
-          top: '5%', left: '-4%',
-          width: 'clamp(200px, 28vw, 380px)',
-          height: 'clamp(200px, 28vw, 380px)',
-          background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(105,88,175,0.078) 0%, rgba(90,75,158,0.030) 55%, transparent 72%)',
-          filter: 'blur(48px)',
-        }}
+      <GlowField
+        style={{ top: '8%', right: '-2%', width: 'clamp(200px, 26vw, 360px)', height: 'clamp(200px, 26vw, 360px)' }}
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgba(98,82,168,0.070) 0%, rgba(84,70,148,0.026) 55%, transparent 72%)"
+        blur={44}
+        anim={{ opacity: [0.45, 0.88, 0.45] }}
+        duration={31} delay={6}
       />
-
-      {/* Node 2 — upper-right */}
-      <motion.div
-        animate={{ opacity: [0.45, 0.88, 0.45] }}
-        transition={{ duration: 31, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 6 }}
-        style={{
-          position: 'absolute',
-          top: '8%', right: '-2%',
-          width: 'clamp(200px, 26vw, 360px)',
-          height: 'clamp(200px, 26vw, 360px)',
-          background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(98,82,168,0.070) 0%, rgba(84,70,148,0.026) 55%, transparent 72%)',
-          filter: 'blur(44px)',
-        }}
+      <GlowField
+        style={{ bottom: '12%', left: '2%', width: 'clamp(180px, 24vw, 340px)', height: 'clamp(180px, 24vw, 340px)' }}
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgba(90,76,162,0.065) 0%, rgba(78,65,145,0.024) 55%, transparent 72%)"
+        blur={42}
+        anim={{ opacity: [0.50, 0.85, 0.50] }}
+        duration={36} delay={11}
       />
-
-      {/* Node 3 — lower-left */}
-      <motion.div
-        animate={{ opacity: [0.50, 0.85, 0.50] }}
-        transition={{ duration: 36, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 11 }}
-        style={{
-          position: 'absolute',
-          bottom: '12%', left: '2%',
-          width: 'clamp(180px, 24vw, 340px)',
-          height: 'clamp(180px, 24vw, 340px)',
-          background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(90,76,162,0.065) 0%, rgba(78,65,145,0.024) 55%, transparent 72%)',
-          filter: 'blur(42px)',
-        }}
+      <GlowField
+        style={{ bottom: '8%', right: '4%', width: 'clamp(180px, 24vw, 340px)', height: 'clamp(180px, 24vw, 340px)' }}
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgba(102,86,172,0.072) 0%, rgba(88,74,152,0.026) 55%, transparent 72%)"
+        blur={46}
+        anim={{ opacity: [0.55, 0.90, 0.55] }}
+        duration={28} delay={16}
       />
-
-      {/* Node 4 — lower-right */}
-      <motion.div
-        animate={{ opacity: [0.55, 0.90, 0.55] }}
-        transition={{ duration: 28, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 16 }}
-        style={{
-          position: 'absolute',
-          bottom: '8%', right: '4%',
-          width: 'clamp(180px, 24vw, 340px)',
-          height: 'clamp(180px, 24vw, 340px)',
-          background: 'radial-gradient(ellipse 55% 55% at 50% 50%, rgba(102,86,172,0.072) 0%, rgba(88,74,152,0.026) 55%, transparent 72%)',
-          filter: 'blur(46px)',
-        }}
-      />
-
-      {/* Faint curved connective arcs between nodes */}
-      <svg
-        aria-hidden="true"
+      <ContourField
         viewBox="0 0 1000 700"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{
-          position: 'absolute', inset: 0,
-          width: '100%', height: '100%',
-          filter: 'blur(1.2px)',
-        }}
-      >
-        {/* N1 → N2 — top arc, bowing gently upward */}
-        <path
-          d="M 220 195 Q 500 140 760 178"
-          stroke="rgba(120,100,210,0.048)"
-          strokeWidth="0.8"
-          fill="none"
-          strokeLinecap="round"
-        />
-        {/* N1 → N3 — left arc, slight outward bow */}
-        <path
-          d="M 214 248 Q 148 420 218 568"
-          stroke="rgba(112,94,200,0.040)"
-          strokeWidth="0.7"
-          fill="none"
-          strokeLinecap="round"
-        />
-        {/* N2 → N4 — right arc */}
-        <path
-          d="M 768 228 Q 840 390 752 548"
-          stroke="rgba(108,90,196,0.040)"
-          strokeWidth="0.7"
-          fill="none"
-          strokeLinecap="round"
-        />
-        {/* N3 → N4 — bottom arc, gentle bow */}
-        <path
-          d="M 268 572 Q 500 620 748 554"
-          stroke="rgba(116,96,205,0.044)"
-          strokeWidth="0.6"
-          fill="none"
-          strokeLinecap="round"
-        />
-      </svg>
+        blur={1.2}
+        paths={[
+          { d: 'M 220 195 Q 500 140 760 178', stroke: 'rgba(120,100,210,0.048)', sw: 0.8, cap: 'round' },
+          { d: 'M 214 248 Q 148 420 218 568', stroke: 'rgba(112,94,200,0.040)', sw: 0.7, cap: 'round' },
+          { d: 'M 768 228 Q 840 390 752 548', stroke: 'rgba(108,90,196,0.040)', sw: 0.7, cap: 'round' },
+          { d: 'M 268 572 Q 500 620 748 554', stroke: 'rgba(116,96,205,0.044)', sw: 0.6, cap: 'round' },
+        ]}
+      />
     </div>
   );
 }
 
 function FragmentsAtmosphere() {
   return (
-    <div
-      className="absolute inset-0 pointer-events-none overflow-hidden"
-      aria-hidden="true"
-    >
-      {/* Environmental backdrop bloom — left-center, embracing the composition */}
-      <motion.div
-        animate={{ opacity: [0.55, 0.88, 0.55] }}
-        transition={{ duration: 32, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
-        style={{
-          position: 'absolute',
-          top: '-5%', left: '-10%',
-          width: 'clamp(500px, 68vw, 900px)',
-          height: 'clamp(500px, 68vw, 900px)',
-          background: 'radial-gradient(ellipse 55% 52% at 40% 46%, rgba(110,78,210,0.065) 0%, rgba(90,62,185,0.028) 52%, transparent 72%)',
-          filter: 'blur(88px)',
-        }}
+    <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <GlowField
+        style={{ top: '-5%', left: '-10%', width: 'clamp(500px, 68vw, 900px)', height: 'clamp(500px, 68vw, 900px)' }}
+        gradient="radial-gradient(ellipse 55% 52% at 40% 46%, rgba(110,78,210,0.065) 0%, rgba(90,62,185,0.028) 52%, transparent 72%)"
+        blur={88}
+        anim={{ opacity: [0.55, 0.88, 0.55] }}
+        duration={32}
       />
-
-      {/* Secondary depth bloom — right side, row-2 zone */}
-      <motion.div
-        animate={{ opacity: [0.40, 0.72, 0.40] }}
-        transition={{ duration: 38, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 10 }}
-        style={{
-          position: 'absolute',
-          bottom: '15%', right: '-6%',
-          width: 'clamp(280px, 38vw, 560px)',
-          height: 'clamp(280px, 38vw, 560px)',
-          background: 'radial-gradient(ellipse 55% 52% at 50% 50%, rgba(95,68,195,0.055) 0%, rgba(78,55,172,0.022) 52%, transparent 72%)',
-          filter: 'blur(80px)',
-        }}
+      <GlowField
+        style={{ bottom: '15%', right: '-6%', width: 'clamp(280px, 38vw, 560px)', height: 'clamp(280px, 38vw, 560px)' }}
+        gradient="radial-gradient(ellipse 55% 52% at 50% 50%, rgba(95,68,195,0.055) 0%, rgba(78,55,172,0.022) 52%, transparent 72%)"
+        blur={80}
+        anim={{ opacity: [0.40, 0.72, 0.40] }}
+        duration={38} delay={10}
       />
-
-      {/* Inter-row fog — soft horizontal atmosphere in the gallery gap */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '46%', left: 0, right: 0,
-          height: '12%',
-          background: 'linear-gradient(180deg, transparent 0%, rgba(5,4,14,0.10) 50%, transparent 100%)',
-          filter: 'blur(18px)',
-        }}
-      />
-
-      {/* Cinematic vignette — shapes gallery as suspended space */}
-      <div
-        style={{
-          position: 'absolute', inset: 0,
-          background: 'radial-gradient(ellipse 80% 72% at 50% 48%, transparent 40%, rgba(4,3,12,0.10) 72%, rgba(3,2,10,0.15) 100%)',
-        }}
-      />
-
-      {/* Faint drifting grain */}
-      <motion.div
-        animate={{ opacity: [0.016, 0.040, 0.016] }}
-        transition={{ duration: 28, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 5 }}
-        style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: GRAIN,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '180px 180px',
-          mixBlendMode: 'overlay',
-        }}
-      />
+      <div style={{ position: 'absolute', top: '46%', left: 0, right: 0, height: '12%', background: 'linear-gradient(180deg, transparent 0%, rgba(5,4,14,0.10) 50%, transparent 100%)', filter: 'blur(18px)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 72% at 50% 48%, transparent 40%, rgba(4,3,12,0.10) 72%, rgba(3,2,10,0.15) 100%)' }} />
+      <GrainOverlay range={[0.016, 0.040]} duration={28} delay={5} size={180} />
     </div>
   );
 }
