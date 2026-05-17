@@ -1,5 +1,12 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import {
+  GlowField,
+  EchoRing,
+  GrainOverlay,
+  VerticalBeam,
+  ContourField,
+} from './AtmosphericSystem';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -95,72 +102,28 @@ function ImagePlaceholder({
 
 function OriginPulseAtmosphere() {
   return (
-    <div
-      className="absolute inset-0 pointer-events-none overflow-hidden"
-      aria-hidden="true"
-    >
-      {/* Indigo-to-black environmental gradient wash */}
-      <div
-        style={{
-          position: 'absolute', inset: 0,
-          background: 'linear-gradient(155deg, rgba(10,8,30,0.45) 0%, rgba(6,6,16,0.22) 48%, transparent 80%)',
-        }}
+    <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(155deg, rgba(10,8,30,0.45) 0%, rgba(6,6,16,0.22) 48%, transparent 80%)' }} />
+      <GlowField
+        style={{ top: '-8%', left: '-12%', width: 'clamp(560px, 74vw, 980px)', height: 'clamp(560px, 74vw, 980px)', transformOrigin: '40% 44%' }}
+        gradient="radial-gradient(ellipse 50% 47% at 40% 44%, rgba(99,102,241,0.14) 0%, rgba(80,72,200,0.055) 44%, transparent 70%)"
+        blur={85}
+        anim={{ opacity: [0.68, 1, 0.68], scale: [1, 1.038, 1] }}
+        duration={24}
       />
-
-      {/* Primary diffused radial glow — large, off-center upper-left */}
-      <motion.div
-        animate={{ opacity: [0.68, 1, 0.68], scale: [1, 1.038, 1] }}
-        transition={{ duration: 24, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
-        style={{
-          position: 'absolute',
-          top: '-8%', left: '-12%',
-          width: 'clamp(560px, 74vw, 980px)',
-          height: 'clamp(560px, 74vw, 980px)',
-          background: 'radial-gradient(ellipse 50% 47% at 40% 44%, rgba(99,102,241,0.14) 0%, rgba(80,72,200,0.055) 44%, transparent 70%)',
-          filter: 'blur(85px)',
-          transformOrigin: '40% 44%',
-        }}
+      <GlowField
+        style={{ top: '-20%', left: '-20%', width: 'clamp(700px, 96vw, 1280px)', height: 'clamp(700px, 96vw, 1280px)', transformOrigin: '42% 44%' }}
+        gradient="radial-gradient(ellipse 46% 44% at 42% 44%, transparent 40%, rgba(65,55,175,0.065) 57%, transparent 72%)"
+        blur={55}
+        anim={{ opacity: [0.45, 0.85, 0.45], scale: [0.97, 1.025, 0.97] }}
+        duration={32} delay={6}
       />
-
-      {/* Ink diffusion ring — outer halo, slower breath */}
-      <motion.div
-        animate={{ opacity: [0.45, 0.85, 0.45], scale: [0.97, 1.025, 0.97] }}
-        transition={{ duration: 32, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 6 }}
-        style={{
-          position: 'absolute',
-          top: '-20%', left: '-20%',
-          width: 'clamp(700px, 96vw, 1280px)',
-          height: 'clamp(700px, 96vw, 1280px)',
-          background: 'radial-gradient(ellipse 46% 44% at 42% 44%, transparent 40%, rgba(65,55,175,0.065) 57%, transparent 72%)',
-          filter: 'blur(55px)',
-          transformOrigin: '42% 44%',
-        }}
+      <VerticalBeam
+        left="calc(30% - 44px)"
+        width={88}
+        gradient="linear-gradient(180deg, transparent 0%, rgba(105,88,215,0.055) 18%, rgba(115,96,225,0.095) 50%, rgba(105,88,215,0.055) 82%, transparent 100%)"
       />
-
-      {/* Vertical atmospheric beam — softly off-center, blurred edges */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0, bottom: 0,
-          left: 'calc(30% - 44px)',
-          width: '88px',
-          background: 'linear-gradient(180deg, transparent 0%, rgba(105,88,215,0.055) 18%, rgba(115,96,225,0.095) 50%, rgba(105,88,215,0.055) 82%, transparent 100%)',
-          filter: 'blur(30px)',
-        }}
-      />
-
-      {/* Grain pulse — 9-second heartbeat, ultra-soft */}
-      <motion.div
-        animate={{ opacity: [0.016, 0.040, 0.016] }}
-        transition={{ duration: 9, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 2 }}
-        style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: GRAIN,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '200px 200px',
-          mixBlendMode: 'overlay',
-        }}
-      />
+      <GrainOverlay range={[0.016, 0.040]} duration={9} delay={2} />
     </div>
   );
 }
