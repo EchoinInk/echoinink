@@ -276,6 +276,115 @@ function CognitiveLandscapeAtmosphere() {
   );
 }
 
+function BreathingIdentityAtmosphere() {
+  return (
+    <div
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      aria-hidden="true"
+    >
+      {/* Organic ink bloom — core, upper-right, slightly elliptical */}
+      <motion.div
+        animate={{ opacity: [0.72, 1, 0.72], scale: [1, 1.022, 1] }}
+        transition={{ duration: 26, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
+        style={{
+          position: 'absolute',
+          top: '-5%', right: '-14%',
+          width: 'clamp(420px, 58vw, 800px)',
+          height: 'clamp(420px, 58vw, 800px)',
+          background: 'radial-gradient(ellipse 54% 52% at 60% 44%, rgba(120,90,240,0.13) 0%, rgba(99,80,220,0.07) 35%, rgba(80,65,200,0.03) 60%, transparent 75%)',
+          filter: 'blur(70px)',
+          transformOrigin: '60% 44%',
+        }}
+      />
+
+      {/* Illuminated bloom edge — soft rim glow, offset cycle */}
+      <motion.div
+        animate={{ opacity: [0.55, 0.90, 0.55] }}
+        transition={{ duration: 30, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 4 }}
+        style={{
+          position: 'absolute',
+          top: '-8%', right: '-18%',
+          width: 'clamp(500px, 68vw, 940px)',
+          height: 'clamp(500px, 68vw, 940px)',
+          background: 'radial-gradient(ellipse 52% 50% at 60% 44%, transparent 52%, rgba(148,110,255,0.055) 66%, rgba(130,95,245,0.025) 76%, transparent 86%)',
+          filter: 'blur(24px)',
+          transformOrigin: '60% 44%',
+        }}
+      />
+
+      {/* Faint echo ring — behind the bloom, singular */}
+      <motion.div
+        animate={{ opacity: [0.45, 0.82, 0.45], scale: [0.98, 1.018, 0.98] }}
+        transition={{ duration: 38, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 7 }}
+        style={{
+          position: 'absolute',
+          top: '-12%', right: '-22%',
+          width: 'clamp(580px, 78vw, 1060px)',
+          height: 'clamp(580px, 78vw, 1060px)',
+          transformOrigin: '60% 44%',
+        }}
+      >
+        <svg
+          width="100%" height="100%"
+          viewBox="0 0 600 600"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <ellipse cx="300" cy="300" rx="270" ry="252" stroke="rgba(130,100,240,0.042)" strokeWidth="0.8" />
+        </svg>
+      </motion.div>
+
+      {/* Bloom perimeter tracing arcs — ultra-thin partial curves */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 1000 700"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{
+          position: 'absolute', inset: 0,
+          width: '100%', height: '100%',
+          filter: 'blur(0.8px)',
+        }}
+      >
+        <path
+          d="M 720 48 Q 850 42 930 118"
+          stroke="rgba(148,118,252,0.048)"
+          strokeWidth="0.7"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <path
+          d="M 958 210 Q 985 310 920 408"
+          stroke="rgba(138,108,242,0.040)"
+          strokeWidth="0.6"
+          fill="none"
+          strokeLinecap="round"
+        />
+        <path
+          d="M 640 30 Q 679 16 718 28"
+          stroke="rgba(155,125,255,0.040)"
+          strokeWidth="0.5"
+          fill="none"
+          strokeLinecap="round"
+        />
+      </svg>
+
+      {/* Micro-shimmer — ultra-fine grain, slower than Section 01 */}
+      <motion.div
+        animate={{ opacity: [0.014, 0.036, 0.014] }}
+        transition={{ duration: 22, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 3 }}
+        style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '160px 160px',
+          mixBlendMode: 'overlay',
+        }}
+      />
+    </div>
+  );
+}
+
 const systemCards = [
   {
     title: 'The Adaptive Behavioral System',
@@ -476,7 +585,7 @@ export function SignatureCaseStudy() {
 
       {/* ── 03 — THE IDENTITY BENEATH THE IDENTITY ──────────────────── */}
       <section className="relative overflow-hidden pb-16 md:pb-28">
-        <div className="absolute pointer-events-none" style={{ top: '20%', right: '-12%', width: 'clamp(350px, 50vw, 680px)', height: 'clamp(350px, 50vw, 680px)', background: 'radial-gradient(ellipse 62% 62% at 64% 40%, rgba(99,102,241,0.06) 0%, transparent 72%)', filter: 'blur(90px)' }} />
+        <BreathingIdentityAtmosphere />
         <motion.div {...envFade(0)}>
           <ImagePlaceholder aspect="aspect-[21/9]" label="Identity Exploration" tint="indigo" />
         </motion.div>
