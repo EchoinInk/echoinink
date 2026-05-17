@@ -93,6 +93,78 @@ function ImagePlaceholder({
   );
 }
 
+function OriginPulseAtmosphere() {
+  return (
+    <div
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      aria-hidden="true"
+    >
+      {/* Indigo-to-black environmental gradient wash */}
+      <div
+        style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(155deg, rgba(10,8,30,0.45) 0%, rgba(6,6,16,0.22) 48%, transparent 80%)',
+        }}
+      />
+
+      {/* Primary diffused radial glow — large, off-center upper-left */}
+      <motion.div
+        animate={{ opacity: [0.68, 1, 0.68], scale: [1, 1.038, 1] }}
+        transition={{ duration: 24, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
+        style={{
+          position: 'absolute',
+          top: '-8%', left: '-12%',
+          width: 'clamp(560px, 74vw, 980px)',
+          height: 'clamp(560px, 74vw, 980px)',
+          background: 'radial-gradient(ellipse 50% 47% at 40% 44%, rgba(99,102,241,0.14) 0%, rgba(80,72,200,0.055) 44%, transparent 70%)',
+          filter: 'blur(85px)',
+          transformOrigin: '40% 44%',
+        }}
+      />
+
+      {/* Ink diffusion ring — outer halo, slower breath */}
+      <motion.div
+        animate={{ opacity: [0.45, 0.85, 0.45], scale: [0.97, 1.025, 0.97] }}
+        transition={{ duration: 32, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 6 }}
+        style={{
+          position: 'absolute',
+          top: '-20%', left: '-20%',
+          width: 'clamp(700px, 96vw, 1280px)',
+          height: 'clamp(700px, 96vw, 1280px)',
+          background: 'radial-gradient(ellipse 46% 44% at 42% 44%, transparent 40%, rgba(65,55,175,0.065) 57%, transparent 72%)',
+          filter: 'blur(55px)',
+          transformOrigin: '42% 44%',
+        }}
+      />
+
+      {/* Vertical atmospheric beam — softly off-center, blurred edges */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0, bottom: 0,
+          left: 'calc(30% - 44px)',
+          width: '88px',
+          background: 'linear-gradient(180deg, transparent 0%, rgba(105,88,215,0.055) 18%, rgba(115,96,225,0.095) 50%, rgba(105,88,215,0.055) 82%, transparent 100%)',
+          filter: 'blur(30px)',
+        }}
+      />
+
+      {/* Grain pulse — 9-second heartbeat, ultra-soft */}
+      <motion.div
+        animate={{ opacity: [0.016, 0.040, 0.016] }}
+        transition={{ duration: 9, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 2 }}
+        style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '200px 200px',
+          mixBlendMode: 'overlay',
+        }}
+      />
+    </div>
+  );
+}
+
 const systemCards = [
   {
     title: 'The Adaptive Behavioral System',
@@ -185,7 +257,7 @@ export function SignatureCaseStudy() {
 
       {/* ── 01 — THE BEGINNING ──────────────────────────────────────── */}
       <section className="relative overflow-hidden pb-20 md:pb-32">
-        <div className="absolute pointer-events-none" style={{ bottom: '12%', left: '-10%', width: 'clamp(280px, 40vw, 560px)', height: 'clamp(280px, 40vw, 560px)', background: 'radial-gradient(ellipse 65% 65% at 34% 56%, rgba(168,85,247,0.05) 0%, transparent 72%)', filter: 'blur(90px)' }} />
+        <OriginPulseAtmosphere />
         <motion.div {...envFade(0)}>
           <ImagePlaceholder aspect="aspect-[21/9]" label="Lumo — Opening Visual" tint="violet" />
         </motion.div>
