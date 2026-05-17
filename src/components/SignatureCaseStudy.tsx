@@ -747,6 +747,89 @@ function HeldAtmosphere() {
   );
 }
 
+function ExhaleAtmosphere() {
+  return (
+    <div
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      aria-hidden="true"
+    >
+      {/* Violet-to-rose luminous tonal gradient — barely perceptible */}
+      <div
+        style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(168deg, rgba(90,65,180,0.060) 0%, rgba(130,72,110,0.036) 65%, rgba(155,82,108,0.026) 100%)',
+        }}
+      />
+
+      {/* Central ambient glow — opacity-only, 40s, extreme softness */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '50%', left: '50%',
+          width: 'clamp(480px, 65vw, 860px)',
+          height: 'clamp(480px, 65vw, 860px)',
+          transform: 'translate(-50%, -55%)',
+        }}
+      >
+        <motion.div
+          animate={{ opacity: [0.58, 0.92, 0.58] }}
+          transition={{ duration: 40, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
+          style={{
+            position: 'absolute', inset: 0,
+            background: 'radial-gradient(ellipse 54% 50% at 50% 50%, rgba(128,92,218,0.075) 0%, rgba(108,72,195,0.030) 48%, transparent 72%)',
+            filter: 'blur(90px)',
+          }}
+        />
+      </div>
+
+      {/* Soft diffused vertical beam — centered, static */}
+      <div
+        style={{
+          position: 'absolute',
+          top: 0, bottom: 0,
+          left: 'calc(50% - 50px)',
+          width: '100px',
+          background: 'linear-gradient(180deg, transparent 0%, rgba(138,96,206,0.052) 22%, rgba(148,102,212,0.088) 50%, rgba(138,96,206,0.052) 78%, transparent 100%)',
+          filter: 'blur(40px)',
+        }}
+      />
+
+      {/* Faint atmospheric echo ring — singular, centered, static */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 1000 600"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{
+          position: 'absolute', inset: 0,
+          width: '100%', height: '100%',
+          filter: 'blur(1px)',
+        }}
+      >
+        <ellipse
+          cx="500" cy="288" rx="300" ry="220"
+          stroke="rgba(138,100,220,0.040)"
+          strokeWidth="0.6"
+          fill="none"
+        />
+      </svg>
+
+      {/* Minimal grain — final breath, lowest motion in the system */}
+      <motion.div
+        animate={{ opacity: [0.012, 0.030, 0.012] }}
+        transition={{ duration: 40, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 9 }}
+        style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '220px 220px',
+          mixBlendMode: 'overlay',
+        }}
+      />
+    </div>
+  );
+}
+
 const systemCards = [
   {
     title: 'The Adaptive Behavioral System',
@@ -1246,8 +1329,7 @@ export function SignatureCaseStudy() {
         className="relative py-24 md:py-40 text-center overflow-hidden"
         style={{ background: 'linear-gradient(180deg, #060810 0%, #090b1e 45%, #060810 100%)' }}
       >
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 58% 52% at 50% 44%, rgba(167,139,250,0.08) 0%, rgba(99,102,241,0.04) 48%, transparent 72%)' }} />
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 30% 28% at 50% 42%, rgba(232,121,249,0.045) 0%, transparent 65%)' }} />
+        <ExhaleAtmosphere />
         <div className="ei-container max-w-xl mx-auto">
           <motion.span
             {...labelFade(0)}
