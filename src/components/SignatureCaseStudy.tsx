@@ -669,6 +669,84 @@ function BecomingAtmosphere() {
   );
 }
 
+function HeldAtmosphere() {
+  return (
+    <div
+      className="absolute inset-0 pointer-events-none overflow-hidden"
+      aria-hidden="true"
+    >
+      {/* Soft environmental wash — gentle left-side tonal presence */}
+      <div
+        style={{
+          position: 'absolute', inset: 0,
+          background: 'linear-gradient(135deg, rgba(14,11,22,0.28) 0%, transparent 62%)',
+        }}
+      />
+
+      {/* Primary warm central glow — large, heavily diffused, no scale */}
+      <motion.div
+        animate={{ opacity: [0.65, 1, 0.65] }}
+        transition={{ duration: 38, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
+        style={{
+          position: 'absolute',
+          top: '-2%', left: '-8%',
+          width: 'clamp(500px, 65vw, 880px)',
+          height: 'clamp(500px, 65vw, 880px)',
+          background: 'radial-gradient(ellipse 52% 50% at 44% 46%, rgba(112,86,198,0.068) 0%, rgba(95,72,180,0.028) 50%, transparent 72%)',
+          filter: 'blur(100px)',
+        }}
+      />
+
+      {/* Secondary soft halo — wider, slower, deeply offset */}
+      <motion.div
+        animate={{ opacity: [0.55, 0.85, 0.55] }}
+        transition={{ duration: 40, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 12 }}
+        style={{
+          position: 'absolute',
+          top: '20%', left: '5%',
+          width: 'clamp(380px, 52vw, 720px)',
+          height: 'clamp(380px, 52vw, 720px)',
+          background: 'radial-gradient(ellipse 55% 52% at 48% 50%, rgba(100,78,185,0.048) 0%, rgba(85,65,165,0.018) 52%, transparent 72%)',
+          filter: 'blur(80px)',
+        }}
+      />
+
+      {/* Atmospheric halo — single ring, static, faintest in the system */}
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 1000 800"
+        preserveAspectRatio="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{
+          position: 'absolute', inset: 0,
+          width: '100%', height: '100%',
+          filter: 'blur(2px)',
+        }}
+      >
+        <ellipse
+          cx="360" cy="360" rx="310" ry="288"
+          stroke="rgba(110,88,200,0.040)"
+          strokeWidth="0.7"
+          fill="none"
+        />
+      </svg>
+
+      {/* Reduced grain — largest tile, lowest opacity in the system */}
+      <motion.div
+        animate={{ opacity: [0.014, 0.032, 0.014] }}
+        transition={{ duration: 40, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 7 }}
+        style={{
+          position: 'absolute', inset: 0,
+          backgroundImage: GRAIN,
+          backgroundRepeat: 'repeat',
+          backgroundSize: '220px 220px',
+          mixBlendMode: 'overlay',
+        }}
+      />
+    </div>
+  );
+}
+
 const systemCards = [
   {
     title: 'The Adaptive Behavioral System',
@@ -1110,7 +1188,7 @@ export function SignatureCaseStudy() {
 
       {/* ── 07 — THE OUTCOME ────────────────────────────────────────── */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse 44% 50% at 74% 36%, rgba(168,85,247,0.04) 0%, transparent 65%)' }} />
+        <HeldAtmosphere />
         <div className="ei-container py-16 md:py-28">
         <Separator />
         <div className="pt-14 md:pt-20 max-w-2xl">
