@@ -286,257 +286,95 @@ function FragmentsAtmosphere() {
 
 function BecomingAtmosphere() {
   return (
-    <div
-      className="absolute inset-0 pointer-events-none overflow-hidden"
-      aria-hidden="true"
-    >
-      {/* Cool-to-warm tonal shift — barely perceptible warmth rising at base */}
-      <div
-        style={{
-          position: 'absolute', inset: 0,
-          background: 'linear-gradient(180deg, transparent 28%, rgba(18,12,8,0.10) 100%)',
-        }}
+    <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 28%, rgba(18,12,8,0.10) 100%)' }} />
+      <AtmosphericBloom
+        size="clamp(640px, 92vw, 1240px)"
+        gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgba(99,82,210,0.092) 0%, rgba(82,68,185,0.036) 48%, transparent 72%)"
+        blur={90}
+        anim={{ opacity: [0.60, 1, 0.60], scale: [1, 1.024, 1] }}
+        duration={30}
       />
-
-      {/* Large-scale environmental diffusion — largest glow in the system */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%', left: '50%',
-          width: 'clamp(640px, 92vw, 1240px)',
-          height: 'clamp(640px, 92vw, 1240px)',
-          transform: 'translate(-50%, -50%)',
-        }}
-      >
-        <motion.div
-          animate={{ opacity: [0.60, 1, 0.60], scale: [1, 1.024, 1] }}
-          transition={{ duration: 30, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
-          style={{
-            position: 'absolute', inset: 0,
-            background: 'radial-gradient(ellipse 54% 50% at 50% 50%, rgba(99,82,210,0.092) 0%, rgba(82,68,185,0.036) 48%, transparent 72%)',
-            filter: 'blur(90px)',
-            transformOrigin: 'center center',
-          }}
-        />
-      </div>
-
-      {/* Soft horizon glow — lower visual field, wide and diffuse */}
-      <motion.div
-        animate={{ opacity: [0.50, 0.82, 0.50] }}
-        transition={{ duration: 38, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 8 }}
-        style={{
-          position: 'absolute',
-          bottom: '-8%', left: '-15%', right: '-15%',
-          height: 'clamp(320px, 44vw, 640px)',
-          background: 'radial-gradient(ellipse 88% 48% at 50% 82%, rgba(108,82,196,0.075) 0%, rgba(90,68,176,0.030) 50%, transparent 74%)',
-          filter: 'blur(88px)',
-        }}
+      <GlowField
+        style={{ bottom: '-8%', left: '-15%', right: '-15%', height: 'clamp(320px, 44vw, 640px)' }}
+        gradient="radial-gradient(ellipse 88% 48% at 50% 82%, rgba(108,82,196,0.075) 0%, rgba(90,68,176,0.030) 50%, transparent 74%)"
+        blur={88}
+        anim={{ opacity: [0.50, 0.82, 0.50] }}
+        duration={38} delay={8}
       />
-
-      {/* Circular echo formation — centered, emerging slowly */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%', left: '50%',
-          width: 'clamp(380px, 54vw, 760px)',
-          height: 'clamp(380px, 54vw, 760px)',
-          transform: 'translate(-50%, -50%)',
-        }}
-      >
-        <motion.div
-          animate={{ opacity: [0.48, 0.88, 0.48], scale: [0.974, 1.022, 0.974] }}
-          transition={{ duration: 36, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 5 }}
-          style={{
-            position: 'absolute', inset: 0,
-            transformOrigin: 'center center',
-          }}
-        >
-          <svg
-            width="100%" height="100%"
-            viewBox="0 0 600 600"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <circle cx="300" cy="300" r="268" stroke="rgba(115,94,218,0.042)" strokeWidth="0.8" />
-            <circle cx="300" cy="300" r="210" stroke="rgba(115,94,218,0.032)" strokeWidth="0.6" />
-            <circle cx="300" cy="300" r="152" stroke="rgba(115,94,218,0.024)" strokeWidth="0.5" />
-          </svg>
-        </motion.div>
-      </div>
-
-      {/* Projector dust grain — fine tile, slow drift cycle */}
-      <motion.div
-        animate={{ opacity: [0.018, 0.042, 0.018] }}
-        transition={{ duration: 26, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 3 }}
-        style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: GRAIN,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '120px 120px',
-          mixBlendMode: 'overlay',
-        }}
+      <EchoRing
+        style={{ top: '50%', left: '50%', width: 'clamp(380px, 54vw, 760px)', height: 'clamp(380px, 54vw, 760px)', transform: 'translate(-50%, -50%)', transformOrigin: 'center center' }}
+        viewBox="0 0 600 600"
+        rings={[
+          { cx: 300, cy: 300, rx: 268, ry: 268, stroke: 'rgba(115,94,218,0.042)', sw: 0.8 },
+          { cx: 300, cy: 300, rx: 210, ry: 210, stroke: 'rgba(115,94,218,0.032)', sw: 0.6 },
+          { cx: 300, cy: 300, rx: 152, ry: 152, stroke: 'rgba(115,94,218,0.024)', sw: 0.5 },
+        ]}
+        anim={{ opacity: [0.48, 0.88, 0.48], scale: [0.974, 1.022, 0.974] }}
+        duration={36} delay={5}
       />
+      <GrainOverlay range={[0.018, 0.042]} duration={26} delay={3} size={120} />
     </div>
   );
 }
 
 function HeldAtmosphere() {
   return (
-    <div
-      className="absolute inset-0 pointer-events-none overflow-hidden"
-      aria-hidden="true"
-    >
-      {/* Soft environmental wash — gentle left-side tonal presence */}
-      <div
-        style={{
-          position: 'absolute', inset: 0,
-          background: 'linear-gradient(135deg, rgba(14,11,22,0.28) 0%, transparent 62%)',
-        }}
+    <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(14,11,22,0.28) 0%, transparent 62%)' }} />
+      <GlowField
+        style={{ top: '-2%', left: '-8%', width: 'clamp(500px, 65vw, 880px)', height: 'clamp(500px, 65vw, 880px)' }}
+        gradient="radial-gradient(ellipse 52% 50% at 44% 46%, rgba(112,86,198,0.068) 0%, rgba(95,72,180,0.028) 50%, transparent 72%)"
+        blur={100}
+        anim={{ opacity: [0.65, 1, 0.65] }}
+        duration={38}
       />
-
-      {/* Primary warm central glow — large, heavily diffused, no scale */}
-      <motion.div
-        animate={{ opacity: [0.65, 1, 0.65] }}
-        transition={{ duration: 38, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
-        style={{
-          position: 'absolute',
-          top: '-2%', left: '-8%',
-          width: 'clamp(500px, 65vw, 880px)',
-          height: 'clamp(500px, 65vw, 880px)',
-          background: 'radial-gradient(ellipse 52% 50% at 44% 46%, rgba(112,86,198,0.068) 0%, rgba(95,72,180,0.028) 50%, transparent 72%)',
-          filter: 'blur(100px)',
-        }}
+      <GlowField
+        style={{ top: '20%', left: '5%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)' }}
+        gradient="radial-gradient(ellipse 55% 52% at 48% 50%, rgba(100,78,185,0.048) 0%, rgba(85,65,165,0.018) 52%, transparent 72%)"
+        blur={80}
+        anim={{ opacity: [0.55, 0.85, 0.55] }}
+        duration={40} delay={12}
       />
-
-      {/* Secondary soft halo — wider, slower, deeply offset */}
-      <motion.div
-        animate={{ opacity: [0.55, 0.85, 0.55] }}
-        transition={{ duration: 40, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 12 }}
-        style={{
-          position: 'absolute',
-          top: '20%', left: '5%',
-          width: 'clamp(380px, 52vw, 720px)',
-          height: 'clamp(380px, 52vw, 720px)',
-          background: 'radial-gradient(ellipse 55% 52% at 48% 50%, rgba(100,78,185,0.048) 0%, rgba(85,65,165,0.018) 52%, transparent 72%)',
-          filter: 'blur(80px)',
-        }}
-      />
-
-      {/* Atmospheric halo — single ring, static, faintest in the system */}
-      <svg
-        aria-hidden="true"
+      <EchoRing
+        style={{ inset: 0 }}
         viewBox="0 0 1000 800"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{
-          position: 'absolute', inset: 0,
-          width: '100%', height: '100%',
-          filter: 'blur(2px)',
-        }}
-      >
-        <ellipse
-          cx="360" cy="360" rx="310" ry="288"
-          stroke="rgba(110,88,200,0.040)"
-          strokeWidth="0.7"
-          fill="none"
-        />
-      </svg>
-
-      {/* Reduced grain — largest tile, lowest opacity in the system */}
-      <motion.div
-        animate={{ opacity: [0.014, 0.032, 0.014] }}
-        transition={{ duration: 40, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 7 }}
-        style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: GRAIN,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '220px 220px',
-          mixBlendMode: 'overlay',
-        }}
+        rings={[{ cx: 360, cy: 360, rx: 310, ry: 288, stroke: 'rgba(110,88,200,0.040)', sw: 0.7 }]}
+        blur={2}
+        preserveAspect
       />
+      <GrainOverlay range={[0.014, 0.032]} duration={40} delay={7} size={220} />
     </div>
   );
 }
 
 function ExhaleAtmosphere() {
   return (
-    <div
-      className="absolute inset-0 pointer-events-none overflow-hidden"
-      aria-hidden="true"
-    >
-      {/* Violet-to-rose luminous tonal gradient — barely perceptible */}
-      <div
-        style={{
-          position: 'absolute', inset: 0,
-          background: 'linear-gradient(168deg, rgba(90,65,180,0.060) 0%, rgba(130,72,110,0.036) 65%, rgba(155,82,108,0.026) 100%)',
-        }}
-      />
-
-      {/* Central ambient glow — opacity-only, 40s, extreme softness */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '50%', left: '50%',
-          width: 'clamp(480px, 65vw, 860px)',
-          height: 'clamp(480px, 65vw, 860px)',
-          transform: 'translate(-50%, -55%)',
-        }}
-      >
-        <motion.div
-          animate={{ opacity: [0.58, 0.92, 0.58] }}
-          transition={{ duration: 40, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
-          style={{
-            position: 'absolute', inset: 0,
-            background: 'radial-gradient(ellipse 54% 50% at 50% 50%, rgba(128,92,218,0.075) 0%, rgba(108,72,195,0.030) 48%, transparent 72%)',
-            filter: 'blur(90px)',
-          }}
+    <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(168deg, rgba(90,65,180,0.060) 0%, rgba(130,72,110,0.036) 65%, rgba(155,82,108,0.026) 100%)' }} />
+      <div style={{ position: 'absolute', top: '50%', left: '50%', width: 'clamp(480px, 65vw, 860px)', height: 'clamp(480px, 65vw, 860px)', transform: 'translate(-50%, -55%)' }}>
+        <GlowField
+          style={{ inset: 0 }}
+          gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgba(128,92,218,0.075) 0%, rgba(108,72,195,0.030) 48%, transparent 72%)"
+          blur={90}
+          anim={{ opacity: [0.58, 0.92, 0.58] }}
+          duration={40}
         />
       </div>
-
-      {/* Soft diffused vertical beam — centered, static */}
-      <div
-        style={{
-          position: 'absolute',
-          top: 0, bottom: 0,
-          left: 'calc(50% - 50px)',
-          width: '100px',
-          background: 'linear-gradient(180deg, transparent 0%, rgba(138,96,206,0.052) 22%, rgba(148,102,212,0.088) 50%, rgba(138,96,206,0.052) 78%, transparent 100%)',
-          filter: 'blur(40px)',
-        }}
+      <VerticalBeam
+        left="calc(50% - 50px)"
+        width={100}
+        gradient="linear-gradient(180deg, transparent 0%, rgba(138,96,206,0.052) 22%, rgba(148,102,212,0.088) 50%, rgba(138,96,206,0.052) 78%, transparent 100%)"
+        blur={40}
       />
-
-      {/* Faint atmospheric echo ring — singular, centered, static */}
-      <svg
-        aria-hidden="true"
+      <EchoRing
+        style={{ inset: 0 }}
         viewBox="0 0 1000 600"
-        preserveAspectRatio="none"
-        xmlns="http://www.w3.org/2000/svg"
-        style={{
-          position: 'absolute', inset: 0,
-          width: '100%', height: '100%',
-          filter: 'blur(1px)',
-        }}
-      >
-        <ellipse
-          cx="500" cy="288" rx="300" ry="220"
-          stroke="rgba(138,100,220,0.040)"
-          strokeWidth="0.6"
-          fill="none"
-        />
-      </svg>
-
-      {/* Minimal grain — final breath, lowest motion in the system */}
-      <motion.div
-        animate={{ opacity: [0.012, 0.030, 0.012] }}
-        transition={{ duration: 40, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay: 9 }}
-        style={{
-          position: 'absolute', inset: 0,
-          backgroundImage: GRAIN,
-          backgroundRepeat: 'repeat',
-          backgroundSize: '220px 220px',
-          mixBlendMode: 'overlay',
-        }}
+        rings={[{ cx: 500, cy: 288, rx: 300, ry: 220, stroke: 'rgba(138,100,220,0.040)', sw: 0.6 }]}
+        blur={1}
+        preserveAspect
       />
+      <GrainOverlay range={[0.012, 0.030]} duration={40} delay={9} size={220} />
     </div>
   );
 }
