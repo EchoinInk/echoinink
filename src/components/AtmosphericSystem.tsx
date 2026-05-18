@@ -1,5 +1,5 @@
 import { type CSSProperties } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 
 const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E")`;
 
@@ -21,13 +21,14 @@ export function GlowField({
   duration?: number;
   delay?: number;
 }) {
+  const prefersReduced = useReducedMotion();
   const base: CSSProperties = {
     position: 'absolute',
     ...style,
     background: gradient,
     filter: `blur(${blur}px)`,
   };
-  if (!anim) return <div style={base} />;
+  if (!anim || prefersReduced) return <div style={base} />;
   return (
     <motion.div
       animate={{ opacity: anim.opacity, ...(anim.scale ? { scale: anim.scale } : {}) }}
@@ -78,19 +79,22 @@ export function GrainOverlay({
   delay?: number;
   size?: number;
 }) {
+  const prefersReduced = useReducedMotion();
   const [lo, hi] = range;
+  const grainStyle: CSSProperties = {
+    position: 'absolute',
+    inset: 0,
+    backgroundImage: GRAIN,
+    backgroundRepeat: 'repeat',
+    backgroundSize: `${size}px ${size}px`,
+    mixBlendMode: 'overlay',
+  };
+  if (prefersReduced) return <div style={{ ...grainStyle, opacity: (lo + hi) / 2 }} />;
   return (
     <motion.div
       animate={{ opacity: [lo, hi, lo] }}
       transition={{ duration, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay }}
-      style={{
-        position: 'absolute',
-        inset: 0,
-        backgroundImage: GRAIN,
-        backgroundRepeat: 'repeat',
-        backgroundSize: `${size}px ${size}px`,
-        mixBlendMode: 'overlay',
-      }}
+      style={grainStyle}
     />
   );
 }
@@ -116,6 +120,7 @@ export function EchoRing({
   blur?: number;
   preserveAspect?: boolean;
 }) {
+  const prefersReduced = useReducedMotion();
   const svg = (
     <svg
       width="100%" height="100%"
@@ -140,7 +145,7 @@ export function EchoRing({
     ...style,
     ...(blur !== undefined ? { filter: `blur(${blur}px)` } : {}),
   };
-  if (!anim) return <div style={base}>{svg}</div>;
+  if (!anim || prefersReduced) return <div style={base}>{svg}</div>;
   return (
     <motion.div
       animate={{ opacity: anim.opacity, ...(anim.scale ? { scale: anim.scale } : {}) }}

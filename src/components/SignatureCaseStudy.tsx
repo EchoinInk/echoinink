@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion, useReducedMotion, useScroll, useTransform, useSpring } from 'framer-motion';
 import {
   GlowField,
   EchoRing,
@@ -72,9 +72,10 @@ function ImagePlaceholder({
   label?: string;
   tint?: keyof typeof TINTS;
 }) {
+  const prefersReduced = useReducedMotion();
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end start'] });
-  const rawY = useTransform(scrollYProgress, [0, 1], [14, -14]);
+  const rawY = useTransform(scrollYProgress, [0, 1], prefersReduced ? [0, 0] : [14, -14]);
   const y = useSpring(rawY, { stiffness: 30, damping: 42, restDelta: 0.001 });
 
   return (
