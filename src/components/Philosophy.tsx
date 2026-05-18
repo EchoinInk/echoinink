@@ -96,7 +96,7 @@ export function Philosophy() {
             If that's you, you're home.
           </motion.p>
         </div>
-      </ContentContainer>
+      </Container>
     </Section>
   );
 }
