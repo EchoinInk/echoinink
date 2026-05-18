@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { SelectedWorks } from '@/components/SelectedWorks';
 
@@ -11,6 +12,11 @@ export function WorksPage() {
       transition={{ duration: 0.9, ease: EASE }}
       className="relative bg-[#0F1220] min-h-screen"
     >
+      <Helmet>
+        <title>Selected Works — Echo in Ink</title>
+        <meta name="description" content="A curated record of visual and narrative experiments — atmospheres built, identities discovered, and worlds made luminous." />
+      </Helmet>
+
       {/* ── Page header ──────────────────────────────────── */}
       <section className="relative ei-section overflow-hidden">
         {/* Faint violet ambient top right */}
