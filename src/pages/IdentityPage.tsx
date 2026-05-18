@@ -40,7 +40,7 @@ export function IdentityPage() {
       </Helmet>
 
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-end overflow-hidden">
+      <section aria-labelledby="identity-hero-heading" className="relative min-h-screen flex items-end overflow-hidden">
         {/* Atmospheric violet/pink bloom — upper left */}
         <div
           className="absolute pointer-events-none"
@@ -93,6 +93,7 @@ export function IdentityPage() {
           </motion.span>
 
           <motion.h1
+            id="identity-hero-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: DURATION.slower, ease: EASE, delay: 0.35 }}

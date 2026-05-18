@@ -36,7 +36,7 @@ export function WorldsPage() {
       </Helmet>
 
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-end overflow-hidden">
+      <section aria-labelledby="worlds-hero-heading" className="relative min-h-screen flex items-end overflow-hidden">
         {/* Deep cosmic violet bloom — centered upper */}
         <div
           className="absolute pointer-events-none"
@@ -90,6 +90,7 @@ export function WorldsPage() {
           </motion.span>
 
           <motion.h1
+            id="worlds-hero-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: DURATION.slower, ease: EASE, delay: 0.35 }}

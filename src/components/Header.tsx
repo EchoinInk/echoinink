@@ -30,6 +30,7 @@ export function Header() {
                 <li key={item.label}>
                   <Link
                     to={item.href}
+                    aria-current={pathname === item.href ? 'page' : undefined}
                     className="font-structural text-[11px] tracking-[0.2em] uppercase transition-colors duration-300"
                     style={{
                       color:
@@ -44,7 +45,11 @@ export function Header() {
               ))}
             </ul>
           </div>
-          <button className="md:hidden shrink-0 font-structural text-[11px] tracking-[0.2em] uppercase text-white/50">
+          <button 
+            className="md:hidden shrink-0 font-structural text-[11px] tracking-[0.2em] uppercase text-white/50 focus:text-white/80 focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-[#0F1220]"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+          >
             MENU
           </button>
           <div className="hidden md:block shrink-0" style={{ width: '36px' }} />

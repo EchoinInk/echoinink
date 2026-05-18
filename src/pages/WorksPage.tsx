@@ -18,7 +18,7 @@ export function WorksPage() {
       </Helmet>
 
       {/* ── Page header ──────────────────────────────────── */}
-      <section className="relative ei-section overflow-hidden">
+      <section aria-labelledby="works-heading" className="relative ei-section overflow-hidden">
         {/* Faint violet ambient top right */}
         <div
           className="absolute pointer-events-none"
@@ -47,6 +47,7 @@ export function WorksPage() {
           </motion.span>
 
           <motion.h1
+            id="works-heading"
             initial={{ opacity: 0, y: 26 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, ease: EASE, delay: 0.35 }}

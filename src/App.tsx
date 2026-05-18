@@ -2,21 +2,23 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Layout } from '@/components/Layout';
-import { LoadingScreen } from '@/components/LoadingScreen';
-
-const Home = lazy(() => import('@/pages/Home').then((m) => ({ default: m.Home })));
-const IdentityPage = lazy(() => import('@/pages/IdentityPage').then((m) => ({ default: m.IdentityPage })));
-const SessionsPage = lazy(() => import('@/pages/SessionsPage').then((m) => ({ default: m.SessionsPage })));
-const WorldsPage = lazy(() => import('@/pages/WorldsPage').then((m) => ({ default: m.WorldsPage })));
-const WorksPage = lazy(() => import('@/pages/WorksPage').then((m) => ({ default: m.WorksPage })));
-const LumoPage = lazy(() => import('@/pages/LumoPage').then((m) => ({ default: m.LumoPage })));
+import { Home } from '@/pages/Home';
+import { IdentityPage } from '@/pages/IdentityPage';
+import { SessionsPage } from '@/pages/SessionsPage';
+import { WorldsPage } from '@/pages/WorldsPage';
+import { WorksPage } from '@/pages/WorksPage';
+import { LumoPage } from '@/pages/LumoPage';
 
 function App() {
   return (
-    <HelmetProvider>
     <BrowserRouter>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-white/10 focus:text-white focus:rounded focus:outline-none focus:ring-2 focus:ring-white/30"
+      >
+        Skip to main content
+      </a>
       <Layout>
-        <Suspense fallback={<LoadingScreen />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/identity" element={<IdentityPage />} />
@@ -25,10 +27,8 @@ function App() {
           <Route path="/works" element={<WorksPage />} />
           <Route path="/work/lumo" element={<LumoPage />} />
         </Routes>
-        </Suspense>
       </Layout>
     </BrowserRouter>
-    </HelmetProvider>
   );
 }
 

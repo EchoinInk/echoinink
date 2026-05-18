@@ -26,7 +26,7 @@ export function SessionsPage() {
       </Helmet>
 
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-end overflow-hidden">
+      <section aria-labelledby="sessions-hero-heading" className="relative min-h-screen flex items-end overflow-hidden">
         {/* Aqua/indigo atmospheric bloom — upper right */}
         <div
           className="absolute pointer-events-none"
@@ -79,6 +79,7 @@ export function SessionsPage() {
           </motion.span>
 
           <motion.h1
+            id="sessions-hero-heading"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: DURATION.slower, ease: EASE, delay: 0.35 }}
