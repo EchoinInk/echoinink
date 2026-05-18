@@ -1,5 +1,6 @@
 import { type CSSProperties } from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, useAnimation, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E")`;
 
@@ -22,6 +23,24 @@ export function GlowField({
   delay?: number;
 }) {
   const prefersReduced = useReducedMotion();
+  const controls = useAnimation();
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { amount: 0.1 });
+
+  useEffect(() => {
+    if (!anim || prefersReduced) return;
+    
+    if (isInView) {
+      controls.start({
+        opacity: anim.opacity,
+        ...(anim.scale ? { scale: anim.scale } : {}),
+        transition: { duration, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay }
+      });
+    } else {
+      controls.stop();
+    }
+  }, [isInView, anim, duration, delay, prefersReduced, controls]);
+
   const base: CSSProperties = {
     position: 'absolute',
     ...style,
@@ -31,8 +50,9 @@ export function GlowField({
   if (!anim || prefersReduced) return <div style={base} />;
   return (
     <motion.div
-      animate={{ opacity: anim.opacity, ...(anim.scale ? { scale: anim.scale } : {}) }}
-      transition={{ duration, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay }}
+      ref={ref}
+      animate={controls}
+      initial={{ opacity: anim.opacity[0], ...(anim.scale ? { scale: anim.scale[0] } : {}) }}
       style={base}
     />
   );

@@ -1,7 +1,25 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion, useReducedMotion, useAnimation, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 export function HeroLighting() {
   const prefersReduced = useReducedMotion();
+  const controls = useAnimation();
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { amount: 0.1 });
+
+  useEffect(() => {
+    if (prefersReduced) return;
+    
+    if (isInView) {
+      controls.start({
+        opacity: [0.75, 1, 0.75],
+        scale: [0.97, 1.03, 0.97],
+        transition: { duration: 9, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }
+      });
+    } else {
+      controls.stop();
+    }
+  }, [isInView, prefersReduced, controls]);
   return (
     <>
       {/* Layer 1: Wide atmospheric haze — combined magenta-blue and cyan diffusion */}
@@ -19,6 +37,7 @@ export function HeroLighting() {
       />
       {/* Layer 2: Core volumetric bloom — primary radiance, slow echo pulse */}
       <div
+        ref={ref}
         aria-hidden="true"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{ zIndex: 1 }}
@@ -35,8 +54,8 @@ export function HeroLighting() {
           />
         ) : (
           <motion.div
-            animate={{ opacity: [0.75, 1, 0.75], scale: [0.97, 1.03, 0.97] }}
-            transition={{ duration: 9, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }}
+            animate={controls}
+            initial={{ opacity: 0.75, scale: 0.97 }}
             style={{
               width: 'clamp(190px, 26vw, 400px)',
               height: 'clamp(210px, 30vw, 460px)',
