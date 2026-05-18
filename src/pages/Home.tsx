@@ -3,6 +3,7 @@ import { StudioIntro } from '@/components/StudioIntro';
 import { SelectedWorks } from '@/components/SelectedWorks';
 import { Philosophy } from '@/components/Philosophy';
 import { SignatureCaseStudy } from '@/components/SignatureCaseStudy';
+import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { StudioNotes } from '@/components/StudioNotes';
 import { WorkWithStudio } from '@/components/WorkWithStudio';
 import { ClosingSection } from '@/components/ClosingSection';
@@ -14,7 +15,10 @@ export function Home() {
       <StudioIntro />
       <SelectedWorks />
       <Philosophy />
-      <SignatureCaseStudy />
+      <LumoCaseStudyTeaser />
+      <div id="lumo-case-study">
+        <SignatureCaseStudy />
+      </div>
       <StudioNotes />
       <WorkWithStudio />
       <ClosingSection />
