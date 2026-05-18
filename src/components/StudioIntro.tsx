@@ -6,7 +6,7 @@ import { EASE, DURATION, VIEWPORT } from '@/lib/motion';
 
 export function StudioIntro() {
   return (
-    <Section className="relative py-24 md:py-44 lg:py-52 overflow-hidden">
+    <Section className="relative py-24 md:py-14 lg:py-24 overflow-hidden">
       {/* Atmospheric depth accent — soft violet cloud, right side */}
       <div
         className="absolute pointer-events-none"
