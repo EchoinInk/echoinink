@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import { Section } from '@/components/layout/Section';
+import { ContentContainer } from '@/components/layout/ContentContainer';
+import { SectionHeading } from '@/components/layout/SectionHeading';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -10,7 +13,7 @@ const principles = [
 
 export function Philosophy() {
   return (
-    <section className="relative ei-section py-20 md:py-52 overflow-hidden">
+    <Section className="relative py-20 md:py-52 overflow-hidden">
       {/* Faint indigo atmospheric center */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -21,7 +24,7 @@ export function Philosophy() {
       />
 
       {/* Thin separator above */}
-      <div className="ei-container mb-14 md:mb-36">
+      <ContentContainer className="mb-14 md:mb-36">
         <div
           className="w-full h-px"
           style={{
@@ -29,47 +32,18 @@ export function Philosophy() {
               'linear-gradient(90deg, transparent, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.06) 75%, transparent)',
           }}
         />
-      </div>
+      </ContentContainer>
 
-      <div className="ei-container">
+      <ContentContainer>
         <div className="max-w-3xl">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: EASE, delay: 0 }}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
-          >
-            Approach
-          </motion.span>
-
-          {/* Opening statement */}
-          <motion.p
-            initial={{ opacity: 0, y: 22 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 1.3, ease: EASE, delay: 0.1 }}
-            className="font-editorial text-[1.6rem] md:text-[2.1rem] lg:text-[2.5rem] text-[#E8EAF6]/85 leading-[1.38] mb-16 md:mb-24 max-w-[36rem]"
-            style={{ letterSpacing: '-0.01em' }}
-          >
-            I believe creativity is a form of worldbuilding — a way of translating
-            memory, identity, and emotion into something you can step inside.
-          </motion.p>
-
-          {/* Middle paragraph */}
-          <motion.p
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 1.1, ease: EASE, delay: 0.2 }}
-            className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[55ch] mb-16 md:mb-24"
-          >
-            Every piece begins with a feeling: a fragment of self, a moment of
-            resonance, a story waiting to surface.
-          </motion.p>
+          <SectionHeading
+            eyebrow="Approach"
+            title="I believe creativity is a form of worldbuilding — a way of translating memory, identity, and emotion into something you can step inside."
+            description="Every piece begins with a feeling: a fragment of self, a moment of resonance, a story waiting to surface."
+          />
 
           {/* Principles triptych */}
-          <div className="mb-16 md:mb-24">
+          <div className="mb-16 md:mb-24 mt-16 md:mt-24">
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -120,10 +94,10 @@ export function Philosophy() {
           >
             I create worlds for people who feel too much and think too deeply.
             <br />
-            If that’s you, you’re home.
+            If that's you, you're home.
           </motion.p>
         </div>
-      </div>
-    </section>
+      </ContentContainer>
+    </Section>
   );
 }
