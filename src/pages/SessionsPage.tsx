@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -20,6 +21,11 @@ export function SessionsPage() {
       transition={{ duration: 0.9, ease: EASE }}
       className="relative bg-[#0F1220] min-h-screen"
     >
+      <Helmet>
+        <title>Echo Sessions — Echo in Ink</title>
+        <meta name="description" content="60-minute premium creative direction sessions for clarity, narrative cohesion, and aesthetic alignment." />
+      </Helmet>
+
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
         {/* Aqua/indigo atmospheric bloom — upper right */}

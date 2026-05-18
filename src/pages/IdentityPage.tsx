@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -34,6 +35,11 @@ export function IdentityPage() {
       transition={{ duration: 0.9, ease: EASE }}
       className="relative bg-[#0F1220] min-h-screen"
     >
+      <Helmet>
+        <title>Atmospheric Identity Kits — Echo in Ink</title>
+        <meta name="description" content="Curated identity systems for creators, founders, and brands seeking visual and narrative clarity that feels authentically theirs." />
+      </Helmet>
+
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
         {/* Atmospheric violet/pink bloom — upper left */}

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -30,6 +31,11 @@ export function WorldsPage() {
       transition={{ duration: 0.9, ease: EASE }}
       className="relative bg-[#0F1220] min-h-screen"
     >
+      <Helmet>
+        <title>Creative Universe Building — Echo in Ink</title>
+        <meta name="description" content="Rare, selective collaborations for brands and creators ready to build immersive digital worlds shaped by narrative, atmosphere, and cinematic detail." />
+      </Helmet>
+
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-end overflow-hidden">
         {/* Deep cosmic violet bloom — centered upper */}

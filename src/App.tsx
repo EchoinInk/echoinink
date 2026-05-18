@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import { Layout } from '@/components/Layout';
 import { LoadingScreen } from '@/components/LoadingScreen';
 
@@ -12,6 +13,7 @@ const LumoPage = lazy(() => import('@/pages/LumoPage').then((m) => ({ default: m
 
 function App() {
   return (
+    <HelmetProvider>
     <BrowserRouter>
       <Layout>
         <Suspense fallback={<LoadingScreen />}>
@@ -26,6 +28,7 @@ function App() {
         </Suspense>
       </Layout>
     </BrowserRouter>
+    </HelmetProvider>
   );
 }
 
