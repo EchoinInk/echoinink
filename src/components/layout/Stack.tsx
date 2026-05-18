@@ -18,13 +18,32 @@ type SpacingStep = keyof typeof scaleMap;
 interface StackProps {
   children: ReactNode;
   gap?: SpacingStep;
+  align?: 'start' | 'center' | 'end' | 'stretch';
+  justify?: 'start' | 'center' | 'end' | 'between';
   className?: string;
 }
 
-export function Stack({ children, gap = 24, className }: StackProps) {
-  const style: CSSProperties = { display: 'flex', flexDirection: 'column', gap: scaleMap[gap] };
+const alignMap = {
+  start: 'items-start',
+  center: 'items-center',
+  end: 'items-end',
+  stretch: 'items-stretch',
+} as const;
+
+const justifyMap = {
+  start: 'justify-start',
+  center: 'justify-center',
+  end: 'justify-end',
+  between: 'justify-between',
+} as const;
+
+export function Stack({ children, gap = 24, align = 'stretch', justify = 'start', className }: StackProps) {
+  const style: CSSProperties = { gap: scaleMap[gap] };
   return (
-    <div className={cn(className)} style={style}>
+    <div 
+      className={cn('flex flex-col', alignMap[align], justifyMap[justify], className)} 
+      style={style}
+    >
       {children}
     </div>
   );
