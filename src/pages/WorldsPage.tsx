@@ -48,7 +48,7 @@ export function WorldsPage() {
             height: 'clamp(500px, 70vh, 860px)',
             background:
               'radial-gradient(ellipse 55% 55% at 50% 30%, rgba(99,102,241,0.12) 0%, rgba(168,85,247,0.08) 40%, rgba(30,200,255,0.03) 68%, transparent 82%)',
-            filter: 'blur(110px)',
+            filter: 'blur(75px)',
             mixBlendMode: 'screen',
           }}
         />
@@ -62,7 +62,7 @@ export function WorldsPage() {
             height: 'clamp(280px, 36vw, 540px)',
             background:
               'radial-gradient(ellipse 68% 68% at 28% 56%, rgba(168,85,247,0.06) 0%, transparent 72%)',
-            filter: 'blur(90px)',
+            filter: 'blur(70px)',
             mixBlendMode: 'screen',
           }}
         />
@@ -177,7 +177,7 @@ export function WorldsPage() {
             height: 'clamp(300px, 40vw, 580px)',
             background:
               'radial-gradient(ellipse 70% 70% at 68% 44%, rgba(99,102,241,0.045) 0%, transparent 72%)',
-            filter: 'blur(90px)',
+            filter: 'blur(70px)',
           }}
         />
 

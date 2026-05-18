@@ -12,7 +12,7 @@ export function HeroLighting() {
           width: 'clamp(580px, 88vw, 1300px)',
           height: 'clamp(260px, 44vw, 680px)',
           background: 'radial-gradient(ellipse 66% 46% at 48% 56%, rgba(232,121,249,0.09) 0%, rgba(168,85,247,0.06) 28%, rgba(30,200,255,0.08) 45%, rgba(99,102,241,0.04) 62%, transparent 80%)',
-          filter: 'blur(80px)',
+          filter: 'blur(60px)',
           mixBlendMode: 'screen',
           zIndex: 1,
         }}
@@ -29,7 +29,7 @@ export function HeroLighting() {
               width: 'clamp(190px, 26vw, 400px)',
               height: 'clamp(210px, 30vw, 460px)',
               background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.25) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
-              filter: 'blur(38px)',
+              filter: 'blur(32px)',
               mixBlendMode: 'screen' as const,
             }}
           />
@@ -41,7 +41,7 @@ export function HeroLighting() {
               width: 'clamp(190px, 26vw, 400px)',
               height: 'clamp(210px, 30vw, 460px)',
               background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.25) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
-              filter: 'blur(38px)',
+              filter: 'blur(32px)',
               mixBlendMode: 'screen',
             }}
           />
@@ -72,7 +72,7 @@ export function HeroLighting() {
           width: 'clamp(180px, 26vw, 380px)',
           height: 'clamp(80px, 12vw, 180px)',
           background: 'radial-gradient(ellipse 82% 52% at 40% 56%, rgba(120,80,200,0.09) 0%, rgba(168,85,247,0.06) 40%, rgba(30,180,255,0.04) 65%, transparent 100%)',
-          filter: 'blur(22px)',
+          filter: 'blur(18px)',
           mixBlendMode: 'screen',
           zIndex: 3,
         }}

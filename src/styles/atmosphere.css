@@ -21,6 +21,6 @@
     rgba(99, 102, 241, 0.035) 54%,
     transparent 82%
   );
-  filter: blur(74px);
+  filter: blur(60px);
   mix-blend-mode: screen;
 }

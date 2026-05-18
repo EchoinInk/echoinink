@@ -16,7 +16,7 @@ export function StudioIntro() {
           width: 'clamp(320px, 42vw, 640px)',
           height: 'clamp(320px, 42vw, 640px)',
           background: 'radial-gradient(ellipse 68% 68% at 70% 44%, rgba(168,85,247,0.055) 0%, transparent 72%)',
-          filter: 'blur(90px)',
+          filter: 'blur(70px)',
         }}
       />
       {/* Warm hint — lower left */}
@@ -28,7 +28,7 @@ export function StudioIntro() {
           width: 'clamp(200px, 28vw, 420px)',
           height: 'clamp(200px, 28vw, 420px)',
           background: 'radial-gradient(ellipse 70% 70% at 32% 60%, rgba(232,121,249,0.04) 0%, transparent 70%)',
-          filter: 'blur(80px)',
+          filter: 'blur(65px)',
         }}
       />
 

@@ -42,7 +42,7 @@ export function WorkWithStudio() {
           height: 'clamp(280px, 38vw, 560px)',
           background:
             'radial-gradient(ellipse 68% 68% at 32% 52%, rgba(99,102,241,0.045) 0%, transparent 72%)',
-          filter: 'blur(100px)',
+          filter: 'blur(75px)',
         }}
       />
       {/* Atmospheric accent — faint violet, right */}
@@ -55,7 +55,7 @@ export function WorkWithStudio() {
           height: 'clamp(200px, 28vw, 440px)',
           background:
             'radial-gradient(ellipse 70% 70% at 68% 44%, rgba(168,85,247,0.04) 0%, transparent 70%)',
-          filter: 'blur(90px)',
+          filter: 'blur(70px)',
         }}
       />
 

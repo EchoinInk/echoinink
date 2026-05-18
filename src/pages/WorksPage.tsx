@@ -29,7 +29,7 @@ export function WorksPage() {
             height: 'clamp(280px, 36vw, 560px)',
             background:
               'radial-gradient(ellipse 66% 62% at 68% 38%, rgba(168,85,247,0.06) 0%, transparent 72%)',
-            filter: 'blur(90px)',
+            filter: 'blur(70px)',
           }}
         />
 

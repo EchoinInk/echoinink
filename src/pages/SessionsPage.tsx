@@ -37,7 +37,7 @@ export function SessionsPage() {
             height: 'clamp(480px, 62vh, 760px)',
             background:
               'radial-gradient(ellipse 58% 60% at 72% 32%, rgba(30,200,255,0.10) 0%, rgba(99,102,241,0.07) 44%, transparent 72%)',
-            filter: 'blur(100px)',
+            filter: 'blur(75px)',
             mixBlendMode: 'screen',
           }}
         />
@@ -51,7 +51,7 @@ export function SessionsPage() {
             height: 'clamp(260px, 34vw, 520px)',
             background:
               'radial-gradient(ellipse 68% 68% at 30% 54%, rgba(168,85,247,0.055) 0%, transparent 72%)',
-            filter: 'blur(85px)',
+            filter: 'blur(65px)',
             mixBlendMode: 'screen',
           }}
         />
@@ -167,7 +167,7 @@ export function SessionsPage() {
             height: 'clamp(260px, 34vw, 520px)',
             background:
               'radial-gradient(ellipse 68% 68% at 68% 44%, rgba(30,200,255,0.04) 0%, transparent 72%)',
-            filter: 'blur(80px)',
+            filter: 'blur(60px)',
           }}
         />
 

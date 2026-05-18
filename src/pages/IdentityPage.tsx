@@ -51,7 +51,7 @@ export function IdentityPage() {
             height: 'clamp(500px, 65vh, 800px)',
             background:
               'radial-gradient(ellipse 58% 62% at 28% 35%, rgba(232,121,249,0.11) 0%, rgba(168,85,247,0.07) 42%, transparent 72%)',
-            filter: 'blur(100px)',
+            filter: 'blur(75px)',
             mixBlendMode: 'screen',
           }}
         />
@@ -65,7 +65,7 @@ export function IdentityPage() {
             height: 'clamp(280px, 36vw, 560px)',
             background:
               'radial-gradient(ellipse 68% 68% at 68% 44%, rgba(99,102,241,0.06) 0%, transparent 72%)',
-            filter: 'blur(90px)',
+            filter: 'blur(70px)',
             mixBlendMode: 'screen',
           }}
         />
@@ -182,7 +182,7 @@ export function IdentityPage() {
             height: 'clamp(300px, 40vw, 580px)',
             background:
               'radial-gradient(ellipse 70% 70% at 70% 44%, rgba(168,85,247,0.045) 0%, transparent 72%)',
-            filter: 'blur(90px)',
+            filter: 'blur(70px)',
           }}
         />
 

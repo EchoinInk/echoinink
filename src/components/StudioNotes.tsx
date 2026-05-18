@@ -14,7 +14,7 @@ export function StudioNotes() {
           height: 'clamp(240px, 32vw, 500px)',
           background:
             'radial-gradient(ellipse 70% 70% at 30% 52%, rgba(232,121,249,0.035) 0%, transparent 72%)',
-          filter: 'blur(80px)',
+          filter: 'blur(60px)',
         }}
       />
 

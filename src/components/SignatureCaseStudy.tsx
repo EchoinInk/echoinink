@@ -109,7 +109,7 @@ function OriginPulseAtmosphere() {
       <GlowField
         style={{ top: '-8%', left: '-12%', width: 'clamp(560px, 74vw, 980px)', height: 'clamp(560px, 74vw, 980px)', transformOrigin: '40% 44%' }}
         gradient="radial-gradient(ellipse 50% 47% at 40% 44%, rgba(99,102,241,0.14) 0%, rgba(80,72,200,0.055) 44%, transparent 70%)"
-        blur={85}
+        blur={65}
         anim={{ opacity: [0.68, 1, 0.68], scale: [1, 1.038, 1] }}
         duration={24}
       />
@@ -267,14 +267,14 @@ function FragmentsAtmosphere() {
       <GlowField
         style={{ top: '-5%', left: '-10%', width: 'clamp(500px, 68vw, 900px)', height: 'clamp(500px, 68vw, 900px)' }}
         gradient="radial-gradient(ellipse 55% 52% at 40% 46%, rgba(110,78,210,0.080) 0%, rgba(90,62,185,0.033) 52%, transparent 72%)"
-        blur={88}
+        blur={68}
         anim={{ opacity: [0.60, 0.94, 0.60] }}
         duration={32}
       />
       <GlowField
         style={{ bottom: '15%', right: '-6%', width: 'clamp(280px, 38vw, 560px)', height: 'clamp(280px, 38vw, 560px)' }}
         gradient="radial-gradient(ellipse 55% 52% at 50% 50%, rgba(95,68,195,0.068) 0%, rgba(78,55,172,0.028) 52%, transparent 72%)"
-        blur={80}
+        blur={62}
         anim={{ opacity: [0.48, 0.80, 0.48] }}
         duration={38} delay={10}
       />
@@ -292,14 +292,14 @@ function BecomingAtmosphere() {
       <AtmosphericBloom
         size="clamp(640px, 92vw, 1240px)"
         gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgba(99,82,210,0.092) 0%, rgba(82,68,185,0.036) 48%, transparent 72%)"
-        blur={90}
+        blur={70}
         anim={{ opacity: [0.60, 1, 0.60], scale: [1, 1.024, 1] }}
         duration={30}
       />
       <GlowField
         style={{ bottom: '-8%', left: '-15%', right: '-15%', height: 'clamp(320px, 44vw, 640px)' }}
         gradient="radial-gradient(ellipse 88% 48% at 50% 82%, rgba(108,82,196,0.075) 0%, rgba(90,68,176,0.030) 50%, transparent 74%)"
-        blur={88}
+        blur={68}
         anim={{ opacity: [0.50, 0.82, 0.50] }}
         duration={38} delay={8}
       />
@@ -440,7 +440,7 @@ export function SignatureCaseStudy() {
       {/* Global film-grain layer */}
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: GRAIN, backgroundRepeat: 'repeat', backgroundSize: '200px 200px', opacity: 0.02, mixBlendMode: 'overlay', zIndex: 10 }} />
       {/* Header ambient bloom — violet, upper right */}
-      <div className="absolute pointer-events-none" style={{ top: '-8%', right: '-10%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)', background: 'radial-gradient(ellipse 60% 60% at 64% 36%, rgba(168,85,247,0.055) 0%, transparent 70%)', filter: 'blur(80px)' }} />
+      <div className="absolute pointer-events-none" style={{ top: '-8%', right: '-10%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)', background: 'radial-gradient(ellipse 60% 60% at 64% 36%, rgba(168,85,247,0.055) 0%, transparent 70%)', filter: 'blur(60px)' }} />
 
       {/* ── SECTION HEADER ──────────────────────────────────────────── */}
       <div className="ei-container py-16 md:py-28">
