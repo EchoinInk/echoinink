@@ -1,10 +1,13 @@
 import { motion } from 'framer-motion';
+import { Section } from '@/components/layout/Section';
+import { ContentContainer } from '@/components/layout/ContentContainer';
+import { SectionHeading } from '@/components/layout/SectionHeading';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function StudioIntro() {
   return (
-    <section className="relative ei-section py-20 md:py-48 lg:py-56 overflow-hidden">
+    <Section className="relative py-20 md:py-48 lg:py-56 overflow-hidden">
       {/* Atmospheric depth accent — soft violet cloud, right side */}
       <div
         className="absolute pointer-events-none"
@@ -30,8 +33,9 @@ export function StudioIntro() {
         }}
       />
 
-      <div className="ei-container">
+      <ContentContainer>
         <div className="max-w-4xl">
+          <SectionHeading eyebrow="Studio" title="" className="[&>h2]:hidden" />
           <motion.span
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +83,7 @@ export function StudioIntro() {
             This is a studio built on authorship and atmosphere — a place where ideas take shape in ink and unfold into luminous digital experiences.
           </motion.p>
         </div>
-      </div>
-    </section>
+      </ContentContainer>
+    </Section>
   );
 }
