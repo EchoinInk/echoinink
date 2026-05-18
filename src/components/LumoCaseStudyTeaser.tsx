@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlowField, GrainOverlay } from './AtmosphericSystem';
 
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 const container = {
   hidden: {},
@@ -13,7 +13,7 @@ const container = {
 
 const line = {
   hidden: { opacity: 0, y: 5 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.9, ease: EASE } },
+  visible: { opacity: 1, y: 0, transition: { duration: DURATION.normal, ease: EASE } },
 };
 
 export function LumoCaseStudyTeaser() {
