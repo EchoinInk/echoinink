@@ -22,6 +22,7 @@ export function HeroHeading() {
           backgroundClip: 'text',
           opacity: 0.8,
         }}
+        aria-label="Design, Emotion, Echo"
       >
         DESIGN. EMOTION. ECHO.
       </p>
@@ -33,7 +34,7 @@ export function HeroHeading() {
         className="font-structural text-[14px] md:text-[15px] text-white/55 leading-[1.9] mb-7 md:mb-9 text-center"
         style={{ maxWidth: '52ch' }}
       >
-        Echo in Ink is a creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media.
+        <span className="text-white/70">Echo in Ink</span> is a creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media.
       </p>
     </>
   );
