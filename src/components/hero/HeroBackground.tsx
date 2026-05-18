@@ -1,9 +1,31 @@
-import { BackgroundLayer } from '../BackgroundLayer';
+import mobilePng from '@/assets/ei-hero-bg-dark-mobile-9x16.png';
+import mobileWebp from '@/assets/ei-hero-bg-dark-mobile-9x16.webp';
+import mobileAvif from '@/assets/ei-hero-bg-dark-mobile-9x16.avif';
+import widePng from '@/assets/ei-hero-bg-dark-21x9.png';
+import wideWebp from '@/assets/ei-hero-bg-dark-21x9.webp';
+import wideAvif from '@/assets/ei-hero-bg-dark-21x9.avif';
 
 export function HeroBackground() {
   return (
     <>
-      <BackgroundLayer />
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+        <picture>
+          {/* Mobile (portrait) sources */}
+          <source media="(max-aspect-ratio: 3/4)" srcSet={mobileAvif} type="image/avif" />
+          <source media="(max-aspect-ratio: 3/4)" srcSet={mobileWebp} type="image/webp" />
+          <source media="(max-aspect-ratio: 3/4)" srcSet={mobilePng} type="image/png" />
+
+          {/* Wide / desktop sources */}
+          <source srcSet={wideAvif} type="image/avif" />
+          <source srcSet={wideWebp} type="image/webp" />
+
+          <img
+            src={widePng}
+            alt=""
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
+        </picture>
+      </div>
 
       {/* Cinematic top frame — atmospheric darkness framing the navigation region */}
       <div

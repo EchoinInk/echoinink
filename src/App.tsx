@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
+import { LoadingScreen } from '@/components/LoadingScreen';
 
 const Home = lazy(() => import('@/pages/Home').then((m) => ({ default: m.Home })));
 const IdentityPage = lazy(() => import('@/pages/IdentityPage').then((m) => ({ default: m.IdentityPage })));
@@ -13,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <Layout>
-        <Suspense fallback={<div className="min-h-screen" />}>
+        <Suspense fallback={<LoadingScreen />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/identity" element={<IdentityPage />} />

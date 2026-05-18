@@ -2,6 +2,10 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
+import viteImagemin from "@vheemstra/vite-plugin-imagemin";
+import imageminPngquant from "imagemin-pngquant";
+import imageminWebp from "imagemin-webp";
+import imageminAvif from "@vheemstra/imagemin-avifenc";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -12,7 +16,26 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [
+    react(),
+    mode === "development" && componentTagger(),
+    viteImagemin({
+      plugins: {
+        png: imageminPngquant(),
+      },
+      onlyAssets: true,
+      makeAvif: {
+        plugins: {
+          png: imageminAvif(),
+        },
+      },
+      makeWebp: {
+        plugins: {
+          png: imageminWebp(),
+        },
+      },
+    }),
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
