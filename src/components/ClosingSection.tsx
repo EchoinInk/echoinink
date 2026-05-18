@@ -52,7 +52,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
-          className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-10 max-w-[28rem]"
+          className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-10 max-w-4xl"
           style={{ letterSpacing: '-0.01em' }}
         >
           Step deeper into the world.
@@ -64,7 +64,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 2 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[38ch] mb-5"
+          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[34ch] mb-6 md:mb-8"
         >
           Echo in Ink is an ongoing exploration — a living archive of stories,
           atmospheres, and luminous digital experiments.

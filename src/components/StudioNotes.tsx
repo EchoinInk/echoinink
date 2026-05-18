@@ -3,7 +3,7 @@ import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 export function StudioNotes() {
   return (
-    <section className="relative ei-section py-16 md:py-24 overflow-hidden">
+    <section className="relative ei-section py-20 md:py-32 overflow-hidden">
       {/* Faint pink ambient left */}
       <div
         className="absolute pointer-events-none"

@@ -215,7 +215,7 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
       </div>
 
       {/* Gallery */}
-      <div className="ei-container">
+      <div className="ei-container max-w-6xl">
         <div className="space-y-4 md:space-y-6">
           {/* 01 — featured hero panel */}
           <WorkPanel work={works[0]} variant="featured" />

@@ -55,7 +55,7 @@ export function LumoCaseStudyTeaser() {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
           variants={container}
-          className="max-w-[680px]"
+          className="max-w-3xl"
         >
           <motion.h2
             variants={line}
@@ -69,7 +69,7 @@ export function LumoCaseStudyTeaser() {
 
           <motion.p
             variants={line}
-            className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95] max-w-[54ch] mb-4"
+            className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95] max-w-[54ch] mb-6 md:mb-8"
           >
             A product shaped through emotional intelligence, adaptive systems, and humane design.
           </motion.p>
