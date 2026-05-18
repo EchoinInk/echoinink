@@ -1,8 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 const included = [
   {
@@ -32,7 +31,7 @@ export function IdentityPage() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.9, ease: EASE }}
+      transition={{ duration: DURATION.cinematic, ease: EASE }}
       className="relative bg-[#0F1220] min-h-screen"
     >
       <Helmet>
@@ -87,7 +86,7 @@ export function IdentityPage() {
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, ease: EASE, delay: 0.2 }}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.2 }}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-10 md:mb-14"
           >
             Atmospheric Identity Kits
@@ -96,7 +95,7 @@ export function IdentityPage() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: EASE, delay: 0.35 }}
+            transition={{ duration: DURATION.slower, ease: EASE, delay: 0.35 }}
             className="font-editorial text-[2.4rem] md:text-[3.6rem] lg:text-[4.8rem] text-[#E8EAF6]/90 leading-[1.1] mb-8 md:mb-10"
             style={{ letterSpacing: '-0.018em', maxWidth: '22rem', lineHeight: 1.08 }}
           >
@@ -109,7 +108,7 @@ export function IdentityPage() {
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: EASE, delay: 0.58 }}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.58 }}
             className="font-structural text-[13px] md:text-[15px] text-white/38 leading-[1.95] max-w-[50ch]"
           >
             Curated identity systems for creators, founders, and brands seeking
@@ -135,8 +134,8 @@ export function IdentityPage() {
             <motion.p
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 1.3, ease: EASE, delay: 0.1 }}
+              viewport={VIEWPORT.loose}
+              transition={{ duration: DURATION.cinematic, ease: EASE, delay: 0.1 }}
               className="font-editorial text-[1.65rem] md:text-[2.15rem] text-[#E8EAF6]/80 leading-[1.3] mb-12 md:mb-16"
               style={{ letterSpacing: '-0.012em' }}
             >
@@ -148,7 +147,7 @@ export function IdentityPage() {
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.2 }}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.2 }}
               className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[60ch] mb-6"
             >
               An Atmospheric Identity Kit is an authored creative direction document —
@@ -160,7 +159,7 @@ export function IdentityPage() {
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-30px' }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.3 }}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.3 }}
               className="font-structural text-[13px] md:text-[14px] text-white/28 leading-[1.95] max-w-[55ch]"
             >
               It is for those who know their work has an emotional quality that
@@ -213,7 +212,7 @@ export function IdentityPage() {
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 1.1, ease: EASE, delay: 0.06 * i }}
+                transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * i }}
               >
                 <div className="flex gap-6 md:gap-10 items-start py-9 md:py-12">
                   <span className="font-structural text-[9px] tracking-[0.28em] text-white/20 mt-1.5 shrink-0 w-5">
@@ -263,8 +262,8 @@ export function IdentityPage() {
             <motion.p
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 1.2, ease: EASE, delay: 0.1 }}
+              viewport={VIEWPORT.normal}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.1 }}
               className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[58ch] mb-6"
             >
               We begin with a deep intake — questions designed not to extract data,
@@ -275,7 +274,7 @@ export function IdentityPage() {
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.22 }}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.normal }}
               className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[54ch] mb-6"
             >
               From there, I build slowly — curating, writing, iterating until the
@@ -286,7 +285,7 @@ export function IdentityPage() {
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-30px' }}
-              transition={{ duration: 1.0, ease: EASE, delay: 0.34 }}
+              transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.loose }}
               className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[50ch]"
             >
               The result arrives as a living document: yours to return to, grow
@@ -316,41 +315,6 @@ export function IdentityPage() {
           >
             Atmospheric Identity Kits
           </motion.span>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 22 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.4, ease: EASE, delay: 0.1 }}
-            className="font-editorial text-[1.9rem] md:text-[2.6rem] text-[#E8EAF6]/80 leading-[1.22] mb-8 mx-auto"
-            style={{ letterSpacing: '-0.01em', maxWidth: '30rem' }}
-          >
-            Ready to discover your atmospheric identity?
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.1, ease: EASE, delay: 0.24 }}
-            className="font-structural text-[13px] md:text-[14px] text-white/28 leading-[1.95] mx-auto mb-12"
-            style={{ maxWidth: '38ch' }}
-          >
-            Each kit is built individually, over time, with full attention.
-            Availability is limited.
-          </motion.p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: EASE, delay: 0.36 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <button className="ei-gradient-border-btn relative inline-flex items-center justify-center px-10 py-4 font-structural text-[11px] tracking-[0.22em] uppercase text-white/85 transition-all duration-500 hover:text-white hover:scale-[1.02]">
-              <span className="relative z-10">Begin an Identity</span>
-            </button>
-            <Link
               to="/"
               className="font-structural text-[10px] tracking-[0.22em] uppercase text-white/25 hover:text-white/50 transition-colors duration-400"
             >
