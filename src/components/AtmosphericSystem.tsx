@@ -100,7 +100,24 @@ export function GrainOverlay({
   size?: number;
 }) {
   const prefersReduced = useReducedMotion();
+  const controls = useAnimation();
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { amount: 0.1 });
   const [lo, hi] = range;
+
+  useEffect(() => {
+    if (prefersReduced) return;
+    
+    if (isInView) {
+      controls.start({
+        opacity: [lo, hi, lo],
+        transition: { duration, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay }
+      });
+    } else {
+      controls.stop();
+    }
+  }, [isInView, lo, hi, duration, delay, prefersReduced, controls]);
+
   const grainStyle: CSSProperties = {
     position: 'absolute',
     inset: 0,
@@ -112,8 +129,9 @@ export function GrainOverlay({
   if (prefersReduced) return <div style={{ ...grainStyle, opacity: (lo + hi) / 2 }} />;
   return (
     <motion.div
-      animate={{ opacity: [lo, hi, lo] }}
-      transition={{ duration, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay }}
+      ref={ref}
+      animate={controls}
+      initial={{ opacity: lo }}
       style={grainStyle}
     />
   );
@@ -141,6 +159,24 @@ export function EchoRing({
   preserveAspect?: boolean;
 }) {
   const prefersReduced = useReducedMotion();
+  const controls = useAnimation();
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { amount: 0.1 });
+
+  useEffect(() => {
+    if (!anim || prefersReduced) return;
+    
+    if (isInView) {
+      controls.start({
+        opacity: anim.opacity,
+        ...(anim.scale ? { scale: anim.scale } : {}),
+        transition: { duration, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay }
+      });
+    } else {
+      controls.stop();
+    }
+  }, [isInView, anim, duration, delay, prefersReduced, controls]);
+
   const svg = (
     <svg
       width="100%" height="100%"
@@ -168,8 +204,9 @@ export function EchoRing({
   if (!anim || prefersReduced) return <div style={base}>{svg}</div>;
   return (
     <motion.div
-      animate={{ opacity: anim.opacity, ...(anim.scale ? { scale: anim.scale } : {}) }}
-      transition={{ duration, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror', delay }}
+      ref={ref}
+      animate={controls}
+      initial={{ opacity: anim.opacity[0], ...(anim.scale ? { scale: anim.scale[0] } : {}) }}
       style={base}
     >
       {svg}
