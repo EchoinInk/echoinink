@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
-
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 export function StudioNotes() {
   return (
@@ -24,8 +23,8 @@ export function StudioNotes() {
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: EASE }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE }}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/15 mb-10 md:mb-14"
           >
             Studio Notes
@@ -34,8 +33,8 @@ export function StudioNotes() {
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 1.3, ease: EASE, delay: 0.1 }}
+            viewport={VIEWPORT.tight}
+            transition={{ duration: DURATION.cinematic, ease: EASE, delay: 0.1 }}
             className="font-editorial text-[1.18rem] md:text-[1.42rem] text-[#E8EAF6]/48 leading-[1.76] mb-8 md:mb-10"
             style={{ letterSpacing: '-0.006em', fontStyle: 'italic' }}
           >
@@ -47,8 +46,8 @@ export function StudioNotes() {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: EASE, delay: 0.28 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.loose }}
             className="flex items-center gap-4 mb-10 md:mb-14"
           >
             <div
@@ -66,8 +65,8 @@ export function StudioNotes() {
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-30px' }}
-            transition={{ duration: 1.1, ease: EASE, delay: 0.42 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: 'easeInOut', delay: STAGGER.cinematic }}
             className="font-structural text-[12px] md:text-[13px] text-white/25 leading-[1.95] max-w-[50ch]"
           >
             Atmosphere is not decoration. It is the emotional register of a space —

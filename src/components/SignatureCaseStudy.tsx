@@ -9,36 +9,36 @@ import {
   AtmosphericBloom,
 } from './AtmosphericSystem';
 
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 const vp = (margin = '-40px') => ({ once: true, margin });
 
 const fade = (delay = 0) => ({
   initial: { opacity: 0, y: 5 },
   whileInView: { opacity: 1, y: 0 } as { opacity: number; y: number },
-  viewport: vp(),
-  transition: { duration: 1.6, ease: EASE, delay },
+  viewport: VIEWPORT.normal,
+  transition: { duration: DURATION.cinematic, ease: EASE, delay },
 });
 
 const envFade = (delay = 0) => ({
   initial: { opacity: 0 },
-  whileInView: { opacity: 1 } as { opacity: number },
-  viewport: vp('-80px'),
-  transition: { duration: 2.0, ease: EASE, delay },
+  whileInView: { opacity: 1 },
+  viewport: VIEWPORT.loose,
+  transition: { duration: DURATION.slower, ease: EASE, delay },
 });
 
 const headFade = (delay = 0) => ({
-  initial: { opacity: 0, y: 4 },
-  whileInView: { opacity: 1, y: 0 } as { opacity: number; y: number },
-  viewport: vp('-40px'),
-  transition: { duration: 1.9, ease: EASE, delay },
+  initial: { opacity: 0, y: 8 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: VIEWPORT.normal,
+  transition: { duration: DURATION.cinematic, ease: EASE, delay },
 });
 
 const labelFade = (delay = 0) => ({
   initial: { opacity: 0 },
-  whileInView: { opacity: 1 } as { opacity: number },
-  viewport: vp('-60px'),
-  transition: { duration: 1.4, ease: EASE, delay },
+  whileInView: { opacity: 1 },
+  viewport: VIEWPORT.normal,
+  transition: { duration: DURATION.normal, ease: EASE, delay },
 });
 
 function Separator() {

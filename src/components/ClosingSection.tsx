@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import bgWide from '@/assets/ei-hero-bg-dark-21x9.png';
-
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 export function ClosingSection() {
   return (
@@ -41,8 +40,8 @@ export function ClosingSection() {
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.2, ease: EASE }}
+          viewport={VIEWPORT.normal}
+          transition={{ duration: DURATION.slow, ease: EASE }}
           className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12"
         >
           Echo in Ink
@@ -51,8 +50,8 @@ export function ClosingSection() {
         <motion.h2
           initial={{ opacity: 0, y: 26 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.4, ease: EASE, delay: 0.12 }}
+          viewport={VIEWPORT.normal}
+          transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
           className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-10 max-w-[28rem]"
           style={{ letterSpacing: '-0.01em' }}
         >
@@ -63,8 +62,8 @@ export function ClosingSection() {
         <motion.p
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.1, ease: EASE, delay: 0.26 }}
+          viewport={VIEWPORT.normal}
+          transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 2 }}
           className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[38ch] mb-5"
         >
           Echo in Ink is an ongoing exploration — a living archive of stories,
@@ -74,8 +73,8 @@ export function ClosingSection() {
         <motion.p
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.0, ease: EASE, delay: 0.36 }}
+          viewport={VIEWPORT.normal}
+          transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 3 }}
           className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[34ch] mb-12"
         >
           If something here resonates, stay a while. Wander.
@@ -86,8 +85,8 @@ export function ClosingSection() {
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1.1, ease: EASE, delay: 0.48 }}
+          viewport={VIEWPORT.normal}
+          transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 4 }}
         >
           <Link
             to="/works"
