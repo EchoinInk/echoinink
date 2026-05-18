@@ -74,6 +74,18 @@ export const presets = {
     transition: { duration: 0.9, ease: EASE, delay },
   }),
 
+  pageOut: () => ({
+    exit: { opacity: 0 },
+    transition: { duration: 0.5, ease: EASE },
+  }),
+
+  pageTransition: () => ({
+    initial: { opacity: 0, y: 8 },
+    animate: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -8 },
+    transition: { duration: 0.6, ease: EASE },
+  }),
+
   // Ambient animation config
   ambient: {
     duration: 28,

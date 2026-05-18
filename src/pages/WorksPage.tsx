@@ -6,12 +6,7 @@ const EASE = [0.22, 1, 0.36, 1] as const;
 
 export function WorksPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.9, ease: EASE }}
-      className="relative bg-[#0F1220] min-h-screen"
-    >
+    <div className="relative bg-[#0F1220] min-h-screen">
       <Helmet>
         <title>Selected Works — Echo in Ink</title>
         <meta name="description" content="A curated record of visual and narrative experiments — atmospheres built, identities discovered, and worlds made luminous." />
@@ -92,6 +87,6 @@ export function WorksPage() {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

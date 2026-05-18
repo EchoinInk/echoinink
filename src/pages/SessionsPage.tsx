@@ -14,12 +14,7 @@ const navigations = [
 
 export function SessionsPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: DURATION.cinematic, ease: EASE }}
-      className="relative bg-[#0F1220] min-h-screen"
-    >
+    <div className="relative bg-[#0F1220] min-h-screen">
       <Helmet>
         <title>Echo Sessions — Echo in Ink</title>
         <meta name="description" content="60-minute premium creative direction sessions for clarity, narrative cohesion, and aesthetic alignment." />
@@ -354,6 +349,6 @@ export function SessionsPage() {
           </div>
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 }

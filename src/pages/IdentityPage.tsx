@@ -28,12 +28,7 @@ const included = [
 
 export function IdentityPage() {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: DURATION.cinematic, ease: EASE }}
-      className="relative bg-[#0F1220] min-h-screen"
-    >
+    <div className="relative bg-[#0F1220] min-h-screen">
       <Helmet>
         <title>Atmospheric Identity Kits — Echo in Ink</title>
         <meta name="description" content="Curated identity systems for creators, founders, and brands seeking visual and narrative clarity that feels authentically theirs." />
@@ -345,6 +340,6 @@ export function IdentityPage() {
           </div>
         </div>
       </section>
-    </motion.div>
+    </div>
   );
 }
