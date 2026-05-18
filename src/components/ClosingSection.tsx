@@ -35,7 +35,7 @@ export function ClosingSection() {
       {/* Content */}
       <div
         className="relative z-10 flex flex-col items-center justify-center text-center px-6"
-        style={{ minHeight: '68vh', paddingTop: '10vh', paddingBottom: '14vh' }}
+        style={{ minHeight: '72vh', paddingTop: '12vh', paddingBottom: '16vh' }}
       >
         <motion.span
           initial={{ opacity: 0 }}
@@ -52,7 +52,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
-          className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-10 max-w-4xl"
+          className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-12 max-w-4xl"
           style={{ letterSpacing: '-0.01em' }}
         >
           Step deeper into the world.
@@ -64,7 +64,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 2 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[34ch] mb-6 md:mb-8"
+          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[34ch] mb-8 md:mb-10"
         >
           Echo in Ink is an ongoing exploration — a living archive of stories,
           atmospheres, and luminous digital experiments.
@@ -75,7 +75,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 3 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[34ch] mb-12"
+          className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[34ch] mb-14 md:mb-16"
         >
           If something here resonates, stay a while. Wander.
           <br />

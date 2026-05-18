@@ -78,7 +78,7 @@ export function WorkWithStudio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.loose}
             transition={{ duration: DURATION.slow, ease: EASE }}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-14 md:mb-18"
           >
             Work With the Studio
           </motion.span>
@@ -89,7 +89,7 @@ export function WorkWithStudio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.loose}
             transition={{ duration: DURATION.normal, ease: 'easeInOut', delay: 0.1 }}
-            className="font-editorial text-[1.9rem] md:text-[2.5rem] lg:text-[3rem] text-[#E8EAF6]/80 leading-[1.22] mb-8 md:mb-10"
+            className="font-editorial text-[1.9rem] md:text-[2.5rem] lg:text-[3rem] text-[#E8EAF6]/80 leading-[1.22] mb-10 md:mb-12"
             style={{ letterSpacing: '-0.012em' }}
           >
             Authored creative direction
@@ -103,7 +103,7 @@ export function WorkWithStudio() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.loose}
             transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.normal }}
-            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[55ch] mb-16 md:mb-20"
+            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[55ch] mb-20 md:mb-24"
           >
             Echo in Ink offers authored creative direction for founders, artists,
             and makers seeking clarity, identity, and atmosphere.
@@ -128,7 +128,7 @@ export function WorkWithStudio() {
                 viewport={VIEWPORT.tight}
                 transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * i }}
               >
-                <div className="flex gap-6 md:gap-10 items-start py-10 md:py-14">
+                <div className="flex gap-6 md:gap-10 items-start py-12 md:py-16">
                   <span className="font-structural text-[9px] tracking-[0.28em] text-white/20 mt-2 shrink-0 w-5">
                     {item.index}
                   </span>

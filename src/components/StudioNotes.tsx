@@ -35,7 +35,7 @@ export function StudioNotes() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.tight}
             transition={{ duration: DURATION.cinematic, ease: EASE, delay: 0.1 }}
-            className="font-editorial text-[1.18rem] md:text-[1.42rem] text-[#E8EAF6]/48 leading-[1.76] mb-8 md:mb-10"
+            className="font-editorial text-[1.18rem] md:text-[1.42rem] text-[#E8EAF6]/48 leading-[1.76] mb-10 md:mb-12"
             style={{ letterSpacing: '-0.006em', fontStyle: 'italic' }}
           >
             "There is a particular quality to the moment when a visual language
@@ -48,7 +48,7 @@ export function StudioNotes() {
             whileInView={{ opacity: 1 }}
             viewport={VIEWPORT.normal}
             transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.loose }}
-            className="flex items-center gap-4 mb-10 md:mb-14"
+            className="flex items-center gap-4 mb-12 md:mb-16"
           >
             <div
               className="h-px"

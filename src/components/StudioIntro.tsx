@@ -45,7 +45,7 @@ export function StudioIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.normal}
             transition={{ duration: DURATION.slow, ease: EASE, delay: 0.36 }}
-            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.88] max-w-[58ch] mt-6 md:mt-8"
+            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.88] max-w-[58ch] mt-8 md:mt-10"
           >
             This is a studio built on authorship and atmosphere — a place where ideas take shape in ink and unfold into luminous digital experiences.
           </motion.p>

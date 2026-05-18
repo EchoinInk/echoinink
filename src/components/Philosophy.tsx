@@ -42,7 +42,7 @@ export function Philosophy() {
           />
 
           {/* Principles triptych */}
-          <div className="mb-16 md:mb-24 mt-16 md:mt-24">
+          <div className="mb-20 md:mb-28 mt-20 md:mt-28">
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
