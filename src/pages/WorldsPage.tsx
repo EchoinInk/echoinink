@@ -83,7 +83,7 @@ export function WorldsPage() {
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, ease: EASE, delay: 0.2 }}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.2 }}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-10 md:mb-14"
           >
             Creative Universe Building
@@ -92,7 +92,7 @@ export function WorldsPage() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: EASE, delay: 0.35 }}
+            transition={{ duration: DURATION.slower, ease: EASE, delay: 0.35 }}
             className="font-editorial text-[2.4rem] md:text-[3.6rem] lg:text-[4.8rem] text-[#E8EAF6]/90 leading-[1.08] mb-8 md:mb-10"
             style={{ letterSpacing: '-0.018em', maxWidth: '25rem' }}
           >
@@ -102,7 +102,7 @@ export function WorldsPage() {
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: EASE, delay: 0.58 }}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.58 }}
             className="font-structural text-[13px] md:text-[15px] text-white/38 leading-[1.95] max-w-[50ch]"
           >
             Rare, selective collaborations for brands and creators ready to build
@@ -118,7 +118,7 @@ export function WorldsPage() {
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              viewport={VIEWPORT.normal}
               transition={{ duration: 1.0, ease: EASE }}
               className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
             >
@@ -128,7 +128,7 @@ export function WorldsPage() {
             <motion.p
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
+              viewport={VIEWPORT.loose}
               transition={{ duration: 1.3, ease: EASE, delay: 0.1 }}
               className="font-editorial text-[1.65rem] md:text-[2.15rem] text-[#E8EAF6]/80 leading-[1.3] mb-12 md:mb-16"
               style={{ letterSpacing: '-0.012em' }}
@@ -153,8 +153,8 @@ export function WorldsPage() {
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-30px' }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.3 }}
+              viewport={VIEWPORT.tight}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.3 }}
               className="font-structural text-[13px] md:text-[14px] text-white/28 leading-[1.95] max-w-[55ch]"
             >
               Each collaboration begins with listening — with no predetermined
@@ -186,7 +186,7 @@ export function WorldsPage() {
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              viewport={VIEWPORT.normal}
               transition={{ duration: 1.0, ease: EASE }}
               className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
             >
@@ -206,8 +206,8 @@ export function WorldsPage() {
                 key={item.title}
                 initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 1.1, ease: EASE, delay: 0.07 * i }}
+                viewport={VIEWPORT.tight}
+                transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * i }}
               >
                 <div className="flex gap-6 md:gap-10 items-start py-9 md:py-12">
                   <span className="font-structural text-[9px] tracking-[0.28em] text-white/20 mt-1.5 shrink-0 w-5">
@@ -247,7 +247,7 @@ export function WorldsPage() {
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
+              viewport={VIEWPORT.normal}
               transition={{ duration: 1.0, ease: EASE }}
               className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
             >
@@ -257,7 +257,7 @@ export function WorldsPage() {
             <motion.p
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
+              viewport={VIEWPORT.loose}
               transition={{ duration: 1.3, ease: EASE, delay: 0.1 }}
               className="font-editorial text-[1.65rem] md:text-[2.1rem] text-[#E8EAF6]/78 leading-[1.32] mb-12 md:mb-16"
               style={{ letterSpacing: '-0.012em' }}
@@ -282,8 +282,8 @@ export function WorldsPage() {
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-30px' }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.32 }}
+              viewport={VIEWPORT.tight}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.32 }}
               className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[52ch]"
             >
               If you're looking for a website, there are excellent studios for that.
@@ -307,8 +307,8 @@ export function WorldsPage() {
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: EASE }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE }}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12"
           >
             Creative Universe Building
@@ -317,8 +317,8 @@ export function WorldsPage() {
           <motion.h2
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.4, ease: EASE, delay: 0.1 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.slower, ease: EASE, delay: 0.1 }}
             className="font-editorial text-[1.9rem] md:text-[2.6rem] text-[#E8EAF6]/80 leading-[1.22] mb-8 mx-auto"
             style={{ letterSpacing: '-0.01em', maxWidth: '28rem' }}
           >
@@ -328,8 +328,8 @@ export function WorldsPage() {
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.1, ease: EASE, delay: 0.24 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.normal }}
             className="font-structural text-[13px] md:text-[14px] text-white/28 leading-[1.95] mx-auto mb-12"
             style={{ maxWidth: '40ch' }}
           >
@@ -340,8 +340,8 @@ export function WorldsPage() {
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: EASE, delay: 0.36 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.cinematic }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <button className="ei-gradient-border-btn relative inline-flex items-center justify-center px-10 py-4 font-structural text-[11px] tracking-[0.22em] uppercase text-white/85 transition-all duration-500 hover:text-white hover:scale-[1.02]">
