@@ -8,7 +8,7 @@ import wideAvif from '@/assets/ei-hero-bg-dark-21x9.avif';
 export function HeroBackground() {
   return (
     <>
-      <div className="absolute inset-0 overflow-hidden">
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
         <picture>
           {/* Mobile (portrait) sources */}
           <source media="(max-aspect-ratio: 3/4)" srcSet={mobileAvif} type="image/avif" />
@@ -22,7 +22,6 @@ export function HeroBackground() {
           <img
             src={widePng}
             alt=""
-            aria-hidden="true"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
         </picture>
