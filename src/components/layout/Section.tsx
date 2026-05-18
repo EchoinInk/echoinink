@@ -9,7 +9,11 @@ interface SectionProps {
 
 export function Section({ children, id, className }: SectionProps) {
   return (
-    <section id={id} className={cn('ei-section py-16 md:py-24', className)}>
+    <section
+      id={id}
+      className={cn('ei-section', className)}
+      style={{ paddingTop: 'var(--ei-space-64)', paddingBottom: 'var(--ei-space-64)' }}
+    >
       {children}
     </section>
   );

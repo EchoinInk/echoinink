@@ -11,7 +11,10 @@ export function SectionHeading({ eyebrow, title, description, className }: Secti
   return (
     <div className={cn(className)}>
       {eyebrow && (
-        <span className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16">
+        <span
+          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20"
+          style={{ marginBottom: 'var(--ei-space-48)' }}
+        >
           {eyebrow}
         </span>
       )}
@@ -22,7 +25,10 @@ export function SectionHeading({ eyebrow, title, description, className }: Secti
         {title}
       </h2>
       {description && (
-        <p className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[58ch] mt-8 md:mt-10">
+        <p
+          className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[58ch]"
+          style={{ marginTop: 'var(--ei-space-32)' }}
+        >
           {description}
         </p>
       )}
