@@ -46,7 +46,7 @@ export function Philosophy() {
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={VIEWPORT}
+              viewport={VIEWPORT.normal}
               transition={{ duration: DURATION.normal, ease: EASE, delay: 0.14 }}
               className="block font-structural text-[10px] tracking-[0.28em] uppercase text-white/20 mb-8"
             >
@@ -59,8 +59,8 @@ export function Philosophy() {
                   key={line}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={VIEWPORT}
-                  transition={{ duration: DURATION.normal, ease: EASE, delay: 0.22 + i * STAGGER }}
+                  viewport={VIEWPORT.normal}
+                  transition={{ duration: DURATION.normal, ease: EASE, delay: 0.22 + i * STAGGER.tight }}
                   className="font-editorial text-[1.25rem] md:text-[1.55rem] text-[#E8EAF6]/70 leading-[1.85]"
                   style={{ letterSpacing: '-0.006em' }}
                 >
@@ -74,7 +74,7 @@ export function Philosophy() {
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={VIEWPORT}
+            viewport={VIEWPORT.normal}
             transition={{ duration: DURATION.slow, ease: EASE, delay: 0.18 }}
             className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[55ch]"
           >
@@ -87,8 +87,8 @@ export function Philosophy() {
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true, margin: '-20px' }}
-            transition={{ duration: 1.5, ease: EASE, delay: 0.22 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.slower, ease: EASE, delay: STAGGER.normal }}
             className="font-structural text-[12px] md:text-[13px] text-white/25 leading-[1.9] max-w-[44ch] mt-14 md:mt-20"
           >
             I create worlds for people who feel too much and think too deeply.
