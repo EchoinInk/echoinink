@@ -119,7 +119,7 @@ export function WorldsPage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={VIEWPORT.normal}
-              transition={{ duration: 1.0, ease: EASE }}
+              transition={{ duration: DURATION.normal, ease: EASE }}
               className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
             >
               What it is
@@ -129,7 +129,7 @@ export function WorldsPage() {
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={VIEWPORT.loose}
-              transition={{ duration: 1.3, ease: EASE, delay: 0.1 }}
+              transition={{ duration: DURATION.cinematic, ease: EASE, delay: 0.1 }}
               className="font-editorial text-[1.65rem] md:text-[2.15rem] text-[#E8EAF6]/80 leading-[1.3] mb-12 md:mb-16"
               style={{ letterSpacing: '-0.012em' }}
             >
@@ -140,8 +140,8 @@ export function WorldsPage() {
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.2 }}
+              viewport={VIEWPORT.tight}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.2 }}
               className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[60ch] mb-6"
             >
               Creative Universe Building is the deepest form of collaboration
@@ -154,7 +154,7 @@ export function WorldsPage() {
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={VIEWPORT.tight}
-              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.3 }}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.normal }}
               className="font-structural text-[13px] md:text-[14px] text-white/28 leading-[1.95] max-w-[55ch]"
             >
               Each collaboration begins with listening — with no predetermined
@@ -187,7 +187,7 @@ export function WorldsPage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={VIEWPORT.normal}
-              transition={{ duration: 1.0, ease: EASE }}
+              transition={{ duration: DURATION.normal, ease: EASE }}
               className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
             >
               The scope
@@ -248,7 +248,7 @@ export function WorldsPage() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={VIEWPORT.normal}
-              transition={{ duration: 1.0, ease: EASE }}
+              transition={{ duration: DURATION.normal, ease: EASE }}
               className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
             >
               Who it's for
@@ -258,7 +258,7 @@ export function WorldsPage() {
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={VIEWPORT.loose}
-              transition={{ duration: 1.3, ease: EASE, delay: 0.1 }}
+              transition={{ duration: DURATION.cinematic, ease: EASE, delay: 0.1 }}
               className="font-editorial text-[1.65rem] md:text-[2.1rem] text-[#E8EAF6]/78 leading-[1.32] mb-12 md:mb-16"
               style={{ letterSpacing: '-0.012em' }}
             >
@@ -270,8 +270,8 @@ export function WorldsPage() {
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.2 }}
+              viewport={VIEWPORT.tight}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.2 }}
               className="font-structural text-[14px] md:text-[15px] text-white/38 leading-[1.95] max-w-[58ch] mb-6"
             >
               These collaborations are rare, deeply considered, and undertaken
@@ -283,7 +283,7 @@ export function WorldsPage() {
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={VIEWPORT.tight}
-              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.32 }}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.cinematic }}
               className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[52ch]"
             >
               If you're looking for a website, there are excellent studios for that.

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
-
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { Link } from 'react-router-dom';
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 const works = [
   {
@@ -120,8 +120,8 @@ function WorkPanel({
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-50px' }}
-      transition={{ duration: 1.2, ease: EASE, delay }}
+      viewport={VIEWPORT.normal}
+      transition={{ duration: DURATION.slow, ease: EASE, delay }}
       className={`relative overflow-hidden group cursor-pointer ${aspectClass}`}
     >
       {/* Atmospheric gradient background */}
@@ -189,8 +189,8 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: EASE }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE }}
             className="font-structural text-[10px] tracking-[0.38em] uppercase text-white/20"
           >
             Selected Works
@@ -198,7 +198,7 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
+            viewport={VIEWPORT.normal}
             transition={{ duration: 1.0, ease: EASE, delay: 0.1 }}
             className="font-structural text-[10px] tracking-[0.25em] text-white/15"
           >
@@ -241,7 +241,7 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={VIEWPORT.normal}
             transition={{ duration: 1.0, ease: EASE, delay: 0.1 }}
             className="flex justify-center mt-14 md:mt-20"
           >
