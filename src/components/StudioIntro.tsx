@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
-import { ContentContainer } from '@/components/layout/ContentContainer';
+import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/layout/SectionHeading';
 import { EASE, DURATION, VIEWPORT } from '@/lib/motion';
 
@@ -32,7 +32,7 @@ export function StudioIntro() {
         }}
       />
 
-      <ContentContainer>
+      <Container>
         <div className="max-w-4xl">
           <SectionHeading
             eyebrow="Studio"
@@ -50,7 +50,7 @@ export function StudioIntro() {
             This is a studio built on authorship and atmosphere — a place where ideas take shape in ink and unfold into luminous digital experiences.
           </motion.p>
         </div>
-      </ContentContainer>
+      </Container>
     </Section>
   );
 }
