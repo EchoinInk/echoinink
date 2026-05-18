@@ -6,11 +6,25 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+autocommit.log
 
+# Dependencies
 node_modules
+
+# Build outputs
 dist
 dist-ssr
+build
+
+# Environment
 *.local
+.env.local
+
+# Testing
+coverage
+
+# Vite
+.vite
 
 # Editor directories and files
 .vscode/*
