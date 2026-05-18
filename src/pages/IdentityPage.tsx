@@ -146,8 +146,8 @@ export function IdentityPage() {
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.2 }}
+              viewport={VIEWPORT.tight}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
               className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[60ch] mb-6"
             >
               An Atmospheric Identity Kit is an authored creative direction document —
@@ -158,8 +158,8 @@ export function IdentityPage() {
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-30px' }}
-              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.3 }}
+              viewport={VIEWPORT.tight}
+              transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.loose }}
               className="font-structural text-[13px] md:text-[14px] text-white/28 leading-[1.95] max-w-[55ch]"
             >
               It is for those who know their work has an emotional quality that
@@ -252,8 +252,8 @@ export function IdentityPage() {
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.0, ease: EASE }}
+              viewport={VIEWPORT.normal}
+              transition={{ duration: DURATION.normal, ease: EASE }}
               className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
             >
               The process
@@ -309,8 +309,8 @@ export function IdentityPage() {
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: EASE }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE }}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12"
           >
             Atmospheric Identity Kits

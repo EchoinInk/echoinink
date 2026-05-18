@@ -1,8 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 const navigations = [
   { label: 'Creative identity and positioning' },
@@ -18,7 +17,7 @@ export function SessionsPage() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.9, ease: EASE }}
+      transition={{ duration: DURATION.cinematic, ease: EASE }}
       className="relative bg-[#0F1220] min-h-screen"
     >
       <Helmet>
@@ -73,7 +72,7 @@ export function SessionsPage() {
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1.2, ease: EASE, delay: 0.2 }}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.2 }}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-10 md:mb-14"
           >
             Echo Sessions
@@ -82,7 +81,7 @@ export function SessionsPage() {
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.5, ease: EASE, delay: 0.35 }}
+            transition={{ duration: DURATION.slower, ease: EASE, delay: 0.35 }}
             className="font-editorial text-[2.4rem] md:text-[3.6rem] lg:text-[4.8rem] text-[#E8EAF6]/90 leading-[1.08] mb-8 md:mb-10"
             style={{ letterSpacing: '-0.018em', maxWidth: '24rem' }}
           >
@@ -92,7 +91,7 @@ export function SessionsPage() {
           <motion.p
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: EASE, delay: 0.58 }}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.58 }}
             className="font-structural text-[13px] md:text-[15px] text-white/38 leading-[1.95] max-w-[50ch]"
           >
             60-minute premium sessions for clarity, narrative cohesion, and
@@ -118,8 +117,8 @@ export function SessionsPage() {
             <motion.p
               initial={{ opacity: 0, y: 22 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-60px' }}
-              transition={{ duration: 1.3, ease: EASE, delay: 0.1 }}
+              viewport={VIEWPORT.loose}
+              transition={{ duration: DURATION.cinematic, ease: EASE, delay: 0.1 }}
               className="font-editorial text-[1.65rem] md:text-[2.15rem] text-[#E8EAF6]/80 leading-[1.3] mb-12 md:mb-16"
               style={{ letterSpacing: '-0.012em' }}
             >
@@ -131,8 +130,8 @@ export function SessionsPage() {
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.2 }}
+              viewport={VIEWPORT.tight}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.2 }}
               className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[60ch] mb-6"
             >
               Echo Sessions are designed for founders, artists, and makers who
@@ -144,8 +143,8 @@ export function SessionsPage() {
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-30px' }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.3 }}
+              viewport={VIEWPORT.tight}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.3 }}
               className="font-structural text-[13px] md:text-[14px] text-white/28 leading-[1.95] max-w-[55ch]"
             >
               These sessions are intimate, focused, and held with full creative
@@ -198,7 +197,7 @@ export function SessionsPage() {
                 initial={{ opacity: 0, y: 12 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-30px' }}
-                transition={{ duration: 1.0, ease: EASE, delay: 0.05 * i }}
+                transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.tight * i }}
               >
                 <div className="flex gap-6 md:gap-10 items-center py-6 md:py-7">
                   <span className="font-structural text-[9px] tracking-[0.28em] text-white/18 shrink-0 w-5">
@@ -243,8 +242,8 @@ export function SessionsPage() {
             <motion.p
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-50px' }}
-              transition={{ duration: 1.2, ease: EASE, delay: 0.1 }}
+              viewport={VIEWPORT.normal}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.1 }}
               className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[58ch] mb-6"
             >
               Before each session, you complete a brief creative intake — sharing
@@ -254,8 +253,8 @@ export function SessionsPage() {
             <motion.p
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 1.1, ease: EASE, delay: 0.22 }}
+              viewport={VIEWPORT.tight}
+              transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.normal }}
               className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[54ch] mb-6"
             >
               The session itself moves between questions, observations, and
@@ -266,8 +265,8 @@ export function SessionsPage() {
             <motion.p
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-30px' }}
-              transition={{ duration: 1.0, ease: EASE, delay: 0.34 }}
+              viewport={VIEWPORT.tight}
+              transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.loose }}
               className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[50ch]"
             >
               Afterwards, you receive a session document: a distillation of what
@@ -291,8 +290,8 @@ export function SessionsPage() {
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: EASE }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE }}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12"
           >
             Echo Sessions
@@ -301,8 +300,8 @@ export function SessionsPage() {
           <motion.h2
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.4, ease: EASE, delay: 0.1 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.slower, ease: EASE, delay: 0.1 }}
             className="font-editorial text-[1.9rem] md:text-[2.6rem] text-[#E8EAF6]/80 leading-[1.22] mb-8 mx-auto"
             style={{ letterSpacing: '-0.01em', maxWidth: '30rem' }}
           >
@@ -312,8 +311,8 @@ export function SessionsPage() {
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.1, ease: EASE, delay: 0.24 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.normal }}
             className="font-structural text-[13px] md:text-[14px] text-white/28 leading-[1.95] mx-auto mb-12"
             style={{ maxWidth: '38ch' }}
           >
@@ -324,8 +323,8 @@ export function SessionsPage() {
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.0, ease: EASE, delay: 0.36 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.cinematic }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <button className="ei-gradient-border-btn relative inline-flex items-center justify-center px-10 py-4 font-structural text-[11px] tracking-[0.22em] uppercase text-white/85 transition-all duration-500 hover:text-white hover:scale-[1.02]">

@@ -1,8 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 const scope = [
   {
@@ -28,7 +27,7 @@ export function WorldsPage() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.9, ease: EASE }}
+      transition={{ duration: DURATION.cinematic, ease: EASE }}
       className="relative bg-[#0F1220] min-h-screen"
     >
       <Helmet>
