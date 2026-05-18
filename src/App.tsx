@@ -5,6 +5,7 @@ import { IdentityPage } from '@/pages/IdentityPage';
 import { SessionsPage } from '@/pages/SessionsPage';
 import { WorldsPage } from '@/pages/WorldsPage';
 import { WorksPage } from '@/pages/WorksPage';
+import { LumoPage } from '@/pages/LumoPage';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/sessions" element={<SessionsPage />} />
           <Route path="/worlds" element={<WorldsPage />} />
           <Route path="/works" element={<WorksPage />} />
+          <Route path="/work/lumo" element={<LumoPage />} />
         </Routes>
       </Layout>
     </BrowserRouter>

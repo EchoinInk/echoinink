@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlowField, GrainOverlay } from './AtmosphericSystem';
 
@@ -16,10 +17,6 @@ const line = {
 };
 
 export function LumoCaseStudyTeaser() {
-  const handleEnter = () => {
-    document.getElementById('lumo-case-study')?.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <section
       className="relative w-full overflow-hidden"
@@ -85,15 +82,15 @@ export function LumoCaseStudyTeaser() {
           </motion.p>
 
           <motion.div variants={line}>
-            <button
-              onClick={handleEnter}
+            <Link
+              to="/work/lumo"
               className="group inline-flex items-center gap-3 font-structural text-[11px] tracking-[0.28em] uppercase text-white/40 transition-colors duration-500 ease-out hover:text-white/70"
             >
               <span className="inline-block transition-transform duration-500 ease-out group-hover:translate-x-[3px]">
                 →
               </span>
               <span>Enter the Case Study</span>
-            </button>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
