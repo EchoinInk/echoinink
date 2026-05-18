@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Hero } from '@/components/hero/Hero';
+import { FeaturedWorkPreview } from '@/components/FeaturedWorkPreview';
 import { StudioIntro } from '@/components/StudioIntro';
 import { SelectedWorks } from '@/components/SelectedWorks';
 import { Philosophy } from '@/components/Philosophy';
@@ -16,6 +17,7 @@ export function Home() {
         <meta name="description" content="Echo in Ink is a creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media." />
       </Helmet>
       <Hero />
+      <FeaturedWorkPreview />
       <StudioIntro />
       <SelectedWorks />
       <Philosophy />

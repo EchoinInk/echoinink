@@ -26,7 +26,7 @@ export function SectionHeading({ eyebrow, title, description, className }: Secti
       </h2>
       {description && (
         <p
-          className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[58ch]"
+          className="font-structural text-[14px] md:text-[15px] text-white/55 leading-[1.95] max-w-[58ch]"
           style={{ marginTop: 'var(--ei-space-32)' }}
         >
           {description}

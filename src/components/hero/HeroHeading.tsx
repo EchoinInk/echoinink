@@ -29,12 +29,12 @@ export function HeroHeading() {
 
       <StarDivider />
 
-      {/* Clarity line — positioning statement */}
+      {/* Clarity line — concise positioning statement */}
       <p
-        className="font-structural text-[14px] md:text-[15px] text-white/55 leading-[1.9] mb-7 md:mb-9 text-center"
-        style={{ maxWidth: '52ch' }}
+        className="font-structural text-[14px] md:text-[15px] text-white/65 leading-[1.8] mb-6 md:mb-8 text-center"
+        style={{ maxWidth: '48ch' }}
       >
-        <span className="text-white/70">Echo in Ink</span> is a creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media.
+        <span className="text-white/80">Echo in Ink</span> is a creative studio crafting atmospheric design, identity, and immersive digital experiences.
       </p>
     </>
   );

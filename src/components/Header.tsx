@@ -31,15 +31,18 @@ export function Header() {
                   <Link
                     to={item.href}
                     aria-current={pathname === item.href ? 'page' : undefined}
-                    className="font-structural text-[11px] tracking-[0.2em] uppercase transition-colors duration-300"
+                    className="font-structural text-[11px] tracking-[0.2em] uppercase transition-all duration-300 relative focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-[#0F1220] rounded-sm"
                     style={{
                       color:
                         pathname === item.href
-                          ? 'rgba(255,255,255,0.90)'
-                          : 'rgba(255,255,255,0.40)',
+                          ? 'rgba(255,255,255,0.95)'
+                          : 'rgba(255,255,255,0.45)',
                     }}
                   >
                     {item.label}
+                    {pathname === item.href && (
+                      <span className="absolute -bottom-1 left-0 right-0 h-px bg-white/60" />
+                    )}
                   </Link>
                 </li>
               ))}
