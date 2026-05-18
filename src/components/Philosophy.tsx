@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
-import { ContentContainer } from '@/components/layout/ContentContainer';
+import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/layout/SectionHeading';
 import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
@@ -23,7 +23,7 @@ export function Philosophy() {
       />
 
       {/* Thin separator above */}
-      <ContentContainer className="mb-14 md:mb-36">
+      <Container className="mb-14 md:mb-36">
         <div
           className="w-full h-px"
           style={{
@@ -31,9 +31,9 @@ export function Philosophy() {
               'linear-gradient(90deg, transparent, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.06) 75%, transparent)',
           }}
         />
-      </ContentContainer>
+      </Container>
 
-      <ContentContainer>
+      <Container>
         <div className="max-w-3xl">
           <SectionHeading
             eyebrow="Approach"
