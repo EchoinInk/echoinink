@@ -3,7 +3,6 @@ import { Hero } from '@/components/hero/Hero';
 import { StudioIntro } from '@/components/StudioIntro';
 import { Philosophy } from '@/components/Philosophy';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
-import { WorkWithStudio } from '@/components/WorkWithStudio';
 import { ClosingSection } from '@/components/ClosingSection';
 
 export function Home() {
@@ -17,7 +16,6 @@ export function Home() {
       <StudioIntro />
       <Philosophy />
       <LumoCaseStudyTeaser />
-      <WorkWithStudio />
       <ClosingSection />
     </main>
   );
