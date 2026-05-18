@@ -34,7 +34,7 @@ export function AtmosphericCursor() {
         height: 'clamp(380px, 36vw, 620px)',
         background:
           'radial-gradient(circle, rgba(168,85,247,0.062) 0%, rgba(30,200,255,0.032) 42%, transparent 70%)',
-        filter: 'blur(55px)',
+        filter: 'blur(40px)',
         mixBlendMode: 'screen',
       }}
     />

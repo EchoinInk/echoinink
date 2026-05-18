@@ -183,16 +183,9 @@ function BreathingIdentityAtmosphere() {
       <GlowField
         style={{ top: '-5%', right: '-14%', width: 'clamp(420px, 58vw, 800px)', height: 'clamp(420px, 58vw, 800px)', transformOrigin: '60% 44%' }}
         gradient="radial-gradient(ellipse 54% 52% at 60% 44%, rgba(120,90,240,0.13) 0%, rgba(99,80,220,0.07) 35%, rgba(80,65,200,0.03) 60%, transparent 75%)"
-        blur={70}
+        blur={55}
         anim={{ opacity: [0.72, 1, 0.72], scale: [1, 1.022, 1] }}
         duration={26}
-      />
-      <GlowField
-        style={{ top: '-8%', right: '-18%', width: 'clamp(500px, 68vw, 940px)', height: 'clamp(500px, 68vw, 940px)', transformOrigin: '60% 44%' }}
-        gradient="radial-gradient(ellipse 52% 50% at 60% 44%, transparent 52%, rgba(148,110,255,0.055) 66%, rgba(130,95,245,0.025) 76%, transparent 86%)"
-        blur={24}
-        anim={{ opacity: [0.55, 0.90, 0.55] }}
-        duration={30} delay={4}
       />
       <EchoRing
         style={{ top: '-12%', right: '-22%', width: 'clamp(580px, 78vw, 1060px)', height: 'clamp(580px, 78vw, 1060px)', transformOrigin: '60% 44%' }}
@@ -210,7 +203,6 @@ function BreathingIdentityAtmosphere() {
           { d: 'M 640 30 Q 679 16 718 28',   stroke: 'rgba(155,125,255,0.040)', sw: 0.5, cap: 'round' },
         ]}
       />
-      <GrainOverlay range={[0.014, 0.036]} duration={22} delay={3} size={160} />
     </div>
   );
 }
@@ -232,13 +224,6 @@ function HumaneFrameworkAtmosphere() {
         blur={44}
         anim={{ opacity: [0.45, 0.88, 0.45] }}
         duration={31} delay={6}
-      />
-      <GlowField
-        style={{ bottom: '12%', left: '2%', width: 'clamp(180px, 24vw, 340px)', height: 'clamp(180px, 24vw, 340px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgba(90,76,162,0.065) 0%, rgba(78,65,145,0.024) 55%, transparent 72%)"
-        blur={42}
-        anim={{ opacity: [0.50, 0.85, 0.50] }}
-        duration={36} delay={11}
       />
       <GlowField
         style={{ bottom: '8%', right: '4%', width: 'clamp(180px, 24vw, 340px)', height: 'clamp(180px, 24vw, 340px)' }}
@@ -326,14 +311,14 @@ function HeldAtmosphere() {
       <GlowField
         style={{ top: '-2%', left: '-8%', width: 'clamp(500px, 65vw, 880px)', height: 'clamp(500px, 65vw, 880px)' }}
         gradient="radial-gradient(ellipse 52% 50% at 44% 46%, rgba(112,86,198,0.068) 0%, rgba(95,72,180,0.028) 50%, transparent 72%)"
-        blur={100}
+        blur={75}
         anim={{ opacity: [0.65, 1, 0.65] }}
         duration={38}
       />
       <GlowField
         style={{ top: '20%', left: '5%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)' }}
         gradient="radial-gradient(ellipse 55% 52% at 48% 50%, rgba(100,78,185,0.048) 0%, rgba(85,65,165,0.018) 52%, transparent 72%)"
-        blur={80}
+        blur={62}
         anim={{ opacity: [0.55, 0.85, 0.55] }}
         duration={40} delay={12}
       />
@@ -352,7 +337,6 @@ function HeldAtmosphere() {
 function ExhaleAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(168deg, rgba(90,65,180,0.060) 0%, rgba(130,72,110,0.036) 65%, rgba(155,82,108,0.026) 100%)' }} />
       <div style={{ position: 'absolute', top: '50%', left: '50%', width: 'clamp(480px, 65vw, 860px)', height: 'clamp(480px, 65vw, 860px)', transform: 'translate(-50%, -55%)' }}>
         <GlowField
           style={{ inset: 0 }}
