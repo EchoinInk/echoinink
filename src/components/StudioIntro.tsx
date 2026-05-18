@@ -6,7 +6,7 @@ import { EASE, DURATION, VIEWPORT } from '@/lib/motion';
 
 export function StudioIntro() {
   return (
-    <Section className="relative py-24 md:py-44 lg:py-52 overflow-hidden">
+    <Section className="relative py-32 md:py-56 lg:py-64 overflow-hidden">
       {/* Atmospheric depth accent — soft violet cloud, right side */}
       <div
         className="absolute pointer-events-none"
@@ -33,11 +33,12 @@ export function StudioIntro() {
       />
 
       <Container>
-        <div className="max-w-4xl">
+        <div className="max-w-2xl mx-auto text-center">
           <SectionHeading
             eyebrow="Studio"
             title="Echo in Ink is a cinematic creative studio shaped by curiosity, identity, and the emotional gravity of storytelling."
             description="I work at the intersection of art, design, and digital expression — crafting visuals, narratives, and immersive worlds that feel intentional, atmospheric, and full of light."
+            centered
           />
 
           <motion.p
@@ -45,7 +46,7 @@ export function StudioIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.normal}
             transition={{ duration: DURATION.slow, ease: EASE, delay: 0.36 }}
-            className="font-structural text-[13px] md:text-[14px] text-white/45 leading-[1.88] max-w-[58ch] mt-8 md:mt-10"
+            className="font-structural text-[13px] md:text-[14px] text-white/45 leading-[1.88] max-w-[42ch] mx-auto mt-12 md:mt-16"
           >
             This is a studio built on authorship and atmosphere — a place where ideas take shape in ink and unfold into luminous digital experiences.
           </motion.p>
