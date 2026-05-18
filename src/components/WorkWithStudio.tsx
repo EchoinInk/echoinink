@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 const offerings = [
   {
@@ -77,8 +76,8 @@ export function WorkWithStudio() {
           <motion.span
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 1.1, ease: EASE }}
+            viewport={VIEWPORT.loose}
+            transition={{ duration: DURATION.slow, ease: EASE }}
             className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
           >
             Work With the Studio
@@ -88,8 +87,8 @@ export function WorkWithStudio() {
           <motion.h2
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 1.2, ease: EASE, delay: 0.1 }}
+            viewport={VIEWPORT.loose}
+            transition={{ duration: DURATION.normal, ease: 'easeInOut', delay: 0.1 }}
             className="font-editorial text-[1.9rem] md:text-[2.5rem] lg:text-[3rem] text-[#E8EAF6]/80 leading-[1.22] mb-8 md:mb-10"
             style={{ letterSpacing: '-0.012em' }}
           >
@@ -102,8 +101,8 @@ export function WorkWithStudio() {
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 1.1, ease: EASE, delay: 0.18 }}
+            viewport={VIEWPORT.loose}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.normal }}
             className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[55ch] mb-16 md:mb-20"
           >
             Echo in Ink offers authored creative direction for founders, artists,
@@ -126,8 +125,8 @@ export function WorkWithStudio() {
                 key={item.index}
                 initial={{ opacity: 0, y: 18 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-40px' }}
-                transition={{ duration: 1.1, ease: EASE, delay: 0.08 * i }}
+                viewport={VIEWPORT.tight}
+                transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * i }}
               >
                 <div className="flex gap-6 md:gap-10 items-start py-10 md:py-14">
                   <span className="font-structural text-[9px] tracking-[0.28em] text-white/20 mt-2 shrink-0 w-5">

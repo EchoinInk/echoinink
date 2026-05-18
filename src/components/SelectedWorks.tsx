@@ -199,7 +199,7 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={VIEWPORT.normal}
-            transition={{ duration: 1.0, ease: EASE, delay: 0.1 }}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
             className="font-structural text-[10px] tracking-[0.25em] text-white/15"
           >
             2024 — 2025
@@ -242,7 +242,7 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.normal}
-            transition={{ duration: 1.0, ease: EASE, delay: 0.1 }}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
             className="flex justify-center mt-14 md:mt-20"
           >
             <button className="ei-gradient-border-btn relative inline-flex items-center gap-3 px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/65 transition-all duration-500 hover:text-white hover:scale-[1.02]">

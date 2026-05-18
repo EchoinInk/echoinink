@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
 import { ContentContainer } from '@/components/layout/ContentContainer';
 import { SectionHeading } from '@/components/layout/SectionHeading';
-
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 const principles = [
   'Atmosphere over noise.',
@@ -47,8 +46,8 @@ export function Philosophy() {
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.9, ease: EASE, delay: 0.14 }}
+              viewport={VIEWPORT}
+              transition={{ duration: DURATION.normal, ease: EASE, delay: 0.14 }}
               className="block font-structural text-[10px] tracking-[0.28em] uppercase text-white/20 mb-8"
             >
               Guided by
@@ -60,8 +59,8 @@ export function Philosophy() {
                   key={line}
                   initial={{ opacity: 0, x: -10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 1.0, ease: EASE, delay: 0.22 + i * 0.1 }}
+                  viewport={VIEWPORT}
+                  transition={{ duration: DURATION.normal, ease: EASE, delay: 0.22 + i * STAGGER }}
                   className="font-editorial text-[1.25rem] md:text-[1.55rem] text-[#E8EAF6]/70 leading-[1.85]"
                   style={{ letterSpacing: '-0.006em' }}
                 >
@@ -75,8 +74,8 @@ export function Philosophy() {
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-40px' }}
-            transition={{ duration: 1.1, ease: EASE, delay: 0.18 }}
+            viewport={VIEWPORT}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.18 }}
             className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[55ch]"
           >
             I create slowly, cinematically, letting each idea breathe into form.

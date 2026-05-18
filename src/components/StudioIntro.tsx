@@ -2,8 +2,7 @@ import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
 import { ContentContainer } from '@/components/layout/ContentContainer';
 import { SectionHeading } from '@/components/layout/SectionHeading';
-
-const EASE = [0.22, 1, 0.36, 1] as const;
+import { EASE, DURATION, VIEWPORT } from '@/lib/motion';
 
 export function StudioIntro() {
   return (
@@ -44,8 +43,8 @@ export function StudioIntro() {
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 1.1, ease: EASE, delay: 0.36 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.36 }}
             className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.88] max-w-[58ch] mt-6 md:mt-8"
           >
             This is a studio built on authorship and atmosphere — a place where ideas take shape in ink and unfold into luminous digital experiences.
