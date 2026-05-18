@@ -10,18 +10,18 @@ export function HeroAtmosphere() {
         }}
       />
 
-      {/* Secondary Energy Zone 1: Upper-left nebula cloud pocket */}
+      {/* Left-side violet nebula — combined upper-left and lower-left energy zones */}
       <div
         aria-hidden="true"
         className="ei-nebula-violet absolute pointer-events-none z-[3]"
         style={{
           top: '5%',
           left: '2%',
-          width: 'clamp(180px, 28vw, 420px)',
-          height: 'clamp(140px, 20vw, 300px)',
+          width: 'clamp(220px, 32vw, 480px)',
+          height: 'clamp(400px, 56vh, 640px)',
         }}
       />
-      {/* Secondary Energy Zone 2: Right-side indigo nebula depth */}
+      {/* Right-side indigo nebula depth */}
       <div
         aria-hidden="true"
         className="ei-nebula-cyan absolute pointer-events-none z-[3]"
@@ -30,17 +30,6 @@ export function HeroAtmosphere() {
           right: '3%',
           width: 'clamp(160px, 22vw, 360px)',
           height: 'clamp(200px, 28vw, 440px)',
-        }}
-      />
-      {/* Secondary Energy Zone 3: Lower-left violet atmospheric pool */}
-      <div
-        aria-hidden="true"
-        className="ei-nebula-violet absolute pointer-events-none z-[3]"
-        style={{
-          bottom: '22%',
-          left: '5%',
-          width: 'clamp(200px, 30vw, 460px)',
-          height: 'clamp(110px, 16vw, 260px)',
         }}
       />
     </>

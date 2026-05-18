@@ -24,27 +24,3 @@
   filter: blur(74px);
   mix-blend-mode: screen;
 }
-
-.ei-haze-soft {
-  background: radial-gradient(
-    ellipse 82% 52% at 45% 55%,
-    rgba(140, 80, 220, 0.09) 0%,
-    rgba(30, 190, 255, 0.05) 58%,
-    transparent 100%
-  );
-  filter: blur(22px);
-  mix-blend-mode: screen;
-  opacity: 0.9;
-}
-
-.ei-glow-orbit {
-  background: radial-gradient(
-    ellipse 50% 62% at 46% 50%,
-    rgba(232, 121, 249, 0.24) 0%,
-    rgba(168, 85, 247, 0.14) 38%,
-    rgba(99, 102, 241, 0.06) 64%,
-    transparent 100%
-  );
-  filter: blur(34px);
-  mix-blend-mode: screen;
-}
