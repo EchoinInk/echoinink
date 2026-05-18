@@ -315,6 +315,13 @@ export function IdentityPage() {
           >
             Atmospheric Identity Kits
           </motion.span>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+          >
+            <Link
               to="/"
               className="font-structural text-[10px] tracking-[0.22em] uppercase text-white/25 hover:text-white/50 transition-colors duration-400"
             >
