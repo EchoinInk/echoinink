@@ -4,35 +4,20 @@ export function HeroLighting() {
   const prefersReduced = useReducedMotion();
   return (
     <>
-      {/* Layer 1: Wide atmospheric haze — fills the surrounding environment with magenta-blue diffusion */}
+      {/* Layer 1: Wide atmospheric haze — combined magenta-blue and cyan diffusion */}
       <div
         aria-hidden="true"
-        className="absolute top-1/2 left-1/2 pointer-events-none"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{
-          transform: 'translate(calc(-50% - 2.5vw), calc(-50% + 4vh))',
           width: 'clamp(580px, 88vw, 1300px)',
           height: 'clamp(260px, 44vw, 680px)',
-          background: 'radial-gradient(ellipse 62% 48% at 44% 65%, rgba(232,121,249,0.09) 0%, rgba(168,85,247,0.05) 40%, rgba(99,102,241,0.025) 65%, transparent 80%)',
-          filter: 'blur(90px)',
+          background: 'radial-gradient(ellipse 66% 46% at 48% 56%, rgba(232,121,249,0.09) 0%, rgba(168,85,247,0.06) 28%, rgba(30,200,255,0.08) 45%, rgba(99,102,241,0.04) 62%, transparent 80%)',
+          filter: 'blur(80px)',
           mixBlendMode: 'screen',
           zIndex: 1,
         }}
       />
-      {/* Layer 2: Lateral nebula-blue spread — illuminates surrounding fog and clouds */}
-      <div
-        aria-hidden="true"
-        className="absolute top-1/2 left-1/2 pointer-events-none"
-        style={{
-          transform: 'translate(calc(-50% + 2vw), calc(-50% - 1.2vh))',
-          width: 'clamp(380px, 62vw, 900px)',
-          height: 'clamp(200px, 36vw, 540px)',
-          background: 'radial-gradient(ellipse 72% 42% at 52% 50%, rgba(30,200,255,0.11) 0%, rgba(99,102,241,0.07) 48%, transparent 78%)',
-          filter: 'blur(68px)',
-          mixBlendMode: 'screen',
-          zIndex: 1,
-        }}
-      />
-      {/* Layer 3: Core volumetric bloom — primary radiance, slow echo pulse */}
+      {/* Layer 2: Core volumetric bloom — primary radiance, slow echo pulse */}
       <div
         aria-hidden="true"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
@@ -76,40 +61,24 @@ export function HeroLighting() {
         }}
       />
 
-      {/* Atmospheric mist wisp A — environmental fog partially veiling the lower monogram edge */}
+      {/* Atmospheric mist — environmental fog veiling monogram edges */}
       <div
         aria-hidden="true"
         className="absolute pointer-events-none"
         style={{
           top: '50%',
           left: '50%',
-          transform: 'translate(-38%, -44%)',
-          width: 'clamp(160px, 24vw, 360px)',
-          height: 'clamp(60px, 10vw, 150px)',
-          background: 'radial-gradient(ellipse 85% 55% at 25% 60%, rgba(120,80,200,0.09) 0%, rgba(30,180,255,0.05) 55%, transparent 100%)',
-          filter: 'blur(24px)',
-          mixBlendMode: 'screen',
-          zIndex: 3,
-        }}
-      />
-      {/* Atmospheric mist wisp B — upper trailing cloud passing across the monogram */}
-      <div
-        aria-hidden="true"
-        className="absolute pointer-events-none"
-        style={{
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-58%, -62%)',
-          width: 'clamp(120px, 18vw, 280px)',
-          height: 'clamp(45px, 7vw, 110px)',
-          background: 'radial-gradient(ellipse 80% 50% at 65% 50%, rgba(168,85,247,0.1) 0%, rgba(30,200,255,0.05) 60%, transparent 100%)',
-          filter: 'blur(20px)',
+          transform: 'translate(-48%, -52%)',
+          width: 'clamp(180px, 26vw, 380px)',
+          height: 'clamp(80px, 12vw, 180px)',
+          background: 'radial-gradient(ellipse 82% 52% at 40% 56%, rgba(120,80,200,0.09) 0%, rgba(168,85,247,0.06) 40%, rgba(30,180,255,0.04) 65%, transparent 100%)',
+          filter: 'blur(22px)',
           mixBlendMode: 'screen',
           zIndex: 3,
         }}
       />
 
-      {/* Reciprocal edge tinting — nebula haze coloring logo edges, transparent at center */}
+      {/* Edge tinting — nebula haze coloring logo edges with directional variation */}
       <div
         aria-hidden="true"
         className="absolute pointer-events-none"
@@ -119,39 +88,7 @@ export function HeroLighting() {
           transform: 'translate(-50%, -50%)',
           width: 'clamp(165px, 28vw, 420px)',
           height: 'clamp(175px, 30vw, 460px)',
-          background: 'radial-gradient(ellipse 90% 94% at 47% 52%, transparent 20%, rgba(110,50,200,0.20) 50%, rgba(40,110,240,0.12) 72%, transparent 100%)',
-          filter: 'blur(12px)',
-          mixBlendMode: 'multiply',
-          zIndex: 4,
-        }}
-      />
-      {/* Upper-left atmospheric depth — cool nebula feeding light into upper-left logo edge */}
-      <div
-        aria-hidden="true"
-        className="absolute pointer-events-none"
-        style={{
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-82%, -68%)',
-          width: 'clamp(80px, 12vw, 180px)',
-          height: 'clamp(100px, 16vw, 240px)',
-          background: 'radial-gradient(ellipse 80% 82% at 82% 60%, rgba(30,150,255,0.15) 0%, rgba(90,100,240,0.09) 55%, transparent 100%)',
-          filter: 'blur(14px)',
-          mixBlendMode: 'multiply',
-          zIndex: 4,
-        }}
-      />
-      {/* Lower-right atmospheric depth — warm violet contaminating lower-right logo edge */}
-      <div
-        aria-hidden="true"
-        className="absolute pointer-events-none"
-        style={{
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-22%, -32%)',
-          width: 'clamp(70px, 10vw, 160px)',
-          height: 'clamp(90px, 14vw, 210px)',
-          background: 'radial-gradient(ellipse 78% 80% at 20% 30%, rgba(180,70,230,0.13) 0%, rgba(99,60,220,0.07) 55%, transparent 100%)',
+          background: 'radial-gradient(ellipse 90% 94% at 47% 52%, transparent 20%, rgba(110,50,200,0.20) 50%, rgba(40,110,240,0.12) 72%, transparent 100%), radial-gradient(ellipse 50% 50% at 18% 32%, rgba(30,150,255,0.10) 0%, transparent 55%), radial-gradient(ellipse 50% 50% at 78% 68%, rgba(180,70,230,0.08) 0%, transparent 55%)',
           filter: 'blur(13px)',
           mixBlendMode: 'multiply',
           zIndex: 4,
@@ -167,7 +104,7 @@ export function HeroLighting() {
           transform: 'translate(-50%, -50%)',
           width: 'clamp(140px, 20vw, 320px)',
           height: 'clamp(150px, 22vw, 350px)',
-          background: 'radial-gradient(circle at 18% 32%, rgba(255,255,255,0.07) 0%, transparent 32%), radial-gradient(circle at 78% 22%, rgba(232,121,249,0.06) 0%, transparent 26%), radial-gradient(circle at 62% 75%, rgba(30,200,255,0.05) 0%, transparent 30%), radial-gradient(circle at 28% 80%, rgba(168,85,247,0.06) 0%, transparent 24%), radial-gradient(circle at 90% 55%, rgba(255,255,255,0.04) 0%, transparent 20%)',
+          background: 'radial-gradient(circle at 18% 32%, rgba(255,255,255,0.07) 0%, transparent 32%), radial-gradient(circle at 78% 22%, rgba(232,121,249,0.06) 0%, transparent 26%), radial-gradient(circle at 50% 75%, rgba(30,200,255,0.05) 0%, transparent 28%)',
           filter: 'blur(5px)',
           mixBlendMode: 'screen',
           zIndex: 4,
