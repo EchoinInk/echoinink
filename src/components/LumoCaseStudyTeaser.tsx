@@ -49,7 +49,7 @@ export function LumoCaseStudyTeaser() {
       />
       <GrainOverlay range={[0.012, 0.030]} duration={32} delay={4} size={200} />
 
-      <div className="ei-container py-24 md:py-44">
+      <div className="ei-container py-28 md:py-48">
         <motion.div
           initial="hidden"
           whileInView="visible"

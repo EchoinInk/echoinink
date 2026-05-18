@@ -12,7 +12,7 @@ const principles = [
 
 export function Philosophy() {
   return (
-    <Section className="relative py-24 md:py-52 overflow-hidden">
+    <Section className="relative py-28 md:py-48 overflow-hidden">
       {/* Faint indigo atmospheric center */}
       <div
         className="absolute inset-0 pointer-events-none"
