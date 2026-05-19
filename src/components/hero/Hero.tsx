@@ -16,8 +16,7 @@ export function Hero() {
       <HeroReflection />
 
       {/* Layer 2: Ei artwork - centered in viewport */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="relative">
+<div className="absolute inset-0 flex justify-center pointer-events-none pt-[6vh]">        <div className="relative">
           <HeroLighting />
           <HeroMonogram />
         </div>
