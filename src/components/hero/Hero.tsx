@@ -1,6 +1,7 @@
 import { Footer } from '../Footer';
 import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
+import { HeroDescription } from './HeroDescription';
 import { HeroHeading } from './HeroHeading';
 import { HeroLighting } from './HeroLighting';
 import { HeroReflection } from './HeroReflection';
