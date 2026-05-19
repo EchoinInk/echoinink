@@ -32,7 +32,7 @@ export function HeroLighting() {
         {prefersReduced ? (
           <div
             style={{
-width: 'clamp(140px, 18vw, 280px)',
+  width: 'clamp(140px, 18vw, 280px)',
 height: 'clamp(150px, 20vw, 320px)',
               background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.25) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
               filter: 'blur(32px)',
@@ -45,9 +45,9 @@ height: 'clamp(150px, 20vw, 320px)',
             initial={{ opacity: 0.75, scale: 0.97 }}
             style={{
               width: 'clamp(140px, 18vw, 280px)',
-height: 'clamp(150px, 20vw, 320px)',
-              background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.18) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
-filter: 'blur(24px)',
+              height: 'clamp(150px, 20vw, 320px)',
+              background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.18) 0%, rgba(168,85,247,0.10) 38%, rgba(99,102,241,0.05) 62%, transparent 100%)',
+              filter: 'blur(24px)',
               mixBlendMode: 'screen',
             }}
           />
@@ -58,8 +58,8 @@ filter: 'blur(24px)',
         aria-hidden="true"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{
-          width: 'clamp(80px, 9vw, 155px)',
-          height: 'clamp(85px, 10vw, 170px)',
+          width: 'clamp(58px, 6vw, 110px)',
+          height: 'clamp(62px, 7vw, 120px)',
           background: 'radial-gradient(ellipse at 44% 50%, rgba(255,255,255,0.07) 0%, rgba(232,121,249,0.16) 45%, transparent 100%)',
           filter: 'blur(14px)',
           mixBlendMode: 'screen',
