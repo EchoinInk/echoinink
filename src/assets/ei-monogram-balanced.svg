@@ -231,3 +231,162 @@
   <rect width="100%" height="100%" fill="url(#u)" pointer-events="none" style="mix-blend-mode:multiply"/>
   <text x="1765" y="2042" font-family="Arial,Helvetica,sans-serif" font-size="35.46" fill="rgba(0,0,0,0.12)" font-weight="700" text-anchor="end" letter-spacing=".5" pointer-events="none">vectosolve.com</text>
 </svg>
+
+
+import * as React from "react";
+
+const SVGComponent = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 1773 2048"
+    fill="none"
+    preserveAspectRatio="xMidYMid meet"
+    {...props}
+  >
+    <defs>
+      {/* MASTER BRAND GRADIENT */}
+      <linearGradient
+        id="brandGradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="100%"
+      >
+        <stop offset="0%" stopColor="#FF4FD8" />
+        <stop offset="45%" stopColor="#B46CFF" />
+        <stop offset="100%" stopColor="#FF1E8E" />
+      </linearGradient>
+
+      {/* DEEP DIMENSIONAL SHADOW */}
+      <linearGradient
+        id="shadowGradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="100%"
+      >
+        <stop offset="0%" stopColor="#140018" />
+        <stop offset="100%" stopColor="#2B0A3A" />
+      </linearGradient>
+
+      {/* INNER DEPTH */}
+      <linearGradient
+        id="innerGradient"
+        x1="25%"
+        y1="15%"
+        x2="75%"
+        y2="85%"
+      >
+        <stop offset="0%" stopColor="#FF70E6" />
+        <stop offset="50%" stopColor="#9F63FF" />
+        <stop offset="100%" stopColor="#FF2C9C" />
+      </linearGradient>
+
+      {/* GLOSS SWEEP */}
+      <linearGradient
+        id="glossGradient"
+        x1="0%"
+        y1="0%"
+        x2="100%"
+        y2="100%"
+      >
+        <stop offset="0%" stopColor="rgba(255,255,255,0.95)" />
+        <stop offset="22%" stopColor="rgba(255,255,255,0.35)" />
+        <stop offset="55%" stopColor="rgba(255,255,255,0.08)" />
+        <stop offset="100%" stopColor="rgba(255,255,255,0)" />
+      </linearGradient>
+
+      {/* SOFT ATMOSPHERIC GLOW */}
+      <filter
+        id="softGlow"
+        x="-50%"
+        y="-50%"
+        width="200%"
+        height="200%"
+      >
+        <feGaussianBlur stdDeviation="28" result="blur" />
+
+        <feColorMatrix
+          in="blur"
+          type="matrix"
+          values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 18 -8
+          "
+        />
+
+        <feMerge>
+          <feMergeNode />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+
+      {/* SUBTLE INNER SHADOW */}
+      <filter id="innerShadow">
+        <feOffset dx="0" dy="8" />
+        <feGaussianBlur stdDeviation="12" result="offset-blur" />
+
+        <feComposite
+          operator="out"
+          in="SourceGraphic"
+          in2="offset-blur"
+          result="inverse"
+        />
+
+        <feFlood floodColor="#000000" floodOpacity="0.28" result="color" />
+
+        <feComposite
+          operator="in"
+          in="color"
+          in2="inverse"
+          result="shadow"
+        />
+
+        <feComposite
+          operator="over"
+          in="shadow"
+          in2="SourceGraphic"
+        />
+      </filter>
+    </defs>
+
+    {/* ATMOSPHERIC GLOW BASE */}
+    <g opacity={0.55} filter="url(#softGlow)">
+      <path
+        fill="url(#brandGradient)"
+        d="M893.92 174.404..."
+      />
+    </g>
+
+    {/* MAIN BODY */}
+    <g filter="url(#innerShadow)">
+      <path
+        fill="url(#brandGradient)"
+        d="M893.92 174.404..."
+      />
+
+      <path
+        fill="url(#shadowGradient)"
+        opacity={0.42}
+        d="M893.92 174.404..."
+      />
+
+      <path
+        fill="url(#innerGradient)"
+        opacity={0.65}
+        d="M893.92 174.404..."
+      />
+    </g>
+
+    {/* SPECULAR GLOSS */}
+    <path
+      fill="url(#glossGradient)"
+      opacity={0.55}
+      d="M893.92 174.404..."
+    />
+  </svg>
+);
+
+export default SVGComponent;
