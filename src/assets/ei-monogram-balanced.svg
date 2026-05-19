@@ -371,10 +371,7 @@ const SVGComponent = (props) => (
 
     {/* ATMOSPHERIC GLOW BASE */}
     <g opacity={0.55} filter="url(#softGlow)">
-      <path
-        fill="url(#brandGradient)"
-        d="M893.92 174.404..."
-      />
+      
     </g>
 
     {/* MAIN BODY */}
