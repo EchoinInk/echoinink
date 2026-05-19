@@ -14,14 +14,24 @@ export function Hero() {
       <HeroReflection />
 
       {/* Layer 2: Ei artwork - centered in viewport */}
-<div className="absolute inset-0 flex justify-center pointer-events-none pt-[6vh]">        <div className="relative">
+      <div className="absolute inset-0 flex justify-center pointer-events-none pt-[6vh]">
+        <div className="relative">
           <HeroLighting />
         </div>
       </div>
 
-      {/* Layer 3: Content/text - anchored near lower portion */}
-<div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-center text-center px-6 pb-8 md:pb-12">        <HeroHeading />
-        <HeroCTA />
+      {/* Layer 3: Content - split into 2 independent groups */}
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        {/* Heading Group */}
+        <div className="absolute left-1/2 top-[56%] md:top-[58%] -translate-x-1/2 text-center px-6">
+          <HeroHeading />
+        </div>
+
+        {/* Lower Content Group */}
+        <div className="absolute left-1/2 bottom-[6vh] md:bottom-[8vh] -translate-x-1/2 text-center px-6">
+          <HeroDescription />
+          <HeroCTA />
+        </div>
       </div>
 
       <Footer />
