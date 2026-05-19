@@ -24,7 +24,7 @@ export function Hero() {
       </div>
 
       {/* Layer 3: Content/text - anchored near lower portion */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col items-center text-center px-6 pb-16 md:pb-24">
+      <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col items-center text-center px-6 pb-16 md:pb-24" style={{ marginTop: '14vh' }}>
         <HeroHeading />
         <HeroCTA />
       </div>
