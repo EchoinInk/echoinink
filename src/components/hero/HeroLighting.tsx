@@ -32,8 +32,8 @@ export function HeroLighting() {
         {prefersReduced ? (
           <div
             style={{
-              width: 'clamp(190px, 26vw, 400px)',
-              height: 'clamp(210px, 30vw, 460px)',
+width: 'clamp(140px, 18vw, 280px)',
+height: 'clamp(150px, 20vw, 320px)',
               background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.25) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
               filter: 'blur(32px)',
               mixBlendMode: 'screen' as const,
@@ -44,10 +44,10 @@ export function HeroLighting() {
             animate={controls}
             initial={{ opacity: 0.75, scale: 0.97 }}
             style={{
-              width: 'clamp(190px, 26vw, 400px)',
-              height: 'clamp(210px, 30vw, 460px)',
-              background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.25) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
-              filter: 'blur(32px)',
+              width: 'clamp(140px, 18vw, 280px)',
+height: 'clamp(150px, 20vw, 320px)',
+              background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.18) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
+filter: 'blur(24px)',
               mixBlendMode: 'screen',
             }}
           />
