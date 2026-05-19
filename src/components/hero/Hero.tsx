@@ -18,10 +18,9 @@ export function Hero() {
         {/* Monogram */}
         <div className="relative mt-4 md:mt-6 mb-2 md:mb-4">
           <HeroLighting />
-          <HeroMonogram />
         </div>
 
-        <HeroHeading />
+        <br /><br /><br /><HeroHeading />
         <HeroCTA />
       </div>
 
