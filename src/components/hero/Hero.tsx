@@ -1,5 +1,4 @@
 import { Footer } from '../Footer';
-import { HeroAtmosphere } from './HeroAtmosphere';
 import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
