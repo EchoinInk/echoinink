@@ -42,7 +42,7 @@ export function HeroBackground() {
         className="absolute bottom-0 left-0 right-0 pointer-events-none z-[7]"
         style={{
           height: '32vh',
-          background: 'linear-gradient(to bottom, transparent, rgba(15,18,32,0.20) 40%, rgba(15,18,32,0.45) 72%, #0F1220 100%)',
+          background: 'linear-gradient(to bottom, transparent, rgba(15,18,32,0.20) 40%, rgba(15,18,32,0.30) 72%, #0F1220 100%)',
         }}
       />
     </>
