@@ -12,7 +12,7 @@ const principles = [
 
 export function Philosophy() {
   return (
-    <Section className="relative py-28 md:py-48 overflow-hidden">
+    <Section className="relative py-16 md:py-28 overflow-hidden">
       {/* Faint indigo atmospheric center */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -23,7 +23,7 @@ export function Philosophy() {
       />
 
       {/* Thin separator above */}
-      <Container className="mb-14 md:mb-36">
+      <Container className="mb-8 md:mb-20">
         <div
           className="w-full h-px"
           style={{
@@ -42,7 +42,7 @@ export function Philosophy() {
           />
 
           {/* Principles triptych */}
-          <div className="mb-20 md:mb-28 mt-20 md:mt-28">
+          <div className="mb-12 md:mb-16 mt-12 md:mt-16">
             <motion.span
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -89,7 +89,7 @@ export function Philosophy() {
             whileInView={{ opacity: 1 }}
             viewport={VIEWPORT.normal}
             transition={{ duration: DURATION.slower, ease: EASE, delay: STAGGER.normal }}
-            className="font-structural text-[12px] md:text-[13px] text-white/25 leading-[1.9] max-w-[44ch] mt-14 md:mt-20"
+            className="font-structural text-[12px] md:text-[13px] text-white/25 leading-[1.9] max-w-[44ch] mt-8 md:mt-12"
           >
             I create worlds for people who feel too much and think too deeply.
             <br />

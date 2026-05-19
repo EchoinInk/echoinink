@@ -5,7 +5,7 @@ import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 export function ClosingSection() {
   return (
-    <section className="relative overflow-hidden" style={{ minHeight: '68vh' }}>
+    <section className="relative overflow-hidden" style={{ minHeight: '52vh' }}>
       {/* Background — atmospheric image at low opacity */}
       <div className="absolute inset-0">
         <div
@@ -35,14 +35,14 @@ export function ClosingSection() {
       {/* Content */}
       <div
         className="relative z-10 flex flex-col items-center justify-center text-center px-6"
-        style={{ minHeight: '72vh', paddingTop: '12vh', paddingBottom: '16vh' }}
+        style={{ minHeight: '58vh', paddingTop: '8vh', paddingBottom: '10vh' }}
       >
         <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE }}
-          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12"
+          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-8"
         >
           Echo in Ink
         </motion.span>
@@ -52,7 +52,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
-          className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-12 max-w-4xl"
+          className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-8 max-w-4xl"
           style={{ letterSpacing: '-0.01em' }}
         >
           Step deeper into the world.
@@ -64,7 +64,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 2 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[34ch] mb-8 md:mb-10"
+          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[34ch] mb-5 md:mb-6"
         >
           Echo in Ink is an ongoing exploration — a living archive of stories,
           atmospheres, and luminous digital experiments.
@@ -75,7 +75,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 3 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[34ch] mb-14 md:mb-16"
+          className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[34ch] mb-8 md:mb-10"
         >
           If something here resonates, stay a while. Wander.
           <br />

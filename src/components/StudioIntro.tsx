@@ -6,7 +6,7 @@ import { EASE, DURATION, VIEWPORT } from '@/lib/motion';
 
 export function StudioIntro() {
   return (
-    <Section className="relative py-32 md:py-56 lg:py-64 overflow-hidden">
+    <Section className="relative py-16 md:py-28 lg:py-32 overflow-hidden">
       {/* Atmospheric depth accent — soft violet cloud, right side */}
       <div
         className="absolute pointer-events-none"
@@ -46,7 +46,7 @@ export function StudioIntro() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.normal}
             transition={{ duration: DURATION.slow, ease: EASE, delay: 0.36 }}
-            className="font-structural text-[13px] md:text-[14px] text-white/45 leading-[1.88] max-w-[42ch] mx-auto mt-12 md:mt-16"
+            className="font-structural text-[13px] md:text-[14px] text-white/45 leading-[1.88] max-w-[42ch] mx-auto mt-8 md:mt-10"
           >
             This is a studio built on authorship and atmosphere — a place where ideas take shape in ink and unfold into luminous digital experiences.
           </motion.p>
