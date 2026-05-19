@@ -19,8 +19,7 @@ export function Hero() {
         <div className="relative mt-4 md:mt-6 mb-2 md:mb-4">
           <HeroLighting />
         </div>
-
-        <br /><br /><br /> <br /><br /><br /> <br /><br /><br /> <br /><br /><br /><HeroHeading />
+        <HeroHeading />
         <HeroCTA />
       </div>
 
