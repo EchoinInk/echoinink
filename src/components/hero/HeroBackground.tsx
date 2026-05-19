@@ -1,7 +1,7 @@
-import mobilePng from '@/assets/ei-hero-bg-dark-mobile-9x16.png';
+import mobilePng from '@/assets/ei-dark-mono-9x16.png';
 import mobileWebp from '@/assets/ei-hero-bg-dark-mobile-9x16.webp';
 import mobileAvif from '@/assets/ei-hero-bg-dark-mobile-9x16.avif';
-import widePng from '@/assets/ei-DARK-bg-dark-21x9.png';
+import widePng from '@/assets/ei-dark-mono-21x9.png';
 import wideWebp from '@/assets/ei-hero-bg-dark-21x9.webp';
 import wideAvif from '@/assets/ei-hero-bg-dark-21x9.avif';
 
