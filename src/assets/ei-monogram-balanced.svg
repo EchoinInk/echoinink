@@ -1,53 +1,136 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1773 2048" fill="none" preserveAspectRatio="xMidYMid meet">
   <defs>
-    <!-- MASTER BRAND GRADIENT -->
-    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#FF4FD8" />
-      <stop offset="45%" stopColor="#B46CFF" />
-      <stop offset="100%" stopColor="#FF1E8E" />
-    </linearGradient>
+  <!-- BRIGHT PRIMARY MATERIAL -->
+  <linearGradient
+    id="brandGradientBright"
+    x1="0%"
+    y1="0%"
+    x2="100%"
+    y2="100%"
+  >
+    <stop offset="0%" stopColor="#FF78E9" />
+    <stop offset="50%" stopColor="#C084FF" />
+    <stop offset="100%" stopColor="#FF4FA3" />
+  </linearGradient>
 
-    <!-- DEEP DIMENSIONAL SHADOW -->
-    <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#140018" />
-      <stop offset="100%" stopColor="#2B0A3A" />
-    </linearGradient>
+  <!-- MAIN MID-TONE MATERIAL -->
+  <linearGradient
+    id="brandGradientMid"
+    x1="0%"
+    y1="0%"
+    x2="100%"
+    y2="100%"
+  >
+    <stop offset="0%" stopColor="#FF4FD8" />
+    <stop offset="50%" stopColor="#A855F7" />
+    <stop offset="100%" stopColor="#FF1E8E" />
+  </linearGradient>
 
-    <!-- INNER LUMINOUS DEPTH -->
-    <linearGradient id="innerGradient" x1="25%" y1="15%" x2="75%" y2="85%">
-      <stop offset="0%" stopColor="#FF70E6" />
-      <stop offset="50%" stopColor="#9F63FF" />
-      <stop offset="100%" stopColor="#FF2C9C" />
-    </linearGradient>
+  <!-- RECESSED DIMENSIONAL SURFACES -->
+  <linearGradient
+    id="brandGradientDark"
+    x1="0%"
+    y1="0%"
+    x2="100%"
+    y2="100%"
+  >
+    <stop offset="0%" stopColor="#5A0B63" />
+    <stop offset="50%" stopColor="#4411D1" />
+    <stop offset="100%" stopColor="#300134" />
+  </linearGradient>
 
-    <!-- SPECULAR GLOSS -->
-    <linearGradient id="glossGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="rgba(255,255,255,0.95)" />
-      <stop offset="22%" stopColor="rgba(255,255,255,0.35)" />
-      <stop offset="55%" stopColor="rgba(255,255,255,0.08)" />
-      <stop offset="100%" stopColor="rgba(255,255,255,0)" />
-    </linearGradient>
+  <!-- DEEPEST SHADOW ACCENTS ONLY -->
+  <linearGradient
+    id="shadowGradient"
+    x1="0%"
+    y1="0%"
+    x2="100%"
+    y2="100%"
+  >
+    <stop offset="0%" stopColor="#120014" />
+    <stop offset="100%" stopColor="#220028" />
+  </linearGradient>
 
-    <!-- ATMOSPHERIC GLOW -->
-    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="28" result="blur" />
-      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -8" />
-      <feMerge>
-        <feMergeNode />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
+  <!-- CINEMATIC GLOSS -->
+  <linearGradient
+    id="glossGradient"
+    x1="0%"
+    y1="0%"
+    x2="100%"
+    y2="100%"
+  >
+    <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.95" />
+    <stop offset="22%" stopColor="#FFFFFF" stopOpacity="0.35" />
+    <stop offset="55%" stopColor="#FFFFFF" stopOpacity="0.08" />
+    <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+  </linearGradient>
 
-    <!-- SUBTLE INNER SHADOW -->
-    <filter id="innerShadow">
-      <feOffset dx="0" dy="8" />
-      <feGaussianBlur stdDeviation="12" result="offset-blur" />
-      <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse" />
-      <feFlood floodColor="#000000" floodOpacity="0.12" result="color" />
-      <feComposite operator="in" in="color" in2="inverse" result="shadow" />
-      <feComposite operator="over" in="shadow" in2="SourceGraphic" />
-    </filter>
-  </defs>
+  <!-- ATMOSPHERIC BLOOM -->
+  <filter
+    id="softGlow"
+    x="-50%"
+    y="-50%"
+    width="200%"
+    height="200%"
+  >
+    <feGaussianBlur
+      stdDeviation="22"
+      result="blur"
+    />
+
+    <feColorMatrix
+      in="blur"
+      type="matrix"
+      values="
+        1 0 0 0 0
+        0 1 0 0 0
+        0 0 1 0 0
+        0 0 0 12 -5
+      "
+    />
+
+    <feMerge>
+      <feMergeNode />
+      <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
+
+  <!-- SUBTLE DEPTH -->
+  <filter id="innerShadow">
+    <feOffset dx="0" dy="4" />
+
+    <feGaussianBlur
+      stdDeviation="6"
+      result="offset-blur"
+    />
+
+    <feComposite
+      operator="out"
+      in="SourceGraphic"
+      in2="offset-blur"
+      result="inverse"
+    />
+
+    <feFlood
+      floodColor="#000000"
+      floodOpacity="0.08"
+      result="color"
+    />
+
+    <feComposite
+      operator="in"
+      in="color"
+      in2="inverse"
+      result="shadow"
+    />
+
+    <feComposite
+      operator="over"
+      in="shadow"
+      in2="SourceGraphic"
+    />
+  </filter>
+</defs>
 
   <!-- ATMOSPHERIC GLOW BASE -->
   <g opacity="0.95" filter="url(#softGlow)">
