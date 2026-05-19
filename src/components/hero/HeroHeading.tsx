@@ -6,7 +6,7 @@ export function HeroHeading() {
       {/* Heading */}
       <h1
         id="hero-heading"
-        className="font-editorial text-4xl md:text-5xl lg:text-7xl text-[#F0F4FF] mt-[10vh] md:mt-[10vh] mb-2 md:mb-3 tracking-wide"
+        className="font-editorial text-4xl md:text-5xl lg:text-7xl text-[#F0F4FF] mt-[40vh] md:mt-[40vh] mb-2 md:mb-3 tracking-wide"
         style={{ WebkitTextStroke: '0.25px #24294A' }}
       >
         Echo in Ink
