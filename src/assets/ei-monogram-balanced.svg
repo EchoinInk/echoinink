@@ -8,20 +8,19 @@
     </linearGradient>
 
     <!-- DEEP DIMENSIONAL SHADOW -->
-    {/* DEEP DIMENSIONAL SHADOW */"
     <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stopColor="#140018" />
       <stop offset="100%" stopColor="#2B0A3A" />
     </linearGradient>
 
-    {/* INNER LUMINOUS DEPTH */"
+    <!-- INNER LUMINOUS DEPTH -->
     <linearGradient id="innerGradient" x1="25%" y1="15%" x2="75%" y2="85%">
       <stop offset="0%" stopColor="#FF70E6" />
       <stop offset="50%" stopColor="#9F63FF" />
       <stop offset="100%" stopColor="#FF2C9C" />
     </linearGradient>
 
-    {/* SPECULAR GLOSS */"
+    <!-- SPECULAR GLOSS -->
     <linearGradient id="glossGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stopColor="rgba(255,255,255,0.95)" />
       <stop offset="22%" stopColor="rgba(255,255,255,0.35)" />
@@ -29,7 +28,7 @@
       <stop offset="100%" stopColor="rgba(255,255,255,0)" />
     </linearGradient>
 
-    {/* ATMOSPHERIC GLOW */"
+    <!-- ATMOSPHERIC GLOW -->
     <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="28" result="blur" />
       <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 18 -8" />
@@ -39,7 +38,7 @@
       </feMerge>
     </filter>
 
-    {/* SUBTLE INNER SHADOW */"
+    <!-- SUBTLE INNER SHADOW -->
     <filter id="innerShadow">
       <feOffset dx="0" dy="8" />
       <feGaussianBlur stdDeviation="12" result="offset-blur" />
