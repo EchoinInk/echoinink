@@ -45,6 +45,14 @@ export function HeroBackground() {
           background: 'linear-gradient(to bottom, transparent, rgba(15,18,32,0.20) 40%, rgba(15,18,32,0.30) 72%, #0F1220 100%)',
         }}
       />
+      <div
+  aria-hidden="true"
+  className="absolute inset-0 pointer-events-none z-[5]"
+  style={{
+    background:
+      'radial-gradient(circle at center, transparent 38%, rgba(3,5,12,0.16) 100%)',
+  }}
+/>
     </>
   );
 }
