@@ -4,7 +4,6 @@ import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
 import { HeroLighting } from './HeroLighting';
-import { HeroMonogram } from './HeroMonogram';
 import { HeroReflection } from './HeroReflection';
 
 export function Hero() {
@@ -18,7 +17,6 @@ export function Hero() {
       {/* Layer 2: Ei artwork - centered in viewport */}
 <div className="absolute inset-0 flex justify-center pointer-events-none pt-[6vh]">        <div className="relative">
           <HeroLighting />
-          <HeroMonogram />
         </div>
       </div>
 
