@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1773 2048" fill="none" preserveAspectRatio="xMidYMid meet">
   <defs>
     <!-- MASTER BRAND GRADIENT -->
-    {/* MASTER BRAND GRADIENT */"
     <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stopColor="#FF4FD8" />
       <stop offset="45%" stopColor="#B46CFF" />
       <stop offset="100%" stopColor="#FF1E8E" />
     </linearGradient>
 
+    <!-- DEEP DIMENSIONAL SHADOW -->
     {/* DEEP DIMENSIONAL SHADOW */"
     <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stopColor="#140018" />
