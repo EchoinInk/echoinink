@@ -11,7 +11,6 @@ export function Hero() {
     <section aria-labelledby="hero-heading" className="relative min-h-screen overflow-hidden">
       {/* Layer 1: Background */}
       <HeroBackground />
-      <HeroAtmosphere />
       <HeroReflection />
 
       {/* Layer 2: Ei artwork - centered in viewport */}
