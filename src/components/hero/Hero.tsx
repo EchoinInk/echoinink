@@ -23,7 +23,7 @@ export function Hero() {
       {/* Layer 3: Content - split into 2 independent groups */}
       <div className="absolute inset-0 z-10 pointer-events-none">
         {/* Heading Group */}
-        <div className="absolute left-1/2 top-[56%] md:top-[58%] -translate-x-1/2 text-center px-6">
+        <div className="absolute left-1/2 top-[60%] md:top-[62%] -translate-x-1/2 text-center px-6">
           <HeroHeading />
         </div>
 

@@ -1,10 +1,6 @@
-import { StarDivider } from '../StarDivider';
-
 export function HeroDescription() {
   return (
     <>
-      <StarDivider />
-
       {/* Clarity line — concise positioning statement */}
       <p
         className="font-structural text-[14px] md:text-[15px] text-white/65 leading-[1.8] mb-6 md:mb-8 text-center"
