@@ -12,7 +12,6 @@ export function Home() {
         <title>Echo in Ink — Calm, intentional design studio</title>
         <meta name="description" content="Echo in Ink is a creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media." />
       </Helmet>
-      <Hero />
       <StudioIntro />
       <Philosophy />
       <LumoCaseStudyTeaser />
