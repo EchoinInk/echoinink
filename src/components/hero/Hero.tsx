@@ -20,7 +20,7 @@ export function Hero() {
           <HeroLighting />
         </div>
 
-        <br /><br /><br /><HeroHeading />
+        <br /><br /><br /> <br /><br /><br /> <br /><br /><br /> <br /><br /><br /><HeroHeading />
         <HeroCTA />
       </div>
 
