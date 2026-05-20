@@ -1,77 +1,38 @@
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1773 2048" fill="none" preserveAspectRatio="xMidYMid meet">
   <defs>
-  <linearGradient
-    id="brandGradientBright"
-    x1="0%"
-    y1="0%"
-    x2="100%"
-    y2="100%"
-  >
-    <stop offset="0%" stopColor="#FF78E9" />
-    <stop offset="50%" stopColor="#C084FF" />
-    <stop offset="100%" stopColor="#FF4FA3" />
+  <linearGradient id="brandGradientBright" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FF78E9" />
+    <stop offset="50%" stop-color="#C084FF" />
+    <stop offset="100%" stop-color="#FF4FA3" />
   </linearGradient>
 
-  <linearGradient
-    id="brandGradientMid"
-    x1="0%"
-    y1="0%"
-    x2="100%"
-    y2="100%"
-  >
-    <stop offset="0%" stopColor="#FF4FD8" />
-    <stop offset="50%" stopColor="#A855F7" />
-    <stop offset="100%" stopColor="#FF1E8E" />
+  <linearGradient id="brandGradientMid" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FF4FD8" />
+    <stop offset="50%" stop-color="#A855F7" />
+    <stop offset="100%" stop-color="#FF1E8E" />
   </linearGradient>
 
-  <linearGradient
-    id="brandGradientDark"
-    x1="0%"
-    y1="0%"
-    x2="100%"
-    y2="100%"
-  >
-    <stop offset="0%" stopColor="#5A0B63" />
-    <stop offset="50%" stopColor="#4411D1" />
-    <stop offset="100%" stopColor="#300134" />
+  <linearGradient id="brandGradientDark" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#5A0B63" />
+    <stop offset="50%" stop-color="#4411D1" />
+    <stop offset="100%" stop-color="#300134" />
   </linearGradient>
 
-  <linearGradient
-    id="shadowGradient"
-    x1="0%"
-    y1="0%"
-    x2="100%"
-    y2="100%"
-  >
-    <stop offset="0%" stopColor="#120014" />
-    <stop offset="100%" stopColor="#220028" />
+  <linearGradient id="shadowGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#120014" />
+    <stop offset="100%" stop-color="#220028" />
   </linearGradient>
 
-  <linearGradient
-    id="glossGradient"
-    x1="0%"
-    y1="0%"
-    x2="100%"
-    y2="100%"
-  >
-    <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0" />
-    <stop offset="35%" stopColor="#FFFFFF" stopOpacity="0.015" />
-    <stop offset="50%" stopColor="#FFFFFF" stopOpacity="0.045" />
-    <stop offset="65%" stopColor="#FFFFFF" stopOpacity="0.015" />
-    <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0" />
+  <linearGradient id="glossGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+    <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0.015" />
+    <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.045" />
+    <stop offset="65%" stop-color="#FFFFFF" stop-opacity="0.015" />
+    <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
   </linearGradient>
 
-  <filter
-    id="softGlow"
-    x="-50%"
-    y="-50%"
-    width="200%"
-    height="200%"
-  >
-    <feGaussianBlur
-      stdDeviation="8"
-      result="blur"
-    />
+  <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="8" result="blur"/>
 
     <feColorMatrix
       in="blur"
@@ -91,12 +52,9 @@
   </filter>
 
   <filter id="innerShadow">
-    <feOffset dx="0" dy="4" />
+    <feOffset dx="0" dy="4"/>
 
-    <feGaussianBlur
-      stdDeviation="6"
-      result="offset-blur"
-    />
+    <feGaussianBlur stdDeviation="6" result="offset-blur"/>
 
     <feComposite
       operator="out"
@@ -106,8 +64,8 @@
     />
 
     <feFlood
-      floodColor="#000000"
-      floodOpacity="0.08"
+      flood-color="#000000"
+      flood-opacity="0.08"
       result="color"
     />
 
@@ -125,7 +83,6 @@
     />
   </filter>
 </defs>
-
   <g filter="url(#innerShadow)">
     <path fill="url(#brandGradientBright)" d="M1321.03 845.392a107.42 107.42 0 0 1 77.75-25.468c-2.35 13.382-7.55 35.573-16.27 46.301-13.87 28.481-49.4 60.289-79.01 72.918-19.42 8.287-46.64-3.216-36.11-25.95 2.78-10.015 10.66-23.791 17-32.042 6.43-11.444 25.66-27.903 36.64-35.759"/>
     <path fill="url(#brandGradientBright)" d="M1663.03 1498.23c5.47 5.96 8.08 8.93 12.6 15.56 1 4.49 1.64 4.01.32 7.63l-2.26 1.68c-3.92-8.33-8.24-14.2-13.83-21.44.83-.72 2.36-2.53 3.17-3.43"/>
