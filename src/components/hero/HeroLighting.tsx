@@ -23,7 +23,7 @@ export function HeroLighting() {
 
   return (
     <>
-      {/* Layer 1: Primary volumetric bloom - soft radiance beneath Ei */}
+      {/* Layer 1: Primary volumetric bloom - nebula radiance beneath Ei */}
       <div
         ref={ref}
         aria-hidden="true"
@@ -33,10 +33,10 @@ export function HeroLighting() {
         {prefersReduced ? (
           <div
             style={{
-              width: 'clamp(180px, 20vw, 320px)',
-              height: 'clamp(180px, 20vw, 320px)',
-              background: 'radial-gradient(ellipse 50% 50% at 50% 55%, rgba(167, 139, 250, 0.15) 0%, rgba(99, 102, 241, 0.08) 40%, rgba(30, 200, 255, 0.04) 65%, transparent 100%)',
-              filter: 'blur(40px)',
+              width: 'clamp(200px, 22vw, 340px)',
+              height: 'clamp(200px, 22vw, 340px)',
+              background: 'radial-gradient(ellipse 50% 50% at 50% 55%, rgba(120, 80, 180, 0.12) 0%, rgba(30, 50, 120, 0.08) 35%, rgba(0, 180, 200, 0.05) 60%, transparent 100%)',
+              filter: 'blur(45px)',
               mixBlendMode: 'screen' as const,
             }}
           />
@@ -45,39 +45,67 @@ export function HeroLighting() {
             animate={controls}
             initial={{ opacity: 0.8, scale: 0.98 }}
             style={{
-              width: 'clamp(180px, 20vw, 320px)',
-              height: 'clamp(180px, 20vw, 320px)',
-              background: 'radial-gradient(ellipse 50% 50% at 50% 55%, rgba(167, 139, 250, 0.15) 0%, rgba(99, 102, 241, 0.08) 40%, rgba(30, 200, 255, 0.04) 65%, transparent 100%)',
-              filter: 'blur(40px)',
+              width: 'clamp(200px, 22vw, 340px)',
+              height: 'clamp(200px, 22vw, 340px)',
+              background: 'radial-gradient(ellipse 50% 50% at 50% 55%, rgba(120, 80, 180, 0.12) 0%, rgba(30, 50, 120, 0.08) 35%, rgba(0, 180, 200, 0.05) 60%, transparent 100%)',
+              filter: 'blur(45px)',
               mixBlendMode: 'screen',
             }}
           />
         )}
       </div>
 
-      {/* Layer 2: Inner glow core - luminous source point */}
+      {/* Layer 2: Aqua rim lighting - from left side */}
       <div
         aria-hidden="true"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{
-          width: 'clamp(80px, 8vw, 140px)',
-          height: 'clamp(80px, 8vw, 140px)',
-          background: 'radial-gradient(ellipse at 50% 55%, rgba(255, 255, 255, 0.06) 0%, rgba(232, 121, 249, 0.12) 35%, rgba(167, 139, 250, 0.06) 60%, transparent 100%)',
-          filter: 'blur(20px)',
+          width: 'clamp(220px, 25vw, 380px)',
+          height: 'clamp(220px, 25vw, 380px)',
+          background: 'radial-gradient(ellipse 60% 50% at 25% 50%, rgba(0, 180, 200, 0.08) 0%, transparent 70%)',
+          filter: 'blur(50px)',
           mixBlendMode: 'screen',
           zIndex: 1,
         }}
       />
 
-      {/* Layer 3: Subtle ambient haze - atmospheric diffusion */}
+      {/* Layer 3: Inner glow core - luminous nebula source */}
       <div
         aria-hidden="true"
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
         style={{
-          width: 'clamp(300px, 35vw, 500px)',
-          height: 'clamp(300px, 35vw, 500px)',
-          background: 'radial-gradient(circle at 50% 50%, rgba(232, 121, 249, 0.02) 0%, transparent 50%)',
-          filter: 'blur(60px)',
+          width: 'clamp(90px, 10vw, 150px)',
+          height: 'clamp(90px, 10vw, 150px)',
+          background: 'radial-gradient(ellipse at 50% 55%, rgba(255, 255, 255, 0.05) 0%, rgba(180, 140, 220, 0.1) 30%, rgba(120, 80, 180, 0.06) 55%, transparent 100%)',
+          filter: 'blur(22px)',
+          mixBlendMode: 'screen',
+          zIndex: 1,
+        }}
+      />
+
+      {/* Layer 4: Soft pink edge diffusion - from right side */}
+      <div
+        aria-hidden="true"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        style={{
+          width: 'clamp(180px, 20vw, 320px)',
+          height: 'clamp(180px, 20vw, 320px)',
+          background: 'radial-gradient(ellipse 50% 50% at 75% 50%, rgba(180, 60, 120, 0.04) 0%, transparent 65%)',
+          filter: 'blur(40px)',
+          mixBlendMode: 'screen',
+          zIndex: 1,
+        }}
+      />
+
+      {/* Layer 5: Subtle ambient haze - atmospheric nebula diffusion */}
+      <div
+        aria-hidden="true"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+        style={{
+          width: 'clamp(320px, 38vw, 520px)',
+          height: 'clamp(320px, 38vw, 520px)',
+          background: 'radial-gradient(circle at 50% 50%, rgba(120, 80, 180, 0.025) 0%, transparent 50%)',
+          filter: 'blur(65px)',
           mixBlendMode: 'screen',
           zIndex: 0,
         }}
