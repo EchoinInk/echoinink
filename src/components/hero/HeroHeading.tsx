@@ -6,7 +6,7 @@ export function HeroHeading() {
       {/* Heading */}
       <h1
         id="hero-heading"
-        className="font-editorial text-4xl md:text-5xl lg:text-7xl text-[#F0F4FF] mt-2 md:mt-3 mb-2 md:mb-3 tracking-wide"
+        className="font-editorial text-4xl md:text-5xl lg:text-6xl text-[#F0F4FF] mb-4 md:mb-5 tracking-wide"
         style={{ WebkitTextStroke: '0.25px #24294A' }}
       >
         Echo in Ink
@@ -14,7 +14,7 @@ export function HeroHeading() {
 
       {/* Tagline */}
       <p
-        className="font-structural text-[13px] md:text-[14px] tracking-[0.42em] uppercase mb-1 md:mb-1.5"
+        className="font-structural text-[14px] md:text-[15px] text-white/65 leading-[1.9] mb-10 md:mb-10 text-center"
         style={{
           background: 'linear-gradient(90deg, #E879F9, #1EC8FF, #6366F1, #A78BFA)',
           WebkitBackgroundClip: 'text',

@@ -49,7 +49,7 @@ export function LumoCaseStudyTeaser() {
       />
       <GrainOverlay range={[0.012, 0.030]} duration={32} delay={4} size={200} />
 
-      <div className="ei-container py-28 md:py-48">
+      <div className="ei-container py-16 md:py-28">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -59,7 +59,7 @@ export function LumoCaseStudyTeaser() {
         >
           <motion.h2
             variants={line}
-            className="font-editorial text-[1.9rem] md:text-[2.9rem] lg:text-[3.6rem] text-[#E8EAF6]/80 leading-[1.16] mb-8 md:mb-10"
+            className="font-editorial text-[1.9rem] md:text-[2.9rem] lg:text-[3.6rem] text-[#E8EAF6]/80 leading-[1.16] mb-6 md:mb-8"
             style={{ letterSpacing: '-0.018em' }}
           >
             LUMO — A World Built
@@ -69,14 +69,14 @@ export function LumoCaseStudyTeaser() {
 
           <motion.p
             variants={line}
-            className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95] max-w-[54ch] mb-6 md:mb-8"
+            className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95] max-w-[54ch] mb-4 md:mb-6"
           >
             A product shaped through emotional intelligence, adaptive systems, and humane design.
           </motion.p>
 
           <motion.p
             variants={line}
-            className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[46ch] mb-14 md:mb-20"
+            className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[46ch] mb-8 md:mb-12"
           >
             Not just an app — a world built to help people exhale.
           </motion.p>

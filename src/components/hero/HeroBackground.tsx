@@ -1,9 +1,9 @@
-import mobilePng from '@/assets/ei-hero-bg-dark-mobile-9x16.png';
-import mobileWebp from '@/assets/ei-hero-bg-dark-mobile-9x16.webp';
-import mobileAvif from '@/assets/ei-hero-bg-dark-mobile-9x16.avif';
-import widePng from '@/assets/ei-hero-bg-dark-21x9.png';
-import wideWebp from '@/assets/ei-hero-bg-dark-21x9.webp';
-import wideAvif from '@/assets/ei-hero-bg-dark-21x9.avif';
+import mobilePng from '@/assets/ei-dark-mono-9x16.png';
+import mobileWebp from '@/assets/ei-dark-mono-9x16.webp';
+import mobileAvif from '@/assets/ei-dark-mono-9x16.avif';
+import widePng from '@/assets/ei-dark-mono-21x9.png';
+import wideWebp from '@/assets/ei-dark-mono-21x9.webp';
+import wideAvif from '@/assets/ei-dark-mono-21x9.avif';
 
 export function HeroBackground() {
   return (
@@ -32,7 +32,7 @@ export function HeroBackground() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none z-[6]"
         style={{
-          background: 'linear-gradient(to bottom, rgba(5,7,16,0.50) 0%, rgba(5,7,16,0.14) 11%, transparent 24%)',
+          background: 'linear-gradient(to bottom, rgba(5,7,16,0.18) 0%, rgba(5,7,16,0.06) 11%, transparent 24%)',
         }}
       />
 
@@ -42,9 +42,17 @@ export function HeroBackground() {
         className="absolute bottom-0 left-0 right-0 pointer-events-none z-[7]"
         style={{
           height: '32vh',
-          background: 'linear-gradient(to bottom, transparent, rgba(15,18,32,0.45) 40%, rgba(15,18,32,0.80) 72%, #0F1220 100%)',
+          background: 'linear-gradient(to bottom, transparent, rgba(15,18,32,0.20) 40%, rgba(15,18,32,0.30) 72%, #0F1220 100%)',
         }}
       />
+      <div
+  aria-hidden="true"
+  className="absolute inset-0 pointer-events-none z-[5]"
+  style={{
+    background:
+      'radial-gradient(circle at center, transparent 38%, rgba(3,5,12,0.16) 100%)',
+  }}
+/>
     </>
   );
 }
