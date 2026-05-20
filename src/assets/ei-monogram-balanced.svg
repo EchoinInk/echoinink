@@ -3,12 +3,12 @@
   <linearGradient id="brandGradientBright" x1="0%" y1="0%" x2="100%" y2="100%">
     <stop offset="0%" stop-color="#F15BCF" />
     <stop offset="50%" stop-color="#C084FF" />
-    <stop offset="100%" stop-color="#FF4FA3" />
+    <stop offset="100%" stop-color="#FF3D95" />
   </linearGradient>
 
   <linearGradient id="brandGradientMid" x1="0%" y1="0%" x2="100%" y2="100%">
     <stop offset="0%" stop-color="#FF4FD8" />
-    <stop offset="50%" stop-color="#A855F7" />
+    <stop offset="50%" stop-color="#7B3FF2" />
     <stop offset="100%" stop-color="#FF1E8E" />
   </linearGradient>
 
