@@ -45,16 +45,17 @@ const SVGComponent = (props) => (
     </LinearGradient>
     <Filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
       <FeGaussianBlur stdDeviation="8" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="
+      <FeColorMatrix in="blur" type="matrix" values="
       1 0 0 0 0
       0 1 0 0 0
       0 0 1 0 0
       0 0 0 3 -1
     "/>
-      <feMerge>
-        <feMergeNode/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <FeMerge>
+        <FeMergeNode/>
+        <FeMergeNode
+ in="SourceGraphic"/>
+      </FeMerge>
     </Filter>
     <Filter id="innerShadow">
       <feOffset dx="0" dy="4"/>
