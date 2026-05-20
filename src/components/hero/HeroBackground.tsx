@@ -40,7 +40,7 @@ export function HeroBackground() {
         aria-hidden="true"
         className="absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0, 180, 200, 0.08) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 60% 50% at 50% 50%, rgba(0, 180, 200, 0.08) 0%, transparent 20%)',
         }}
       />
 
