@@ -13,8 +13,8 @@ export function HeroMonogram() {
 
     if (isInView) {
       controls.start({
-        y: [-4, 4, -4],
-        transition: { duration: 16, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }
+        y: [-3, 3, -3],
+        transition: { duration: 18, repeat: Infinity, repeatType: 'mirror', ease: 'easeInOut' }
       });
     } else {
       controls.stop();
@@ -30,13 +30,13 @@ export function HeroMonogram() {
         style={{
           width: 'clamp(180px, 20vw, 320px)',
           height: 'clamp(180px, 20vw, 320px)',
-          background: 'radial-gradient(ellipse 50% 50% at 50% 60%, rgba(0, 0, 0, 0.5) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 50% 50% at 50% 60%, rgba(0, 0, 0, 0.4) 0%, transparent 70%)',
           filter: 'blur(24px)',
           transform: 'translateY(12px)',
         }}
       />
 
-      {/* Ei monogram - fused into nebula, formed from cosmic material */}
+      {/* Ei monogram - emerging from galaxy, formed from nebula */}
       {prefersReduced ? (
         <img
           src={monogram}
@@ -44,21 +44,17 @@ export function HeroMonogram() {
           className="relative mx-auto"
           style={{
             width: 'clamp(160px, 18vw, 280px)',
-            opacity: 0.95,
+            opacity: 0.92,
             filter: `
-              brightness(0.92)
-              contrast(0.94)
-              saturate(0.95)
-              /* Aqua rim from left */
-              drop-shadow(-4px 0 12px rgba(0, 180, 200, 0.15))
-              /* Indigo depth from center */
-              drop-shadow(0 4px 16px rgba(30, 50, 120, 0.2))
-              /* Violet transition bloom */
-              drop-shadow(0 0 20px rgba(120, 80, 180, 0.12))
-              /* Pink edge diffusion from right */
-              drop-shadow(4px 0 14px rgba(180, 60, 120, 0.08))
-              /* Cosmic luminance */
-              drop-shadow(0 0 36px rgba(180, 140, 220, 0.06))
+              brightness(0.94)
+              contrast(0.92)
+              saturate(0.9)
+              /* Nebula light wrapping - soft atmospheric glow */
+              drop-shadow(0 0 24px rgba(180, 140, 220, 0.15))
+              /* Subtle depth shadow */
+              drop-shadow(0 6px 20px rgba(0, 0, 0, 0.4))
+              /* Cosmic bloom diffusion */
+              drop-shadow(0 0 40px rgba(120, 80, 180, 0.08))
             `,
             zIndex: 2,
           }}
@@ -75,21 +71,17 @@ export function HeroMonogram() {
             className="relative mx-auto"
             style={{
               width: 'clamp(160px, 18vw, 280px)',
-              opacity: 0.95,
+              opacity: 0.92,
               filter: `
-                brightness(0.92)
-                contrast(0.94)
-                saturate(0.95)
-                /* Aqua rim from left */
-                drop-shadow(-4px 0 12px rgba(0, 180, 200, 0.15))
-                /* Indigo depth from center */
-                drop-shadow(0 4px 16px rgba(30, 50, 120, 0.2))
-                /* Violet transition bloom */
-                drop-shadow(0 0 20px rgba(120, 80, 180, 0.12))
-                /* Pink edge diffusion from right */
-                drop-shadow(4px 0 14px rgba(180, 60, 120, 0.08))
-                /* Cosmic luminance */
-                drop-shadow(0 0 36px rgba(180, 140, 220, 0.06))
+                brightness(0.94)
+                contrast(0.92)
+                saturate(0.9)
+                /* Nebula light wrapping - soft atmospheric glow */
+                drop-shadow(0 0 24px rgba(180, 140, 220, 0.15))
+                /* Subtle depth shadow */
+                drop-shadow(0 6px 20px rgba(0, 0, 0, 0.4))
+                /* Cosmic bloom diffusion */
+                drop-shadow(0 0 40px rgba(120, 80, 180, 0.08))
               `,
               zIndex: 2,
             }}
