@@ -14,8 +14,8 @@ import Svg, {
   Path,
 } from "react-native-svg";
 
-const SVGComponent = (props) => (
- <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1773 2048" fill="none" preserveAspectRatio="xMidYMid meet"  {...props}>
+const SVGComponent = (props: any) => (
+    <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1773 2048" fill="none" preserveAspectRatio="xMidYMid meet"  {...props}>
   <Defs>
     <LinearGradient id="brandGradientBright" x1="0%" y1="0%" x2="100%" y2="100%">
       <Stop offset="0%" StopColor="#FF78E9"/>
