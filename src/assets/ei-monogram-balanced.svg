@@ -15,12 +15,12 @@ import Svg, {
 } from "react-native-svg";
 
 const SVGComponent = (props) => (
- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1773 2048" fill="none" preserveAspectRatio="xMidYMid meet"  {...props}>
+ <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1773 2048" fill="none" preserveAspectRatio="xMidYMid meet"  {...props}>
   <defs>
-    <linearGradient id="brandGradientBright" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stopColor="#FF78E9"/>
-      <stop offset="50%" stopColor="#C084FF"/>
-      <stop offset="100%" stopColor="#FF4FA3"/>
+    <LinearGradient id="brandGradientBright" x1="0%" y1="0%" x2="100%" y2="100%">
+      <Stop offset="0%" stopColor="#FF78E9"/>
+      <Stop offset="50%" stopColor="#C084FF"/>
+      <Stop offset="100%" stopColor="#FF4FA3"/>
     </linearGradient>
     <linearGradient id="brandGradientMid" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stopColor="#FF4FD8"/>
