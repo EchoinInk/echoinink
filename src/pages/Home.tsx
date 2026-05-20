@@ -14,7 +14,6 @@ export function Home() {
       </Helmet>
       <Hero />
       <StudioIntro />
-
       <Philosophy />
       <LumoCaseStudyTeaser />
       <ClosingSection />
