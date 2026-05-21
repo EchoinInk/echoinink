@@ -1,4 +1,4 @@
-import widePng from '@/assets/ei-ink-hero-16x9.png';
+import widePng from '@/assets/ei-hero-16x9.png';
 import wideWebp from '@/assets/ei-ink-hero-16x9.webp';
 import wideAvif from '@/assets/ei-ink-hero-16x9.avif';
 
