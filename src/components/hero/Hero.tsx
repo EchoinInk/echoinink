@@ -2,7 +2,6 @@ import { Footer } from '../Footer';
 import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
-import { HeroLighting } from './HeroLighting';
 
 export function Hero() {
   return (
@@ -10,10 +9,6 @@ export function Hero() {
       <HeroBackground />
 ]
       <div className="relative z-10 flex flex-col items-center text-center px-6" style={{ transform: 'translateY(6vh)' }}>
-        {/* Monogram */}
-        <div className="relative mt-4 md:mt-6 mb-2 md:mb-4">
-          <HeroLighting />
-        </div>
 
         <HeroHeading />
         <HeroCTA />
