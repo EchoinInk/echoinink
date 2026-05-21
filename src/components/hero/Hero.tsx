@@ -11,8 +11,7 @@ export function Hero() {
       <HeroBackground />
 
       {/* Centered content */}
-      <div
-        className="relative z-10 flex flex-col items-center text-center px-6"
+      <div className="relative z-10 flex flex-col items-start text-left px-6"
         style={{ transform: 'translateY(6vh)' }}
       >
         <HeroHeading />
