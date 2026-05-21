@@ -1,63 +1,58 @@
-import heroPng from '@/assets/ei-dark-mono-21x9.avif';
-import heroWebp from '@/assets/ei-dark-mono-21x9.webp';
-import heroAvif from '@/assets/ei-dark-mono-21x9.avif';
+import mobilePng from '@/assets/ei-dark-mono-9x16.png';
+import mobileWebp from '@/assets/ei-dark-mono-9x16.webp';
+import mobileAvif from '@/assets/ei-dark-mono-9x16.avif';
+import widePng from '@/assets/ei-dark-mono-21x9.png';
+import wideWebp from '@/assets/ei-dark-mono-21x9.webp';
+import wideAvif from '@/assets/ei-dark-mono-21x9.avif';
 
 export function HeroBackground() {
   return (
     <>
-      {/* Layer 1: Primary hero image - exact creative direction */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 overflow-hidden"
-      >
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
         <picture>
-          <source srcSet={heroAvif} type="image/avif" />
-          <source srcSet={heroWebp} type="image/webp" />
+          {/* Mobile (portrait) sources */}
+          <source media="(max-aspect-ratio: 3/4)" srcSet={mobileAvif} type="image/avif" />
+          <source media="(max-aspect-ratio: 3/4)" srcSet={mobileWebp} type="image/webp" />
+          <source media="(max-aspect-ratio: 3/4)" srcSet={mobilePng} type="image/png" />
+
+          {/* Wide / desktop sources */}
+          <source srcSet={wideAvif} type="image/avif" />
+          <source srcSet={wideWebp} type="image/webp" />
+
           <img
-            src={heroPng}
+            src={widePng}
             alt=""
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
         </picture>
       </div>
 
-      {/* Layer 2: Very subtle center focus - preserves nebula basin illumination */}
+      {/* Cinematic top frame — atmospheric darkness framing the navigation region */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none z-[6]"
         style={{
-          background: 'radial-gradient(circle at center, transparent 40%, rgba(0, 0, 10, 0.08) 100%)',
+          background: 'linear-gradient(to bottom, rgba(5,7,16,0.18) 0%, rgba(5,7,16,0.06) 11%, transparent 24%)',
         }}
       />
 
-      {/* Layer 3: Soft vignette - preserves environmental darkness */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle at center, transparent 55%, rgba(0, 0, 10, 0.12) 100%)',
-        }}
-      />
-
-      {/* Layer 4: Top atmospheric frame - soft darkness for navigation */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-x-0 top-0 pointer-events-none z-[6]"
-        style={{
-          height: '15vh',
-          background: 'linear-gradient(to bottom, rgba(0, 0, 10, 0.2) 0%, transparent 100%)',
-        }}
-      />
-
-      {/* Layer 5: Bottom atmospheric fade - cinematic dissolve */}
+      {/* Bottom atmospheric fade — cinematic dissolve into page */}
       <div
         aria-hidden="true"
         className="absolute bottom-0 left-0 right-0 pointer-events-none z-[7]"
         style={{
-          height: '35vh',
-          background: 'linear-gradient(to bottom, transparent, rgba(0, 0, 10, 0.15) 40%, rgba(0, 0, 10, 0.35) 70%, #000000 100%)',
+          height: '32vh',
+          background: 'linear-gradient(to bottom, transparent, rgba(15,18,32,0.20) 40%, rgba(15,18,32,0.30) 72%, #0F1220 100%)',
         }}
       />
+      <div
+  aria-hidden="true"
+  className="absolute inset-0 pointer-events-none z-[5]"
+  style={{
+    background:
+      'radial-gradient(circle at center, transparent 38%, rgba(3,5,12,0.16) 100%)',
+  }}
+/>
     </>
   );
 }
