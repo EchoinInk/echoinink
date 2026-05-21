@@ -7,7 +7,7 @@ import { HeroReflection } from './HeroReflection';
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+<section className="relative w-full aspect-[16/9] flex items-center justify-center overflow-hidden">
       <HeroBackground />
       <HeroReflection />
 
