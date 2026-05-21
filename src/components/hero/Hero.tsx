@@ -3,7 +3,6 @@ import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
 import { HeroLighting } from './HeroLighting';
-import { HeroMonogram } from './HeroMonogram';
 import { HeroReflection } from './HeroReflection';
 
 export function Hero() {

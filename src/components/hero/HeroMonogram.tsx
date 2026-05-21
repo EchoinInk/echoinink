@@ -1,4 +1,4 @@
-import monogram from '@/assets/ei-glow-2.png';
+import monogram from '';
 
 export function HeroMonogram() {
   return (
