@@ -6,7 +6,7 @@ import { EASE, DURATION, VIEWPORT } from '@/lib/motion';
 
 export function StudioIntro() {
   return (
-    <Section className="relative py-20 md:py-32 lg:py-36 overflow-hidden">
+    <Section className="relative py-16 md:py-32 lg:py-36 overflow-hidden">
       {/* Subtle tonal transition from hero */}
       <div
         className="absolute inset-0 pointer-events-none"

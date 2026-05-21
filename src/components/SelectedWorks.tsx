@@ -100,13 +100,13 @@ function WorkPanel({
 
   const titleClass = {
     featured:
-      'font-editorial text-[1.65rem] md:text-[2.2rem] lg:text-[2.75rem] text-[#E8EAF6]/90 leading-[1.12] mb-1.5',
+      'font-editorial text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] text-[#E8EAF6]/90 leading-[1.14] mb-1.5',
     standard:
-      'font-editorial text-[1.45rem] md:text-[1.9rem] text-[#E8EAF6]/85 leading-[1.15] mb-1.5',
+      'font-editorial text-[1.3rem] md:text-[1.7rem] text-[#E8EAF6]/85 leading-[1.16] mb-1.5',
     landscape:
-      'font-editorial text-[1.15rem] md:text-[1.45rem] text-[#E8EAF6]/80 leading-[1.15] mb-1.5',
+      'font-editorial text-[1.1rem] md:text-[1.35rem] text-[#E8EAF6]/80 leading-[1.16] mb-1.5',
     square:
-      'font-editorial text-[1.1rem] md:text-[1.35rem] text-[#E8EAF6]/75 leading-[1.18] mb-1.5',
+      'font-editorial text-[1.05rem] md:text-[1.25rem] text-[#E8EAF6]/75 leading-[1.18] mb-1.5',
   }[variant];
 
   const padClass = {
@@ -182,7 +182,7 @@ function WorkPanel({
 
 export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }) {
   return (
-    <section className="relative ei-section py-20 md:py-32 overflow-hidden">
+    <section className="relative ei-section py-16 md:py-32 overflow-hidden">
       {/* Section header */}
       <div className="ei-container mb-10 md:mb-14">
         <div className="flex items-baseline justify-between">
