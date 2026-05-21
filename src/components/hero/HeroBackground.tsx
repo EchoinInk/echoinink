@@ -14,13 +14,14 @@ export function HeroBackground() {
           <source srcSet={wideAvif} type="image/avif" />
           <source srcSet={wideWebp} type="image/webp" />
 
-          <img
-            src={widePng}
-            alt=""
-            className="absolute inset-0 h-full w-full object-cover object-center"
-          />
-        </picture>
-      </div></div>
+        <img
+        src={widePng}
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+    </picture>
+  </div>
+</div>
 
       {/* Cinematic top frame — atmospheric darkness framing the navigation region */}
       <div
