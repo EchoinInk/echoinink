@@ -5,15 +5,25 @@ import { HeroHeading } from './HeroHeading';
 
 export function Hero() {
   return (
-<section className="relative w-full aspect-[16/9] flex items-center justify-center overflow-hidden">
+    <section className="relative w-full aspect-[16/9] overflow-hidden flex items-center justify-center">
+      
+      {/* Background */}
       <HeroBackground />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-6" style={{ transform: 'translateY(6vh)' }}>
-
+      {/* Centered content */}
+      <div
+        className="relative z-10 flex flex-col items-center text-center px-6"
+        style={{ transform: 'translateY(6vh)' }}
+      >
         <HeroHeading />
         <HeroCTA />
       </div>
-      <Footer />
+
+      {/* Footer OVERLAY — does NOT affect height */}
+      <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none">
+        <Footer />
+      </div>
+
     </section>
   );
 }
