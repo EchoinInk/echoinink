@@ -28,7 +28,22 @@ export function Hero() {
         </div>
       </div>
 
-      <Footer />
-    </section>
+      <section className="relative w-full overflow-hidden aspect-[9/16] md:aspect-[21/9]">
+  <HeroBackground />
+
+  <div className="absolute inset-0 z-10 pointer-events-none">
+    <HeroHeading />
+    <HeroCTA />
+
+    {/* Footer text inside hero */}
+    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-center text-white opacity-80">
+      <p className="text-xs tracking-wide">INK MEETS LIGHT.</p>
+      <p className="text-xs tracking-wide">EMOTIONS BECOME DESIGN.</p>
+    </div>
+  </div>
+</section>
+
+{/* Real footer below */}
+<Footer />
   );
 }
