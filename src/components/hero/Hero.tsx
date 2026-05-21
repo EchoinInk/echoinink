@@ -19,7 +19,9 @@ export function Hero() {
       </div>
 
       {/* Footer OVERLAY — does NOT affect height */}
-      <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none">
+<div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none pb-4 md:pb-6">
+  <Footer />
+</div>
         <Footer />
       </div>
 
