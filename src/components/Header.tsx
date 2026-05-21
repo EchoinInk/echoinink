@@ -19,12 +19,14 @@ export function Header() {
       <div className="ei-container">
         <nav className="flex items-center py-6 md:py-8">
           <Link to="/" className="shrink-0">
-            <img
-              src={balancedLogo}
-              alt="Echo in Ink"
-              className="h-7 md:h-9"
-              style={{ filter: 'drop-shadow(0 0 6px rgba(167, 139, 250, 0.3))' }}
-            />
+            <Link to="/" className="shrink-0">
+  <img
+    src={wordmark}
+    alt="Echo in Ink"
+    className="h-6 md:h-7 lg:h-8 w-auto"
+  />
+</Link>
+
           </Link>
           <div className="flex-1 flex justify-center">
             <ul className="hidden md:flex items-center gap-8 lg:gap-10">
