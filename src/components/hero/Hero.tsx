@@ -13,7 +13,7 @@ export function Hero() {
         w-full 
         overflow-hidden 
         aspect-[9/16] 
-        md:aspect-[16/9]
+        md:aspect-[21/9]
       "
     >
       <HeroBackground />
