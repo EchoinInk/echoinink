@@ -16,7 +16,7 @@ export function HeroBackground() {
           <img
             src={heroPng}
             alt=""
-            className="absolute inset-0 h-full w-full object-cover object-center"
+            className="absolute inset-0 h-full w-full object-contain object-center"
           />
         </picture>
       </div>
