@@ -1,6 +1,29 @@
 import heroPng from '@/assets/ei-dark-mono-21x9.png';
 import heroWebp from '@/assets/ei-dark-mono-21x9.webp';
 import heroAvif from '@/assets/ei-dark-mono-21x9.avif';
+import { HeroBackground } from './HeroBackground';
+
+export function HeroWrapper() {
+  return (
+    <section
+      className="
+        relative 
+        w-full 
+        overflow-hidden 
+        aspect-[9/16] 
+        md:aspect-[21/9]
+      "
+    >
+      {/* Background layers */}
+      <HeroBackground />
+
+      {/* Optional content layer */}
+      <div className="relative z-10 flex items-center justify-center h-full">
+        {/* Add hero text or leave empty */}
+      </div>
+    </section>
+  );
+}
 
 export function HeroBackground() {
   return (
