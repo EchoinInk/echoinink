@@ -12,10 +12,12 @@ export function HeroBackground() {
           <source srcSet={wideWebp} type="image/webp" />
 
           <img
-            src={widePng}
-            alt=""
-            className="absolute inset-0 w-full h-full object-contain object-center"
-          />
+  src={widePng}
+  alt=""
+  className="absolute top-0 left-0 w-full h-auto object-cover object-center"
+  style={{ minHeight: '100%' }}
+/>
+
         </picture>
       </div>
 
