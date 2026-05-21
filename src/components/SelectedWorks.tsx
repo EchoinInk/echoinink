@@ -126,7 +126,7 @@ function WorkPanel({
     >
       {/* Atmospheric gradient background */}
       <div
-        className="absolute inset-0 transition-transform duration-[1600ms] ease-out group-hover:scale-[1.025]"
+        className="absolute inset-0 transition-transform duration-[2000ms] ease-out group-hover:scale-[1.015]"
         style={{ background: work.gradient, backgroundColor: work.bg }}
       />
 
