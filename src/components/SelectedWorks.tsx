@@ -182,7 +182,7 @@ function WorkPanel({
 
 export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }) {
   return (
-    <section className="relative ei-section py-24 md:py-36 overflow-hidden">
+    <section className="relative ei-section py-20 md:py-32 overflow-hidden">
       {/* Section header */}
       <div className="ei-container mb-10 md:mb-14">
         <div className="flex items-baseline justify-between">

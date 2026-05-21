@@ -31,7 +31,7 @@ const offerings = [
 
 export function WorkWithStudio() {
   return (
-    <section className="relative ei-section py-24 md:py-40 overflow-hidden">
+    <section className="relative ei-section py-28 md:py-44 overflow-hidden">
       {/* Atmospheric accent — faint indigo, left */}
       <div
         className="absolute pointer-events-none"
@@ -71,7 +71,7 @@ export function WorkWithStudio() {
       </div>
 
       <div className="ei-container">
-        <div className="max-w-4xl">
+        <div className="max-w-5xl">
           {/* Section label */}
           <motion.span
             initial={{ opacity: 0, y: 14 }}

@@ -18,7 +18,7 @@ export function Philosophy() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 55% 65% at 50% 50%, rgba(99,102,241,0.04) 0%, transparent 72%)',
+            'radial-gradient(ellipse 55% 65% at 50% 50%, rgba(99,102,241,0.032) 0%, transparent 72%)',
         }}
       />
 
@@ -34,7 +34,7 @@ export function Philosophy() {
       </Container>
 
       <Container>
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <SectionHeading
             eyebrow="Approach"
             title="I believe creativity is a form of worldbuilding — a way of translating memory, identity, and emotion into something you can step inside."
