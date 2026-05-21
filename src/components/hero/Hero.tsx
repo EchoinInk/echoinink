@@ -19,7 +19,7 @@ export function Hero() {
         
 
         {/* Lower Content Group */}
-                  <HeroDescription />
+                
 
         <div className="absolute left-1/2 bottom-[6vh] md:bottom-[8vh] -translate-x-1/2 text-center px-6">
           <HeroCTA />
