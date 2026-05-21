@@ -1,4 +1,3 @@
-import { StarDivider } from '../StarDivider';
 
 export function HeroHeading() {
   return (
@@ -26,13 +25,6 @@ export function HeroHeading() {
       >
         DESIGN. EMOTION. ECHO.
       </p>
-
-      {/* Divider LEFT */}
-      <div className="w-full flex justify-start">
-  <div className="w-[120px] flex justify-center">
-    <StarDivider />
-  </div>
-</div>
 
 
       {/* Clarity line */}
