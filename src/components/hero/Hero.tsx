@@ -27,8 +27,8 @@ export function Hero() {
           <HeroCTA />
         </div>
       </div>
-
-      <Footer />
     </section>
+      <Footer />
+
   );
 }
