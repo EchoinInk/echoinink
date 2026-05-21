@@ -35,12 +35,12 @@ export function Header() {
                   <Link
                     to={item.href}
                     aria-current={pathname === item.href ? 'page' : undefined}
-                    className="font-structural text-[11px] tracking-[0.2em] uppercase transition-all duration-300 relative focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-[#0F1220] rounded-sm"
+                    className="font-structural text-[11px] tracking-[0.24em] uppercase transition-all duration-500 relative focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-[#0F1220] rounded-sm"
                     style={{
                       color:
                         pathname === item.href
                           ? 'rgba(255,255,255,0.95)'
-                          : 'rgba(255,255,255,0.45)',
+                          : 'rgba(255,255,255,0.55)',
                     }}
                   >
                     {item.label}
@@ -53,7 +53,7 @@ export function Header() {
             </ul>
           </div>
           <button 
-            className="md:hidden shrink-0 font-structural text-[11px] tracking-[0.2em] uppercase text-white/50 focus:text-white/80 focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-[#0F1220]"
+            className="md:hidden shrink-0 font-structural text-[11px] tracking-[0.24em] uppercase text-white/60 focus:text-white/85 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-[#0F1220]"
             aria-label="Open navigation menu"
             aria-expanded="false"
           >
