@@ -7,6 +7,13 @@ import { EASE, DURATION, VIEWPORT } from '@/lib/motion';
 export function StudioIntro() {
   return (
     <Section className="relative py-20 md:py-32 lg:py-36 overflow-hidden">
+      {/* Subtle tonal transition from hero */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 120% 80% at 50% 20%, rgba(99,102,241,0.015) 0%, transparent 50%)',
+        }}
+      />
       {/* Atmospheric depth accent — soft violet cloud, right side */}
       <div
         className="absolute pointer-events-none"

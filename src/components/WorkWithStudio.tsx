@@ -41,8 +41,8 @@ export function WorkWithStudio() {
           width: 'clamp(280px, 38vw, 560px)',
           height: 'clamp(280px, 38vw, 560px)',
           background:
-            'radial-gradient(ellipse 68% 68% at 32% 52%, rgba(99,102,241,0.045) 0%, transparent 72%)',
-          filter: 'blur(75px)',
+            'radial-gradient(ellipse 68% 68% at 32% 52%, rgba(99,102,241,0.036) 0%, transparent 72%)',
+          filter: 'blur(80px)',
         }}
       />
       {/* Atmospheric accent — faint violet, right */}
