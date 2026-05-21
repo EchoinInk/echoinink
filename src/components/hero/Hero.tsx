@@ -12,7 +12,7 @@ export function Hero() {
 
       {/* Centered content */}
   <div className="ei-container"><div
-  className="relative z-10 max-w-[600px] items-start text-left pl-10 md:pl-16"
+  className="relative z-10 max-w-[600px] items-start text-left"
   style={{ transform: 'translateY(6vh)' }}
 >
 
@@ -21,7 +21,7 @@ export function Hero() {
       </div>
     </div>
       {/* Footer OVERLAY — does NOT affect height */}
-<div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none pb-4 md:pb-6"
+<div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none"
 style={{ transform: 'translateY(22px)' }}>
   <Footer />
 </div>
