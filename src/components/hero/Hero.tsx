@@ -12,8 +12,8 @@ export function Hero() {
 
       {/* Centered content */}
   <div className="ei-container"><div
-  className="relative z-10 max-w-[600px] items-start text-left"
-  style={{ transform: 'translateY(6vh)' }}
+  className="relative z-10 max-w-[680px] items-start text-left"
+  style={{ transform: 'translateY(10vh)' }}
 >
 
         <HeroHeading />
