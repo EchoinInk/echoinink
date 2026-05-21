@@ -1,6 +1,6 @@
-import widePng from '@/assets/ei-mi-mono-21x9.png';
-import wideWebp from '@/assets/ei-dark-mono-21x9.webp';
-import wideAvif from '@/assets/ei-dark-mono-21x9.avif';
+import widePng from '@/assets/ei-minimal-dark-21x9.png';
+import wideWebp from '@/assets/ei-minimal-dark-21x9.webp';
+import wideAvif from '@/assets/ei-minimal-dark-21x9.avif';
 
 export function HeroBackground() {
   return (
