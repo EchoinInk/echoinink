@@ -1,4 +1,4 @@
-import heroPng from '@/assets/ei-dark-mono-16x9.png';
+import heroPng from '@/assets/ei-x-mono-16x9.png';
 import heroWebp from '@/assets/ei-dark-mono-16x9.webp';
 import heroAvif from '@/assets/ei-dark-mono-16x9.avif';
 
