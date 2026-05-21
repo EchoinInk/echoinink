@@ -5,8 +5,9 @@ import wideAvif from '@/assets/ei-hero-16x9.avif';
 export function HeroBackground() {
   return (
     <>
-      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-        <picture>
+      <<div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+  <div className="relative w-full h-0" style={{ paddingBottom: '56.25%' }}>
+    <picture>
           {/* Mobile (portrait) sources */}
         
           {/* Wide / desktop sources */}
