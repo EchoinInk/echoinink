@@ -55,12 +55,12 @@ export function LumoCaseStudyTeaser() {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
           variants={container}
-          className="max-w-3xl"
+          className="max-w-4xl"
         >
           <motion.h2
             variants={line}
-            className="font-editorial text-[1.9rem] md:text-[2.9rem] lg:text-[3.6rem] text-[#E8EAF6]/80 leading-[1.16] mb-6 md:mb-8"
-            style={{ letterSpacing: '-0.018em' }}
+            className="font-editorial text-[1.8rem] md:text-[2.7rem] lg:text-[3.4rem] text-[#E8EAF6]/85 leading-[1.18] mb-6 md:mb-8"
+            style={{ letterSpacing: '-0.015em' }}
           >
             LUMO — A World Built
             <br className="hidden md:block" />

@@ -27,7 +27,7 @@ export function ClosingSection() {
           className="absolute inset-0 pointer-events-none"
           style={{
             background:
-              'radial-gradient(ellipse 55% 65% at 50% 52%, rgba(99,102,241,0.07) 0%, transparent 70%)',
+              'radial-gradient(ellipse 55% 65% at 50% 52%, rgba(99,102,241,0.055) 0%, transparent 70%)',
           }}
         />
       </div>
@@ -52,8 +52,8 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
-          className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-8 max-w-4xl"
-          style={{ letterSpacing: '-0.01em' }}
+          className="font-editorial text-[1.8rem] md:text-[2.5rem] lg:text-[3.1rem] text-[#E8EAF6]/85 leading-[1.24] mb-8 max-w-4xl"
+          style={{ letterSpacing: '-0.008em' }}
         >
           Step deeper into the world.
         </motion.h2>
@@ -64,7 +64,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 2 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[34ch] mb-5 md:mb-6"
+          className="font-structural text-[14px] md:text-[15px] text-white/35 leading-[1.85] max-w-[38ch] mb-6 md:mb-7"
         >
           Echo in Ink is an ongoing exploration — a living archive of stories,
           atmospheres, and luminous digital experiments.
@@ -75,7 +75,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 3 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[34ch] mb-8 md:mb-10"
+          className="font-structural text-[14px] md:text-[15px] text-white/30 leading-[1.85] max-w-[38ch] mb-9 md:mb-11"
         >
           If something here resonates, stay a while. Wander.
           <br />
@@ -90,7 +90,7 @@ export function ClosingSection() {
         >
           <Link
             to="/works"
-            className="ei-gradient-border-btn relative inline-flex items-center justify-center px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/85 transition-all duration-500 hover:text-white hover:scale-[1.02]"
+            className="ei-gradient-border-btn relative inline-flex items-center justify-center px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/85 transition-all duration-700 hover:text-white hover:bg-white/5"
           >
             <span className="relative z-10">Enter the Archive</span>
           </Link>
