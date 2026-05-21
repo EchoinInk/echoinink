@@ -23,7 +23,7 @@ export function Header() {
   <img
     src={wordmark}
     alt="Echo in Ink"
-    className="h-6 md:h-7 lg:h-8 w-auto"
+    className="h-2 md:h-3 lg:h-4 w-auto"
   />
 </Link>
 
