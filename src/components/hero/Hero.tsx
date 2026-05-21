@@ -13,7 +13,6 @@ export function Hero() {
         <HeroHeading />
         <HeroCTA />
       </div>
-
       <Footer />
     </section>
   );
