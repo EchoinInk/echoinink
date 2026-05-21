@@ -5,7 +5,7 @@ import { HeroHeading } from './HeroHeading';
 
 export function Hero() {
   return (
-    <section className="relative w-full aspect-[16/9] overflow-hidden flex items-center justify-center">
+<section className="relative w-full aspect-[16/9] flex items-center justify-start pl-10 overflow-hidden">
       
       {/* Background */}
       <HeroBackground />

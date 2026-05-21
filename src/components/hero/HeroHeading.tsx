@@ -29,8 +29,11 @@ export function HeroHeading() {
 
       {/* Divider LEFT */}
       <div className="w-full flex justify-start">
-        <StarDivider />
-      </div>
+  <div className="w-[120px] flex justify-center">
+    <StarDivider />
+  </div>
+</div>
+
 
       {/* Clarity line */}
       <p
