@@ -28,7 +28,7 @@ export function Header() {
 </Link>
 
           </Link>
-          <div className="flex-1 flex justify-center">
+          <div className="flex-1 flex justify-end">
             <ul className="hidden md:flex items-center gap-8 lg:gap-10">
               {navItems.map((item) => (
                 <li key={item.label}>
