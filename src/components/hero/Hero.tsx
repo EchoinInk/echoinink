@@ -11,9 +11,11 @@ export function Hero() {
       <HeroBackground />
 
       {/* Centered content */}
-      <div className="relative z-10 flex flex-col items-start text-left px-6"
-        style={{ transform: 'translateY(6vh)' }}
-      >
+    <div
+  className="relative z-10 flex flex-col items-start text-left pl-10 md:pl-16"
+  style={{ transform: 'translateY(6vh)' }}
+>
+
         <HeroHeading />
         <HeroCTA />
       </div>
