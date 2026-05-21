@@ -1,4 +1,4 @@
-import monogram from '';
+import monogram from '@/assets/monogram-balanced.png';
 
 export function HeroMonogram() {
   return (
