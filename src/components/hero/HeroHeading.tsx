@@ -27,7 +27,10 @@ export function HeroHeading() {
         DESIGN. EMOTION. ECHO.
       </p>
 
-      <StarDivider align="left" />
+      {/* Divider LEFT */}
+      <div className="w-full flex justify-start">
+        <StarDivider />
+      </div>
 
       {/* Clarity line */}
       <p
