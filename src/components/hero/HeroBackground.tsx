@@ -5,7 +5,7 @@ import wideAvif from '@/assets/ei-hero-16x9.avif';
 export function HeroBackground() {
   return (
     <>
-      <<div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
   <div className="relative w-full h-0" style={{ paddingBottom: '56.25%' }}>
     <picture>
           {/* Mobile (portrait) sources */}
@@ -20,7 +20,7 @@ export function HeroBackground() {
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
         </picture>
-      </div>
+      </div></div>
 
       {/* Cinematic top frame — atmospheric darkness framing the navigation region */}
       <div
