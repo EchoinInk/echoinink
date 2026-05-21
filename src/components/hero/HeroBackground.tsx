@@ -1,7 +1,4 @@
-import mobilePng from '@/assets/ei-dark-mono-9x16.png';
-import mobileWebp from '@/assets/ei-dark-mono-9x16.webp';
-import mobileAvif from '@/assets/ei-dark-mono-9x16.avif';
-import widePng from '@/assets/ei-dark-mono-21x9.png';
+import widePng from '@/assets/ei-mi-mono-21x9.png';
 import wideWebp from '@/assets/ei-dark-mono-21x9.webp';
 import wideAvif from '@/assets/ei-dark-mono-21x9.avif';
 
@@ -11,10 +8,7 @@ export function HeroBackground() {
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
         <picture>
           {/* Mobile (portrait) sources */}
-          <source media="(max-aspect-ratio: 3/4)" srcSet={mobileAvif} type="image/avif" />
-          <source media="(max-aspect-ratio: 3/4)" srcSet={mobileWebp} type="image/webp" />
-          <source media="(max-aspect-ratio: 3/4)" srcSet={mobilePng} type="image/png" />
-
+        
           {/* Wide / desktop sources */}
           <source srcSet={wideAvif} type="image/avif" />
           <source srcSet={wideWebp} type="image/webp" />

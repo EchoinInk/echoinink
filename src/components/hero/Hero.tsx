@@ -1,5 +1,4 @@
 import { Footer } from '../Footer';
-import { HeroAtmosphere } from './HeroAtmosphere';
 import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
@@ -11,7 +10,6 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <HeroBackground />
-      <HeroAtmosphere />
       <HeroReflection />
 
       <div className="relative z-10 flex flex-col items-center text-center px-6" style={{ transform: 'translateY(6vh)' }}>
