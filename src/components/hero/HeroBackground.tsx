@@ -14,7 +14,7 @@ export function HeroBackground() {
           <img
             src={widePng}
             alt=""
-            className="absolute inset-0 w-full h-full object-cover object-center"
+            className="absolute inset-0 w-full h-full object-contain object-center"
           />
         </picture>
       </div>
