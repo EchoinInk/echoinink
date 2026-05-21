@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import balancedLogo from '@/assets/monogram-balanced.png';
+import wordmark from '@/assets/echo-in-ink-wordmark.png';
+
 
 const navItems = [
   { label: 'STUDIO', href: '/' },
