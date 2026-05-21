@@ -12,7 +12,7 @@ export function Hero() {
 
       {/* Centered content */}
     <div
-  className="relative z-10 flex flex-col items-start text-left pl-10 md:pl-16"
+  className="relative z-10 max-w-[600px] items-start text-left pl-10 md:pl-16"
   style={{ transform: 'translateY(6vh)' }}
 >
 
