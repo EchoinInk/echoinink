@@ -17,10 +17,9 @@ export function Home() {
       <Hero />
 <div className="relative -mt-16 md:-mt-24 pointer-events-none">
   <div className="h-32 md:h-40 lg:h-48 bg-gradient-to-b from-transparent via-black/10 to-black" />
-</div>        <div className="h-24 md:h-32 lg:h-40 bg-gradient-to-b from-transparent via-black/15 to-black" />
-      </div>
-      <Section className="relative py-24 md:py-36 lg:py-44 overflow-hidden">
-        <Container size="xl">
+</div>
+<Section className="relative pt-20 md:pt-28 lg:pt-36 pb-24 md:pb-36 lg:pb-44 overflow-hidden">
+          <Container size="xl">
           <div className="max-w-[680px] mx-auto text-center">
 
             {/* Eyebrow */}
@@ -49,7 +48,7 @@ export function Home() {
 
           </div>
         </Container>
-      </Section>
+        </Section>
       <StudioIntro />
       <Philosophy />
       <LumoCaseStudyTeaser />
