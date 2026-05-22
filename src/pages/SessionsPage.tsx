@@ -1,16 +1,16 @@
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
+  import { Helmet } from 'react-helmet-async';
+  import { motion } from 'framer-motion';
+  import { Link } from 'react-router-dom';
+  import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
-const navigations = [
-  { label: 'Creative identity and positioning' },
-  { label: 'Visual direction and aesthetic clarity' },
-  { label: 'Narrative development and story systems' },
-  { label: 'Brand atmosphere and emotional register' },
-  { label: 'Project direction and momentum' },
-  { label: 'Creative blocks and resistance patterns' },
-] as const;
+  const navigations = [
+    { label: 'Creative identity and positioning' },
+    { label: 'Visual direction and aesthetic clarity' },
+    { label: 'Narrative development and story systems' },
+    { label: 'Brand atmosphere and emotional register' },
+    { label: 'Project direction and momentum' },
+    { label: 'Creative blocks and resistance patterns' },
+  ] as const;
 
 export function SessionsPage() {
   return (
