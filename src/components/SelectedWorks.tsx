@@ -183,6 +183,13 @@ function WorkPanel({
 export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }) {
   return (
     <section className="relative ei-section py-16 md:py-32 overflow-hidden">
+      {/* Reduced atmosphere - typography-led section */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 60% 70% at 50% 50%, rgba(99,102,241,0.012) 0%, transparent 75%)',
+        }}
+      />
       {/* Section header */}
       <div className="ei-container mb-10 md:mb-14">
         <div className="flex items-baseline justify-between">

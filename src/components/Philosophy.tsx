@@ -13,12 +13,12 @@ const principles = [
 export function Philosophy() {
   return (
     <Section className="relative py-24 md:py-36 overflow-hidden">
-      {/* Faint indigo atmospheric center */}
+      {/* Reduced atmosphere - typography-led section */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 55% 65% at 50% 50%, rgba(99,102,241,0.032) 0%, transparent 72%)',
+            'radial-gradient(ellipse 55% 65% at 50% 50%, rgba(99,102,241,0.018) 0%, transparent 72%)',
         }}
       />
 
@@ -53,7 +53,7 @@ export function Philosophy() {
               Guided by
             </motion.span>
 
-            <div className="space-y-0">
+            <div className="space-y-0 md:ml-8">
               {principles.map((line, i) => (
                 <motion.p
                   key={line}

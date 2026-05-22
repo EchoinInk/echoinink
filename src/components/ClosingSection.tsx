@@ -52,8 +52,8 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
-          className="font-editorial text-[1.8rem] md:text-[2.5rem] lg:text-[3.1rem] text-[#E8EAF6]/85 leading-[1.24] mb-8 max-w-4xl"
-          style={{ letterSpacing: '-0.008em' }}
+          className="font-editorial text-[1.8rem] md:text-[2.5rem] lg:text-[3.1rem] text-[#E8EAF6]/85 leading-[1.26] mb-8 max-w-4xl"
+          style={{ letterSpacing: '-0.006em' }}
         >
           Step deeper into the world.
         </motion.h2>

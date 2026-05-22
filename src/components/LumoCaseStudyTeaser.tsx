@@ -22,6 +22,13 @@ export function LumoCaseStudyTeaser() {
       className="relative w-full overflow-hidden"
       style={{ background: 'linear-gradient(180deg, #060810 0%, #0a0d1f 50%, #060810 100%)' }}
     >
+      {/* Subtle tonal continuity from previous section */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 140% 90% at 50% 30%, rgba(99,102,241,0.008) 0%, transparent 60%)',
+        }}
+      />
       {/* Ambient glow — primary violet, upper-left drift */}
       <GlowField
         style={{
@@ -29,10 +36,10 @@ export function LumoCaseStudyTeaser() {
           width: 'clamp(480px, 68vw, 940px)',
           height: 'clamp(480px, 68vw, 940px)',
         }}
-        gradient="radial-gradient(ellipse 50% 46% at 38% 42%, rgba(99,102,241,0.095) 0%, rgba(80,72,200,0.036) 46%, transparent 70%)"
+        gradient="radial-gradient(ellipse 50% 46% at 38% 42%, rgba(99,102,241,0.085) 0%, rgba(80,72,200,0.032) 46%, transparent 70%)"
         blur={88}
-        anim={{ opacity: [0.62, 1, 0.62], scale: [1, 1.028, 1] }}
-        duration={34}
+        anim={{ opacity: [0.58, 0.94, 0.58], scale: [1, 1.022, 1] }}
+        duration={38}
       />
       {/* Ambient glow — secondary, lower-right offset */}
       <GlowField
@@ -41,10 +48,10 @@ export function LumoCaseStudyTeaser() {
           width: 'clamp(300px, 42vw, 620px)',
           height: 'clamp(300px, 42vw, 620px)',
         }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgba(88,65,182,0.050) 0%, transparent 70%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgba(88,65,182,0.045) 0%, transparent 70%)"
         blur={72}
-        anim={{ opacity: [0.38, 0.76, 0.38] }}
-        duration={40}
+        anim={{ opacity: [0.34, 0.68, 0.34] }}
+        duration={44}
         delay={9}
       />
       <GrainOverlay range={[0.012, 0.030]} duration={32} delay={4} size={200} />

@@ -83,27 +83,27 @@ export function WorkWithStudio() {
             Work With the Studio
           </motion.span>
 
-          {/* Display heading */}
+          {/* Display heading - asymmetric alignment with refined cadence */}
           <motion.h2
             initial={{ opacity: 0, y: 22 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.loose}
             transition={{ duration: DURATION.normal, ease: 'easeInOut', delay: 0.1 }}
-            className="font-editorial text-[1.9rem] md:text-[2.5rem] lg:text-[3rem] text-[#E8EAF6]/80 leading-[1.22] mb-10 md:mb-12"
-            style={{ letterSpacing: '-0.012em' }}
+            className="font-editorial text-[1.9rem] md:text-[2.5rem] lg:text-[3rem] text-[#E8EAF6]/80 leading-[1.24] mb-8 md:mb-10 md:text-left text-center"
+            style={{ letterSpacing: '-0.008em' }}
           >
             Authored creative direction
             <br className="hidden md:block" />
             for founders, artists, and makers.
           </motion.h2>
 
-          {/* Subheading */}
+          {/* Subheading - tighter compression */}
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.loose}
             transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.normal }}
-            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[55ch] mb-20 md:mb-24"
+            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[55ch] mb-16 md:mb-20 md:text-left text-center"
           >
             Echo in Ink offers authored creative direction for founders, artists,
             and makers seeking clarity, identity, and atmosphere.
@@ -164,6 +164,15 @@ export function WorkWithStudio() {
           </div>
         </div>
       </div>
+
+      {/* Cinematic atmospheric bridge to CTA */}
+      <div
+        className="absolute inset-x-0 bottom-0 pointer-events-none"
+        style={{
+          height: '120px',
+          background: 'linear-gradient(to bottom, transparent, rgba(99,102,241,0.012) 50%, rgba(99,102,241,0.018))',
+        }}
+      />
     </section>
   );
 }

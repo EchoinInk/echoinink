@@ -7,7 +7,7 @@ export function HeroMonogram() {
       alt="Ei monogram"
       className="relative mx-auto"
       style={{
-  width: 'clamp(170px, 18vh, 280px)',
+  width: 'clamp(156px, 16.5vh, 258px)',
   opacity: 0.94,
   filter: `
     brightness(0.92)
