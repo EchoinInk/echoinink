@@ -21,7 +21,6 @@ export function Home() {
 <Section className="relative pt-20 md:pt-28 lg:pt-36 pb-24 md:pb-36 lg:pb-44 overflow-hidden">
           <Container size="xl">
           <div className="max-w-[680px] mx-auto text-center">
-
             {/* Eyebrow */}
             <p className="...">
   A creative studio shaped by intention.
