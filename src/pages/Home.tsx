@@ -16,12 +16,9 @@ export function Home() {
       </Helmet>
       <Hero />
       <div className="relative -mt-10 md:-mt-16 lg:-mt-24 pointer-events-none">
-        <div className="h-24 md:h-32 lg:h-40 bg-gradient-to-b from-transparent via-black/20 to-black" />
+        <div className="h-24 md:h-32 lg:h-40 bg-gradient-to-b from-transparent via-black/15 to-black" />
       </div>
       <Section className="relative py-24 md:py-36 lg:py-44 overflow-hidden">
-        <div className="absolute inset-0 opacity-30 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/5 blur-[120px]" />
-        </div>
         <Container size="xl">
           <div className="max-w-[680px] mx-auto text-center">
 
