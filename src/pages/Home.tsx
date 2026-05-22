@@ -15,8 +15,9 @@ export function Home() {
         <meta name="description" content="Echo in Ink is a creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media." />
       </Helmet>
       <Hero />
-      <div className="relative -mt-10 md:-mt-16 lg:-mt-24 pointer-events-none">
-        <div className="h-24 md:h-32 lg:h-40 bg-gradient-to-b from-transparent via-black/15 to-black" />
+<div className="relative -mt-16 md:-mt-24 pointer-events-none">
+  <div className="h-32 md:h-40 lg:h-48 bg-gradient-to-b from-transparent via-black/10 to-black" />
+</div>        <div className="h-24 md:h-32 lg:h-40 bg-gradient-to-b from-transparent via-black/15 to-black" />
       </div>
       <Section className="relative py-24 md:py-36 lg:py-44 overflow-hidden">
         <Container size="xl">
