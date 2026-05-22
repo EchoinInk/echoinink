@@ -32,14 +32,14 @@ export function Home() {
               Echo in Ink is where ideas are distilled, clarified, and rebuilt with care.
             </p>
 
-            <div className="h-6 md:h-8" />
+            <div className="h-8" />
 
             {/* Atmospheric expansion */}
             <p className="font-structural text-[14px] md:text-[15px] text-white/45 leading-[1.95] max-w-[62ch] mx-auto italic">
               A place for brands, founders, and dreamers who want work that feels alive—quiet, intelligent, and deeply considered.
             </p>
 
-            <div className="h-6 md:h-8" />
+            <div className="h-6" />
 
             {/* Closing anchor */}
             <p className="font-structural text-[14px] md:text-[15px] text-white/60 leading-[1.75] tracking-wide">
