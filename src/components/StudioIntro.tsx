@@ -36,6 +36,4 @@ export function StudioIntro() {
       </Container>
     </Section>
   );
-}
-  );
-}
+}}
