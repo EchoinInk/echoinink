@@ -1,6 +1,9 @@
 import widePng from '@/assets/ei-min-hero-16x9.png';
 import wideWebp from '@/assets/ei-min-hero-16x9.webp';
 import wideAvif from '@/assets/ei-min-hero-16x9.avif';
+import mobilePng from '@/assets/ei-min-hero-9x16.png';
+import mobileWebp from '@/assets/ei-min-hero-9x16.webp';
+import mobileAvif from '@/assets/ei-min-hero-9x16.avif';
 
 export function HeroBackground() {
   return (
@@ -8,16 +11,15 @@ export function HeroBackground() {
       {/* Background image */}
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
         <picture>
+          <source media="(max-aspect-ratio: 9/16)" srcSet={mobileAvif} type="image/avif" />
+          <source media="(max-aspect-ratio: 9/16)" srcSet={mobileWebp} type="image/webp" />
           <source srcSet={wideAvif} type="image/avif" />
           <source srcSet={wideWebp} type="image/webp" />
-
           <img
-  src={widePng}
-  alt=""
-  className="absolute top-0 left-0 w-full h-auto object-cover object-center"
-  style={{ minHeight: '100%' }}
-/>
-
+            src={widePng}
+            alt=""
+            className="absolute top-0 left-0 w-full h-full object-cover object-center"
+          />
         </picture>
       </div>
 

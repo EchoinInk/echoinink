@@ -36,9 +36,9 @@ export function Philosophy() {
       <Container>
         <div className="max-w-4xl">
           <SectionHeading
-            eyebrow="Approach"
-            title="I believe creativity is a form of worldbuilding — a way of translating memory, identity, and emotion into something you can step inside."
-            description="Every piece begins with a feeling: a fragment of self, a moment of resonance, a story waiting to surface."
+            eyebrow="Philosophy"
+            title="Atmosphere is not decoration — it is how meaning is felt."
+            description="Everything begins with emotional truth: a feeling, a tension, a memory, a fragment of identity waiting for language. Echo in Ink builds the worlds those things belong to."
           />
 
           {/* Principles triptych */}
