@@ -42,6 +42,24 @@ export function Home() {
 
       <Philosophy />
       <LumoCaseStudyTeaser />
+
+      {/* Breathing bridge — atmospheric transition between worlds */}
+      <div
+        aria-hidden="true"
+        className="relative h-20 md:h-28 lg:h-32 pointer-events-none overflow-hidden"
+        style={{
+          background: 'linear-gradient(to bottom, #080A14, #0A0D18)',
+        }}
+      >
+        {/* Soft radial drift for emotional continuity */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse 60% 50% at 50% 100%, rgba(99,102,241,0.03) 0%, transparent 70%)',
+          }}
+        />
+      </div>
+
       <ClosingSection />
     </main>
   );
