@@ -15,19 +15,40 @@ export function Home() {
         <meta name="description" content="Echo in Ink is a creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media." />
       </Helmet>
       <Hero />
-      <Section className="relative py-20 md:py-32 lg:py-36 overflow-hidden">
+      <div className="relative -mt-10 md:-mt-16 lg:-mt-24 pointer-events-none">
+        <div className="h-24 md:h-32 lg:h-40 bg-gradient-to-b from-transparent via-black/20 to-black" />
+      </div>
+      <Section className="relative py-24 md:py-36 lg:py-44 overflow-hidden">
+        <div className="absolute inset-0 opacity-30 pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-white/5 blur-[120px]" />
+        </div>
         <Container size="xl">
-          <div className="max-w-[600px] md:max-w-[680px] mx-auto text-center">
-            <p className="font-structural text-[14px] md:text-[15px] text-white/70 leading-[1.75] mb-8 md:mb-10">
+          <div className="max-w-[680px] mx-auto text-center">
+
+            {/* Eyebrow */}
+            <p className="font-structural text-[14px] md:text-[15px] text-white/70 leading-[1.75] mb-10 md:mb-12 tracking-wide">
               A creative studio shaped by intention.
             </p>
-            <p className="font-structural text-[14px] md:text-[15px] text-white/50 leading-[1.85] max-w-[48ch] mx-auto">
+
+            {/* Core statement */}
+            <p className="font-structural text-[15px] md:text-[16px] text-white/55 leading-[1.9] max-w-[58ch] mx-auto">
               Echo in Ink is where ideas are distilled, clarified, and rebuilt with care.
-              <br />
+            </p>
+
+            <div className="h-6 md:h-8" />
+
+            {/* Atmospheric expansion */}
+            <p className="font-structural text-[14px] md:text-[15px] text-white/45 leading-[1.95] max-w-[62ch] mx-auto italic">
               A place for brands, founders, and dreamers who want work that feels alive—quiet, intelligent, and deeply considered.
-              <br />
+            </p>
+
+            <div className="h-6 md:h-8" />
+
+            {/* Closing anchor */}
+            <p className="font-structural text-[14px] md:text-[15px] text-white/60 leading-[1.75] tracking-wide">
               We make meaning visible.
             </p>
+
           </div>
         </Container>
       </Section>
