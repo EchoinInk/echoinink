@@ -1,100 +1,69 @@
 import { useEffect, useRef, useState, useCallback } from "react";
-import type { ScrollState } from "@/lib/cinematic";
-import { SCROLL_CONFIG, shouldReduceMotion } from "@/lib/cinematic";
+import type { Phase } from "@/lib/cinematic";
+import { THRESHOLD } from "@/lib/cinematic";
 
-interface UseScrollEmotionOptions {
-  threshold?: { drift?: number; focus?: number; exit?: number };
-  onStateChange?: (state: ScrollState) => void;
-}
-
-interface ScrollEmotionState {
-  state: ScrollState;
-  progress: number;
+interface UseScrollEmotionReturn {
+  ref: React.RefObject<HTMLElement>;
+  phase: Phase;
   isInView: boolean;
 }
 
 /**
- * useScrollEmotion — Cinematic scroll state detection
+ * useScrollEmotion — Intersection-based scroll state inference
  * 
- * Tracks element position in viewport and reports cinematic states:
- * - "drift": Element entering — ambient, soft reveal
- * - "focus": Element centered — stable reading state  
- * - "cut": Element leaving — prepare for transition
+ * Determines cinematic phase based on element visibility:
+ * - "drift": Element entering (0-50% visible) — ambient state
+ * - "focus": Element centered (50%+ visible) — stable reading state
+ * - "cut": Element leaving (exiting viewport) — transition state
  * 
- * Scroll is film editing, not navigation.
+ * NO viewport percentage calculations. NO screen height dependencies.
+ * State is inferred from intersection ratios only — stable across all viewport sizes.
  */
-export function useScrollEmotion(options: UseScrollEmotionOptions = {}) {
-  const { threshold = {}, onStateChange } = options;
+export function useScrollEmotion(): UseScrollEmotionReturn {
   const ref = useRef<HTMLElement>(null);
-  const [state, setState] = useState<ScrollEmotionState>({
-    state: "drift",
-    progress: 0,
-    isInView: false,
-  });
-  
-  const prefersReduced = typeof window !== "undefined" ? shouldReduceMotion() : false;
+  const [phase, setPhase] = useState<Phase>("drift");
+  const [isInView, setIsInView] = useState(false);
 
-  const handleIntersection = useCallback(
-    (entries: IntersectionObserverEntry[]) => {
-      const [entry] = entries;
-      if (!entry) return;
+  const handleIntersection = useCallback((entries: IntersectionObserverEntry[]) => {
+    const [entry] = entries;
+    if (!entry) return;
 
-      const { boundingClientRect, intersectionRect, rootBounds } = entry;
-      
-      if (!rootBounds || prefersReduced) {
-        setState({ state: "focus", progress: 1, isInView: entry.isIntersecting });
-        return;
-      }
+    const ratio = entry.intersectionRatio;
+    const isIntersecting = entry.isIntersecting;
 
-      const elementHeight = boundingClientRect.height;
-      const viewportHeight = rootBounds.height;
-      
-      if (elementHeight === 0) return;
+    setIsInView(isIntersecting);
 
-      const elementTop = boundingClientRect.top;
-      const elementBottom = boundingClientRect.bottom;
-      
-      const driftThreshold = threshold.drift ?? SCROLL_CONFIG.thresholds.drift;
-      const focusThreshold = threshold.focus ?? SCROLL_CONFIG.thresholds.focus;
-      const exitThreshold = threshold.exit ?? SCROLL_CONFIG.thresholds.exit;
-
-      let progress = 0;
-      let scrollState: ScrollState = "drift";
-
-      if (elementTop > viewportHeight * (1 - driftThreshold)) {
-        progress = Math.max(0, 1 - (elementTop / (viewportHeight * (1 - driftThreshold))));
-        scrollState = "drift";
-      } else if (elementBottom < viewportHeight * exitThreshold) {
-        progress = Math.max(0, elementBottom / (viewportHeight * exitThreshold));
-        scrollState = "cut";
-      } else {
-        const focusStart = viewportHeight * (1 - focusThreshold);
-        const focusEnd = viewportHeight * exitThreshold;
-        const elementCenter = (elementTop + elementBottom) / 2;
-        progress = 1 - Math.abs(elementCenter - viewportHeight / 2) / (viewportHeight / 2);
-        scrollState = "focus";
-      }
-
-      setState({ state: scrollState, progress: Math.min(1, Math.max(0, progress)), isInView: entry.isIntersecting });
-      onStateChange?.(scrollState);
-    },
-    [threshold, onStateChange, prefersReduced]
-  );
+    // State inference — deterministic mapping
+    if (!isIntersecting) {
+      // Element not visible at all
+      setPhase(phase => phase === "focus" ? "cut" : "drift");
+    } else if (ratio < THRESHOLD.focus) {
+      // Element entering but not fully visible
+      setPhase("drift");
+    } else if (ratio >= THRESHOLD.focus && ratio < THRESHOLD.exit) {
+      // Element is the primary focus
+      setPhase("focus");
+    } else {
+      // Element fully visible or beginning to exit
+      setPhase(ratio < 1 ? "focus" : "cut");
+    }
+  }, []);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
 
+    // Stable thresholds — do NOT depend on viewport height
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: [0, 0.15, 0.5, 0.85, 1],
-      rootMargin: "-10% 0px -10% 0px",
+      threshold: [THRESHOLD.enter, THRESHOLD.focus, 0.75, THRESHOLD.exit],
+      rootMargin: "0px",
     });
 
     observer.observe(element);
     return () => observer.disconnect();
   }, [handleIntersection]);
 
-  return { ref, ...state };
+  return { ref, phase, isInView };
 }
 
 export default useScrollEmotion;
