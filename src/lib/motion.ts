@@ -5,10 +5,10 @@ export const EASE_STRING = 'cubic-bezier(0.22, 1, 0.36, 1)' as const;
 export const DURATION = {
   instant: 0.15,
   fast: 0.3,
-  normal: 0.5,
-  slow: 0.8,
-  slower: 1.2,
-  cinematic: 1.6,
+  normal: 0.6,
+  slow: 0.9,
+  slower: 1.4,
+  cinematic: 1.8,
 } as const;
 
 // ── Viewport Configuration ───────────────────────────────────────────────

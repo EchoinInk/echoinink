@@ -1,36 +1,33 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import bgWide from '@/assets/ei-hero-bg-dark-21x9.png';
+import { GlowField, GrainOverlay } from './AtmosphericSystem';
 import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 export function ClosingSection() {
   return (
-    <section className="relative overflow-hidden" style={{ minHeight: '52vh' }}>
-      {/* Background — atmospheric image at low opacity */}
-      <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${bgWide})`, opacity: 0.28 }}
-        />
-
-        {/* Top fade — blends from page background into image */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              'linear-gradient(to bottom, #0F1220 0%, rgba(15,18,32,0.6) 20%, transparent 42%, transparent 62%, rgba(15,18,32,0.65) 82%, #0F1220 100%)',
-          }}
-        />
-
-        {/* Subtle indigo center bloom */}
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              'radial-gradient(ellipse 55% 65% at 50% 52%, rgba(99,102,241,0.07) 0%, transparent 70%)',
-          }}
-        />
-      </div>
+    <section
+      className="relative overflow-hidden"
+      style={{
+        minHeight: '58vh',
+        background: 'linear-gradient(180deg, #080A14 0%, #0B0E1A 40%, #0A0D18 100%)',
+      }}
+    >
+      {/* Unified atmospheric system — single radial bloom */}
+      <GlowField
+        style={{
+          top: '20%',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          width: 'clamp(480px, 65vw, 900px)',
+          height: 'clamp(360px, 45vw, 550px)',
+        }}
+        gradient="radial-gradient(ellipse 48% 42% at 50% 55%, rgba(99,102,241,0.05) 0%, rgba(80,72,200,0.015) 55%, transparent 80%)"
+        blur={76}
+        anim={{ opacity: [0.4, 0.65, 0.4] }}
+        duration={46}
+      />
+      {/* Minimal grain texture */}
+      <GrainOverlay range={[0.008, 0.015]} duration={38} delay={4} size={220} />
 
       {/* Content */}
       <div
@@ -48,51 +45,42 @@ export function ClosingSection() {
         </motion.span>
 
         <motion.h2
-          initial={{ opacity: 0, y: 26 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
-          className="font-editorial text-[1.9rem] md:text-[2.6rem] lg:text-[3.2rem] text-[#E8EAF6]/80 leading-[1.22] mb-8 max-w-4xl"
-          style={{ letterSpacing: '-0.01em' }}
+          className="font-editorial text-[1.7rem] md:text-[2.4rem] lg:text-[3rem] text-[#E8EAF6]/75 leading-[1.22] mb-8 max-w-4xl"
+          style={{ letterSpacing: '-0.008em' }}
         >
           Step deeper into the world.
         </motion.h2>
 
-        {/* Body paragraphs */}
+        {/* Archive description — single authoritative statement */}
         <motion.p
-          initial={{ opacity: 0, y: 14 }}
+          initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 2 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[34ch] mb-5 md:mb-6"
+          className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.8] max-w-[40ch] mb-10 md:mb-12"
         >
           Echo in Ink is an ongoing exploration — a living archive of stories,
           atmospheres, and luminous digital experiments.
         </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 12 }}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 3 }}
-          className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[34ch] mb-8 md:mb-10"
-        >
-          If something here resonates, stay a while. Wander.
-          <br />
-          There's more to discover in the quiet.
-        </motion.p>
-
-        <motion.div
-          initial={{ opacity: 0, y: 14 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={VIEWPORT.normal}
-          transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 4 }}
         >
           <Link
             to="/works"
-            className="ei-gradient-border-btn relative inline-flex items-center justify-center px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/85 transition-all duration-500 hover:text-white hover:scale-[1.02]"
+            className="group relative inline-flex items-center gap-2.5 font-structural text-[11px] tracking-[0.24em] uppercase text-white/50 transition-colors duration-700 ease-out hover:text-white/75"
           >
-            <span className="relative z-10">Enter the Archive</span>
+            <span>Enter the Archive</span>
+            <span className="inline-block transition-transform duration-700 ease-out group-hover:translate-x-[2px]">
+              →
+            </span>
           </Link>
         </motion.div>
       </div>
