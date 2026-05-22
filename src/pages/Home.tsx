@@ -23,7 +23,7 @@ export function Home() {
           <Container size="xl">
           <div className="max-w-[680px] mx-auto text-center">
             {/* Eyebrow */}
-            <p className="...">
+            <p className="text-white/70 text-[14px] md:text-[15px] tracking-wide">
   A creative studio shaped by intention.
 </p>
 
