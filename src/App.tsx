@@ -22,7 +22,7 @@ function AppRoutes() {
         <Route path="/sessions" element={<SessionsPage />} />
         <Route path="/worlds" element={<WorldsPage />} />
         <Route path="/works" element={<WorksPage />} />
-        <Route path="/work/lumo" element={<LumoPage />} />
+        <Route path="/works/lumo" element={<LumoPage />} />
       </Routes>
     </AnimatePresence>
   );
