@@ -5,7 +5,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import { Layout } from '@/components/Layout';
 import { PageTransition } from '@/components/PageTransition';
 import { Home } from '@/pages/Home';
-import { IdentityPage } from '@/pages/IdentityPage';
+import { Identity } from '@/pages/Identity';
 import { SessionsPage } from '@/pages/SessionsPage';
 import { WorldsPage } from '@/pages/WorldsPage';
 import { WorksPage } from '@/pages/WorksPage';
@@ -18,7 +18,7 @@ function AppRoutes() {
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
-        <Route path="/identity" element={<IdentityPage />} />
+        <Route path="/identity" element={<Identity />} />
         <Route path="/sessions" element={<SessionsPage />} />
         <Route path="/worlds" element={<WorldsPage />} />
         <Route path="/works" element={<WorksPage />} />
