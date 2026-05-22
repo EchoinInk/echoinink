@@ -52,23 +52,21 @@ export function LumoCaseStudyTeaser() {
             className="font-editorial text-[1.7rem] md:text-[2.5rem] lg:text-[3.1rem] text-[#E8EAF6]/80 leading-[1.16] mb-6 md:mb-8"
             style={{ letterSpacing: '-0.012em' }}
           >
-            LUMO — A World Built
-            <br className="hidden md:block" />
-            for Overwhelmed Humans
+            LUMO — A World Built for Overwhelmed Humans
           </motion.h2>
 
           <motion.p
             variants={line}
             className="font-structural text-[13px] md:text-[14px] text-white/55 leading-[1.85] max-w-[48ch] mb-3 md:mb-4"
           >
-            A product shaped through emotional intelligence, adaptive systems, and humane design.
+            An emotionally intelligent identity system designed to calm cognitive noise through atmosphere, rhythm, and restraint.
           </motion.p>
 
           <motion.p
             variants={line}
             className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.9] max-w-[42ch] mb-8 md:mb-12 italic"
           >
-            A world built to help people exhale.
+            Built from feeling first — not features.
           </motion.p>
 
           <motion.div variants={line}>

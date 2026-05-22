@@ -52,7 +52,7 @@ export function ClosingSection() {
           className="font-editorial text-[1.7rem] md:text-[2.4rem] lg:text-[3rem] text-[#E8EAF6]/75 leading-[1.22] mb-8 max-w-4xl"
           style={{ letterSpacing: '-0.008em' }}
         >
-          Step deeper into the world.
+          Some things become clearer once they are seen properly.
         </motion.h2>
 
         {/* Archive description — single authoritative statement */}
@@ -63,8 +63,7 @@ export function ClosingSection() {
           transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight * 2 }}
           className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.8] max-w-[40ch] mb-10 md:mb-12"
         >
-          Echo in Ink is an ongoing exploration — a living archive of stories,
-          atmospheres, and luminous digital experiments.
+          Echo in Ink is an ongoing exploration — a living archive of stories, atmospheres, and luminous digital experiments.
         </motion.p>
 
         <motion.div
@@ -77,7 +76,7 @@ export function ClosingSection() {
             to="/works"
             className="group relative inline-flex items-center gap-2.5 font-structural text-[11px] tracking-[0.24em] uppercase text-white/50 transition-colors duration-700 ease-out hover:text-white/75"
           >
-            <span>Enter the Archive</span>
+            <span>Enter the Studio</span>
             <span className="inline-block transition-transform duration-700 ease-out group-hover:translate-x-[2px]">
               →
             </span>

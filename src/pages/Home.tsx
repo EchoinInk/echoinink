@@ -2,7 +2,9 @@ import { Helmet } from 'react-helmet-async';
 import { Hero } from '@/components/hero/Hero';
 import { StudioIntro } from '@/components/StudioIntro';
 import { Philosophy } from '@/components/Philosophy';
+import { Pathways } from '@/components/Pathways';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
+import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/ClosingSection';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
@@ -41,7 +43,9 @@ export function Home() {
       <StudioIntro />
 
       <Philosophy />
+      <Pathways />
       <LumoCaseStudyTeaser />
+      <EmergingSystems />
 
       {/* Breathing bridge — atmospheric transition between worlds */}
       <div
