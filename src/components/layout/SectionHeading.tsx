@@ -20,11 +20,14 @@ export function SectionHeading({ eyebrow, title, description, className, centere
         </span>
       )}
       <h2
-        className={cn('font-editorial text-[1.8rem] md:text-[2.4rem] lg:text-[3rem] text-[#E8EAF6]/90 leading-[1.24]', centered && 'mx-auto')}
-        style={{ letterSpacing: '-0.012em' }}
-      >
-        {title}
-      </h2>
+  className={cn(
+    'font-editorial text-[1.8rem] md:text-[2.4rem] lg:text-[3rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line',
+    centered && 'mx-auto'
+  )}
+  style={{ letterSpacing: '-0.012em' }}
+>
+  {title}
+</h2>
       {description && (
         <p
           className={cn('font-structural text-[15px] md:text-[16px] text-white/60 leading-[1.85]', centered ? 'max-w-[42ch] mx-auto' : 'max-w-[58ch]')}
