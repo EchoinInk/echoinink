@@ -3,6 +3,7 @@ import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/layout/SectionHeading';
 import { Link } from 'react-router-dom';
 import GlowCard from '@/components/GlowCard';
+import sessionsImage from '@/assets/Sessions.png';
 
 export function Pathways() {
   return (
@@ -22,7 +23,7 @@ export function Pathways() {
             <GlowCard
               title="Sessions"
               description="Clarity before expression. Focused creative direction for moments of misalignment, evolution, or translation."
-              image="/images/session-card.jpg"
+              image="s"
             />
           </Link>
 
