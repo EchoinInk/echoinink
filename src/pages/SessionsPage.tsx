@@ -1,354 +1,443 @@
-  import { Helmet } from 'react-helmet-async';
-  import { motion } from 'framer-motion';
-  import { Link } from 'react-router-dom';
-  import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
+You are in Apply-Mode.
 
-  const navigations = [
-    { label: 'Creative identity and positioning' },
-    { label: 'Visual direction and aesthetic clarity' },
-    { label: 'Narrative development and story systems' },
-    { label: 'Brand atmosphere and emotional register' },
-    { label: 'Project direction and momentum' },
-    { label: 'Creative blocks and resistance patterns' },
-  ] as const;
+Completely replace the contents of:
+src/pages/SessionsPage.tsx
 
-export function SessionsPage() {
+Do NOT modify any other files.  
+Do NOT rename the file.  
+Preserve all atmospheric systems, motion utilities, layout primitives, and component imports.  
+Replace ONLY the file contents with the following:
+
+--- BEGIN NEW FILE CONTENT ---
+
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
+import { Layout } from '@/components/layout/Layout';
+import { Section } from '@/components/layout/Section';
+import { Container } from '@/components/layout/Container';
+import { Button } from '@/components/ui/Button';
+
+export default function SessionsPage() {
   return (
-    <div className="relative bg-[#0F1220] min-h-screen">
+    <Layout>
       <Helmet>
-        <title>Echo Sessions — Echo in Ink</title>
-        <meta name="description" content="60-minute premium creative direction sessions for clarity, narrative cohesion, and aesthetic alignment." />
+        <title>Signal Session — Echo in Ink</title>
+        <meta
+          name="description"
+          content="A focused creative direction experience designed to uncover the real centre beneath noise, fragmentation, or emotional misalignment."
+        />
       </Helmet>
 
-      {/* ── Hero ─────────────────────────────────────────── */}
-      <section aria-labelledby="sessions-hero-heading" className="relative min-h-screen flex items-end overflow-hidden">
-        {/* Aqua/indigo atmospheric bloom — upper right */}
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            top: '0%',
-            right: '-8%',
-            width: 'clamp(480px, 62vw, 920px)',
-            height: 'clamp(480px, 62vh, 760px)',
-            background:
-              'radial-gradient(ellipse 58% 60% at 72% 32%, rgba(30,200,255,0.10) 0%, rgba(99,102,241,0.07) 44%, transparent 72%)',
-            filter: 'blur(75px)',
-            mixBlendMode: 'screen',
-          }}
-        />
-        {/* Faint violet secondary left */}
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            bottom: '20%',
-            left: '-6%',
-            width: 'clamp(260px, 34vw, 520px)',
-            height: 'clamp(260px, 34vw, 520px)',
-            background:
-              'radial-gradient(ellipse 68% 68% at 30% 54%, rgba(168,85,247,0.055) 0%, transparent 72%)',
-            filter: 'blur(65px)',
-            mixBlendMode: 'screen',
-          }}
-        />
-        {/* Bottom fade to page */}
-        <div
-          className="absolute bottom-0 left-0 right-0 pointer-events-none z-[2]"
-          style={{
-            height: '42%',
-            background: 'linear-gradient(to bottom, transparent, #0F1220)',
-          }}
-        />
-
-        {/* Hero content */}
-        <div
-          className="relative z-10 ei-container w-full pb-20 md:pb-32"
-          style={{ paddingTop: 'clamp(7rem, 18vh, 14rem)' }}
-        >
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.2 }}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-10 md:mb-14"
-          >
-            Echo Sessions
-          </motion.span>
-
+      {/* HEADER — PRESENCE */}
+      <Section spacing="xl">
+        <Container className="max-w-3xl">
           <motion.h1
-            id="sessions-hero-heading"
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: DURATION.slower, ease: EASE, delay: 0.35 }}
-            className="font-editorial text-[2.4rem] md:text-[3.6rem] lg:text-[4.8rem] text-[#E8EAF6]/90 leading-[1.08] mb-8 md:mb-10"
-            style={{ letterSpacing: '-0.018em', maxWidth: '24rem' }}
+            transition={{ duration: DURATION.slow, ease: EASE }}
+            className="font-editorial text-[2.8rem] md:text-[4rem] text-white/90 leading-[1.1]"
           >
-            A creative direction experience for what won't stay quiet.
+            Sessions
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 18 }}
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.58 }}
-            className="font-structural text-[13px] md:text-[15px] text-white/38 leading-[1.95] max-w-[50ch]"
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.15 }}
+            className="font-structural text-[15px] text-white/40 leading-[1.9] mt-6"
           >
-            60-minute premium sessions for clarity, narrative cohesion, and
-            aesthetic alignment — when your work needs a witness and a direction.
+            Clarity before expression.
           </motion.p>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
-      {/* ── What it is ───────────────────────────────────── */}
-      <section className="relative ei-section py-20 md:py-36 overflow-hidden">
-        <div className="ei-container">
-          <div className="max-w-3xl">
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.0, ease: EASE }}
-              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
-            >
-              What it is
-            </motion.span>
-
-            <motion.p
-              initial={{ opacity: 0, y: 22 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={VIEWPORT.loose}
-              transition={{ duration: DURATION.cinematic, ease: EASE, delay: 0.1 }}
-              className="font-editorial text-[1.65rem] md:text-[2.15rem] text-[#E8EAF6]/80 leading-[1.3] mb-12 md:mb-16"
-              style={{ letterSpacing: '-0.012em' }}
-            >
-              Not a consulting call.
-              A focused creative direction experience — a space where your questions,
-              tensions, and creative fog find clarity.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={VIEWPORT.tight}
-              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.2 }}
-              className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[60ch] mb-6"
-            >
-              Echo Sessions are designed for founders, artists, and makers who
-              need momentum: on identity, on narrative, on visual direction, or
-              on the quiet resistance that sits between where you are and where
-              your work wants to go.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={VIEWPORT.tight}
-              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.3 }}
-              className="font-structural text-[13px] md:text-[14px] text-white/28 leading-[1.95] max-w-[55ch]"
-            >
-              These sessions are intimate, focused, and held with full creative
-              attention. No frameworks. No templates. Just honest, intuitive
-              direction shaped around what you actually need.
-            </motion.p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── What you might navigate ──────────────────────── */}
-      <section className="relative ei-section py-20 md:py-32 overflow-hidden">
-        {/* Faint aqua ambient right */}
-        <div
-          className="absolute pointer-events-none"
-          style={{
-            top: '20%',
-            right: '-5%',
-            width: 'clamp(260px, 34vw, 520px)',
-            height: 'clamp(260px, 34vw, 520px)',
-            background:
-              'radial-gradient(ellipse 68% 68% at 68% 44%, rgba(30,200,255,0.04) 0%, transparent 72%)',
-            filter: 'blur(60px)',
-          }}
-        />
-
-        <div className="ei-container">
-          <div className="max-w-4xl">
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.0, ease: EASE }}
-              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
-            >
-              What you might navigate
-            </motion.span>
-
-            <div
-              className="w-full h-px mb-0"
-              style={{
-                background:
-                  'linear-gradient(90deg, rgba(255,255,255,0.07), rgba(255,255,255,0.07) 70%, transparent)',
-              }}
-            />
-
-            {navigations.map((item, i) => (
-              <motion.div
-                key={item.label}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-30px' }}
-                transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.tight * i }}
-              >
-                <div className="flex gap-6 md:gap-10 items-center py-6 md:py-7">
-                  <span className="font-structural text-[9px] tracking-[0.28em] text-white/18 shrink-0 w-5">
-                    {String(i + 1).padStart(2, '0')}
-                  </span>
-                  <p
-                    className="font-editorial text-[1.05rem] md:text-[1.3rem] text-[#E8EAF6]/65 leading-[1.3]"
-                    style={{ letterSpacing: '-0.004em' }}
-                  >
-                    {item.label}
-                  </p>
-                </div>
-                {i < navigations.length - 1 && (
-                  <div
-                    className="w-full h-px"
-                    style={{
-                      background:
-                        'linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.04) 60%, transparent)',
-                    }}
-                  />
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── How it works ─────────────────────────────────── */}
-      <section className="relative ei-section py-20 md:py-32">
-        <div className="ei-container">
-          <div className="max-w-3xl">
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.0, ease: EASE }}
-              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
-            >
-              How it works
-            </motion.span>
-
-            <motion.p
-              initial={{ opacity: 0, y: 18 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={VIEWPORT.normal}
-              transition={{ duration: DURATION.slow, ease: EASE, delay: 0.1 }}
-              className="font-structural text-[14px] md:text-[15px] text-white/40 leading-[1.95] max-w-[58ch] mb-6"
-            >
-              Before each session, you complete a brief creative intake — sharing
-              where you are, what's unclear, and what you're trying to move toward.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 14 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={VIEWPORT.tight}
-              transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.normal }}
-              className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[54ch] mb-6"
-            >
-              The session itself moves between questions, observations, and
-              directional guidance — not a presentation, but a conversation with
-              creative intelligence at its center.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={VIEWPORT.tight}
-              transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.loose }}
-              className="font-structural text-[13px] md:text-[14px] text-white/25 leading-[1.95] max-w-[50ch]"
-            >
-              Afterwards, you receive a session document: a distillation of what
-              emerged, with direction, language fragments, and specific next steps.
-            </motion.p>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Closing CTA ──────────────────────────────────── */}
-      <section className="relative ei-section py-24 md:py-44 overflow-hidden">
-        <div
-          className="absolute inset-0 pointer-events-none"
-          style={{
-            background:
-              'radial-gradient(ellipse 55% 65% at 50% 52%, rgba(30,200,255,0.055) 0%, transparent 70%)',
-          }}
-        />
-
-        <div className="relative z-10 ei-container text-center">
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={VIEWPORT.normal}
-            transition={{ duration: DURATION.normal, ease: EASE }}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12"
-          >
-            Echo Sessions
-          </motion.span>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 22 }}
+      {/* ATMOSPHERIC ORIENTATION */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.p
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.normal}
-            transition={{ duration: DURATION.slower, ease: EASE, delay: 0.1 }}
-            className="font-editorial text-[1.9rem] md:text-[2.6rem] text-[#E8EAF6]/80 leading-[1.22] mb-8 mx-auto"
-            style={{ letterSpacing: '-0.01em', maxWidth: '30rem' }}
+            transition={{ duration: DURATION.slow, ease: EASE }}
+            className="font-editorial text-[1.8rem] md:text-[2.2rem] text-white/80 leading-[1.3]"
           >
-            Ready to find clarity in the creative fog?
+            Some things do not need more input.  
+            They need clearer signal.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
+            className="font-structural text-[15px] text-white/35 leading-[1.9] mt-10"
+          >
+            The Signal Session is a focused creative direction experience designed to uncover the real centre beneath noise, fragmentation, uncertainty, or emotional misalignment.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.2 }}
+            className="font-structural text-[15px] text-white/30 leading-[1.9] mt-6"
+          >
+            Not consulting.  
+            Not performance.  
+            A space where clarity arrives through attention, articulation, and emotional precision.
+          </motion.p>
+        </Container>
+      </Section>
+
+      {/* CORE OFFER */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.h2
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.normal}
+            transition={{ duration: DURATION.slow, ease: EASE }}
+            className="font-editorial text-[2rem] md:text-[2.6rem] text-white/90 leading-[1.2]"
+          >
+            The Signal Session
           </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 14 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.normal}
-            transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.normal }}
-            className="font-structural text-[13px] md:text-[14px] text-white/28 leading-[1.95] mx-auto mb-12"
-            style={{ maxWidth: '38ch' }}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
+            className="font-structural text-[15px] text-white/45 leading-[1.9] mt-6"
           >
-            Sessions are booked individually and held with full attention.
-            Limited availability each month.
+            A single high-intensity engagement where scattered thought, creative tension, or unresolved identity is distilled into coherent direction.
           </motion.p>
+        </Container>
+      </Section>
 
-          <motion.div
-            initial={{ opacity: 0, y: 12 }}
+      {/* WHAT CAN EMERGE */}
+      <Section spacing="lg">
+        <Container className="max-w-4xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/25 mb-12"
+          >
+            What can emerge
+          </motion.span>
+
+          <div className="space-y-6">
+            {[
+              'creative identity and positioning',
+              'visual direction and aesthetic coherence',
+              'narrative development and story systems',
+              'emotional atmosphere and perceptual tone',
+              'tension between internal truth and external expression',
+            ].map((item, i) => (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={VIEWPORT.tight}
+                transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.tight * i }}
+                className="font-editorial text-[1.2rem] text-white/65 leading-[1.3]"
+              >
+                {item}
+              </motion.p>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* WHAT IT DOES */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/25 mb-12"
+          >
+            What it does
+          </motion.span>
+
+          <div className="space-y-6">
+            {[
+              'identifies the real signal beneath distraction',
+              'clarifies what is actually trying to be expressed',
+              'reveals the emotional centre point',
+              'produces a directional articulation you can trust',
+            ].map((line, i) => (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={VIEWPORT.tight}
+                transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.tight * i }}
+                className="font-structural text-[15px] text-white/40 leading-[1.9]"
+              >
+                {line}
+              </motion.p>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* WHAT IT FEELS LIKE */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/25 mb-12"
+          >
+            What it feels like
+          </motion.span>
+
+          <div className="space-y-6">
+            {[
+              'pressure dissolving into orientation',
+              'noise narrowing into one clear centre',
+              'language arriving where there was none',
+              'finally recognising what the work has been trying to become',
+            ].map((line, i) => (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={VIEWPORT.tight}
+                transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.tight * i }}
+                className="font-structural text-[15px] text-white/40 leading-[1.9]"
+              >
+                {line}
+              </motion.p>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* HOW IT WORKS */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/25 mb-12"
+          >
+            How it works
+          </motion.span>
+
+          <motion.p
+            initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.normal}
-            transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.cinematic }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            transition={{ duration: DURATION.slow, ease: EASE }}
+            className="font-structural text-[15px] text-white/40 leading-[1.9] mb-6"
           >
-            <button className="ei-gradient-border-btn relative inline-flex items-center justify-center px-10 py-4 font-structural text-[11px] tracking-[0.22em] uppercase text-white/85 transition-all duration-500 hover:text-white hover:scale-[1.02]">
-              <span className="relative z-10">Begin a Session</span>
-            </button>
-            <Link
-              to="/"
-              className="font-structural text-[10px] tracking-[0.22em] uppercase text-white/25 hover:text-white/50 transition-colors duration-400"
-            >
-              ← Return to Studio
-            </Link>
-          </motion.div>
-        </div>
+            Before the session, you complete a focused creative intake outlining where you are, what feels unresolved, and what you are moving toward.
+          </motion.p>
 
-        {/* Page footer strip */}
-        <div className="absolute bottom-0 left-0 right-0 pb-8 md:pb-12 z-10">
-          <div className="ei-container">
-            <div className="flex items-end justify-between">
-              <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/15">
-                INK MEETS LIGHT.
-              </span>
-              <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/15">
-                EMOTIONS BECOME DESIGN.
-              </span>
-            </div>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.tight}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
+            className="font-structural text-[15px] text-white/35 leading-[1.9] mb-6"
+          >
+            The session itself is conversational, exploratory, and direction-led — moving toward clarity through attention rather than performance.
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.tight}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.2 }}
+            className="font-structural text-[15px] text-white/30 leading-[1.9]"
+          >
+            Within 48 hours, you receive an Impression Report: a distilled document containing insights, articulation, directional observations, and next-step guidance.
+          </motion.p>
+        </Container>
+      </Section>
+
+      {/* TIMELINE */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/25 mb-12"
+          >
+            Format
+          </motion.span>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.tight}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="font-structural text-[15px] text-white/40 leading-[1.9]"
+          >
+            1 × 90-minute session  
+            <br />
+            + Impression Report delivered within 48 hours
+          </motion.p>
+        </Container>
+      </Section>
+
+      {/* PRICING */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/25 mb-12"
+          >
+            Investment
+          </motion.span>
+
+          <h3 className="font-editorial text-[1.8rem] text-white/90 leading-[1.2]">
+            Signal Session
+          </h3>
+
+          <p className="font-structural text-[15px] text-white/40 leading-[1.9] mt-4">
+            $350 NZD
+          </p>
+
+          <p className="font-structural text-[14px] text-white/30 leading-[1.9] mt-4">
+            A focused clarity engagement designed to reveal the signal beneath noise.
+          </p>
+        </Container>
+      </Section>
+
+      {/* BOUNDARIES */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/25 mb-12"
+          >
+            This is not
+          </motion.span>
+
+          <div className="space-y-4">
+            {[
+              'a full identity engagement',
+              'design execution',
+              'ongoing consulting',
+              'a strategy workshop',
+              'long-term creative direction',
+            ].map((item, i) => (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={VIEWPORT.tight}
+                transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.tight * i }}
+                className="font-structural text-[15px] text-white/35 leading-[1.9]"
+              >
+                {item}
+              </motion.p>
+            ))}
           </div>
-        </div>
-      </section>
-    </div>
-  );
-}
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.tight}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.3 }}
+            className="font-structural text-[15px] text-white/50 leading-[1.9] mt-10"
+          >
+            This is a moment of orientation — not a complete transformation process.
+          </motion.p>
+        </Container>
+      </Section>
+
+      {/* WHO IT IS FOR */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/25 mb-12"
+          >
+            This is for you if…
+          </motion.span>
+
+          <div className="space-y-6">
+            {[
+              'you feel something clearly but cannot yet articulate it',
+              'your direction has become emotionally fragmented',
+              'you are circling the truth without landing on it',
+              'you need clarity before committing to larger creative decisions',
+              'you want a direction that feels internally trustworthy',
+            ].map((item, i) => (
+              <motion.p
+                key={i}
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={VIEWPORT.tight}
+                transition={{ duration: DURATION.normal, ease: EASE, delay: STAGGER.tight * i }}
+                className="font-structural text-[15px] text-white/40 leading-[1.9]"
+              >
+                {item}
+              </motion.p>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* LUMO LINK */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/25 mb-6"
+          >
+            Lumo Link
+          </motion.span>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.tight}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
+            className="font-structural text-[15px] text-white/40 leading-[1.9] mb-8"
+          >
+            Signal made visible.
+          </motion.p>
+
+          <Link
+            to="/lumo"
+            className="font-structural text-[11px] tracking-[0.22em] uppercase text-white/40 hover:text-white/70 transition-colors duration-400"
+          >
+            View LUMO →
+          </Link>
+        </Container>
+      </Section>
+
+      {/* FINAL CTA */}
+      <Section spacing="xl">
+        <Container className="max-w-3xl text-center">
+          <motion.h3
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 
