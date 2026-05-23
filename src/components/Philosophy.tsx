@@ -22,7 +22,7 @@ export function Philosophy() {
         }}
       />
       <Container>
-        <div className="max-w-4xl">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24">
           <SectionHeading
             eyebrow="Philosophy"
             title="Atmosphere is not decoration — it is how meaning is felt."
