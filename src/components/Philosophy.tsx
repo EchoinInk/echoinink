@@ -26,7 +26,7 @@ export function Philosophy() {
           />
 
           {/* Atmospheric text block with motion */}
-          <div className="space-y-8 text-white/60 leading-relaxed text-lg mt-12 md:mt-16 mb-12 md:mb-16">
+          <div className="space-y-8 text-[15px] leading-relaxed mt-12 md:mt-16 mb-12 md:mb-16">
 
             {[
               "Some things are felt long before they can be articulated.",
