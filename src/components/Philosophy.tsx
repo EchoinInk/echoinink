@@ -24,10 +24,10 @@ export function Philosophy() {
       <Container>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24">
           <SectionHeading
-            eyebrow="Philosophy"
-            title="Atmosphere is not decoration — \n it is how meaning is felt."
-            description="Everything begins with emotional truth: a feeling, a tension, a memory, a fragment of identity waiting for language. Echo in Ink builds the worlds those things belong to."
-          />
+  eyebrow="Philosophy"
+  title={"Atmosphere is not decoration —\n it is how meaning is felt."}
+  description="Everything begins with emotional truth: a feeling, a tension, a memory, a fragment of identity waiting for language. Echo in Ink builds the worlds those things belong to."
+/>
 
           {/* Principles triptych */}
           <div className="mb-12 md:mb-16 mt-12 md:mt-16">
