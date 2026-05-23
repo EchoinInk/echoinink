@@ -49,7 +49,7 @@ export function Header() {
           to="/sessions"
           className="px-5 py-2 rounded-full border border-violet-400/40 bg-white/5 backdrop-blur-md text-[11px] tracking-[0.24em] uppercase text-white/80 hover:bg-white/10 transition"
         >
-          Enter
+          Enter the Studio
         </Link>
       </div>
 
