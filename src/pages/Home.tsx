@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { Hero } from '@/components/hero/Hero';
-import { StudioIntro } from '@/components/StudioIntro';
 import { Philosophy } from '@/components/Philosophy';
 import { Pathways } from '@/components/Pathways';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
@@ -40,8 +39,6 @@ export function Home() {
       </Section>
 
       {/* Main editorial block */}
-      <StudioIntro />
-
       <Philosophy />
       <Pathways />
       <LumoCaseStudyTeaser />
