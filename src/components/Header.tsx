@@ -1,67 +1,65 @@
-import { Link, useLocation } from 'react-router-dom';
-import balancedLogo from '@/assets/monogram-balanced.png';
-import wordmark from '@/assets/echo-in-ink-wordmark.png';
-
+import { Link, useLocation } from "react-router-dom";
+import wordmark from "@/assets/echo-in-ink-wordmark.png";
 
 const navItems = [
-  { label: 'STUDIO', href: '/' },
-  { label: 'WORKS', href: '/works' },
-  { label: 'IDENTITY', href: '/identity' },
-  { label: 'SESSIONS', href: '/sessions' },
-  { label: 'WORLDS', href: '/worlds' },
+  { label: "Studio", href: "/" },
+  { label: "Works", href: "/works" },
+  { label: "Identity", href: "/identity" },
+  { label: "Sessions", href: "/sessions" },
+  { label: "Worlds", href: "/worlds" },
 ];
 
 export function Header() {
   const { pathname } = useLocation();
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50">
-      <div className="ei-container">
-        <nav className="flex items-center py-6 md:py-8">
-          <Link to="/" className="shrink-0">
-            <Link to="/" className="shrink-0">
-  <img
-    src={wordmark}
-    alt="Echo in Ink"
-    className="h-2 md:h-3 lg:h-4 w-auto"
-  />
-</Link>
+    <nav className="absolute top-0 left-0 w-full z-50 px-10 py-8 flex items-center justify-between">
+      {/* Wordmark */}
+      <Link to="/" className="shrink-0">
+        <img
+          src={wordmark}
+          alt="Echo in Ink"
+          className="h-3 md:h-4 w-auto opacity-90"
+        />
+      </Link>
 
-          </Link>
-          <div className="flex-1 flex justify-end">
-            <ul className="hidden md:flex items-center gap-8 lg:gap-10">
-              {navItems.map((item) => (
-                <li key={item.label}>
-                  <Link
-                    to={item.href}
-                    aria-current={pathname === item.href ? 'page' : undefined}
-                    className="font-structural text-[11px] tracking-[0.24em] uppercase transition-all duration-500 relative focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-[#0F1220] rounded-sm"
-                    style={{
-                      color:
-                        pathname === item.href
-                          ? 'rgba(255,255,255,0.95)'
-                          : 'rgba(255,255,255,0.55)',
-                    }}
-                  >
-                    {item.label}
-                    {pathname === item.href && (
-                      <span className="absolute -bottom-1 left-0 right-0 h-px bg-white/60" />
-                    )}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <button 
-            className="md:hidden shrink-0 font-structural text-[11px] tracking-[0.24em] uppercase text-white/60 focus:text-white/85 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-[#0F1220]"
-            aria-label="Open navigation menu"
-            aria-expanded="false"
-          >
-            MENU
-          </button>
-          <div className="hidden md:block shrink-0" style={{ width: '36px' }} />
-        </nav>
+      {/* Desktop Nav */}
+      <div className="hidden md:flex items-center gap-10">
+        {/* Nav Links */}
+        <div className="flex gap-8 text-xs tracking-[0.25em] uppercase">
+          {navItems.map((item) => {
+            const active = pathname === item.href;
+
+            return (
+              <Link
+                key={item.label}
+                to={item.href}
+                className={`transition-colors ${
+                  active ? "text-white" : "text-white/60 hover:text-white/80"
+                }`}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+        </div>
+
+        {/* CTA */}
+        <Link
+          to="/sessions"
+          className="px-5 py-2 rounded-full border border-violet-400/40 bg-white/5 backdrop-blur-md text-[11px] tracking-[0.24em] uppercase text-white/80 hover:bg-white/10 transition"
+        >
+          Enter
+        </Link>
       </div>
-    </header>
+
+      {/* Mobile Menu */}
+      <button
+        className="md:hidden text-xs tracking-[0.25em] uppercase text-white/60"
+        aria-label="Open navigation menu"
+      >
+        Menu
+      </button>
+    </nav>
   );
 }
