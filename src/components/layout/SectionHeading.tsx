@@ -14,7 +14,7 @@ export function SectionHeading({ eyebrow, title, description, className, centere
       {eyebrow && (
         <span
           className={cn('block font-structural text-[10px] tracking-[0.38em] uppercase text-white/30', centered && 'mx-auto')}
-          style={{ marginBottom: 'var(--ei-space-48)' }}
+          style={{ marginBottom: 'var(--ei-space-24)' }}
         >
           {eyebrow}
         </span>
