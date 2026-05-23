@@ -30,60 +30,29 @@ export function Philosophy() {
 />
 
           {/* Principles triptych */}
-          <div className="mb-12 md:mb-16 mt-12 md:mt-16">
-            <motion.span
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={VIEWPORT.normal}
-              transition={{ duration: DURATION.normal, ease: EASE, delay: 0.14 }}
-              className="block font-structural text-[10px] tracking-[0.28em] uppercase text-white/20 mb-8"
-            >
-              Guided by
-            </motion.span>
+          {/* Principles → Rewritten as atmospheric text block */}
+<div className="space-y-8 text-white/60 leading-relaxed text-lg mt-12 md:mt-16 mb-12 md:mb-16">
 
-            <div className="space-y-0 md:ml-8">
-              {principles.map((line, i) => (
-                <motion.p
-                  key={line}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={VIEWPORT.normal}
-                  transition={{ duration: DURATION.normal, ease: EASE, delay: 0.22 + i * STAGGER.tight }}
-                  className="font-editorial text-[1.25rem] md:text-[1.55rem] text-[#E8EAF6]/70 leading-[1.85]"
-                  style={{ letterSpacing: '-0.006em' }}
-                >
-                  {line}
-                </motion.p>
-              ))}
-            </div>
-          </div>
+  <p>
+    Some things are felt long before they can be articulated.
+  </p>
 
-          {/* Closing */}
-          <motion.p
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={VIEWPORT.normal}
-            transition={{ duration: DURATION.slow, ease: EASE, delay: 0.18 }}
-            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[55ch]"
-          >
-            I create slowly, cinematically, letting each idea breathe into form.
-            The goal is not perfection, but presence — work that feels lived-in,
-            luminous, and quietly transformative.
-          </motion.p>
+  <p>
+    Echo in Ink exists for founders, artists, and visionaries carrying something real beneath the surface — 
+    something difficult to translate clearly without losing its texture.
+  </p>
 
-          {/* Human signal */}
-          <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={VIEWPORT.normal}
-            transition={{ duration: DURATION.slower, ease: EASE, delay: STAGGER.normal }}
-            className="font-structural text-[12px] md:text-[13px] text-white/25 leading-[1.9] max-w-[44ch] mt-8 md:mt-12"
-          >
-            I create worlds for people who feel too much and think too deeply.
-            <br />
-            If that's you, you're home.
-          </motion.p>
-        </div>
+  <p>
+    This studio was built to preserve that texture.
+  </p>
+
+  <p>
+    Through identity, atmosphere, narrative, and systems, we create work that feels coherent, emotionally precise, 
+    and unmistakably true.
+  </p>
+
+</div>
+
       </Container>
     </Section>
   );
