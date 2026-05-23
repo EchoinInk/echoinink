@@ -440,4 +440,30 @@ export default function SessionsPage() {
         <Container className="max-w-3xl text-center">
           <motion.h3
             initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.tight}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="font-structural text-[22px] text-white/90 leading-[1.35] mb-6"
+          >
+            Ready to begin?
+          </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.tight}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
+            className="font-structural text-[15px] text-white/40 leading-[1.9] mb-8"
+          >
+            Let's shape the world you want to live in.
+          </motion.p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center gap-2 font-structural text-[11px] tracking-[0.22em] uppercase text-white/40 hover:text-white/70 transition-colors duration-400"
+          >
+            Start a conversation →
+          </Link>
+        </Container>
+      </Section>
+    </div>
+  );
+}
