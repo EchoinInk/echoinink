@@ -25,7 +25,7 @@ export function Philosophy() {
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24">
           <SectionHeading
             eyebrow="Philosophy"
-            title="Atmosphere is not decoration — it is how meaning is felt."
+            title="Atmosphere is not decoration — <br />it is how meaning is felt."
             description="Everything begins with emotional truth: a feeling, a tension, a memory, a fragment of identity waiting for language. Echo in Ink builds the worlds those things belong to."
           />
 
