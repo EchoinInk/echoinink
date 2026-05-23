@@ -39,11 +39,17 @@ export default function GlowCard({
           style={{ letterSpacing: '-0.012em' }}
         >{title}</h2>
 
-        <p className="mt-4 text-white/60 leading-relaxed">
+        <p
+    className={cn(
+      'font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85]',
+      centered ? 'max-w-[42ch] mx-auto' : 'max-w-[58ch]'
+    )}
+    style={{ marginTop: 'var(--ei-space-48)' }}
+  >
           {description}
         </p>
 
-        <button className="mt-8 text-sm uppercase tracking-[0.2em] text-violet-300">
+        <button className="mt-8 text-sm uppercase tracking-[0.2em] text-white/60">
           Explore →
         </button>
       </div>
