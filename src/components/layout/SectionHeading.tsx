@@ -35,7 +35,7 @@ export function SectionHeading({ eyebrow, title, description, className, centere
       'font-structural text-[15px] md:text-[16px] text-white/60 leading-[1.85]',
       centered ? 'max-w-[42ch] mx-auto' : 'max-w-[58ch]'
     )}
-    style={{ marginTop: 'var(--ei-space-24)' }}
+    style={{ marginTop: 'var(--ei-space-32)' }}
   >
     {description}
   </p>
