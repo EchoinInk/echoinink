@@ -4,6 +4,8 @@ import { SectionHeading } from '@/components/layout/SectionHeading';
 import { Link } from 'react-router-dom';
 import GlowCard from '@/components/GlowCard';
 import sessionsImage from '@/assets/Sessions.png';
+import identityImage from '@/assets/Identity.png';
+import worldsImage from '@/assets/Worlds.png';
 
 export function Pathways() {
   return (
@@ -31,7 +33,7 @@ export function Pathways() {
             <GlowCard
               title="Identity"
               description="Where inner worlds become coherent external form. Emotional, narrative, and visual translation for founders, studios, and evolving brands."
-              image="/images/identity-card.jpg"
+              image={identityImage}
             />
           </Link>
 
@@ -39,7 +41,7 @@ export function Pathways() {
             <GlowCard
               title="Worlds"
               description="Identity extended into living systems. Immersive digital ecosystems designed for coherence, resonance, and long‑term evolution."
-              image="/images/worlds-card.jpg"
+              image={worldsImage}
             />
           </Link>
 
