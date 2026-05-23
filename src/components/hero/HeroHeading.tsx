@@ -13,7 +13,7 @@ export function HeroHeading() {
 
       {/* Core line */}
       <p className="font-structural text-[15px] md:text-[17px] text-white/70 mb-10 md:mb-12 text-left max-w-[48ch] leading-relaxed">
-        Translating inner worlds into identities that survive contact with the world.
+        Translating inner worlds into identities that <br /> survive contact with the world.
       </p>
     </>
   );
