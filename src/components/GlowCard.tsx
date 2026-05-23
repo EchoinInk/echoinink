@@ -6,12 +6,16 @@ interface Props {
   title: string;
   description: string;
   image: string;
+   eyebrow?: string;
+  className?: string;
+  centered?: boolean;
 }
 
 export default function GlowCard({
   title,
   description,
   image,
+  centered,
 }: Props) {
   return (
     <motion.div
