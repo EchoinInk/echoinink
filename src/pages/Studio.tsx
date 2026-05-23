@@ -7,7 +7,7 @@ import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { PageCTA } from '@/components/PageCTA';
 
-export default function Studio() {
+export function Studio() {
   return (
     <Layout>
       <Helmet>
