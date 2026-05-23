@@ -6,6 +6,7 @@ import { Layout } from '@/components/Layout';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/Button';
+import { PageCTA } from '@/components/PageCTA';
 
 export default function WorldsPage() {
   return (
@@ -453,32 +454,7 @@ export default function WorldsPage() {
         </Container>
       </Section>
 
-      {/* FINAL CTA */}
-      <Section spacing="xl">
-        <Container className="max-w-3xl text-center">
-          <motion.h3
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={VIEWPORT.normal}
-            transition={{ duration: DURATION.slow, ease: EASE }}
-            className="font-editorial text-[2rem] md:text-[2.6rem] text-white/90 leading-[1.2] mb-10"
-          >
-            Begin a Collaboration
-          </motion.h3>
-
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={VIEWPORT.normal}
-            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
-            className="font-structural text-[14px] text-white/40 leading-[1.9] mb-12"
-          >
-            Some worlds require infrastructure before they can fully emerge.
-          </motion.p>
-
-          <Button to="/contact">Begin</Button>
-        </Container>
-      </Section>
+      <PageCTA page="worlds" />
     </Layout>
   );
 }

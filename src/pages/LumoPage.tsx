@@ -3,6 +3,7 @@ import { SignatureCaseStudy } from '@/components/SignatureCaseStudy';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/Button';
+import { PageCTA } from '@/components/PageCTA';
 
 export function LumoPage() {
   return (
@@ -28,36 +29,7 @@ export function LumoPage() {
         </Container>
       </Section>
 
-      {/* CTA */}
-      <Section>
-        <Container>
-          <div className="space-y-4">
-            <h3 className="font-serif text-2xl md:text-3xl tracking-tight">
-              Ready to build a world shaped by feeling?
-            </h3>
-            <Button to="/contact">
-              Begin a Collaboration
-            </Button>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Routing */}
-      <Section>
-        <Container>
-          <div className="flex flex-col space-y-2 text-muted">
-            <a href="/identity" className="hover:text-white transition-colors">
-              Explore Identity →
-            </a>
-            <a href="/sessions" className="hover:text-white transition-colors">
-              Book a Session →
-            </a>
-            <a href="/works" className="hover:text-white transition-colors">
-              Return to Works →
-            </a>
-          </div>
-        </Container>
-      </Section>
+      <PageCTA page="worlds" />
     </div>
   );
 }

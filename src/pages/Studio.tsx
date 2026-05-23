@@ -5,6 +5,7 @@ import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 import { Layout } from "@/components/Layout";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
+import { PageCTA } from '@/components/PageCTA';
 
 export default function Studio() {
   return (
@@ -232,6 +233,8 @@ export default function Studio() {
           </p>
         </Container>
       </Section>
+
+      <PageCTA page="studio" />
     </Layout>
 
   );
