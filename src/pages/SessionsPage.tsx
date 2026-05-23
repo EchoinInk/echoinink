@@ -1,23 +1,11 @@
-You are in Apply-Mode.
-
-Completely replace the contents of:
-src/pages/SessionsPage.tsx
-
-Do NOT modify any other files.  
-Do NOT rename the file.  
-Preserve all atmospheric systems, motion utilities, layout primitives, and component imports.  
-Replace ONLY the file contents with the following:
-
---- BEGIN NEW FILE CONTENT ---
-
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
-import { Layout } from '@/components/layout/Layout';
+import { Layout } from '@/components/Layout';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
-import { Button } from '@/components/ui/Button';
+import { Button } from '@/components/Button';
 
 export default function SessionsPage() {
   return (
@@ -63,7 +51,7 @@ export default function SessionsPage() {
             transition={{ duration: DURATION.slow, ease: EASE }}
             className="font-editorial text-[1.8rem] md:text-[2.2rem] text-white/80 leading-[1.3]"
           >
-            Some things do not need more input.  
+            Some things do not need more input.<br />
             They need clearer signal.
           </motion.p>
 
@@ -84,8 +72,8 @@ export default function SessionsPage() {
             transition={{ duration: DURATION.normal, ease: EASE, delay: 0.2 }}
             className="font-structural text-[15px] text-white/30 leading-[1.9] mt-6"
           >
-            Not consulting.  
-            Not performance.  
+            Not consulting.<br />
+            Not performance.<br />
             A space where clarity arrives through attention, articulation, and emotional precision.
           </motion.p>
         </Container>
@@ -287,8 +275,7 @@ export default function SessionsPage() {
             transition={{ duration: DURATION.normal, ease: EASE }}
             className="font-structural text-[15px] text-white/40 leading-[1.9]"
           >
-            1 × 90-minute session  
-            <br />
+            1 × 90-minute session<br />
             + Impression Report delivered within 48 hours
           </motion.p>
         </Container>
@@ -435,7 +422,7 @@ export default function SessionsPage() {
         </Container>
       </Section>
 
-       {/* FINAL CTA */}
+      {/* FINAL CTA */}
       <Section spacing="xl">
         <Container className="max-w-3xl text-center">
           <motion.h3
@@ -443,11 +430,14 @@ export default function SessionsPage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={VIEWPORT.normal}
             transition={{ duration: DURATION.slow, ease: EASE }}
+            className="font-editorial text-[2rem] md:text-[2.6rem] text-white/90 leading-[1.2] mb-10"
           >
             Ready to begin?
           </motion.h3>
+
+          <Button to="/contact">Begin</Button>
         </Container>
       </Section>
-    </div>
+    </Layout>
   );
-} 
+}

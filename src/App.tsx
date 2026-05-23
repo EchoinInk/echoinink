@@ -6,7 +6,7 @@ import { Layout } from '@/components/Layout';
 import { PageTransition } from '@/components/PageTransition';
 import { Home } from '@/pages/Home';
 import Identity from '@/pages/Identity';
-import { SessionsPage } from '@/pages/SessionsPage';
+import SessionsPage from '@/pages/SessionsPage';
 import { WorldsPage } from '@/pages/WorldsPage';
 import { WorksPage } from '@/pages/WorksPage';
 import { LumoPage } from '@/pages/LumoPage';
