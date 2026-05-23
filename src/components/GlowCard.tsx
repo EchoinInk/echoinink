@@ -44,7 +44,7 @@ export default function GlowCard({
       'font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85]',
       centered ? 'max-w-[42ch] mx-auto' : 'max-w-[58ch]'
     )}
-    style={{ marginTop: 'var(--ei-space-44)' }}
+    style={{ marginTop: 'var(--ei-space-48)' }}
   >
           {description}
         </p>
