@@ -21,18 +21,6 @@ export function Philosophy() {
             'radial-gradient(ellipse 55% 65% at 50% 50%, rgba(99,102,241,0.018) 0%, transparent 72%)',
         }}
       />
-
-      {/* Thin separator above */}
-      <Container className="mb-8 md:mb-20">
-        <div
-          className="w-full h-px"
-          style={{
-            background:
-              'linear-gradient(90deg, transparent, rgba(255,255,255,0.06) 25%, rgba(255,255,255,0.06) 75%, transparent)',
-          }}
-        />
-      </Container>
-
       <Container>
         <div className="max-w-4xl">
           <SectionHeading
