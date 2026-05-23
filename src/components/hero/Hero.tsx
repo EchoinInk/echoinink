@@ -20,8 +20,6 @@ export function Hero() {
         <HeroCTA />
       </div>
     </div>
-    
-
       {/* Footer OVERLAY — does NOT affect height */}
 <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none"
 style={{ transform: 'translateY(22px)' }}>
