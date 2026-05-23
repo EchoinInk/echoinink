@@ -18,7 +18,7 @@ export default function GlowCard({
       whileHover={{ y: -8 }}
       className="group relative overflow-hidden rounded-3xl border border-white/5 bg-white/[0.03] p-8 backdrop-blur-xl"
     >
-      <div className="absolute inset-0 opacity-40 group-hover:opacity-70 transition">
+      <div className="relative h-56 w-full overflow-hidden">
         <img
           src={image}
           alt={title}
