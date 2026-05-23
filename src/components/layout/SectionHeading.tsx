@@ -21,7 +21,7 @@ export function SectionHeading({ eyebrow, title, description, className, centere
       )}
       <h2
   className={cn(
-    'font-editorial text-4xl text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line',
+    'font-editorial text-[2,1rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line',
     centered && 'mx-auto'
   )}
   style={{ letterSpacing: '-0.012em' }}
