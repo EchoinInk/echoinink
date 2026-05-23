@@ -10,6 +10,7 @@ import SessionsPage from '@/pages/SessionsPage';
 import WorldsPage from '@/pages/WorldsPage';
 import { WorksPage } from '@/pages/WorksPage';
 import { LumoPage } from '@/pages/LumoPage';
+import { Studio } from '@/pages/Studio';
 
 function AppRoutes() {
   const location = useLocation();
