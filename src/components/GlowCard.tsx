@@ -49,7 +49,7 @@ export default function GlowCard({
           {description}
         </p>
 
-        <button className="mt-8 color-[#2097D6] text-sm uppercase tracking-[0.2em] text-white/60">
+        <button className="mt-8 color-[#2097D6] text-sm uppercase tracking-[0.2em]">
           Explore →
         </button>
       </div>
