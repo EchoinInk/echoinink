@@ -46,7 +46,7 @@ export function Header() {
 
         {/* CTA */}
         <Link
-          to="/sessions"
+          to="/studio"
           className="px-5 py-2 rounded-full border border-violet-400/40 bg-white/5 backdrop-blur-md text-[11px] tracking-[0.24em] uppercase text-white/80 hover:bg-white/10 transition"
         >
           Enter the Studio
