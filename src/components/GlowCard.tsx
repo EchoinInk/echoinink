@@ -27,7 +27,13 @@ export default function GlowCard({
       </div>
 
       <div className="relative z-10">
-        <h3 className="text-3xl font-light">{title}</h3>
+        <h2
+          className={cn(
+            'font-editorial text-[2.1rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line',
+            centered && 'mx-auto'
+          )}
+          style={{ letterSpacing: '-0.012em' }}
+        >{title}</h2>
 
         <p className="mt-4 text-white/60 leading-relaxed">
           {description}
