@@ -11,9 +11,9 @@ export function Pathways() {
 
         <SectionHeading
           eyebrow="What We Design"
-          title={"We build worlds with intention and precision."}
+          title={"We build worlds with \nintention and precision."}
           description="Explore our core areas of creative direction."
-          className="mb-20"
+          className="mb-15"
         />
 
         <div className="grid md:grid-cols-3 gap-12">
