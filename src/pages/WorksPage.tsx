@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { SelectedWorks } from '@/components/SelectedWorks';
+import { PageCTA } from '@/components/PageCTA';
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -66,6 +67,9 @@ export function WorksPage() {
 
       {/* ── Works gallery ────────────────────────────────── */}
       <SelectedWorks hideViewAll />
+
+      {/* ── CTA ─────────────────────────────────────────── */}
+      <PageCTA page="works" />
 
       {/* ── Page footer strip ────────────────────────────── */}
       <div className="relative ei-section py-12 md:py-16">

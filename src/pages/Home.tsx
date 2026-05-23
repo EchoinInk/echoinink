@@ -5,7 +5,7 @@ import { Philosophy } from '@/components/Philosophy';
 import { Pathways } from '@/components/Pathways';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
-import { ClosingSection } from '@/components/ClosingSection';
+import { PageCTA } from '@/components/PageCTA';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 
@@ -64,7 +64,7 @@ export function Home() {
         />
       </div>
 
-      <ClosingSection />
+      <PageCTA page="home" />
     </main>
   );
 }
