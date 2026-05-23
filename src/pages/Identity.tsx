@@ -365,6 +365,33 @@ export default function Identity() {
         </Container>
       </Section>
 
+      {/* LUMO LINK */}
+      <Section spacing="lg">
+        <Container className="max-w-3xl">
+          <motion.span
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: DURATION.normal, ease: EASE }}
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/25 mb-6"
+          >
+            Lumo Link
+          </motion.span>
+
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={VIEWPORT.tight}
+            transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
+            className="font-structural text-[15px] text-white/40 leading-[1.9] mb-8"
+          >
+            See how identity becomes a world.
+          </motion.p>
+
+          <Button to="/lumo">View Lumo →</Button>
+        </Container>
+      </Section>
+
       {/* FINAL CTA */}
       <Section spacing="xl">
         <Container className="max-w-3xl text-center">
