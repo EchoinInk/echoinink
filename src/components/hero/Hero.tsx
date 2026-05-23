@@ -20,12 +20,7 @@ export function Hero() {
         <HeroCTA />
       </div>
     </div>
-      {/* Floating signature */}
-      <div className="absolute bottom-10 left-10 z-20 pointer-events-none">
-        <p className="font-structural text-[10px] tracking-[0.28em] uppercase text-white/30">
-          DESIGN. EMOTION. ECHO.
-        </p>
-      </div>
+    
 
       {/* Footer OVERLAY — does NOT affect height */}
 <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none"
