@@ -6,6 +6,7 @@ import { Layout } from '@/components/Layout';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/Button';
+import { PageCTA } from '@/components/PageCTA';
 
 export default function SessionsPage() {
   return (
@@ -422,22 +423,7 @@ export default function SessionsPage() {
         </Container>
       </Section>
 
-      {/* FINAL CTA */}
-      <Section spacing="xl">
-        <Container className="max-w-3xl text-center">
-          <motion.h3
-            initial={{ opacity: 0, y: 16 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={VIEWPORT.normal}
-            transition={{ duration: DURATION.slow, ease: EASE }}
-            className="font-editorial text-[2rem] md:text-[2.6rem] text-white/90 leading-[1.2] mb-10"
-          >
-            Ready to begin?
-          </motion.h3>
-
-          <Button to="/contact">Begin</Button>
-        </Container>
-      </Section>
+      <PageCTA page="sessions" />
     </Layout>
   );
 }
