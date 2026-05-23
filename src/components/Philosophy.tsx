@@ -17,7 +17,7 @@ export function Philosophy() {
       />
 
       <Container>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-">
 
           <SectionHeading
             eyebrow="Philosophy"
