@@ -23,6 +23,8 @@ function AppRoutes() {
         <Route path="/worlds" element={<WorldsPage />} />
         <Route path="/works" element={<WorksPage />} />
         <Route path="/works/lumo" element={<LumoPage />} />
+        <Route path="/studio" element={<Studio />} />
+
       </Routes>
     </AnimatePresence>
   );
