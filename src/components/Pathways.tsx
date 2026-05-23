@@ -23,7 +23,7 @@ export function Pathways() {
             <GlowCard
               title="Sessions"
               description="Clarity before expression. Focused creative direction for moments of misalignment, evolution, or translation."
-              image="s"
+              image={sessionsImage}
             />
           </Link>
 
