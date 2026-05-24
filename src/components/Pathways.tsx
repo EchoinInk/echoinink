@@ -9,7 +9,7 @@ import worldsImage from '@/assets/Worlds.png';
 
 export function Pathways() {
   return (
-<Section spacing="lg" className="pb-6 md:pb-8">
+<Section spacing="md" className="pb-6 md:pb-8">
       <Container>
 
         <SectionHeading
