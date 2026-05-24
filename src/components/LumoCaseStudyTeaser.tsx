@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlowField, GrainOverlay } from './AtmosphericSystem';
-import featuredcaseImage from '@/assets/lumocasestudy.png'
+import featuredcaseImage from '@/assets/lumocasestudy.png';
 import { EASE, DURATION } from '@/lib/motion';
 
 const container = {
@@ -22,8 +22,16 @@ const line = {
 
 export function LumoCaseStudyTeaser() {
   return (
-    <section className="relative bg-[#040816] px-8 py-32 text-white overflow-hidden">
-      {/* Atmospheric glow */}
+    <section
+      className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden"
+      style={{
+        backgroundImage: `url(${featuredcaseImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+      }}
+    >
+      {/* Atmospheric overlays */}
       <GlowField
         style={{
           top: '-10%',
@@ -38,61 +46,49 @@ export function LumoCaseStudyTeaser() {
         duration={46}
       />
 
-      {/* Grain */}
       <GrainOverlay range={[0.008, 0.015]} duration={36} delay={6} size={220} />
 
-      <div className="max-w-7xl mx-auto overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.03]">
-        <div className="grid md:grid-cols-2 items-center">
-          {/* LEFT SIDE */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-60px' }}
-            variants={container}
-            className="p-16"
+      {/* Overlay for text readability */}
+      <div className="absolute inset-0 bg-[#040816]/60 mix-blend-multiply backdrop-blur-[2px]" />
+
+      {/* Text Content */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: '-60px' }}
+        variants={container}
+        className="relative z-10 text-center px-8 max-w-3xl"
+      >
+        <motion.p
+          variants={line}
+          className="uppercase text-[11px] tracking-[0.3em] text-white/40 mb-6 font-structural"
+        >
+          Featured Case
+        </motion.p>
+
+        <motion.h1
+          variants={line}
+          className="font-editorial text-5xl md:text-6xl font-light leading-tight mb-6"
+        >
+          LUMO
+        </motion.h1>
+
+        <motion.p
+          variants={line}
+          className="font-structural text-[14px] text-white/60 leading-relaxed max-w-[48ch] mx-auto"
+        >
+          A world built for overwhelmed humans. Emotional identity systems designed to calm cognitive noise.
+        </motion.p>
+
+        <motion.div variants={line}>
+          <Link
+            to="/work/lumo"
+            className="mt-10 inline-block text-violet-300 uppercase tracking-[0.2em] text-sm font-structural hover:text-violet-200 transition-colors duration-500"
           >
-            <motion.p
-              variants={line}
-              className="uppercase text-[11px] tracking-[0.3em] text-white/30 mb-6 font-structural"
-            >
-              Featured Case
-            </motion.p>
-
-            <motion.h2
-              variants={line}
-              className="font-editorial text-5xl font-light leading-tight"
-            >
-              LUMO
-            </motion.h2>
-
-            <motion.p
-              variants={line}
-              className="mt-6 text-white/60 leading-relaxed font-structural text-[14px] max-w-[48ch]"
-            >
-              A world built for overwhelmed humans. Emotional identity systems
-              designed to calm cognitive noise.
-            </motion.p>
-
-            <motion.div variants={line}>
-              <Link
-                to="/work/lumo"
-                className="mt-10 inline-block text-violet-300 uppercase tracking-[0.2em] text-sm font-structural hover:text-violet-200 transition-colors duration-500"
-              >
-                View Case Study →
-              </Link>
-            </motion.div>
-          </motion.div>
-
-          {/* RIGHT SIDE — IMAGE */}
-          <div className="h-full min-h-[500px]">
-            <img
-              src={featuredcaseImage}
-              alt="Lumo"
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
-      </div>
+            View Case Study →
+          </Link>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
