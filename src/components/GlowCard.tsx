@@ -13,9 +13,9 @@ export default function GlowCard({ title, description, image, centered }: Props)
     <motion.div
       whileHover={{ y: -8 }}
       className="group flex flex-col rounded-3xl overflow-hidden border border-white/5 bg-white/[0.03] backdrop-blur-xl"
-      style={{ height: "520px" }} // ← FIXED HEIGHT, adjust as needed
+      style={{ height: "450px" }}
     >
-      {/* IMAGE — flush, no padding */}
+      {/* IMAGE */}
       <div className="relative w-full h-48 overflow-hidden">
         <img
           src={image}
@@ -24,31 +24,34 @@ export default function GlowCard({ title, description, image, centered }: Props)
         />
       </div>
 
-      {/* CONTENT — no padding on card, padding only here */}
+      {/* CONTENT */}
       <div className="flex flex-col flex-1 p-0">
-        {/* Inner content wrapper with padding */}
         <div className="flex flex-col flex-1 p-8">
-          <h2
-  className={cn(
-    'font-editorial text-[1.6rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line',
-    centered && 'mx-auto'
-  )}
-  style={{ letterSpacing: '-0.012em' }}
->
-  {title}
-</h2>
 
-<p
-    className={cn(
-      'font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85]',
-      centered ? 'max-w-[42ch] mx-auto' : 'max-w-[58ch]'
-    )}
-    style={{ marginTop: 'var(--ei-space-48)' }}
-  >            {description}
+          {/* TITLE */}
+          <h2
+            className={cn(
+              "font-editorial text-[1.6rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line",
+              centered && "mx-auto"
+            )}
+            style={{ letterSpacing: "-0.012em" }}
+          >
+            {title}
+          </h2>
+
+          {/* DESCRIPTION — tightened spacing */}
+          <p
+            className={cn(
+              "font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85] mt-3",
+              centered ? "max-w-[42ch] mx-auto" : "max-w-[58ch]"
+            )}
+          >
+            {description}
           </p>
 
+          {/* EXPLORE — anchored lower */}
           <button
-            className="mt-8 text-sm uppercase tracking-[0.2em] text-violet-300 text-left"
+            className="mt-auto pt-6 pb-2 text-sm uppercase tracking-[0.2em] text-violet-300 text-left"
           >
             Explore →
           </button>
