@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlowField, GrainOverlay } from './AtmosphericSystem';
 
-import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
+import { EASE, DURATION } from '@/lib/motion';
 
 const container = {
   hidden: {},
@@ -13,82 +13,86 @@ const container = {
 
 const line = {
   hidden: { opacity: 0, y: 5 },
-  visible: { opacity: 1, y: 0, transition: { duration: DURATION.normal, ease: EASE } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: DURATION.normal, ease: EASE },
+  },
 };
 
 export function LumoCaseStudyTeaser() {
   return (
-    <section
-      className="relative w-full overflow-hidden"
-      style={{ background: 'linear-gradient(180deg, #060810 0%, #0B0E1A 50%, #080A14 100%)' }}
-    >
-      {/* Unified atmospheric light source — indigo-violet bloom */}
+    <section className="relative bg-[#040816] px-8 py-32 text-white overflow-hidden">
+      {/* Atmospheric glow */}
       <GlowField
         style={{
-          top: '-15%',
+          top: '-10%',
           left: '50%',
           transform: 'translateX(-50%)',
-          width: 'clamp(560px, 75vw, 1000px)',
-          height: 'clamp(400px, 50vw, 600px)',
+          width: 'clamp(600px, 80vw, 1100px)',
+          height: 'clamp(420px, 55vw, 700px)',
         }}
-        gradient="radial-gradient(ellipse 50% 40% at 50% 60%, rgba(99,102,241,0.06) 0%, rgba(80,72,200,0.02) 50%, transparent 75%)"
-        blur={80}
-        anim={{ opacity: [0.5, 0.75, 0.5] }}
-        duration={42}
+        gradient="radial-gradient(ellipse 55% 45% at 50% 60%, rgba(99,102,241,0.06) 0%, rgba(80,72,200,0.02) 50%, transparent 75%)"
+        blur={90}
+        anim={{ opacity: [0.45, 0.75, 0.45] }}
+        duration={46}
       />
-      {/* Minimal grain — near imperceptible texture */}
+
+      {/* Grain */}
       <GrainOverlay range={[0.008, 0.015]} duration={36} delay={6} size={220} />
 
-      <div className="ei-container py-16 md:py-28">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-60px' }}
-          variants={container}
-          className="max-w-4xl"
-        >
-          <motion.h2
-            variants={line}
-            className="font-editorial text-[1.7rem] md:text-[2.5rem] lg:text-[3.1rem] text-[#E8EAF6]/80 leading-[1.16] mb-6 md:mb-8"
-            style={{ letterSpacing: '-0.012em' }}
+      <div className="max-w-7xl mx-auto overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.03]">
+        <div className="grid md:grid-cols-2 items-center">
+          {/* LEFT SIDE */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={container}
+            className="p-16"
           >
-            LUMO — A World Built for Overwhelmed Humans
-          </motion.h2>
-
-          <motion.p
-            variants={line}
-            className="font-structural text-[13px] md:text-[14px] text-white/55 leading-[1.85] max-w-[48ch] mb-3 md:mb-4"
-          >
-            An emotionally intelligent identity system designed to calm cognitive noise through atmosphere, rhythm, and restraint.
-          </motion.p>
-
-          <motion.p
-            variants={line}
-            className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.9] max-w-[42ch] mb-8 md:mb-12 italic"
-          >
-            Built from feeling first — not features.
-          </motion.p>
-
-          <motion.div variants={line}>
-            <Link
-              to="/work/lumo"
-              className="group inline-flex items-center gap-2.5 font-structural text-[11px] tracking-[0.26em] uppercase text-white/45 transition-colors duration-700 ease-out hover:text-white/65"
+            <motion.p
+              variants={line}
+              className="uppercase text-[11px] tracking-[0.3em] text-white/30 mb-6 font-structural"
             >
-              <span className="inline-block transition-transform duration-700 ease-out group-hover:translate-x-[2px]">
-                →
-              </span>
-              <span>Enter the Case Study</span>
-            </Link>
-          </motion.div>
-        </motion.div>
-      </div>
+              Featured Case
+            </motion.p>
 
-      {/* Bottom gradient bridge — soft transition to next section */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 left-0 right-0 h-24 md:h-32"
-        style={{ background: 'linear-gradient(to bottom, transparent, rgba(6,8,16,0.5) 60%, #080A14)' }}
-      />
+            <motion.h2
+              variants={line}
+              className="font-editorial text-5xl font-light leading-tight"
+            >
+              LUMO
+            </motion.h2>
+
+            <motion.p
+              variants={line}
+              className="mt-6 text-white/60 leading-relaxed font-structural text-[14px] max-w-[48ch]"
+            >
+              A world built for overwhelmed humans. Emotional identity systems
+              designed to calm cognitive noise.
+            </motion.p>
+
+            <motion.div variants={line}>
+              <Link
+                to="/work/lumo"
+                className="mt-10 inline-block text-violet-300 uppercase tracking-[0.2em] text-sm font-structural hover:text-violet-200 transition-colors duration-500"
+              >
+                View Case Study →
+              </Link>
+            </motion.div>
+          </motion.div>
+
+          {/* RIGHT SIDE — IMAGE */}
+          <div className="h-full min-h-[500px]">
+            <img
+              src="/images/lumo-world.jpg"
+              alt="Lumo"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
