@@ -19,7 +19,7 @@ export function Pathways() {
           className="mb-15"
         />
 
-        <div className="grid md:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-3 gap-8">
 
           <Link to="/sessions">
             <GlowCard
