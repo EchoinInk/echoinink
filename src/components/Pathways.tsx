@@ -16,7 +16,7 @@ export function Pathways() {
           eyebrow="What We Design"
           title={"We build worlds with \nintention and precision."}
           description="Explore our core areas of creative direction."
-          className="mb-15"
+          className="mb-3"
         />
 
         <div className="grid md:grid-cols-3 gap-8">
