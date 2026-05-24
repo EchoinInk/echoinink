@@ -6,7 +6,7 @@ import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
 
 export function Philosophy() {
   return (
-    <Section className="relative py-24 md:py-36 overflow-hidden">
+<Section spacing="lg" className="pb-6 md:pb-8 overflow-hidden">
       {/* Reduced atmosphere - typography-led section */}
       <div
         className="absolute inset-0 pointer-events-none"
