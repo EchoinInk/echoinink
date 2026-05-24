@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlowField, GrainOverlay } from './AtmosphericSystem';
-import lumoCloudform from '@/assets/lumo-cloudform-16x9.jpg';
+import lumocloudform from '@/assets/lumo-cloudform-16x9.jpg';
 import { EASE, DURATION } from '@/lib/motion';
 
 const container = {
