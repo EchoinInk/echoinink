@@ -28,11 +28,19 @@ export default function GlowCard({ title, description, image, centered }: Props)
       <div className="flex flex-col flex-1 p-0">
         {/* Inner content wrapper with padding */}
         <div className="flex flex-col flex-1 p-8">
-          <h3 className="text-3xl font-light">{title}</h3>
+          <h2
+  className={cn(
+    'font-editorial text-[1.6rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line',
+    centered && 'mx-auto'
+  )}
+  style={{ letterSpacing: '-0.012em' }}
+>
+  {title}
+</h2>
 
 <p
     className={cn(
-      'font-structural text-[15px] md:text-[16px] text-white/60 leading-[1.85]',
+      'font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85]',
       centered ? 'max-w-[42ch] mx-auto' : 'max-w-[58ch]'
     )}
     style={{ marginTop: 'var(--ei-space-48)' }}
