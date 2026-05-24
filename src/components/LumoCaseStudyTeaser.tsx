@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlowField, GrainOverlay } from './AtmosphericSystem';
-import lumocloudform from '@/assets/lumo-cloudform-16x9.jpg';
+import lumocloudform from '@/assets/lumocasestudy.png';
 import { EASE, DURATION } from '@/lib/motion';
 
 const container = {
@@ -88,7 +88,7 @@ export function LumoCaseStudyTeaser() {
           {/* RIGHT SIDE — CLOUD IMAGE */}
           <div className="h-full min-h-[500px]">
             <img
-              src={lumoCloudform}
+              src={lumo}
               alt="Lumo Indigo Cloudform"
               className="w-full h-full object-cover"
             />
