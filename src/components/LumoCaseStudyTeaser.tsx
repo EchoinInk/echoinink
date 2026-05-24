@@ -79,12 +79,6 @@ export function LumoCaseStudyTeaser() {
       >
         LUMO
       </motion.h2>
-<motion.h2
-  variants={line}
-  className="font-editorial text-5xl font-light leading-tight"
->
-  LUMO
-</motion.h2>
 
 <motion.h3
   variants={line}
@@ -94,21 +88,6 @@ export function LumoCaseStudyTeaser() {
   Overwhelmed Humans
 </motion.h3>
 
-<motion.p
-  variants={line}
-  className="mt-6 text-white/60 leading-relaxed font-structural text-[14px] max-w-[48ch]"
->
-  An emotionally intelligent identity system.
-</motion.p>
-
-<motion.div variants={line}>
-  <Link
-    to="/work/lumo"
-    className="mt-10 inline-block text-violet-300 uppercase tracking-[0.2em] text-sm font-structural hover:text-violet-200 transition-colors duration-500"
-  >
-    View Case Study →
-  </Link>
-</motion.div>
 
       <motion.p
         variants={line}
