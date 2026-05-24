@@ -22,7 +22,7 @@ const line = {
 
 export function LumoCaseStudyTeaser() {
   return (
-    <section className="relative bg-[#040816] px-8 py-32 text-white overflow-hidden">
+    <section className="relative px-8 py-32 text-white overflow-hidden">
       {/* Atmospheric glow */}
       <GlowField
         style={{
