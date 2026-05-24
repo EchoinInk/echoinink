@@ -32,7 +32,9 @@ export function Pathways() {
           <Link to="/identity">
             <GlowCard
               title="Identity"
-              description="Where inner worlds become coherent external form. Emotional, narrative, \nand visual translation for founders, studios, and evolving brands."
+              description={
+                "Where inner worlds become coherent external form. Emotional, narrative,\nand visual translation for founders, studios, and evolving brands."
+              }
               image={identityImage}
             />
           </Link>
