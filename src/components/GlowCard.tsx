@@ -42,7 +42,7 @@ export default function GlowCard({ title, description, image, centered }: Props)
           {/* DESCRIPTION — tightened spacing */}
           <p
             className={cn(
-              "font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85] mt-3",
+              "font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85] mt-3", whitespace-pre-line,
               centered ? "max-w-[42ch] mx-auto" : "max-w-[58ch]"
             )}
           >
