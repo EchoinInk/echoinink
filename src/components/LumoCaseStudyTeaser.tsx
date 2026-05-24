@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlowField, GrainOverlay } from './AtmosphericSystem';
-
+import featured
 import { EASE, DURATION } from '@/lib/motion';
 
 const container = {
