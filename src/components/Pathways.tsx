@@ -9,7 +9,7 @@ import worldsImage from '@/assets/Worlds.png';
 
 export function Pathways() {
   return (
-    <Section className="relative py-24 md:py-28">
+    <Section className="relative pt-24 md:pt-8">
       <Container>
 
         <SectionHeading
