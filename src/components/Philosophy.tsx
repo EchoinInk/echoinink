@@ -26,8 +26,7 @@ export function Philosophy() {
           />
 
           {/* Atmospheric text block with motion */}
-<div className="font-structural text-[14px] md:text-[15px] text-white/60 leading-[1.85] space-y-6 mt-12 md:mt-16 mb-4 md:mb-5">
-
+<div className="font-structural text-[14px] md:text-[15px] text-white/60 leading-[1.85] space-y-6 mt-8 md:mt-12 mb-6 md:mb-8">
             {[
               "Some things are felt long before they can be articulated.",
               "Echo in Ink exists for founders, artists, and visionaries carrying something real beneath the surface — something difficult to translate clearly without losing its texture.",
