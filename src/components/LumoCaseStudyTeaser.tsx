@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlowField, GrainOverlay } from './AtmosphericSystem';
-import featuredcaseImage from '@'
+import featuredcaseImage from '@/assets/lumocasestudy.png'
 import { EASE, DURATION } from '@/lib/motion';
 
 const container = {
@@ -86,7 +86,7 @@ export function LumoCaseStudyTeaser() {
           {/* RIGHT SIDE — IMAGE */}
           <div className="h-full min-h-[500px]">
             <img
-              src="/images/lumo-world.jpg"
+              src={featuredcaseImage}
               alt="Lumo"
               className="w-full h-full object-cover"
             />
