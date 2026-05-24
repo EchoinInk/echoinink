@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 interface Props {
   title: string;
   description: string;
   image: string;
+  centered?: boolean;
 }
 
-export default function GlowCard({ title, description, image }: Props) {
+export default function GlowCard({ title, description, image, centered }: Props) {
   return (
     <motion.div
       whileHover={{ y: -8 }}
@@ -28,8 +30,13 @@ export default function GlowCard({ title, description, image }: Props) {
         <div className="flex flex-col flex-1 p-8">
           <h3 className="text-3xl font-light">{title}</h3>
 
-          <p className="mt-4 text-white/60 leading-relaxed flex-1">
-            {description}
+<p
+    className={cn(
+      'font-structural text-[15px] md:text-[16px] text-white/60 leading-[1.85]',
+      centered ? 'max-w-[42ch] mx-auto' : 'max-w-[58ch]'
+    )}
+    style={{ marginTop: 'var(--ei-space-48)' }}
+  >            {description}
           </p>
 
           <button
