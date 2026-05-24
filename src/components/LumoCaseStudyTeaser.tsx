@@ -43,7 +43,7 @@ export function LumoCaseStudyTeaser() {
       <GrainOverlay range={[0.008, 0.015]} duration={36} delay={6} size={220} />
 
       {/* CARD */}
-      <div className="relative max-w-7xl mx-auto overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.03]">
+      <div className="relative max-w-7xl mx-auto overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.03] h-[700px]">
 
   {/* BACKGROUND IMAGE */}
   <img
