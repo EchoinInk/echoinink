@@ -88,7 +88,7 @@ export function LumoCaseStudyTeaser() {
           {/* RIGHT SIDE — CLOUD IMAGE */}
           <div className="h-full min-h-[500px]">
             <img
-              src={lumo}
+              src={lumocloudform}
               alt="Lumo Indigo Cloudform"
               className="w-full h-full object-cover"
             />
