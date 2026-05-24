@@ -13,7 +13,7 @@ export default function GlowCard({ title, description, image, centered }: Props)
     <motion.div
       whileHover={{ y: -8 }}
       className="group flex flex-col rounded-3xl overflow-hidden border border-white/5 bg-white/[0.03] backdrop-blur-xl"
-      style={{ height: "520px" }} // ← FIXED HEIGHT, adjust as needed
+      style={{ height: "420px" }} // ← FIXED HEIGHT, adjust as needed
     >
       {/* IMAGE — flush, no padding */}
       <div className="relative w-full h-48 overflow-hidden">
