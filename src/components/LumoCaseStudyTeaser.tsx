@@ -23,6 +23,7 @@ const line = {
 export function LumoCaseStudyTeaser() {
   return (
     <section className="relative px-8 py-32 text-white overflow-hidden">
+
       {/* Atmospheric glow */}
       <GlowField
         style={{
@@ -44,57 +45,57 @@ export function LumoCaseStudyTeaser() {
       {/* CARD */}
       <div className="max-w-7xl mx-auto overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.03]">
         <div className="grid md:grid-cols-2 items-stretch">
-  
-  {/* LEFT SIDE */}
-  <motion.div
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true, margin: '-60px' }}
-    variants={container}
-    className="p-16 flex flex-col justify-center"
-  >
-    <motion.p
-      variants={line}
-      className="uppercase text-[11px] tracking-[0.3em] text-white/30 mb-6 font-structural"
-    >
-      Featured Case
-    </motion.p>
 
-    <motion.h2
-      variants={line}
-      className="font-editorial text-5xl font-light leading-tight"
-    >
-      LUMO
-    </motion.h2>
+          {/* LEFT SIDE */}
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={container}
+            className="p-16 flex flex-col justify-center"
+          >
+            <motion.p
+              variants={line}
+              className="uppercase text-[11px] tracking-[0.3em] text-white/30 mb-6 font-structural"
+            >
+              Featured Case
+            </motion.p>
 
-    <motion.p
-      variants={line}
-      className="mt-6 text-white/60 leading-relaxed font-structural text-[14px] max-w-[48ch]"
-    >
-      A world built for overwhelmed humans. Emotional identity systems
-      designed to calm cognitive noise.
-    </motion.p>
+            <motion.h2
+              variants={line}
+              className="font-editorial text-5xl font-light leading-tight"
+            >
+              LUMO
+            </motion.h2>
 
-    <motion.div variants={line}>
-      <Link
-        to="/work/lumo"
-        className="mt-10 inline-block text-violet-300 uppercase tracking-[0.2em] text-sm font-structural hover:text-violet-200 transition-colors duration-500"
-      >
-        View Case Study →
-      </Link>
-    </motion.div>
-  </motion.div>
+            <motion.p
+              variants={line}
+              className="mt-6 text-white/60 leading-relaxed font-structural text-[14px] max-w-[48ch]"
+            >
+              A world built for overwhelmed humans. Emotional identity systems
+              designed to calm cognitive noise.
+            </motion.p>
 
-  {/* RIGHT SIDE — FULL-BLEED IMAGE */}
-  <div className="relative h-full">
-    <img
-      src={lumocloudform}
-      alt="Lumo Indigo Cloudform"
-      className="w-full h-full object-cover"
-    />
-  </div>
+            <motion.div variants={line}>
+              <Link
+                to="/work/lumo"
+                className="mt-10 inline-block text-violet-300 uppercase tracking-[0.2em] text-sm font-structural hover:text-violet-200 transition-colors duration-500"
+              >
+                View Case Study →
+              </Link>
+            </motion.div>
+          </motion.div>
 
-</div>
+          {/* RIGHT SIDE — FULL-BLEED IMAGE */}
+          <div className="relative h-full">
+            <img
+              src={lumocloudform}
+              alt="Lumo Indigo Cloudform"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+        </div>
       </div>
     </section>
   );
