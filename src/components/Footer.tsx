@@ -28,18 +28,18 @@ export default function Footer() {
         <div className="grid lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 lg:gap-16 pb-16">
           {/* Brand column */}
           <motion.div variants={driftUp}>
-            <span className="ei-eyebrow ei-text-space-lg block">
+            <span className="ei-eyebrow ei-text-space-md block">
               Echo In Ink
             </span>
 
             <p className="ei-body-large max-w-sm whitespace-pre-line">
-              {"Translating inner worlds into identities \nthat can hold their shape in the world.
+              {"Translating inner worlds into identities \nthat can hold their shape in the world."}
             </p>
           </motion.div>
 
           {/* Navigation column */}
           <motion.div variants={driftUp}>
-            <h3 className="ei-eyebrow ei-text-space-md block">
+            <h3 className="ei-eyebrow ei-text-space-sm block">
               Navigate
             </h3>
             <ul className="space-y-3">
