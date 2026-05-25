@@ -28,6 +28,7 @@ export default function GlowCard({
       className={cn(
         "group rounded-2xl overflow-hidden transition-all duration-500",
         "bg-[#0F1220] border border-white/[0.04]",
+        "before:absolute before:inset-0 before:bg-white/[0.015] before:pointer-events-none",
         "hover:bg-white/[0.025] hover:border-white/[0.06]",
         horizontal ? "flex flex-row" : "flex flex-col",
         className
@@ -60,23 +61,24 @@ export default function GlowCard({
       ) : (
         <>
           {/* VERTICAL IMAGE WITH TITLE INSIDE */}
-<div
-  className={cn(
-    "relative w-full h-64 md:h-72 overflow-hidden bg-[#0F1220]"},
->
-  <img
-    src={image}
-    alt={title}
-    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-  />
+          <div
+            className={cn(
+              "relative w-full h-64 md:h-72 overflow-hidden bg-[#0F1220]"
+            )}
+          >
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            />
 
-  {/* TITLE OVERLAY */}
-  <div className="absolute bottom-0 left-0 w-full p-6">
-    <h3 className="ei-card-title text-white drop-shadow-lg">
-      {title}
-    </h3>
-  </div>
-</div>
+            {/* TITLE OVERLAY */}
+            <div className="absolute bottom-0 left-0 w-full p-6">
+              <h3 className="ei-card-title text-white drop-shadow-lg">
+                {title}
+              </h3>
+            </div>
+          </div>
 
           {/* VERTICAL CONTENT */}
           <div className="flex flex-col flex-1 p-8">
