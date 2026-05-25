@@ -26,8 +26,8 @@ export default function GlowCard({
       whileHover={{ y: -3 }}
       transition={{ duration: DURATION.fast, ease: EASE_CINEMATIC }}
       className={cn(
-        "group rounded-2xl overflow-hidden transition-all duration-500",
-        "bg-[#0F1220] border border-white/[0.04]",
+        "group relative rounded-2xl overflow-hidden transition-all duration-500",
+        "bg-[#101320] border border-white/[0.04]",
         "before:absolute before:inset-0 before:bg-white/[0.015] before:pointer-events-none",
         "hover:bg-white/[0.025] hover:border-white/[0.06]",
         horizontal ? "flex flex-row" : "flex flex-col",
@@ -37,7 +37,7 @@ export default function GlowCard({
       {horizontal ? (
         <>
           {/* CONTENT LEFT */}
-          <div className="flex flex-col flex-1 p-8 text-left items-start">
+          <div className="flex flex-col flex-1 p-8 text-left items-start bg-[#101320]">
             <h3 className="ei-card-title">
               {title}
             </h3>
@@ -50,7 +50,7 @@ export default function GlowCard({
           </div>
 
           {/* IMAGE RIGHT */}
-          <div className={cn("relative flex-1 overflow-hidden", imageWrapperClass)}>
+          <div className={cn("relative flex-1 overflow-hidden bg-[#101320]", imageWrapperClass)}>
             <img
               src={image}
               alt={title}
@@ -63,7 +63,7 @@ export default function GlowCard({
           {/* VERTICAL IMAGE WITH TITLE INSIDE */}
           <div
             className={cn(
-              "relative w-full h-64 md:h-72 overflow-hidden bg-[#0F1220]"
+              "relative w-full h-64 md:h-72 overflow-hidden bg-[#101320]"
             )}
           >
             <img
@@ -81,7 +81,7 @@ export default function GlowCard({
           </div>
 
           {/* VERTICAL CONTENT */}
-          <div className="flex flex-col flex-1 p-8">
+          <div className="flex flex-col flex-1 p-8 bg-[#101320]">
             {/* title removed because it's now inside the image */}
             <p className={cn("ei-card-description mt-3", centered && "text-center mx-auto max-w-[40ch]")}>
               {description}
