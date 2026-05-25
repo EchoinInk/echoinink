@@ -7,24 +7,34 @@ interface Props {
   image: string;
   centered?: boolean;
   className?: string;
-  horizontal?: boolean; // ← added
+  horizontal?: boolean;
 }
 
-export default function GlowCard({ title, description, image, centered, className, horizontal }: Props) {
+export default function GlowCard({
+  title,
+  description,
+  image,
+  centered,
+  className,
+  horizontal,
+}: Props) {
   return (
     <motion.div
-  whileHover={{ y: -8 }}
-  className={cn(
-    "group rounded-3xl overflow-hidden border border-white/5 bg-white/[0.03] backdrop-blur-xl",
-    horizontal
-      ? "flex flex-row" // ← horizontal layout
-      : "flex flex-col", // ← default vertical
-    className
-  )}
->
+      whileHover={{ y: -8 }}
+      className={cn(
+        "group rounded-3xl overflow-hidden border border-white/5 bg-white/[0.03] backdrop-blur-xl",
+        horizontal ? "flex flex-row" : "flex flex-col",
+        className
+      )}
+    >
 
       {/* IMAGE */}
-      <div className="relative w-full h-48 overflow-hidden">
+      <div
+        className={cn(
+          "relative overflow-hidden",
+          horizontal ? "w-1/2 h-full" : "w-full h-48"
+        )}
+      >
         <img
           src={image}
           alt={title}
@@ -33,8 +43,13 @@ export default function GlowCard({ title, description, image, centered, classNam
       </div>
 
       {/* CONTENT */}
-      <div className="flex flex-col flex-1 p-0">
-        <div className="flex flex-col flex-1 p-8">
+      <div
+        className={cn(
+          "flex flex-col",
+          horizontal ? "w-1/2 p-8" : "flex-1 p-0"
+        )}
+      >
+        <div className={cn(horizontal ? "flex flex-col h-full" : "flex flex-col flex-1 p-8")}>
 
           {/* TITLE */}
           <h2

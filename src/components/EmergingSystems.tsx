@@ -27,20 +27,21 @@ export function EmergingSystems() {
           <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
             <Link to="/systems" className="flex-1">
               <GlowCard
-                title="Echo Systems"
-                description="Atmospheric frameworks for creators building with intention."
-                image={systemsImage}
-                className="aspect-[3/1] max-h-[260px] w-full"
-              />
-            </Link>
+  title="Echo Systems"
+  description="Atmospheric frameworks for creators building with intention."
+  image={systemsImage}
+  horizontal
+  className="max-h-[450px] w-full"
+/>
+<l
+<GlowCard
+  title="Echo Vault"
+  description="A curated archive of textures, references, systems, and emotional environments."
+  image={vaultImage}
+  horizontal
+  className="max-h-[450px] w-full"
+/>
 
-            <Link to="/vault" className="flex-1">
-              <GlowCard
-                title="Echo Vault"
-                description="A curated archive of textures, references, and emotional systems."
-                image={vaultImage}
-                className="aspect-[3/1] max-h-[260px] w-full"
-              />
             </Link>
           </div>
         </div>
