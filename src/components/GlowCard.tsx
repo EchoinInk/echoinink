@@ -25,7 +25,7 @@ export default function GlowCard({
       className={cn(
         "group relative overflow-hidden rounded-[28px]",
         "border border-white/[0.06]",
-        "min-h-[480px] md:min-h-[520px]",
+        horizontal ? "min-h-[200px] md:min-h-[240px]" : "min-h-[480px] md:min-h-[520px]",
         "bg-[#070B1A]",
         className
       )}
