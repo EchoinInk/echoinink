@@ -68,11 +68,11 @@ export default function GlowCard({
             {title}
           </h3>
 
-          <p className="max-w-[32ch] text-[14px] leading-[1.8] text-white/60">
+          <p className="max-w-[32ch] text-[14px] pt-8 leading-[1.8] text-white/60">
             {description}
           </p>
 
-          <span className="block pt-2 text-[11px] uppercase tracking-[0.28em] text-white/50 transition-colors duration-500 group-hover:text-white/80">
+          <span className="block pt-8 text-[11px] uppercase tracking-[0.28em] text-white/50 transition-colors duration-500 group-hover:text-white/80">
             Explore →
           </span>
         </div>
