@@ -54,23 +54,28 @@ export const AMBIENT = {
   },
 } as const;
 
-// ── Stagger Configuration — Cinematic pacing ─────────────────
+// ── Stagger Configuration — Cinematic pacing with organic variation ─────────────────
 export const STAGGER: Record<string, number> = {
-  tight: 0.08,       // Quick sequence
-  normal: 0.15,      // Standard flow
-  loose: 0.25,       // Dramatic reveals
-  cinematic: 0.35,   // Hero sequences
+  tight: 0.06,       // Quick sequence
+  normal: 0.12,      // Standard flow
+  loose: 0.22,       // Dramatic reveals
+  cinematic: 0.32,   // Hero sequences
 } as const;
+
+// Organic delay offsets for breaking predictable patterns
+export const organicOffset = (base: number, variance = 0.08): number => {
+  return base + (Math.random() - 0.5) * variance;
+};
 
 // ── Cinematic Reveal Variants ────────────────────────────────
 
-// Soft fade — minimal movement, mostly opacity
+// Soft fade — minimal movement, mostly opacity (with organic duration variation)
 export const fadeSoft: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      duration: DURATION.slow,
+      duration: DURATION.slow * (0.9 + Math.random() * 0.2),
       ease: EASE_CINEMATIC,
     },
   },
@@ -89,14 +94,14 @@ export const fadeRise: Variants = {
   },
 };
 
-// Drift up — even more subtle
+// Drift up — even more subtle (variable distance for organic feel)
 export const driftUp: Variants = {
-  hidden: { opacity: 0, y: 12 },
+  hidden: { opacity: 0, y: 10 + Math.random() * 6 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: DURATION.slow,
+      duration: DURATION.slow * (0.95 + Math.random() * 0.1),
       ease: EASE_SOFT,
     },
   },
@@ -121,8 +126,8 @@ export const staggerContainer = (stagger = STAGGER.normal, delay = 0): Variants 
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: stagger,
-      delayChildren: delay,
+      staggerChildren: stagger * (0.85 + Math.random() * 0.3),
+      delayChildren: delay * (0.9 + Math.random() * 0.2),
     },
   },
 });
@@ -209,11 +214,11 @@ export const textLineReveal: Variants = {
 
 export const ambientGlow = {
   animate: {
-    opacity: [0.35, 0.45, 0.35],
-    scale: [1, 1.02, 1],
+    opacity: [0.3, 0.38, 0.3],
+    scale: [1, 1.015, 1],
   },
   transition: {
-    duration: DURATION.ambient,
+    duration: DURATION.ambient * (0.95 + Math.random() * 0.1),
     ease: 'easeInOut',
     repeat: Infinity,
     repeatType: 'mirror' as const,
