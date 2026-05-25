@@ -39,15 +39,12 @@ export function Pathways() {
   ];
 
   return (
-    <Section spacing="xl" className="relative overflow-hidden py-32 md:py-40">
-      {/* Deep atmospheric base */}
-      <div className="absolute inset-0 bg-[#05070a]" />
-      
-      {/* Central radial glow - massive soft illumination */}
+    <Section spacing="xl" className="relative overflow-hidden py-24 md:py-32">
+      {/* Soft atmospheric glow - integrated with surrounding sections */}
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 40% at 50% 30%, rgba(79,70,229,0.08) 0%, rgba(99,102,241,0.04) 30%, transparent 65%)',
+          background: 'radial-gradient(ellipse 60% 40% at 50% 30%, rgba(79,70,229,0.06) 0%, rgba(99,102,241,0.03) 30%, transparent 65%)',
           filter: 'blur(80px)',
         }}
       />
@@ -56,7 +53,7 @@ export function Pathways() {
       <div 
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 50% 30% at 50% 20%, rgba(59,130,246,0.06) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 50% 30% at 50% 20%, rgba(59,130,246,0.04) 0%, transparent 70%)',
           filter: 'blur(100px)',
         }}
       />
@@ -65,16 +62,8 @@ export function Pathways() {
       <div 
         className="absolute bottom-1/4 right-1/4 w-[600px] h-[300px] pointer-events-none opacity-60"
         style={{
-          background: 'radial-gradient(ellipse 40% 50% at center, rgba(139,92,246,0.05) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 40% 50% at center, rgba(139,92,246,0.04) 0%, transparent 70%)',
           filter: 'blur(80px)',
-        }}
-      />
-
-      {/* Top edge fade from previous section */}
-      <div 
-        className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
-        style={{
-          background: 'linear-gradient(to bottom, rgba(5,7,10,0.8), transparent)',
         }}
       />
 
@@ -125,14 +114,6 @@ export function Pathways() {
           </div>
         </motion.div>
       </Container>
-
-      {/* Bottom transition gradient */}
-      <div 
-        className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
-        style={{
-          background: 'linear-gradient(to top, rgba(5,7,10,0.9), transparent)',
-        }}
-      />
     </Section>
   );
 }
