@@ -1,7 +1,9 @@
 import { Helmet } from 'react-helmet-async';
 import { Hero } from '@/components/hero/Hero';
 import { Philosophy } from '@/components/Philosophy';
+import { WhatWeCreate } from '@/components/WhatWeCreate';
 import { Pathways } from '@/components/Pathways';
+import { CinematicStatement } from '@/components/CinematicStatement';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/ClosingSection';
@@ -29,9 +31,21 @@ export function Home() {
       <Philosophy />
 
       {/* ═══════════════════════════════════════════════════════════════
+          WHAT WE CREATE — Grounded functional anchor
+          Explains Echo in Ink's capabilities with editorial restraint
+          ═══════════════════════════════════════════════════════════════ */}
+      <WhatWeCreate />
+
+      {/* ═══════════════════════════════════════════════════════════════
           PATHWAYS — Core offerings (Identity, Sessions, Worlds)
           ═══════════════════════════════════════════════════════════════ */}
       <Pathways />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          CINEMATIC STATEMENT — Tempo change, breathing moment
+          Full-width atmospheric statement with tonal contrast
+          ═══════════════════════════════════════════════════════════════ */}
+      <CinematicStatement />
 
       {/* ═══════════════════════════════════════════════════════════════
           LUMO CASE STUDY — Featured work, editorial presentation
