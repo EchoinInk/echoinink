@@ -24,7 +24,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: 'easeOut', delay: 0.1 }}
           viewport={{ once: true }}
-          className="font-editorial text-4xl md:text-6xl font-light text-white/90 leading-[1.15]"
+          className="font-editorial text-[2.1rem] md:text-6xl font-light text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line"
         >
           Ready to translate your world?
         </motion.h2>
