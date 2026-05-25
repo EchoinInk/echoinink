@@ -10,16 +10,19 @@ interface Props {
   horizontal?: boolean; // ← added
 }
 
-export default function GlowCard({ title, description, image, centered, className }: Props) {
+export default function GlowCard({ title, description, image, centered, className, horizontal }: Props) {
   return (
     <motion.div
-      whileHover={{ y: -8 }}
-      className={cn(
-        "group flex flex-col rounded-3xl overflow-hidden border border-white/5 bg-white/[0.03] backdrop-blur-xl",
-        className
-      )}
-      style={{ }}
-    >
+  whileHover={{ y: -8 }}
+  className={cn(
+    "group rounded-3xl overflow-hidden border border-white/5 bg-white/[0.03] backdrop-blur-xl",
+    horizontal
+      ? "flex flex-row" // ← horizontal layout
+      : "flex flex-col", // ← default vertical
+    className
+  )}
+>
+
       {/* IMAGE */}
       <div className="relative w-full h-48 overflow-hidden">
         <img
