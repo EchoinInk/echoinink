@@ -18,27 +18,15 @@ import {
 
 export function LumoCaseStudyTeaser() {
   return (
-    <Section spacing="lg" className="ei-section-intimate overflow-hidden relative">
-      {/* Atmospheric depth — violet haze creating editorial mood */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          className="absolute left-[5%] top-[20%] w-[400px] h-[400px]"
-          animate={{
-            opacity: [0.03, 0.045, 0.03],
-            scale: [1, 1.02, 1],
-          }}
-          transition={{
-            duration: DURATION.ambient * 2,
-            ease: 'easeInOut',
-            repeat: Infinity,
-            repeatType: 'mirror',
-          }}
-          style={{
-            background: 'radial-gradient(ellipse 50% 50% at 50% 50%, rgba(168,85,247,0.08) 0%, transparent 70%)',
-            filter: 'blur(80px)',
-          }}
-        />
-      </div>
+    <Section spacing="md" className="ei-section-intimate overflow-hidden relative">
+      {/* Subtle atmospheric depth */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 40% 30% at 20% 30%, rgba(168,85,247,0.03) 0%, transparent 60%)',
+          filter: 'blur(60px)',
+        }}
+      />
 
       <Container>
         <motion.div

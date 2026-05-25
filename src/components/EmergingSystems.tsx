@@ -14,9 +14,15 @@ import {
 
 export function EmergingSystems() {
   return (
-    <Section spacing="lg" className="ei-section-standard relative overflow-hidden">
-      {/* Atmospheric depth - reduced */}
-      <div className="absolute inset-0 ei-glow-aqua opacity-25" />
+    <Section spacing="md" className="ei-section-standard relative overflow-hidden">
+      {/* Soft atmospheric continuation */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 50% 40% at 50% 60%, rgba(30,200,255,0.02) 0%, transparent 60%)',
+          filter: 'blur(60px)',
+        }}
+      />
 
       <Container>
         <motion.div
@@ -27,7 +33,7 @@ export function EmergingSystems() {
           className="max-w-6xl mx-auto"
         >
           {/* Centered heading */}
-          <motion.div variants={driftUp} className="text-center mb-16 md:mb-20">
+          <motion.div variants={driftUp} className="text-center mb-12 md:mb-16">
             <span className="ei-eyebrow ei-text-space-md block">
               Worlds in Formation
             </span>

@@ -42,31 +42,16 @@ export function Pathways() {
   ];
 
   return (
-    <Section spacing="xl" className="relative overflow-hidden py-24 md:py-32">
-      {/* Soft atmospheric glow - integrated with surrounding sections */}
-      <div 
+    <Section spacing="md" className="relative overflow-hidden">
+      {/* Unified atmospheric layer - continuous with adjacent sections */}
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 40% at 50% 30%, rgba(79,70,229,0.06) 0%, rgba(99,102,241,0.03) 30%, transparent 65%)',
-          filter: 'blur(80px)',
-        }}
-      />
-      
-      {/* Secondary blue bloom - upper area */}
-      <div 
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 50% 30% at 50% 20%, rgba(59,130,246,0.04) 0%, transparent 70%)',
-          filter: 'blur(100px)',
-        }}
-      />
-      
-      {/* Subtle purple accent - lower right */}
-      <div 
-        className="absolute bottom-1/4 right-1/4 w-[600px] h-[300px] pointer-events-none opacity-60"
-        style={{
-          background: 'radial-gradient(ellipse 40% 50% at center, rgba(139,92,246,0.04) 0%, transparent 70%)',
-          filter: 'blur(80px)',
+          background: `
+            radial-gradient(ellipse 60% 30% at 50% 20%, rgba(99,102,241,0.03) 0%, transparent 60%),
+            radial-gradient(ellipse 40% 40% at 70% 80%, rgba(139,92,246,0.02) 0%, transparent 60%)
+          `,
+          filter: 'blur(60px)',
         }}
       />
 
@@ -79,7 +64,7 @@ export function Pathways() {
           className="max-w-6xl mx-auto"
         >
           {/* Section header - elegant and restrained */}
-          <motion.div variants={driftUp} className="text-center mb-20 md:mb-28">
+          <motion.div variants={driftUp} className="text-center mb-12 md:mb-16">
             <span 
               className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/20 mb-6"
             >
