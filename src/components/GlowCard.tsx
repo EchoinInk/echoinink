@@ -64,9 +64,10 @@ export default function GlowCard({
   flex h-full flex-col justify-end
 
   px-8 md:px-10
-  pt-6 md:pt-8      /* small top padding */
-  pb-24 md:pb-32    /* large bottom padding → moves text DOWN */
+  pt-4 md:pt-6
+  pb-40 md:pb-48
 ">
+
   <div className="space-y-5">
     <h3
       className="font-serif text-[1.75rem] md:text-[2rem] font-light leading-[1.1] tracking-tight text-white/95"
