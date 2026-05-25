@@ -70,7 +70,11 @@ export function Pathways() {
                   <GlowCard
                     title={pathway.title}
                     description={pathway.description}
-                    image={pathway.image}
+                    <div className="relative bg-[#0F1220]">
+  <img src={pathway.image} alt={pathway.title} className="relative z-10" />
+  <div className="absolute inset-0 bg-white/[0.015] mix-blend-lighten z-0" />
+</div>
+
                     className="h-full min-h-[420px]"
                   />
                 </Link>
