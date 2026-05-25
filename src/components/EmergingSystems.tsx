@@ -4,7 +4,7 @@ import { Container } from '@/components/layout/Container';
 import { Link } from 'react-router-dom';
 import GlowCard from '@/components/GlowCard';
 import systemsImage from '@/assets/ei-systems-bg.png';
-import vaultImage from '@/assets/Vault.png';
+import vaultImage from '@/assets/ei-vault-bg.png';
 import { 
   driftUp, 
   staggerContainer,
