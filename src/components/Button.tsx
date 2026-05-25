@@ -19,17 +19,19 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
 
   const variants = {
     // PRIMARY — Strongest visual weight
-    // Subtle filled glow, brighter border, elegant hover lift
+    // Confident border presence, clearer hover response, subtle glow increase
     primary: `
       group
       px-8 py-4
-      text-[10px] tracking-[0.16em]
-      text-white/90 hover:text-white
-      border border-white/[0.15] hover:border-white/[0.25]
+      text-[10px] tracking-[0.16em] font-medium
+      text-white/[0.95] hover:text-white
+      border border-white/[0.22] hover:border-white/[0.35]
       rounded-full
-      bg-gradient-to-b from-white/[0.08] to-white/[0.02] hover:from-white/[0.12] hover:to-white/[0.04]
-      shadow-[0_0_40px_-10px_rgba(99,102,241,0.15)] hover:shadow-[0_0_50px_-8px_rgba(99,102,241,0.25)]
-      hover:-translate-y-[1px]
+      bg-gradient-to-b from-white/[0.10] to-white/[0.03] hover:from-white/[0.14] hover:to-white/[0.05]
+      shadow-[0_0_45px_-12px_rgba(99,102,241,0.18)] hover:shadow-[0_0_60px_-10px_rgba(99,102,241,0.30)]
+      hover:-translate-y-[2px]
+      active:translate-y-0
+      transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
     `,
     // SECONDARY — Ghost button, softer presence
     // Clean outline, calmer interaction
