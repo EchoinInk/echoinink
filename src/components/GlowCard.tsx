@@ -55,7 +55,7 @@ export default function GlowCard({
               <h3 className="font-serif text-2xl md:text-[1.75rem] font-light tracking-tight text-white/95 leading-tight">
                 {title}
               </h3>
-              <p className="text-sm leading-relaxed text-white/55 mt-6">
+              <p className="text-sm leading-relaxed text-white/55 mt-6 whitespace-pre-line">
                 {description}
               </p>
               <span className="block mt-5 text-[11px] uppercase tracking-[0.22em] text-white/45 group-hover:text-white/75 transition-colors duration-500">
