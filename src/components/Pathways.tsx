@@ -27,7 +27,7 @@ export function Pathways() {
       to: '/identity',
       title: 'Identity',
       description:
-        'Where inner worlds become coherent external form. Emotional, narrative, and visual translation for evolving brands.',
+        'Where inner worlds become coherent external form. Emotional, narrative, \n and visual translation for evolving brands.',
       image: identityImage,
       glow: 'bg-gradient-to-br from-fuchsia-600/[0.1] via-violet-500/[0.06] to-transparent',
     },
