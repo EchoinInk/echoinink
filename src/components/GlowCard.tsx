@@ -72,7 +72,7 @@ export default function GlowCard({
             {description}
           </p>
 
-          <span className="block pt-3 text-[11px] uppercase tracking-[0.28em] text-white/50 transition-colors duration-500 group-hover:text-white/80">
+          <span className="block pt-2 text-[11px] uppercase tracking-[0.28em] text-white/50 transition-colors duration-500 group-hover:text-white/80">
             Explore →
           </span>
         </div>
