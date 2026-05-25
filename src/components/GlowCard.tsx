@@ -78,32 +78,46 @@ export default function GlowCard({
           </div>
 
           {/* VERTICAL CONTENT */}
-          <div className="flex flex-col flex-1 p-0">
-            <div className="flex flex-col flex-1 p-8">
-              <h2
-                className={cn(
-                  "font-editorial text-[1.6rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line",
-                  centered && "mx-auto"
-                )}
-                style={{ letterSpacing: "-0.012em" }}
-              >
-                {title}
-              </h2>
+          {/* CONTENT */}
+<div
+  className={cn(
+    "flex flex-col",
+    horizontal ? "w-1/2 p-8 text-left items-start" : "flex-1 p-0"
+  )}
+>
+  <div className={cn(horizontal ? "flex flex-col h-full" : "flex flex-col flex-1 p-8")}>
 
-              <p
-                className={cn(
-                  "font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85] mt-3 whitespace-pre-line",
-                  centered ? "max-w-[42ch] mx-auto" : "max-w-[58ch]"
-                )}
-              >
-                {description}
-              </p>
+    {/* TITLE */}
+    <h2
+      className={cn(
+        "font-editorial text-[1.6rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line",
+        centered && !horizontal && "mx-auto" // ← only center in vertical mode
+      )}
+      style={{ letterSpacing: "-0.012em" }}
+    >
+      {title}
+    </h2>
 
-              <button className="mt-auto pt-6 pb-2 text-sm uppercase tracking-[0.2em] text-violet-300 text-left">
-                Explore →
-              </button>
-            </div>
-          </div>
+    {/* DESCRIPTION */}
+    <p
+      className={cn(
+        "font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85] mt-3 whitespace-pre-line",
+        horizontal
+          ? "max-w-[48ch]" // ← left-aligned width
+          : centered
+          ? "max-w-[42ch] mx-auto"
+          : "max-w-[58ch]"
+      )}
+    >
+      {description}
+    </p>
+
+    {/* EXPLORE */}
+    <button className="mt-auto pt-6 pb-2 text-sm uppercase tracking-[0.2em] text-violet-300 text-left">
+      Explore →
+    </button>
+  </div>
+</div>
         </>
       )}
     </motion.div>
