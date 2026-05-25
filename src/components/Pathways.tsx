@@ -27,7 +27,7 @@ export function Pathways() {
       to: '/identity',
       title: 'Identity',
       description:
-        'Emotional, narrative, and visual systems for brands in evolution. Inner meaning translated into a coherent external form.',
+        'Emotional, narrative, and visual systems for brands in evolution. Inner meaning translated into a coherent, enduring external form.',
       image: identityImage,
       glow: 'bg-gradient-to-br from-fuchsia-600/[0.1] via-violet-500/[0.06] to-transparent',
     },
