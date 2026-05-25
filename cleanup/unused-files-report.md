@@ -389,8 +389,7 @@ src/assets/monogram-balanced.png            (after HeroMonogram.tsx confirmation
 
 ### `src/lib/motion.ts` (partial)
 - **Why:** 2 active files (`SelectedWorks.tsx`, `SignatureCaseStudy.tsx`) still import from it. Cannot delete without a migration to `motion-cinematic.ts`.
-- **Recommendation:** Migrate those 2 files to `motion-cinematic.ts`, then delete `motion.ts`.
-
+- **Recommendation:** Migrate those 2 files to `motion-cinematic.ts`, then delete `motion.ts
 ### `src/lib/useMotion.ts`
 - **Why:** Redundant wrapper but `AtmosphericCursor.tsx` uses it. 1-line fix to update the cursor to import directly from `framer-motion`.
 - **Recommendation:** Update `AtmosphericCursor.tsx` to use `useReducedMotion` from `framer-motion` directly, then delete `useMotion.ts`.
