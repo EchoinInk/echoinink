@@ -3,7 +3,7 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Link } from 'react-router-dom';
 import GlowCard from '@/components/GlowCard';
-import sessionsImage from '@/assets/Sessions.png';
+import sessionsImage from '@/assets/ei-sessions-9x16.png';
 import identityImage from '@/assets/ei-identity-9x16.png';
 import worldsImage from '@/assets/ei-worlds-9x16.png';
 import { 
