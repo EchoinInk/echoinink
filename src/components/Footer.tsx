@@ -62,54 +62,68 @@ export default function Footer() {
         </motion.div>
 
         {/* ═══════════════════════════════════════════════════════════════
-            MIDDLE SECTION — Navigation and metadata
-            Enhanced visibility while maintaining restraint
+            MIDDLE SECTION — Confident navigation and grounded metadata
+            Clear hierarchy, intentional spacing, trustworthy presence
             ═══════════════════════════════════════════════════════════════ */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.1 }}
-          className="py-10 md:py-12"
+          className="py-12 md:py-14"
         >
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 items-start">
-            {/* LEFT — Brand identity */}
+          {/* Atmospheric separator */}
+          <div
+            className="w-full h-px mb-10 md:mb-12"
+            style={{
+              background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.1) 20%, rgba(99,102,241,0.08) 50%, rgba(139,92,246,0.1) 80%, transparent 100%)',
+            }}
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 items-start">
+            {/* LEFT — Brand identity with clearer positioning */}
             <div className="md:col-span-4">
-              <span className="font-structural text-[11px] tracking-[0.24em] uppercase text-white/45 block mb-3">
+              <span className="font-structural text-[12px] tracking-[0.2em] uppercase text-white/52 block mb-3">
                 Echo in Ink
               </span>
-              <p className="font-structural text-[12px] text-white/55 leading-[1.6] max-w-[220px]">
-                Translating inner worlds into identities that hold their shape.
+              <p className="font-structural text-[13px] text-white/62 leading-[1.65] max-w-[240px]">
+                Design studio translating inner worlds into identities that hold their shape.
               </p>
             </div>
 
-            {/* CENTER — Primary navigation */}
+            {/* CENTER — Primary navigation with improved confidence */}
             <nav className="md:col-span-4 md:text-center">
-              <div className="flex flex-wrap gap-x-6 gap-y-2 md:justify-center">
-                <Link to="/works" className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/48 hover:text-white/78 transition-colors duration-400">
+              <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/35 block mb-4 md:mb-5">
+                Navigate
+              </span>
+              <div className="flex flex-wrap gap-x-8 gap-y-3 md:justify-center">
+                <Link to="/works" className="font-structural text-[12px] tracking-[0.1em] uppercase text-white/55 hover:text-white/85 transition-colors duration-400">
                   Works
                 </Link>
-                <Link to="/identity" className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/48 hover:text-white/78 transition-colors duration-400">
+                <Link to="/identity" className="font-structural text-[12px] tracking-[0.1em] uppercase text-white/55 hover:text-white/85 transition-colors duration-400">
                   Identity
                 </Link>
-                <Link to="/sessions" className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/48 hover:text-white/78 transition-colors duration-400">
+                <Link to="/sessions" className="font-structural text-[12px] tracking-[0.1em] uppercase text-white/55 hover:text-white/85 transition-colors duration-400">
                   Sessions
                 </Link>
-                <Link to="/worlds" className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/48 hover:text-white/78 transition-colors duration-400">
+                <Link to="/worlds" className="font-structural text-[12px] tracking-[0.1em] uppercase text-white/55 hover:text-white/85 transition-colors duration-400">
                   Worlds
                 </Link>
               </div>
             </nav>
 
-            {/* RIGHT — Contact and location */}
+            {/* RIGHT — Contact with enhanced visibility */}
             <div className="md:col-span-4 md:text-right">
+              <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/35 block mb-4 md:mb-5">
+                Connect
+              </span>
               <a
                 href="mailto:hello@echoink.co"
-                className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/50 hover:text-white/82 transition-colors duration-400 block mb-2"
+                className="font-structural text-[12px] tracking-[0.1em] uppercase text-white/58 hover:text-white/90 transition-colors duration-400 block mb-2"
               >
                 hello@echoink.co
               </a>
-              <span className="font-structural text-[10px] tracking-[0.1em] uppercase text-white/38 block">
+              <span className="font-structural text-[11px] tracking-[0.08em] text-white/42 block">
                 Aotearoa New Zealand
               </span>
             </div>
@@ -117,31 +131,39 @@ export default function Footer() {
         </motion.div>
 
         {/* ═══════════════════════════════════════════════════════════════
-            BOTTOM SECTION — Copyright and quiet close
-            The final fade to black — subtle but visible
+            BOTTOM SECTION — Confident closing composition
+            Emotionally resolved, not visually disappearing
             ═══════════════════════════════════════════════════════════════ */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slower, ease: EASE_LUXURY, delay: 0.2 }}
-          className="py-6 md:py-8"
+          className="py-8 md:py-10"
         >
-          <div className="flex flex-col md:flex-row items-center justify-between gap-3">
-            {/* Copyright */}
-            <span className="font-structural text-[10px] tracking-[0.1em] uppercase text-white/32">
-              © 2025 Echo in Ink
+          {/* Closing separator */}
+          <div
+            className="w-full h-px mb-8"
+            style={{
+              background: 'linear-gradient(90deg, transparent 0%, rgba(99,102,241,0.06) 30%, rgba(139,92,246,0.06) 70%, transparent 100%)',
+            }}
+          />
+
+          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+            {/* Copyright — grounded presence */}
+            <span className="font-structural text-[11px] tracking-[0.1em] uppercase text-white/42">
+              © 2025 Echo in Ink Studio
             </span>
 
-            {/* Quiet brand mark */}
-            <span className="font-structural text-[10px] tracking-[0.16em] uppercase text-white/28">
-              Est. MMXXV
+            {/* Brand mark with subtle gravitas */}
+            <span className="font-structural text-[11px] tracking-[0.14em] uppercase text-white/35">
+              Founded MMXXV
             </span>
           </div>
         </motion.div>
 
-        {/* Final breath — minimal */}
-        <div className="h-6 md:h-8" />
+        {/* Final breath — intentional space before the close */}
+        <div className="h-8 md:h-10" />
       </div>
 
       {/* Bottom dissolve — complete fade */}
