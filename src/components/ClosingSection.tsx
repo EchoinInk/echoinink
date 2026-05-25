@@ -34,7 +34,7 @@ export function ClosingSection() {
           variants={driftUp}
           className="ei-eyebrow ei-text-space-xl block"
         >
-          Let's Create
+          Begin
         </motion.span>
 
         {/* Heading */}
@@ -50,12 +50,12 @@ export function ClosingSection() {
           variants={driftUp}
           className="ei-section-description mt-8 mx-auto"
         >
-          If the resonance is there, we'll build the language your inner world has been waiting for.
+          If the resonance is there, we will build the language your work has been waiting for.
         </motion.p>
 
         {/* CTA */}
         <motion.div variants={driftUp} className="mt-12">
-          <Button to="/contact">Work With the Studio</Button>
+          <Button to="/contact">Start a Conversation</Button>
         </motion.div>
       </motion.div>
     </section>

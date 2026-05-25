@@ -6,17 +6,15 @@ import {
   driftUp, 
   staggerContainer, 
   STAGGER,
-  DURATION,
-  EASE_CINEMATIC,
   VIEWPORT 
 } from '@/lib/motion-cinematic';
 
 export function Philosophy() {
   const paragraphs = [
-    "Some things are felt long before they can be articulated.",
-    "Echo in Ink exists for founders, artists, and visionaries carrying something real beneath the surface — something difficult to translate clearly without losing its texture.",
+    "Some things are felt long before they can be said.",
+    "Echo in Ink exists for founders, artists, and visionaries carrying something real beneath the surface — something difficult to translate without losing its texture.",
     "This studio was built to preserve that texture.",
-    "Through identity, atmosphere, narrative, and systems, we create work that feels coherent, emotionally precise, and unmistakably true."
+    "Through identity, atmosphere, and narrative, we create work that feels coherent, precise, and true."
   ];
 
   return (
@@ -51,13 +49,13 @@ export function Philosophy() {
               variants={driftUp}
               className="ei-section-description"
             >
-              Everything begins with emotional truth: a feeling, a tension, a memory, a fragment of identity waiting for language. Echo in Ink builds the worlds those things belong to.
+              Everything begins with emotional truth: a feeling, a tension, a memory waiting for language.
             </motion.p>
           </motion.div>
 
           {/* Right column — Editorial text block */}
           <motion.div 
-            className="ei-text-block mt-4 md:mt-8"
+            className="mt-4 md:mt-8"
             variants={staggerContainer(STAGGER.normal, 0.3)}
           >
             {paragraphs.map((text, i) => (

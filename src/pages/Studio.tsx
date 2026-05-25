@@ -14,13 +14,13 @@ export function Studio() {
     <main className="relative">
       <Helmet>
         <title>Studio — Echo in Ink</title>
-        <meta name="description" content="The philosophy and practice behind Echo in Ink — a studio translating inner worlds into coherent identity." />
+        <meta name="description" content="The philosophy and practice behind Echo in Ink — translating inner worlds into coherent identity." />
       </Helmet>
       
       {/* Atmospheric base layer */}
       <div className="absolute inset-0 ei-glow-indigo opacity-30 pointer-events-none" />
       
-      {/* Header — Spacious and architectural */}
+      {/* Header */}
       <section className="relative ei-section-expansive overflow-hidden">
         <div className="ei-container max-w-4xl">
           <motion.div
@@ -45,13 +45,13 @@ export function Studio() {
               variants={fadeSoft}
               className="ei-section-description mt-8"
             >
-              A space for translating inner worlds into coherent external form.
+              Translating inner worlds into coherent external form.
             </motion.p>
           </motion.div>
         </div>
       </section>
 
-      {/* Origin — Intimate and reflective */}
+      {/* Origin */}
       <section className="relative ei-section-intimate overflow-hidden">
         <div className="ei-container max-w-3xl">
           <motion.div
@@ -69,25 +69,21 @@ export function Studio() {
             
             <motion.div 
               variants={fadeSoft}
-              className="ei-text-block space-y-6"
+              className="space-y-6"
             >
-              <p className="ei-body-large">Echo in Ink began quietly.</p>
-              <p className="ei-body-large">
-                Not as a business plan. Not as a brand system. Not as a strategy for visibility.
-              </p>
-              <p className="ei-body-large">It began as a response to dissonance.</p>
+              <p className="ei-body-large">Echo in Ink began quietly — not as a plan, but as a response.</p>
               <p className="ei-body-large">
                 A fatigue with work that looked polished but felt hollow. With brands performing coherence instead of embodying it. With design reduced to aesthetics instead of emotional structure.
               </p>
               <p className="ei-body-large">
-                Echo in Ink formed as a counter‑space to that loss. A place where identity could be approached with care. Where atmosphere carried meaning. Where clarity did not require self‑erasure.
+                This studio formed as a counter-space. Where identity is approached with care. Where atmosphere carries meaning. Where clarity does not require self-erasure.
               </p>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Philosophy — Contemplative */}
+      {/* Philosophy */}
       <section className="relative ei-section-standard overflow-hidden">
         <div className="ei-container max-w-3xl">
           <motion.div
@@ -103,28 +99,25 @@ export function Studio() {
               Philosophy
             </motion.span>
             
-            <motion.div variants={driftUp} className="space-y-12 mt-8">
+            <motion.div variants={driftUp} className="space-y-10 mt-8">
               <div>
-                <h3 className="ei-card-title mb-4">Emotional Truth is the Real Strategy</h3>
+                <h3 className="ei-card-title mb-4">Emotional Truth is Strategy</h3>
                 <p className="ei-body-large">
-                  If the emotional centre is unclear, everything built around it will eventually fracture.
-                </p>
-                <p className="ei-body-large mt-4">
-                  The work begins by finding what is actually true beneath expression.
+                  If the emotional centre is unclear, everything built around it fractures. The work begins by finding what is actually true beneath expression.
                 </p>
               </div>
 
               <div>
-                <h3 className="ei-card-title mb-4">Identity is Relational, Not Decorative</h3>
+                <h3 className="ei-card-title mb-4">Identity is Relational</h3>
                 <p className="ei-body-large">
-                  Identity is not a system of assets. It is the experience of being understood. The work is not to invent identity — but to translate what already exists.
+                  Not a system of assets. The experience of being understood. The work is not to invent identity — but to translate what already exists.
                 </p>
               </div>
 
               <div>
                 <h3 className="ei-card-title mb-4">Atmosphere is Information</h3>
                 <p className="ei-body-large">
-                  Nothing is neutral. Spacing carries meaning. Rhythm carries meaning. Motion carries meaning. Silence carries meaning.
+                  Nothing is neutral. Spacing, rhythm, motion, silence — all carry meaning.
                 </p>
               </div>
             </motion.div>
@@ -132,7 +125,7 @@ export function Studio() {
         </div>
       </section>
 
-      {/* Values — Minimal and intentional */}
+      {/* Values */}
       <section className="relative ei-section-intimate overflow-hidden">
         <div className="ei-container max-w-3xl">
           <motion.div
@@ -158,7 +151,6 @@ export function Studio() {
                 'Meaning over performance',
                 'Restraint over excess',
                 'Truth over optimisation',
-                'Atmosphere over decoration',
               ].map((value, i) => (
                 <motion.p 
                   key={i}
@@ -173,7 +165,7 @@ export function Studio() {
         </div>
       </section>
 
-      {/* Core Definition — Quiet finale */}
+      {/* Core Definition */}
       <section className="relative ei-section-intimate overflow-hidden">
         <div className="ei-container max-w-3xl">
           <motion.div
@@ -186,11 +178,11 @@ export function Studio() {
               variants={fadeSoft}
               className="ei-atmosphere-text text-center"
             >
-              "Echo in Ink does not create identity.
+              "Not creating identity.
               <br />
-              It protects what is already true
+              Protecting what is true
               <br />
-              from being lost during expression."
+              from being lost in expression."
             </motion.p>
           </motion.div>
         </div>
