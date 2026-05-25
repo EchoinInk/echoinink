@@ -42,7 +42,7 @@ export function EmergingSystems() {
               <Link to="/systems" className="block h-full">
                 <GlowCard
                   title="Echo Systems"
-                  description={`Intentional frameworks for building \nidentities, stories, and digital worlds with cinematic clarity and creative precision.`}
+                  description={`Intentional frameworks for building \nidentities, stories, and digital worlds \nwith cinematic clarity and creative \nprecision.`}
                   image={systemsImage}
                   horizontal
                   className="h-full min-h-[200px]"
