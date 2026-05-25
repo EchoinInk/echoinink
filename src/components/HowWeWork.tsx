@@ -10,9 +10,9 @@ import {
 } from '@/lib/motion-cinematic';
 
 // ═══════════════════════════════════════════════════════════════
-// HOW WE WORK — Engagement clarity
-// Minimal operational anchor explaining collaboration flow
-// Elegant typography, cinematic spacing, no corporate process graphics
+// HOW WE WORK — Ceremonial collaboration system
+// Ritualistic journey through the creative process
+// Intentional, calm, authored, trustworthy — NOT a corporate infographic
 // ═══════════════════════════════════════════════════════════════
 
 const phases = [
@@ -37,26 +37,35 @@ const phases = [
 export function HowWeWork() {
   return (
     <Section spacing="sm" className="relative overflow-hidden">
-      {/* 
-        ATMOSPHERIC LAYERS — Calm tonal depth
-        Extremely restrained, supports content without competing
-      */}
-      
-      {/* Soft violet haze — upper atmosphere */}
+      {/* ═══════════════════════════════════════════════════════════════
+          ATMOSPHERIC LAYERS — Ceremonial depth
+          Dimensional backdrop for ritualistic experience
+          ═══════════════════════════════════════════════════════════════ */}
+
+      {/* Primary violet luminescence — sacred center glow */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 50% 40% at 50% 30%, rgba(99,102,241,0.025) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 45% 50% at 30% 40%, rgba(99,102,241,0.04) 0%, transparent 55%)',
+          filter: 'blur(100px)',
+        }}
+      />
+
+      {/* Secondary atmospheric layer — soft depth field */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 60% 40% at 70% 60%, rgba(139,92,246,0.03) 0%, transparent 50%)',
           filter: 'blur(80px)',
         }}
       />
 
-      {/* Deepening gradient at bottom — sense of conclusion */}
+      {/* Bottom tonal conclusion — ceremonial closure */}
       <div
-        className="absolute inset-x-0 bottom-0 h-[50%] pointer-events-none"
+        className="absolute inset-x-0 bottom-0 h-[55%] pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, rgba(99,102,241,0.02) 0%, transparent 100%)',
-          filter: 'blur(40px)',
+          background: 'linear-gradient(to top, rgba(99,102,241,0.035) 0%, rgba(139,92,246,0.015) 30%, transparent 70%)',
+          filter: 'blur(50px)',
         }}
       />
 

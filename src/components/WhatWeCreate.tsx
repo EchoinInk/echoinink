@@ -174,56 +174,73 @@ export function WhatWeCreate() {
             }}
           />
 
-          {/* Capabilities — quiet editorial list with enhanced atmospheric hover */}
+          {/* Capabilities — immersive editorial list with sophisticated hover */}
           <div className="space-y-0 relative">
-            {/* Subtle vertical linework — connecting the rows with gradient fade */}
-            <div
+            {/* Vertical timeline trace — elegant connecting line */}
+            <motion.div
               className="absolute left-[33.333%] top-0 bottom-0 w-px pointer-events-none hidden md:block"
+              initial={{ opacity: 0, scaleY: 0 }}
+              whileInView={{ opacity: 1, scaleY: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
               style={{
-                background: 'linear-gradient(to bottom, transparent 0%, rgba(139,92,246,0.08) 15%, rgba(99,102,241,0.05) 50%, rgba(139,92,246,0.08) 85%, transparent 100%)',
+                background: 'linear-gradient(to bottom, transparent 0%, rgba(139,92,246,0.12) 10%, rgba(99,102,241,0.08) 50%, rgba(139,92,246,0.12) 90%, transparent 100%)',
+                transformOrigin: 'top',
               }}
             />
 
-            {/* Soft row dividers — whisper-level separators */}
+            {/* Soft row dividers — atmospheric separators */}
             {capabilities.map((cap, i) => (
               <motion.div
                 key={cap.label}
                 variants={driftUp}
                 className="group relative"
               >
-                {/* Row divider — soft horizontal line */}
+                {/* Row divider — ambient horizontal line */}
                 {i > 0 && (
-                  <div
-                    className="absolute top-0 left-0 right-0 h-px pointer-events-none opacity-40"
+                  <motion.div
+                    className="absolute top-0 left-0 right-0 h-px pointer-events-none"
+                    initial={{ opacity: 0, scaleX: 0.8 }}
+                    whileInView={{ opacity: 0.5, scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 * i }}
                     style={{
-                      background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.08) 20%, rgba(99,102,241,0.06) 50%, rgba(139,92,246,0.08) 80%, transparent 100%)',
+                      background: 'linear-gradient(90deg, transparent 5%, rgba(139,92,246,0.1) 20%, rgba(99,102,241,0.08) 50%, rgba(139,92,246,0.1) 80%, transparent 95%)',
                     }}
                   />
                 )}
 
-                {/* Restrained hover glow — soft radial emergence */}
-                <motion.div
-                  className="absolute inset-0 pointer-events-none"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                {/* Sophisticated hover illumination — multi-layer glow */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
                   style={{
-                    background: 'radial-gradient(ellipse 50% 100% at 25% 50%, rgba(139,92,246,0.05) 0%, transparent 60%)',
-                    filter: 'blur(25px)',
+                    background: `
+                      radial-gradient(ellipse 60% 100% at 20% 50%, rgba(139,92,246,0.06) 0%, transparent 55%),
+                      radial-gradient(ellipse 40% 80% at 80% 50%, rgba(99,102,241,0.04) 0%, transparent 50%)
+                    `,
+                    filter: 'blur(30px)',
                   }}
                 />
 
-                <div className="grid md:grid-cols-12 gap-3 md:gap-6 items-baseline relative z-10 py-7 md:py-9">
-                  {/* Label */}
+                {/* Subtle edge highlight on hover */}
+                <div
+                  className="absolute inset-y-0 left-0 w-px opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                  style={{
+                    background: 'linear-gradient(to bottom, transparent 0%, rgba(139,92,246,0.3) 50%, transparent 100%)',
+                  }}
+                />
+
+                <div className="grid md:grid-cols-12 gap-3 md:gap-6 items-baseline relative z-10 py-8 md:py-10">
+                  {/* Label — enhanced hierarchy */}
                   <div className="md:col-span-4">
-                    <span className="font-structural text-[11px] tracking-[0.14em] uppercase text-white/58 group-hover:text-white/82 transition-colors duration-500">
+                    <span className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/60 group-hover:text-white/85 transition-colors duration-500">
                       {cap.label}
                     </span>
                   </div>
 
-                  {/* Description — slightly improved readability */}
+                  {/* Description — refined readability */}
                   <div className="md:col-span-8">
-                    <p className="font-structural text-[13px] md:text-[14px] leading-[1.7] text-white/50 group-hover:text-white/68 transition-colors duration-500">
+                    <p className="font-structural text-[13px] md:text-[14px] leading-[1.7] text-white/52 group-hover:text-white/72 transition-colors duration-500">
                       {cap.description}
                     </p>
                   </div>
