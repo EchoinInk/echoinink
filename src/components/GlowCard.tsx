@@ -32,29 +32,35 @@ export default function GlowCard({
     >
       {horizontal ? (
         <>
-          {/* HORIZONTAL LAYOUT */}
-          <div className="flex flex-col md:flex-row h-full">
-            {/* CONTENT LEFT */}
-            <div className="relative flex flex-col flex-1 p-8 text-left items-start z-10 bg-[#070B1A]">
-              <h3 className="font-serif text-xl md:text-2xl font-light tracking-tight text-white/90">
+          {/* HORIZONTAL LAYOUT - full bleed with overlay */}
+          <img
+            src={image}
+            alt={title}
+            className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-[1.03]"
+          />
+
+          {/* CINEMATIC OVERLAY - stronger on left for text legibility */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#050816]/95 via-[#060816]/60 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#050816]/80 via-transparent to-transparent" />
+
+          {/* ATMOSPHERIC GLOW */}
+          {glow && <div className={cn("absolute inset-0 opacity-50", glow)} />}
+
+          {/* VIGNETTE */}
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,transparent_40%,rgba(0,0,0,0.6)_100%)]" />
+
+          {/* CONTENT - anchored bottom-left */}
+          <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 md:p-10">
+            <div className="max-w-[36ch]">
+              <h3 className="font-serif text-2xl md:text-[1.75rem] font-light tracking-tight text-white/95 leading-tight">
                 {title}
               </h3>
-              <p className="text-sm leading-relaxed text-white/50 mt-3 max-w-[44ch]">
+              <p className="text-sm leading-relaxed text-white/55 mt-6">
                 {description}
               </p>
-              <span className="mt-auto pt-6 text-[11px] uppercase tracking-[0.2em] text-white/40 group-hover:text-violet-300/60 transition-colors duration-500">
+              <span className="block mt-5 text-[11px] uppercase tracking-[0.22em] text-white/45 group-hover:text-white/75 transition-colors duration-500">
                 Explore →
               </span>
-            </div>
-
-            {/* IMAGE RIGHT */}
-            <div className="relative flex-1 overflow-hidden min-h-[200px]">
-              <img
-                src={image}
-                alt={title}
-                className="absolute inset-0 h-full w-full object-cover opacity-85 transition-transform duration-700 group-hover:scale-[1.03]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#070B1A] via-transparent to-transparent opacity-40" />
             </div>
           </div>
         </>
