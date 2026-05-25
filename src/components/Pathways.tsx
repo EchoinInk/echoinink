@@ -22,6 +22,8 @@ export function Pathways() {
         'Focused creative guidance for moments of transition, misalignment, or becoming. A quiet space to clarify what wants to emerge.',
       image: sessionsImage,
       glow: 'bg-gradient-to-br from-blue-600/[0.12] via-indigo-500/[0.08] to-transparent',
+      featured: false,
+      glowPosition: 'top' as const,
     },
     {
       to: '/identity',
@@ -29,7 +31,9 @@ export function Pathways() {
       description:
         'Emotional, narrative, and visual systems for brands in evolution. Inner meaning translated into a coherent, enduring external form.',
       image: identityImage,
-      glow: 'bg-gradient-to-br from-fuchsia-600/[0.1] via-violet-500/[0.06] to-transparent',
+      glow: 'bg-gradient-to-br from-fuchsia-600/[0.14] via-violet-500/[0.08] to-transparent',
+      featured: true,
+      glowPosition: 'center' as const,
     },
     {
       to: '/worlds',
@@ -37,7 +41,9 @@ export function Pathways() {
       description:
         'Immersive digital environments shaped around atmosphere, coherence, and resonance. Identity expanded into a living experience.',
       image: worldsImage,
-      glow: 'bg-gradient-to-br from-cyan-600/[0.1] via-blue-500/[0.06] to-transparent',
+      glow: 'bg-gradient-to-br from-cyan-600/[0.11] via-blue-500/[0.07] to-transparent',
+      featured: false,
+      glowPosition: 'bottom' as const,
     },
   ];
 
@@ -94,6 +100,8 @@ export function Pathways() {
                     description={pathway.description}
                     image={pathway.image}
                     glow={pathway.glow}
+                    featured={pathway.featured}
+                    glowPosition={pathway.glowPosition}
                   />
                 </Link>
               </motion.div>

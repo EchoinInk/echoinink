@@ -8,6 +8,8 @@ interface Props {
   glow?: string;
   className?: string;
   horizontal?: boolean;
+  featured?: boolean;
+  glowPosition?: 'center' | 'top' | 'bottom';
 }
 
 export default function GlowCard({
@@ -17,15 +19,30 @@ export default function GlowCard({
   glow,
   className,
   horizontal,
+  featured = false,
+  glowPosition = 'center',
 }: Props) {
+  // Card differentiation: featured gets stronger presence
+  const glowIntensity = featured ? 'opacity-70' : 'opacity-50';
+  const hoverLift = featured ? -3 : -2;
+  const glowOffset = {
+    center: '',
+    top: '-translate-y-[10%]',
+    bottom: 'translate-y-[10%]',
+  };
+
   return (
     <motion.div
-      whileHover={{ y: -2 }}
+      whileHover={{ y: hoverLift, scale: featured ? 1.005 : 1 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
-        "group relative overflow-hidden rounded-[28px]",
+        "group relative overflow-hidden",
+        featured ? "rounded-[32px]" : "rounded-[28px]",
         "border border-white/[0.06]",
-        horizontal ? "min-h-[220px] md:min-h-[260px]" : "min-h-[480px] md:min-h-[520px]",
+        horizontal 
+          ? featured ? "min-h-[240px] md:min-h-[280px]" : "min-h-[220px] md:min-h-[260px]"
+          : featured ? "min-h-[520px] md:min-h-[560px]" : "min-h-[480px] md:min-h-[520px]",
+        featured ? "shadow-[0_0_60px_-20px_rgba(99,102,241,0.15)]" : "",
         "bg-[#070B1A]",
         className
       )}
@@ -43,8 +60,10 @@ export default function GlowCard({
           <div className="absolute inset-0 bg-gradient-to-r from-[#050816]/95 via-[#060816]/60 to-black/20" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#050816]/80 via-transparent to-transparent" />
 
-          {/* ATMOSPHERIC GLOW */}
-          {glow && <div className={cn("absolute inset-0 opacity-50", glow)} />}
+          {/* ATMOSPHERIC GLOW — differentiated placement */}
+          {glow && (
+            <div className={cn("absolute inset-0", glowIntensity, glow, glowOffset[glowPosition])} />
+          )}
 
           {/* VIGNETTE */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,transparent_40%,rgba(0,0,0,0.6)_100%)]" />
@@ -76,8 +95,14 @@ export default function GlowCard({
           {/* DARK CINEMATIC OVERLAY */}
           <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-[#060816]/40 to-[#050816]/95" />
 
-          {/* ATMOSPHERIC GLOW */}
-          {glow && <div className={cn("absolute inset-0 opacity-60", glow)} />}
+          {/* ATMOSPHERIC GLOW — differentiated intensity */}
+          {glow && (
+            <div className={cn(
+              "absolute inset-0",
+              featured ? "opacity-70" : "opacity-55",
+              glowOffset[glowPosition]
+            )} />
+          )}
 
           {/* SOFT VIGNETTE */}
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.5)_100%)]" />
