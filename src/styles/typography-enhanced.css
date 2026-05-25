@@ -23,7 +23,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.48);
     max-width: 44ch;
   }
 
@@ -37,7 +37,7 @@
     letter-spacing: 0.38em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.28);
+    color: rgba(255, 255, 255, 0.24);
   }
 
   /* Section Title — main editorial heading */
@@ -57,7 +57,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.50);
+    color: rgba(255, 255, 255, 0.44);
     max-width: 52ch;
   }
 
@@ -70,7 +70,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.95;
-    color: rgba(255, 255, 255, 0.52);
+    color: rgba(255, 255, 255, 0.45);
   }
 
   /* Body Standard — general content */
@@ -80,7 +80,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255, 255, 255, 0.48);
   }
 
   /* Body Small — captions, metadata */
@@ -90,7 +90,7 @@
     font-weight: 400;
     letter-spacing: 0.02em;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.40);
+    color: rgba(255, 255, 255, 0.35);
   }
 
   /* ── UI Elements ──────────────────────────────────────────── */
@@ -123,7 +123,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.48);
+    color: rgba(255, 255, 255, 0.42);
   }
 
   /* Navigation */
@@ -156,7 +156,7 @@
     font-weight: 300;
     letter-spacing: -0.006em;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.30);
     font-style: italic;
   }
 
