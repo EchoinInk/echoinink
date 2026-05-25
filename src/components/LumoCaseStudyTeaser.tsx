@@ -69,8 +69,7 @@ export function LumoCaseStudyTeaser() {
                   variants={fadeSoft}
                   className="ei-body mt-4 max-w-[44ch]"
                 >
-                  Emotional identity systems designed to calm cognitive noise and restore clarity.
-                </motion.p>
+An emotionally intelligent app shaped by an identity system built to calm cognitive noise through atmosphere, rhythm, and restraint — a gentle productivity companion designed for neurodivergent minds.                </motion.p>
 
                 <motion.div variants={driftUp}>
                   <Link
