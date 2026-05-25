@@ -3,6 +3,7 @@ import { Hero } from '@/components/hero/Hero';
 import { Philosophy } from '@/components/Philosophy';
 import { WhatWeCreate } from '@/components/WhatWeCreate';
 import { Pathways } from '@/components/Pathways';
+import { HowWeWork } from '@/components/HowWeWork';
 import { CinematicStatement } from '@/components/CinematicStatement';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
@@ -40,6 +41,12 @@ export function Home() {
           PATHWAYS — Core offerings (Identity, Sessions, Worlds)
           ═══════════════════════════════════════════════════════════════ */}
       <Pathways />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          HOW WE WORK — Engagement clarity
+          Explains collaboration flow with elegant restraint
+          ═══════════════════════════════════════════════════════════════ */}
+      <HowWeWork />
 
       {/* ═══════════════════════════════════════════════════════════════
           CINEMATIC STATEMENT — Tempo change, breathing moment
