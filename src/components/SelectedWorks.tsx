@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
+import { EASE_CINEMATIC as EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion-cinematic';
 
 const works = [
   {

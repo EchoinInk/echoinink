@@ -9,7 +9,7 @@ import {
   AtmosphericBloom,
 } from './AtmosphericSystem';
 
-import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
+import { EASE_CINEMATIC as EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion-cinematic';
 
 const vp = (margin = '-40px') => ({ once: true, margin });
 
@@ -17,7 +17,7 @@ const fade = (delay = 0) => ({
   initial: { opacity: 0, y: 5 },
   whileInView: { opacity: 1, y: 0 } as { opacity: number; y: number },
   viewport: VIEWPORT.normal,
-  transition: { duration: DURATION.cinematic, ease: EASE, delay },
+  transition: { duration: DURATION.slower, ease: EASE, delay },
 });
 
 const envFade = (delay = 0) => ({
@@ -31,7 +31,7 @@ const headFade = (delay = 0) => ({
   initial: { opacity: 0, y: 8 },
   whileInView: { opacity: 1, y: 0 },
   viewport: VIEWPORT.normal,
-  transition: { duration: DURATION.cinematic, ease: EASE, delay },
+  transition: { duration: DURATION.slower, ease: EASE, delay },
 });
 
 const labelFade = (delay = 0) => ({
