@@ -1,4 +1,3 @@
-import { Footer } from '../Footer';
 import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
@@ -22,9 +21,7 @@ export function Hero() {
     </div>
       {/* Footer OVERLAY — does NOT affect height */}
 <div className="absolute inset-x-0 bottom-0 z-20 pointer-events-none"
-style={{ transform: 'translateY(22px)' }}>
-  <Footer />
-</div>
+style={{ transform: 'translateY(22px)' }}></div>
 
     </section>
   );
