@@ -58,33 +58,25 @@ export default function GlowCard({
         }}
       />
 
-      {/* CONTENT */}
-<div className="
-  relative z-10
-  flex flex-col justify-end
-  h-[45%] md:h-[42%]   /* THIS is the fix */
-  px-8 md:px-10
-  pb-10 md:pb-12
-">
+      {/* CONTENT - positioned at bottom of card */}
+      <div className="absolute inset-x-0 bottom-0 z-10 px-8 md:px-10 pb-10 md:pb-12 pt-24">
+        <div className="space-y-4">
+          <h3
+            className="font-serif text-[1.75rem] md:text-[2rem] font-light leading-[1.1] tracking-tight text-white/95"
+            style={{ letterSpacing: '-0.02em' }}
+          >
+            {title}
+          </h3>
 
+          <p className="max-w-[32ch] text-[14px] leading-[1.8] text-white/60">
+            {description}
+          </p>
 
-  <div className="space-y-5">
-    <h3
-      className="font-serif text-[1.75rem] md:text-[2rem] font-light leading-[1.1] tracking-tight text-white/95"
-      style={{ letterSpacing: '-0.02em' }}
-    >
-      {title}
-    </h3>
-
-    <p className="max-w-[32ch] text-[14px] leading-[1.8] text-white/60">
-      {description}
-    </p>
-
-    <span className="block pt-2 text-[11px] uppercase tracking-[0.28em] text-white/50 transition-colors duration-500 group-hover:text-white/80">
-      Explore →
-    </span>
-  </div>
-</div>
+          <span className="block pt-3 text-[11px] uppercase tracking-[0.28em] text-white/50 transition-colors duration-500 group-hover:text-white/80">
+            Explore →
+          </span>
+        </div>
+      </div>
 
     </motion.div>
   );
