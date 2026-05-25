@@ -1,5 +1,7 @@
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
+import { Link } from 'react-router-dom';
+import { GlowCard } from '@/components/GlowCard';
 
 export function EmergingSystems() {
   return (
@@ -14,22 +16,22 @@ export function EmergingSystems() {
           Active archives and systems shaping the future.
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-20">
-          <div className="rounded-3xl border border-white/10 p-10 bg-white/[0.03]">
-            <h3 className="text-3xl font-light">Echo Systems</h3>
+        <Link to="/systems">
+  <GlowCard
+    title="Echo Systems"
+    description="Atmospheric frameworks for creators building with intention."
+    image={systemsImage}
+  />
+</Link>
 
-            <p className="mt-4 text-white/60">
-              Atmospheric frameworks for creators building with intention.
-            </p>
-          </div>
+<Link to="/vault">
+  <GlowCard
+    title="Echo Vault"
+    description="A curated archive of textures, references, and emotional systems."
+    image={vaultImage}
+  />
+</Link>
 
-          <div className="rounded-3xl border border-white/10 p-10 bg-white/[0.03]">
-            <h3 className="text-3xl font-light">Echo Vault</h3>
-
-            <p className="mt-4 text-white/60">
-              A curated archive of textures, references, and emotional systems.
-            </p>
-          </div>
         </div>
       </div>
       </Container>
