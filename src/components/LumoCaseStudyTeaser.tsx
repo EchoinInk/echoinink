@@ -4,6 +4,7 @@ import { GlowField, GrainOverlay } from './AtmosphericSystem';
 import lumocloudform from '@/assets/lumocasestudy.png';
 import { Section } from '@/components/layout/Section';
 import { EASE, DURATION } from '@/lib/motion';
+import {container} from '@/lib/motion';
 
 const container = {
   hidden: {},
@@ -24,7 +25,7 @@ const line = {
 export function LumoCaseStudyTeaser() {
   return (
 <Section spacing="lg" className="pb-4 md:pb-6 overflow-hidden">
-
+<container
       {/* Atmospheric glow */}
       <GlowField
         style={{
