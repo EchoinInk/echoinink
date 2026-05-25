@@ -59,66 +59,22 @@ export default function GlowCard({
       />
 
       {/* CONTENT */}
-     {/* CONTENT */}
-<div
-  className="
-    relative z-10
-    flex h-full flex-col justify-end
-
-    px-8
-    pb-16
-    pt-32
-
-    md:px-10
-    md:pb-20
-    md:pt-40
-  "
->
+     <div className="relative z-10 flex h-full flex-col justify-end px-8 pb-24 pt-32 md:px-10 md:pb-32 md:pt-40">
   <div className="space-y-5">
     <h3
-      className="
-        font-serif
-        text-[1.75rem]
-        md:text-[2rem]
-        font-light
-        leading-[1.1]
-        tracking-tight
-        text-white/95
-      "
-      style={{ letterSpacing: "-0.02em" }}
+      className="font-serif text-[1.75rem] md:text-[2rem] font-light leading-[1.1] tracking-tight text-white/95"
+      style={{ letterSpacing: '-0.02em' }}
     >
       {title}
     </h3>
-
-    <p
-      className="
-        max-w-[26ch]
-        text-[14px]
-        leading-[1.8]
-        text-white/60
-      "
-    >
+    <p className="max-w-[32ch] text-[14px] leading-[1.8] text-white/60">
       {description}
     </p>
-
-    <span
-      className="
-        block
-        pt-3
-        text-[11px]
-        uppercase
-        tracking-[0.28em]
-        text-white/50
-        transition-colors
-        duration-500
-        group-hover:text-white/80
-      "
-    >
+    <span className="block pt-2 text-[11px] uppercase tracking-[0.28em] text-white/50 transition-colors duration-500 group-hover:text-white/80">
       Explore →
     </span>
   </div>
-
-      </div>
+</div>
     </motion.div>
   );
 }
