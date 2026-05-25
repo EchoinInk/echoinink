@@ -53,7 +53,7 @@ export function EmergingSystems() {
               <Link to="/vault" className="block h-full">
                 <GlowCard
                   title="Echo Vault"
-                  description={`A curated archive of textures, \nreferences, and emotional \nenvironments for \ncreators shaping atmosphere with intention.`}
+                  description={`A curated archive of textures, \nreferences, and emotional \nenvironments for creators shaping \natmosphere with intention.`}
                   image={vaultImage}
                   horizontal
                   className="h-full min-h-[200px]"
