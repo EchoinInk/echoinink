@@ -1,50 +1,67 @@
+import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Link } from 'react-router-dom';
 import GlowCard from '@/components/GlowCard';
 import systemsImage from '@/assets/Systems.png';
 import vaultImage from '@/assets/Vault.png';
+import { 
+  driftUp, 
+  staggerContainer,
+  STAGGER,
+  VIEWPORT 
+} from '@/lib/motion-cinematic';
 
 export function EmergingSystems() {
   return (
-    <Section spacing="md" className="pb-6 md:pb-8">
+    <Section spacing="lg" className="ei-section-standard relative overflow-hidden">
+      {/* Unified atmospheric depth */}
+      <div className="absolute inset-0 ei-glow-aqua opacity-40" />
+
       <Container>
-        <div className="max-w-6xl mx-auto text-center">
-          <p
-            className="font-structural text-[10px] tracking-[0.38em] uppercase text-white/30"
-            style={{ marginBottom: 'var(--ei-space-24)' }}
-          >
-            Worlds in Formation
-          </p>
+        <motion.div
+          variants={staggerContainer(STAGGER.loose, 0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.normal}
+          className="max-w-6xl mx-auto"
+        >
+          {/* Centered heading */}
+          <motion.div variants={driftUp} className="text-center mb-16 md:mb-20">
+            <span className="ei-eyebrow ei-text-space-md block">
+              Worlds in Formation
+            </span>
+            <h2 className="ei-section-title whitespace-pre-line">
+              {"Active archives and systems\nshaping the future."}
+            </h2>
+          </motion.div>
 
-          <h2
-            className="font-editorial text-[2.1rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line mb-16"
-            style={{ letterSpacing: '-0.012em' }}
-          >
-            Active archives and systems shaping the future.
-          </h2>
-
-          <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
-            <Link to="/systems" className="flex-1">
-              <GlowCard
-  title="Echo Systems"
-  description="Atmospheric frameworks for creators building with intention."
-  image={systemsImage}
-  horizontal
-  className="max-h-[450px] w-full"
-/>
-</Link>
-<Link to="/vault" className="flex-1">
-<GlowCard
-  title="Echo Vault"
-  description="A curated archive of textures, references, systems, and emotional environments."
-  image={vaultImage}
-  horizontal
-  className="max-h-[450px] w-full"
-/>
-            </Link>
+          {/* Horizontal cards */}
+          <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch justify-center">
+            <motion.div variants={driftUp} className="flex-1">
+              <Link to="/systems" className="block h-full">
+                <GlowCard
+                  title="Echo Systems"
+                  description="Atmospheric frameworks for creators building with intention."
+                  image={systemsImage}
+                  horizontal
+                  className="h-full min-h-[200px]"
+                />
+              </Link>
+            </motion.div>
+            <motion.div variants={driftUp} className="flex-1">
+              <Link to="/vault" className="block h-full">
+                <GlowCard
+                  title="Echo Vault"
+                  description="A curated archive of textures, references, systems, and emotional environments."
+                  image={vaultImage}
+                  horizontal
+                  className="h-full min-h-[200px]"
+                />
+              </Link>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </Container>
     </Section>
   );

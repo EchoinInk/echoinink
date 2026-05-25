@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Hero } from '@/components/hero/Hero';
 import { Philosophy } from '@/components/Philosophy';
+import { AtmospherePause } from '@/components/AtmospherePause';
 import { Pathways } from '@/components/Pathways';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
@@ -17,14 +18,29 @@ export function Home() {
           content="Echo in Ink is a creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media."
         />
       </Helmet>
-      {/* Hero */}
+      
+      {/* Hero — Cinematic entrance with EI monogram */}
       <Hero />
-    {/* Main editorial block */}
+      
+      {/* Philosophy — Editorial foundation */}
       <Philosophy />
+      
+      {/* Atmospheric pause — Cinematic breathing moment */}
+      <AtmospherePause />
+      
+      {/* Pathways — Core offerings */}
       <Pathways />
+      
+      {/* Featured work — Lumo case study */}
       <LumoCaseStudyTeaser />
+      
+      {/* Emerging systems — Future offerings */}
       <EmergingSystems />
-      <ClosingSection />    
+      
+      {/* Closing — Call to action */}
+      <ClosingSection />
+      
+      {/* Footer */}
       <Footer />
     </main>
   );

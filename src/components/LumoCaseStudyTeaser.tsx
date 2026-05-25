@@ -1,120 +1,93 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { GlowField, GrainOverlay } from './AtmosphericSystem';
 import lumocloudform from '@/assets/lumocasestudy.png';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
-
-import { EASE, DURATION } from '@/lib/motion';
-
-const container = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.10, delayChildren: 0.15 },
-  },
-};
-
-const line = {
-  hidden: { opacity: 0, y: 5 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: DURATION.normal, ease: EASE },
-  },
-};
+import { 
+  fadeSoft, 
+  driftUp, 
+  staggerContainer,
+  STAGGER,
+  VIEWPORT,
+  EASE_CINEMATIC,
+  DURATION 
+} from '@/lib/motion-cinematic';
 
 export function LumoCaseStudyTeaser() {
   return (
-<Section spacing="lg" className="pb-4 md:pb-6 overflow-hidden">
-<Container>
-      {/* Atmospheric glow */}
-      <GlowField
-        style={{
-          top: '-10%',
-          left: '50%',
-          transform: 'translateX(-50%)',
-          width: 'clamp(600px, 80vw, 1100px)',
-          height: 'clamp(420px, 55vw, 700px)',
-        }}
-        gradient="radial-gradient(ellipse 55% 45% at 50% 60%, rgba(99,102,241,0.06) 0%, rgba(80,72,200,0.02) 50%, transparent 75%)"
-        blur={90}
-        anim={{ opacity: [0.45, 0.75, 0.45] }}
-        duration={46}
-      />
+    <Section spacing="lg" className="ei-section-intimate overflow-hidden relative">
+      {/* Unified atmospheric glow */}
+      <div className="absolute inset-0 ei-glow-violet opacity-70" />
 
-      {/* Grain */}
-      <GrainOverlay range={[0.008, 0.015]} duration={36} delay={6} size={220} />
-
-      {/* CARD */}
-      <div className="relative max-w-7xl mx-auto overflow-hidden rounded-[40px] border border-white/10 bg-white/[0.03] h-[400px]">
-
-  {/* BACKGROUND IMAGE */}
-  <img
-    src={lumocloudform}
-    alt="Lumo Indigo Cloudform"
-    className="absolute inset-0 w-full h-full object-cover"
-  />
-
-  {/* OPTIONAL: dark overlay for readability */}
-  <div className="absolute inset-0 bg-black/40 backdrop-blur-[1px]" />
-
-  {/* CONTENT */}
-  <div className="relative grid md:grid-cols-2 items-center p-16">
-
-    {/* LEFT SIDE TEXT */}
-    <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: '-60px' }}
-      variants={container}
-      className="flex flex-col justify-center"
-    >
-      <motion.p
-        variants={line}
-        className="uppercase text-[11px] tracking-[0.3em] text-white/40 mb-6 font-structural"
-      >
-        Featured Case
-      </motion.p>
-
-      <motion.h2
-        variants={line}
-        className="font-editorial text-5xl font-light leading-tight"
-      >
-        LUMO
-      </motion.h2>
-
-<motion.h3
-  variants={line}
-  className="font-editorial text-2xl font-light leading-snug mt-2"
->
-  A World Built for<br />
-  Overwhelmed Humans
-</motion.h3>
-
-
-      <motion.p
-        variants={line}
-        className="mt-6 text-white/70 leading-relaxed font-structural text-[14px] max-w-[48ch]"
-      >
-        A world built for overwhelmed humans. Emotional identity systems
-        designed to calm cognitive noise.
-      </motion.p>
-
-      <motion.div variants={line}>
-        <Link
-          to="/work/lumo"
-          className="mt-10 inline-block text-violet-300 uppercase tracking-[0.2em] text-sm font-structural hover:text-violet-200 transition-colors duration-500"
+      <Container>
+        <motion.div
+          variants={staggerContainer(STAGGER.normal, 0.1)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.normal}
         >
-          View Case Study →
-        </Link>
-      </motion.div>
-    </motion.div>
+          {/* Cinematic card */}
+          <div className="relative max-w-6xl mx-auto overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-sm">
+            {/* Background image */}
+            <img
+              src={lumocloudform}
+              alt="Lumo Indigo Cloudform"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
 
-    {/* RIGHT SIDE EMPTY (image is bg) */}
-    <div className="hidden md:block" />
+            {/* Sophisticated overlay for readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a0c18]/80 via-[#0a0c18]/50 to-transparent" />
+            <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]" />
 
-  </div>
-</div></Container>
+            {/* Content */}
+            <div className="relative grid md:grid-cols-2 items-center min-h-[380px] p-10 md:p-16">
+              {/* Left side text */}
+              <div className="flex flex-col justify-center">
+                <motion.span
+                  variants={driftUp}
+                  className="ei-eyebrow ei-text-space-md block"
+                >
+                  Featured Case
+                </motion.span>
+
+                <motion.h2
+                  variants={driftUp}
+                  className="font-editorial text-4xl md:text-5xl font-light leading-tight text-[#E8EAF6]/95"
+                  style={{ letterSpacing: '-0.015em' }}
+                >
+                  LUMO
+                </motion.h2>
+
+                <motion.p
+                  variants={driftUp}
+                  className="ei-section-description mt-3 max-w-[42ch]"
+                >
+                  A world built for overwhelmed humans.
+                </motion.p>
+
+                <motion.p
+                  variants={fadeSoft}
+                  className="ei-body mt-4 max-w-[44ch]"
+                >
+                  Emotional identity systems designed to calm cognitive noise and restore clarity.
+                </motion.p>
+
+                <motion.div variants={driftUp}>
+                  <Link
+                    to="/work/lumo"
+                    className="ei-cta-text mt-8 inline-block text-violet-300/80 hover:text-violet-300 transition-colors duration-500"
+                  >
+                    View Case Study →
+                  </Link>
+                </motion.div>
+              </div>
+
+              {/* Right side empty (image serves as visual) */}
+              <div className="hidden md:block" />
+            </div>
+          </div>
+        </motion.div>
+      </Container>
     </Section>
   );
 }

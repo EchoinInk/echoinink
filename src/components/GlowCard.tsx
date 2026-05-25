@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { EASE_CINEMATIC, DURATION } from "@/lib/motion-cinematic";
 
 interface Props {
   title: string;
@@ -20,78 +21,60 @@ export default function GlowCard({
 }: Props) {
   return (
     <motion.div
-      whileHover={{ y: -8 }}
+      whileHover={{ y: -4, scale: 1.005 }}
+      transition={{ duration: DURATION.fast, ease: EASE_CINEMATIC }}
       className={cn(
-        "group rounded-3xl overflow-hidden border border-white/5 bg-white/[0.03] backdrop-blur-xl",
+        "group rounded-2xl overflow-hidden ei-card-bg ei-card-glow transition-shadow duration-700",
         horizontal ? "flex flex-row" : "flex flex-col",
         className
       )}
     >
-
       {horizontal ? (
-  <>
-    {/* CONTENT LEFT */}
-    <div className="flex flex-col flex-1 p-8 text-left items-start">
-      <h2
-        className="font-editorial text-[1.6rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line"
-        style={{ letterSpacing: "-0.012em" }}
-      >
-        {title}
-      </h2>
+        <>
+          {/* CONTENT LEFT */}
+          <div className="flex flex-col flex-1 p-8 text-left items-start">
+            <h3 className="ei-card-title">
+              {title}
+            </h3>
+            <p className="ei-card-description mt-3 max-w-[44ch]">
+              {description}
+            </p>
+            <span className="ei-cta-text mt-auto pt-6 pb-2 text-violet-300/80 group-hover:text-violet-300 transition-colors duration-500">
+              Explore →
+            </span>
+          </div>
 
-      <p className="font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85] mt-3 whitespace-pre-line max-w-[48ch]">
-        {description}
-      </p>
-
-      <button className="mt-auto pt-6 pb-2 text-sm uppercase tracking-[0.2em] text-violet-300 text-left">
-        Explore →
-      </button>
-    </div>
-
-    {/* IMAGE RIGHT */}
-    <div className="relative flex-1 overflow-hidden">
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
-      />
-    </div>
-  </>
-) : (
+          {/* IMAGE RIGHT */}
+          <div className="relative flex-1 overflow-hidden">
+            <img
+              src={image}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+            />
+          </div>
+        </>
+      ) : (
         <>
           {/* VERTICAL IMAGE */}
           <div className="relative w-full h-48 overflow-hidden">
             <img
               src={image}
               alt={title}
-              className="w-full h-full object-cover transition duration-500 group-hover:scale-105"
+              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
             />
           </div>
 
           {/* VERTICAL CONTENT */}
           <div className="flex flex-col flex-1 p-8">
-            <h2
-              className={cn(
-                "font-editorial text-[1.6rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line",
-                centered && "mx-auto"
-              )}
-              style={{ letterSpacing: "-0.012em" }}
-            >
+            <h3 className={cn("ei-card-title", centered && "text-center")}>
               {title}
-            </h2>
-
-            <p
-              className={cn(
-                "font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85] mt-3 whitespace-pre-line",
-                centered ? "max-w-[42ch] mx-auto" : "max-w-[58ch]"
-              )}
-            >
+            </h3>
+            <p className={cn("ei-card-description mt-3", centered && "text-center mx-auto max-w-[40ch]")}>
               {description}
             </p>
-
-            <button className="mt-auto pt-6 pb-2 text-sm uppercase tracking-[0.2em] text-violet-300 text-left">
+            <span className={cn("ei-cta-text mt-auto pt-6 pb-2 text-violet-300/80 group-hover:text-violet-300 transition-colors duration-500", centered && "text-center")}>
               Explore →
-            </button>
+            </span>
           </div>
         </>
       )}
