@@ -21,8 +21,8 @@ export function Philosophy() {
 
   return (
     <Section spacing="lg" className="ei-section-standard overflow-hidden relative">
-      {/* Unified soft atmosphere */}
-      <div className="absolute inset-0 ei-glow-indigo opacity-60" />
+      {/* Soft atmosphere - reduced visibility */}
+      <div className="absolute inset-0 ei-glow-indigo opacity-40" />
 
       <Container>
         <motion.div 

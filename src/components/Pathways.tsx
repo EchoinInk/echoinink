@@ -37,8 +37,8 @@ export function Pathways() {
 
   return (
     <Section spacing="lg" className="ei-section-standard relative overflow-hidden">
-      {/* Unified atmospheric depth */}
-      <div className="absolute inset-0 ei-glow-violet opacity-50" />
+      {/* Atmospheric depth - reduced for subtlety */}
+      <div className="absolute inset-0 ei-glow-violet opacity-35" />
 
       <Container>
         <motion.div

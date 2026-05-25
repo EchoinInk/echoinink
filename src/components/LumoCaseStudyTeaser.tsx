@@ -16,8 +16,8 @@ import {
 export function LumoCaseStudyTeaser() {
   return (
     <Section spacing="lg" className="ei-section-intimate overflow-hidden relative">
-      {/* Unified atmospheric glow */}
-      <div className="absolute inset-0 ei-glow-violet opacity-70" />
+      {/* Atmospheric glow - reduced visibility */}
+      <div className="absolute inset-0 ei-glow-violet opacity-30" />
 
       <Container>
         <motion.div
@@ -26,8 +26,8 @@ export function LumoCaseStudyTeaser() {
           whileInView="visible"
           viewport={VIEWPORT.normal}
         >
-          {/* Cinematic card */}
-          <div className="relative max-w-6xl mx-auto overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.02] backdrop-blur-sm">
+          {/* Cinematic card - reduced border visibility */}
+          <div className="relative max-w-6xl mx-auto overflow-hidden rounded-3xl border border-white/[0.05] bg-white/[0.015]">
             {/* Background image */}
             <img
               src={lumocloudform}

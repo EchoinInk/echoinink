@@ -3,11 +3,11 @@ import { fadeSoft, driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/mo
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/[0.08] bg-[#030617]">
-      {/* Unified atmosphere */}
+    <footer className="relative overflow-hidden border-t border-white/[0.05] bg-[#030617]">
+      {/* Reduced atmosphere */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-[10%] top-[5%] w-[500px] h-[500px] bg-violet-500/[0.04] blur-[120px]" />
-        <div className="absolute right-[5%] bottom-[20%] w-[400px] h-[400px] bg-indigo-500/[0.03] blur-[100px]" />
+        <div className="absolute left-[10%] top-[5%] w-[400px] h-[400px] bg-violet-500/[0.025] blur-[140px]" />
+        <div className="absolute right-[5%] bottom-[20%] w-[300px] h-[300px] bg-indigo-500/[0.02] blur-[120px]" />
       </div>
 
       <motion.div 
@@ -18,7 +18,7 @@ export default function Footer() {
         viewport={VIEWPORT.loose}
       >
         {/* Top content grid */}
-        <div className="grid lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 lg:gap-16 pb-16 border-b border-white/[0.08]">
+        <div className="grid lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 lg:gap-16 pb-16 border-b border-white/[0.05]">
           {/* Brand column */}
           <motion.div variants={driftUp}>
             <span className="ei-eyebrow ei-text-space-lg block">
@@ -92,7 +92,7 @@ export default function Footer() {
       </motion.div>
 
       {/* Poetic closing strip */}
-      <div className="border-t border-white/[0.06]">
+      <div className="border-t border-white/[0.04]">
         <div className="ei-container">
           <div className="flex items-end justify-between py-6 md:py-8">
             <span className="ei-body-small tracking-[0.2em] uppercase">

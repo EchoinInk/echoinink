@@ -15,8 +15,8 @@ import {
 export function EmergingSystems() {
   return (
     <Section spacing="lg" className="ei-section-standard relative overflow-hidden">
-      {/* Unified atmospheric depth */}
-      <div className="absolute inset-0 ei-glow-aqua opacity-40" />
+      {/* Atmospheric depth - reduced */}
+      <div className="absolute inset-0 ei-glow-aqua opacity-25" />
 
       <Container>
         <motion.div

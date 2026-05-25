@@ -21,10 +21,12 @@ export default function GlowCard({
 }: Props) {
   return (
     <motion.div
-      whileHover={{ y: -4, scale: 1.005 }}
+      whileHover={{ y: -3 }}
       transition={{ duration: DURATION.fast, ease: EASE_CINEMATIC }}
       className={cn(
-        "group rounded-2xl overflow-hidden ei-card-bg ei-card-glow transition-shadow duration-700",
+        "group rounded-2xl overflow-hidden transition-all duration-500",
+        "bg-white/[0.015] border border-white/[0.04]",
+        "hover:bg-white/[0.025] hover:border-white/[0.06]",
         horizontal ? "flex flex-row" : "flex flex-col",
         className
       )}

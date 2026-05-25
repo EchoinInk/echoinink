@@ -10,15 +10,15 @@ import {
 export function ClosingSection() {
   return (
     <section className="relative overflow-hidden ei-section-closing text-center">
-      {/* Reverent atmospheric framing */}
-      <div className="absolute inset-0 ei-glow-violet opacity-60" />
-      <div className="absolute inset-0 ei-vignette-soft" />
+      {/* Reverent atmospheric framing - reduced visibility */}
+      <div className="absolute inset-0 ei-glow-violet opacity-25" />
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 70% 70% at 50% 50%, transparent 40%, rgba(5,7,16,0.2) 100%)' }} />
 
-      {/* Sacred top gradient from previous section */}
+      {/* Soft top gradient from previous section */}
       <div 
-        className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
+        className="absolute top-0 left-0 right-0 h-40 pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, transparent, rgba(15,18,32,0.4))',
+          background: 'linear-gradient(to top, transparent, rgba(12,14,24,0.25))',
         }}
       />
 
