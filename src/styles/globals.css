@@ -7,6 +7,8 @@
 @import './atmosphere-enhanced.css' layer(components);
 @import './hero.css' layer(components);
 @import './mobile-refinements.css' layer(utilities);
+@import './forms-luxury.css' layer(components);
+@import './browser-chrome.css' layer(base);
 
 @tailwind base;
 @tailwind components;
