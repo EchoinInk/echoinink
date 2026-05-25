@@ -30,7 +30,7 @@ export function EmergingSystems() {
                 title="Echo Systems"
                 description="Atmospheric frameworks for creators building with intention."
                 image={systemsImage}
-                className="aspect-[3/1] md:h-[260px]" // 👈 horizontal ratio + height
+                className="aspect-[3/1] max-h-[260px] w-full"
               />
             </Link>
 
@@ -39,7 +39,7 @@ export function EmergingSystems() {
                 title="Echo Vault"
                 description="A curated archive of textures, references, and emotional systems."
                 image={vaultImage}
-                className="aspect-[3/1] md:h-[260px]" // 👈 same horizontal ratio
+                className="aspect-[3/1] max-h-[260px] w-full"
               />
             </Link>
           </div>
