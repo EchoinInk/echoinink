@@ -19,7 +19,7 @@ export function Pathways() {
       to: '/sessions',
       title: 'Sessions',
       description:
-        'Clarity before expression. Focused creative direction for moments of misalignment, evolution, or translation.',
+        'Focused creative guidance for moments of transition, misalignment, or becoming. A quiet space to clarify what wants to emerge.',
       image: sessionsImage,
       glow: 'bg-gradient-to-br from-blue-600/[0.12] via-indigo-500/[0.08] to-transparent',
     },
@@ -27,7 +27,7 @@ export function Pathways() {
       to: '/identity',
       title: 'Identity',
       description:
-        'Where inner worlds become coherent external form. Emotional, narrative, \n and visual translation for evolving brands.',
+        'Emotional, narrative, and visual systems for brands in evolution. Inner meaning translated into a coherent external form.',
       image: identityImage,
       glow: 'bg-gradient-to-br from-fuchsia-600/[0.1] via-violet-500/[0.06] to-transparent',
     },
@@ -35,7 +35,7 @@ export function Pathways() {
       to: '/worlds',
       title: 'Worlds',
       description:
-        'Identity extended into living systems. Immersive digital ecosystems designed for coherence and resonance.',
+        'Immersive digital environments shaped around atmosphere, coherence, and resonance. Identity expanded into a living experience.',
       image: worldsImage,
       glow: 'bg-gradient-to-br from-cyan-600/[0.1] via-blue-500/[0.06] to-transparent',
     },
