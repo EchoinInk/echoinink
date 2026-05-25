@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { GlowField, GrainOverlay } from './AtmosphericSystem';
 import lumocloudform from '@/assets/lumocasestudy.png';
+import { Section } from '@/components/layout/Section';
 import { EASE, DURATION } from '@/lib/motion';
 
 const container = {
@@ -112,6 +113,6 @@ export function LumoCaseStudyTeaser() {
 
   </div>
 </div>
-    </section>
+    </Section>
   );
 }
