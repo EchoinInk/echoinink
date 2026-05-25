@@ -10,6 +10,7 @@ interface Props {
   horizontal?: boolean;
   featured?: boolean;
   glowPosition?: 'center' | 'top' | 'bottom';
+  archetype?: 'sessions' | 'identity' | 'worlds';
 }
 
 export default function GlowCard({
@@ -21,6 +22,7 @@ export default function GlowCard({
   horizontal,
   featured = false,
   glowPosition = 'center',
+  archetype = 'identity',
 }: Props) {
   // Card differentiation: featured gets stronger presence
   const glowIntensity = featured ? 'opacity-70' : 'opacity-50';
@@ -30,6 +32,33 @@ export default function GlowCard({
     top: '-translate-y-[10%]',
     bottom: 'translate-y-[10%]',
   };
+
+  // Archetype-specific atmospheric configurations
+  const archetypeConfig = {
+    sessions: {
+      // Geometric precision, structured, technical
+      vignette: 'bg-[radial-gradient(circle_at_center,transparent_30%,rgba(0,0,0,0.55)_100%)]',
+      edgeGlow: 'from-cyan-500/[0.08] via-blue-500/[0.04] to-transparent',
+      shadowDepth: 'shadow-[inset_0_2px_40px_-10px_rgba(0,0,0,0.4)]',
+      overlayIntensity: 'via-[#060816]/50',
+    },
+    identity: {
+      // Softer, fluid, emotional, warm
+      vignette: 'bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.45)_100%)]',
+      edgeGlow: 'from-fuchsia-500/[0.10] via-violet-500/[0.06] to-transparent',
+      shadowDepth: 'shadow-[inset_0_4px_60px_-15px_rgba(0,0,0,0.3)]',
+      overlayIntensity: 'via-[#060816]/35',
+    },
+    worlds: {
+      // Spatial depth, architectural, scale
+      vignette: 'bg-[radial-gradient(ellipse_80%_60%_at_50%_70%,transparent_20%,rgba(0,0,0,0.65)_100%)]',
+      edgeGlow: 'from-indigo-500/[0.09] via-blue-600/[0.05] to-transparent',
+      shadowDepth: 'shadow-[inset_0_-4px_80px_-10px_rgba(0,0,0,0.5)]',
+      overlayIntensity: 'via-[#050816]/55',
+    },
+  };
+
+  const config = archetypeConfig[archetype];
 
   return (
     <motion.div
@@ -43,6 +72,7 @@ export default function GlowCard({
           ? featured ? "min-h-[240px] md:min-h-[280px]" : "min-h-[220px] md:min-h-[260px]"
           : featured ? "min-h-[520px] md:min-h-[560px]" : "min-h-[480px] md:min-h-[520px]",
         featured ? "shadow-[0_0_60px_-20px_rgba(99,102,241,0.15)]" : "",
+        config.shadowDepth,
         "bg-[#070B1A]",
         className
       )}
@@ -92,8 +122,8 @@ export default function GlowCard({
             className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-[1.03]"
           />
 
-          {/* DARK CINEMATIC OVERLAY */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-[#060816]/40 to-[#050816]/95" />
+          {/* ARCHETYPE-SPECIFIC CINEMATIC OVERLAY */}
+          <div className={cn("absolute inset-0 bg-gradient-to-b from-black/10", config.overlayIntensity, "to-[#050816]/95")} />
 
           {/* ATMOSPHERIC GLOW — differentiated intensity */}
           {glow && (
@@ -104,8 +134,8 @@ export default function GlowCard({
             )} />
           )}
 
-          {/* SOFT VIGNETTE */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.5)_100%)]" />
+          {/* ARCHETYPE-SPECIFIC VIGNETTE */}
+          <div className={cn("absolute inset-0", config.vignette)} />
 
           {/* SUBTLE EDGE SOFTENING */}
           <div 

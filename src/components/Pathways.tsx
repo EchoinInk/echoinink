@@ -24,6 +24,7 @@ export function Pathways() {
       glow: 'bg-gradient-to-br from-blue-600/[0.12] via-indigo-500/[0.08] to-transparent',
       featured: false,
       glowPosition: 'top' as const,
+      archetype: 'sessions' as const,
     },
     {
       to: '/identity',
@@ -34,6 +35,7 @@ export function Pathways() {
       glow: 'bg-gradient-to-br from-fuchsia-600/[0.14] via-violet-500/[0.08] to-transparent',
       featured: true,
       glowPosition: 'center' as const,
+      archetype: 'identity' as const,
     },
     {
       to: '/worlds',
@@ -44,6 +46,7 @@ export function Pathways() {
       glow: 'bg-gradient-to-br from-cyan-600/[0.11] via-blue-500/[0.07] to-transparent',
       featured: false,
       glowPosition: 'bottom' as const,
+      archetype: 'worlds' as const,
     },
   ];
 
@@ -102,6 +105,7 @@ export function Pathways() {
                     glow={pathway.glow}
                     featured={pathway.featured}
                     glowPosition={pathway.glowPosition}
+                    archetype={pathway.archetype}
                   />
                 </Link>
               </motion.div>
