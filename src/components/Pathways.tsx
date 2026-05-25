@@ -18,19 +18,22 @@ export function Pathways() {
     {
       to: '/sessions',
       title: 'Sessions',
-      description: 'Clarity before expression. Focused creative direction for moments of misalignment, evolution, or translation.',
+      description:
+        'Clarity before expression. Focused creative direction for moments of misalignment, evolution, or translation.',
       image: sessionsImage,
     },
     {
       to: '/identity',
       title: 'Identity',
-      description: 'Where inner worlds become coherent external form. Emotional, narrative, and visual translation for evolving brands.',
+      description:
+        'Where inner worlds become coherent external form. Emotional, narrative, and visual translation for evolving brands.',
       image: identityImage,
     },
     {
       to: '/worlds',
       title: 'Worlds',
-      description: 'Identity extended into living systems. Immersive digital ecosystems designed for coherence and resonance.',
+      description:
+        'Identity extended into living systems. Immersive digital ecosystems designed for coherence and resonance.',
       image: worldsImage,
     },
   ];
@@ -70,12 +73,9 @@ export function Pathways() {
                   <GlowCard
                     title={pathway.title}
                     description={pathway.description}
-                    <div className="relative bg-[#0F1220]">
-  <img src={pathway.image} alt={pathway.title} className="relative z-10" />
-  <div className="absolute inset-0 bg-white/[0.015] mix-blend-lighten z-0" />
-</div>
-
+                    image={pathway.image}
                     className="h-full min-h-[420px]"
+                    imageWrapperClass="relative bg-[#0F1220] before:absolute before:inset-0 before:bg-white/[0.015] before:mix-blend-lighten before:pointer-events-none"
                   />
                 </Link>
               </motion.div>
