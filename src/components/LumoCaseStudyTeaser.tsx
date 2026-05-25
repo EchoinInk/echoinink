@@ -67,7 +67,7 @@ export function LumoCaseStudyTeaser() {
 
                 <motion.p
                   variants={fadeSoft}
-                  className="ei-body mt-4 max-w-[44ch]"
+                  className="ei-body mt-10 max-w-[44ch]"
                 >
                 An emotionally intelligent app shaped by an identity system built to calm cognitive noise through atmosphere, rhythm, and restraint — a gentle productivity companion designed for neurodivergent minds.                </motion.p>
 
