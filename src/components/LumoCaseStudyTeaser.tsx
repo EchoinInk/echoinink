@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import lumocloudform from '@/assets/ei-lumofeatured-bg.png';
+import lumoinkdrift from '@/assets/ei-lumofeatured-bg.png';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { 
@@ -30,8 +30,8 @@ export function LumoCaseStudyTeaser() {
           <div className="relative max-w-6xl mx-auto overflow-hidden rounded-3xl border border-white/[0.05] bg-white/[0.015]">
             {/* Background image */}
             <img
-              src={lumocloudform}
-              alt="Lumo Indigo Cloudform"
+              src={lumoinkdrift}
+              alt="Lumo Ink Drift"
               className="absolute inset-0 w-full h-full object-cover"
             />
 
