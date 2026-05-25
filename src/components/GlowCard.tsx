@@ -61,12 +61,12 @@ export default function GlowCard({
       {/* CONTENT */}
 <div className="
   relative z-10
-  flex h-full flex-col justify-end
-
+  flex flex-col justify-end
+  h-[45%] md:h-[42%]   /* THIS is the fix */
   px-8 md:px-10
-  pt-4 md:pt-6
-  pb-40 md:pb-48
+  pb-10 md:pb-12
 ">
+
 
   <div className="space-y-5">
     <h3
