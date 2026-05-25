@@ -5,7 +5,6 @@ export function EmergingSystems() {
   return (
 <Section spacing="md" className="pb-6 md:pb-8">
       <Container>
-       <section className="bg-[#050816] py-32 px-8 text-white">
       <div className="max-w-5xl mx-auto text-center">
         <p className="uppercase tracking-[0.3em] text-xs text-white/30 mb-8">
           Worlds in Formation
@@ -33,7 +32,7 @@ export function EmergingSystems() {
           </div>
         </div>
       </div>
-<Container>
+      </Container>
     </Section>
   );
 }
