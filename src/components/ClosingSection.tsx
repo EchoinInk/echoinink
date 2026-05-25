@@ -13,7 +13,7 @@ export function ClosingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: 'easeOut' }}
           viewport={{ once: true }}
-          className="uppercase tracking-[0.3em] text-xs text-white/30 mb-8 font-structural"
+          className="uppercase tracking-[0.38em] font-structural text-xs text-white/30 mb-8 font-structural"
         >
           Let’s Create
         </motion.p>
