@@ -2,6 +2,17 @@
 // Echo in Ink — Cinematic Motion System
 // Ambient, environmental, subconscious motion
 // ═══════════════════════════════════════════════════════════════
+//
+// Motion Identity Principles:
+// - ambient: motion that exists without demanding attention
+// - delayed: intentional lag creates emotional weight
+// - soft: no sharp edges, everything dissolves
+// - diffused: motion spreads like light through haze
+// - immersive: motion surrounds rather than moves across
+// - underwater-like: resistance, viscosity, depth
+// - emotionally restrained: feeling over spectacle
+//
+// ═══════════════════════════════════════════════════════════════
 
 import { type Transition, type Variants } from 'framer-motion';
 
