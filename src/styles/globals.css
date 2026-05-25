@@ -6,6 +6,7 @@
 @import './atmosphere.css' layer(components);
 @import './atmosphere-enhanced.css' layer(components);
 @import './hero.css' layer(components);
+@import './mobile-refinements.css' layer(utilities);
 
 @tailwind base;
 @tailwind components;
