@@ -42,7 +42,7 @@ export function ClosingSection() {
           variants={driftUp}
           className="ei-section-title whitespace-pre-line"
         >
-          {"Ready to translate\nyour world?"}
+          {"Ready to translate your world?"}
         </motion.h2>
 
         {/* Description */}
