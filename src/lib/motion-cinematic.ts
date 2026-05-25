@@ -262,7 +262,7 @@ export const ambientDrift = {
   },
   transition: {
     duration: DURATION.ambient * 1.8,
-    ease: 'easeInOut',
+    ease: 'easeInOut' as const,
     repeat: Infinity,
     repeatType: 'mirror' as const,
   },
@@ -277,7 +277,7 @@ export const atmosphericFloat = {
   },
   transition: {
     duration: DURATION.ambient * 2.5,
-    ease: 'easeInOut',
+    ease: 'easeInOut' as const,
     repeat: Infinity,
     repeatType: 'mirror' as const,
   },
@@ -350,7 +350,7 @@ export const volumetricDrift = {
   },
   transition: {
     duration: DURATION.ambient * 3,
-    ease: 'easeInOut',
+    ease: 'easeInOut' as const,
     repeat: Infinity,
     repeatType: 'mirror' as const,
   },

@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
-import { heroContainer, heroReveal, EASE_LUXURY, DURATION } from '@/lib/motion-cinematic';
+import { HeroLighting } from './HeroLighting';
+import { heroContainer, heroReveal, EASE_LUXURY, DURATION, volumetricDrift } from '@/lib/motion-cinematic';
 
 export function Hero() {
   return (
@@ -10,53 +11,95 @@ export function Hero() {
       {/* Background with cinematic depth layers */}
       <HeroBackground />
 
-      {/* Distant depth layer — far atmospheric haze */}
-      <div 
+      {/* ═══════════════════════════════════════════════════════════════
+          DEPTH LAYER 1: Deep atmospheric haze — furthest back
+          Volumetric diffusion creating sense of vast space
+          ═══════════════════════════════════════════════════════════════ */}
+      <motion.div
+        className="absolute inset-0 pointer-events-none z-[1]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: DURATION.slower * 2, ease: EASE_LUXURY, delay: 0.2 }}
+      >
+        <motion.div
+          className="absolute inset-0"
+          animate={volumetricDrift.animate}
+          transition={volumetricDrift.transition}
+          style={{
+            background: 'radial-gradient(ellipse 90% 70% at 25% 35%, rgba(99,102,241,0.012) 0%, transparent 55%)',
+            filter: 'blur(150px)',
+          }}
+        />
+      </motion.div>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          DEPTH LAYER 2: Mid atmospheric diffusion
+          Soft volumetric haze creating spatial separation
+          ═══════════════════════════════════════════════════════════════ */}
+      <motion.div
         className="absolute inset-0 pointer-events-none z-[2]"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: DURATION.slower * 1.5, ease: EASE_LUXURY, delay: 0.4 }}
         style={{
-          background: 'radial-gradient(ellipse 80% 60% at 30% 40%, rgba(99,102,241,0.015) 0%, transparent 60%)',
-          filter: 'blur(120px)',
+          background: 'radial-gradient(ellipse 70% 55% at 30% 42%, rgba(168,85,247,0.015) 0%, rgba(99,102,241,0.008) 50%, transparent 70%)',
+          filter: 'blur(100px)',
         }}
       />
 
-      {/* Mid-depth layer — subtle luminance */}
+      {/* ═══════════════════════════════════════════════════════════════
+          DEPTH LAYER 3: Near-field luminescence — closer to content
+          Creates ethereal glow around the monogram region
+          ═══════════════════════════════════════════════════════════════ */}
       <motion.div
         className="absolute inset-0 pointer-events-none z-[3]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: DURATION.slower * 1.2, ease: EASE_LUXURY, delay: 0.3 }}
+        transition={{ duration: DURATION.slower * 1.3, ease: EASE_LUXURY, delay: 0.6 }}
         style={{
-          background: 'radial-gradient(ellipse 50% 45% at 35% 45%, rgba(99,102,241,0.025) 0%, transparent 65%)',
-          filter: 'blur(80px)',
+          background: 'radial-gradient(ellipse 45% 40% at 28% 38%, rgba(232,121,249,0.018) 0%, rgba(168,85,247,0.012) 40%, transparent 70%)',
+          filter: 'blur(70px)',
         }}
       />
 
-      {/* Sacred framing glow for EI monogram — reduced, more subtle */}
+      {/* ═══════════════════════════════════════════════════════════════
+          DEPTH LAYER 4: Monogram halo — the sacred glow
+          Creates the ethereal, suspended feeling for the Ei symbol
+          ═══════════════════════════════════════════════════════════════ */}
       <motion.div
         className="absolute inset-0 pointer-events-none z-[4]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: DURATION.slower * 1.3, ease: EASE_LUXURY, delay: 0.6 }}
+        transition={{ duration: DURATION.slower * 1.5, ease: EASE_LUXURY, delay: 0.8 }}
         style={{
-          background: 'radial-gradient(ellipse 40% 35% at 32% 42%, rgba(99,102,241,0.02) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 35% 30% at 26% 36%, rgba(255,255,255,0.015) 0%, rgba(232,121,249,0.025) 30%, rgba(168,85,247,0.015) 60%, transparent 80%)',
+          filter: 'blur(50px)',
+        }}
+      />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          DEPTH LAYER 5: Negative space isolation
+          Darkness framing to push content forward
+          ═══════════════════════════════════════════════════════════════ */}
+      <div
+        className="absolute inset-0 pointer-events-none z-[5]"
+        style={{
+          background: 'radial-gradient(ellipse 40% 35% at 70% 65%, rgba(3,5,12,0.35) 0%, transparent 65%)',
           filter: 'blur(60px)',
         }}
       />
 
-      {/* Monogram isolation — darkness framing */}
-      <div 
-        className="absolute inset-0 pointer-events-none z-[5]"
-        style={{
-          background: 'radial-gradient(ellipse 35% 30% at 65% 60%, rgba(3,5,12,0.4) 0%, transparent 70%)',
-          filter: 'blur(40px)',
-        }}
-      />
+      {/* Dynamic lighting component for the monogram */}
+      <HeroLighting />
 
-      {/* Centered content with cinematic reveal */}
+      {/* ═══════════════════════════════════════════════════════════════
+          CONTENT LAYER: Hero heading and CTA
+          Positioned at optimal reading depth with cinematic reveal
+          ═══════════════════════════════════════════════════════════════ */}
       <div className="ei-container w-full relative z-10">
         <motion.div
           className="max-w-[600px] items-start text-left"
-          style={{ transform: 'translateY(5vh)' }}
+          style={{ transform: 'translateY(4vh)' }}
           variants={heroContainer}
           initial="hidden"
           animate="visible"
@@ -64,20 +107,35 @@ export function Hero() {
           <motion.div variants={heroReveal}>
             <HeroHeading />
           </motion.div>
-          <motion.div 
+          <motion.div
             variants={heroReveal}
-            transition={{ delay: 0.15 }}
+            transition={{ delay: 0.2 }}
           >
             <HeroCTA />
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Deep bottom fade for cinematic transition */}
-      <div 
-        className="absolute inset-x-0 bottom-0 z-20 pointer-events-none h-[30vh]"
+      {/* ═══════════════════════════════════════════════════════════════
+          FOREGROUND VEIL: Deep bottom fade for cinematic transition
+          Creates the feeling of content emerging from darkness
+          ═══════════════════════════════════════════════════════════════ */}
+      <motion.div
+        className="absolute inset-x-0 bottom-0 z-20 pointer-events-none"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: DURATION.slower, delay: 1.2 }}
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(12,14,24,0.4) 40%, rgba(15,18,32,0.9) 85%, rgba(15,18,32,1) 100%)',
+          height: '35vh',
+          background: 'linear-gradient(to bottom, transparent 0%, rgba(8,10,18,0.25) 25%, rgba(12,14,24,0.55) 55%, rgba(15,18,32,0.88) 85%, rgba(15,18,32,1) 100%)',
+        }}
+      />
+
+      {/* Ultra-subtle top vignette for framing */}
+      <div
+        className="absolute inset-0 pointer-events-none z-[6]"
+        style={{
+          background: 'radial-gradient(ellipse 80% 50% at 50% 0%, rgba(3,5,12,0.15) 0%, transparent 50%)',
         }}
       />
     </section>
