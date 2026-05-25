@@ -55,11 +55,11 @@ export const AMBIENT = {
 } as const;
 
 // ── Stagger Configuration — Cinematic pacing ─────────────────
-export const STAGGER = {
+export const STAGGER: Record<string, number> = {
   tight: 0.08,       // Quick sequence
   normal: 0.15,      // Standard flow
   loose: 0.25,       // Dramatic reveals
-  cinematic: 0.35, // Hero sequences
+  cinematic: 0.35,   // Hero sequences
 } as const;
 
 // ── Cinematic Reveal Variants ────────────────────────────────

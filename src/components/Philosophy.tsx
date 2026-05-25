@@ -1,56 +1,76 @@
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
-import { SectionHeading } from '@/components/layout/SectionHeading';
-import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
+import { 
+  fadeSoft, 
+  driftUp, 
+  staggerContainer, 
+  STAGGER,
+  DURATION,
+  EASE_CINEMATIC,
+  VIEWPORT 
+} from '@/lib/motion-cinematic';
 
 export function Philosophy() {
+  const paragraphs = [
+    "Some things are felt long before they can be articulated.",
+    "Echo in Ink exists for founders, artists, and visionaries carrying something real beneath the surface — something difficult to translate clearly without losing its texture.",
+    "This studio was built to preserve that texture.",
+    "Through identity, atmosphere, narrative, and systems, we create work that feels coherent, emotionally precise, and unmistakably true."
+  ];
+
   return (
-<Section spacing="lg" className="pb-4 md:pb-6 overflow-hidden">
-      {/* Reduced atmosphere - typography-led section */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(ellipse 55% 65% at 50% 50%, rgba(99,102,241,0.018) 0%, transparent 72%)',
-        }}
-      />
+    <Section spacing="lg" className="ei-section-standard overflow-hidden relative">
+      {/* Unified soft atmosphere */}
+      <div className="absolute inset-0 ei-glow-indigo opacity-60" />
 
       <Container>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-24">
+        <motion.div 
+          className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 md:gap-24 items-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.normal}
+        >
+          {/* Left column — Section heading */}
+          <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
+            <motion.span 
+              variants={driftUp}
+              className="ei-eyebrow ei-text-space-md block"
+            >
+              Philosophy
+            </motion.span>
+            
+            <motion.h2 
+              variants={driftUp}
+              className="ei-section-title ei-text-space-lg whitespace-pre-line"
+            >
+              {"Atmosphere is not decoration —\nit is how meaning is felt."}
+            </motion.h2>
+            
+            <motion.p 
+              variants={driftUp}
+              className="ei-section-description"
+            >
+              Everything begins with emotional truth: a feeling, a tension, a memory, a fragment of identity waiting for language. Echo in Ink builds the worlds those things belong to.
+            </motion.p>
+          </motion.div>
 
-          <SectionHeading
-            eyebrow="Philosophy"
-            title={"Atmosphere is not decoration —\nit is how meaning is felt."}
-            description="Everything begins with emotional truth: a feeling, a tension, a memory, a fragment of identity waiting for language. Echo in Ink builds the worlds those things belong to."
-          />
-
-          {/* Atmospheric text block with motion */}
-<div className="font-structural text-[14px] md:text-[15px] text-white/60 leading-[1.85] space-y-6 mt-6 md:mt-8 mb-6">
-            {[
-              "Some things are felt long before they can be articulated.",
-              "Echo in Ink exists for founders, artists, and visionaries carrying something real beneath the surface — something difficult to translate clearly without losing its texture.",
-              "This studio was built to preserve that texture.",
-              "Through identity, atmosphere, narrative, and systems, we create work that feels coherent, emotionally precise, and unmistakably true."
-            ].map((text, i) => (
+          {/* Right column — Editorial text block */}
+          <motion.div 
+            className="ei-text-block mt-4 md:mt-8"
+            variants={staggerContainer(STAGGER.normal, 0.3)}
+          >
+            {paragraphs.map((text, i) => (
               <motion.p
                 key={i}
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={VIEWPORT.normal}
-                transition={{
-                  duration: DURATION.normal,
-                  ease: EASE,
-                  delay: 0.18 + i * STAGGER.normal,
-                }}
+                variants={fadeSoft}
+                className="ei-body-large"
               >
                 {text}
               </motion.p>
             ))}
-
-          </div>
-
-        </div>
+          </motion.div>
+        </motion.div>
       </Container>
     </Section>
   );

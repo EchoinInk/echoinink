@@ -1,56 +1,83 @@
+import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
-import { SectionHeading } from '@/components/layout/SectionHeading';
 import { Link } from 'react-router-dom';
 import GlowCard from '@/components/GlowCard';
 import sessionsImage from '@/assets/Sessions.png';
 import identityImage from '@/assets/Identity.png';
 import worldsImage from '@/assets/Worlds.png';
+import { 
+  driftUp, 
+  staggerContainer,
+  STAGGER,
+  VIEWPORT 
+} from '@/lib/motion-cinematic';
 
 export function Pathways() {
+  const pathways = [
+    {
+      to: '/sessions',
+      title: 'Sessions',
+      description: 'Clarity before expression. Focused creative direction for moments of misalignment, evolution, or translation.',
+      image: sessionsImage,
+    },
+    {
+      to: '/identity',
+      title: 'Identity',
+      description: 'Where inner worlds become coherent external form. Emotional, narrative, and visual translation for evolving brands.',
+      image: identityImage,
+    },
+    {
+      to: '/worlds',
+      title: 'Worlds',
+      description: 'Identity extended into living systems. Immersive digital ecosystems designed for coherence and resonance.',
+      image: worldsImage,
+    },
+  ];
+
   return (
-<Section spacing="md" className="pb-6 md:pb-8">
+    <Section spacing="lg" className="ei-section-standard relative overflow-hidden">
+      {/* Unified atmospheric depth */}
+      <div className="absolute inset-0 ei-glow-violet opacity-50" />
+
       <Container>
+        <motion.div
+          variants={staggerContainer(STAGGER.normal, 0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.normal}
+        >
+          {/* Section heading */}
+          <motion.div variants={driftUp} className="max-w-2xl mb-16 md:mb-20">
+            <span className="ei-eyebrow ei-text-space-md block">What We Design</span>
+            <h2 className="ei-section-title whitespace-pre-line">
+              {"We build worlds with\nintention and precision."}
+            </h2>
+            <p className="ei-section-description mt-6">
+              Explore our core areas of creative direction.
+            </p>
+          </motion.div>
 
-        <SectionHeading
-          eyebrow="What We Design"
-          title={"We build worlds with \nintention and precision."}
-          description="Explore our core areas of creative direction."
-          className="mb-12"
-        />
-
-        <div className="grid md:grid-cols-3 gap-8">
-
-          <Link to="/sessions">
-            <GlowCard
-              title="Sessions"
-              description="Clarity before expression. Focused creative direction for moments of misalignment, evolution, or translation."
-              image={sessionsImage}
-              className="max-h-[450px]"
-            />
-          </Link>
-
-          <Link to="/identity">
-            <GlowCard
-              title="Identity"
-              description={
-                "Where inner worlds become coherent external form. Emotional, narrative,\nand visual translation for founders, studios, and evolving brands."
-              }
-              image={identityImage}
-              className="max-h-[450px]"
-            />
-          </Link>
-
-          <Link to="/worlds">
-            <GlowCard
-              title="Worlds"
-              description="Identity extend into living systems. Immersive digital ecosystems designed for coherence, resonance, and long‑term evolution."
-              image={worldsImage}
-                className="max-h-[450px]"
-            />
-          </Link>
-
-        </div>
+          {/* Pathways grid */}
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+            {pathways.map((pathway, i) => (
+              <motion.div
+                key={pathway.to}
+                variants={driftUp}
+                custom={i}
+              >
+                <Link to={pathway.to} className="block h-full">
+                  <GlowCard
+                    title={pathway.title}
+                    description={pathway.description}
+                    image={pathway.image}
+                    className="h-full min-h-[420px]"
+                  />
+                </Link>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
       </Container>
     </Section>
   );
