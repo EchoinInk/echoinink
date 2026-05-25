@@ -114,7 +114,7 @@ export function LumoCaseStudyTeaser() {
     <div className="hidden md:block" />
 
   </div>
-</div></
+</div></Container>
     </Section>
   );
 }
