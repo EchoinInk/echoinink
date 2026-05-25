@@ -62,7 +62,7 @@ export default function GlowCard({
           {/* VERTICAL IMAGE */}
 <div
   className={cn(
-    "relative flex-1 overflow-hidden bg-[#0F1220]",
+    "relative w-full h-48 overflow-hidden bg-[#0F1220]",
     "before:absolute before:inset-0 before:bg-white/[0.015] before:mix-blend-lighten before:pointer-events-none",
     imageWrapperClass
   )}
@@ -70,14 +70,9 @@ export default function GlowCard({
   <img
     src={image}
     alt={title}
-   <div className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
   />
-           <img
-              src={image}
-              alt={title}
-              className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-            />
-          </div>
+</div>
 
           {/* VERTICAL CONTENT */}
           <div className="flex flex-col flex-1 p-8">
