@@ -33,42 +33,65 @@ export default function GlowCard({
     bottom: 'translate-y-[10%]',
   };
 
-  // Archetype-specific atmospheric configurations
+  // ═══════════════════════════════════════════════════════════════
+  // ARCHETYPE-SPECIFIC EMOTIONAL PERSONALITY CONFIGURATIONS
+  // Differentiated through spacing, glow behavior, motion pacing, lighting
+  // ═══════════════════════════════════════════════════════════════
   const archetypeConfig = {
     sessions: {
-      // Geometric precision, structured, technical
-      vignette: 'bg-[radial-gradient(circle_at_center,transparent_30%,rgba(0,0,0,0.55)_100%)]',
-      edgeGlow: 'from-cyan-500/[0.08] via-blue-500/[0.04] to-transparent',
-      shadowDepth: 'shadow-[inset_0_2px_40px_-10px_rgba(0,0,0,0.4)]',
-      overlayIntensity: 'via-[#060816]/50',
+      // PRECISE, DIAGNOSTIC, GEOMETRIC, QUIETER
+      // Sharp vignette, cooler glow, structured shadow, crisp overlay
+      vignette: 'bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.60)_100%)]',
+      edgeGlow: 'from-cyan-500/[0.07] via-blue-500/[0.04] to-transparent',
+      shadowDepth: 'shadow-[inset_0_1px_30px_-8px_rgba(0,0,0,0.45)]',
+      overlayIntensity: 'via-[#060816]/55',
+      // Quieter, more precise motion
+      hoverLift: -1.5,
+      glowIntensity: 'opacity-45',
+      borderOpacity: 'border-white/[0.05]',
     },
     identity: {
-      // Softer, fluid, emotional, warm
-      vignette: 'bg-[radial-gradient(circle_at_center,transparent_40%,rgba(0,0,0,0.45)_100%)]',
-      edgeGlow: 'from-fuchsia-500/[0.10] via-violet-500/[0.06] to-transparent',
-      shadowDepth: 'shadow-[inset_0_4px_60px_-15px_rgba(0,0,0,0.3)]',
-      overlayIntensity: 'via-[#060816]/35',
+      // EMOTIONAL, FLUID, EXPRESSIVE, SOFTER
+      // Softer vignette, warmer glow, gentler shadow, lighter overlay
+      vignette: 'bg-[radial-gradient(circle_at_center,transparent_50%,rgba(0,0,0,0.40)_100%)]',
+      edgeGlow: 'from-fuchsia-500/[0.12] via-violet-500/[0.07] to-transparent',
+      shadowDepth: 'shadow-[inset_0_3px_50px_-12px_rgba(0,0,0,0.25)]',
+      overlayIntensity: 'via-[#060816]/30',
+      // More expressive, fluid motion
+      hoverLift: -3,
+      glowIntensity: 'opacity-65',
+      borderOpacity: 'border-white/[0.08]',
     },
     worlds: {
-      // Spatial depth, architectural, scale
-      vignette: 'bg-[radial-gradient(ellipse_80%_60%_at_50%_70%,transparent_20%,rgba(0,0,0,0.65)_100%)]',
-      edgeGlow: 'from-indigo-500/[0.09] via-blue-600/[0.05] to-transparent',
-      shadowDepth: 'shadow-[inset_0_-4px_80px_-10px_rgba(0,0,0,0.5)]',
-      overlayIntensity: 'via-[#050816]/55',
+      // DIMENSIONAL, SPATIAL, IMMERSIVE, DEEPER
+      // Deeper vignette, rich glow, dramatic shadow, immersive overlay
+      vignette: 'bg-[radial-gradient(ellipse_85%_65%_at_50%_75%,transparent_15%,rgba(0,0,0,0.70)_100%)]',
+      edgeGlow: 'from-indigo-500/[0.11] via-purple-500/[0.06] to-transparent',
+      shadowDepth: 'shadow-[inset_0_-3px_70px_-8px_rgba(0,0,0,0.55)]',
+      overlayIntensity: 'via-[#050816]/60',
+      // Deeper atmospheric lift
+      hoverLift: -2.5,
+      glowIntensity: 'opacity-60',
+      borderOpacity: 'border-white/[0.06]',
     },
   };
 
   const config = archetypeConfig[archetype];
 
+  // Use archetype-specific values, with featured override for identity card
+  const effectiveHoverLift = featured ? -3 : config.hoverLift;
+  const effectiveGlowIntensity = featured ? 'opacity-75' : config.glowIntensity;
+  const effectiveBorderOpacity = featured ? 'border-white/[0.10]' : config.borderOpacity;
+
   return (
     <motion.div
-      whileHover={{ y: hoverLift, scale: featured ? 1.005 : 1 }}
-      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: effectiveHoverLift, scale: featured ? 1.005 : 1 }}
+      transition={{ duration: featured ? 0.6 : 0.5, ease: [0.22, 1, 0.36, 1] }}
       className={cn(
         "group relative overflow-hidden",
         featured ? "rounded-[32px]" : "rounded-[28px]",
-        "border border-white/[0.06]",
-        horizontal 
+        effectiveBorderOpacity,
+        horizontal
           ? featured ? "min-h-[240px] md:min-h-[280px]" : "min-h-[220px] md:min-h-[260px]"
           : featured ? "min-h-[520px] md:min-h-[560px]" : "min-h-[480px] md:min-h-[520px]",
         featured ? "shadow-[0_0_60px_-20px_rgba(99,102,241,0.15)]" : "",
@@ -125,11 +148,11 @@ export default function GlowCard({
           {/* ARCHETYPE-SPECIFIC CINEMATIC OVERLAY */}
           <div className={cn("absolute inset-0 bg-gradient-to-b from-black/10", config.overlayIntensity, "to-[#050816]/95")} />
 
-          {/* ATMOSPHERIC GLOW — differentiated intensity */}
+          {/* ATMOSPHERIC GLOW — archetype-specific intensity */}
           {glow && (
             <div className={cn(
               "absolute inset-0",
-              featured ? "opacity-70" : "opacity-55",
+              effectiveGlowIntensity,
               glowOffset[glowPosition]
             )} />
           )}

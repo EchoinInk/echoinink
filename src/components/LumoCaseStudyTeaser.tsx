@@ -5,9 +5,8 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import {
   blurEmergence,
+  driftUp,
   orchestratedReveal,
-  EASE_LUXURY,
-  DURATION,
   VIEWPORT,
 } from '@/lib/motion-cinematic';
 
@@ -37,7 +36,6 @@ export function LumoCaseStudyTeaser() {
           {/* ═══════════════════════════════════════════════════════════════
               EDITORIAL COMPOSITION
               Asymmetric, magazine-style layout
-              Reduced rounded corners, more sophisticated proportions
               ═══════════════════════════════════════════════════════════════ */}
           <div className="relative max-w-6xl mx-auto">
             {/* Background image with editorial treatment */}
@@ -103,7 +101,7 @@ export function LumoCaseStudyTeaser() {
                   {/* Description — restrained, atmospheric */}
                   <motion.p
                     variants={orchestratedReveal(3, 4)}
-                    className="font-structural text-[12px] md:text-[13px] text-white/40 leading-[1.7] max-w-[42ch] mb-6"
+                    className="font-structural text-[12px] md:text-[13px] text-white/45 leading-[1.7] max-w-[42ch] mb-6"
                   >
                     An emotionally intelligent app shaped by an identity system built to calm cognitive noise through atmosphere, rhythm, and restraint.
                   </motion.p>
@@ -112,7 +110,7 @@ export function LumoCaseStudyTeaser() {
                   <motion.div variants={blurEmergence}>
                     <Link
                       to="/work/lumo"
-                      className="group inline-flex items-center gap-2 font-structural text-[9px] tracking-[0.16em] uppercase text-violet-300/60 hover:text-violet-300 transition-colors duration-500"
+                      className="group inline-flex items-center gap-2 font-structural text-[9px] tracking-[0.16em] uppercase text-violet-300/65 hover:text-violet-300 transition-colors duration-500"
                     >
                       <span>View Case Study</span>
                       <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -123,6 +121,72 @@ export function LumoCaseStudyTeaser() {
                 </div>
               </div>
             </div>
+
+            {/* ═══════════════════════════════════════════════════════════════
+                EDITORIAL PROOF BLOCK — Homepage addition
+                Scope, Problem, Outcome, Positioning
+                Generous spacing, soft hierarchy, atmospheric separators
+                ═══════════════════════════════════════════════════════════════ */}
+            <motion.div
+              variants={driftUp}
+              className="mt-10 md:mt-14 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6"
+            >
+              {/* Micro-tagline */}
+              <div className="md:col-span-12 mb-2">
+                <span className="font-editorial text-[15px] md:text-[17px] text-white/55 italic">
+                  An exploration into emotionally intelligent interfaces.
+                </span>
+              </div>
+
+              {/* Scope */}
+              <div className="md:col-span-3">
+                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/40 block mb-3">
+                  Scope
+                </span>
+                <p className="font-structural text-[13px] leading-[1.7] text-white/65">
+                  Identity system, interface direction, and atmospheric world-building.
+                </p>
+              </div>
+
+              {/* Problem */}
+              <div className="md:col-span-3">
+                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/40 block mb-3">
+                  Problem
+                </span>
+                <p className="font-structural text-[13px] leading-[1.7] text-white/65">
+                  LUMO needed a visual language that felt alive, adaptive, and emotionally intelligent — a system that could hold both clarity and feeling without slipping into clinical tech aesthetics.
+                </p>
+              </div>
+
+              {/* Outcome */}
+              <div className="md:col-span-3">
+                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/40 block mb-3">
+                  Outcome
+                </span>
+                <p className="font-structural text-[13px] leading-[1.7] text-white/65">
+                  A modular identity and atmospheric UI system used across product, marketing, and motion, giving LUMO a distinct emotional signature and a world its users could feel as much as navigate.
+                </p>
+              </div>
+
+              {/* Positioning */}
+              <div className="md:col-span-3">
+                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/40 block mb-3">
+                  Positioning
+                </span>
+                <p className="font-structural text-[13px] leading-[1.7] text-white/65">
+                  An internal Echo in Ink world-building project exploring emotionally responsive interfaces.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Atmospheric separator */}
+            <motion.div
+              variants={blurEmergence}
+              className="mt-12 md:mt-16 w-full h-px"
+              style={{
+                background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.06) 20%, rgba(99,102,241,0.06) 80%, transparent 100%)',
+              }}
+            />
           </div>
         </motion.div>
       </Container>
