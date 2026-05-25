@@ -2,6 +2,8 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Link } from 'react-router-dom';
 import GlowCard from '@/components/GlowCard';
+import systemsImage from '@/assets/images/Systems.png';
+import vaultImage from '@/assets/images/Vault.png';
 
 export function EmergingSystems() {
   return (
@@ -33,7 +35,6 @@ export function EmergingSystems() {
 </Link>
 
         </div>
-      </div>
       </Container>
     </Section>
   );
