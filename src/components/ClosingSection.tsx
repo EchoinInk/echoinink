@@ -32,7 +32,7 @@ export function ClosingSection() {
         {/* Eyebrow */}
         <motion.span
           variants={driftUp}
-          className="ei-eyebrow ei-text-space-xl block"
+          className="ei-eyebrow ei-text-space-md block"
         >
           Begin
         </motion.span>
