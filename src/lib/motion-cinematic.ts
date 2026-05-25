@@ -45,21 +45,21 @@ export const AMBIENT = {
   // Luminance drift — slow opacity oscillation
   luminance: {
     duration: DURATION.breath,
-    ease: 'easeInOut',
+    ease: 'easeInOut' as const,
     repeat: Infinity,
     repeatType: 'mirror' as const,
   },
   // Depth drift — subtle scale breathing
   depth: {
     duration: DURATION.ambient,
-    ease: 'easeInOut',
+    ease: 'easeInOut' as const,
     repeat: Infinity,
     repeatType: 'mirror' as const,
   },
   // Parallax drift — vertical float
   float: {
     duration: DURATION.ambient * 1.5,
-    ease: 'easeInOut',
+    ease: 'easeInOut' as const,
     repeat: Infinity,
     repeatType: 'mirror' as const,
   },

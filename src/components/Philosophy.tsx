@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
-import { 
-  fadeSoft, 
-  driftUp, 
-  staggerContainer, 
+import {
+  blurEmergence,
+  driftUp,
+  staggerContainer,
   STAGGER,
-  VIEWPORT 
+  VIEWPORT,
+  EASE_LUXURY,
+  DURATION,
 } from '@/lib/motion-cinematic';
 
 export function Philosophy() {
@@ -19,33 +21,41 @@ export function Philosophy() {
 
   return (
     <Section spacing="lg" className="ei-section-standard overflow-hidden relative">
-      {/* Soft atmosphere - reduced visibility */}
-      <div className="absolute inset-0 ei-glow-indigo opacity-40" />
+      {/* Cinematic atmosphere — soft violet haze */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'radial-gradient(ellipse 60% 50% at 30% 40%, rgba(99,102,241,0.04) 0%, transparent 60%)',
+            filter: 'blur(80px)',
+          }}
+        />
+      </div>
 
       <Container>
-        <motion.div 
-          className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-10 items-start"
+        <motion.div
+          className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-start"
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.normal}
         >
-          {/* Left column — Section heading */}
+          {/* Left column — Section heading with blur emergence */}
           <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
-            <motion.span 
+            <motion.span
               variants={driftUp}
               className="ei-eyebrow ei-text-space-md block"
             >
               Philosophy
             </motion.span>
-            
-            <motion.h2 
-              variants={driftUp}
+
+            <motion.h2
+              variants={blurEmergence}
               className="ei-section-title ei-text-space-lg whitespace-pre-line"
             >
               {"Atmosphere is not decoration —\nit is how meaning is felt."}
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               variants={driftUp}
               className="ei-section-description"
             >
@@ -53,15 +63,16 @@ export function Philosophy() {
             </motion.p>
           </motion.div>
 
-          {/* Right column — Editorial text block */}
-          <motion.div 
+          {/* Right column — Editorial text block with cinematic reveal */}
+          <motion.div
             className="mt-4 md:mt-8"
             variants={staggerContainer(STAGGER.normal, 0.3)}
           >
             {paragraphs.map((text, i) => (
               <motion.p
                 key={i}
-                variants={fadeSoft}
+                variants={blurEmergence}
+                custom={i}
                 className="ei-body-large"
               >
                 {text}
