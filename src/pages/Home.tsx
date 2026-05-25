@@ -4,9 +4,6 @@ import { Philosophy } from '@/components/Philosophy';
 import { Pathways } from '@/components/Pathways';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
-import { PageCTA } from '@/components/PageCTA';
-import { Section } from '@/components/layout/Section';
-import { Container } from '@/components/layout/Container';
 import { ClosingSection } from '@/components/ClosingSection';
 
 export function Home() {
@@ -43,9 +40,6 @@ export function Home() {
           }}
         />
       </div>
-<footer>
-      <PageCTA page="home" />
-</footer>
     </main>
   );
 }
