@@ -1,7 +1,7 @@
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Link } from 'react-router-dom';
-import { GlowCard } from '@/components/GlowCard';
+import GlowCard from '@/components/GlowCard';
 
 export function EmergingSystems() {
   return (
