@@ -49,7 +49,7 @@ export function AtmospherePause() {
           whileInView="visible"
           viewport={VIEWPORT.loose}
         >
-          {/* Eyebrow — atmospheric, reduced visibility */}
+          {/* Eyebrow */}
           <motion.span 
             variants={driftUp}
             className="ei-eyebrow block"
@@ -58,18 +58,16 @@ export function AtmospherePause() {
             The Space Between
           </motion.span>
 
-          {/* Poetic fragment - more intimate */}
+          {/* Poetic fragment */}
           <motion.p 
             variants={fadeSoft}
             className="ei-atmosphere-text"
             style={{ lineHeight: 1.7 }}
           >
-            "In silence, the work finds its voice.
-            <br />
-            In pause, the vision clarifies."
+            "In silence, the work finds its voice."
           </motion.p>
 
-          {/* Decorative line - more subtle */}
+          {/* Decorative line */}
           <motion.div
             variants={fadeSoft}
             className="mx-auto w-px h-12 mt-12"

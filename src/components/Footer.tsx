@@ -1,13 +1,20 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { fadeSoft, driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-white/[0.05] bg-[#030617]">
+    <footer className="relative overflow-hidden">
+      {/* Subtle top border */}
+      <div 
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.05) 50%, transparent)' }}
+      />
+      
       {/* Reduced atmosphere */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute left-[10%] top-[5%] w-[400px] h-[400px] bg-violet-500/[0.025] blur-[140px]" />
-        <div className="absolute right-[5%] bottom-[20%] w-[300px] h-[300px] bg-indigo-500/[0.02] blur-[120px]" />
+        <div className="absolute left-[10%] top-[5%] w-[400px] h-[400px] bg-violet-500/[0.02] blur-[140px]" />
+        <div className="absolute right-[5%] bottom-[20%] w-[300px] h-[300px] bg-indigo-500/[0.015] blur-[120px]" />
       </div>
 
       <motion.div 
@@ -18,45 +25,39 @@ export default function Footer() {
         viewport={VIEWPORT.loose}
       >
         {/* Top content grid */}
-        <div className="grid lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 lg:gap-16 pb-16 border-b border-white/[0.05]">
+        <div className="grid lg:grid-cols-[2fr_1fr_1fr_1fr] gap-12 lg:gap-16 pb-16">
           {/* Brand column */}
           <motion.div variants={driftUp}>
             <span className="ei-eyebrow ei-text-space-lg block">
               Echo In Ink
             </span>
 
-            <h2 className="ei-footer-heading ei-text-space-lg">
-              Building worlds with clarity, atmosphere and intention.
-            </h2>
-
-            <p className="ei-body max-w-md">
-              Identity systems, digital experiences and cinematic brand worlds built with emotional intelligence and luminous restraint.
+            <p className="ei-body-large max-w-sm">
+              Translating inner worlds into coherent identity.
             </p>
           </motion.div>
 
           {/* Navigation column */}
           <motion.div variants={driftUp}>
             <h3 className="ei-eyebrow ei-text-space-md block">
-              Navigation
+              Navigate
             </h3>
-            <ul className="space-y-4">
-              <li><a href="/" className="ei-body hover:text-white/70 transition-colors duration-300">Home</a></li>
-              <li><a href="/studio" className="ei-body hover:text-white/70 transition-colors duration-300">Studio</a></li>
-              <li><a href="/works" className="ei-body hover:text-white/70 transition-colors duration-300">Works</a></li>
-              <li><a href="/contact" className="ei-body hover:text-white/70 transition-colors duration-300">Contact</a></li>
+            <ul className="space-y-3">
+              <li><Link to="/" className="ei-link">Studio</Link></li>
+              <li><Link to="/works" className="ei-link">Works</Link></li>
+              <li><Link to="/contact" className="ei-link">Begin</Link></li>
             </ul>
           </motion.div>
 
           {/* Services column */}
           <motion.div variants={driftUp}>
             <h3 className="ei-eyebrow ei-text-space-md block">
-              Services
+              Explore
             </h3>
-            <ul className="space-y-4">
-              <li><a href="/identity" className="ei-body hover:text-white/70 transition-colors duration-300">Identity Translation</a></li>
-              <li><a href="/sessions" className="ei-body hover:text-white/70 transition-colors duration-300">Signal Sessions</a></li>
-              <li><a href="/worlds" className="ei-body hover:text-white/70 transition-colors duration-300">Creative Worlds</a></li>
-              <li><a href="/lumo" className="ei-body hover:text-white/70 transition-colors duration-300">LUMO</a></li>
+            <ul className="space-y-3">
+              <li><Link to="/identity" className="ei-link">Identity</Link></li>
+              <li><Link to="/sessions" className="ei-link">Sessions</Link></li>
+              <li><Link to="/worlds" className="ei-link">Worlds</Link></li>
             </ul>
           </motion.div>
 
@@ -65,45 +66,26 @@ export default function Footer() {
             <h3 className="ei-eyebrow ei-text-space-md block">
               Connect
             </h3>
-            <ul className="space-y-4">
-              <li><a href="mailto:hello@echoinink.com" className="ei-body hover:text-white/70 transition-colors duration-300">hello@echoinink.com</a></li>
-              <li><a href="/" className="ei-body hover:text-white/70 transition-colors duration-300">Instagram</a></li>
-              <li><a href="/" className="ei-body hover:text-white/70 transition-colors duration-300">LinkedIn</a></li>
-              <li><a href="/contact" className="ei-body hover:text-white/70 transition-colors duration-300">Start a Conversation</a></li>
+            <ul className="space-y-3">
+              <li><a href="mailto:hello@echoink.co" className="ei-link">hello@echoink.co</a></li>
             </ul>
           </motion.div>
         </div>
 
-        {/* Bottom legal row */}
+        {/* Bottom strip */}
         <motion.div 
           variants={fadeSoft}
-          className="pt-8 pb-12 flex flex-col lg:flex-row items-center justify-between gap-6"
+          className="py-8 flex flex-col md:flex-row items-center justify-between gap-4"
+          style={{ borderTop: '1px solid rgba(255,255,255,0.04)' }}
         >
           <p className="ei-body-small">
-            © {new Date().getFullYear()} Echo In Ink. All rights reserved.
+            © 2025 Echo in Ink
           </p>
-
-          <div className="flex items-center gap-8 ei-body-small">
-            <a href="/" className="hover:text-white/50 transition-colors duration-300">Privacy</a>
-            <a href="/" className="hover:text-white/50 transition-colors duration-300">Terms</a>
-            <a href="/" className="hover:text-white/50 transition-colors duration-300">Credits</a>
-          </div>
+          <p className="ei-body-small">
+            Aotearoa New Zealand
+          </p>
         </motion.div>
       </motion.div>
-
-      {/* Poetic closing strip */}
-      <div className="border-t border-white/[0.04]">
-        <div className="ei-container">
-          <div className="flex items-end justify-between py-6 md:py-8">
-            <span className="ei-body-small tracking-[0.2em] uppercase">
-              INK MEETS LIGHT.
-            </span>
-            <span className="ei-body-small tracking-[0.2em] uppercase">
-              EMOTIONS BECOME DESIGN.
-            </span>
-          </div>
-        </div>
-      </div>
     </footer>
   );
 }
