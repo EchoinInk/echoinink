@@ -49,7 +49,7 @@ export function ClosingSection() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.1 }}
-          className="font-structural text-[12px] md:text-[13px] text-white/48 leading-[1.6] max-w-[40ch] mx-auto mb-8"
+          className="font-structural text-[15px] md:text-[16px] text-white/60 leading-[1.85] max-w-[40ch] mx-auto mb-8"
         >
           If the resonance is there, we'll build the language your work has been waiting to speak.
         </motion.p>
