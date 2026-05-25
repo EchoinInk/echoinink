@@ -1,0 +1,173 @@
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Unified Atmospheric System
+   Consistent glows, depth, and cinematic ambience
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer components {
+  /* ── Core Glow Primitives ──────────────────────────────────── */
+  
+  /* Ambient violet glow — primary brand atmosphere */
+  .ei-glow-violet {
+    background: radial-gradient(
+      ellipse 55% 50% at 50% 55%,
+      rgba(139, 92, 246, 0.06) 0%,
+      rgba(99, 102, 241, 0.03) 50%,
+      transparent 70%
+    );
+    filter: blur(80px);
+    pointer-events: none;
+  }
+
+  /* Ambient indigo glow — secondary depth */
+  .ei-glow-indigo {
+    background: radial-gradient(
+      ellipse 60% 55% at 45% 50%,
+      rgba(99, 102, 241, 0.05) 0%,
+      rgba(79, 70, 229, 0.02) 55%,
+      transparent 75%
+    );
+    filter: blur(90px);
+    pointer-events: none;
+  }
+
+  /* Soft aqua accent — sparingly used */
+  .ei-glow-aqua {
+    background: radial-gradient(
+      ellipse 50% 45% at 55% 48%,
+      rgba(30, 200, 255, 0.04) 0%,
+      rgba(30, 150, 255, 0.02) 50%,
+      transparent 70%
+    );
+    filter: blur(70px);
+    pointer-events: none;
+  }
+
+  /* ── Depth Layers ─────────────────────────────────────────── */
+  
+  /* Deep background vignette */
+  .ei-vignette-deep {
+    background: radial-gradient(
+      circle at center,
+      transparent 30%,
+      rgba(3, 5, 12, 0.4) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Soft edge vignette for sections */
+  .ei-vignette-soft {
+    background: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      transparent 50%,
+      rgba(5, 7, 16, 0.25) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* ── Section Transitions ─────────────────────────────────── */
+  
+  /* Gradient fade to next section */
+  .ei-fade-to-ink {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(15, 18, 32, 0.5) 60%,
+      rgba(15, 18, 32, 0.95) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Subtle top gradient for sections following hero */
+  .ei-bleed-top {
+    background: linear-gradient(
+      to top,
+      transparent 0%,
+      rgba(15, 18, 32, 0.15) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* ── Noise & Texture ──────────────────────────────────────── */
+  
+  /* Film grain overlay */
+  .ei-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    mix-blend-mode: overlay;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  /* ── Card & Component Atmospheres ─────────────────────────── */
+  
+  /* Card background base */
+  .ei-card-bg {
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(20px);
+  }
+
+  /* Hover glow for cards */
+  .ei-card-glow {
+    box-shadow: 
+      0 0 0 1px rgba(255, 255, 255, 0.06),
+      0 20px 60px -20px rgba(0, 0, 0, 0.5),
+      0 0 80px -40px rgba(99, 102, 241, 0.15);
+  }
+
+  /* ── Breathing Space Atmosphere ──────────────────────────── */
+  
+  /* Minimal atmospheric pause section */
+  .ei-breathing-space {
+    background: 
+      radial-gradient(
+        ellipse 40% 30% at 50% 50%,
+        rgba(99, 102, 241, 0.02) 0%,
+        transparent 60%
+      );
+    position: relative;
+  }
+
+  /* ── Monogram Framing ─────────────────────────────────────── */
+  
+  /* Sacred space around the EI monogram */
+  .ei-monogram-frame {
+    position: relative;
+  }
+
+  .ei-monogram-frame::before {
+    content: '';
+    position: absolute;
+    inset: -10%;
+    background: radial-gradient(
+      ellipse 50% 45% at 50% 50%,
+      rgba(99, 102, 241, 0.03) 0%,
+      transparent 70%
+    );
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+/* ── Animation Keyframes ──────────────────────────────────── */
+@keyframes ei-glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes ei-grain-shift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-1%, -1%); }
+}
+
+@keyframes ei-luminance-drift {
+  0%, 100% { 
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% { 
+    opacity: 0.45;
+    transform: scale(1.02);
+  }
+}

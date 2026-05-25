@@ -1,0 +1,181 @@
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Cinematic Typography System
+   Unified editorial scale with consistent rhythm and hierarchy
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer base {
+  /* ── Core Typography Hierarchy ─────────────────────────────── */
+  
+  /* Hero Display — The EI monogram, main headline */
+  .ei-hero-display {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    letter-spacing: -0.018em;
+    line-height: 1.05;
+    color: rgba(240, 244, 255, 0.94);
+  }
+
+  /* Hero Lead — The tagline beneath display */
+  .ei-hero-lead {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.55);
+    max-width: 44ch;
+  }
+
+  /* ── Section Headings ─────────────────────────────────────── */
+  
+  /* Section Eyebrow — small uppercase label */
+  .ei-eyebrow {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.38em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.28);
+  }
+
+  /* Section Title — main editorial heading */
+  .ei-section-title {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 300;
+    letter-spacing: -0.012em;
+    line-height: 1.18;
+    color: rgba(232, 234, 246, 0.88);
+  }
+
+  /* Section Description — supporting text */
+  .ei-section-description {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.50);
+    max-width: 52ch;
+  }
+
+  /* ── Editorial Text Blocks ────────────────────────────────── */
+  
+  /* Body Large — philosophical text, main reading */
+  .ei-body-large {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(0.8125rem, 1vw, 0.9375rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.95;
+    color: rgba(255, 255, 255, 0.52);
+  }
+
+  /* Body Standard — general content */
+  .ei-body {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.55);
+  }
+
+  /* Body Small — captions, metadata */
+  .ei-body-small {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.40);
+  }
+
+  /* ── UI Elements ──────────────────────────────────────────── */
+  
+  /* Button / CTA Text */
+  .ei-cta-text {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  /* Card Title */
+  .ei-card-title {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: -0.008em;
+    line-height: 1.24;
+    color: rgba(232, 234, 246, 0.88);
+  }
+
+  /* Card Description */
+  .ei-card-description {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.48);
+  }
+
+  /* Navigation */
+  .ei-nav-text {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.60);
+  }
+
+  /* Footer Heading */
+  .ei-footer-heading {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+    color: rgba(232, 234, 246, 0.90);
+  }
+
+  /* ── Special Treatments ───────────────────────────────────── */
+  
+  /* Atmosphere Text — for breathing moments, poetic fragments */
+  .ei-atmosphere-text {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: -0.006em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.35);
+    font-style: italic;
+  }
+
+  /* Quote / Testimonial */
+  .ei-quote {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+    color: rgba(232, 234, 246, 0.75);
+  }
+}
+
+/* ── Spacing Utilities for Typography ─────────────────────── */
+@layer utilities {
+  .ei-text-space-xs { margin-bottom: 0.5rem; }
+  .ei-text-space-sm { margin-bottom: 1rem; }
+  .ei-text-space-md { margin-bottom: 1.5rem; }
+  .ei-text-space-lg { margin-bottom: 2.5rem; }
+  .ei-text-space-xl { margin-bottom: 4rem; }
+}

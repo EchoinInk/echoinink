@@ -1,20 +1,22 @@
-
 export function HeroHeading() {
   return (
-    <>
-      {/* Heading */}
-      <h2
+    <div className="ei-monogram-frame">
+      {/* Display heading — The EI monogram identity */}
+      <h1
         id="hero-heading"
-        className="font-editorial text-3xl md:text-4xl lg:text-6xl text-[#F0F4FF] mb-6 md:mb-8 tracking-wide text-left leading-tight"
-        style={{ WebkitTextStroke: '0.25px #24294A' }}
+        className="ei-hero-display ei-text-space-lg"
+        style={{ 
+          WebkitTextStroke: '0.15px rgba(36, 41, 74, 0.5)',
+          textShadow: '0 0 80px rgba(99, 102, 241, 0.15)',
+        }}
       >
         Echo in Ink
-      </h2>
+      </h1>
 
-      {/* Core line */}
-      <p className="font-structural text-[15px] md:text-[17px] text-white/70 mb-10 md:mb-12 text-left max-w-[48ch] leading-relaxed">
-        Translating inner worlds into identities that <br /> survive contact with the world.
+      {/* Lead text — Emotional positioning */}
+      <p className="ei-hero-lead">
+        Translating inner worlds into coherent identities.
       </p>
-    </>
+    </div>
   );
 }
