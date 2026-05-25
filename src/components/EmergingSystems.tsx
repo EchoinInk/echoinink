@@ -10,7 +10,7 @@ export function EmergingSystems() {
           Worlds in Formation
         </p>
 
-        <h2 className="text-5xl font-light leading-tight">
+        <h2 className="font-editorial text-[2.1rem] text-[#E8EAF6]/90 leading-[1.24] whitespace-pre-line" style={{ letterSpacing: '-0.012em' }}>
           Active archives and systems shaping the future.
         </h2>
 
