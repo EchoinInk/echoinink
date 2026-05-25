@@ -33,7 +33,8 @@ export function EmergingSystems() {
   horizontal
   className="max-h-[450px] w-full"
 />
-<l
+</Link>
+<Link to="/vault" className="flex-1">
 <GlowCard
   title="Echo Vault"
   description="A curated archive of textures, references, systems, and emotional environments."
@@ -41,7 +42,6 @@ export function EmergingSystems() {
   horizontal
   className="max-h-[450px] w-full"
 />
-
             </Link>
           </div>
         </div>
