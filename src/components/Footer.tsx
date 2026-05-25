@@ -34,37 +34,6 @@ export default function Footer() {
       {/* Content — elegant vertical structure */}
       <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
         
-        {/* ═══════════════════════════════════════════════════════════════
-            TOP SECTION — Final atmospheric statement
-            Emotional anchor before the quiet close
-            ═══════════════════════════════════════════════════════════════ */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={VIEWPORT.normal}
-          transition={{ duration: DURATION.slower, ease: EASE_LUXURY }}
-          className="pt-20 md:pt-32 pb-16 md:pb-24 text-center"
-        >
-          {/* Closing statement — poetic, memorable — THE FOCAL POINT */}
-          <p className="font-editorial text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem] text-white/65 leading-[1.4] tracking-tight max-w-[32ch] mx-auto mb-12">
-            Let the next world begin quietly.
-          </p>
-
-          {/* Contact CTA — clearer invitation */}
-          <div className="flex items-center justify-center gap-6 md:gap-10">
-            <Button to="/contact" variant="primary">
-              Begin a conversation
-            </Button>
-            <Button to="/works" variant="tertiary">
-              View selected works
-            </Button>
-          </div>
-        </motion.div>
-
-        {/* ═══════════════════════════════════════════════════════════════
-            MIDDLE SECTION — Confident navigation and grounded metadata
-            Clear hierarchy, intentional spacing, trustworthy presence
-            ═══════════════════════════════════════════════════════════════ */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
