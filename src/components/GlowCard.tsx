@@ -27,7 +27,7 @@ export default function GlowCard({
       transition={{ duration: DURATION.fast, ease: EASE_CINEMATIC }}
       className={cn(
         "group rounded-2xl overflow-hidden transition-all duration-500",
-        "bg-white/[0.015] border border-white/[0.04]",
+        " border border-white/[0.04]",
         "hover:bg-white/[0.025] hover:border-white/[0.06]",
         horizontal ? "flex flex-row" : "flex flex-col",
         className
@@ -62,7 +62,7 @@ export default function GlowCard({
           {/* VERTICAL IMAGE */}
 <div
   className={cn(
-    "relative w-full h-48 overflow-hidden bg-[#0F1220]",
+    "relative w-full h-64 md:h-72 overflow-hidden bg-[#0F1220]",
     "before:absolute before:inset-0 before:bg-white/[0.015] before:mix-blend-lighten before:pointer-events-none",
     imageWrapperClass
   )}
