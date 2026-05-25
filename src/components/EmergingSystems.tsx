@@ -3,8 +3,8 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { Link } from 'react-router-dom';
 import GlowCard from '@/components/GlowCard';
-import systemsImage from '@/assets/Systems.png';
-import vaultImage from '@/assets/Vault.png';
+import systemsImage from '@/assets/ei-systems-bg.png';
+import vaultImage from '@/assets/ei-vault.png';
 import { 
   driftUp, 
   staggerContainer,
