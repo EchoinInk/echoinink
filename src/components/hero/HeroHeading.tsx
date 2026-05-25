@@ -45,14 +45,25 @@ export function HeroHeading() {
       </motion.p>
 
       {/* ═══════════════════════════════════════════════════════════════
-          CREDIBILITY SIGNAL — Audience-fit line
-          Small typography, soft opacity, editorial treatment
+          ENGAGEMENT FRAMING — Subtle commercial clarity
+          Quietly answers: what kinds of work do you do?
           ═══════════════════════════════════════════════════════════════ */}
       <motion.p
         variants={heroReveal}
-        className="font-structural text-[11px] tracking-[0.05em] text-white/38 mt-5"
+        className="font-structural text-[11px] tracking-[0.08em] text-white/35 mt-6"
       >
-        Built for artists, founders, creative teams, and early-stage studios.
+        Identity systems, immersive websites, creative direction, and atmospheric digital experiences.
+      </motion.p>
+
+      {/* ═══════════════════════════════════════════════════════════════
+          AUDIENCE POSITIONING — Emotional authority statement
+          Refined, emotionally intelligent, premium editorial tone
+          ═══════════════════════════════════════════════════════════════ */}
+      <motion.p
+        variants={heroReveal}
+        className="font-structural text-[11px] tracking-[0.04em] text-white/32 mt-4"
+      >
+        Built for founders, artists, cultural projects, and emerging brands seeking emotionally resonant digital worlds.
       </motion.p>
     </div>
   );
