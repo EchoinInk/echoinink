@@ -40,39 +40,57 @@ export default function GlowCard({
   const archetypeConfig = {
     sessions: {
       // PRECISE, DIAGNOSTIC, GEOMETRIC, QUIETER
-      // Sharp vignette, cooler glow, structured shadow, crisp overlay
       vignette: 'bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.60)_100%)]',
       edgeGlow: 'from-cyan-500/[0.07] via-blue-500/[0.04] to-transparent',
       shadowDepth: 'shadow-[inset_0_1px_30px_-8px_rgba(0,0,0,0.45)]',
       overlayIntensity: 'via-[#060816]/55',
-      // Quieter, more precise motion
+      // Precise, minimal motion — clinical restraint
       hoverLift: -1.5,
+      hoverScale: 1.002,
+      transitionDuration: 0.4,
+      transitionDelay: 0,
       glowIntensity: 'opacity-45',
       borderOpacity: 'border-white/[0.05]',
+      // Quiet, structured density
+      atmosphericDensity: 'low',
+      // Geometric edge treatment
+      edgeTreatment: 'sharp',
     },
     identity: {
       // EMOTIONAL, FLUID, EXPRESSIVE, SOFTER
-      // Softer vignette, warmer glow, gentler shadow, lighter overlay
       vignette: 'bg-[radial-gradient(circle_at_center,transparent_50%,rgba(0,0,0,0.40)_100%)]',
       edgeGlow: 'from-fuchsia-500/[0.12] via-violet-500/[0.07] to-transparent',
       shadowDepth: 'shadow-[inset_0_3px_50px_-12px_rgba(0,0,0,0.25)]',
       overlayIntensity: 'via-[#060816]/30',
-      // More expressive, fluid motion
+      // Fluid, expressive motion — emotional breathing
       hoverLift: -3,
+      hoverScale: 1.008,
+      transitionDuration: 0.65,
+      transitionDelay: 0.02,
       glowIntensity: 'opacity-65',
       borderOpacity: 'border-white/[0.08]',
+      // Rich, warm density
+      atmosphericDensity: 'high',
+      // Soft, flowing edge treatment
+      edgeTreatment: 'soft',
     },
     worlds: {
       // DIMENSIONAL, SPATIAL, IMMERSIVE, DEEPER
-      // Deeper vignette, rich glow, dramatic shadow, immersive overlay
       vignette: 'bg-[radial-gradient(ellipse_85%_65%_at_50%_75%,transparent_15%,rgba(0,0,0,0.70)_100%)]',
       edgeGlow: 'from-indigo-500/[0.11] via-purple-500/[0.06] to-transparent',
       shadowDepth: 'shadow-[inset_0_-3px_70px_-8px_rgba(0,0,0,0.55)]',
       overlayIntensity: 'via-[#050816]/60',
-      // Deeper atmospheric lift
+      // Dimensional, immersive motion — spatial depth
       hoverLift: -2.5,
+      hoverScale: 1.005,
+      transitionDuration: 0.55,
+      transitionDelay: 0.01,
       glowIntensity: 'opacity-60',
       borderOpacity: 'border-white/[0.06]',
+      // Deep, spatial density
+      atmosphericDensity: 'immersive',
+      // Dramatic edge treatment
+      edgeTreatment: 'layered',
     },
   };
 
@@ -80,13 +98,20 @@ export default function GlowCard({
 
   // Use archetype-specific values, with featured override for identity card
   const effectiveHoverLift = featured ? -3 : config.hoverLift;
+  const effectiveHoverScale = featured ? 1.008 : config.hoverScale;
   const effectiveGlowIntensity = featured ? 'opacity-75' : config.glowIntensity;
   const effectiveBorderOpacity = featured ? 'border-white/[0.10]' : config.borderOpacity;
+  const effectiveTransitionDuration = featured ? 0.65 : config.transitionDuration;
+  const effectiveTransitionDelay = featured ? 0.02 : config.transitionDelay;
 
   return (
     <motion.div
-      whileHover={{ y: effectiveHoverLift, scale: featured ? 1.005 : 1 }}
-      transition={{ duration: featured ? 0.6 : 0.5, ease: [0.22, 1, 0.36, 1] }}
+      whileHover={{ y: effectiveHoverLift, scale: effectiveHoverScale }}
+      transition={{
+        duration: effectiveTransitionDuration,
+        delay: effectiveTransitionDelay,
+        ease: [0.22, 1, 0.36, 1]
+      }}
       className={cn(
         "group relative overflow-hidden",
         featured ? "rounded-[32px]" : "rounded-[28px]",

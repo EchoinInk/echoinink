@@ -57,7 +57,7 @@ export function CinematicStatement() {
           {/* Eyebrow — quiet indicator of tonal shift */}
           <motion.span
             variants={driftUp}
-            className="font-structural text-[9px] tracking-[0.32em] uppercase text-white/20 block"
+            className="font-structural text-[9px] tracking-[0.32em] uppercase text-white/32 block"
           >
             A different frequency
           </motion.span>
@@ -75,7 +75,7 @@ export function CinematicStatement() {
           {/* Supporting line — the philosophy reinforcement */}
           <motion.p
             variants={driftUp}
-            className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.8] max-w-[48ch] mx-auto pt-4"
+            className="font-structural text-[12px] md:text-[13px] text-white/45 leading-[1.8] max-w-[48ch] mx-auto pt-4"
           >
             Every project begins with a question: what truth wants to emerge through this work?
           </motion.p>
