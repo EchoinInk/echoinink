@@ -24,27 +24,24 @@ export function EmergingSystems() {
             Active archives and systems shaping the future.
           </h2>
 
-          {/* Horizontal layout */}
-          <div className="grid md:grid-cols-1 gap-10">
-            <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
-              <Link to="/systems" className="flex-1">
-                <GlowCard
-                  title="Echo Systems"
-                  description="Atmospheric frameworks for creators building with intention."
-                  image={systemsImage}
-                  className="aspect-[3/1]" // makes card wider
-                />
-              </Link>
+          <div className="flex flex-col md:flex-row gap-10 items-center justify-center">
+            <Link to="/systems" className="flex-1">
+              <GlowCard
+                title="Echo Systems"
+                description="Atmospheric frameworks for creators building with intention."
+                image={systemsImage}
+                className="aspect-[3/1] md:h-[260px]" // 👈 horizontal ratio + height
+              />
+            </Link>
 
-              <Link to="/vault" className="flex-1">
-                <GlowCard
-                  title="Echo Vault"
-                  description="A curated archive of textures, references, and emotional systems."
-                  image={vaultImage}
-                  className="aspect-[3/1]" // same horizontal ratio
-                />
-              </Link>
-            </div>
+            <Link to="/vault" className="flex-1">
+              <GlowCard
+                title="Echo Vault"
+                description="A curated archive of textures, references, and emotional systems."
+                image={vaultImage}
+                className="aspect-[3/1] md:h-[260px]" // 👈 same horizontal ratio
+              />
+            </Link>
           </div>
         </div>
       </Container>
