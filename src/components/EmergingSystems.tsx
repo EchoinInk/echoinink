@@ -6,7 +6,7 @@ export function EmergingSystems() {
 <Section spacing="md" className="pb-6 md:pb-8">
       <Container>
       <div className="max-w-5xl mx-auto text-center">
-        <p className="uppercase tracking-[0.3em] text-xs text-white/30 mb-8">
+        <p className="font-structural text-[10px] tracking-[0.38em] uppercase text-white/30" style={{ marginBottom: 'var(--ei-space-24)' }}>
           Worlds in Formation
         </p>
 
