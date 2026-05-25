@@ -9,6 +9,7 @@ interface Props {
   centered?: boolean;
   className?: string;
   horizontal?: boolean;
+  imageWrapperClass?: string;
 }
 
 export default function GlowCard({
@@ -18,6 +19,7 @@ export default function GlowCard({
   centered,
   className,
   horizontal,
+  imageWrapperClass,
 }: Props) {
   return (
     <motion.div
@@ -47,7 +49,7 @@ export default function GlowCard({
           </div>
 
           {/* IMAGE RIGHT */}
-          <div className="relative flex-1 overflow-hidden">
+          <div className={cn("relative flex-1 overflow-hidden", imageWrapperClass)}>
             <img
               src={image}
               alt={title}
@@ -58,7 +60,7 @@ export default function GlowCard({
       ) : (
         <>
           {/* VERTICAL IMAGE */}
-          <div className="relative w-full h-48 overflow-hidden">
+          <div className={cn("relative w-full h-48 overflow-hidden", imageWrapperClass)}>
             <img
               src={image}
               alt={title}
