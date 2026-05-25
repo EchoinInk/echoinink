@@ -6,13 +6,17 @@ interface Props {
   description: string;
   image: string;
   centered?: boolean;
+  className?: string; // ← added
 }
 
-export default function GlowCard({ title, description, image, centered }: Props) {
+export default function GlowCard({ title, description, image, centered, className }: Props) {
   return (
     <motion.div
       whileHover={{ y: -8 }}
-      className="group flex flex-col rounded-3xl overflow-hidden border border-white/5 bg-white/[0.03] backdrop-blur-xl"
+      className={cn(
+        "group flex flex-col rounded-3xl overflow-hidden border border-white/5 bg-white/[0.03] backdrop-blur-xl",
+        className
+      )}
       style={{ height: "450px" }}
     >
       {/* IMAGE */}
@@ -39,7 +43,7 @@ export default function GlowCard({ title, description, image, centered }: Props)
             {title}
           </h2>
 
-          {/* DESCRIPTION — tightened spacing */}
+          {/* DESCRIPTION */}
           <p
             className={cn(
               "font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.85] mt-3 whitespace-pre-line",
@@ -49,10 +53,8 @@ export default function GlowCard({ title, description, image, centered }: Props)
             {description}
           </p>
 
-          {/* EXPLORE — anchored lower */}
-          <button
-            className="mt-auto pt-6 pb-2 text-sm uppercase tracking-[0.2em] text-violet-300 text-left"
-          >
+          {/* EXPLORE */}
+          <button className="mt-auto pt-6 pb-2 text-sm uppercase tracking-[0.2em] text-violet-300 text-left">
             Explore →
           </button>
         </div>
