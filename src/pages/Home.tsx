@@ -26,7 +26,7 @@ export function Home() {
       <Pathways />
       <LumoCaseStudyTeaser />
       <EmergingSystems />
-<Closing
+      <ClosingSection />
       {/* Breathing bridge — atmospheric transition between worlds */}
       <div
         aria-hidden="true"
@@ -43,8 +43,9 @@ export function Home() {
           }}
         />
       </div>
-
+<footer>
       <PageCTA page="home" />
+</footer>
     </main>
   );
 }
