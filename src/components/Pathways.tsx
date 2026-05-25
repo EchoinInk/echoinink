@@ -26,6 +26,7 @@ export function Pathways() {
               title="Sessions"
               description="Clarity before expression. Focused creative direction for moments of misalignment, evolution, or translation."
               image={sessionsImage}
+              className="max-h-[450px]"
             />
           </Link>
 
@@ -36,14 +37,16 @@ export function Pathways() {
                 "Where inner worlds become coherent external form. Emotional, narrative,\nand visual translation for founders, studios, and evolving brands."
               }
               image={identityImage}
+              className="max-h-[450px]"
             />
           </Link>
 
           <Link to="/worlds">
             <GlowCard
               title="Worlds"
-              description="Identity extended into living systems. Immersive digital ecosystems designed for coherence, resonance, and long‑term evolution."
+              description="Identity extend into living systems. Immersive digital ecosystems designed for coherence, resonance, and long‑term evolution."
               image={worldsImage}
+                className="max-h-[450px]"
             />
           </Link>
 
