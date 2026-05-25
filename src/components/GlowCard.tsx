@@ -62,9 +62,7 @@ export default function GlowCard({
           {/* VERTICAL IMAGE WITH TITLE INSIDE */}
 <div
   className={cn(
-    "relative w-full h-64 md:h-72 overflow-hidden bg-[#0F1220]",
-    "before:absolute before:inset-0 before:bg-white/[0.015] before:mix-blend-lighten before:pointer-events-none",
-    imageWrapperClass
+    "relative w-full h-64 md:h-72 overflow-hidden bg-[#0F1220]"    imageWrapperClass
   )}
 >
   <img
