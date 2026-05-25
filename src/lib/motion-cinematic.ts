@@ -250,6 +250,245 @@ export const parallaxFloat = {
   },
 };
 
+// ═══════════════════════════════════════════════════════════════
+// AMBIENT DRIFT — Atmospheric, underwater-like motion
+// ═══════════════════════════════════════════════════════════════
+
+export const ambientDrift = {
+  animate: {
+    y: [-6, 6, -6],
+    x: [-3, 3, -3],
+    scale: [1, 1.008, 1],
+  },
+  transition: {
+    duration: DURATION.ambient * 1.8,
+    ease: 'easeInOut',
+    repeat: Infinity,
+    repeatType: 'mirror' as const,
+  },
+};
+
+// Ultra-subtle atmospheric float for background layers
+export const atmosphericFloat = {
+  animate: {
+    y: [-12, 12, -12],
+    scale: [1, 1.015, 1],
+    opacity: [0.3, 0.35, 0.3],
+  },
+  transition: {
+    duration: DURATION.ambient * 2.5,
+    ease: 'easeInOut',
+    repeat: Infinity,
+    repeatType: 'mirror' as const,
+  },
+};
+
+// ═══════════════════════════════════════════════════════════════
+// BLUR EMERGENCE — Elements materializing through haze
+// ═══════════════════════════════════════════════════════════════
+
+export const blurEmergence: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 24,
+    filter: 'blur(12px)',
+    scale: 0.98,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    scale: 1,
+    transition: {
+      duration: DURATION.slower,
+      ease: EASE_LUXURY,
+    },
+  },
+};
+
+// Slower, more ethereal blur emergence
+export const blurEmergenceSlow: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 32,
+    filter: 'blur(16px)',
+    scale: 0.96,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    scale: 1,
+    transition: {
+      duration: DURATION.slower * 1.2,
+      ease: EASE_LUXURY,
+    },
+  },
+};
+
+// Dissolve reveal — pure opacity, no movement
+export const dissolveReveal: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: DURATION.slow * 1.5,
+      ease: EASE_SOFT,
+    },
+  },
+};
+
+// ═══════════════════════════════════════════════════════════════
+// ATMOSPHERIC DIFFUSION — Volumetric, spatial motion
+// ═══════════════════════════════════════════════════════════════
+
+export const volumetricDrift = {
+  animate: {
+    y: [-20, 20, -20],
+    opacity: [0.02, 0.04, 0.02],
+    scale: [1, 1.02, 1],
+  },
+  transition: {
+    duration: DURATION.ambient * 3,
+    ease: 'easeInOut',
+    repeat: Infinity,
+    repeatType: 'mirror' as const,
+  },
+};
+
+// Depth fade for background elements
+export const depthFade: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+    scale: 1.02,
+  },
+  visible: {
+    opacity: 0.4,
+    y: 0,
+    scale: 1,
+    transition: {
+      duration: DURATION.slower * 1.5,
+      ease: EASE_SOFT,
+    },
+  },
+};
+
+// ═══════════════════════════════════════════════════════════════
+// CINEMATIC CONTAINER — Orchestrated reveal sequences
+// ═══════════════════════════════════════════════════════════════
+
+export const cinematicContainer = (delay = 0): Variants => ({
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: STAGGER.cinematic * 1.2,
+      delayChildren: delay,
+    },
+  },
+});
+
+export const cinematicItem: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 16,
+    filter: 'blur(4px)',
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    filter: 'blur(0px)',
+    transition: {
+      duration: DURATION.normal,
+      ease: EASE_CINEMATIC,
+    },
+  },
+};
+
+// ═══════════════════════════════════════════════════════════════
+// ORCHESTRATED REVEAL — Asymmetric, non-uniform timing
+// ═══════════════════════════════════════════════════════════════
+
+export const orchestratedReveal = (index: number, total: number): Variants => {
+  // Create asymmetric timing — earlier items reveal faster, later items slower
+  const baseDelay = index * 0.08;
+  const depthFactor = 1 + (index / total) * 0.3;
+
+  return {
+    hidden: {
+      opacity: 0,
+      y: 20 + index * 4,
+      filter: `blur(${6 + index * 2}px)`,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      filter: 'blur(0px)',
+      transition: {
+        duration: DURATION.slow * depthFactor,
+        delay: baseDelay,
+        ease: EASE_LUXURY,
+      },
+    },
+  };
+};
+
+// ═══════════════════════════════════════════════════════════════
+// SIGNATURE MOMENT — Emotional climax motion
+// ═══════════════════════════════════════════════════════════════
+
+export const signatureReveal: Variants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.95,
+    filter: 'blur(20px)',
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    filter: 'blur(0px)',
+    transition: {
+      duration: DURATION.slower * 1.5,
+      ease: EASE_LUXURY,
+    },
+  },
+};
+
+// ═══════════════════════════════════════════════════════════════
+// FADE TRANSITIONS — Section-to-section atmospheric bridges
+// ═══════════════════════════════════════════════════════════════
+
+export const atmosphericBridge: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 60,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: DURATION.slower,
+      ease: EASE_SOFT,
+    },
+  },
+};
+
+// Epilogue fade for footer — world dissolving into darkness
+export const epilogueFade: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 40,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: DURATION.slower * 1.2,
+      ease: EASE_LUXURY,
+    },
+  },
+};
+
 // ── Utility Transitions ─────────────────────────────────────
 
 export const transitionPresets = {

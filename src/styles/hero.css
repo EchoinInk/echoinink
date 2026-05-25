@@ -1,4 +1,119 @@
 @layer components {
+  /* Refined gradient border button — thinner, softer, more premium */
+  .ei-gradient-border-btn-refined {
+    position: relative;
+    z-index: 1;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+
+  .ei-gradient-border-btn-refined::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    padding: 1px; /* Thinner border */
+    background: linear-gradient(
+      135deg,
+      rgba(30, 200, 255, 0.6) 0%,
+      rgba(99, 102, 241, 0.5) 35%,
+      rgba(167, 139, 250, 0.4) 70%,
+      rgba(232, 121, 249, 0.35) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.7;
+    transition: opacity 0.6s var(--ei-ease-soft);
+  }
+
+  .ei-gradient-border-btn-refined:hover::before {
+    opacity: 1;
+  }
+
+  .ei-gradient-border-btn-refined::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    border-radius: 9999px;
+    background: linear-gradient(
+      135deg,
+      rgba(30, 200, 255, 0.12),
+      rgba(99, 102, 241, 0.08),
+      rgba(167, 139, 250, 0.06),
+      rgba(232, 121, 249, 0.04)
+    );
+    filter: blur(16px);
+    opacity: 0;
+    transition: opacity 0.7s var(--ei-ease-soft);
+    z-index: -2;
+  }
+
+  .ei-gradient-border-btn-refined:hover::after {
+    opacity: 1;
+  }
+
+  /* Premium invitation button — the quietest, most considered */
+  .ei-invitation-btn {
+    position: relative;
+    z-index: 1;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+
+  .ei-invitation-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 9999px;
+    padding: 1px;
+    background: linear-gradient(
+      160deg,
+      rgba(232, 121, 249, 0.4) 0%,
+      rgba(167, 139, 250, 0.35) 25%,
+      rgba(99, 102, 241, 0.3) 60%,
+      rgba(30, 200, 255, 0.25) 100%
+    );
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.5;
+    transition: opacity 0.8s var(--ei-ease-soft);
+  }
+
+  .ei-invitation-btn:hover::before {
+    opacity: 0.9;
+  }
+
+  .ei-invitation-btn::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 9999px;
+    background: linear-gradient(
+      160deg,
+      rgba(232, 121, 249, 0.1),
+      rgba(167, 139, 250, 0.07),
+      rgba(99, 102, 241, 0.05),
+      rgba(30, 200, 255, 0.03)
+    );
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.8s var(--ei-ease-soft);
+    z-index: -2;
+  }
+
+  .ei-invitation-btn:hover::after {
+    opacity: 1;
+  }
+
+  /* Legacy button (deprecated, for backwards compatibility) */
   .ei-gradient-border-btn {
     position: relative;
     z-index: 1;

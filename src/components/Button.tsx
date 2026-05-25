@@ -5,11 +5,42 @@ interface ButtonProps {
   children: ReactNode;
   onClick?: () => void;
   to?: string;
+  variant?: 'primary' | 'quiet' | 'invitation';
 }
 
-export function Button({ children, onClick, to }: ButtonProps) {
-  const className =
-    'ei-gradient-border-btn relative inline-flex items-center justify-center px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/90 transition-all duration-700 hover:text-white hover:bg-white/5 focus:text-white focus:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white/30 focus:ring-offset-2 focus:ring-offset-[#0F1220]';
+export function Button({ children, onClick, to, variant = 'primary' }: ButtonProps) {
+  // Refined invitation-style buttons — quieter, more premium, less UI component feeling
+  const baseClasses = 'relative inline-flex items-center justify-center font-structural uppercase transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none';
+
+  const variants = {
+    // Primary — refined gradient border button
+    primary: `
+      ei-gradient-border-btn-refined
+      px-7 py-3
+      text-[10px] tracking-[0.18em]
+      text-white/85 hover:text-white/95
+      bg-white/[0.02] hover:bg-white/[0.05]
+    `,
+    // Quiet — subtle, for secondary actions
+    quiet: `
+      px-5 py-2.5
+      text-[9px] tracking-[0.22em]
+      text-white/50 hover:text-white/75
+      border border-white/[0.06] hover:border-white/[0.12]
+      rounded-full
+      bg-transparent hover:bg-white/[0.02]
+    `,
+    // Invitation — the most premium, for CTAs
+    invitation: `
+      ei-invitation-btn
+      px-8 py-4
+      text-[10px] tracking-[0.16em]
+      text-white/80 hover:text-white
+      bg-white/[0.015] hover:bg-white/[0.04]
+    `,
+  };
+
+  const className = `${baseClasses} ${variants[variant]}`;
 
   if (to) {
     return (
