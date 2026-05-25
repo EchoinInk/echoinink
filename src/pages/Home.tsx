@@ -4,8 +4,9 @@ import { Philosophy } from '@/components/Philosophy';
 import { AtmospherePause } from '@/components/AtmospherePause';
 import { Pathways } from '@/components/Pathways';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
-import { EmergingSystems } from '@/components/EmergingSystems';
+import { WorkWithStudio } from '@/components/WorkWithStudio';
 import { ClosingSection } from '@/components/ClosingSection';
+import { AtmosphericContinuity, AtmosphericBridge } from '@/components/AtmosphericContinuity';
 import Footer from '@/components/Footer';
 
 export function Home() {
@@ -18,29 +19,76 @@ export function Home() {
           content="Echo in Ink is a creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media."
         />
       </Helmet>
-      
-      {/* Hero — Cinematic entrance with EI monogram */}
+
+      {/* ═══════════════════════════════════════════════════════════════
+          HERO — Cinematic entrance with volumetric depth layers
+          ═══════════════════════════════════════════════════════════════ */}
       <Hero />
-      
-      {/* Philosophy — Editorial foundation */}
+
+      {/* Atmospheric continuity bridge */}
+      <AtmosphericBridge intensity="subtle" fadeDirection="down" />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          PHILOSOPHY — Editorial foundation
+          ═══════════════════════════════════════════════════════════════ */}
       <Philosophy />
-      
-      {/* Atmospheric pause — Cinematic breathing moment */}
+
+      {/* Ultra-subtle atmospheric layer between Philosophy and Pause */}
+      <AtmosphericContinuity
+        height="80px"
+        accentPosition="left"
+        accentColor="violet"
+      />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          ATMOSPHERE PAUSE — Cinematic breathing moment
+          ═══════════════════════════════════════════════════════════════ */}
       <AtmospherePause />
-      
-      {/* Pathways — Core offerings */}
+
+      {/* Atmospheric continuity after pause */}
+      <AtmosphericContinuity
+        height="100px"
+        accentPosition="right"
+        accentColor="indigo"
+      />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          PATHWAYS — Core offerings (Identity, Sessions, Worlds)
+          ═══════════════════════════════════════════════════════════════ */}
       <Pathways />
-      
-      {/* Featured work — Lumo case study */}
+
+      {/* Bridge to work section */}
+      <AtmosphericBridge intensity="medium" fadeDirection="both" />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          LUMO CASE STUDY — Featured work, editorial presentation
+          ═══════════════════════════════════════════════════════════════ */}
       <LumoCaseStudyTeaser />
-      
-      {/* Emerging systems — Future offerings */}
-      <EmergingSystems />
-      
-      {/* Closing — Call to action */}
+
+      {/* Atmospheric separation */}
+      <AtmosphericContinuity
+        height="60px"
+        accentPosition="center"
+        accentColor="pink"
+      />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          WORK WITH STUDIO — Asymmetric orchestrated offerings
+          ═══════════════════════════════════════════════════════════════ */}
+      <WorkWithStudio />
+
+      {/* Deep atmospheric bridge before closing */}
+      <AtmosphericBridge intensity="deep" fadeDirection="up" />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          CLOSING — Call to action
+          ═══════════════════════════════════════════════════════════════ */}
       <ClosingSection />
-      
-      {/* Footer */}
+
+      {/* ═══════════════════════════════════════════════════════════════
+          FOOTER — Atmospheric epilogue
+          World dissolving into darkness
+          ═══════════════════════════════════════════════════════════════ */}
       <Footer />
     </main>
   );
