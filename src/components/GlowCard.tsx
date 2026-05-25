@@ -25,7 +25,7 @@ export default function GlowCard({
       transition={{ duration: DURATION.fast, ease: EASE_CINEMATIC }}
       className={cn(
         "group rounded-2xl overflow-hidden transition-all duration-500",
-        "border border-white/[0.04]",
+        "bg-white/[0.015] border border-white/[0.04]",
         "hover:bg-white/[0.025] hover:border-white/[0.06]",
         horizontal ? "flex flex-row" : "flex flex-col",
         className
