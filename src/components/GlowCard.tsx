@@ -73,7 +73,7 @@ export default function GlowCard({
     md:pt-40
   "
 >
-  <div className="space-y-5">
+  <div className="space-y-4">
     <h3
       className="
         font-serif
