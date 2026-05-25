@@ -1,5 +1,65 @@
 # Changelog
 
+## 2025-05-26 (Second Refinement Pass)
+
+### 7-Phase Compression + Refinement
+
+**Phase 1 — What We Create Atmospheric Enhancement**
+- Added faint orbital traces and horizontal motion accents
+- Subtle vertical linework connecting capability rows
+- Restrained hover glow on rows — radial gradient at 0.04 opacity
+- Deeper tonal layering with bottom gradient fade
+- GPU-friendly effects only (opacity transforms, blur)
+
+**Phase 2 — Hero Grounding Refinement**
+- Added second grounding line beneath supporting positioning line
+- Line: "For founders shaping identities, systems, and digital worlds with emotional precision."
+- Whisper-level opacity (0.22), narrow width (36ch), quiet 11-12px typography
+- Stabilizes composition without reducing mystery or spaciousness
+
+**Phase 3 — Readability Tuning (+8-12%)**
+- Micro labels: `.ei-eyebrow` 0.32 → 0.36 (+12.5%)
+- Card descriptions: `.ei-card-description` 0.50 → 0.56 (+12%)
+- Supporting text: `.ei-body-small` 0.35 → 0.40 (+14%)
+- Atmosphere text: `.ei-atmosphere-text` 0.30 → 0.34 (+13%)
+- Navigation: `.ei-link` 0.45 → 0.50 (+11%), hover 0.70 → 0.75
+- Subtle links: `.ei-link-subtle` 0.35 → 0.40 (+14%), hover 0.55 → 0.60
+- Hierarchy preserved, softness maintained
+
+**Phase 4 — Card Archetype Differentiation**
+- Added `archetype` prop to GlowCard: 'sessions' | 'identity' | 'worlds'
+- **Sessions**: Geometric precision, structured glow, technical vignette (35% center transparent)
+- **Identity**: Softer gradients, fluid glow diffusion, emotional vignette (40% center transparent)
+- **Worlds**: Spatial depth, architectural atmosphere, elliptical vignette (20% center, bottom-weighted)
+- Each archetype has unique shadow depth, overlay intensity, and edge glow characteristics
+
+**Phase 5 — How We Work (Engagement Clarity)**
+- Created `HowWeWork.tsx` — minimal operational anchor
+- Four phases: Strategic Foundation → Identity System → Digital Experience → Atmospheric Launch
+- Elegant vertical flow with connecting gradient line between phases
+- Phase numbers as minimal indicators (01, 02, 03, 04)
+- No corporate timeline UI, no process graphics
+- Cinematic spacing with calm tonal depth
+
+**Phase 6 — Footer Polish (Subtraction)**
+- Simplified atmospheric layers — single radial gradient instead of multiple
+- Reduced bottom gradient complexity
+- CTA gap increased 6→10 for better visual separation
+- Middle section padding reduced: py-10/14 → py-8/10
+- Grid gaps tightened: 10/6 → 8/6
+- Bottom section padding compressed: py-8/10 → py-6/8
+- Final breath height reduced: 8/12 → 6/8
+- Bottom dissolve height reduced: 24px → 16px
+
+**Phase 7 — Mobile + Performance QA**
+- All components use responsive breakpoints (sm, md, lg)
+- Touch-friendly tap targets maintained
+- Reduced blur rendering where possible (60-80px vs 100px)
+- Consolidated gradient layers to minimize repaint
+- GPU-friendly motion (opacity, transform only)
+- No aggressive parallax or scroll jacking
+- Clean compositing with `pointer-events-none` on atmospheric layers
+
 ## 2025-05-26 (Refinement Phase)
 
 ### 7-Phase Homepage Refinement
