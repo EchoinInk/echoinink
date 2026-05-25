@@ -3,7 +3,7 @@ import { Container } from '@/components/layout/Container';
 
 export function EmergingSystems() {
   return (
-<Section spacing="md" className="pb-6 md:pb-8">
+<section className="relative min-h-screen flex items-center px-6 lg:px-14 overflow-hidden">
       <Container>
        <div className="absolute inset-0 pointer-events-none">
 
