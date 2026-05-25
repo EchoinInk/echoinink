@@ -1,29 +1,55 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
-import { Layout } from "@/components/Layout";
-import { Section } from "@/components/layout/Section";
-import { Container } from "@/components/layout/Container";
+import { 
+  fadeSoft, 
+  driftUp, 
+  staggerContainer,
+  STAGGER,
+  VIEWPORT 
+} from '@/lib/motion-cinematic';
 import { PageCTA } from '@/components/PageCTA';
 
 export function Studio() {
   return (
-    <Layout>
+    <main className="relative">
       <Helmet>
         <title>Studio — Echo in Ink</title>
+        <meta name="description" content="The philosophy and practice behind Echo in Ink — a studio translating inner worlds into coherent identity." />
       </Helmet>
-      {/* Header */}
-      <Section>
-        <Container>
-          <h1 className="font-serif text-4xl md:text-5xl tracking-tight">
-            Studio
-          </h1>
-          <p className="mt-4 text-lg text-muted">
-            The philosophy behind the world.
-          </p>
-        </Container>
-      </Section>
+      
+      {/* Atmospheric base layer */}
+      <div className="absolute inset-0 ei-glow-indigo opacity-30 pointer-events-none" />
+      
+      {/* Header — Spacious and architectural */}
+      <section className="relative ei-section-expansive overflow-hidden">
+        <div className="ei-container max-w-4xl">
+          <motion.div
+            variants={staggerContainer(STAGGER.cinematic, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.loose}
+          >
+            <motion.span 
+              variants={driftUp}
+              className="ei-eyebrow ei-text-space-lg block"
+            >
+              Studio
+            </motion.span>
+            <motion.h1 
+              variants={driftUp}
+              className="ei-section-title whitespace-pre-line"
+            >
+              {"The philosophy\nbehind the work"}
+            </motion.h1>
+            <motion.p 
+              variants={fadeSoft}
+              className="ei-section-description mt-8"
+            >
+              A space for translating inner worlds into coherent external form.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
 
       {/* Origin */}
       <Section>
@@ -235,7 +261,6 @@ export function Studio() {
       </Section>
 
       <PageCTA page="studio" />
-    </Layout>
-
+    </main>
   );
 }
