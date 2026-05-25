@@ -88,15 +88,21 @@ export function HowWeWork() {
           </motion.div>
 
           {/* ═══════════════════════════════════════════════════════════════
-              PHASE SEQUENCE — Ceremonial vertical flow
-              Faint timeline trace, restrained glow markers, editorial hierarchy
+              CEREMONIAL PHASE SEQUENCE — Ritualistic journey
+              Vertical illuminated timeline, geometric markers, sacred spacing
               ═══════════════════════════════════════════════════════════════ */}
           <div className="space-y-0 relative">
-            {/* Central timeline trace — faint, elegant, connecting all phases */}
-            <div
-              className="absolute left-6 md:left-8 top-0 bottom-0 w-px pointer-events-none hidden md:block"
+            {/* Illuminated timeline — the sacred path */}
+            <motion.div
+              className="absolute left-6 md:left-8 top-0 bottom-0 w-[2px] pointer-events-none hidden md:block"
+              initial={{ opacity: 0, scaleY: 0 }}
+              whileInView={{ opacity: 1, scaleY: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
               style={{
-                background: 'linear-gradient(to bottom, rgba(139,92,246,0.08) 0%, rgba(99,102,241,0.12) 25%, rgba(139,92,246,0.12) 50%, rgba(99,102,241,0.12) 75%, rgba(139,92,246,0.08) 100%)',
+                background: 'linear-gradient(to bottom, rgba(139,92,246,0.15) 0%, rgba(99,102,241,0.2) 20%, rgba(139,92,246,0.2) 50%, rgba(99,102,241,0.2) 80%, rgba(139,92,246,0.15) 100%)',
+                transformOrigin: 'top',
+                filter: 'blur(0.5px)',
               }}
             />
 
@@ -106,53 +112,71 @@ export function HowWeWork() {
                 variants={driftUp}
                 className="group relative"
               >
-                {/* Connection line segment — subtle phase-to-phase gradient */}
+                {/* Phase connector — atmospheric bridge to next phase */}
                 {i < phases.length - 1 && (
-                  <div
-                    className="absolute left-6 md:left-8 top-[4.5rem] md:top-[5rem] w-px h-[calc(100%-3rem)] pointer-events-none hidden md:block"
+                  <motion.div
+                    className="absolute left-6 md:left-8 top-[5rem] md:top-[5.5rem] w-[2px] h-[calc(100%-4rem)] pointer-events-none hidden md:block"
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8, delay: 0.2 + i * 0.1 }}
                     style={{
-                      background: 'linear-gradient(to bottom, rgba(139,92,246,0.10) 0%, rgba(99,102,241,0.04) 100%)',
+                      background: 'linear-gradient(to bottom, rgba(139,92,246,0.12) 0%, rgba(99,102,241,0.06) 50%, rgba(139,92,246,0.03) 100%)',
                     }}
                   />
                 )}
 
-                <div className="flex gap-6 md:gap-10 py-8 md:py-10">
-                  {/* Phase indicator — glowing marker with number */}
+                <div className="flex gap-6 md:gap-12 py-10 md:py-12">
+                  {/* Geometric phase marker — soft sacred geometry */}
                   <div className="flex-shrink-0 w-12 md:w-16 flex flex-col items-center relative">
-                    {/* Glow marker — restrained, appears on hover */}
-                    <div
-                      className="absolute w-3 h-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    {/* Outer glow ring — appears on approach */}
+                    <motion.div
+                      className="absolute w-8 h-8 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                       style={{
-                        background: 'radial-gradient(circle, rgba(139,92,246,0.5) 0%, transparent 70%)',
-                        filter: 'blur(4px)',
-                        transform: 'translateY(2px)',
+                        background: 'radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%)',
+                        filter: 'blur(8px)',
                       }}
                     />
-                    {/* Phase number — minimal, with stronger hierarchy */}
-                    <span className="font-structural text-[11px] tracking-[0.18em] uppercase text-white/28 group-hover:text-white/48 transition-colors duration-500 relative z-10">
+
+                    {/* Inner geometric marker — diamond shape */}
+                    <div
+                      className="relative w-3 h-3 opacity-60 group-hover:opacity-100 transition-all duration-500"
+                      style={{
+                        background: 'linear-gradient(135deg, rgba(139,92,246,0.8) 0%, rgba(99,102,241,0.6) 100%)',
+                        transform: 'rotate(45deg)',
+                        boxShadow: '0 0 12px rgba(139,92,246,0.3)',
+                      }}
+                    />
+
+                    {/* Phase number — ceremonial typography */}
+                    <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/32 group-hover:text-white/52 transition-colors duration-500 mt-3">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </div>
 
-                  {/* Phase content — refined spacing and hierarchy */}
-                  <div className="flex-1 space-y-3">
-                    {/* Phase label — stronger presence, ceremonial feel */}
-                    <h3 className="font-structural text-[13px] md:text-[14px] tracking-[0.06em] uppercase text-white/70 group-hover:text-white/88 transition-colors duration-500">
+                  {/* Phase content — sacred editorial spacing */}
+                  <div className="flex-1 space-y-4">
+                    {/* Phase label — ritualistic presence */}
+                    <h3 className="font-structural text-[13px] md:text-[14px] tracking-[0.08em] uppercase text-white/72 group-hover:text-white/90 transition-colors duration-500">
                       {phase.label}
                     </h3>
-                    {/* Phase description — improved readability, restrained */}
-                    <p className="font-structural text-[13px] md:text-[14px] leading-[1.7] text-white/48 group-hover:text-white/62 transition-colors duration-500 max-w-[42ch]">
+                    {/* Phase description — ceremonial clarity */}
+                    <p className="font-structural text-[13px] md:text-[14px] leading-[1.75] text-white/52 group-hover:text-white/68 transition-colors duration-500 max-w-[44ch]">
                       {phase.description}
                     </p>
                   </div>
                 </div>
 
-                {/* Soft horizontal separator between phases — whisper-level */}
+                {/* Ceremonial separator — phase boundary */}
                 {i < phases.length - 1 && (
-                  <div
-                    className="absolute left-0 right-0 bottom-0 h-px pointer-events-none opacity-50"
+                  <motion.div
+                    className="absolute left-0 right-0 bottom-0 h-px pointer-events-none"
+                    initial={{ opacity: 0, scaleX: 0.9 }}
+                    whileInView={{ opacity: 1, scaleX: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
                     style={{
-                      background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.06) 15%, rgba(99,102,241,0.05) 50%, rgba(139,92,246,0.06) 85%, transparent 100%)',
+                      background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.08) 20%, rgba(99,102,241,0.06) 50%, rgba(139,92,246,0.08) 80%, transparent 100%)',
                     }}
                   />
                 )}
