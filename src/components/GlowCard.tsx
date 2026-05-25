@@ -6,7 +6,8 @@ interface Props {
   description: string;
   image: string;
   centered?: boolean;
-  className?: string; // ← added
+  className?: string;
+  horizontal?: boolean; // ← added
 }
 
 export default function GlowCard({ title, description, image, centered, className }: Props) {
