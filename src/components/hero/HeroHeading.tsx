@@ -41,6 +41,18 @@ export function HeroHeading() {
       >
         Brand systems and atmospheric digital experiences designed with emotional precision.
       </motion.p>
+
+      {/* Second grounding line — stabilizes composition, whisper-level clarity */}
+      <motion.p
+        variants={heroReveal}
+        className="font-structural text-[11px] md:text-[12px] leading-[1.6] max-w-[36ch] mt-5"
+        style={{ 
+          color: 'rgba(255,255,255,0.22)',
+          letterSpacing: '0.02em',
+        }}
+      >
+        For founders shaping identities, systems, and digital worlds with emotional precision.
+      </motion.p>
     </div>
   );
 }
