@@ -45,7 +45,7 @@ export function LumoCaseStudyTeaser() {
               <div className="flex flex-col justify-center">
                 <motion.span
                   variants={driftUp}
-                  className="ei-eyebrow ei-text-space-md block"
+                  className="ei-eyebrow ei-text-space-lg block"
                 >
                   Featured Case
                 </motion.span>
@@ -60,10 +60,10 @@ export function LumoCaseStudyTeaser() {
 
                 <motion.p
                   variants={driftUp}
-                  className="ei-section-description mt-3 max-w-[42ch]"
+                  className="font-editorial text-2xl md:text-3xl font-light leading-snug text-[#E8EAF6]/90 mt-3 whitespace-pre-line"
                 >
-                  A world built for overwhelmed humans.
-                </motion.h3>
+                  {"A world built for \noverwhelmed humans."}
+                </motion.p>
 
                 <motion.p
                   variants={fadeSoft}
