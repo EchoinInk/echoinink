@@ -11,6 +11,7 @@ import WorldsPage from '@/pages/WorldsPage';
 import { WorksPage } from '@/pages/WorksPage';
 import { LumoPage } from '@/pages/LumoPage';
 import { Studio } from '@/pages/Studio';
+import { Contact } from '@/pages/Contact';
 
 function AppRoutes() {
   const location = useLocation();
@@ -25,7 +26,7 @@ function AppRoutes() {
         <Route path="/works" element={<WorksPage />} />
         <Route path="/works/lumo" element={<LumoPage />} />
         <Route path="/studio" element={<Studio />} />
-
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </AnimatePresence>
   );

@@ -1,0 +1,171 @@
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Luxury Form System
+   Intimate, editorial, calm form styling
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer components {
+  /* ── Form Labels ─────────────────────────────────────────── */
+  .ei-form-label {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.30);
+    display: block;
+    transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* ── Form Inputs ──────────────────────────────────────────── */
+  .ei-form-input,
+  .ei-form-textarea,
+  .ei-form-select {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+    
+    /* Minimal, tonal styling */
+    width: 100%;
+    padding: 1rem 0;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0;
+    
+    /* Transition for interaction */
+    transition: 
+      border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      padding-left 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    
+    /* Remove default browser styling */
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+  }
+
+  /* Placeholder styling - quiet, atmospheric */
+  .ei-form-input::placeholder,
+  .ei-form-textarea::placeholder {
+    color: rgba(255, 255, 255, 0.18);
+    font-style: italic;
+    transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Hover state - subtle luminance shift */
+  .ei-form-input:hover,
+  .ei-form-textarea:hover,
+  .ei-form-select:hover {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  /* Focus state - softly acknowledged */
+  .ei-form-input:focus,
+  .ei-form-textarea:focus,
+  .ei-form-select:focus {
+    border-color: rgba(99, 102, 241, 0.25);
+    color: rgba(255, 255, 255, 0.90);
+    padding-left: 0.5rem;
+  }
+
+  /* Focus placeholder fade */
+  .ei-form-input:focus::placeholder,
+  .ei-form-textarea:focus::placeholder {
+    color: rgba(255, 255, 255, 0.10);
+  }
+
+  /* Focus label enhancement */
+  .ei-form-input:focus + .ei-form-label,
+  .ei-form-textarea:focus + .ei-form-label,
+  .ei-form-select:focus + .ei-form-label,
+  /* For when label precedes input */
+  :has(> .ei-form-input:focus) .ei-form-label,
+  :has(> .ei-form-textarea:focus) .ei-form-label,
+  :has(> .ei-form-select:focus) .ei-form-label {
+    color: rgba(255, 255, 255, 0.45);
+  }
+
+  /* ── Select Specific ─────────────────────────────────────── */
+  .ei-form-select {
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='rgba(255,255,255,0.20)' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    padding-right: 1.5rem;
+  }
+
+  .ei-form-select option {
+    background: #0a0c18;
+    color: rgba(255, 255, 255, 0.70);
+    padding: 0.5rem;
+  }
+
+  /* ── Textarea Specific ───────────────────────────────────── */
+  .ei-form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.8;
+  }
+
+  /* ── Submit Button ───────────────────────────────────────── */
+  .ei-form-submit {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    
+    /* Refined button styling */
+    padding: 1.25rem 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 0;
+    cursor: pointer;
+    
+    /* Calm, confident transitions */
+    transition: 
+      background 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+      color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .ei-form-submit:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.95);
+  }
+
+  .ei-form-submit:active:not(:disabled) {
+    transform: scale(0.985);
+  }
+
+  .ei-form-submit:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* ── Validation States ───────────────────────────────────── */
+  .ei-form-input:invalid:not(:placeholder-shown),
+  .ei-form-textarea:invalid:not(:placeholder-shown) {
+    border-color: rgba(239, 68, 68, 0.20);
+  }
+
+  .ei-form-input:valid:not(:placeholder-shown),
+  .ei-form-textarea:valid:not(:placeholder-shown) {
+    border-color: rgba(99, 102, 241, 0.15);
+  }
+
+  /* ── Autofill Styling ────────────────────────────────────── */
+  .ei-form-input:-webkit-autofill,
+  .ei-form-input:-webkit-autofill:hover,
+  .ei-form-input:-webkit-autofill:focus {
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.75);
+    -webkit-box-shadow: 0 0 0px 1000px #0a0c18 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+}
