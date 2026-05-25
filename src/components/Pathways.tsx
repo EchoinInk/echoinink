@@ -75,7 +75,6 @@ export function Pathways() {
                     description={pathway.description}
                     image={pathway.image}
                     className="h-full min-h-[420px]"
-                    imageWrapperClass="relative bg-[#0F1220] before:absolute before:inset-0 before:bg-white/[0.015] before:mix-blend-lighten before:pointer-events-none"
                   />
                 </Link>
               </motion.div>

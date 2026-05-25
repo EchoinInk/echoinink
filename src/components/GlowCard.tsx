@@ -84,7 +84,6 @@ export default function GlowCard({
           {/* VERTICAL CONTENT */}
           <div className="flex flex-col flex-1 p-8">
             {/* title removed because it's now inside the image */}
-
             <p className={cn("ei-card-description mt-3", centered && "text-center mx-auto max-w-[40ch]")}>
               {description}
             </p>
