@@ -160,7 +160,7 @@ export function WhatWeCreate() {
             <span className="ei-eyebrow ei-text-space-md block">
               Capabilities
             </span>
-            <h2 className="ei-section-title">
+            <h2 className="ei-section">
               What we create
             </h2>
           </motion.div>
