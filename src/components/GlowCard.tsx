@@ -59,7 +59,6 @@ export default function GlowCard({
       />
 
       {/* CONTENT */}
-     {/* CONTENT */}
 <div
   className="
     relative z-10
