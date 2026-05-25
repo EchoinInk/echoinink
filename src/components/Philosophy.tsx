@@ -20,17 +20,15 @@ export function Philosophy() {
   ];
 
   return (
-    <Section spacing="lg" className="ei-section-standard overflow-hidden relative">
-      {/* Cinematic atmosphere — soft violet haze */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'radial-gradient(ellipse 60% 50% at 30% 40%, rgba(99,102,241,0.04) 0%, transparent 60%)',
-            filter: 'blur(80px)',
-          }}
-        />
-      </div>
+    <Section spacing="md" className="ei-section-standard overflow-hidden relative">
+      {/* Soft atmospheric continuation */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 50% 40% at 30% 40%, rgba(99,102,241,0.025) 0%, transparent 60%)',
+          filter: 'blur(60px)',
+        }}
+      />
 
       <Container>
         <motion.div

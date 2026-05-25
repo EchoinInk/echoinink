@@ -135,9 +135,9 @@ export function AtmosphericBridge({
   className = '',
 }: AtmosphericBridgeProps) {
   const opacityMap = {
-    subtle: { start: 0.15, end: 0.08 },
-    medium: { start: 0.25, end: 0.12 },
-    deep: { start: 0.4, end: 0.2 },
+    subtle: { start: 0.08, end: 0.03 },
+    medium: { start: 0.12, end: 0.05 },
+    deep: { start: 0.2, end: 0.08 },
   };
 
   const { start, end } = opacityMap[intensity];
@@ -159,10 +159,10 @@ export function AtmosphericBridge({
 
   return (
     <motion.div
-      className={`w-full h-24 md:h-32 pointer-events-none ${className}`}
+      className={`w-full h-12 md:h-16 pointer-events-none ${className}`}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: '-50px' }}
+      viewport={{ once: true, margin: '-30px' }}
       transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
       style={{
         background: getGradient(),
