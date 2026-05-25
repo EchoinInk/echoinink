@@ -17,7 +17,7 @@ export default function GlowCard({ title, description, image, centered, classNam
         "group flex flex-col rounded-3xl overflow-hidden border border-white/5 bg-white/[0.03] backdrop-blur-xl",
         className
       )}
-      style={{ height: "450px" }}
+      style={{ }}
     >
       {/* IMAGE */}
       <div className="relative w-full h-48 overflow-hidden">
