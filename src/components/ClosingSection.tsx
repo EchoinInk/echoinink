@@ -50,7 +50,7 @@ export function ClosingSection() {
           variants={driftUp}
           className="ei-section-description mt-8 mx-auto"
         >
-          If the resonance is there, we will build the language your work has been waiting for.
+          If the resonance is there, we'll build the language your work has been waiting to speak.
         </motion.p>
 
         {/* CTA */}
