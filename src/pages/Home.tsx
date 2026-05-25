@@ -5,7 +5,7 @@ import { Pathways } from '@/components/Pathways';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/ClosingSection';
-
+import
 export function Home() {
   return (
     <main id="main-content" className="relative">
