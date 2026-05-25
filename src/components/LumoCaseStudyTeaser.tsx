@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import lumocloudform from '@/assets/lumocasestudy.png';
+import lumocloudform from '@/assets/ei-lumofeatured-bg.png';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { 
