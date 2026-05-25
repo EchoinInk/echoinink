@@ -63,39 +63,39 @@ export default function Footer() {
 
         {/* ═══════════════════════════════════════════════════════════════
             MIDDLE SECTION — Navigation and metadata
-            Restrained, elegant, functional
+            Enhanced visibility while maintaining restraint
             ═══════════════════════════════════════════════════════════════ */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={VIEWPORT.normal}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.1 }}
-          className="py-8 md:py-10"
+          className="py-10 md:py-12"
         >
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 items-start">
             {/* LEFT — Brand identity */}
             <div className="md:col-span-4">
-              <span className="font-structural text-[10px] tracking-[0.28em] uppercase text-white/32 block mb-2">
-                Echo In Ink
+              <span className="font-structural text-[11px] tracking-[0.24em] uppercase text-white/45 block mb-3">
+                Echo in Ink
               </span>
-              <p className="font-structural text-[11px] text-white/40 leading-[1.5] max-w-[200px]">
+              <p className="font-structural text-[12px] text-white/55 leading-[1.6] max-w-[220px]">
                 Translating inner worlds into identities that hold their shape.
               </p>
             </div>
 
             {/* CENTER — Primary navigation */}
             <nav className="md:col-span-4 md:text-center">
-              <div className="flex flex-wrap gap-x-5 gap-y-1 md:justify-center">
-                <Link to="/works" className="font-structural text-[10px] tracking-[0.14em] uppercase text-white/38 hover:text-white/65 transition-colors duration-400">
+              <div className="flex flex-wrap gap-x-6 gap-y-2 md:justify-center">
+                <Link to="/works" className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/48 hover:text-white/78 transition-colors duration-400">
                   Works
                 </Link>
-                <Link to="/identity" className="font-structural text-[10px] tracking-[0.14em] uppercase text-white/38 hover:text-white/65 transition-colors duration-400">
+                <Link to="/identity" className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/48 hover:text-white/78 transition-colors duration-400">
                   Identity
                 </Link>
-                <Link to="/sessions" className="font-structural text-[10px] tracking-[0.14em] uppercase text-white/38 hover:text-white/65 transition-colors duration-400">
+                <Link to="/sessions" className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/48 hover:text-white/78 transition-colors duration-400">
                   Sessions
                 </Link>
-                <Link to="/worlds" className="font-structural text-[10px] tracking-[0.14em] uppercase text-white/38 hover:text-white/65 transition-colors duration-400">
+                <Link to="/worlds" className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/48 hover:text-white/78 transition-colors duration-400">
                   Worlds
                 </Link>
               </div>
@@ -103,13 +103,13 @@ export default function Footer() {
 
             {/* RIGHT — Contact and location */}
             <div className="md:col-span-4 md:text-right">
-              <a 
-                href="mailto:hello@echoink.co" 
-                className="font-structural text-[10px] tracking-[0.14em] uppercase text-white/38 hover:text-white/65 transition-colors duration-400 block mb-2"
+              <a
+                href="mailto:hello@echoink.co"
+                className="font-structural text-[11px] tracking-[0.12em] uppercase text-white/50 hover:text-white/82 transition-colors duration-400 block mb-2"
               >
                 hello@echoink.co
               </a>
-              <span className="font-structural text-[10px] tracking-[0.12em] uppercase text-white/28 block">
+              <span className="font-structural text-[10px] tracking-[0.1em] uppercase text-white/38 block">
                 Aotearoa New Zealand
               </span>
             </div>
@@ -118,7 +118,7 @@ export default function Footer() {
 
         {/* ═══════════════════════════════════════════════════════════════
             BOTTOM SECTION — Copyright and quiet close
-            The final fade to black — COMPRESSED
+            The final fade to black — subtle but visible
             ═══════════════════════════════════════════════════════════════ */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -129,12 +129,12 @@ export default function Footer() {
         >
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             {/* Copyright */}
-            <span className="font-structural text-[9px] tracking-[0.12em] uppercase text-white/22">
+            <span className="font-structural text-[10px] tracking-[0.1em] uppercase text-white/32">
               © 2025 Echo in Ink
             </span>
 
             {/* Quiet brand mark */}
-            <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/18">
+            <span className="font-structural text-[10px] tracking-[0.16em] uppercase text-white/28">
               Est. MMXXV
             </span>
           </div>

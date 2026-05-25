@@ -78,42 +78,75 @@ export function HowWeWork() {
             </h2>
           </motion.div>
 
-          {/* Phase sequence — elegant vertical flow */}
-          <div className="space-y-0">
+          {/* ═══════════════════════════════════════════════════════════════
+              PHASE SEQUENCE — Ceremonial vertical flow
+              Faint timeline trace, restrained glow markers, editorial hierarchy
+              ═══════════════════════════════════════════════════════════════ */}
+          <div className="space-y-0 relative">
+            {/* Central timeline trace — faint, elegant, connecting all phases */}
+            <div
+              className="absolute left-6 md:left-8 top-0 bottom-0 w-px pointer-events-none hidden md:block"
+              style={{
+                background: 'linear-gradient(to bottom, rgba(139,92,246,0.08) 0%, rgba(99,102,241,0.12) 25%, rgba(139,92,246,0.12) 50%, rgba(99,102,241,0.12) 75%, rgba(139,92,246,0.08) 100%)',
+              }}
+            />
+
             {phases.map((phase, i) => (
               <motion.div
                 key={phase.label}
                 variants={driftUp}
                 className="group relative"
               >
-                {/* Connection line — subtle, connecting the phases */}
+                {/* Connection line segment — subtle phase-to-phase gradient */}
                 {i < phases.length - 1 && (
                   <div
-                    className="absolute left-6 md:left-8 top-[3rem] md:top-[3.5rem] w-px h-[calc(100%-2rem)] pointer-events-none"
+                    className="absolute left-6 md:left-8 top-[4.5rem] md:top-[5rem] w-px h-[calc(100%-3rem)] pointer-events-none hidden md:block"
                     style={{
-                      background: 'linear-gradient(to bottom, rgba(139,92,246,0.15) 0%, rgba(99,102,241,0.05) 100%)',
+                      background: 'linear-gradient(to bottom, rgba(139,92,246,0.10) 0%, rgba(99,102,241,0.04) 100%)',
                     }}
                   />
                 )}
 
-                <div className="flex gap-6 md:gap-8 py-6 md:py-8">
-                  {/* Phase number — minimal indicator */}
-                  <div className="flex-shrink-0 w-12 md:w-16 flex justify-center">
-                    <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/20 group-hover:text-white/35 transition-colors duration-500">
+                <div className="flex gap-6 md:gap-10 py-8 md:py-10">
+                  {/* Phase indicator — glowing marker with number */}
+                  <div className="flex-shrink-0 w-12 md:w-16 flex flex-col items-center relative">
+                    {/* Glow marker — restrained, appears on hover */}
+                    <div
+                      className="absolute w-3 h-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                      style={{
+                        background: 'radial-gradient(circle, rgba(139,92,246,0.5) 0%, transparent 70%)',
+                        filter: 'blur(4px)',
+                        transform: 'translateY(2px)',
+                      }}
+                    />
+                    {/* Phase number — minimal, with stronger hierarchy */}
+                    <span className="font-structural text-[11px] tracking-[0.18em] uppercase text-white/28 group-hover:text-white/48 transition-colors duration-500 relative z-10">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </div>
 
-                  {/* Phase content */}
-                  <div className="flex-1 space-y-2">
-                    <h3 className="font-structural text-[13px] md:text-[14px] tracking-[0.08em] uppercase text-white/65 group-hover:text-white/80 transition-colors duration-500">
+                  {/* Phase content — refined spacing and hierarchy */}
+                  <div className="flex-1 space-y-3">
+                    {/* Phase label — stronger presence, ceremonial feel */}
+                    <h3 className="font-structural text-[13px] md:text-[14px] tracking-[0.06em] uppercase text-white/70 group-hover:text-white/88 transition-colors duration-500">
                       {phase.label}
                     </h3>
-                    <p className="font-structural text-[13px] md:text-[14px] leading-[1.75] text-white/42 group-hover:text-white/55 transition-colors duration-500 max-w-[40ch]">
+                    {/* Phase description — improved readability, restrained */}
+                    <p className="font-structural text-[13px] md:text-[14px] leading-[1.7] text-white/48 group-hover:text-white/62 transition-colors duration-500 max-w-[42ch]">
                       {phase.description}
                     </p>
                   </div>
                 </div>
+
+                {/* Soft horizontal separator between phases — whisper-level */}
+                {i < phases.length - 1 && (
+                  <div
+                    className="absolute left-0 right-0 bottom-0 h-px pointer-events-none opacity-50"
+                    style={{
+                      background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.06) 15%, rgba(99,102,241,0.05) 50%, rgba(139,92,246,0.06) 85%, transparent 100%)',
+                    }}
+                  />
+                )}
               </motion.div>
             ))}
           </div>

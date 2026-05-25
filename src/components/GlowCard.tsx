@@ -176,7 +176,7 @@ export default function GlowCard({
                 {title}
               </h3>
 
-              <p className="max-w-[32ch] text-[14px] pt-6 leading-[1.8] text-white/68 whitespace-pre-line">
+              <p className="max-w-[32ch] text-[14px] pt-6 leading-[1.8] text-white/72 whitespace-pre-line">
                 {description}
               </p>
 

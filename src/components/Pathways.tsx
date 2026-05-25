@@ -74,13 +74,13 @@ export function Pathways() {
         >
           {/* Section header - elegant and restrained */}
           <motion.div variants={driftUp} className="text-center mb-8 md:mb-10">
-            <span 
-              className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/20 mb-4"
+            <span
+              className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/32 mb-4"
             >
               What We Design
             </span>
-            <h2 
-              className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-light tracking-tight text-white/85 leading-tight"
+            <h2
+              className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-light tracking-tight text-white/88 leading-tight"
               style={{ letterSpacing: '-0.02em' }}
             >
               We build worlds with

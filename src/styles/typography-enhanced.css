@@ -37,7 +37,7 @@
     letter-spacing: 0.38em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.36);
+    color: rgba(255, 255, 255, 0.42);
   }
 
   /* Section Title — main editorial heading */
@@ -57,7 +57,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.52);
+    color: rgba(255, 255, 255, 0.58);
     max-width: 52ch;
   }
 
@@ -70,7 +70,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.95;
-    color: rgba(255, 255, 255, 0.54);
+    color: rgba(255, 255, 255, 0.60);
   }
 
   /* Body Standard — general content */
@@ -123,7 +123,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.56);
+    color: rgba(255, 255, 255, 0.62);
   }
 
   /* Navigation */
