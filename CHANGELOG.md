@@ -1,5 +1,58 @@
 # Changelog
 
+## 2025-05-26 (Refinement Phase)
+
+### 7-Phase Homepage Refinement
+
+**Phase 1 — Hero Clarity**
+- Added supporting positioning line beneath main heading
+- Line clarifies offering: "Brand systems and atmospheric digital experiences designed with emotional precision."
+- Preserves poetic tone while improving clarity
+
+**Phase 2 — CTA Hierarchy**
+- Implemented three-tier button system: Primary / Secondary / Tertiary
+- Primary: Subtle filled glow, brighter border, elegant hover lift, stronger shadow
+- Secondary: Ghost button, clean outline, calmer interaction
+- Tertiary: Text link only with subtle underline reveal on hover
+- Motion: restrained 500ms duration with luxury easing
+
+**Phase 3 — Readability Refinement**
+- Increased opacity ~10-15% across typography system while preserving mood:
+  - `.ei-eyebrow`: 0.24 → 0.32
+  - `.ei-section-title`: 0.88 → 0.92
+  - `.ei-section-description`: 0.44 → 0.52
+  - `.ei-body-large`: 0.45 → 0.54
+  - `.ei-body`: 0.48 → 0.56
+  - `.ei-card-description`: 0.42 → 0.50
+  - `.ei-link`: 0.35 → 0.45 (hover 0.60 → 0.70)
+  - `.ei-link-subtle`: 0.25 → 0.35 (hover 0.45 → 0.55)
+
+**Phase 4 — Conversion Anchor**
+- Created `WhatWeCreate.tsx` component with grounded functional layout
+- Editorial list format: Brand Identity, Digital Experience, Narrative Systems, Creative Direction
+- Minimal structure with subtle horizontal divider
+- No corporate service-grid styling
+
+**Phase 5 — Tempo Change Section**
+- Created `CinematicStatement.tsx` — full-width breathing moment
+- Tonal contrast through brighter atmospheric layers
+- Statement: "We do not decorate brands. We reveal what they are becoming."
+- Immersive 70-80vh height, emotionally resonant pacing
+
+**Phase 6 — Card Differentiation**
+- Added `featured` and `glowPosition` props to GlowCard
+- Identity card: featured (larger, stronger shadow, enhanced glow)
+- Sessions: glowPosition 'top', Worlds: glowPosition 'bottom'
+- Varied hover lift: featured -3px, standard -2px
+- Differentiated glow intensities: 0.70 featured, 0.50/0.55 standard
+
+**Phase 7 — Footer Rebuild**
+- Complete cinematic conclusion with atmospheric fade into black
+- Final statement: "Let the next world begin quietly."
+- Subtle contact CTA: Primary "Begin a conversation" + Tertiary "View selected works"
+- Restrained navigation row with improved readability
+- Premium multi-layer atmospheric dissolves
+
 ## 2025-05-26
 
 ### Restored
