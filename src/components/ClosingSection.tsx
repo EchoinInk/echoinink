@@ -24,7 +24,7 @@ export function ClosingSection() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
-          className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/38 block mb-4"
+          className="font-structural text-[10px] tracking-[0.28em] uppercase text-white/38 block mb-4"
         >
           Begin
         </motion.span>
@@ -36,7 +36,7 @@ export function ClosingSection() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.05 }}
-          className="font-editorial text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem] text-white/75 leading-[1.3] mb-4"
+          className="font-editorial text-[2.1rem] md:text-[1.8rem] lg:text-[2.2rem] text-white/75 leading-[1.3] mb-4"
           style={{ letterSpacing: '-0.01em' }}
         >
           Ready to translate your world?
