@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { config } from 'process';
 
 export function ClosingSection() {
   return (
@@ -42,15 +43,18 @@ export function ClosingSection() {
         </motion.p>
 
         {/* CTA */}
-        <motion.button
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, ease: 'easeOut', delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mt-12 px-10 py-5 rounded-full border border-violet-400/40 bg-white/5 hover:bg-white/10 transition font-structural tracking-[0.18em] uppercase text-[11px]"
-        >
-          Work With The Studio
-        </motion.button>
+        <motion.div
+  initial={{ opacity: 0, y: 16 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={VIEWPORT.normal}
+  transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
+  className="mt-12"
+>
+  <Button to={config.primary.to}>
+    {config.primary.label}
+  </Button>
+</motion.div>
+
       </div>
     </section>
   );
