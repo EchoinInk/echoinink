@@ -59,7 +59,7 @@ export default function GlowCard({
         </>
       ) : (
         <>
-          {/* VERTICAL IMAGE */}
+          {/* VERTICAL IMAGE WITH TITLE INSIDE */}
 <div
   className={cn(
     "relative w-full h-64 md:h-72 overflow-hidden bg-[#0F1220]",
@@ -72,13 +72,19 @@ export default function GlowCard({
     alt={title}
     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
   />
+
+  {/* TITLE OVERLAY */}
+  <div className="absolute bottom-0 left-0 w-full p-6">
+    <h3 className="ei-card-title text-white drop-shadow-lg">
+      {title}
+    </h3>
+  </div>
 </div>
 
           {/* VERTICAL CONTENT */}
           <div className="flex flex-col flex-1 p-8">
-            <h3 className={cn("ei-card-title", centered && "text-center")}>
-              {title}
-            </h3>
+            {/* title removed because it's now inside the image */}
+
             <p className={cn("ei-card-description mt-3", centered && "text-center mx-auto max-w-[40ch]")}>
               {description}
             </p>
