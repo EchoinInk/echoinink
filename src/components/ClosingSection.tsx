@@ -4,35 +4,27 @@ import {
   driftUp,
   blurEmergence,
   dissolveReveal,
-  cinematicContainer,
   EASE_LUXURY,
   DURATION,
-  VIEWPORT,
 } from '@/lib/motion-cinematic';
 
 export function ClosingSection() {
   return (
-    <section className="relative overflow-hidden py-20 md:py-28">
-      {/* Soft atmospheric framing */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 50% 40% at 50% 50%, rgba(168,85,247,0.04) 0%, transparent 60%)',
-          filter: 'blur(60px)',
-        }}
-      />
-
+    <section className="relative py-14 md:py-20">
       <motion.div
         className="relative z-10 max-w-3xl mx-auto px-6 text-center"
-        variants={cinematicContainer(0.2)}
         initial="hidden"
         whileInView="visible"
-        viewport={VIEWPORT.loose}
+        viewport={{ once: true, margin: '-50px' }}
       >
         {/* Eyebrow — quiet invitation */}
         <motion.span
           variants={dissolveReveal}
-          className="font-structural text-[10px] tracking-[0.28em] uppercase text-white/30 block mb-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
+          className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/25 block mb-4"
         >
           Begin
         </motion.span>
@@ -40,7 +32,11 @@ export function ClosingSection() {
         {/* Heading — the question */}
         <motion.h2
           variants={blurEmergence}
-          className="font-editorial text-[1.6rem] md:text-[2rem] lg:text-[2.4rem] text-white/80 leading-[1.3] mb-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.05 }}
+          className="font-editorial text-[1.4rem] md:text-[1.8rem] lg:text-[2.2rem] text-white/75 leading-[1.3] mb-4"
           style={{ letterSpacing: '-0.01em' }}
         >
           Ready to translate your world?
@@ -49,13 +45,22 @@ export function ClosingSection() {
         {/* Description — emotional resonance */}
         <motion.p
           variants={driftUp}
-          className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.7] max-w-[44ch] mx-auto mb-10 whitespace-pre-line"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.1 }}
+          className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.6] max-w-[40ch] mx-auto mb-8"
         >
-          {"If the resonance is there, we'll build the language \nyour work has been waiting to speak."}
+          If the resonance is there, we'll build the language your work has been waiting to speak.
         </motion.p>
 
         {/* CTA — refined invitation button */}
-        <motion.div variants={driftUp}>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.15 }}
+        >
           <Button to="/contact" variant="invitation">
             Start a Conversation
           </Button>

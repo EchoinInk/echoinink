@@ -14,7 +14,7 @@ import {
 
 export function EmergingSystems() {
   return (
-    <Section spacing="md" className="ei-section-standard relative overflow-hidden">
+    <Section spacing="sm" className="relative overflow-hidden">
       {/* Soft atmospheric continuation */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -33,7 +33,7 @@ export function EmergingSystems() {
           className="max-w-6xl mx-auto"
         >
           {/* Centered heading */}
-          <motion.div variants={driftUp} className="text-center mb-12 md:mb-16">
+          <motion.div variants={driftUp} className="text-center mb-8 md:mb-10">
             <span className="ei-eyebrow ei-text-space-md block">
               Worlds in Formation
             </span>
@@ -43,7 +43,7 @@ export function EmergingSystems() {
           </motion.div>
 
           {/* Horizontal cards */}
-          <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch justify-center">
+          <div className="flex flex-col md:flex-row gap-5 md:gap-6 items-stretch justify-center">
             <motion.div variants={driftUp} className="flex-1">
               <Link to="/systems" className="block h-full">
                 <GlowCard
