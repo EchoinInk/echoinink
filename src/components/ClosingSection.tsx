@@ -24,7 +24,7 @@ export function ClosingSection() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
-          className="font-structural text-[10px] tracking-[0.28em] uppercase text-white/38 block mb-4"
+          className="font-structural text-[10px] tracking-[0.28em] uppercase text-white/30 block mb-4"
         >
           Begin
         </motion.span>
