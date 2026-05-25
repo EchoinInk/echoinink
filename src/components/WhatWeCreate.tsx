@@ -38,71 +38,112 @@ export function WhatWeCreate() {
   return (
     <Section spacing="sm" className="relative overflow-hidden">
       {/* ═══════════════════════════════════════════════════════════════
-          ATMOSPHERIC LAYERS — Enhanced cinematic depth
-          Whisper-level effects, GPU-friendly, opacity/transform based
+          ATMOSPHERIC LAYERS — Deep dimensional immersion
+          Orbital systems, ambient traces, cinematic layering
+          Whisper-level, GPU-friendly, authored atmosphere
           ═══════════════════════════════════════════════════════════════ */}
 
-      {/* Soft violet glow core — deepened slightly */}
+      {/* Primary violet glow core — central luminescence */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 35% at 50% 25%, rgba(139,92,246,0.04) 0%, transparent 60%)',
-          filter: 'blur(70px)',
+          background: 'radial-gradient(ellipse 65% 40% at 50% 30%, rgba(139,92,246,0.05) 0%, transparent 55%)',
+          filter: 'blur(80px)',
         }}
       />
 
-      {/* Faint orbital trace — elliptical arc with subtle asymmetry */}
+      {/* Primary orbital — elliptical arc with gentle drift */}
       <motion.div
         className="absolute inset-0 pointer-events-none"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
         style={{
-          background: 'radial-gradient(ellipse 140% 25% at 45% 50%, rgba(99,102,241,0.035) 0%, transparent 50%)',
-          filter: 'blur(50px)',
-        }}
-      />
-
-      {/* Secondary orbital — subtle counter-arc for dimensional depth */}
-      <motion.div
-        className="absolute inset-0 pointer-events-none"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-        style={{
-          background: 'radial-gradient(ellipse 100% 20% at 60% 40%, rgba(168,85,247,0.025) 0%, transparent 45%)',
+          background: 'radial-gradient(ellipse 150% 30% at 40% 45%, rgba(99,102,241,0.04) 0%, transparent 50%)',
           filter: 'blur(60px)',
         }}
       />
 
-      {/* Soft horizontal motion line — minimal, restrained */}
+      {/* Secondary orbital — counter-arc creating dimensional tension */}
       <motion.div
-        className="absolute left-0 right-0 top-[38%] h-px pointer-events-none"
-        initial={{ opacity: 0, scaleX: 0.6 }}
-        whileInView={{ opacity: 0.1, scaleX: 1 }}
+        className="absolute inset-0 pointer-events-none"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 2.2, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
         style={{
-          background: 'linear-gradient(90deg, transparent 5%, rgba(139,92,246,0.4) 25%, rgba(99,102,241,0.25) 50%, rgba(139,92,246,0.4) 75%, transparent 95%)',
+          background: 'radial-gradient(ellipse 120% 25% at 65% 35%, rgba(168,85,247,0.035) 0%, transparent 45%)',
+          filter: 'blur(70px)',
         }}
       />
 
-      {/* Deeper tonal layering — bottom fade for spatial depth */}
-      <div
-        className="absolute inset-x-0 bottom-0 h-[50%] pointer-events-none"
+      {/* Tertiary orbital — subtle depth layer */}
+      <motion.div
+        className="absolute inset-0 pointer-events-none"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
         style={{
-          background: 'linear-gradient(to top, rgba(99,102,241,0.025) 0%, rgba(139,92,246,0.01) 40%, transparent 100%)',
-          filter: 'blur(40px)',
+          background: 'radial-gradient(ellipse 80% 35% at 55% 60%, rgba(99,102,241,0.025) 0%, rgba(139,92,246,0.02) 50%, transparent 70%)',
+          filter: 'blur(90px)',
         }}
       />
 
-      {/* Subtle top vignette — framing the section */}
-      <div
-        className="absolute inset-x-0 top-0 h-[30%] pointer-events-none"
+      {/* Ambient line traces — horizontal, subtle glow paths */}
+      <motion.div
+        className="absolute left-[10%] right-[10%] top-[28%] h-px pointer-events-none"
+        initial={{ opacity: 0, scaleX: 0 }}
+        whileInView={{ opacity: 0.08, scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.6, ease: [0.22, 1, 0.36, 1], delay: 0.4 }}
         style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% 0%, rgba(3,5,12,0.08) 0%, transparent 60%)',
+          background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.5) 15%, rgba(99,102,241,0.3) 50%, rgba(139,92,246,0.5) 85%, transparent 100%)',
+          filter: 'blur(1px)',
+        }}
+      />
+
+      <motion.div
+        className="absolute left-[15%] right-[15%] top-[72%] h-px pointer-events-none"
+        initial={{ opacity: 0, scaleX: 0 }}
+        whileInView={{ opacity: 0.06, scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1], delay: 0.6 }}
+        style={{
+          background: 'linear-gradient(90deg, transparent 0%, rgba(168,85,247,0.4) 20%, rgba(139,92,246,0.25) 50%, rgba(168,85,247,0.4) 80%, transparent 100%)',
+          filter: 'blur(1px)',
+        }}
+      />
+
+      {/* Deeper tonal layering — spatial depth foundation */}
+      <div
+        className="absolute inset-x-0 bottom-0 h-[60%] pointer-events-none"
+        style={{
+          background: 'linear-gradient(to top, rgba(99,102,241,0.035) 0%, rgba(139,92,246,0.015) 30%, transparent 70%)',
+          filter: 'blur(50px)',
+        }}
+      />
+
+      {/* Top atmospheric framing — vignette for containment */}
+      <div
+        className="absolute inset-x-0 top-0 h-[35%] pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 85% 70% at 50% 0%, rgba(3,5,12,0.12) 0%, transparent 65%)',
+        }}
+      />
+
+      {/* Side atmospheric framing — subtle depth edges */}
+      <div
+        className="absolute inset-y-0 left-0 w-[20%] pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 100% 80% at 0% 50%, rgba(3,5,12,0.06) 0%, transparent 70%)',
+        }}
+      />
+      <div
+        className="absolute inset-y-0 right-0 w-[20%] pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 100% 80% at 100% 50%, rgba(3,5,12,0.06) 0%, transparent 70%)',
         }}
       />
 
