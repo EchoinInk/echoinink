@@ -58,12 +58,12 @@ export function LumoCaseStudyTeaser() {
                   LUMO
                 </motion.h2>
 
-                <motion.p
+                <motion.h3
                   variants={driftUp}
                   className="ei-section-description mt-3 max-w-[42ch]"
                 >
                   A world built for overwhelmed humans.
-                </motion.p>
+                </motion.h3>
 
                 <motion.p
                   variants={fadeSoft}
