@@ -24,9 +24,6 @@ export function Home() {
           ═══════════════════════════════════════════════════════════════ */}
       <Hero />
 
-      {/* Atmospheric continuity bridge */}
-      <AtmosphericBridge intensity="subtle" fadeDirection="down" />
-
       {/* ═══════════════════════════════════════════════════════════════
           PHILOSOPHY — Editorial foundation
           ═══════════════════════════════════════════════════════════════ */}
@@ -37,24 +34,18 @@ export function Home() {
           ═══════════════════════════════════════════════════════════════ */}
       <Pathways />
 
-      {/* Bridge to work section */}
-      <AtmosphericBridge intensity="medium" fadeDirection="both" />
-
       {/* ═══════════════════════════════════════════════════════════════
           LUMO CASE STUDY — Featured work, editorial presentation
           ═══════════════════════════════════════════════════════════════ */}
       <LumoCaseStudyTeaser />
-
-      {/* Bridge to emerging systems */}
-      <AtmosphericBridge intensity="subtle" fadeDirection="down" />
 
       {/* ═══════════════════════════════════════════════════════════════
           EMERGING SYSTEMS — Active archives and future worlds
           ═══════════════════════════════════════════════════════════════ */}
       <EmergingSystems />
 
-      {/* Bridge to closing */}
-      <AtmosphericBridge intensity="deep" fadeDirection="up" />
+      {/* Soft bridge to closing */}
+      <AtmosphericBridge intensity="subtle" fadeDirection="up" />
 
       {/* ═══════════════════════════════════════════════════════════════
           CLOSING — Call to action
