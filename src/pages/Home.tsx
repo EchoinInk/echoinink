@@ -1,12 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { Hero } from '@/components/hero/Hero';
 import { Philosophy } from '@/components/Philosophy';
-import { AtmospherePause } from '@/components/AtmospherePause';
 import { Pathways } from '@/components/Pathways';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
-import { WorkWithStudio } from '@/components/WorkWithStudio';
+import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/ClosingSection';
-import { AtmosphericContinuity, AtmosphericBridge } from '@/components/AtmosphericContinuity';
+import { AtmosphericBridge } from '@/components/AtmosphericContinuity';
 import Footer from '@/components/Footer';
 
 export function Home() {
@@ -33,25 +32,6 @@ export function Home() {
           ═══════════════════════════════════════════════════════════════ */}
       <Philosophy />
 
-      {/* Ultra-subtle atmospheric layer between Philosophy and Pause */}
-      <AtmosphericContinuity
-        height="80px"
-        accentPosition="left"
-        accentColor="violet"
-      />
-
-      {/* ═══════════════════════════════════════════════════════════════
-          ATMOSPHERE PAUSE — Cinematic breathing moment
-          ═══════════════════════════════════════════════════════════════ */}
-      <AtmospherePause />
-
-      {/* Atmospheric continuity after pause */}
-      <AtmosphericContinuity
-        height="100px"
-        accentPosition="right"
-        accentColor="indigo"
-      />
-
       {/* ═══════════════════════════════════════════════════════════════
           PATHWAYS — Core offerings (Identity, Sessions, Worlds)
           ═══════════════════════════════════════════════════════════════ */}
@@ -65,19 +45,15 @@ export function Home() {
           ═══════════════════════════════════════════════════════════════ */}
       <LumoCaseStudyTeaser />
 
-      {/* Atmospheric separation */}
-      <AtmosphericContinuity
-        height="60px"
-        accentPosition="center"
-        accentColor="pink"
-      />
+      {/* Bridge to emerging systems */}
+      <AtmosphericBridge intensity="subtle" fadeDirection="down" />
 
       {/* ═══════════════════════════════════════════════════════════════
-          WORK WITH STUDIO — Asymmetric orchestrated offerings
+          EMERGING SYSTEMS — Active archives and future worlds
           ═══════════════════════════════════════════════════════════════ */}
-      <WorkWithStudio />
+      <EmergingSystems />
 
-      {/* Deep atmospheric bridge before closing */}
+      {/* Bridge to closing */}
       <AtmosphericBridge intensity="deep" fadeDirection="up" />
 
       {/* ═══════════════════════════════════════════════════════════════
