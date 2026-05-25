@@ -5,6 +5,7 @@ import { WhatWeCreate } from '@/components/WhatWeCreate';
 import { Pathways } from '@/components/Pathways';
 import { HowWeWork } from '@/components/HowWeWork';
 import { CinematicStatement } from '@/components/CinematicStatement';
+import { TrustSignal } from '@/components/TrustSignal';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/ClosingSection';
@@ -53,6 +54,12 @@ export function Home() {
           Full-width atmospheric statement with tonal contrast
           ═══════════════════════════════════════════════════════════════ */}
       <CinematicStatement />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          TRUST SIGNAL — Restrained trust mechanism
+          Understated project types, authored not marketed
+          ═══════════════════════════════════════════════════════════════ */}
+      <TrustSignal />
 
       {/* ═══════════════════════════════════════════════════════════════
           LUMO CASE STUDY — Featured work, editorial presentation
