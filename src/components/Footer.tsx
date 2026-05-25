@@ -32,8 +32,8 @@ export default function Footer() {
               Echo In Ink
             </span>
 
-            <p className="ei-body-large max-w-sm">
-              Translating inner worlds into coherent identity.
+            <p className="ei-body-large max-w-sm whitespace-pre-line">
+              {"Translating inner worlds into identities \nthat can hold their shape in the world.
             </p>
           </motion.div>
 
