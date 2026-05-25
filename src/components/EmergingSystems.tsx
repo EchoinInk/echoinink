@@ -3,7 +3,7 @@ import { Container } from '@/components/layout/Container';
 
 export function EmergingSystems() {
   return (
-    <Section className="relative py-24 md:py-36">
+<Section spacing="md" className="pb-6 md:pb-8">
       <Container>
         <div className="max-w-3xl mx-auto text-center">
           <h3 className="font-editorial text-[1.8rem] md:text-[2.4rem] text-white/85 mb-10">
