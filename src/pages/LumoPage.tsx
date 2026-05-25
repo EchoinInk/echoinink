@@ -1,35 +1,71 @@
 import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { 
+  fadeSoft, 
+  driftUp, 
+  staggerContainer,
+  STAGGER,
+  VIEWPORT 
+} from '@/lib/motion-cinematic';
 import { SignatureCaseStudy } from '@/components/SignatureCaseStudy';
-import { Section } from '@/components/layout/Section';
-import { Container } from '@/components/layout/Container';
-import { Button } from '@/components/Button';
 import { PageCTA } from '@/components/PageCTA';
 
 export function LumoPage() {
   return (
-    <div className="relative">
+    <main className="relative">
       <Helmet>
         <title>Lumo — Echo in Ink</title>
         <meta name="description" content="A signature case study exploring atmospheric identity, narrative design, and cinematic digital experience." />
       </Helmet>
+
+      {/* Atmospheric base */}
+      <div className="absolute inset-0 ei-glow-violet opacity-25 pointer-events-none" />
+
+      {/* Full case study */}
       <SignatureCaseStudy />
 
-      {/* Process Breakdown */}
-      <Section>
-        <Container>
-          <h2 className="section-heading">The Process</h2>
-          <div className="prose prose-invert max-w-none space-y-2">
-            <p>Emotional discovery</p>
-            <p>Narrative mapping</p>
-            <p>System architecture</p>
-            <p>Visual atmosphere</p>
-            <p>Interaction language</p>
-            <p>Integration & refinement</p>
-          </div>
-        </Container>
-      </Section>
+      {/* Process Breakdown — Minimal */}
+      <section className="relative ei-section-standard overflow-hidden">
+        <div className="ei-container max-w-3xl">
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+          >
+            <motion.span 
+              variants={driftUp}
+              className="ei-eyebrow ei-text-space-md block"
+            >
+              The Process
+            </motion.span>
+            
+            <motion.div 
+              variants={staggerContainer(STAGGER.tight, 0.1)}
+              className="mt-8 space-y-4"
+            >
+              {[
+                'Emotional discovery',
+                'Narrative mapping',
+                'System architecture',
+                'Visual atmosphere',
+                'Interaction language',
+                'Integration & refinement',
+              ].map((step, i) => (
+                <motion.p 
+                  key={i}
+                  variants={fadeSoft}
+                  className="ei-body-large"
+                >
+                  {step}
+                </motion.p>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
 
       <PageCTA page="worlds" />
-    </div>
+    </main>
   );
 }

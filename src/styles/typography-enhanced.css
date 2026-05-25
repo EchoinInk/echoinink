@@ -171,6 +171,39 @@
   }
 }
 
+/* ── Link Utilities ────────────────────────────────────────── */
+@layer utilities {
+  /* Primary link — secondary navigation */
+  .ei-link {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+    transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .ei-link:hover {
+    color: rgba(255, 255, 255, 0.60);
+  }
+  
+  /* Subtle link — tertiary navigation */
+  .ei-link-subtle {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.25);
+    transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .ei-link-subtle:hover {
+    color: rgba(255, 255, 255, 0.45);
+  }
+}
+
 /* ── Spacing Utilities for Typography ─────────────────────── */
 @layer utilities {
   .ei-text-space-xs { margin-bottom: 0.5rem; }
