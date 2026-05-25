@@ -21,6 +21,7 @@ export function Pathways() {
       description:
         'Clarity before expression. Focused creative direction for moments of misalignment, evolution, or translation.',
       image: sessionsImage,
+      glow: 'bg-gradient-to-br from-blue-600/[0.12] via-indigo-500/[0.08] to-transparent',
     },
     {
       to: '/identity',
@@ -28,6 +29,7 @@ export function Pathways() {
       description:
         'Where inner worlds become coherent external form. Emotional, narrative, and visual translation for evolving brands.',
       image: identityImage,
+      glow: 'bg-gradient-to-br from-fuchsia-600/[0.1] via-violet-500/[0.06] to-transparent',
     },
     {
       to: '/worlds',
@@ -35,6 +37,7 @@ export function Pathways() {
       description:
         'Identity extended into living systems. Immersive digital ecosystems designed for coherence and resonance.',
       image: worldsImage,
+      glow: 'bg-gradient-to-br from-cyan-600/[0.1] via-blue-500/[0.06] to-transparent',
     },
   ];
 
@@ -92,13 +95,12 @@ export function Pathways() {
             </h2>
           </motion.div>
 
-          {/* Pathways grid - cinematic showcase */}
-          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
-            {pathways.map((pathway, i) => (
+          {/* Pathways grid - full-bleed cinematic panels */}
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
+            {pathways.map((pathway) => (
               <motion.div
                 key={pathway.to}
                 variants={driftUp}
-                custom={i}
                 className="h-full"
               >
                 <Link to={pathway.to} className="block h-full">
@@ -106,7 +108,7 @@ export function Pathways() {
                     title={pathway.title}
                     description={pathway.description}
                     image={pathway.image}
-                    className="h-full min-h-[480px] md:min-h-[520px]"
+                    glow={pathway.glow}
                   />
                 </Link>
               </motion.div>
