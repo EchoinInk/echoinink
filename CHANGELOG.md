@@ -12,3 +12,14 @@
 - Enhanced Hero depth separation with volumetric haze layers.
 - LumoCaseStudyTeaser editorial polish — magazine-style composition.
 - Footer atmospheric epilogue styling with visual dissolution.
+
+### Corrected
+- Full vertical rhythm and section spacing pass across homepage.
+- Reduced Section spacing scale: lg now 28/28 (was 40/40), xl now 32/32 (was 48/48).
+- Compressed all section internal spacing from lg to md for tighter pacing.
+- Fixed Pathways double spacing (removed custom py-24 md:py-32 on top of Section xl).
+- Reduced AtmosphericBridge from 96-128px to 48-64px with softer opacity (0.08→0.03).
+- Eliminated atmospheric banding by simplifying gradient overlays.
+- Reduced ClosingSection from py-32 md:py-40 to py-20 md:py-28.
+- Streamlined transitions: removed excessive bridges between sections.
+- Footer rebuilt as compact quiet epilogue, not a hero section.
