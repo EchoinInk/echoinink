@@ -32,7 +32,7 @@ export default function GlowCard({
       <img
         src={image}
         alt={title}
-        className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-[1.03]"
+        className="absolute inset-0 h-full w-full object-contain opacity-90 transition-transform duration-700 group-hover:scale-[1.03]"
       />
 
       {/* DARK CINEMATIC OVERLAY */}
