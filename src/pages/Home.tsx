@@ -7,6 +7,7 @@ import { EmergingSystems } from '@/components/EmergingSystems';
 import { PageCTA } from '@/components/PageCTA';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
+import { ClosingSection } from '@/components/ClosingSection';
 
 export function Home() {
   return (
@@ -25,7 +26,7 @@ export function Home() {
       <Pathways />
       <LumoCaseStudyTeaser />
       <EmergingSystems />
-
+<Closing
       {/* Breathing bridge — atmospheric transition between worlds */}
       <div
         aria-hidden="true"
