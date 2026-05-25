@@ -48,9 +48,9 @@ export function ClosingSection() {
         {/* Description */}
         <motion.p
           variants={driftUp}
-          className="ei-section-description mt-8 mx-auto"
+          className="ei-section-description mt-8 mx-auto whitespace-pre-line"
         >
-          If the resonance is there, we'll build the language your work has been waiting to speak.
+          {"If the resonance is there, we'll build the language your work has \nbeen waiting to speak."}
         </motion.p>
 
         {/* CTA */}
