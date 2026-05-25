@@ -60,7 +60,7 @@ export function LumoCaseStudyTeaser() {
 
                 <motion.p
                   variants={driftUp}
-                  className="font-editorial text-2xl md:text-3xl font-light leading-snug text-[#E8EAF6]/90 mt-3 whitespace-pre-line"
+                  className="font-editorial text-2xl md:text-3xl font-light leading-snug text-[#E8EAF6]/90 mt-6 whitespace-pre-line"
                 >
                   {"A world built for \noverwhelmed humans."}
                 </motion.p>
@@ -74,7 +74,7 @@ export function LumoCaseStudyTeaser() {
                 <motion.div variants={driftUp}>
                   <Link
                     to="/work/lumo"
-                    className="ei-cta-text mt-8 inline-block text-violet-300/80 hover:text-violet-300 transition-colors duration-500"
+                    className="ei-cta-text mt-12 inline-block text-violet-300/80 hover:text-violet-300 transition-colors duration-500"
                   >
                     View Case Study →
                   </Link>
