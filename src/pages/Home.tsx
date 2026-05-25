@@ -5,7 +5,6 @@ import { Pathways } from '@/components/Pathways';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/ClosingSection';
-import { AtmosphericBridge } from '@/components/AtmosphericContinuity';
 import Footer from '@/components/Footer';
 
 export function Home() {
@@ -44,11 +43,9 @@ export function Home() {
           ═══════════════════════════════════════════════════════════════ */}
       <EmergingSystems />
 
-      {/* Soft bridge to closing */}
-      <AtmosphericBridge intensity="subtle" fadeDirection="up" />
-
       {/* ═══════════════════════════════════════════════════════════════
           CLOSING — Call to action
+          Seamless transition, no bridge needed
           ═══════════════════════════════════════════════════════════════ */}
       <ClosingSection />
 

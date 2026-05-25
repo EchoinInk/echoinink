@@ -20,13 +20,13 @@ export function Philosophy() {
   ];
 
   return (
-    <Section spacing="md" className="ei-section-standard overflow-hidden relative">
+    <Section spacing="sm" className="ei-section-standard overflow-hidden relative">
       {/* Soft atmospheric continuation */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 50% 40% at 30% 40%, rgba(99,102,241,0.025) 0%, transparent 60%)',
-          filter: 'blur(60px)',
+          background: 'radial-gradient(ellipse 50% 30% at 30% 40%, rgba(99,102,241,0.02) 0%, transparent 60%)',
+          filter: 'blur(50px)',
         }}
       />
 

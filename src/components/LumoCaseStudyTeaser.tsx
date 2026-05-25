@@ -18,13 +18,13 @@ import {
 
 export function LumoCaseStudyTeaser() {
   return (
-    <Section spacing="md" className="ei-section-intimate overflow-hidden relative">
+    <Section spacing="sm" className="ei-section-intimate overflow-hidden relative">
       {/* Subtle atmospheric depth */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 40% 30% at 20% 30%, rgba(168,85,247,0.03) 0%, transparent 60%)',
-          filter: 'blur(60px)',
+          background: 'radial-gradient(ellipse 40% 25% at 20% 30%, rgba(168,85,247,0.025) 0%, transparent 60%)',
+          filter: 'blur(50px)',
         }}
       />
 
@@ -67,25 +67,25 @@ export function LumoCaseStudyTeaser() {
                 }}
               />
 
-              {/* Content — asymmetric positioning */}
-              <div className="absolute inset-0 p-8 md:p-12 lg:p-16 flex flex-col justify-between">
+              {/* Content — repositioned upward for better balance */}
+              <div className="absolute inset-0 p-6 md:p-10 lg:p-12 flex flex-col">
                 {/* Top — Editorial label */}
                 <motion.div
                   variants={orchestratedReveal(0, 4)}
-                  className="flex items-center gap-4"
+                  className="flex items-center gap-3 mb-auto"
                 >
                   <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-violet-300/50">
                     Featured Case
                   </span>
-                  <div className="h-px w-8 bg-violet-300/20" />
+                  <div className="h-px w-6 bg-violet-300/20" />
                 </motion.div>
 
-                {/* Bottom — Main content */}
-                <div className="max-w-lg">
+                {/* Main content — positioned higher */}
+                <div className="max-w-lg mt-8 md:mt-12">
                   {/* Project title — large, editorial */}
                   <motion.h2
                     variants={orchestratedReveal(1, 4)}
-                    className="font-editorial text-4xl md:text-5xl lg:text-6xl text-white/95 mb-4"
+                    className="font-editorial text-3xl md:text-4xl lg:text-5xl text-white/95 mb-3"
                     style={{ letterSpacing: '-0.02em' }}
                   >
                     LUMO
@@ -94,7 +94,7 @@ export function LumoCaseStudyTeaser() {
                   {/* Tagline — human, emotional */}
                   <motion.p
                     variants={orchestratedReveal(2, 4)}
-                    className="font-editorial text-xl md:text-2xl text-white/70 mb-6 leading-[1.35]"
+                    className="font-editorial text-lg md:text-xl text-white/70 mb-4 leading-[1.35]"
                     style={{ letterSpacing: '-0.01em' }}
                   >
                     A world built for overwhelmed humans.
@@ -103,7 +103,7 @@ export function LumoCaseStudyTeaser() {
                   {/* Description — restrained, atmospheric */}
                   <motion.p
                     variants={orchestratedReveal(3, 4)}
-                    className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.75] max-w-[44ch] mb-8"
+                    className="font-structural text-[12px] md:text-[13px] text-white/40 leading-[1.7] max-w-[42ch] mb-6"
                   >
                     An emotionally intelligent app shaped by an identity system built to calm cognitive noise through atmosphere, rhythm, and restraint.
                   </motion.p>
@@ -112,7 +112,7 @@ export function LumoCaseStudyTeaser() {
                   <motion.div variants={blurEmergence}>
                     <Link
                       to="/work/lumo"
-                      className="group inline-flex items-center gap-3 font-structural text-[10px] tracking-[0.16em] uppercase text-violet-300/70 hover:text-violet-300 transition-colors duration-500"
+                      className="group inline-flex items-center gap-2 font-structural text-[9px] tracking-[0.16em] uppercase text-violet-300/60 hover:text-violet-300 transition-colors duration-500"
                     >
                       <span>View Case Study</span>
                       <span className="group-hover:translate-x-1 transition-transform duration-300">

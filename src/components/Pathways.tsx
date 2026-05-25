@@ -42,7 +42,7 @@ export function Pathways() {
   ];
 
   return (
-    <Section spacing="md" className="relative overflow-hidden">
+    <Section spacing="sm" className="relative overflow-hidden">
       {/* Unified atmospheric layer - continuous with adjacent sections */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -64,9 +64,9 @@ export function Pathways() {
           className="max-w-6xl mx-auto"
         >
           {/* Section header - elegant and restrained */}
-          <motion.div variants={driftUp} className="text-center mb-12 md:mb-16">
+          <motion.div variants={driftUp} className="text-center mb-8 md:mb-10">
             <span 
-              className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/20 mb-6"
+              className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/20 mb-4"
             >
               What We Design
             </span>
@@ -81,7 +81,7 @@ export function Pathways() {
           </motion.div>
 
           {/* Pathways grid - full-bleed cinematic panels */}
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-6">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
             {pathways.map((pathway) => (
               <motion.div
                 key={pathway.to}
