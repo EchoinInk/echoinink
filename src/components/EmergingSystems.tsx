@@ -42,7 +42,7 @@ export function EmergingSystems() {
               <Link to="/systems" className="block h-full">
                 <GlowCard
                   title="Echo Systems"
-                  description={`Intentional frameworks for \nbuilding identities, stories, and \ndigital worlds with cinematic clarity and creative \nprecision.`}
+                  description={`Intentional frameworks for \nbuilding identities, stories, and \ndigital worlds with cinematic \nclarity and creative precision.`}
                   image={systemsImage}
                   horizontal
                   className="h-full min-h-[200px]"
@@ -53,7 +53,7 @@ export function EmergingSystems() {
               <Link to="/vault" className="block h-full">
                 <GlowCard
                   title="Echo Vault"
-                  description={`A curated archive of textures, \nreferences, and emotional \nenvironments for creators shaping \natmosphere with intention.`}
+                  description={`A curated archive of textures, \nreferences, and emotional \nenvironments for \ncreators shaping atmosphere with intention.`}
                   image={vaultImage}
                   horizontal
                   className="h-full min-h-[200px]"
