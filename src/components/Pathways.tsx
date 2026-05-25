@@ -39,42 +39,85 @@ export function Pathways() {
   ];
 
   return (
-    <Section spacing="lg" className="ei-section-standard relative overflow-hidden">
-      {/* Atmospheric depth - reduced for subtlety */}
-      <div className="absolute inset-0 ei-glow-violet opacity-35" />
+    <Section spacing="xl" className="relative overflow-hidden py-32 md:py-40">
+      {/* Deep atmospheric base */}
+      <div className="absolute inset-0 bg-[#05070a]" />
+      
+      {/* Central radial glow - massive soft illumination */}
+      <div 
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 60% 40% at 50% 30%, rgba(79,70,229,0.08) 0%, rgba(99,102,241,0.04) 30%, transparent 65%)',
+          filter: 'blur(80px)',
+        }}
+      />
+      
+      {/* Secondary blue bloom - upper area */}
+      <div 
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 50% 30% at 50% 20%, rgba(59,130,246,0.06) 0%, transparent 70%)',
+          filter: 'blur(100px)',
+        }}
+      />
+      
+      {/* Subtle purple accent - lower right */}
+      <div 
+        className="absolute bottom-1/4 right-1/4 w-[600px] h-[300px] pointer-events-none opacity-60"
+        style={{
+          background: 'radial-gradient(ellipse 40% 50% at center, rgba(139,92,246,0.05) 0%, transparent 70%)',
+          filter: 'blur(80px)',
+        }}
+      />
 
-      <Container>
+      {/* Top edge fade from previous section */}
+      <div 
+        className="absolute top-0 left-0 right-0 h-32 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to bottom, rgba(5,7,10,0.8), transparent)',
+        }}
+      />
+
+      <Container className="relative z-10">
         <motion.div
-          variants={staggerContainer(STAGGER.normal, 0)}
+          variants={staggerContainer(STAGGER.loose, 0)}
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.normal}
+          className="max-w-6xl mx-auto"
         >
-          {/* Section heading */}
-          <motion.div variants={driftUp} className="max-w-2xl mb-16 md:mb-20">
-            <span className="ei-eyebrow ei-text-space-md block">What We Design</span>
-            <h2 className="ei-section-title whitespace-pre-line">
-              {"We build worlds with\nintention and precision."}
+          {/* Section header - elegant and restrained */}
+          <motion.div variants={driftUp} className="text-center mb-20 md:mb-28">
+            <span 
+              className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/20 mb-6"
+            >
+              What We Design
+            </span>
+            <h2 
+              className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-light tracking-tight text-white/85 leading-tight"
+              style={{ letterSpacing: '-0.02em' }}
+            >
+              We build worlds with
+              <br />
+              intention and precision.
             </h2>
-            <p className="ei-section-description mt-6">
-              Explore our core areas of creative direction.
-            </p>
           </motion.div>
 
-          {/* Pathways grid */}
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          {/* Pathways grid - cinematic showcase */}
+          <div className="grid md:grid-cols-3 gap-5 md:gap-6">
             {pathways.map((pathway, i) => (
               <motion.div
                 key={pathway.to}
                 variants={driftUp}
                 custom={i}
+                className="h-full"
               >
                 <Link to={pathway.to} className="block h-full">
                   <GlowCard
                     title={pathway.title}
                     description={pathway.description}
                     image={pathway.image}
-                    className="h-full min-h-[420px]"
+                    className="h-full min-h-[480px] md:min-h-[520px]"
                   />
                 </Link>
               </motion.div>
@@ -82,6 +125,14 @@ export function Pathways() {
           </div>
         </motion.div>
       </Container>
+
+      {/* Bottom transition gradient */}
+      <div 
+        className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
+        style={{
+          background: 'linear-gradient(to top, rgba(5,7,10,0.9), transparent)',
+        }}
+      />
     </Section>
   );
 }
