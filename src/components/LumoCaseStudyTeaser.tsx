@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import lumoinkdrift from '@/assets/ei-lumoinkdrift.png';
+import lumoinkdrift from '@/assets/ei-lumofeatured-bg.png';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { 
@@ -58,7 +58,7 @@ export function LumoCaseStudyTeaser() {
                   LUMO
                 </motion.h2>
 
-                <motion.h3
+                <motion.p
                   variants={driftUp}
                   className="ei-section-description mt-3 max-w-[42ch]"
                 >
