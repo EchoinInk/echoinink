@@ -51,7 +51,7 @@ export default function Footer() {
 
           {/* Services column */}
           <motion.div variants={driftUp}>
-            <h3 className="ei-eyebrow ei-text-space-md block">
+            <h3 className="ei-eyebrow ei-text-space-sm block">
               Explore
             </h3>
             <ul className="space-y-3">
@@ -63,7 +63,7 @@ export default function Footer() {
 
           {/* Connect column */}
           <motion.div variants={driftUp}>
-            <h3 className="ei-eyebrow ei-text-space-md block">
+            <h3 className="ei-eyebrow ei-text-space-sm block">
               Connect
             </h3>
             <ul className="space-y-3">
