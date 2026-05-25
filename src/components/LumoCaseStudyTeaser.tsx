@@ -60,7 +60,7 @@ export function LumoCaseStudyTeaser() {
 
                 <motion.p
                   variants={driftUp}
-                  className="font-editorial text-[2.1em] md:text-3xl font-light leading-snug text-[#E8EAF6]/90 mt-6 whitespace-pre-line"
+                  className="ei-section-title ei-text-space-lg mt-6 whitespace-pre-line"
                 >
                   {"A world built for \noverwhelmed humans."}
                 </motion.p>
