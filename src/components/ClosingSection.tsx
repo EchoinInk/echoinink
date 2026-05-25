@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { config } from 'process';
+import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
+import { Button } from '@/components/Button';
 
 export function ClosingSection() {
   return (
@@ -44,16 +45,14 @@ export function ClosingSection() {
 
         {/* CTA */}
         <motion.div
-  initial={{ opacity: 0, y: 16 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={VIEWPORT.normal}
-  transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
-  className="mt-12"
->
-  <Button to={config.primary.to}>
-    {config.primary.label}
-  </Button>
-</motion.div>
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={VIEWPORT.normal}
+          transition={{ duration: DURATION.slow, ease: EASE, delay: STAGGER.tight }}
+          className="mt-12"
+        >
+          <Button to="/contact">Work With the Studio</Button>
+        </motion.div>
 
       </div>
     </section>
