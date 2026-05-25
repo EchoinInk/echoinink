@@ -59,6 +59,7 @@ export default function GlowCard({
       />
 
       {/* CONTENT */}
+     {/* CONTENT */}
 <div
   className="
     relative z-10
@@ -73,7 +74,7 @@ export default function GlowCard({
     md:pt-40
   "
 >
-  <div className="space-y-4">
+  <div className="space-y-5">
     <h3
       className="
         font-serif
@@ -116,6 +117,7 @@ export default function GlowCard({
       Explore →
     </span>
   </div>
+
       </div>
     </motion.div>
   );
