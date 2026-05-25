@@ -1,58 +1,80 @@
 import type { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 interface ButtonProps {
   children: ReactNode;
   onClick?: () => void;
   to?: string;
-  variant?: 'primary' | 'quiet' | 'invitation';
+  variant?: 'primary' | 'secondary' | 'tertiary';
 }
 
 export function Button({ children, onClick, to, variant = 'primary' }: ButtonProps) {
-  // Refined invitation-style buttons — quieter, more premium, less UI component feeling
-  const baseClasses = 'relative inline-flex items-center justify-center font-structural uppercase transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none';
+  // CTA Hierarchy System — clear visual weight differentiation
+  // Primary: Confident, filled glow, strongest presence
+  // Secondary: Ghost button, calmer presence
+  // Tertiary: Text link, minimal presence
+  
+  const baseClasses = 'relative inline-flex items-center justify-center font-structural uppercase transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none';
 
   const variants = {
-    // Primary — refined gradient border button
+    // PRIMARY — Strongest visual weight
+    // Subtle filled glow, brighter border, elegant hover lift
     primary: `
-      ei-gradient-border-btn-refined
-      px-7 py-3
-      text-[10px] tracking-[0.18em]
-      text-white/85 hover:text-white/95
-      bg-white/[0.02] hover:bg-white/[0.05]
-    `,
-    // Quiet — subtle, for secondary actions
-    quiet: `
-      px-5 py-2.5
-      text-[9px] tracking-[0.22em]
-      text-white/50 hover:text-white/75
-      border border-white/[0.06] hover:border-white/[0.12]
-      rounded-full
-      bg-transparent hover:bg-white/[0.02]
-    `,
-    // Invitation — the most premium, for CTAs
-    invitation: `
-      ei-invitation-btn
+      group
       px-8 py-4
       text-[10px] tracking-[0.16em]
-      text-white/80 hover:text-white
-      bg-white/[0.015] hover:bg-white/[0.04]
+      text-white/90 hover:text-white
+      border border-white/[0.15] hover:border-white/[0.25]
+      rounded-full
+      bg-gradient-to-b from-white/[0.08] to-white/[0.02] hover:from-white/[0.12] hover:to-white/[0.04]
+      shadow-[0_0_40px_-10px_rgba(99,102,241,0.15)] hover:shadow-[0_0_50px_-8px_rgba(99,102,241,0.25)]
+      hover:-translate-y-[1px]
+    `,
+    // SECONDARY — Ghost button, softer presence
+    // Clean outline, calmer interaction
+    secondary: `
+      group
+      px-6 py-3
+      text-[9px] tracking-[0.2em]
+      text-white/60 hover:text-white/85
+      border border-white/[0.08] hover:border-white/[0.15]
+      rounded-full
+      bg-transparent hover:bg-white/[0.03]
+      hover:-translate-y-[1px]
+    `,
+    // TERTIARY — Text link only, minimal presence
+    // Subtle underline reveal on hover
+    tertiary: `
+      group
+      text-[10px] tracking-[0.14em]
+      text-white/50 hover:text-white/75
+      bg-transparent
     `,
   };
 
   const className = `${baseClasses} ${variants[variant]}`;
 
+  const content = (
+    <>
+      <span className="relative z-10">{children}</span>
+      {variant === 'tertiary' && (
+        <span className="absolute bottom-0 left-0 w-0 h-px bg-white/30 group-hover:w-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+      )}
+    </>
+  );
+
   if (to) {
     return (
       <Link to={to} className={className}>
-        <span className="relative z-10">{children}</span>
+        {content}
       </Link>
     );
   }
 
   return (
     <button onClick={onClick} className={className}>
-      <span className="relative z-10">{children}</span>
+      {content}
     </button>
   );
 }

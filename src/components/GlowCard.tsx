@@ -55,10 +55,10 @@ export default function GlowCard({
               <h3 className="font-serif text-2xl md:text-[1.75rem] font-light tracking-tight text-white/95 leading-tight">
                 {title}
               </h3>
-              <p className="text-sm leading-relaxed text-white/55 mt-6 whitespace-pre-line">
+              <p className="text-sm leading-relaxed text-white/65 mt-6 whitespace-pre-line">
                 {description}
               </p>
-              <span className="block mt-5 text-[11px] uppercase tracking-[0.22em] text-white/45 group-hover:text-white/75 transition-colors duration-500">
+              <span className="block mt-5 text-[11px] uppercase tracking-[0.22em] text-white/50 group-hover:text-white/80 transition-colors duration-500">
                 Explore →
               </span>
             </div>
@@ -98,11 +98,11 @@ export default function GlowCard({
                 {title}
               </h3>
 
-              <p className="max-w-[32ch] text-[14px] pt-6 leading-[1.8] text-white/60 whitespace-pre-line">
+              <p className="max-w-[32ch] text-[14px] pt-6 leading-[1.8] text-white/68 whitespace-pre-line">
                 {description}
               </p>
 
-              <span className="block pt-8 text-[11px] uppercase tracking-[0.28em] text-white/50 transition-colors duration-500 group-hover:text-white/80">
+              <span className="block pt-8 text-[11px] uppercase tracking-[0.28em] text-white/55 transition-colors duration-500 group-hover:text-white/85">
                 Explore →
               </span>
             </div>
