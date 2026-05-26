@@ -33,16 +33,17 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
       active:translate-y-0
       transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
     `,
-    // SECONDARY — Ghost button, softer presence
-    // Clean outline, calmer interaction
+    // SECONDARY — Ghost button, confident presence
+    // Slightly brighter border, stronger text, richer hover feedback
     secondary: `
       group
       px-6 py-3
       text-[9px] tracking-[0.2em]
-      text-white/60 hover:text-white/85
-      border border-white/[0.08] hover:border-white/[0.15]
+      text-white/65 hover:text-white/88
+      border border-white/[0.10] hover:border-white/[0.20]
       rounded-full
-      bg-transparent hover:bg-white/[0.03]
+      bg-transparent hover:bg-white/[0.04]
+      hover:shadow-[0_0_40px_-12px_rgba(99,102,241,0.10)]
       hover:-translate-y-[1px]
     `,
     // TERTIARY — Text link only, minimal presence
