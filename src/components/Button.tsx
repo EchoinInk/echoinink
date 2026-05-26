@@ -18,35 +18,37 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
   const baseClasses = 'ei-focus-glow relative inline-flex items-center justify-center font-structural uppercase transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none touch-manipulation min-h-[48px] md:min-h-0';
 
   const variants = {
-    // PRIMARY — Strongest visual weight
-    // Confident border presence, clearer hover response, subtle glow increase
+    // PRIMARY — Strongest visual weight with cinematic gradient edge
+    // Layered border: gradient outer + neutral inner + dark glass interior
     primary: `
+      ei-btn-primary-cinematic
       group
       px-8 py-4
       text-[10px] tracking-[0.16em] font-medium
       text-white/[0.95] hover:text-white focus-visible:text-white
-      border border-white/[0.22] hover:border-white/[0.35] focus-visible:border-white/[0.45]
+      border border-white/[0.08] hover:border-white/[0.12] focus-visible:border-white/[0.15]
       rounded-full
-      bg-gradient-to-b from-white/[0.10] to-white/[0.03] hover:from-white/[0.14] hover:to-white/[0.05]
-      shadow-[0_0_45px_-12px_rgba(99,102,241,0.18)] hover:shadow-[0_0_60px_-10px_rgba(99,102,241,0.30)]
+      bg-gradient-to-b from-white/[0.08] to-white/[0.02] hover:from-white/[0.10] hover:to-white/[0.03]
       hover:-translate-y-[2px]
       active:translate-y-0 active:scale-[0.98]
-      active:bg-white/[0.16] active:border-white/[0.45]
+      active:bg-white/[0.12]
       transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
     `,
-    // SECONDARY — Ghost button, confident presence
-    // Slightly brighter border, stronger text, richer hover feedback
+    // SECONDARY — Quieter edge treatment, more subdued gradient
+    // Lighter glow, more restrained presence
     secondary: `
+      ei-btn-secondary-cinematic
       group
       px-6 py-3
       text-[9px] tracking-[0.2em]
       text-white/70 hover:text-white/90 focus-visible:text-white/90
-      border border-white/[0.12] hover:border-white/[0.22] focus-visible:border-white/[0.32]
+      border border-white/[0.06] hover:border-white/[0.10] focus-visible:border-white/[0.14]
       rounded-full
-      bg-transparent hover:bg-white/[0.04]
-      hover:shadow-[0_0_40px_-12px_rgba(99,102,241,0.10)]
+      bg-gradient-to-b from-white/[0.04] to-transparent hover:from-white/[0.06]
       hover:-translate-y-[1px]
-      active:scale-[0.98] active:bg-white/[0.06]
+      active:translate-y-0 active:scale-[0.98]
+      active:bg-white/[0.08]
+      transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
     `,
     // TERTIARY — Text link only, minimal presence
     // Subtle underline reveal on hover
