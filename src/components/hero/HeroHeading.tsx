@@ -26,7 +26,7 @@ export function HeroHeading() {
           textShadow: '0 0 90px rgba(99, 102, 241, 0.08)',
         }}
       >
-        Echo in Ink builds identity systems, atmospheric worlds, and reflective tools for founders and artists.
+        Designing the worlds your work lives in.
       </h1>
 
       {/* ═══════════════════════════════════════════════════════════════
@@ -41,7 +41,7 @@ export function HeroHeading() {
           letterSpacing: '0.01em',
         }}
       >
-        Identity. Atmosphere. Systems. A creative studio for people building worlds.
+        Identity systems, immersive websites, creative direction, and atmospheric digital experiences.
       </motion.p>
 
      {/* ═══════════════════════════════════════════════════════════════
@@ -52,7 +52,7 @@ export function HeroHeading() {
         variants={heroReveal}
         className="font-structural text-[12px] tracking-[0.06em] text-white/65 max-md:text-white/55 mt-2.5 md:mt-5"
       >
-        Every project begins with a question: what truth wants to emerge through this work?
+        Built for founders, artists, and emerging brands seeking emotionally resonant digital worlds.
       </motion.p>
     </div>
   );

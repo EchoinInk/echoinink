@@ -62,7 +62,7 @@ export function ClosingSection() {
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.15 }}
         >
           <Button to="/contact" variant="primary">
-            Start a World
+            Start a Conversation
           </Button>
         </motion.div>
       </motion.div>

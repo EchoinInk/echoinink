@@ -8,7 +8,7 @@ export function HeroCTA() {
           Stronger contrast, confident border, clearer hover response
           ═══════════════════════════════════════════════════════════════ */}
       <Button to="/contact" variant="primary">
-        Enter the Studio
+        Start a Project
       </Button>
 
       {/* ═══════════════════════════════════════════════════════════════
