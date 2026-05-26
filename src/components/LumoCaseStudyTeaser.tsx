@@ -215,7 +215,7 @@ export function LumoCaseStudyTeaser() {
 
               {/* Scope */}
               <div className="md:col-span-3">
-                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/45 block mb-2.5">
+                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/65 block mb-2.5">
                   Scope
                 </span>
                 <p className="font-structural text-[13px] leading-[1.7] text-white/65">
@@ -225,7 +225,7 @@ export function LumoCaseStudyTeaser() {
 
               {/* Problem */}
               <div className="md:col-span-3">
-                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/45 block mb-2.5">
+                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/65 block mb-2.5">
                   Problem
                 </span>
                 <p className="font-structural text-[13px] leading-[1.7] text-white/65">
@@ -235,7 +235,7 @@ export function LumoCaseStudyTeaser() {
 
               {/* Outcome */}
               <div className="md:col-span-3">
-                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/45 block mb-2.5">
+                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/65 block mb-2.5">
                   Outcome
                 </span>
                 <p className="font-structural text-[13px] leading-[1.7] text-white/65">
@@ -245,7 +245,7 @@ export function LumoCaseStudyTeaser() {
 
               {/* Positioning */}
               <div className="md:col-span-3">
-                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/45 block mb-2.5">
+                <span className="font-structural text-[9px] tracking-[0.2em] uppercase text-white/65 block mb-2.5">
                   Positioning
                 </span>
                 <p className="font-structural text-[13px] leading-[1.7] text-white/65">

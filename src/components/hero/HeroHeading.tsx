@@ -50,7 +50,7 @@ export function HeroHeading() {
           ═══════════════════════════════════════════════════════════════ */}
      <motion.p
         variants={heroReveal}
-        className="font-structural text-[12px] tracking-[0.06em] text-white/45 max-md:text-white/40 mt-2.5 md:mt-5"
+        className="font-structural text-[12px] tracking-[0.06em] text-white/65 max-md:text-white/40 mt-2.5 md:mt-5"
       >
         Built for founders, artists, and emerging brands seeking emotionally resonant digital worlds.
       </motion.p>

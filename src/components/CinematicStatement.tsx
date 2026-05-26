@@ -75,7 +75,7 @@ export function CinematicStatement() {
           {/* Supporting line — the philosophy reinforcement */}
           <motion.p
             variants={driftUp}
-            className="font-structural text-[12px] md:text-[13px] text-white/45 leading-[1.8] max-w-[48ch] mx-auto pt-4"
+            className="font-structural text-[12px] md:text-[13px] text-white/65 leading-[1.8] max-w-[48ch] mx-auto pt-4"
           >
             Every project begins with a question: what truth wants to emerge through this work?
           </motion.p>
