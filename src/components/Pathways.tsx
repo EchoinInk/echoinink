@@ -73,9 +73,9 @@ export function Pathways() {
           className="max-w-6xl mx-auto"
         >
           {/* Section header - elegant and restrained */}
-          <motion.div variants={driftUp} className="text-center mb-8 md:mb-10">
+          <motion.div variants={driftUp} className="text-center mb-6 md:mb-10">
             <span
-              className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/32 mb-4"
+              className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/32 mb-3 md:mb-4"
             >
               What We Design
             </span>
@@ -90,7 +90,7 @@ export function Pathways() {
           </motion.div>
 
           {/* Pathways grid - full-bleed cinematic panels */}
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-5">
             {pathways.map((pathway) => (
               <motion.div
                 key={pathway.to}

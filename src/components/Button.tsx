@@ -15,7 +15,7 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
   // Secondary: Ghost button, calmer presence
   // Tertiary: Text link, minimal presence
   
-  const baseClasses = 'relative inline-flex items-center justify-center font-structural uppercase transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none';
+  const baseClasses = 'relative inline-flex items-center justify-center font-structural uppercase transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none touch-manipulation min-h-[48px] md:min-h-0';
 
   const variants = {
     // PRIMARY — Strongest visual weight
@@ -30,7 +30,8 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
       bg-gradient-to-b from-white/[0.10] to-white/[0.03] hover:from-white/[0.14] hover:to-white/[0.05]
       shadow-[0_0_45px_-12px_rgba(99,102,241,0.18)] hover:shadow-[0_0_60px_-10px_rgba(99,102,241,0.30)]
       hover:-translate-y-[2px]
-      active:translate-y-0
+      active:translate-y-0 active:scale-[0.98]
+      active:bg-white/[0.16] active:border-white/[0.45]
       transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
     `,
     // SECONDARY — Ghost button, confident presence
@@ -45,6 +46,7 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
       bg-transparent hover:bg-white/[0.04]
       hover:shadow-[0_0_40px_-12px_rgba(99,102,241,0.10)]
       hover:-translate-y-[1px]
+      active:scale-[0.98] active:bg-white/[0.06]
     `,
     // TERTIARY — Text link only, minimal presence
     // Subtle underline reveal on hover
@@ -53,6 +55,8 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
       text-[10px] tracking-[0.14em]
       text-white/50 hover:text-white/75
       bg-transparent
+      active:text-white/65
+      active:scale-[0.98]
     `,
   };
 

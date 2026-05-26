@@ -118,10 +118,14 @@ export default function GlowCard({
         effectiveBorderOpacity,
         horizontal
           ? featured ? "min-h-[240px] md:min-h-[280px]" : "min-h-[220px] md:min-h-[260px]"
-          : featured ? "min-h-[520px] md:min-h-[560px]" : "min-h-[480px] md:min-h-[520px]",
+          : featured ? "min-h-[420px] md:min-h-[560px]" : "min-h-[380px] md:min-h-[520px]",
         featured ? "shadow-[0_0_60px_-20px_rgba(99,102,241,0.15)]" : "",
         config.shadowDepth,
         "bg-[#070B1A]",
+        /* Mobile differentiation — subtle left accent per archetype */
+        archetype === 'sessions' && 'max-md:border-l-2 max-md:border-cyan-500/20',
+        archetype === 'identity' && 'max-md:border-l-2 max-md:border-fuchsia-500/20',
+        archetype === 'worlds' && 'max-md:border-l-2 max-md:border-indigo-500/20',
         className
       )}
     >
