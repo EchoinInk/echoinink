@@ -11,7 +11,7 @@ export function Layout({ children }: LayoutProps) {
     <div className="relative min-h-screen bg-[var(--ei-ink-black)]">
       <AtmosphericCursor />
       <Header />
-      <main>{children}</main>
+      <div>{children}</div>
     </div>
   );
 }
