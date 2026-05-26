@@ -35,7 +35,7 @@ export function HeroHeading() {
           ═══════════════════════════════════════════════════════════════ */}
       <motion.p
         variants={heroReveal}
-        className="font-structural text-[14px] md:text-[15px] leading-[1.65] max-w-[62ch] mt-4 md:mt-6"
+        className="font-structural text-[14px] md:text-[15px] leading-[1.65] max-w-[62ch] mt-3 md:mt-6"
         style={{
           color: 'rgba(255,255,255,0.55)',
           letterSpacing: '0.01em',
@@ -50,7 +50,7 @@ export function HeroHeading() {
           ═══════════════════════════════════════════════════════════════ */}
      <motion.p
         variants={heroReveal}
-        className="font-structural text-[12px] tracking-[0.06em] text-white/45 mt-3 md:mt-5"
+        className="font-structural text-[12px] tracking-[0.06em] text-white/45 mt-2.5 md:mt-5"
       >
         Built for founders, artists, and emerging brands seeking emotionally resonant digital worlds.
       </motion.p>
