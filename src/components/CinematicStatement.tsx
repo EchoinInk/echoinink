@@ -15,7 +15,7 @@ import {
 
 export function CinematicStatement() {
   return (
-    <section className="relative min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden py-20 md:py-32">
+    <section className="relative min-h-[50vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden py-12 md:py-32">
       {/* 
         ATMOSPHERIC LAYERS — Subtle tonal shift
         Creates contrast through a slightly brighter, more luminous atmosphere

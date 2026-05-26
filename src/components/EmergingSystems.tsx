@@ -33,7 +33,7 @@ export function EmergingSystems() {
           className="max-w-6xl mx-auto"
         >
           {/* Centered heading */}
-          <motion.div variants={driftUp} className="text-center mb-8 md:mb-10">
+          <motion.div variants={driftUp} className="text-center mb-6 md:mb-10">
             <span className="ei-eyebrow ei-text-space-md block">
               Worlds in Formation
             </span>

@@ -72,7 +72,7 @@ export function TrustSignal() {
           {/* Quiet separator */}
           <motion.div
             variants={blurEmergence}
-            className="mt-10 md:mt-12 w-full h-px"
+            className="mt-8 md:mt-12 w-full h-px"
             style={{
               background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.05) 30%, rgba(99,102,241,0.05) 70%, transparent 100%)',
             }}

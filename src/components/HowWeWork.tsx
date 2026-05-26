@@ -78,7 +78,7 @@ export function HowWeWork() {
           className="max-w-4xl mx-auto"
         >
           {/* Section header */}
-          <motion.div variants={driftUp} className="text-center mb-12 md:mb-16">
+          <motion.div variants={driftUp} className="text-center mb-8 md:mb-16">
             <span className="ei-eyebrow ei-text-space-md block">
               Collaboration
             </span>
@@ -126,9 +126,9 @@ export function HowWeWork() {
                   />
                 )}
 
-                <div className="flex gap-6 md:gap-12 py-10 md:py-12">
+                <div className="flex gap-5 md:gap-12 py-7 md:py-12">
                   {/* Geometric phase marker — soft sacred geometry */}
-                  <div className="flex-shrink-0 w-12 md:w-16 flex flex-col items-center relative">
+                  <div className="flex-shrink-0 w-10 md:w-16 flex flex-col items-center relative">
                     {/* Outer glow ring — appears on approach */}
                     <motion.div
                       className="absolute w-8 h-8 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"
@@ -140,7 +140,7 @@ export function HowWeWork() {
 
                     {/* Inner geometric marker — diamond shape */}
                     <div
-                      className="relative w-3 h-3 opacity-60 group-hover:opacity-100 transition-all duration-500"
+                      className="relative w-2.5 h-2.5 md:w-3 md:h-3 opacity-60 group-hover:opacity-100 transition-all duration-500"
                       style={{
                         background: 'linear-gradient(135deg, rgba(139,92,246,0.8) 0%, rgba(99,102,241,0.6) 100%)',
                         transform: 'rotate(45deg)',
@@ -149,19 +149,19 @@ export function HowWeWork() {
                     />
 
                     {/* Phase number — ceremonial typography */}
-                    <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/32 group-hover:text-white/52 transition-colors duration-500 mt-3">
+                    <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/32 group-hover:text-white/52 transition-colors duration-500 mt-2 md:mt-3">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </div>
 
                   {/* Phase content — sacred editorial spacing */}
-                  <div className="flex-1 space-y-4">
+                  <div className="flex-1 space-y-3 md:space-y-4">
                     {/* Phase label — ritualistic presence */}
                     <h3 className="font-structural text-[13px] md:text-[14px] tracking-[0.08em] uppercase text-white/72 group-hover:text-white/90 transition-colors duration-500">
                       {phase.label}
                     </h3>
                     {/* Phase description — ceremonial clarity */}
-                    <p className="font-structural text-[13px] md:text-[14px] leading-[1.75] text-white/52 group-hover:text-white/68 transition-colors duration-500 max-w-[44ch]">
+                    <p className="font-structural text-[13px] md:text-[14px] leading-[1.6] md:leading-[1.75] text-white/52 group-hover:text-white/68 transition-colors duration-500 max-w-[44ch]">
                       {phase.description}
                     </p>
                   </div>
@@ -187,7 +187,7 @@ export function HowWeWork() {
           {/* Bottom atmospheric line — quiet closure */}
           <motion.div
             variants={blurEmergence}
-            className="mt-12 md:mt-16 w-full h-px"
+            className="mt-8 md:mt-16 w-full h-px"
             style={{
               background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.08) 30%, rgba(99,102,241,0.08) 70%, transparent 100%)',
             }}

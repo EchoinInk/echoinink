@@ -59,34 +59,38 @@
   /* ── Mobile Spacing Reductions ──────────────────────────────── */
   
   @media (max-width: 768px) {
-    /* Reduce section padding on mobile */
+    /* Reduce section padding on mobile — tighter rhythm */
     .ei-section-standard {
-      padding-top: clamp(3rem, 10vh, 5rem);
-      padding-bottom: clamp(2.5rem, 8vh, 4rem);
-    }
-    
-    .ei-section-intimate {
-      padding-top: clamp(3.5rem, 12vh, 6rem);
+      padding-top: clamp(2.5rem, 8vh, 4rem);
       padding-bottom: clamp(2rem, 6vh, 3.5rem);
     }
-    
+
+    .ei-section-intimate {
+      padding-top: clamp(2.5rem, 8vh, 4.5rem);
+      padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    }
+
     .ei-section-pause {
-      padding-top: clamp(6rem, 20vh, 10rem);
-      padding-bottom: clamp(4rem, 12vh, 6rem);
+      padding-top: clamp(4rem, 14vh, 7rem);
+      padding-bottom: clamp(3rem, 8vh, 5rem);
     }
-    
+
     .ei-section-closing {
-      padding-top: clamp(3rem, 8vh, 5rem);
-      padding-bottom: clamp(6rem, 18vh, 10rem);
+      padding-top: clamp(2.5rem, 6vh, 4rem);
+      padding-bottom: clamp(4rem, 12vh, 7rem);
     }
-    
+
     /* Reduce text spacing */
     .ei-text-space-xl {
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
     }
-    
+
     .ei-text-space-lg {
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .ei-text-space-md {
+      margin-bottom: 1rem;
     }
   }
 

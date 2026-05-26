@@ -118,7 +118,7 @@ export function WhatWeCreate() {
           className="max-w-4xl mx-auto"
         >
           {/* Section header */}
-          <motion.div variants={driftUp} className="text-center mb-10 md:mb-12">
+          <motion.div variants={driftUp} className="text-center mb-7 md:mb-12">
             <span className="ei-eyebrow ei-text-space-md block">
               Capabilities
             </span>
@@ -130,7 +130,7 @@ export function WhatWeCreate() {
           {/* Editorial divider */}
           <motion.div
             variants={blurEmergence}
-            className="w-full h-px mb-10 md:mb-12"
+            className="w-full h-px mb-7 md:mb-12"
             style={{
               background:
                 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.075) 18%, rgba(255,255,255,0.075) 82%, transparent 100%)',
@@ -188,7 +188,7 @@ export function WhatWeCreate() {
                   }}
                 />
 
-                <div className="grid md:grid-cols-12 gap-4 md:gap-6 items-baseline relative z-10 py-8 md:py-10">
+                <div className="grid md:grid-cols-12 gap-2 md:gap-6 items-baseline relative z-10 py-5 md:py-10 max-md:border-l max-md:border-white/[0.06] max-md:pl-4">
                   {/* Label */}
                   <div className="md:col-span-4">
                     <span className="font-structural text-[12px] md:text-[13px] tracking-[0.1em] uppercase text-white/68 group-hover:text-white/82 transition-colors duration-500">
@@ -198,7 +198,7 @@ export function WhatWeCreate() {
 
                   {/* Description */}
                   <div className="md:col-span-8">
-                    <p className="font-structural text-[13.5px] md:text-[14.5px] leading-[1.72] text-white/62 group-hover:text-white/78 transition-colors duration-500">
+                    <p className="font-structural text-[13px] md:text-[14.5px] leading-[1.6] md:leading-[1.72] text-white/62 group-hover:text-white/78 transition-colors duration-500">
                       {cap.description}
                     </p>
                   </div>
@@ -210,7 +210,7 @@ export function WhatWeCreate() {
           {/* Bottom separator */}
           <motion.div
             variants={blurEmergence}
-            className="mt-10 md:mt-12 w-full h-px"
+            className="mt-8 md:mt-12 w-full h-px"
             style={{
               background:
                 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.065) 25%, rgba(99,102,241,0.045) 50%, rgba(139,92,246,0.065) 75%, transparent 100%)',

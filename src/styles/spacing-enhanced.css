@@ -15,32 +15,32 @@
 
   /* Intimate — Soft entry, quiet reflection (asymmetric) */
   .ei-section-intimate {
-    padding-top: clamp(5rem, 12vh, 9rem);
-    padding-bottom: clamp(3rem, 8vh, 6rem);
+    padding-top: clamp(4rem, 10vh, 7rem);
+    padding-bottom: clamp(2.5rem, 6vh, 5rem);
   }
 
   /* Standard — Balanced breathing room (slight asymmetry) */
   .ei-section-standard {
-    padding-top: clamp(6rem, 14vh, 11rem);
-    padding-bottom: clamp(4.5rem, 10vh, 9rem);
+    padding-top: clamp(4.5rem, 10vh, 8rem);
+    padding-bottom: clamp(3.5rem, 8vh, 6.5rem);
   }
 
   /* Expansive — Generous space, emotional expansion */
   .ei-section-expansive {
-    padding-top: clamp(7rem, 18vh, 14rem);
-    padding-bottom: clamp(7rem, 18vh, 14rem);
+    padding-top: clamp(5.5rem, 12vh, 10rem);
+    padding-bottom: clamp(5.5rem, 12vh, 10rem);
   }
 
   /* Breathing Pause — Minimal, meditative (highly asymmetric) */
   .ei-section-pause {
-    padding-top: clamp(10rem, 30vh, 18rem);
-    padding-bottom: clamp(6rem, 15vh, 10rem);
+    padding-top: clamp(7rem, 20vh, 13rem);
+    padding-bottom: clamp(4.5rem, 10vh, 7rem);
   }
 
   /* Closing — Reverent finale (compressed top, expansive bottom) */
   .ei-section-closing {
-    padding-top: clamp(5rem, 10vh, 8rem);
-    padding-bottom: clamp(10rem, 28vh, 16rem);
+    padding-top: clamp(3.5rem, 8vh, 6rem);
+    padding-bottom: clamp(7rem, 20vh, 12rem);
   }
 
   /* ── Content Spacing ──────────────────────────────────────── */

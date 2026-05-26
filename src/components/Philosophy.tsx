@@ -32,7 +32,7 @@ export function Philosophy() {
 
       <Container>
         <motion.div
-          className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-start"
+          className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-start"
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.normal}

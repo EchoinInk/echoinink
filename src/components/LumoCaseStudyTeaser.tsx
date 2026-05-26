@@ -204,7 +204,7 @@ export function LumoCaseStudyTeaser() {
                 ═══════════════════════════════════════════════════════════════ */}
             <motion.div
               variants={driftUp}
-              className="mt-9 md:mt-12 grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-5"
+              className="mt-7 md:mt-12 grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-5"
             >
               {/* Micro-tagline */}
               <div className="md:col-span-12 mb-1">
@@ -257,7 +257,7 @@ export function LumoCaseStudyTeaser() {
             {/* Atmospheric separator */}
             <motion.div
               variants={blurEmergence}
-              className="mt-10 md:mt-14 w-full h-px"
+              className="mt-8 md:mt-14 w-full h-px"
               style={{
                 background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.06) 20%, rgba(99,102,241,0.06) 80%, transparent 100%)',
               }}
