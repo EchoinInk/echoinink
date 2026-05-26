@@ -19,7 +19,7 @@ export function Header() {
       initial={{ opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: DURATION.slower, ease: EASE_LUXURY, delay: 0.3 }}
-      className="fixed top-0 left-0 w-full z-50 px-6 md:px-10 lg:px-12 py-5 md:py-7"
+      className="fixed top-0 left-0 w-full z-50 px-6 md:px-10 lg:px-12 py-4 md:py-7"
     >
       {/* Refined background gradient for readability — stronger separation */}
       <div
@@ -73,7 +73,7 @@ export function Header() {
 
         {/* Mobile Menu Trigger */}
         <button
-          className="md:hidden font-structural text-[11px] tracking-[0.16em] uppercase text-white/55 hover:text-white/80 transition-colors duration-500"
+          className="md:hidden font-structural text-[11px] tracking-[0.16em] uppercase text-white/55 hover:text-white/80 transition-colors duration-500 min-h-[44px] min-w-[60px] flex items-center justify-center"
           aria-label="Open navigation menu"
         >
           Menu

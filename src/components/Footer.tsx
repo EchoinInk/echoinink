@@ -38,18 +38,18 @@ export default function Footer() {
           viewport={VIEWPORT.normal}
           variants={atmosphericFade}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.1 }}
-          className="pt-16 md:pt-20 pb-10 md:pb-14"
+          className="pt-10 md:pt-20 pb-8 md:pb-14"
         >
           {/* Atmospheric separator */}
-          <div className="ei-divider-atmospheric mb-10 md:mb-14" />
+          <div className="ei-divider-atmospheric mb-8 md:mb-14" />
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 items-start">
             {/* LEFT — Brand identity */}
             <div className="md:col-span-5">
               <span className="text-structural block text-space-sm">
                 Echo in Ink
               </span>
-              <p className="text-atmospheric max-w-[280px]">
+              <p className="text-atmospheric max-w-[280px] max-md:text-white/70">
                 Design studio translating inner worlds into identities that hold their shape.
               </p>
             </div>
@@ -64,7 +64,7 @@ export default function Footer() {
                   <Link
                     key={link.label}
                     to={link.href}
-                    className="link-primary"
+                    className="link-primary py-1"
                   >
                     {link.label}
                   </Link>
@@ -79,11 +79,11 @@ export default function Footer() {
               </span>
               <a
                 href="mailto:hello@echoink.co"
-                className="link-primary block mb-2"
+                className="link-primary block mb-2 py-1"
               >
                 hello@echoink.co
               </a>
-              <span className="text-whisper block">
+              <span className="text-whisper block max-md:text-white/50">
                 Aotearoa New Zealand
               </span>
             </div>
@@ -97,26 +97,26 @@ export default function Footer() {
           viewport={VIEWPORT.normal}
           variants={atmosphericFade}
           transition={{ duration: DURATION.slower, ease: EASE_LUXURY, delay: 0.2 }}
-          className="py-8 md:py-10"
+          className="py-6 md:py-10"
         >
           {/* Closing separator — quieter than the top */}
-          <div className="ei-divider-deep mb-8" />
+          <div className="ei-divider-deep mb-6 md:mb-8" />
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Copyright — grounded presence */}
-            <span className="text-whisper uppercase tracking-[0.1em]">
+            <span className="text-whisper uppercase tracking-[0.1em] max-md:text-white/50">
               © 2025 Echo in Ink Studio
             </span>
 
             {/* Brand mark */}
-            <span className="text-whisper uppercase tracking-[0.14em]">
+            <span className="text-whisper uppercase tracking-[0.14em] max-md:text-white/50">
               Founded MMXXV
             </span>
           </div>
         </motion.div>
 
         {/* Intentional breathing room before the absolute close */}
-        <div className="h-6 md:h-8" />
+        <div className="h-4 md:h-8" />
       </div>
 
       {/* Final edge dissolve */}

@@ -98,8 +98,7 @@ export function Hero() {
           ═══════════════════════════════════════════════════════════════ */}
       <div className="ei-container w-full relative z-10">
         <motion.div
-          className="max-w-[680px] items-start text-left"
-          style={{ transform: 'translateY(4vh)' }}
+          className="max-w-[680px] items-start text-left translate-y-[2vh] md:translate-y-[4vh]"
           variants={heroContainer}
           initial="hidden"
           animate="visible"
