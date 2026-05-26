@@ -52,7 +52,8 @@ export function HeroHeading() {
         variants={heroReveal}
         className="font-structural text-[12px] tracking-[0.07em] text-white/42 mt-7"
       >
-Built for founders, artists, and emerging brands seeking emotionally resonant digital worlds.      </motion.p>
+        Built for founders, artists, and emerging brands seeking emotionally resonant digital worlds.
+      </motion.p>
     </div>
   );
 }
