@@ -9,7 +9,7 @@
 @import './hero.css' layer(components);
 @import './mobile-refinements.css' layer(utilities);
 @import './forms-luxury.css' layer(components);
-@import './accessibility.css' layer(base);
+@import './accessibility.css';
 @import './browser-chrome.css' layer(base);
 
 @tailwind base;
