@@ -13,12 +13,6 @@
     padding-bottom: 0;
   }
 
-  @media (max-width: 768px) {
-    .ei-section-hero {
-      min-height: 78vh;
-    }
-  }
-
   /* Intimate — Soft entry, quiet reflection (asymmetric) */
   .ei-section-intimate {
     padding-top: clamp(4rem, 10vh, 7rem);

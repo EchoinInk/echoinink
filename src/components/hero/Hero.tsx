@@ -7,7 +7,7 @@ import { heroContainer, heroReveal, EASE_LUXURY, DURATION, volumetricDrift } fro
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[78vh] md:min-h-screen flex items-start md:items-center justify-start overflow-hidden ei-section-hero pt-24 md:pt-0">
+    <section className="relative w-full max-md:min-h-0 md:min-h-screen flex items-start md:items-center justify-start overflow-hidden ei-section-hero pt-24 pb-20 md:pt-0 md:pb-0">
       {/* Background with cinematic depth layers */}
       <HeroBackground />
 
@@ -120,7 +120,7 @@ export function Hero() {
           Creates the feeling of content emerging from darkness
           ═══════════════════════════════════════════════════════════════ */}
       <motion.div
-        className="absolute inset-x-0 bottom-0 z-20 pointer-events-none h-[25vh] md:h-[35vh]"
+        className="absolute inset-x-0 bottom-0 z-20 pointer-events-none h-[12vh] md:h-[35vh]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: DURATION.slower, delay: 1.2 }}
