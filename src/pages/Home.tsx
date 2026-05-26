@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { PageShell } from '@/components/system';
 import { Hero } from '@/components/hero/Hero';
 import { Philosophy } from '@/components/Philosophy';
 import { WhatWeCreate } from '@/components/WhatWeCreate';
@@ -9,11 +10,10 @@ import { TrustSignal } from '@/components/TrustSignal';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/ClosingSection';
-import Footer from '@/components/Footer';
 
 export function Home() {
   return (
-    <main id="main-content" className="relative">
+    <PageShell id="main-content" atmosphere="default" withTopSpacing={false}>
       <Helmet>
         <title>Echo in Ink — Calm, intentional design studio</title>
         <meta
@@ -81,7 +81,6 @@ export function Home() {
           FOOTER — Atmospheric epilogue
           World dissolving into darkness
           ═══════════════════════════════════════════════════════════════ */}
-      <Footer />
-    </main>
+    </PageShell>
   );
 }

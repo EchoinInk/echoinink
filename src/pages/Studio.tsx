@@ -1,24 +1,22 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  fadeSoft, 
-  driftUp, 
+import { PageShell } from '@/components/system';
+import {
+  fadeSoft,
+  driftUp,
   staggerContainer,
   STAGGER,
-  VIEWPORT 
+  VIEWPORT
 } from '@/lib/motion-cinematic';
 import { PageCTA } from '@/components/PageCTA';
 
 export function Studio() {
   return (
-    <main className="relative">
+    <PageShell atmosphere="studio" withTopSpacing={false}>
       <Helmet>
         <title>Studio — Echo in Ink</title>
         <meta name="description" content="The philosophy and practice behind Echo in Ink — translating inner worlds into coherent identity." />
       </Helmet>
-      
-      {/* Atmospheric base layer */}
-      <div className="absolute inset-0 ei-glow-indigo opacity-30 pointer-events-none" />
       
       {/* Header */}
       <section className="relative ei-section-expansive overflow-hidden">
@@ -189,6 +187,6 @@ export function Studio() {
       </section>
 
       <PageCTA page="studio" />
-    </main>
+    </PageShell>
   );
 }

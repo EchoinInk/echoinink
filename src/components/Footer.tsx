@@ -1,147 +1,126 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/Button';
-import { DURATION, EASE_LUXURY, VIEWPORT } from '@/lib/motion-cinematic';
+import {
+  atmosphericFade,
+  EASE_LUXURY,
+  DURATION,
+  VIEWPORT,
+} from '@/system/motion/cinematic';
 
 // ═══════════════════════════════════════════════════════════════
-// FOOTER — Cinematic conclusion
-// The final frame of the film, not a utility dump
-// Strong emotional ending with atmospheric fade into black
+// FOOTER — Cinematic Closing System
+// The final frame of the film. Quiet, intentional, resolved.
+// Not a utility dump — an atmospheric epilogue.
 // ═══════════════════════════════════════════════════════════════
+
+const navLinks = [
+  { label: 'Works', href: '/works' },
+  { label: 'Identity', href: '/identity' },
+  { label: 'Sessions', href: '/sessions' },
+  { label: 'Worlds', href: '/worlds' },
+];
 
 export default function Footer() {
   return (
     <footer className="relative overflow-hidden">
-      {/* ATMOSPHERIC LAYER — Simplified premium fade */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: `
-            radial-gradient(ellipse 100% 50% at 50% 0%, rgba(99,102,241,0.035) 0%, transparent 50%)
-          `,
-          filter: 'blur(80px)',
-        }}
-      />
+      {/* ATMOSPHERIC BASE — Subtle indigo wash */}
+      <div className="ei-glow-page" />
 
-      {/* Bottom dissolve — single gradient */}
-      <div
-        className="absolute inset-x-0 bottom-0 h-[50%] pointer-events-none"
-        style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(4,4,10,0.6) 100%)',
-        }}
-      />
+      {/* Bottom dissolve — world fading to black */}
+      <div className="ei-gradient-ink absolute inset-x-0 bottom-0 h-[60%]" />
 
-      {/* Content — elegant vertical structure */}
-      <div className="relative z-10 max-w-[1400px] mx-auto px-6 lg:px-12">
-        
+      {/* Content — composed, grounded, resolved */}
+      <div className="relative z-10 ei-container max-w-[1400px]">
+        {/* TOP BLOCK — Primary footer content */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={VIEWPORT.normal}
+          variants={atmosphericFade}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.1 }}
-          className="py-12 md:py-14"
+          className="pt-16 md:pt-20 pb-10 md:pb-14"
         >
           {/* Atmospheric separator */}
-          <div
-            className="w-full h-px mb-10 md:mb-12"
-            style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.1) 20%, rgba(99,102,241,0.08) 50%, rgba(139,92,246,0.1) 80%, transparent 100%)',
-            }}
-          />
+          <div className="ei-divider-atmospheric mb-10 md:mb-14" />
 
           <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8 items-start">
-            {/* LEFT — Brand identity with clearer positioning */}
-            <div className="md:col-span-4">
-              <span className="font-structural text-[12px] tracking-[0.2em] uppercase text-white/52 block mb-3">
+            {/* LEFT — Brand identity */}
+            <div className="md:col-span-5">
+              <span className="text-structural block text-space-sm">
                 Echo in Ink
               </span>
-              <p className="font-structural text-[13px] text-white/62 leading-[1.65] max-w-[240px]">
+              <p className="text-atmospheric max-w-[280px]">
                 Design studio translating inner worlds into identities that hold their shape.
               </p>
             </div>
 
-            {/* CENTER — Primary navigation with improved confidence */}
+            {/* CENTER — Primary navigation */}
             <nav className="md:col-span-4 md:text-center">
-              <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/35 block mb-4 md:mb-5">
+              <span className="text-whisper-uppercase block text-space-md">
                 Navigate
               </span>
               <div className="flex flex-wrap gap-x-8 gap-y-3 md:justify-center">
-                <Link to="/works" className="font-structural text-[12px] tracking-[0.1em] uppercase text-white/55 hover:text-white/85 transition-colors duration-400">
-                  Works
-                </Link>
-                <Link to="/identity" className="font-structural text-[12px] tracking-[0.1em] uppercase text-white/55 hover:text-white/85 transition-colors duration-400">
-                  Identity
-                </Link>
-                <Link to="/sessions" className="font-structural text-[12px] tracking-[0.1em] uppercase text-white/55 hover:text-white/85 transition-colors duration-400">
-                  Sessions
-                </Link>
-                <Link to="/worlds" className="font-structural text-[12px] tracking-[0.1em] uppercase text-white/55 hover:text-white/85 transition-colors duration-400">
-                  Worlds
-                </Link>
+                {navLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="link-primary"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
               </div>
             </nav>
 
-            {/* RIGHT — Contact with enhanced visibility */}
-            <div className="md:col-span-4 md:text-right">
-              <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/35 block mb-4 md:mb-5">
+            {/* RIGHT — Contact */}
+            <div className="md:col-span-3 md:text-right">
+              <span className="text-whisper-uppercase block text-space-md">
                 Connect
               </span>
               <a
                 href="mailto:hello@echoink.co"
-                className="font-structural text-[12px] tracking-[0.1em] uppercase text-white/58 hover:text-white/90 transition-colors duration-400 block mb-2"
+                className="link-primary block mb-2"
               >
                 hello@echoink.co
               </a>
-              <span className="font-structural text-[11px] tracking-[0.08em] text-white/42 block">
+              <span className="text-whisper block">
                 Aotearoa New Zealand
               </span>
             </div>
           </div>
         </motion.div>
 
-        {/* ═══════════════════════════════════════════════════════════════
-            BOTTOM SECTION — Confident closing composition
-            Emotionally resolved, not visually disappearing
-            ═══════════════════════════════════════════════════════════════ */}
+        {/* BOTTOM BLOCK — Closing composition */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial="hidden"
+          whileInView="visible"
           viewport={VIEWPORT.normal}
+          variants={atmosphericFade}
           transition={{ duration: DURATION.slower, ease: EASE_LUXURY, delay: 0.2 }}
           className="py-8 md:py-10"
         >
-          {/* Closing separator */}
-          <div
-            className="w-full h-px mb-8"
-            style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(99,102,241,0.06) 30%, rgba(139,92,246,0.06) 70%, transparent 100%)',
-            }}
-          />
+          {/* Closing separator — quieter than the top */}
+          <div className="ei-divider-deep mb-8" />
 
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             {/* Copyright — grounded presence */}
-            <span className="font-structural text-[11px] tracking-[0.1em] uppercase text-white/42">
+            <span className="text-whisper uppercase tracking-[0.1em]">
               © 2025 Echo in Ink Studio
             </span>
 
-            {/* Brand mark with subtle gravitas */}
-            <span className="font-structural text-[11px] tracking-[0.14em] uppercase text-white/35">
+            {/* Brand mark */}
+            <span className="text-whisper uppercase tracking-[0.14em]">
               Founded MMXXV
             </span>
           </div>
         </motion.div>
 
-        {/* Final breath — intentional space before the close */}
-        <div className="h-8 md:h-10" />
+        {/* Intentional breathing room before the absolute close */}
+        <div className="h-6 md:h-8" />
       </div>
 
-      {/* Bottom dissolve — complete fade */}
-      <div
-        className="absolute inset-x-0 bottom-0 h-16 pointer-events-none"
-        style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(3,3,8,0.7) 100%)',
-        }}
-      />
+      {/* Final edge dissolve */}
+      <div className="ei-fade-to-ink absolute inset-x-0 bottom-0 h-20" />
     </footer>
   );
 }
