@@ -57,7 +57,7 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: DURATION.slower * 1.3, ease: EASE_LUXURY, delay: 0.6 }}
         style={{
-          background: 'radial-gradient(ellipse 45% 40% at 28% 38%, rgba(232,121,249,0.018) 0%, rgba(168,85,247,0.012) 40%, transparent 70%)',
+          background: 'radial-gradient(ellipse 45% 40% at 28% 38%, rgba(232,121,249,0.014) 0%, rgba(168,85,247,0.009) 40%, transparent 70%)',
           filter: 'blur(70px)',
         }}
       />
