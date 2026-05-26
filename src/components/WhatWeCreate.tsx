@@ -188,17 +188,17 @@ export function WhatWeCreate() {
                   }}
                 />
 
-                <div className="grid md:grid-cols-12 gap-2 md:gap-6 items-baseline relative z-10 py-5 md:py-10 max-md:border-l max-md:border-white/[0.06] max-md:pl-4">
+                <div className="ei-focus-block grid md:grid-cols-12 gap-2 md:gap-6 items-baseline relative z-10 py-5 md:py-10 max-md:border-l max-md:border-white/[0.06] max-md:pl-4">
                   {/* Label */}
                   <div className="md:col-span-4">
-                    <span className="font-structural text-[12px] md:text-[13px] tracking-[0.1em] uppercase text-white/68 group-hover:text-white/82 transition-colors duration-500">
+                    <span className="font-structural text-[12px] md:text-[13px] tracking-[0.1em] uppercase text-white/72 group-hover:text-white/88 transition-colors duration-500">
                       {cap.label}
                     </span>
                   </div>
 
                   {/* Description */}
                   <div className="md:col-span-8">
-                    <p className="font-structural text-[13px] md:text-[14.5px] leading-[1.6] md:leading-[1.72] text-white/62 group-hover:text-white/78 transition-colors duration-500">
+                    <p className="font-structural text-[13px] md:text-[14.5px] leading-[1.6] md:leading-[1.72] text-white/65 group-hover:text-white/80 transition-colors duration-500">
                       {cap.description}
                     </p>
                   </div>

@@ -9,7 +9,7 @@ export function HeroHeading() {
           ═══════════════════════════════════════════════════════════════ */}
       <motion.span
         variants={heroReveal}
-        className="font-structural text-[11px] tracking-[0.2em] uppercase text-white/52 block mb-3 md:mb-5"
+        className="font-structural text-[11px] tracking-[0.2em] uppercase text-white/60 block mb-3 md:mb-5"
       >
         Echo in Ink
       </motion.span>

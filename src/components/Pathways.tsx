@@ -92,12 +92,12 @@ export function Pathways() {
           {/* Pathways grid - full-bleed cinematic panels */}
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-5">
             {pathways.map((pathway) => (
-              <motion.div
+              <motion.article
                 key={pathway.to}
                 variants={driftUp}
                 className="h-full"
               >
-                <Link to={pathway.to} className="block h-full">
+                <Link to={pathway.to} className="ei-focus-block block h-full rounded-[28px]">
                   <GlowCard
                     title={pathway.title}
                     description={pathway.description}
@@ -108,7 +108,7 @@ export function Pathways() {
                     archetype={pathway.archetype}
                   />
                 </Link>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
         </motion.div>

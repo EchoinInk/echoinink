@@ -85,7 +85,7 @@ export function LumoCaseStudyTeaser() {
               >
                 <img
                   src={lumoinkdrift}
-                  alt="Lumo Ink Drift"
+                  alt="Atmospheric UI exploration for LUMO — emotionally intelligent interface design"
                   className="w-full h-full object-cover"
                   style={{ minHeight: '400px' }}
                 />
@@ -182,7 +182,7 @@ export function LumoCaseStudyTeaser() {
                   <motion.div variants={blurEmergence}>
                     <Link
                       to="/work/lumo"
-                      className="group inline-flex items-center gap-2.5 font-structural text-[9px] tracking-[0.16em] uppercase text-violet-300/80 hover:text-violet-200 transition-colors duration-500"
+                      className="ei-focus-glow group inline-flex items-center gap-2.5 font-structural text-[9px] tracking-[0.16em] uppercase text-violet-300/80 hover:text-violet-200 focus-visible:text-violet-100 transition-colors duration-500 rounded-sm"
                     >
                       <span className="relative">
                         View Case Study

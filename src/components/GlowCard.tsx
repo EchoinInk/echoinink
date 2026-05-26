@@ -105,7 +105,7 @@ export default function GlowCard({
   const effectiveTransitionDelay = featured ? 0.02 : config.transitionDelay;
 
   return (
-    <motion.div
+    <motion.article
       whileHover={{ y: effectiveHoverLift, scale: effectiveHoverScale }}
       transition={{
         duration: effectiveTransitionDuration,
@@ -113,7 +113,7 @@ export default function GlowCard({
         ease: [0.22, 1, 0.36, 1]
       }}
       className={cn(
-        "group relative overflow-hidden",
+        "ei-focus-block group relative overflow-hidden",
         featured ? "rounded-[32px]" : "rounded-[28px]",
         effectiveBorderOpacity,
         horizontal
@@ -217,6 +217,6 @@ export default function GlowCard({
         </>
       )}
 
-    </motion.div>
+    </motion.article>
   );
 }
