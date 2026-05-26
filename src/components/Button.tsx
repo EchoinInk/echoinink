@@ -18,38 +18,39 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
   const baseClasses = 'ei-focus-glow relative inline-flex items-center justify-center font-structural uppercase transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none touch-manipulation min-h-[48px] md:min-h-0';
 
   const variants = {
-    // PRIMARY — Strongest visual weight with cinematic gradient edge
-    // Layered border: gradient outer + neutral inner + dark glass interior
+    // PRIMARY — Strongest visual weight with neon gradient edge
+    // Layered border: vivid gradient outer + dark glass interior
     primary: `
       ei-btn-primary-cinematic
       group
       px-8 py-4
       text-[10px] tracking-[0.16em] font-medium
       text-white/[0.95] hover:text-white focus-visible:text-white
-      border border-white/[0.12] hover:border-white/[0.18] focus-visible:border-white/[0.22]
+      border border-white/[0.08] hover:border-white/[0.14] focus-visible:border-white/[0.18]
       rounded-full
-      bg-gradient-to-b from-white/[0.10] to-white/[0.03] hover:from-white/[0.12] hover:to-white/[0.04]
-      shadow-[0_0_50px_-15px_rgba(99,102,241,0.20)] hover:shadow-[0_0_70px_-12px_rgba(99,102,241,0.35)]
+      bg-gradient-to-b from-black/60 via-black/50 to-black/70 hover:from-black/55 hover:via-black/45 hover:to-black/65
+      shadow-[0_0_60px_-12px_rgba(139,92,246,0.28),inset_0_1px_0_rgba(255,255,255,0.08)]
+      hover:shadow-[0_0_80px_-10px_rgba(232,121,249,0.42),inset_0_1px_0_rgba(255,255,255,0.12)]
       hover:-translate-y-[2px] hover:scale-[1.01]
       active:translate-y-0 active:scale-[0.98]
-      active:bg-white/[0.14]
+      active:bg-black/70
       transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
     `,
-    // SECONDARY — Quieter edge treatment, more subdued gradient
-    // Lighter glow, more restrained presence
+    // SECONDARY — Quieter edge treatment, visible gradient, dark interior
     secondary: `
       ei-btn-secondary-cinematic
       group
       px-6 py-3
       text-[9px] tracking-[0.2em]
       text-white/70 hover:text-white/90 focus-visible:text-white/90
-      border border-white/[0.10] hover:border-white/[0.16] focus-visible:border-white/[0.20]
+      border border-white/[0.06] hover:border-white/[0.12] focus-visible:border-white/[0.16]
       rounded-full
-      bg-gradient-to-b from-white/[0.06] to-transparent hover:from-white/[0.08]
-      shadow-[0_0_40px_-12px_rgba(99,102,241,0.12)] hover:shadow-[0_0_55px_-10px_rgba(99,102,241,0.22)]
+      bg-gradient-to-b from-black/50 via-black/40 to-black/60 hover:from-black/45 hover:via-black/35 hover:to-black/55
+      shadow-[0_0_40px_-12px_rgba(99,102,241,0.14),inset_0_1px_0_rgba(255,255,255,0.05)]
+      hover:shadow-[0_0_55px_-10px_rgba(167,139,250,0.24),inset_0_1px_0_rgba(255,255,255,0.08)]
       hover:-translate-y-[1px] hover:scale-[1.005]
       active:translate-y-0 active:scale-[0.98]
-      active:bg-white/[0.10]
+      active:bg-black/55
       transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
     `,
     // TERTIARY — Text link only, minimal presence
