@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  fadeSoft, 
-  driftUp, 
+import { PageShell } from '@/components/system';
+import {
+  fadeSoft,
+  driftUp,
   staggerContainer,
   STAGGER,
-  VIEWPORT 
+  VIEWPORT
 } from '@/lib/motion-cinematic';
 
 export function Contact() {
@@ -21,7 +22,7 @@ export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormState('submitting');
-    
+
     // Simulate submission
     setTimeout(() => {
       setFormState('success');
@@ -33,22 +34,11 @@ export function Contact() {
   };
 
   return (
-    <main className="relative min-h-screen">
+    <PageShell atmosphere="default" withTopSpacing={false}>
       <Helmet>
         <title>Begin — Echo in Ink</title>
         <meta name="description" content="Start a conversation about creative direction, identity, or atmospheric design." />
       </Helmet>
-
-      {/* Atmospheric base */}
-      <div className="absolute inset-0 ei-glow-indigo opacity-20 pointer-events-none" />
-      
-      {/* Soft vignette */}
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(ellipse 80% 80% at 50% 40%, transparent 40%, rgba(5,7,16,0.4) 100%)',
-        }}
-      />
 
       <div className="relative z-10 ei-container max-w-2xl pt-40 pb-32">
         <motion.div
@@ -174,6 +164,6 @@ export function Contact() {
           )}
         </motion.div>
       </div>
-    </main>
+    </PageShell>
   );
 }

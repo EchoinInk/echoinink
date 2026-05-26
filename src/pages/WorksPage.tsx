@@ -1,35 +1,23 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  fadeSoft, 
-  driftUp, 
+import { PageShell } from '@/components/system';
+import {
+  fadeSoft,
+  driftUp,
   staggerContainer,
   STAGGER,
-  VIEWPORT 
+  VIEWPORT
 } from '@/lib/motion-cinematic';
 import { SelectedWorks } from '@/components/SelectedWorks';
 import { PageCTA } from '@/components/PageCTA';
 
 export function WorksPage() {
   return (
-    <main className="relative">
+    <PageShell atmosphere="works" withTopSpacing={false}>
       <Helmet>
         <title>Selected Works — Echo in Ink</title>
         <meta name="description" content="A curated record of visual and narrative experiments — atmospheres built, identities discovered, and worlds made luminous." />
       </Helmet>
-
-      {/* Faint violet ambient top right */}
-      <div
-        className="absolute pointer-events-none"
-        style={{
-          top: '0%',
-          right: '-6%',
-          width: 'clamp(320px, 42vw, 640px)',
-          height: 'clamp(280px, 36vw, 560px)',
-          background: 'radial-gradient(ellipse 66% 62% at 68% 38%, rgba(168,85,247,0.04) 0%, transparent 72%)',
-          filter: 'blur(70px)',
-        }}
-      />
 
       {/* Page header */}
       <section className="relative ei-section-expansive overflow-hidden">
@@ -87,6 +75,6 @@ export function WorksPage() {
           </div>
         </div>
       </section>
-    </main>
+    </PageShell>
   );
 }
