@@ -447,7 +447,7 @@ export function SignatureCaseStudy() {
           </motion.h2>
           <motion.p
             {...fade(0.2)}
-            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] max-w-[52ch]"
+            className="font-structural text-[13px] md:text-[14px] text-white/50 leading-[1.95] max-w-[52ch]"
           >
             A complete creative and product identity — from feeling to form.
           </motion.p>
@@ -465,7 +465,7 @@ export function SignatureCaseStudy() {
           <div className="max-w-3xl">
             <motion.span
               {...labelFade(0)}
-              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-10"
+              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-10"
             >
               01 — The Beginning: A Feeling, Not a Brief
             </motion.span>
@@ -487,7 +487,7 @@ export function SignatureCaseStudy() {
             </motion.p>
             <motion.p
               {...fade(0.26)}
-              className="font-structural text-[13px] md:text-[14px] text-white/30 leading-[1.95] max-w-[52ch]"
+              className="font-structural text-[13px] md:text-[14px] text-white/55 leading-[1.95] max-w-[52ch]"
             >
               We were not hired to design an app. We were invited to build a world.
             </motion.p>
@@ -505,7 +505,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container py-16 md:py-28">
         <motion.span
           {...labelFade(0)}
-          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
+          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-12 md:mb-16"
         >
           02 — The World We Found
         </motion.span>
@@ -572,7 +572,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container pt-14 md:pt-20">
           <motion.span
             {...labelFade(0)}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 text-center"
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-12 text-center"
           >
             03 — The Identity Beneath the Identity
           </motion.span>
@@ -631,7 +631,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container py-16 md:py-28">
         <motion.span
           {...labelFade(0)}
-          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12 md:mb-16"
+          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-12 md:mb-16"
         >
           04 — The System We Built
         </motion.span>
@@ -644,7 +644,7 @@ export function SignatureCaseStudy() {
               className="pt-7"
               style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}
             >
-              <span className="block font-structural text-[9px] tracking-[0.28em] uppercase text-white/20 mb-5">
+              <span className="block font-structural text-[9px] tracking-[0.28em] uppercase text-white/40 mb-5">
                 0{i + 1}
               </span>
               <h3
@@ -689,7 +689,7 @@ export function SignatureCaseStudy() {
           <div className="pt-14 md:pt-20">
             <motion.span
               {...labelFade(0)}
-              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12"
+              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-12"
             >
               05 — The Work (Selected Snapshots)
             </motion.span>
@@ -771,7 +771,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container">
           <motion.span
             {...labelFade(0)}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-14 text-center"
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-14 text-center"
           >
             06 — The Transformation
           </motion.span>
@@ -811,7 +811,7 @@ export function SignatureCaseStudy() {
         <div className="pt-14 md:pt-20 max-w-2xl">
           <motion.span
             {...labelFade(0)}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-12"
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-12"
           >
             07 — The Outcome
           </motion.span>
