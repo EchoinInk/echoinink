@@ -1,6 +1,6 @@
 ECHO IN INK — Typography System
 Font Roles
-Faunces
+Fraunces
 Use for emotional display moments only:
 hero headlines
 manifesto lines
