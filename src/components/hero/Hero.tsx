@@ -7,7 +7,7 @@ import { heroContainer, heroReveal, EASE_LUXURY, DURATION, volumetricDrift } fro
 
 export function Hero() {
   return (
-    <section className="relative w-full max-md:min-h-0 md:min-h-screen flex items-start md:items-center justify-start overflow-hidden ei-section-hero pt-28 pb-16 md:pt-0 md:pb-0">
+    <section className="relative w-full max-md:min-h-0 md:min-h-screen flex items-start md:items-center justify-start overflow-hidden ei-section-hero pt-32 pb-16 md:pt-0 md:pb-0">
       {/* Background with cinematic depth layers */}
       <HeroBackground />
 
