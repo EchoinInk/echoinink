@@ -1,33 +1,81 @@
+/* ─── Neue Montreal — Practical & structural body font ────────── */
 @font-face {
-  font-family: 'Fraunces';
-  src: local('Fraunces'), local('Fraunces Regular');
+  font-family: 'Neue Montreal';
+  src: url('../assets/Neue Montreal/NeueMontreal-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Suisse Intl';
-  src: local('Suisse Intl'), local('Suisse Intl Regular');
+  font-family: 'Neue Montreal';
+  src: url('../assets/Neue Montreal/NeueMontreal-Italic.otf') format('opentype');
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Suisse Intl';
-  src: local('Suisse Intl Medium'), local('SuisseIntl-Medium');
+  font-family: 'Neue Montreal';
+  src: url('../assets/Neue Montreal/NeueMontreal-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/Neue Montreal/NeueMontreal-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/Neue Montreal/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/Neue Montreal/NeueMontreal-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/Neue Montreal/NeueMontreal-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/Neue Montreal/NeueMontreal-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
 @layer base {
+  /* Fraunces — display/emotional font (rules: "Faunces", loaded via Google Fonts in index.html) */
   .font-editorial {
     font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
   }
 
+  /* Neue Montreal — practical/structural font for all body, nav, buttons, UI */
   .font-structural {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Geist Mono — system labels, metadata, categories, tags (loaded via Google Fonts in index.html) */
+  .font-mono {
+    font-family: 'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace;
   }
 }
