@@ -75,7 +75,7 @@ export function Pathways() {
           {/* Section header - elegant and restrained */}
           <motion.div variants={driftUp} className="text-center mb-6 md:mb-10">
             <span
-              className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/32 mb-3 md:mb-4"
+              className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/45 mb-3 md:mb-4"
             >
               What We Design
             </span>

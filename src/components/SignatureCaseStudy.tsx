@@ -95,7 +95,7 @@ function ImagePlaceholder({
       {/* Label — fixed, outside parallax */}
       {label && (
         <div className="absolute bottom-0 left-0 p-4 md:p-5">
-          <span className="font-structural text-[8px] tracking-[0.35em] uppercase text-white/15">{label}</span>
+          <span className="font-structural text-[8px] tracking-[0.35em] uppercase text-white/30">{label}</span>
         </div>
       )}
     </div>
@@ -432,7 +432,7 @@ export function SignatureCaseStudy() {
         <div className="pt-16 md:pt-24 max-w-4xl">
           <motion.span
             {...labelFade(0)}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/20 mb-10 md:mb-14"
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/50 mb-10 md:mb-14"
           >
             Signature Case Study
           </motion.span>

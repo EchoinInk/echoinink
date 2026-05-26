@@ -149,7 +149,7 @@ export function HowWeWork() {
                     />
 
                     {/* Phase number — ceremonial typography */}
-                    <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/32 group-hover:text-white/52 transition-colors duration-500 mt-2 md:mt-3">
+                    <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/45 group-hover:text-white/52 transition-colors duration-500 mt-2 md:mt-3">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </div>
