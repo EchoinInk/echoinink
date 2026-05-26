@@ -552,7 +552,7 @@ export function SignatureCaseStudy() {
                 className="flex items-start gap-4"
               >
                 <span className="mt-[7px] shrink-0 w-1 h-1 rounded-full bg-white/20" />
-                <span className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.85]">
+                <span className="font-structural text-[13px] md:text-[14px] text-white/55 leading-[1.85]">
                   {item}
                 </span>
               </motion.li>
@@ -598,7 +598,7 @@ export function SignatureCaseStudy() {
                   className="flex items-start gap-4"
                 >
                   <span className="mt-[7px] shrink-0 w-1 h-1 rounded-full bg-white/20" />
-                  <span className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.85]">
+                  <span className="font-structural text-[13px] md:text-[14px] text-white/55 leading-[1.85]">
                     {item}
                   </span>
                 </motion.li>
@@ -657,7 +657,7 @@ export function SignatureCaseStudy() {
                 {card.points.map((pt) => (
                   <li key={pt} className="flex items-start gap-3">
                     <span className="mt-[7px] shrink-0 w-1 h-1 rounded-full bg-white/20" />
-                    <span className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.85]">
+                    <span className="font-structural text-[12px] md:text-[13px] text-white/55 leading-[1.85]">
                       {pt}
                     </span>
                   </li>
@@ -836,7 +836,7 @@ export function SignatureCaseStudy() {
                 className="flex items-start gap-5"
               >
                 <span className="mt-[8px] shrink-0 w-1 h-1 rounded-full bg-white/20" />
-                <span className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95]">
+                <span className="font-structural text-[13px] md:text-[14px] text-white/55 leading-[1.95]">
                   {item}
                 </span>
               </motion.li>
