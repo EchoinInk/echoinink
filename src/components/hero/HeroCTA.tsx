@@ -2,7 +2,7 @@ import { Button } from '../Button';
 
 export function HeroCTA() {
   return (
-    <div className="mt-5 md:mt-12 flex flex-wrap items-center gap-4 md:gap-6">
+    <div className="mt-8 md:mt-12 flex flex-wrap items-center gap-3 md:gap-6">
       {/* ═══════════════════════════════════════════════════════════════
           PRIMARY CTA — Start a Project
           Stronger contrast, confident border, clearer hover response
