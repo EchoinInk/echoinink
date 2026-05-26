@@ -1,0 +1,383 @@
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Cinematic Typography System
+   Semantic class architecture for consistent, authored
+   typographic expression across all pages.
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer base {
+  /* ── Editorial Hero Headlines ────────────────────────────── */
+  .text-editorial-hero {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    letter-spacing: -0.018em;
+    line-height: 1.05;
+    color: rgba(240, 244, 255, 0.94);
+  }
+
+  /* Hero lead — the line beneath the headline */
+  .text-editorial-hero-lead {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.48);
+    max-width: 44ch;
+  }
+
+  /* ── Manifesto Statements ────────────────────────────────── */
+  .text-manifesto {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: -0.006em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.34);
+    font-style: italic;
+  }
+
+  .text-manifesto-large {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+    color: rgba(232, 234, 246, 0.75);
+  }
+
+  /* ── Atmospheric Body Copy ───────────────────────────────── */
+  .text-atmospheric {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(0.8125rem, 1vw, 0.9375rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.95;
+    color: rgba(255, 255, 255, 0.60);
+  }
+
+  .text-atmospheric-large {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.58);
+    max-width: 52ch;
+  }
+
+  .text-atmospheric-small {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.56);
+  }
+
+  /* ── Structural Labels ───────────────────────────────────── */
+  .text-structural {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.38em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.42);
+  }
+
+  .text-structural-nav {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.60);
+  }
+
+  .text-structural-cta {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  /* ── Whisper Text ────────────────────────────────────────── */
+  .text-whisper {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.40);
+  }
+
+  .text-whisper-uppercase {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.40);
+  }
+
+  /* ── Cinematic Section Headings ────────────────────────── */
+  .text-cinematic-heading {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 300;
+    letter-spacing: -0.012em;
+    line-height: 1.18;
+    color: rgba(232, 234, 246, 0.92);
+  }
+
+  .text-cinematic-heading-large {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+    color: rgba(232, 234, 246, 0.90);
+  }
+
+  /* ── Card Typography ─────────────────────────────────────── */
+  .text-card-title {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: -0.008em;
+    line-height: 1.24;
+    color: rgba(232, 234, 246, 0.88);
+  }
+
+  .text-card-body {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  /* ── Quote / Testimonial ───────────────────────────────── */
+  .text-quote {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+    color: rgba(232, 234, 246, 0.75);
+  }
+}
+
+/* ── Link Utilities ────────────────────────────────────────── */
+@layer utilities {
+  .link-primary {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.50);
+    transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .link-primary:hover {
+    color: rgba(255, 255, 255, 0.75);
+  }
+
+  .link-subtle {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.40);
+    transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .link-subtle:hover {
+    color: rgba(255, 255, 255, 0.60);
+  }
+}
+
+/* ── Spacing Utilities for Typography ───────────────────── */
+@layer utilities {
+  .text-space-xs { margin-bottom: 0.5rem; }
+  .text-space-sm { margin-bottom: 1rem; }
+  .text-space-md { margin-bottom: 1.5rem; }
+  .text-space-lg { margin-bottom: 2.5rem; }
+  .text-space-xl { margin-bottom: 4rem; }
+}
+
+/* ── Backwards Compatibility Aliases ─────────────────────── */
+@layer base {
+  .ei-hero-display          { composes: text-editorial-hero; }
+  .ei-hero-lead             { composes: text-editorial-hero-lead; }
+  .ei-atmosphere-text       { composes: text-manifesto; }
+  .ei-quote                 { composes: text-manifesto-large; }
+  .ei-body-large            { composes: text-atmospheric; }
+  .ei-section-description   { composes: text-atmospheric-large; }
+  .ei-body                  { composes: text-atmospheric-small; }
+  .ei-eyebrow              { composes: text-structural; }
+  .ei-nav-text             { composes: text-structural-nav; }
+  .ei-cta-text             { composes: text-structural-cta; }
+  .ei-body-small           { composes: text-whisper; }
+  .ei-section-title        { composes: text-cinematic-heading; }
+  .ei-footer-heading       { composes: text-cinematic-heading-large; }
+  .ei-card-title           { composes: text-card-title; }
+  .ei-card-description     { composes: text-card-body; }
+}
+
+/* Note: CSS 'composes' is not standard. For true alias support,
+   use the Tailwind @apply directive below or import the semantic
+   classes directly. The above is conceptual — the @apply block
+   provides actual CSS alias support. */
+
+@layer base {
+  .ei-hero-display {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    letter-spacing: -0.018em;
+    line-height: 1.05;
+    color: rgba(240, 244, 255, 0.94);
+  }
+
+  .ei-hero-lead {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.48);
+    max-width: 44ch;
+  }
+
+  .ei-eyebrow {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.38em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.42);
+  }
+
+  .ei-section-title {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 300;
+    letter-spacing: -0.012em;
+    line-height: 1.18;
+    color: rgba(232, 234, 246, 0.92);
+  }
+
+  .ei-section-description {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.58);
+    max-width: 52ch;
+  }
+
+  .ei-body-large {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(0.8125rem, 1vw, 0.9375rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.95;
+    color: rgba(255, 255, 255, 0.60);
+  }
+
+  .ei-body {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.56);
+  }
+
+  .ei-body-small {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.40);
+  }
+
+  .ei-cta-text {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .ei-card-title {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: -0.008em;
+    line-height: 1.24;
+    color: rgba(232, 234, 246, 0.88);
+  }
+
+  .ei-card-description {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.62);
+  }
+
+  .ei-nav-text {
+    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.60);
+  }
+
+  .ei-footer-heading {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+    color: rgba(232, 234, 246, 0.90);
+  }
+
+  .ei-atmosphere-text {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: -0.006em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.34);
+    font-style: italic;
+  }
+
+  .ei-quote {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+    color: rgba(232, 234, 246, 0.75);
+  }
+}
