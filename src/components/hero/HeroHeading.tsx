@@ -44,22 +44,16 @@ export function HeroHeading() {
         Identity systems, immersive websites, creative direction, and atmospheric digital experiences.
       </motion.p>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          ENGAGEMENT FRAMING — Subtle commercial clarity
-          Quietly answers: what kinds of work do you do?
+     {/* ═══════════════════════════════════════════════════════════════
+          AUDIENCE POSITIONING — Emotional authority statement
+          Refined, emotionally intelligent, premium editorial tone
           ═══════════════════════════════════════════════════════════════ */}
-      <motion.p
+     <motion.p
         variants={heroReveal}
         className="font-structural text-[12px] tracking-[0.07em] text-white/42 mt-7"
       >
         Built for founders, artists, cultural projects, and emerging brands seeking emotionally resonant digital worlds.
       </motion.p>
-
-      {/* ═══════════════════════════════════════════════════════════════
-          AUDIENCE POSITIONING — Emotional authority statement
-          Refined, emotionally intelligent, premium editorial tone
-          ═══════════════════════════════════════════════════════════════ */}
-    
     </div>
   );
 }
