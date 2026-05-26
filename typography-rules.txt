@@ -7,7 +7,7 @@ manifesto lines
 poetic section titles
 cinematic statements
 editorial emphasis
-Faunces carries the emotional gravity of the brand.
+Fraunces carries the emotional gravity of the brand.
 It should feel atmospheric, restrained, and intentional.
 Neue Montreal
 Use for everything practical:
@@ -30,7 +30,7 @@ architectural references
 Geist Mono introduces subtle system intelligence and structured rhythm.
 Desktop Typography Rules
 Hero Headline
-Font: Faunces
+Font: Fraunces
 Size: 72–96px
 Line-height: 0.95–1.05
 Letter spacing: -0.04em
