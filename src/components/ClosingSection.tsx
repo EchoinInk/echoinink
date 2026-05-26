@@ -10,7 +10,7 @@ import {
 
 export function ClosingSection() {
   return (
-    <section className="relative py-14 md:py-20">
+    <section className="relative py-10 md:py-20">
       <motion.div
         className="relative z-10 max-w-3xl mx-auto px-6 text-center"
         initial="hidden"
@@ -24,7 +24,7 @@ export function ClosingSection() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
-          className="font-structural text-[10px] tracking-[0.28em] uppercase text-white/30 block mb-4"
+          className="font-structural text-[10px] tracking-[0.28em] uppercase text-white/30 block mb-3 md:mb-4"
         >
           Begin
         </motion.span>
@@ -36,7 +36,7 @@ export function ClosingSection() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.05 }}
-          className="font-editorial text-[2.1rem] md:text-[1.8rem] lg:text-[2.2rem] text-[#E8EAF6] leading-[1.24] mb-4"
+          className="font-editorial text-[2.1rem] md:text-[1.8rem] lg:text-[2.2rem] text-[#E8EAF6] leading-[1.24] mb-3 md:mb-4"
           style={{ letterSpacing: '-0.01em' }}
         >
           Ready to translate your world?
@@ -49,7 +49,7 @@ export function ClosingSection() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.1 }}
-          className="font-structural text-[15px] md:text-[16px] text-white/60 leading-[1.85] max-w-[40ch] mx-auto mb-8"
+          className="font-structural text-[15px] md:text-[16px] text-white/60 leading-[1.85] max-w-[40ch] mx-auto mb-6 md:mb-8"
         >
           If the resonance is there, we'll build the language your work has been waiting to speak.
         </motion.p>
