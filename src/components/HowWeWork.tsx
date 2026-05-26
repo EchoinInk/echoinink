@@ -161,7 +161,7 @@ export function HowWeWork() {
                       {phase.label}
                     </h3>
                     {/* Phase description — ceremonial clarity */}
-                    <p className="font-structural text-[13px] md:text-[14px] leading-[1.6] md:leading-[1.75] text-white/52 group-hover:text-white/68 transition-colors duration-500 max-w-[44ch]">
+                    <p className="font-structural text-[13px] md:text-[14px] leading-[1.6] md:leading-[1.75] text-white/60 group-hover:text-white/72 transition-colors duration-500 max-w-[44ch]">
                       {phase.description}
                     </p>
                   </div>
