@@ -36,9 +36,8 @@ export function HeroBackground() {
       {/* Bottom atmospheric fade */}
       <div
         aria-hidden="true"
-        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[7]"
+        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[7] h-[20vh] md:h-[32vh]"
         style={{
-          height: '32vh',
           background:
             'linear-gradient(to bottom, transparent, rgba(15,18,32,0.20) 40%, rgba(15,18,32,0.30) 72%, #0F1220 100%)',
         }}
