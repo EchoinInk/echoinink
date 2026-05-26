@@ -479,7 +479,7 @@ export function SignatureCaseStudy() {
             </motion.p>
             <motion.p
               {...fade(0.18)}
-              className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95] max-w-[58ch] mb-5"
+              className="font-structural text-[13px] md:text-[14px] text-white/55 leading-[1.95] max-w-[58ch] mb-5"
             >
               The founders came to us not with a product spec, but with a question: what
               would it feel like if your phone actually cared about your nervous system?
@@ -523,7 +523,7 @@ export function SignatureCaseStudy() {
             </motion.p>
             <motion.p
               {...fade(0.16)}
-              className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95] max-w-[48ch]"
+              className="font-structural text-[13px] md:text-[14px] text-white/55 leading-[1.95] max-w-[48ch]"
             >
               Permission to slow down. To breathe. To exist without the low-grade
               pressure of constant optimisation. Calm wasn't a design preference —
