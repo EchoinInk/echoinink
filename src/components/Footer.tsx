@@ -64,7 +64,7 @@ export default function Footer() {
                   <Link
                     key={link.label}
                     to={link.href}
-                    className="link-primary py-1"
+                    className="ei-link-distinguished link-primary py-1"
                   >
                     {link.label}
                   </Link>
@@ -79,7 +79,7 @@ export default function Footer() {
               </span>
               <a
                 href="mailto:hello@echoink.co"
-                className="link-primary block mb-2 py-1"
+                className="ei-link-distinguished link-primary block mb-2 py-1"
               >
                 hello@echoink.co
               </a>

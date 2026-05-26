@@ -15,7 +15,7 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
   // Secondary: Ghost button, calmer presence
   // Tertiary: Text link, minimal presence
   
-  const baseClasses = 'relative inline-flex items-center justify-center font-structural uppercase transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none touch-manipulation min-h-[48px] md:min-h-0';
+  const baseClasses = 'ei-focus-glow relative inline-flex items-center justify-center font-structural uppercase transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none touch-manipulation min-h-[48px] md:min-h-0';
 
   const variants = {
     // PRIMARY — Strongest visual weight
@@ -24,8 +24,8 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
       group
       px-8 py-4
       text-[10px] tracking-[0.16em] font-medium
-      text-white/[0.95] hover:text-white
-      border border-white/[0.22] hover:border-white/[0.35]
+      text-white/[0.95] hover:text-white focus-visible:text-white
+      border border-white/[0.22] hover:border-white/[0.35] focus-visible:border-white/[0.45]
       rounded-full
       bg-gradient-to-b from-white/[0.10] to-white/[0.03] hover:from-white/[0.14] hover:to-white/[0.05]
       shadow-[0_0_45px_-12px_rgba(99,102,241,0.18)] hover:shadow-[0_0_60px_-10px_rgba(99,102,241,0.30)]
@@ -40,8 +40,8 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
       group
       px-6 py-3
       text-[9px] tracking-[0.2em]
-      text-white/65 hover:text-white/88
-      border border-white/[0.10] hover:border-white/[0.20]
+      text-white/70 hover:text-white/90 focus-visible:text-white/90
+      border border-white/[0.12] hover:border-white/[0.22] focus-visible:border-white/[0.32]
       rounded-full
       bg-transparent hover:bg-white/[0.04]
       hover:shadow-[0_0_40px_-12px_rgba(99,102,241,0.10)]
@@ -53,7 +53,7 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
     tertiary: `
       group
       text-[10px] tracking-[0.14em]
-      text-white/50 hover:text-white/75
+      text-white/60 hover:text-white/80 focus-visible:text-white/85
       bg-transparent
       active:text-white/65
       active:scale-[0.98]

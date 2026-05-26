@@ -1,0 +1,127 @@
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Accessibility Layer
+   WCAG refinements without compromising cinematic identity.
+   All focus states are aesthetic, not generic.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Reduced Motion ────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  /* Framer Motion elements with infinite loops should still reduce */
+  [data-framer-motion],
+  .framer-motion {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ── Focus-Visible States ───────────────────────────────── */
+@layer base {
+  /* Nav links, text links, footer links */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 1.5px solid rgba(255, 255, 255, 0.4);
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  /* Rounded interactive elements (buttons, pills) */
+  .ei-focus-rounded:focus-visible,
+  a.ei-focus-rounded:focus-visible,
+  button.ei-focus-rounded:focus-visible {
+    outline: 1.5px solid rgba(255, 255, 255, 0.4);
+    outline-offset: 4px;
+    border-radius: 9999px;
+  }
+
+  /* Glow focus variant for atmospheric elements */
+  .ei-focus-glow:focus-visible {
+    outline: none;
+    box-shadow:
+      0 0 0 1.5px rgba(255, 255, 255, 0.4),
+      0 0 20px -4px rgba(139, 92, 246, 0.25);
+    outline-offset: 0;
+  }
+
+  /* Cards and blocks */
+  .ei-focus-block:focus-visible {
+    outline: 1.5px solid rgba(255, 255, 255, 0.35);
+    outline-offset: 3px;
+    border-radius: 8px;
+  }
+}
+
+/* ── Link Distinction (non-colour cues) ───────────────────── */
+@layer components {
+  /* Structural links — subtle underline reveal on hover/focus */
+  .ei-link-distinguished {
+    position: relative;
+    text-decoration: none;
+  }
+
+  .ei-link-distinguished::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .ei-link-distinguished:hover::after,
+  .ei-link-distinguished:focus-visible::after {
+    transform: scaleX(1);
+  }
+
+  /* Underlined by default (for essential readability) */
+  .ei-link-underline {
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.2);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.4s ease;
+  }
+
+  .ei-link-underline:hover,
+  .ei-link-underline:focus-visible {
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+/* ── Skip Link Enhancement ──────────────────────────────── */
+@layer base {
+  .sr-only:focus {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 9999;
+    padding: 0.75rem 1.25rem;
+    background: rgba(15, 18, 32, 0.95);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-family: 'Suisse Intl', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    clip: auto;
+    width: auto;
+    height: auto;
+    overflow: visible;
+    white-space: nowrap;
+    outline: 2px solid rgba(139, 92, 246, 0.5);
+    outline-offset: 2px;
+  }
+}
