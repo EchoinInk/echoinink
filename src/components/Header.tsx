@@ -21,11 +21,11 @@ export function Header() {
       transition={{ duration: DURATION.slower, ease: EASE_LUXURY, delay: 0.3 }}
       className="fixed top-0 left-0 w-full z-50 px-6 md:px-10 lg:px-12 py-5 md:py-7"
     >
-      {/* Refined background gradient for readability — softer, more atmospheric */}
+      {/* Refined background gradient for readability — stronger separation */}
       <div
-        className="absolute inset-0 pointer-events-none"
+        className="absolute inset-0 pointer-events-none backdrop-blur-[1px]"
         style={{
-          background: 'linear-gradient(to bottom, rgba(5,7,16,0.7) 0%, rgba(5,7,16,0.35) 45%, transparent 100%)',
+          background: 'linear-gradient(to bottom, rgba(5,7,16,0.78) 0%, rgba(5,7,16,0.42) 45%, transparent 100%)',
         }}
       />
 
