@@ -9,7 +9,7 @@ export function HeroBackground() {
   return (
     <>
       {/* Background image */}
-      <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+      <div aria-hidden="true" className="absolute inset-0 overflow-hidden bg-[#060816]">
         <picture>
           <source media="(max-width: 767px)" srcSet={mobileAvif} type="image/avif" />
           <source media="(max-width: 767px)" srcSet={mobileWebp} type="image/webp" />
@@ -19,7 +19,7 @@ export function HeroBackground() {
             src={widePng}
             alt=""
             aria-hidden="true"
-            className="absolute top-0 left-0 w-full h-full object-cover object-center"
+            className="absolute top-0 left-0 w-full h-auto object-contain object-top md:inset-0 md:h-full md:object-cover md:object-center"
           />
         </picture>
       </div>
