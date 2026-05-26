@@ -44,8 +44,8 @@ export function EmergingSystems() {
 
           {/* Horizontal cards */}
           <div className="flex flex-col md:flex-row gap-5 md:gap-6 items-stretch justify-center">
-            <motion.div variants={driftUp} className="flex-1">
-              <Link to="/systems" className="block h-full">
+            <motion.article variants={driftUp} className="flex-1">
+              <Link to="/systems" className="ei-focus-block block h-full rounded-[28px]">
                 <GlowCard
                   title="Echo Systems"
                   description={`Intentional frameworks for \nbuilding identities, stories, and \ndigital worlds with cinematic \nclarity and creative precision.`}
@@ -54,9 +54,9 @@ export function EmergingSystems() {
                   className="h-full min-h-[200px]"
                 />
               </Link>
-            </motion.div>
-            <motion.div variants={driftUp} className="flex-1">
-              <Link to="/vault" className="block h-full">
+            </motion.article>
+            <motion.article variants={driftUp} className="flex-1">
+              <Link to="/vault" className="ei-focus-block block h-full rounded-[28px]">
                 <GlowCard
                   title="Echo Vault"
                   description={`A curated archive of textures, \nreferences, and emotional \nenvironments for creators shaping \natmosphere with intention.`}
@@ -65,7 +65,7 @@ export function EmergingSystems() {
                   className="h-full min-h-[200px]"
                 />
               </Link>
-            </motion.div>
+            </motion.article>
           </div>
         </motion.div>
       </Container>
