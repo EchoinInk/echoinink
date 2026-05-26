@@ -1,11 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  fadeSoft, 
-  driftUp, 
+import { PageShell } from '@/components/system';
+import {
+  fadeSoft,
+  driftUp,
   staggerContainer,
   STAGGER,
-  VIEWPORT 
+  VIEWPORT
 } from '@/lib/motion-cinematic';
 import { PageCTA } from '@/components/PageCTA';
 
@@ -49,14 +50,11 @@ export default function SessionsPage() {
   ];
 
   return (
-    <main className="relative">
+    <PageShell atmosphere="sessions" withTopSpacing={false}>
       <Helmet>
         <title>Signal Session — Echo in Ink</title>
         <meta name="description" content="A focused creative direction experience designed to uncover the real centre beneath noise, fragmentation, or emotional misalignment." />
       </Helmet>
-
-      {/* Atmospheric base */}
-      <div className="absolute inset-0 ei-glow-aqua opacity-20 pointer-events-none" />
 
       {/* Header */}
       <section className="relative ei-section-expansive overflow-hidden">
@@ -343,6 +341,6 @@ export default function SessionsPage() {
       </section>
 
       <PageCTA page="sessions" />
-    </main>
+    </PageShell>
   );
 }

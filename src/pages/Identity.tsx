@@ -1,11 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  fadeSoft, 
-  driftUp, 
+import { PageShell } from '@/components/system';
+import {
+  fadeSoft,
+  driftUp,
   staggerContainer,
   STAGGER,
-  VIEWPORT 
+  VIEWPORT
 } from '@/lib/motion-cinematic';
 import { PageCTA } from '@/components/PageCTA';
 
@@ -49,14 +50,11 @@ export default function Identity() {
   ];
 
   return (
-    <main className="relative">
+    <PageShell atmosphere="identity" withTopSpacing={false}>
       <Helmet>
         <title>Identity Translation — Echo in Ink</title>
         <meta name="description" content="Identity Translation — where inner worlds become coherent external form." />
       </Helmet>
-
-      {/* Atmospheric base */}
-      <div className="absolute inset-0 ei-glow-violet opacity-25 pointer-events-none" />
 
       {/* Header */}
       <section className="relative ei-section-expansive overflow-hidden">
@@ -313,6 +311,6 @@ export default function Identity() {
       </section>
 
       <PageCTA page="identity" />
-    </main>
+    </PageShell>
   );
 }

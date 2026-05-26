@@ -1,25 +1,23 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  fadeSoft, 
-  driftUp, 
+import { PageShell } from '@/components/system';
+import {
+  fadeSoft,
+  driftUp,
   staggerContainer,
   STAGGER,
-  VIEWPORT 
+  VIEWPORT
 } from '@/lib/motion-cinematic';
 import { SignatureCaseStudy } from '@/components/SignatureCaseStudy';
 import { PageCTA } from '@/components/PageCTA';
 
 export function LumoPage() {
   return (
-    <main className="relative">
+    <PageShell atmosphere="works" withTopSpacing={false}>
       <Helmet>
         <title>Lumo — Echo in Ink</title>
         <meta name="description" content="A signature case study exploring atmospheric identity, narrative design, and cinematic digital experience." />
       </Helmet>
-
-      {/* Atmospheric base */}
-      <div className="absolute inset-0 ei-glow-violet opacity-25 pointer-events-none" />
 
       {/* Full case study */}
       <SignatureCaseStudy />
@@ -66,6 +64,6 @@ export function LumoPage() {
       </section>
 
       <PageCTA page="worlds" />
-    </main>
+    </PageShell>
   );
 }

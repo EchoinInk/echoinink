@@ -1,11 +1,12 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { 
-  fadeSoft, 
-  driftUp, 
+import { PageShell } from '@/components/system';
+import {
+  fadeSoft,
+  driftUp,
   staggerContainer,
   STAGGER,
-  VIEWPORT 
+  VIEWPORT
 } from '@/lib/motion-cinematic';
 import { PageCTA } from '@/components/PageCTA';
 
@@ -63,20 +64,11 @@ export default function WorldsPage() {
   ];
 
   return (
-    <main className="relative">
+    <PageShell atmosphere="worlds" withTopSpacing={false}>
       <Helmet>
         <title>Worlds — Echo in Ink</title>
         <meta name="description" content="Studio Systems Build — identity extended into living systems." />
       </Helmet>
-
-      {/* Atmospheric base */}
-      <div className="absolute inset-0 ei-glow-violet opacity-30 pointer-events-none" />
-      <div 
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: 'radial-gradient(circle at 80% 20%, rgba(168,85,247,0.03) 0%, transparent 50%)',
-        }}
-      />
 
       {/* Header */}
       <section className="relative ei-section-expansive overflow-hidden">
@@ -370,6 +362,6 @@ export default function WorldsPage() {
       </section>
 
       <PageCTA page="worlds" />
-    </main>
+    </PageShell>
   );
 }
