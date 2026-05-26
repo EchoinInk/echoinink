@@ -25,10 +25,10 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
       px-8 py-4
       text-[10px] tracking-[0.16em] font-medium
       text-white/[0.95] hover:text-white
-      border border-white/[0.25] hover:border-white/[0.40]
+      border border-white/[0.22] hover:border-white/[0.35]
       rounded-full
       bg-gradient-to-b from-white/[0.10] to-white/[0.03] hover:from-white/[0.14] hover:to-white/[0.05]
-      shadow-[0_0_45px_-12px_rgba(99,102,241,0.20)] hover:shadow-[0_0_60px_-10px_rgba(99,102,241,0.32)]
+      shadow-[0_0_45px_-12px_rgba(99,102,241,0.18)] hover:shadow-[0_0_60px_-10px_rgba(99,102,241,0.30)]
       hover:-translate-y-[2px]
       active:translate-y-0
       transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
@@ -38,12 +38,11 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
     secondary: `
       group
       px-6 py-3
-      text-[10px] tracking-[0.18em]
-      text-white/68 hover:text-white/90
-      border border-white/[0.12] hover:border-white/[0.22]
+      text-[9px] tracking-[0.2em]
+      text-white/60 hover:text-white/85
+      border border-white/[0.08] hover:border-white/[0.15]
       rounded-full
-      bg-transparent hover:bg-white/[0.05]
-      shadow-[0_0_20px_-8px_rgba(99,102,241,0.08)] hover:shadow-[0_0_35px_-8px_rgba(99,102,241,0.18)]
+      bg-transparent hover:bg-white/[0.03]
       hover:-translate-y-[1px]
     `,
     // TERTIARY — Text link only, minimal presence
