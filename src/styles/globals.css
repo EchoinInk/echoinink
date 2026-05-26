@@ -1,9 +1,11 @@
 @import './tokens.css' layer(base);
 @import './typography.css' layer(base);
 @import './typography-enhanced.css' layer(base);
+@import './typography-system.css' layer(base);
 @import './layout.css' layer(base);
 @import './spacing-enhanced.css' layer(base);
 @import './atmosphere-enhanced.css' layer(components);
+@import './atmosphere.css' layer(components);
 @import './hero.css' layer(components);
 @import './mobile-refinements.css' layer(utilities);
 @import './forms-luxury.css' layer(components);

@@ -217,29 +217,6 @@
 
 /* ── Backwards Compatibility Aliases ─────────────────────── */
 @layer base {
-  .ei-hero-display          { composes: text-editorial-hero; }
-  .ei-hero-lead             { composes: text-editorial-hero-lead; }
-  .ei-atmosphere-text       { composes: text-manifesto; }
-  .ei-quote                 { composes: text-manifesto-large; }
-  .ei-body-large            { composes: text-atmospheric; }
-  .ei-section-description   { composes: text-atmospheric-large; }
-  .ei-body                  { composes: text-atmospheric-small; }
-  .ei-eyebrow              { composes: text-structural; }
-  .ei-nav-text             { composes: text-structural-nav; }
-  .ei-cta-text             { composes: text-structural-cta; }
-  .ei-body-small           { composes: text-whisper; }
-  .ei-section-title        { composes: text-cinematic-heading; }
-  .ei-footer-heading       { composes: text-cinematic-heading-large; }
-  .ei-card-title           { composes: text-card-title; }
-  .ei-card-description     { composes: text-card-body; }
-}
-
-/* Note: CSS 'composes' is not standard. For true alias support,
-   use the Tailwind @apply directive below or import the semantic
-   classes directly. The above is conceptual — the @apply block
-   provides actual CSS alias support. */
-
-@layer base {
   .ei-hero-display {
     font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
     font-size: clamp(2.5rem, 5vw, 4rem);
