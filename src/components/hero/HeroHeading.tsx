@@ -41,7 +41,7 @@ export function HeroHeading() {
           letterSpacing: '0.01em',
         }}
       >
-        Identity systems and digital experiences for founders who want their brands to feel intentional, resonant, and unmistakably their own.
+        Identity systems, immersive websites, creative direction, and atmospheric digital experiences.
       </motion.p>
 
       {/* ═══════════════════════════════════════════════════════════════
@@ -52,19 +52,14 @@ export function HeroHeading() {
         variants={heroReveal}
         className="font-structural text-[12px] tracking-[0.07em] text-white/42 mt-7"
       >
-        Identity systems, immersive websites, creative direction, and atmospheric digital experiences.
+        Built for founders, artists, cultural projects, and emerging brands seeking emotionally resonant digital worlds.
       </motion.p>
 
       {/* ═══════════════════════════════════════════════════════════════
           AUDIENCE POSITIONING — Emotional authority statement
           Refined, emotionally intelligent, premium editorial tone
           ═══════════════════════════════════════════════════════════════ */}
-      <motion.p
-        variants={heroReveal}
-        className="font-structural text-[12px] tracking-[0.04em] text-white/40 mt-5"
-      >
-        Built for founders, artists, cultural projects, and emerging brands seeking emotionally resonant digital worlds.
-      </motion.p>
+    
     </div>
   );
 }
