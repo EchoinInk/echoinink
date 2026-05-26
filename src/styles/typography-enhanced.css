@@ -29,12 +29,12 @@
 
   /* ── Section Headings ─────────────────────────────────────── */
   
-  /* Section Eyebrow — small uppercase label */
+  /* Section Eyebrow — system label (Geist Mono, 0.14em tracking per rules) */
   .ei-eyebrow {
-    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
-    font-size: 0.625rem;
-    font-weight: 500;
-    letter-spacing: 0.38em;
+    font-family: 'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
     line-height: 1.4;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.42);
@@ -63,47 +63,46 @@
 
   /* ── Editorial Text Blocks ────────────────────────────────── */
   
-  /* Body Large — philosophical text, main reading */
+  /* Body Large — philosophical text, primary reading (min 16px, 75–85% opacity per rules) */
   .ei-body-large {
     font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
-    font-size: clamp(0.8125rem, 1vw, 0.9375rem);
+    font-size: clamp(1rem, 1.1vw, 1.0625rem);
     font-weight: 400;
-    letter-spacing: 0.01em;
-    line-height: 1.95;
-    color: rgba(255, 255, 255, 0.60);
+    letter-spacing: -0.005em;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.78);
   }
 
-  /* Body Standard — general content */
+  /* Body Standard — general content (min 16px, 75–85% opacity per rules) */
   .ei-body {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.76);
+  }
+
+  /* Body Small — captions, card descriptions, metadata (14–16px, 58–68% opacity) */
+  .ei-body-small {
     font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
-    letter-spacing: 0.01em;
-    line-height: 1.75;
-    color: rgba(255, 255, 255, 0.56);
-  }
-
-  /* Body Small — captions, metadata */
-  .ei-body-small {
-    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.02em;
+    letter-spacing: -0.003em;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.40);
+    color: rgba(255, 255, 255, 0.58);
   }
 
   /* ── UI Elements ──────────────────────────────────────────── */
   
-  /* Button / CTA Text */
+  /* Button / CTA Text (14–15px, 0.01em tracking, no uppercase per rules) */
   .ei-cta-text {
     font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
-    font-size: 0.6875rem;
+    font-size: 0.875rem;
     font-weight: 500;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.01em;
     line-height: 1.4;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.90);
   }
 
   /* Card Title */
@@ -116,22 +115,22 @@
     color: rgba(232, 234, 246, 0.88);
   }
 
-  /* Card Description */
+  /* Card Description (14–16px, small body per rules, 58–68% opacity) */
   .ei-card-description {
     font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 400;
-    letter-spacing: 0.01em;
-    line-height: 1.75;
+    letter-spacing: -0.003em;
+    line-height: 1.65;
     color: rgba(255, 255, 255, 0.62);
   }
 
-  /* Navigation */
+  /* Navigation (13–14px, 0.02em tracking per rules) */
   .ei-nav-text {
     font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
-    font-size: 0.6875rem;
+    font-size: 0.8125rem;
     font-weight: 500;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.02em;
     line-height: 1.4;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.60);

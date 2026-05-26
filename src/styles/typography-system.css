@@ -17,7 +17,7 @@
 
   /* Hero lead — the line beneath the headline */
   .text-editorial-hero-lead {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: clamp(0.875rem, 1.2vw, 1rem);
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -48,7 +48,7 @@
 
   /* ── Atmospheric Body Copy ───────────────────────────────── */
   .text-atmospheric {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: clamp(0.8125rem, 1vw, 0.9375rem);
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -57,7 +57,7 @@
   }
 
   .text-atmospheric-large {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.9375rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -67,7 +67,7 @@
   }
 
   .text-atmospheric-small {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -77,7 +77,7 @@
 
   /* ── Structural Labels ───────────────────────────────────── */
   .text-structural {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.625rem;
     font-weight: 500;
     letter-spacing: 0.38em;
@@ -87,7 +87,7 @@
   }
 
   .text-structural-nav {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.18em;
@@ -97,7 +97,7 @@
   }
 
   .text-structural-cta {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.22em;
@@ -108,7 +108,7 @@
 
   /* ── Whisper Text ────────────────────────────────────────── */
   .text-whisper {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 0.02em;
@@ -117,7 +117,7 @@
   }
 
   .text-whisper-uppercase {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.625rem;
     font-weight: 500;
     letter-spacing: 0.22em;
@@ -156,7 +156,7 @@
   }
 
   .text-card-body {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.8125rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -178,7 +178,7 @@
 /* ── Link Utilities ────────────────────────────────────────── */
 @layer utilities {
   .link-primary {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.22em;
@@ -192,7 +192,7 @@
   }
 
   .link-subtle {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.625rem;
     font-weight: 500;
     letter-spacing: 0.22em;
@@ -227,7 +227,7 @@
   }
 
   .ei-hero-lead {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: clamp(0.875rem, 1.2vw, 1rem);
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -237,7 +237,7 @@
   }
 
   .ei-eyebrow {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.625rem;
     font-weight: 500;
     letter-spacing: 0.38em;
@@ -256,7 +256,7 @@
   }
 
   .ei-section-description {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.9375rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -266,7 +266,7 @@
   }
 
   .ei-body-large {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: clamp(0.8125rem, 1vw, 0.9375rem);
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -275,7 +275,7 @@
   }
 
   .ei-body {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -284,7 +284,7 @@
   }
 
   .ei-body-small {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 0.02em;
@@ -293,7 +293,7 @@
   }
 
   .ei-cta-text {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.22em;
@@ -312,7 +312,7 @@
   }
 
   .ei-card-description {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.8125rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -321,7 +321,7 @@
   }
 
   .ei-nav-text {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.18em;
