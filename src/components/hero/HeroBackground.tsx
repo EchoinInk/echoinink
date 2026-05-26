@@ -11,14 +11,15 @@ export function HeroBackground() {
       {/* Background image */}
       <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
         <picture>
-          <source media="(max-aspect-ratio: 9/16)" srcSet={mobileAvif} type="image/avif" />
-          <source media="(max-aspect-ratio: 9/16)" srcSet={mobileWebp} type="image/webp" />
+          <source media="(max-width: 767px)" srcSet={mobileAvif} type="image/avif" />
+          <source media="(max-width: 767px)" srcSet={mobileWebp} type="image/webp" />
           <source srcSet={wideAvif} type="image/avif" />
           <source srcSet={wideWebp} type="image/webp" />
           <img
             src={widePng}
             alt=""
-            className="absolute top-0 left-0 w-full h-full object-cover object-center max-md:object-[center_32%]"
+            aria-hidden="true"
+            className="absolute top-0 left-0 w-full h-full object-cover object-center"
           />
         </picture>
       </div>
