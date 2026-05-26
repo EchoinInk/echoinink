@@ -9,7 +9,7 @@ export function HeroHeading() {
           ═══════════════════════════════════════════════════════════════ */}
       <motion.span
         variants={heroReveal}
-        className="font-structural text-[10px] tracking-[0.22em] uppercase text-white/45 block mb-4"
+        className="font-structural text-[11px] tracking-[0.2em] uppercase text-white/52 block mb-5"
       >
         Echo in Ink
       </motion.span>
@@ -20,10 +20,10 @@ export function HeroHeading() {
           ═══════════════════════════════════════════════════════════════ */}
       <h1
         id="hero-heading"
-        className="font-editorial text-[2rem] md:text-[2.75rem] lg:text-[3.25rem] text-white/90 leading-[1.1] tracking-tight max-w-[18ch]"
+        className="font-editorial text-[2.25rem] md:text-[3.1rem] lg:text-[3.7rem] text-white/92 leading-[1.06] tracking-tight max-w-[22ch]"
         style={{
-          letterSpacing: '-0.02em',
-          textShadow: '0 0 80px rgba(99, 102, 241, 0.06)',
+          letterSpacing: '-0.025em',
+          textShadow: '0 0 90px rgba(99, 102, 241, 0.08)',
         }}
       >
         Designing the worlds your work lives in.
@@ -35,9 +35,9 @@ export function HeroHeading() {
           ═══════════════════════════════════════════════════════════════ */}
       <motion.p
         variants={heroReveal}
-        className="font-structural text-[13px] md:text-[14px] leading-[1.65] max-w-[58ch] mt-6"
+        className="font-structural text-[14px] md:text-[15px] leading-[1.65] max-w-[62ch] mt-7"
         style={{
-          color: 'rgba(255,255,255,0.47)',
+          color: 'rgba(255,255,255,0.55)',
           letterSpacing: '0.01em',
         }}
       >
@@ -50,7 +50,7 @@ export function HeroHeading() {
           ═══════════════════════════════════════════════════════════════ */}
       <motion.p
         variants={heroReveal}
-        className="font-structural text-[11px] tracking-[0.08em] text-white/35 mt-6"
+        className="font-structural text-[12px] tracking-[0.07em] text-white/42 mt-7"
       >
         Identity systems, immersive websites, creative direction, and atmospheric digital experiences.
       </motion.p>
@@ -61,7 +61,7 @@ export function HeroHeading() {
           ═══════════════════════════════════════════════════════════════ */}
       <motion.p
         variants={heroReveal}
-        className="font-structural text-[11px] tracking-[0.04em] text-white/32 mt-4"
+        className="font-structural text-[12px] tracking-[0.04em] text-white/40 mt-5"
       >
         Built for founders, artists, cultural projects, and emerging brands seeking emotionally resonant digital worlds.
       </motion.p>

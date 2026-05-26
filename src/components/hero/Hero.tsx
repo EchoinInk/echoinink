@@ -72,7 +72,7 @@ export function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: DURATION.slower * 1.5, ease: EASE_LUXURY, delay: 0.8 }}
         style={{
-          background: 'radial-gradient(ellipse 35% 30% at 26% 36%, rgba(255,255,255,0.015) 0%, rgba(232,121,249,0.025) 30%, rgba(168,85,247,0.015) 60%, transparent 80%)',
+          background: 'radial-gradient(ellipse 35% 30% at 26% 36%, rgba(255,255,255,0.012) 0%, rgba(232,121,249,0.018) 30%, rgba(168,85,247,0.012) 60%, transparent 80%)',
           filter: 'blur(50px)',
         }}
       />
@@ -98,7 +98,7 @@ export function Hero() {
           ═══════════════════════════════════════════════════════════════ */}
       <div className="ei-container w-full relative z-10">
         <motion.div
-          className="max-w-[600px] items-start text-left"
+          className="max-w-[680px] items-start text-left"
           style={{ transform: 'translateY(4vh)' }}
           variants={heroContainer}
           initial="hidden"
