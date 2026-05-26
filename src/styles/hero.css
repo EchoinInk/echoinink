@@ -132,10 +132,10 @@
     padding: 1px;
     background: linear-gradient(
       135deg,
-      rgba(99, 102, 241, 0.45) 0%,
-      rgba(139, 92, 246, 0.38) 35%,
-      rgba(167, 139, 250, 0.32) 70%,
-      rgba(232, 121, 249, 0.28) 100%
+      rgba(99, 102, 241, 0.60) 0%,
+      rgba(139, 92, 246, 0.50) 35%,
+      rgba(167, 139, 250, 0.42) 70%,
+      rgba(232, 121, 249, 0.35) 100%
     );
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -143,12 +143,12 @@
     mask-composite: exclude;
     pointer-events: none;
     z-index: -1;
-    opacity: 0.65;
+    opacity: 0.8;
     transition: opacity 0.6s var(--ei-ease-soft);
   }
 
   .ei-btn-primary-cinematic:hover::before {
-    opacity: 0.9;
+    opacity: 1;
   }
 
   .ei-btn-primary-cinematic::after {
@@ -158,13 +158,13 @@
     border-radius: 9999px;
     background: linear-gradient(
       135deg,
-      rgba(99, 102, 241, 0.15),
-      rgba(139, 92, 246, 0.10),
-      rgba(167, 139, 250, 0.08),
-      rgba(232, 121, 249, 0.05)
+      rgba(99, 102, 241, 0.22),
+      rgba(139, 92, 246, 0.15),
+      rgba(167, 139, 250, 0.12),
+      rgba(232, 121, 249, 0.08)
     );
     filter: blur(18px);
-    opacity: 0;
+    opacity: 0.4;
     transition: opacity 0.7s var(--ei-ease-soft);
     z-index: -2;
   }
@@ -191,10 +191,10 @@
     padding: 1px;
     background: linear-gradient(
       135deg,
-      rgba(99, 102, 241, 0.32) 0%,
-      rgba(139, 92, 246, 0.26) 35%,
-      rgba(167, 139, 250, 0.22) 70%,
-      rgba(232, 121, 249, 0.18) 100%
+      rgba(99, 102, 241, 0.42) 0%,
+      rgba(139, 92, 246, 0.34) 35%,
+      rgba(167, 139, 250, 0.28) 70%,
+      rgba(232, 121, 249, 0.22) 100%
     );
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -202,12 +202,12 @@
     mask-composite: exclude;
     pointer-events: none;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.65;
     transition: opacity 0.6s var(--ei-ease-soft);
   }
 
   .ei-btn-secondary-cinematic:hover::before {
-    opacity: 0.75;
+    opacity: 0.9;
   }
 
   .ei-btn-secondary-cinematic::after {
@@ -217,19 +217,19 @@
     border-radius: 9999px;
     background: linear-gradient(
       135deg,
-      rgba(99, 102, 241, 0.10),
-      rgba(139, 92, 246, 0.07),
-      rgba(167, 139, 250, 0.05),
-      rgba(232, 121, 249, 0.03)
+      rgba(99, 102, 241, 0.14),
+      rgba(139, 92, 246, 0.10),
+      rgba(167, 139, 250, 0.07),
+      rgba(232, 121, 249, 0.05)
     );
     filter: blur(16px);
-    opacity: 0;
+    opacity: 0.25;
     transition: opacity 0.7s var(--ei-ease-soft);
     z-index: -2;
   }
 
   .ei-btn-secondary-cinematic:hover::after {
-    opacity: 1;
+    opacity: 0.7;
   }
 
   /* Legacy button (deprecated, for backwards compatibility) */

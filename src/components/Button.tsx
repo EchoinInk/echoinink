@@ -26,12 +26,13 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
       px-8 py-4
       text-[10px] tracking-[0.16em] font-medium
       text-white/[0.95] hover:text-white focus-visible:text-white
-      border border-white/[0.08] hover:border-white/[0.12] focus-visible:border-white/[0.15]
+      border border-white/[0.12] hover:border-white/[0.18] focus-visible:border-white/[0.22]
       rounded-full
-      bg-gradient-to-b from-white/[0.08] to-white/[0.02] hover:from-white/[0.10] hover:to-white/[0.03]
-      hover:-translate-y-[2px]
+      bg-gradient-to-b from-white/[0.10] to-white/[0.03] hover:from-white/[0.12] hover:to-white/[0.04]
+      shadow-[0_0_50px_-15px_rgba(99,102,241,0.20)] hover:shadow-[0_0_70px_-12px_rgba(99,102,241,0.35)]
+      hover:-translate-y-[2px] hover:scale-[1.01]
       active:translate-y-0 active:scale-[0.98]
-      active:bg-white/[0.12]
+      active:bg-white/[0.14]
       transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
     `,
     // SECONDARY — Quieter edge treatment, more subdued gradient
@@ -42,12 +43,13 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
       px-6 py-3
       text-[9px] tracking-[0.2em]
       text-white/70 hover:text-white/90 focus-visible:text-white/90
-      border border-white/[0.06] hover:border-white/[0.10] focus-visible:border-white/[0.14]
+      border border-white/[0.10] hover:border-white/[0.16] focus-visible:border-white/[0.20]
       rounded-full
-      bg-gradient-to-b from-white/[0.04] to-transparent hover:from-white/[0.06]
-      hover:-translate-y-[1px]
+      bg-gradient-to-b from-white/[0.06] to-transparent hover:from-white/[0.08]
+      shadow-[0_0_40px_-12px_rgba(99,102,241,0.12)] hover:shadow-[0_0_55px_-10px_rgba(99,102,241,0.22)]
+      hover:-translate-y-[1px] hover:scale-[1.005]
       active:translate-y-0 active:scale-[0.98]
-      active:bg-white/[0.08]
+      active:bg-white/[0.10]
       transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
     `,
     // TERTIARY — Text link only, minimal presence
