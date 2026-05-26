@@ -1,82 +1,86 @@
 import { Helmet } from 'react-helmet-async';
 import { PageShell } from '@/components/system';
 import { Hero } from '@/components/hero/Hero';
-import { CinematicStatement } from '@/components/CinematicStatement';
 import { Philosophy } from '@/components/Philosophy';
-import { EcosystemPathways } from '@/components/EcosystemPathways';
-import { SelectedWorks } from '@/components/SelectedWorks';
+import { WhatWeCreate } from '@/components/WhatWeCreate';
 import { Pathways } from '@/components/Pathways';
-import { SystemPreview } from '@/components/SystemPreview';
+import { HowWeWork } from '@/components/HowWeWork';
+import { CinematicStatement } from '@/components/CinematicStatement';
+import { TrustSignal } from '@/components/TrustSignal';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
-import { WhyPeopleComeHere } from '@/components/WhyPeopleComeHere';
-import { HumanSignal } from '@/components/HumanSignal';
+import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/ClosingSection';
 
 export function Home() {
   return (
     <PageShell id="main-content" atmosphere="default" withTopSpacing={false}>
       <Helmet>
-        <title>Echo in Ink — Identity systems, atmospheric worlds, reflective tools</title>
+        <title>Echo in Ink — Calm, intentional design studio</title>
         <meta
           name="description"
-          content="Echo in Ink builds identity systems, atmospheric worlds, and reflective tools for founders and artists. Studio, Systems, and Lumo."
+          content="Echo in Ink is a creative studio exploring identity, storytelling, and immersive digital expression through art, design, and atmospheric media."
         />
       </Helmet>
 
       {/* ═══════════════════════════════════════════════════════════════
-          1. HERO — Cinematic entrance with volumetric depth layers
+          HERO — Cinematic entrance with volumetric depth layers
           ═══════════════════════════════════════════════════════════════ */}
       <Hero />
 
       {/* ═══════════════════════════════════════════════════════════════
-          2. ETHOS — "A different frequency" — tonal breathing moment
-          ═══════════════════════════════════════════════════════════════ */}
-      <CinematicStatement />
-
-      {/* ═══════════════════════════════════════════════════════════════
-          3. PHILOSOPHY — "Atmosphere is not decoration…"
+          PHILOSOPHY — Editorial foundation
           ═══════════════════════════════════════════════════════════════ */}
       <Philosophy />
 
       {/* ═══════════════════════════════════════════════════════════════
-          4. ECOSYSTEM PATHWAYS — Studio → Systems → Lumo
+          WHAT WE CREATE — Grounded functional anchor
+          Explains Echo in Ink's capabilities with editorial restraint
           ═══════════════════════════════════════════════════════════════ */}
-      <EcosystemPathways />
+      <WhatWeCreate />
 
       {/* ═══════════════════════════════════════════════════════════════
-          5. SELECTED WORKS — Archive preview
-          ═══════════════════════════════════════════════════════════════ */}
-      <SelectedWorks />
-
-      {/* ═══════════════════════════════════════════════════════════════
-          6. STUDIO OFFERS — Sessions / Identity / Worlds
+          PATHWAYS — Core offerings (Identity, Sessions, Worlds)
           ═══════════════════════════════════════════════════════════════ */}
       <Pathways />
 
       {/* ═══════════════════════════════════════════════════════════════
-          7. SYSTEMS PREVIEW — Frameworks, tools, GPT systems
+          HOW WE WORK — Engagement clarity
+          Explains collaboration flow with elegant restraint
           ═══════════════════════════════════════════════════════════════ */}
-      <SystemPreview />
+      <HowWeWork />
 
       {/* ═══════════════════════════════════════════════════════════════
-          8. LUMO PREVIEW — Reflective technology, featured work
+          CINEMATIC STATEMENT — Tempo change, breathing moment
+          Full-width atmospheric statement with tonal contrast
+          ═══════════════════════════════════════════════════════════════ */}
+      <CinematicStatement />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          TRUST SIGNAL — Restrained trust mechanism
+          Understated project types, authored not marketed
+          ═══════════════════════════════════════════════════════════════ */}
+      <TrustSignal />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          LUMO CASE STUDY — Featured work, editorial presentation
           ═══════════════════════════════════════════════════════════════ */}
       <LumoCaseStudyTeaser />
 
       {/* ═══════════════════════════════════════════════════════════════
-          9. WHY PEOPLE COME HERE — Editorial resonance list
+          EMERGING SYSTEMS — Active archives and future worlds
           ═══════════════════════════════════════════════════════════════ */}
-      <WhyPeopleComeHere />
+      <EmergingSystems />
 
       {/* ═══════════════════════════════════════════════════════════════
-          10. HUMAN SIGNAL — Founder voice, intimate authored moment
-          ═══════════════════════════════════════════════════════════════ */}
-      <HumanSignal />
-
-      {/* ═══════════════════════════════════════════════════════════════
-          11. ATMOSPHERIC CLOSING — "Start a World"
+          CLOSING — Call to action
+          Seamless transition, no bridge needed
           ═══════════════════════════════════════════════════════════════ */}
       <ClosingSection />
+
+      {/* ═══════════════════════════════════════════════════════════════
+          FOOTER — Atmospheric epilogue
+          World dissolving into darkness
+          ═══════════════════════════════════════════════════════════════ */}
     </PageShell>
   );
 }
