@@ -24,7 +24,7 @@
   body {
     background-color: var(--ei-ink-black);
     color: var(--ei-paper-white);
-    font-family: 'Suisse Intl', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }

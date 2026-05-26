@@ -18,7 +18,7 @@
 
   /* Hero Lead — The tagline beneath display */
   .ei-hero-lead {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: clamp(0.875rem, 1.2vw, 1rem);
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -31,7 +31,7 @@
   
   /* Section Eyebrow — small uppercase label */
   .ei-eyebrow {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.625rem;
     font-weight: 500;
     letter-spacing: 0.38em;
@@ -52,7 +52,7 @@
 
   /* Section Description — supporting text */
   .ei-section-description {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.9375rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -65,7 +65,7 @@
   
   /* Body Large — philosophical text, main reading */
   .ei-body-large {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: clamp(0.8125rem, 1vw, 0.9375rem);
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -75,7 +75,7 @@
 
   /* Body Standard — general content */
   .ei-body {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.875rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -85,7 +85,7 @@
 
   /* Body Small — captions, metadata */
   .ei-body-small {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.75rem;
     font-weight: 400;
     letter-spacing: 0.02em;
@@ -97,7 +97,7 @@
   
   /* Button / CTA Text */
   .ei-cta-text {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.22em;
@@ -118,7 +118,7 @@
 
   /* Card Description */
   .ei-card-description {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.8125rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -128,7 +128,7 @@
 
   /* Navigation */
   .ei-nav-text {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.18em;
@@ -164,7 +164,7 @@
   .ei-quote {
     font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
     font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-    font-weight: 300;
+    font-weight: 400;
     letter-spacing: -0.01em;
     line-height: 1.5;
     color: rgba(232, 234, 246, 0.75);
@@ -175,7 +175,7 @@
 @layer utilities {
   /* Primary link — secondary navigation */
   .ei-link {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.22em;
@@ -190,7 +190,7 @@
   
   /* Subtle link — tertiary navigation */
   .ei-link-subtle {
-    font-family: 'Suisse Intl', 'Inter', -apple-system, sans-serif;
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
     font-size: 0.625rem;
     font-weight: 500;
     letter-spacing: 0.22em;
