@@ -57,7 +57,7 @@ export function CinematicStatement() {
           {/* Eyebrow — quiet indicator of tonal shift */}
           <motion.span
             variants={driftUp}
-            className="font-structural text-[9px] tracking-[0.32em] uppercase text-white/32 block"
+            className="font-structural text-[9px] tracking-[0.32em] uppercase text-white/45 block"
           >
             A different frequency
           </motion.span>

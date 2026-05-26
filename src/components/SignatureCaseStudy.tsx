@@ -825,7 +825,7 @@ export function SignatureCaseStudy() {
           >
             {[
               '87% of early users described the experience as calming within seconds',
-              'Retention at 90 days was 3× the industry average',
+              'Retention at 90 days was 3x the industry average',
               'Net Promoter Score: 74 — across a notoriously sceptical user base',
               'Zero negative reviews citing confusion or overwhelm in the first year',
               'The design system was adopted by the internal team without a single revision request',
