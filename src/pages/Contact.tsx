@@ -69,7 +69,7 @@ export function Contact() {
               <p className="ei-atmosphere-text">
                 "Thank you. Your message has been received."
               </p>
-              <p className="ei-body mt-8 text-white/30">
+              <p className="ei-body mt-8 text-white/55">
                 I will be in touch shortly.
               </p>
             </motion.div>

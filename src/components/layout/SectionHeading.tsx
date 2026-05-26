@@ -13,7 +13,7 @@ export function SectionHeading({ eyebrow, title, description, className, centere
     <div className={cn(className, centered && 'text-center')}>
       {eyebrow && (
         <span
-          className={cn('block font-structural text-[10px] tracking-[0.38em] uppercase text-white/30', centered && 'mx-auto')}
+          className={cn('block font-structural text-[10px] tracking-[0.38em] uppercase text-white/45', centered && 'mx-auto')}
           style={{ marginBottom: 'var(--ei-space-24)' }}
         >
           {eyebrow}

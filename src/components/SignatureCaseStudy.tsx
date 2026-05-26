@@ -867,7 +867,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container max-w-xl mx-auto">
           <motion.span
             {...labelFade(0)}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/15 mb-14"
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-14"
           >
             08 — The Echo in Ink Signature
           </motion.span>
@@ -881,13 +881,13 @@ export function SignatureCaseStudy() {
           </motion.p>
           <motion.p
             {...fade(0.55)}
-            className="font-structural text-[13px] md:text-[14px] text-white/35 leading-[1.95] mb-5"
+            className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95] mb-5"
           >
             Echo in Ink built a world where overwhelmed humans could finally breathe.
           </motion.p>
           <motion.p
             {...fade(0.85)}
-            className="font-structural text-[12px] md:text-[13px] text-white/25 leading-[1.95]"
+            className="font-structural text-[12px] md:text-[13px] text-white/40 leading-[1.95]"
           >
             This is what we mean when we say design is emotional architecture.
           </motion.p>

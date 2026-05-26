@@ -43,7 +43,7 @@ export function TrustSignal() {
         >
           {/* Eyebrow — quiet indicator */}
           <motion.div variants={driftUp} className="text-center mb-8">
-            <span className="font-structural text-[10px] tracking-[0.22em] uppercase text-white/38">
+            <span className="font-structural text-[10px] tracking-[0.22em] uppercase text-white/55">
               Currently shaping
             </span>
           </motion.div>

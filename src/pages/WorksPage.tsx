@@ -66,10 +66,10 @@ export function WorksPage() {
             }}
           />
           <div className="flex items-center justify-between">
-            <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/15">
+            <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/35">
               INK MEETS LIGHT.
             </span>
-            <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/15">
+            <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/35">
               EMOTIONS BECOME DESIGN.
             </span>
           </div>
