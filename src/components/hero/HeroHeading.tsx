@@ -37,7 +37,7 @@ export function HeroHeading() {
         variants={heroReveal}
         className="font-structural text-[14px] md:text-[15px] leading-[1.65] max-w-[62ch] max-md:max-w-[34ch] mt-3 md:mt-6"
         style={{
-          color: 'rgba(255,255,255,0.50)',
+          color: 'rgba(255,255,255,0.78)',
           letterSpacing: '0.01em',
         }}
       >
