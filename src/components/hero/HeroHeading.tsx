@@ -41,7 +41,7 @@ export function HeroHeading() {
           letterSpacing: '0.01em',
         }}
       >
-        Identity systems, immersive websites, creative direction, and atmospheric digital experiences.
+        {"Identity systems, immersive websites, creative direction, \nand atmospheric digital experiences."}
       </motion.p>
 
      {/* ═══════════════════════════════════════════════════════════════
