@@ -52,52 +52,28 @@
     outline-offset: 0;
   }
 
-  /* Atmospheric CTA glow */
+  .ei-button-glow {
+  position: relative;
+  isolation: isolate;
+}
 
-.ei-button-glow::before {
+.ei-btn-primary-cinematic::before {
   content: '';
   position: absolute;
   inset: -34px;
   border-radius: 999px;
-  background:
-    radial-gradient(
-      circle,
-      rgba(168,85,247,0.14) 0%,
-      rgba(99,102,241,0.08) 36%,
-      rgba(59,130,246,0.03) 52%,
-      transparent 74%
-    );
-  filter: blur(34px);
-  opacity: 0.72;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.ei-button-glow {
-  position: relative;
-  isolation: isolate;
-}
-.ei-btn-primary-cinematic::before {
-  content: '';
-  position: absolute;
-
-  inset: -36px;
-
-  border-radius: 999px;
 
   background:
     radial-gradient(
       circle,
-      rgba(42,107,255,0.20) 0%,
-      rgba(42,107,255,0.10) 34%,
-      rgba(168,85,247,0.03) 58%,
+      rgba(42,107,255,0.18) 0%,
+      rgba(42,107,255,0.10) 38%,
+      rgba(42,107,255,0.04) 58%,
       transparent 76%
     );
 
-  filter: blur(34px);
-
-  opacity: 0.78;
-
+  filter: blur(30px);
+  opacity: 0.82;
   pointer-events: none;
   z-index: -1;
 
@@ -108,7 +84,7 @@
 
 .ei-btn-primary-cinematic:hover::before {
   opacity: 1;
-  transform: scale(1.03);
+  transform: scale(1.02);
 }
 
   /* Cards and blocks */
