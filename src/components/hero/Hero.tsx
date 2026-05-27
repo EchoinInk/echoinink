@@ -3,7 +3,7 @@ import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
 import { Container } from '../layout/Container';
-import { Section } from '../layout/Section';
+
 
 import {
   heroContainer,
@@ -14,7 +14,7 @@ import {
 
 export function Hero() {
   return (
-    
+    <section className="relative w-full max-md:min-h-0 md:min-h-screen flex items-start md:items-center justify-start overflow-hidden bg-[#05030B] ei-section-hero pt-80 pb-32 md:pt-0 md:pb-0">
       {/* Background */}
       <HeroBackground />
 
@@ -51,7 +51,7 @@ export function Hero() {
       />
 
       {/* CONTENT */}
-<Section><Container className="relative z-10">
+<section></section><Container className="relative z-10">
   <motion.div
     className="
       max-w-[680px]
@@ -72,6 +72,6 @@ export function Hero() {
     </motion.div>
   </motion.div>
 </Container>    
-</Section></section>
+    </section>
   );
 }
