@@ -51,7 +51,7 @@ export function Hero() {
       />
 
       {/* CONTENT */}
-<Section></Sectiob>><Container className="relative z-10">
+<Section><Container className="relative z-10">
   <motion.div
     className="
       max-w-[680px]
@@ -72,6 +72,5 @@ export function Hero() {
     </motion.div>
   </motion.div>
 </Container>    
-    </section>
-  );
-}
+</Section></section>
+  )
