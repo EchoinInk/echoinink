@@ -81,20 +81,21 @@
   content: '';
   position: absolute;
   inset: -34px;
+
   border-radius: 999px;
 
   background:
     radial-gradient(
       circle,
-      rgba(168,85,247,0.14) 0%,
-      rgba(99,102,241,0.07) 34%,
-      rgba(59,130,246,0.03) 52%,
+      rgba(42,107,255,0.22) 0%,
+      rgba(42,107,255,0.12) 34%,
+      rgba(168,85,247,0.04) 56%,
       transparent 76%
     );
 
   filter: blur(34px);
 
-  opacity: 0.72;
+  opacity: 0.82;
 
   pointer-events: none;
   z-index: -1;
@@ -105,8 +106,8 @@
 }
 
 .ei-btn-primary-cinematic:hover::before {
-  opacity: 0.92;
-  transform: scale(1.04);
+  opacity: 1;
+  transform: scale(1.03);
 }
 
   /* Cards and blocks */
