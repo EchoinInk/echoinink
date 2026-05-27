@@ -151,8 +151,8 @@ export function ImmersiveEi({ className = '' }: ImmersiveEiProps) {
         transition={{ duration: DURATION.slower * 2, ease: EASE_LUXURY }}
         style={{
           background: `
-            radial-gradient(ellipse 60% 50% at 50% 50%, rgba(168,85,247,0.04) 0%, transparent 60%),
-            radial-gradient(ellipse 40% 40% at 50% 50%, rgba(232,121,249,0.03) 0%, transparent 50%)
+            radial-gradient(ellipse 60% 50% at 50% 50%, rgb(var(--ei-ion-violet-rgb) / 0.04) 0%, transparent 60%),
+            radial-gradient(ellipse 40% 40% at 50% 50%, rgb(var(--ei-neon-magenta-rgb) / 0.03) 0%, transparent 50%)
           `,
           filter: 'blur(60px)',
         }}
@@ -181,9 +181,9 @@ export function ImmersiveEi({ className = '' }: ImmersiveEiProps) {
         >
           <defs>
             <linearGradient id="eiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="rgba(255,255,255,0.5)" />
-              <stop offset="50%" stopColor="rgba(232,121,249,0.4)" />
-              <stop offset="100%" stopColor="rgba(168,85,247,0.3)" />
+              <stop offset="0%" stopColor="rgb(var(--ei-photon-white-rgb) / 0.5)" />
+              <stop offset="50%" stopColor="rgb(var(--ei-neon-magenta-rgb) / 0.4)" />
+              <stop offset="100%" stopColor="rgb(var(--ei-ion-violet-rgb) / 0.3)" />
             </linearGradient>
           </defs>
           {/* Ei letterform — stylized monogram */}
@@ -219,7 +219,7 @@ export function ImmersiveEi({ className = '' }: ImmersiveEiProps) {
             repeatType: 'mirror',
           }}
           style={{
-            background: 'radial-gradient(ellipse 50% 50% at 50% 50%, rgba(232,121,249,0.15) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse 50% 50% at 50% 50%, rgb(var(--ei-neon-magenta-rgb) / 0.15) 0%, transparent 70%)',
             filter: 'blur(30px)',
           }}
         />
@@ -229,7 +229,7 @@ export function ImmersiveEi({ className = '' }: ImmersiveEiProps) {
       <div
         className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, rgba(15,18,32,0.8) 0%, transparent 100%)',
+          background: 'linear-gradient(to top, rgb(var(--ei-deep-nebula-rgb) / 0.8) 0%, transparent 100%)',
         }}
       />
     </div>
@@ -261,7 +261,7 @@ export function InkDiffusion({ children, className = '' }: InkDiffusionProps) {
           animate={isInView ? { opacity: 0 } : { opacity: 0.4 }}
           transition={{ duration: DURATION.slower * 2, ease: EASE_LUXURY, delay: 0.2 }}
           style={{
-            background: 'radial-gradient(ellipse 80% 80% at 50% 50%, rgba(5,7,16,0.95) 0%, rgba(5,7,16,0.7) 40%, transparent 70%)',
+            background: 'radial-gradient(ellipse 80% 80% at 50% 50%, rgb(var(--ei-deep-nebula-rgb) / 0.95) 0%, rgb(var(--ei-deep-nebula-rgb) / 0.7) 40%, transparent 70%)',
             filter: 'blur(40px)',
           }}
         />
