@@ -65,7 +65,7 @@ export function OrbitalVisual({
     ),
     compass: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
-        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.2" />
+        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.9" />
         <circle cx={c} cy={c} r={r - 9} stroke={strokeLight} strokeWidth="1.3" />
         <line x1={c} y1={7} x2={c} y2={size - 7} stroke={strokeDim} strokeWidth="0.9" />
         <line x1={7} y1={c} x2={size - 7} y2={c} stroke={strokeDim} strokeWidth="0.9" />
@@ -75,12 +75,12 @@ export function OrbitalVisual({
     ),
     canvas: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
-        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.2" />
-        <circle cx={c} cy={c} r={r - 9} stroke={strokeLight} strokeWidth="1.2" />
+        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.9" />
+        <circle cx={c} cy={c} r={r - 9} stroke={strokeLight} strokeWidth="1.7" />
         <ellipse
           cx={c} cy={c}
           rx={r - 9} ry={(r - 9) * 0.48}
-          stroke={strokeDim} strokeWidth="0.9"
+          stroke={strokeDim} strokeWidth="1.9"
           transform={`rotate(42 ${c} ${c})`}
         />
         <circle cx={c} cy={c} r="2" fill={orchid} />
