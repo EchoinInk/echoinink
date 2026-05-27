@@ -36,7 +36,7 @@ export function ClosingSection() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.05 }}
-          className="font-editorial text-[2.1rem] md:text-[1.8rem] lg:text-[2.2rem] text-[#E8EAF6] leading-[1.24] mb-3 md:mb-4"
+          className="font-editorial text-[2.1rem] md:text-[1.8rem] lg:text-[2.2rem] text-[var(--ei-stellar-lilac)] leading-[1.24] mb-3 md:mb-4"
           style={{ letterSpacing: '-0.01em' }}
         >
           Ready to translate your world?

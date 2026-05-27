@@ -39,7 +39,7 @@ export function WhatWeCreate() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 40% at 50% 30%, rgba(123,92,255,0.025) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 60% 40% at 50% 30%, rgb(var(--ei-ion-violet-rgb) / 0.025) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -56,10 +56,10 @@ export function WhatWeCreate() {
           <motion.div variants={driftUp} className="flex items-center gap-3 mb-10 md:mb-14">
             <span className="ei-eyebrow">What We Create</span>
 <div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
+          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-neon-magenta-rgb)/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
+              'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.15) 0%, rgb(var(--ei-neon-magenta-rgb) / 0.95) 100%)',
           }}
         />          </motion.div>
 
@@ -69,7 +69,7 @@ export function WhatWeCreate() {
               <motion.article key={cap.title} variants={driftUp}>
                 <Link
                   to={cap.href}
-                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[#050816]/80 p-8 transition-all duration-500 hover:border-[var(--ei-electric-violet)]/30 hover:shadow-[0_0_60px_rgba(123,92,255,0.08)] backdrop-blur-sm"
+                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[var(--ei-deep-nebula)]/80 p-8 transition-all duration-500 hover:border-[var(--ei-electric-violet)]/30 hover:shadow-[0_0_60px_rgb(var(--ei-ion-violet-rgb)/0.08)] backdrop-blur-sm"
                   aria-label={`Explore ${cap.title}`}
                 >
                   {/* Icon */}
