@@ -227,7 +227,7 @@ function HumaneFrameworkAtmosphere() {
       />
       <GlowField
         style={{ bottom: '8%', right: '4%', width: 'clamp(180px, 24vw, 340px)', height: 'clamp(180px, 24vw, 340px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgba(102,86,172,0.072) 0%, rgba(88,74,152,0.026) 55%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-void-plum-rgb) / 0.072) 0%, rgb(var(--ei-void-plum-rgb) / 0.026) 55%, transparent 72%)"
         blur={46}
         anim={{ opacity: [0.55, 0.90, 0.55] }}
         duration={28} delay={16}
@@ -236,10 +236,10 @@ function HumaneFrameworkAtmosphere() {
         viewBox="0 0 1000 700"
         blur={1.2}
         paths={[
-          { d: 'M 220 195 Q 500 140 760 178', stroke: 'rgba(120,100,210,0.048)', sw: 0.8, cap: 'round' },
-          { d: 'M 214 248 Q 148 420 218 568', stroke: 'rgba(112,94,200,0.040)', sw: 0.7, cap: 'round' },
-          { d: 'M 768 228 Q 840 390 752 548', stroke: 'rgba(108,90,196,0.040)', sw: 0.7, cap: 'round' },
-          { d: 'M 268 572 Q 500 620 748 554', stroke: 'rgba(116,96,205,0.044)', sw: 0.6, cap: 'round' },
+          { d: 'M 220 195 Q 500 140 760 178', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.048)', sw: 0.8, cap: 'round' },
+          { d: 'M 214 248 Q 148 420 218 568', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.7, cap: 'round' },
+          { d: 'M 768 228 Q 840 390 752 548', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.7, cap: 'round' },
+          { d: 'M 268 572 Q 500 620 748 554', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.044)', sw: 0.6, cap: 'round' },
         ]}
       />
     </div>
@@ -251,20 +251,20 @@ function FragmentsAtmosphere() {
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
       <GlowField
         style={{ top: '-5%', left: '-10%', width: 'clamp(500px, 68vw, 900px)', height: 'clamp(500px, 68vw, 900px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 40% 46%, rgba(110,78,210,0.080) 0%, rgba(90,62,185,0.033) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 40% 46%, rgb(var(--ei-ion-violet-rgb) / 0.080) 0%, rgb(var(--ei-void-plum-rgb) / 0.033) 52%, transparent 72%)"
         blur={68}
         anim={{ opacity: [0.60, 0.94, 0.60] }}
         duration={32}
       />
       <GlowField
         style={{ bottom: '15%', right: '-6%', width: 'clamp(280px, 38vw, 560px)', height: 'clamp(280px, 38vw, 560px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 50% 50%, rgba(95,68,195,0.068) 0%, rgba(78,55,172,0.028) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 50% 50%, rgb(var(--ei-void-plum-rgb) / 0.068) 0%, rgb(var(--ei-void-plum-rgb) / 0.028) 52%, transparent 72%)"
         blur={62}
         anim={{ opacity: [0.48, 0.80, 0.48] }}
         duration={38} delay={10}
       />
-      <div style={{ position: 'absolute', top: '46%', left: 0, right: 0, height: '12%', background: 'linear-gradient(180deg, transparent 0%, rgba(5,4,14,0.10) 50%, transparent 100%)', filter: 'blur(18px)' }} />
-      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 72% at 50% 48%, transparent 40%, rgba(4,3,12,0.10) 72%, rgba(3,2,10,0.15) 100%)' }} />
+      <div style={{ position: 'absolute', top: '46%', left: 0, right: 0, height: '12%', background: 'linear-gradient(180deg, transparent 0%, rgb(var(--ei-cosmic-black-rgb) / 0.10) 50%, transparent 100%)', filter: 'blur(18px)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 72% at 50% 48%, transparent 40%, rgb(var(--ei-cosmic-black-rgb) / 0.10) 72%, rgb(var(--ei-cosmic-black-rgb) / 0.15) 100%)' }} />
       <GrainOverlay range={[0.016, 0.040]} duration={28} delay={5} size={180} />
     </div>
   );
@@ -273,17 +273,17 @@ function FragmentsAtmosphere() {
 function BecomingAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 28%, rgba(18,12,8,0.10) 100%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 28%, rgb(var(--ei-cosmic-black-rgb) / 0.10) 100%)' }} />
       <AtmosphericBloom
         size="clamp(640px, 92vw, 1240px)"
-        gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgba(99,82,210,0.092) 0%, rgba(82,68,185,0.036) 48%, transparent 72%)"
+        gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-ion-violet-rgb) / 0.092) 0%, rgb(var(--ei-void-plum-rgb) / 0.036) 48%, transparent 72%)"
         blur={70}
         anim={{ opacity: [0.60, 1, 0.60], scale: [1, 1.024, 1] }}
         duration={30}
       />
       <GlowField
         style={{ bottom: '-8%', left: '-15%', right: '-15%', height: 'clamp(320px, 44vw, 640px)' }}
-        gradient="radial-gradient(ellipse 88% 48% at 50% 82%, rgba(108,82,196,0.075) 0%, rgba(90,68,176,0.030) 50%, transparent 74%)"
+        gradient="radial-gradient(ellipse 88% 48% at 50% 82%, rgb(var(--ei-ion-violet-rgb) / 0.075) 0%, rgb(var(--ei-void-plum-rgb) / 0.030) 50%, transparent 74%)"
         blur={68}
         anim={{ opacity: [0.50, 0.82, 0.50] }}
         duration={38} delay={8}
@@ -292,9 +292,9 @@ function BecomingAtmosphere() {
         style={{ top: '50%', left: '50%', width: 'clamp(380px, 54vw, 760px)', height: 'clamp(380px, 54vw, 760px)', transform: 'translate(-50%, -50%)', transformOrigin: 'center center' }}
         viewBox="0 0 600 600"
         rings={[
-          { cx: 300, cy: 300, rx: 268, ry: 268, stroke: 'rgba(115,94,218,0.042)', sw: 0.8 },
-          { cx: 300, cy: 300, rx: 210, ry: 210, stroke: 'rgba(115,94,218,0.032)', sw: 0.6 },
-          { cx: 300, cy: 300, rx: 152, ry: 152, stroke: 'rgba(115,94,218,0.024)', sw: 0.5 },
+          { cx: 300, cy: 300, rx: 268, ry: 268, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.042)', sw: 0.8 },
+          { cx: 300, cy: 300, rx: 210, ry: 210, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.032)', sw: 0.6 },
+          { cx: 300, cy: 300, rx: 152, ry: 152, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.024)', sw: 0.5 },
         ]}
         anim={{ opacity: [0.48, 0.88, 0.48], scale: [0.974, 1.022, 0.974] }}
         duration={36} delay={5}
@@ -307,10 +307,10 @@ function BecomingAtmosphere() {
 function HeldAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(14,11,22,0.28) 0%, transparent 62%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgb(var(--ei-void-plum-rgb) / 0.28) 0%, transparent 62%)' }} />
       <GlowField
         style={{ top: '-2%', left: '-8%', width: 'clamp(500px, 65vw, 880px)', height: 'clamp(500px, 65vw, 880px)' }}
-        gradient="radial-gradient(ellipse 52% 50% at 44% 46%, rgba(112,86,198,0.068) 0%, rgba(95,72,180,0.028) 50%, transparent 72%)"
+        gradient="radial-gradient(ellipse 52% 50% at 44% 46%, rgb(var(--ei-ion-violet-rgb) / 0.068) 0%, rgba(95,72,180,0.028) 50%, transparent 72%)"
         blur={75}
         anim={{ opacity: [0.65, 1, 0.65] }}
         duration={38}
