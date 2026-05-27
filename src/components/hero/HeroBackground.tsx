@@ -23,7 +23,7 @@ export function HeroBackground() {
           top-1/2
           -translate-y-1/2
 
-          h-[88vh]
+          h-[100vh]
           w-auto
           object-contain
 
