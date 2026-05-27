@@ -1,6 +1,6 @@
 import widePng from '@/assets/new-monogram-balanced-21x9.png';
-import wideWebp from '@/assets/new-monogram-balanced-16x9.webp';
-import wideAvif from '@/assets/new-monogram-balanced-16x9.avif';
+import wideWebp from '@/assets/new-monogram-balanced-21x9.webp';
+import wideAvif from '@/assets/new-monogram-balanced-21x9.avif';
 import mobilePng from '@/assets/new-monogram-balanced-16x9.png';
 import mobileWebp from '@/assets/new-monogram-balanced-9x16.webp';
 import mobileAvif from '@/assets/new-monogram-balanced-9x16.avif';
@@ -19,7 +19,7 @@ export function HeroBackground() {
             src={widePng}
             alt=""
             aria-hidden="true"
-            className="absolute top-0 left-0 w-full h-full object-contain object-top md:inset-0 md:h-full md:object-cover md:object-center"
+            className="absolute top-0 left-0 w-full h-auto object-contain object-top md:inset-0 md:h-full md:object-cover md:object-center"
           />
         </picture>
       </div>
