@@ -317,7 +317,7 @@ function HeldAtmosphere() {
       />
       <GlowField
         style={{ top: '20%', left: '5%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 48% 50%, rgba(100,78,185,0.048) 0%, rgba(85,65,165,0.018) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 48% 50%, rgb(var(--ei-void-plum-rgb) / 0.048) 0%, rgb(var(--ei-void-plum-rgb) / 0.018) 52%, transparent 72%)"
         blur={62}
         anim={{ opacity: [0.55, 0.85, 0.55] }}
         duration={40} delay={12}
@@ -325,7 +325,7 @@ function HeldAtmosphere() {
       <EchoRing
         style={{ inset: 0 }}
         viewBox="0 0 1000 800"
-        rings={[{ cx: 360, cy: 360, rx: 310, ry: 288, stroke: 'rgba(110,88,200,0.040)', sw: 0.7 }]}
+        rings={[{ cx: 360, cy: 360, rx: 310, ry: 288, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.7 }]}
         blur={2}
         preserveAspect
       />
@@ -340,7 +340,7 @@ function ExhaleAtmosphere() {
       <div style={{ position: 'absolute', top: '50%', left: '50%', width: 'clamp(480px, 65vw, 860px)', height: 'clamp(480px, 65vw, 860px)', transform: 'translate(-50%, -55%)' }}>
         <GlowField
           style={{ inset: 0 }}
-          gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgba(128,92,218,0.075) 0%, rgba(108,72,195,0.030) 48%, transparent 72%)"
+          gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-ion-violet-rgb) / 0.075) 0%, rgb(var(--ei-void-plum-rgb) / 0.030) 48%, transparent 72%)"
           blur={90}
           anim={{ opacity: [0.58, 0.92, 0.58] }}
           duration={40}
@@ -349,13 +349,13 @@ function ExhaleAtmosphere() {
       <VerticalBeam
         left="calc(50% - 50px)"
         width={100}
-        gradient="linear-gradient(180deg, transparent 0%, rgba(138,96,206,0.052) 22%, rgba(148,102,212,0.088) 50%, rgba(138,96,206,0.052) 78%, transparent 100%)"
+        gradient="linear-gradient(180deg, transparent 0%, rgb(var(--ei-ion-violet-rgb) / 0.052) 22%, rgb(var(--ei-ion-violet-rgb) / 0.088) 50%, rgb(var(--ei-ion-violet-rgb) / 0.052) 78%, transparent 100%)"
         blur={40}
       />
       <EchoRing
         style={{ inset: 0 }}
         viewBox="0 0 1000 600"
-        rings={[{ cx: 500, cy: 288, rx: 300, ry: 220, stroke: 'rgba(138,100,220,0.040)', sw: 0.6 }]}
+        rings={[{ cx: 500, cy: 288, rx: 300, ry: 220, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.6 }]}
         blur={1}
         preserveAspect
       />
@@ -424,7 +424,7 @@ export function SignatureCaseStudy() {
       {/* Global film-grain layer */}
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: GRAIN, backgroundRepeat: 'repeat', backgroundSize: '200px 200px', opacity: 0.02, mixBlendMode: 'overlay', zIndex: 10 }} />
       {/* Header ambient bloom — violet, upper right */}
-      <div className="absolute pointer-events-none" style={{ top: '-8%', right: '-10%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)', background: 'radial-gradient(ellipse 60% 60% at 64% 36%, rgba(168,85,247,0.055) 0%, transparent 70%)', filter: 'blur(60px)' }} />
+      <div className="absolute pointer-events-none" style={{ top: '-8%', right: '-10%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)', background: 'radial-gradient(ellipse 60% 60% at 64% 36%, rgb(var(--ei-ion-violet-rgb) / 0.055) 0%, transparent 70%)', filter: 'blur(60px)' }} />
 
       {/* ── SECTION HEADER ──────────────────────────────────────────── */}
       <div className="ei-container py-16 md:py-28">
@@ -438,7 +438,7 @@ export function SignatureCaseStudy() {
           </motion.span>
           <motion.h2
             {...headFade(0.15)}
-            className="font-editorial text-[2rem] md:text-[3rem] lg:text-[3.8rem] text-[#E8EAF6]/85 leading-[1.18] mb-6"
+            className="font-editorial text-[2rem] md:text-[3rem] lg:text-[3.8rem] text-[var(--ei-stellar-lilac)]/85 leading-[1.18] mb-6"
             style={{ letterSpacing: '-0.015em' }}
           >
             LUMO — A World Built
@@ -471,7 +471,7 @@ export function SignatureCaseStudy() {
             </motion.span>
             <motion.p
               {...headFade(0.12)}
-              className="font-editorial text-[1.35rem] md:text-[1.75rem] text-[#E8EAF6]/80 leading-[1.4] mb-8"
+              className="font-editorial text-[1.35rem] md:text-[1.75rem] text-[var(--ei-stellar-lilac)]/80 leading-[1.4] mb-8"
               style={{ letterSpacing: '-0.01em' }}
             >
               LUMO began not with a brief but with a feeling — something between
@@ -515,7 +515,7 @@ export function SignatureCaseStudy() {
           <div>
             <motion.p
               {...fade(0.08)}
-              className="font-editorial text-[1.2rem] md:text-[1.45rem] text-[#E8EAF6]/70 leading-[1.52] mb-6"
+              className="font-editorial text-[1.2rem] md:text-[1.45rem] text-[var(--ei-stellar-lilac)]/70 leading-[1.52] mb-6"
               style={{ letterSpacing: '-0.006em' }}
             >
               In the early discovery phase, we found a user base that wasn't looking
@@ -608,11 +608,11 @@ export function SignatureCaseStudy() {
             {/* Pull-quote — cinematic isolation */}
             <motion.blockquote
               {...headFade(0.1)}
-              className="text-center font-editorial text-[1.55rem] md:text-[2.1rem] lg:text-[2.5rem] text-[#E8EAF6]/65 leading-[1.38] mt-16 md:mt-24 pt-12 md:pt-16"
+              className="text-center font-editorial text-[1.55rem] md:text-[2.1rem] lg:text-[2.5rem] text-[var(--ei-stellar-lilac)]/65 leading-[1.38] mt-16 md:mt-24 pt-12 md:pt-16"
               style={{
                 letterSpacing: '-0.012em',
                 fontStyle: 'italic',
-                borderTop: '1px solid rgba(255,255,255,0.05)',
+                borderTop: '1px solid rgb(var(--ei-photon-white-rgb) / 0.05)',
               }}
             >
               "Design as emotional architecture."
@@ -642,13 +642,13 @@ export function SignatureCaseStudy() {
               key={card.title}
               {...fade(0.07 * i)}
               className="pt-7"
-              style={{ borderTop: '1px solid rgba(255,255,255,0.07)' }}
+              style={{ borderTop: '1px solid rgb(var(--ei-photon-white-rgb) / 0.07)' }}
             >
               <span className="block font-structural text-[9px] tracking-[0.28em] uppercase text-white/40 mb-5">
                 0{i + 1}
               </span>
               <h3
-                className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.24] mb-6"
+                className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.24] mb-6"
                 style={{ letterSpacing: '-0.006em' }}
               >
                 {card.title}
@@ -669,11 +669,11 @@ export function SignatureCaseStudy() {
 
         <motion.p
           {...envFade(0.2)}
-          className="font-editorial text-[1.15rem] md:text-[1.35rem] text-[#E8EAF6]/55 leading-[1.5] pt-14 md:pt-20"
+          className="font-editorial text-[1.15rem] md:text-[1.35rem] text-[var(--ei-stellar-lilac)]/55 leading-[1.5] pt-14 md:pt-20"
           style={{
             letterSpacing: '-0.005em',
             fontStyle: 'italic',
-            borderTop: '1px solid rgba(255,255,255,0.05)',
+            borderTop: '1px solid rgb(var(--ei-photon-white-rgb) / 0.05)',
           }}
         >
           This wasn't a feature set. It was a feeling set.
@@ -703,7 +703,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[0].title} tint="violet" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[0].title}
@@ -717,7 +717,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[2/3]" label={snapshots[1].title} tint="aqua" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[1].title}
@@ -734,7 +734,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[3/4]" label={snapshots[2].title} tint="pink" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[2].title}
@@ -748,7 +748,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[3].title} tint="neutral" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[#E8EAF6]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[3].title}
@@ -793,7 +793,7 @@ export function SignatureCaseStudy() {
               <motion.li
                 key={item}
                 variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 2.2, ease: EASE } } }}
-                className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[#E8EAF6]/60 leading-[1.35]"
+                className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[var(--ei-stellar-lilac)]/60 leading-[1.35]"
                 style={{ letterSpacing: '-0.008em' }}
               >
                 {item}
@@ -845,11 +845,11 @@ export function SignatureCaseStudy() {
 
           <motion.p
             {...envFade(0.2)}
-            className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[#E8EAF6]/75 leading-[1.38] pt-14 md:pt-20"
+            className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.38] pt-14 md:pt-20"
             style={{
               letterSpacing: '-0.008em',
               fontStyle: 'italic',
-              borderTop: '1px solid rgba(255,255,255,0.06)',
+              borderTop: '1px solid rgb(var(--ei-photon-white-rgb) / 0.06)',
             }}
           >
             The product didn't just work. It held people.
@@ -874,7 +874,7 @@ export function SignatureCaseStudy() {
 
           <motion.p
             {...headFade(0.2)}
-            className="font-editorial text-[1.3rem] md:text-[1.7rem] text-[#E8EAF6]/70 leading-[1.52] mb-7"
+            className="font-editorial text-[1.3rem] md:text-[1.7rem] text-[var(--ei-stellar-lilac)]/70 leading-[1.52] mb-7"
             style={{ letterSpacing: '-0.01em' }}
           >
             LUMO was not a design project. It was an act of care.
