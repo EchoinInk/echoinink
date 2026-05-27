@@ -7,11 +7,11 @@ export type OrbitalVariant =
   | 'reflection'  // Founder Reflection
   | 'architect'   // Narrative Architect
   | 'gpt'         // Identity GPT
-  | 'uikit';      // Atmosphere UI Kit
-  'hexgrid';
-  'signal';
-  'constellation';
-  
+  | 'uikit'       // Atmosphere UI Kit
+  | 'hexgrid'
+  | 'signal'
+  | 'constellation';
+
 
 interface OrbitalVisualProps {
   variant?: OrbitalVariant;
@@ -127,6 +127,20 @@ export function OrbitalVisual({
         <circle cx={c} cy={c} r={2} fill={blue} />
       </svg>
     ),
+    constellation: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.6" />
+
+    <line x1="16" y1="18" x2={c} y2={c} stroke={strokeLight} strokeWidth="0.7" />
+    <line x1={c} y1={c} x2={size-14} y2="16" stroke={strokeLight} strokeWidth="0.7" />
+    <line x1={c} y1={c} x2={size-18} y2={size-18} stroke={strokeLight} strokeWidth="0.7" />
+
+    <circle cx="16" cy="18" r="2" fill={strokeLight} />
+    <circle cx={c} cy={c} r="2.5" fill={orchid} />
+    <circle cx={size-14} cy="16" r="2" fill={blue} />
+    <circle cx={size-18} cy={size-18} r="2" fill={strokeLight} />
+  </svg>
+),
   };
 
   return (
