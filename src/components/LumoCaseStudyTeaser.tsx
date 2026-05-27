@@ -62,8 +62,13 @@ export function LumoCaseStudyTeaser() {
             className="flex items-center gap-3 mb-8 md:mb-10"
           >
             <span className="ei-eyebrow">Featured Work</span>
-            <div className="h-px w-8 bg-[var(--ei-orchid-plasma)]/40 flex-shrink-0" aria-hidden="true" />
-          </motion.div>
+<div
+          className="h-px w-9 shrink-0 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
+          style={{
+            background:
+              'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
+          }}
+        />          </motion.div>
 
           {/* Featured world card — 2-col split */}
           <motion.div
