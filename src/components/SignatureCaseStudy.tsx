@@ -765,7 +765,7 @@ export function SignatureCaseStudy() {
       {/* ── 06 — THE TRANSFORMATION ─────────────────────────────────── */}
       <section
         className="relative overflow-hidden py-24 md:py-48"
-        style={{ background: 'linear-gradient(180deg, #060810 0%, #0b0d1f 50%, #060810 100%)' }}
+        style={{ background: 'linear-gradient(180deg, var(--ei-cosmic-black) 0%, var(--ei-deep-nebula) 50%, var(--ei-cosmic-black) 100%)' }}
       >
         <BecomingAtmosphere />
         <div className="ei-container">
@@ -861,7 +861,7 @@ export function SignatureCaseStudy() {
       {/* ── 08 — THE ECHO IN INK SIGNATURE ──────────────────────────── */}
       <section
         className="relative py-24 md:py-40 text-center overflow-hidden"
-        style={{ background: 'linear-gradient(180deg, #060810 0%, #090b1e 45%, #060810 100%)' }}
+        style={{ background: 'linear-gradient(180deg, var(--ei-cosmic-black) 0%, var(--ei-deep-nebula) 45%, var(--ei-cosmic-black) 100%)' }}
       >
         <ExhaleAtmosphere />
         <div className="ei-container max-w-xl mx-auto">

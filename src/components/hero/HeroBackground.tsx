@@ -48,9 +48,7 @@ export function HeroBackground() {
         alt=""
         aria-hidden="true"
         className="
-          block md:hidden
-
-          absolute
+          block md:hidden          absolute
           inset-0
 
           h-full

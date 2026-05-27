@@ -31,7 +31,7 @@ export default function Footer() {
         aria-hidden="true"
         className="absolute top-0 left-0 right-0 h-px pointer-events-none"
         style={{
-          background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 30%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.06) 70%, transparent 100%)',
+          background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-photon-white-rgb) / 0.06) 30%, rgb(var(--ei-photon-white-rgb) / 0.08) 50%, rgb(var(--ei-photon-white-rgb) / 0.06) 70%, transparent 100%)',
         }}
       />
 
@@ -40,7 +40,7 @@ export default function Footer() {
         aria-hidden="true"
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-[50%] pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 50% 50% at 50% 0%, rgba(123,92,255,0.035) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 50% 50% at 50% 0%, rgb(var(--ei-ion-violet-rgb) / 0.035) 0%, transparent 70%)',
           filter: 'blur(80px)',
         }}
       />
@@ -151,7 +151,7 @@ export default function Footer() {
             aria-hidden="true"
             className="w-full h-px mb-5"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.04) 75%, transparent 100%)',
+              background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-photon-white-rgb) / 0.04) 25%, rgb(var(--ei-photon-white-rgb) / 0.05) 50%, rgb(var(--ei-photon-white-rgb) / 0.04) 75%, transparent 100%)',
             }}
           />
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
