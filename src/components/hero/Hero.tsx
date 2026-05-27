@@ -3,6 +3,7 @@ import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
 import { Container } from '../layout/Container';
+import { Section } from '../layout/Section';
 
 import {
   heroContainer,
@@ -50,7 +51,7 @@ export function Hero() {
       />
 
       {/* CONTENT */}
-<Container className="relative z-10">
+<Sectio></Sectiob>><Container className="relative z-10">
   <motion.div
     className="
       max-w-[680px]
