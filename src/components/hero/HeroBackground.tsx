@@ -19,7 +19,7 @@ export function HeroBackground() {
           hidden md:block
 
           absolute
-          left-[50%]
+          left-[47%]
           top-[44%]
           -translate-y-1/2
 
