@@ -30,6 +30,7 @@
     /* --- BORDERS --- */
   --border-soft: rgba(245, 242, 235, 0.10);
   --border-glow: rgba(181, 92, 255, 0.32);
+  --border-card: rgba(140,120,255,0.12);
 
   /* --- RADIUS & BLUR --- */
   --radius-card: 28px;
