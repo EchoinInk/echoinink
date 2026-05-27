@@ -23,7 +23,25 @@ export function HeroBackground() {
           />
         </picture>
       </div>
+{/* Cinematic top frame */}
+<div
+  aria-hidden="true"
+  className="absolute inset-0 pointer-events-none z-[6]"
+  style={{
+    background:
+      'linear-gradient(to bottom, rgba(5,7,16,0.14) 0%, rgba(5,7,16,0.04) 10%, transparent 22%)',
+  }}
+/>
 
+{/* Bottom atmospheric fade */}
+<div
+  aria-hidden="true"
+  className="absolute bottom-0 left-0 right-0 pointer-events-none z-[7] h-[14vh] md:h-[28vh]"
+  style={{
+    background:
+      'linear-gradient(to bottom, transparent 0%, rgba(8,10,22,0.14) 38%, rgba(8,10,22,0.32) 72%, #070B17 100%)',
+  }}
+/>
       
     </>
   );
