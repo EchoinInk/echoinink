@@ -20,13 +20,13 @@ export function HeroHeading() {
           ═══════════════════════════════════════════════════════════════ */}
       <h1
         id="hero-heading"
-        className="font-editorial text-[2.25rem] md:text-[3.1rem] lg:text-[3.7rem] text-white/92 leading-[1.06] max-md:leading-[1.12] tracking-tight max-w-[22ch]"
+        className="font-editorial text-[2.25rem] md:text-[3.1rem] lg:text-[3.7rem] text-white/92 leading-[1.06] max-md:leading-[1.12] tracking-tight max-w-[22ch] whitespace-pre-line"
         style={{
           letterSpacing: '-0.025em',
           textShadow: '0 0 90px rgba(123, 92, 255, 0.08)',
         }}
       >
-        Designing the worlds your work lives in.
+        {"Designing the worlds \nyour work lives in."}
       </h1>
 
       {/* ═══════════════════════════════════════════════════════════════
