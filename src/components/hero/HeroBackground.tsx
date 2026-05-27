@@ -1,4 +1,4 @@
-import widePng from '@/assets/new-monogram-balanced-16x9.png';
+import widePng from '@/assets/new-monogram-balanced-21x9.png';
 import wideWebp from '@/assets/new-monogram-balanced-16x9.webp';
 import wideAvif from '@/assets/new-monogram-balanced-16x9.avif';
 import mobilePng from '@/assets/new-monogram-balanced-16x9.png';
