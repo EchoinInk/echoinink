@@ -16,7 +16,7 @@ export function HeroCTA() {
           Softer presence, editorial invitation
           ═══════════════════════════════════════════════════════════════ */}
       <Button to="/works" variant="secondary">
-        View Work
+        View Our Work
       </Button>
     </div>
   );

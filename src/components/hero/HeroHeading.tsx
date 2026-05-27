@@ -11,7 +11,7 @@ export function HeroHeading() {
         variants={heroReveal}
         className="font-structural text-[11px] tracking-[0.2em] uppercase text-white/60 block mb-3 md:mb-5"
       >
-        Echo in Ink
+        WE DESIGN WORLDS
       </motion.span>
 
       {/* ═══════════════════════════════════════════════════════════════
@@ -23,7 +23,7 @@ export function HeroHeading() {
         className="font-editorial text-[2.25rem] md:text-[3.1rem] lg:text-[3.7rem] text-white/92 leading-[1.06] max-md:leading-[1.12] tracking-tight max-w-[22ch]"
         style={{
           letterSpacing: '-0.025em',
-          textShadow: '0 0 90px rgba(99, 102, 241, 0.08)',
+          textShadow: '0 0 90px rgba(123, 92, 255, 0.08)',
         }}
       >
         Designing the worlds your work lives in.
