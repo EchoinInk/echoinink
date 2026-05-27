@@ -63,6 +63,19 @@ export default {
           DEFAULT: "hsl(var(--link))",
           hover: "hsl(var(--link-hover))",
         },
+        // Echo in Ink brand palette (brand-colour-rules.txt)
+        ei: {
+          void: "#02030A",
+          midnight: "#050816",
+          "indigo-atm": "#0C1F5A",
+          blue: "#2A6BFF",
+          violet: "#7B5CFF",
+          orchid: "#B55CFF",
+          lavender: "#C8BEFF",
+          moonlight: "#F5F2EB",
+          "text-primary": "#F6F2FF",
+          "text-accent": "#B55CFF",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

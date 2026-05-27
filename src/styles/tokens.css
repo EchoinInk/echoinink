@@ -1,25 +1,49 @@
 @layer base {
   :root {
-    /* Brand colours */
-    --ei-aqua: #1EC8FF;
-    --ei-indigo: #6366F1;
-    --ei-violet: #A78BFA;
-    --ei-pink: #E879F9;
-    --ei-ink-black: #0F1220;
-    --ei-deep-ink: #151933;
-    --ei-paper-white: #FFFFFF;
+    /* ── Brand Colours — Primary Palette (brand-colour-rules.txt) ─ */
+    --ei-void: #02030A;                  /* Void Black — global bg, cinematic negative space */
+    --ei-deep-midnight: #050816;         /* Deep Midnight — layered sections, card backgrounds */
+    --ei-indigo-atmosphere: #0C1F5A;     /* Indigo Atmosphere — ambient depth, subtle gradients */
+    --ei-atmosphere-blue: #2A6BFF;       /* Atmosphere Blue — motion highlights, interaction glow */
+    --ei-electric-violet: #7B5CFF;       /* Electric Violet — identity glow, emphasis states */
+    --ei-orchid-plasma: #B55CFF;         /* Orchid Plasma — cinematic bloom, nebula gradients */
+    --ei-cosmic-lavender: #C8BEFF;       /* Soft Cosmic Lavender — subtle highlights, hover softness */
+    --ei-moonlight: #F5F2EB;             /* Moonlight White — hero typography, editorial statements */
 
-    /* Glow tokens */
-    --ei-glow-aqua: rgba(30, 200, 255, 0.35);
-    --ei-glow-indigo: rgba(99, 102, 241, 0.35);
-    --ei-glow-violet: rgba(167, 139, 250, 0.35);
-    --ei-glow-pink: rgba(232, 121, 249, 0.35);
+    /* ── Backwards Compat Aliases (updated to brand values) ─────── */
+    --ei-ink-black: #02030A;             /* → Void Black */
+    --ei-deep-ink: #050816;              /* → Deep Midnight */
+    --ei-aqua: #2A6BFF;                  /* → Atmosphere Blue */
+    --ei-indigo: #7B5CFF;               /* → Electric Violet */
+    --ei-violet: #B55CFF;               /* → Orchid Plasma */
+    --ei-pink: #C8BEFF;                 /* → Cosmic Lavender */
+    --ei-paper-white: #F5F2EB;          /* → Moonlight White */
 
-    /* Gradients */
-    --ei-gradient-hero: linear-gradient(135deg, #1EC8FF, #6366F1, #A78BFA, #E879F9);
-    --ei-gradient-subtle: linear-gradient(180deg, rgba(15, 25, 51, 0.6), rgba(15, 18, 32, 0.9));
+    /* ── Typography Contrast (brand-colour-rules.txt) ────────────── */
+    --ei-text-primary: #F6F2FF;
+    --ei-text-secondary: rgba(245, 242, 235, 0.78);
+    --ei-text-tertiary: rgba(245, 242, 235, 0.62);
+    --ei-text-accent: #B55CFF;           /* = Orchid Plasma */
 
-    /* Spacing scale (px → rem) */
+    /* ── Glow Tokens ─────────────────────────────────────────────── */
+    --ei-glow-blue: rgba(42, 107, 255, 0.35);     /* Atmosphere Blue */
+    --ei-glow-violet: rgba(123, 92, 255, 0.35);   /* Electric Violet */
+    --ei-glow-orchid: rgba(181, 92, 255, 0.35);   /* Orchid Plasma */
+    --ei-glow-lavender: rgba(200, 190, 255, 0.25); /* Cosmic Lavender */
+    /* Backwards compat glow names */
+    --ei-glow-aqua: rgba(42, 107, 255, 0.35);     /* → Atmosphere Blue */
+    --ei-glow-indigo: rgba(123, 92, 255, 0.35);   /* → Electric Violet */
+    --ei-glow-pink: rgba(181, 92, 255, 0.35);     /* → Orchid Plasma */
+
+    /* ── Gradients (brand-colour-rules.txt) ──────────────────────── */
+    --ei-gradient-signature: linear-gradient(135deg, #2A6BFF 0%, #7B5CFF 45%, #B55CFF 100%);
+    --ei-gradient-glow: radial-gradient(circle, rgba(42,107,255,0.35) 0%, rgba(123,92,255,0.22) 45%, rgba(181,92,255,0) 100%);
+    --ei-gradient-deep-space: linear-gradient(180deg, #02030A 0%, #050816 100%);
+    /* Backwards compat */
+    --ei-gradient-hero: linear-gradient(135deg, #2A6BFF 0%, #7B5CFF 45%, #B55CFF 100%);
+    --ei-gradient-subtle: linear-gradient(180deg, rgba(2, 3, 10, 0.6), rgba(5, 8, 22, 0.9));
+
+    /* ── Spacing scale (px → rem) ────────────────────────────────── */
     --ei-space-8: 0.5rem;    /* 8px */
     --ei-space-12: 0.75rem;  /* 12px */
     --ei-space-16: 1rem;     /* 16px */
@@ -30,7 +54,7 @@
     --ei-space-96: 6rem;     /* 96px */
     --ei-space-128: 8rem;    /* 128px */
 
-    /* Typography scale */
+    /* ── Typography scale ────────────────────────────────────────── */
     --ei-text-xs: 0.75rem;
     --ei-text-sm: 0.875rem;
     --ei-text-base: 1rem;
@@ -41,7 +65,7 @@
     --ei-text-3xl: 4.5rem;
     --ei-text-4xl: 6rem;
 
-    /* Motion */
+    /* ── Motion ──────────────────────────────────────────────────── */
     --ei-ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
     --ei-duration-fast: 0.2s;
     --ei-duration-normal: 0.4s;
