@@ -16,7 +16,7 @@ export function HeroHeading() {
   </span>
 
   <div
-    className="h-px w-12 rounded-full shrink-0 shadow-[0_0_12px_rgba(232,121,249,0.45)]"
+    className="h-px w-10 rounded-full shrink-0 shadow-[0_0_12px_rgba(232,121,249,0.45)]"
     style={{
       background:
         'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
