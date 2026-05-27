@@ -26,7 +26,7 @@ export function Home() {
       <Philosophy />
 
       {/* ── WHAT WE CREATE — 4 transformation card types ─────── */}
-      <Pathways />
+      <Whate />
 
       {/* ── FEATURED WORK — LUMO proof anchor ────────────────── */}
       <LumoCaseStudyTeaser />
