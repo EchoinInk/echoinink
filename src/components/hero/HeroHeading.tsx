@@ -34,7 +34,7 @@ export function HeroHeading() {
 
       <motion.p
         variants={heroReveal}
-        className="font-structural mt-4 max-w-[34rem] text-[14px] leading-[1.65] text-white/72 md:mt-6 md:text-[15px]"
+        className="font-structural mt-4 max-w-[34rem] text-[14px] leading-[1.65] text-white/84 md:mt-6 md:text-[15px]"
         style={{
           letterSpacing: '0.005em',
         }}
