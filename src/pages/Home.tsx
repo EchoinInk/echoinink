@@ -37,7 +37,7 @@ export function Home() {
       {/* ── CLOSING CTA — Ecosystem invitation ───────────────── */}
       <ClosingSection />
 
-      {/* ── FOOTER — 4-column atmospheric epilogue ───────────── */}
+      {/* ── REMOVED FOOTER AS IN PageShell — 4-column atmospheric epilogue ───────────── */}
       
     </PageShell>
   );
