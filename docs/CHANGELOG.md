@@ -1,5 +1,57 @@
 # Changelog
 
+## 2026-05-28 (Phase 4 — EI Colour Brand Kit Implementation)
+
+### Global Colour Token Migration
+
+**Phase 4 — Hero Atmosphere Refinement**
+- Replaced all hardcoded rgba and hex colour values in `/src/components` with new EI Colour Brand Kit tokens
+- Implemented CSS variable RGB variants for opacity control: `rgb(var(--token-rgb) / opacity)`
+- Updated 20 component files with brand-compliant colour mappings
+
+**Components Updated (20 files)**
+- `SignatureCaseStudy.tsx` — Gradients, background styles, SVG ring strokes, text colours
+- `GlowCard.tsx` — Archetype vignettes, shadow depths, overlay intensities, card backgrounds
+- `PageCTA.tsx` — Atmospheric glow field
+- `Footer.tsx` — Top boundary gradients, atmospheric depth, bottom separator
+- `ClosingSection.tsx` — Heading text colour
+- `AtmosphericBridge.tsx` — Gradient bridge styles (ink, violet, aqua variants)
+- `WhatWeCreate.tsx` — Ambient glow, accent line, card backgrounds, hover shadows
+- `SystemCard.tsx` — Status colours, accent defaults, background gradients, borders
+- `ProductHero.tsx` — Accent colour defaults, luminance veil, bottom fade
+- `AtmospherePause.tsx` — Ambient glow fields, depth layers, decorative line, bottom transition
+- `Philosophy.tsx` — Ambient glow, accent line, vertical dividers, glow anchor dots, text colours
+- `SelectedWorks.tsx` — Work gradients, scene backgrounds, vignettes, reading gradients, section atmosphere, dividers, title colours
+- `EmergingSystems.tsx` — Ambient glow, accent line, card backgrounds, hover shadows
+- `AtmosphericContinuity.tsx` — Colour map (indigo, violet, pink, aqua), texture layers, bridge gradients, veil backgrounds
+- `PageTransition.tsx` — Loading overlay, placeholder line, image loading background
+- `SignatureMoment.tsx` — Atmospheric layers, SVG gradient stops, surrounding glow, bottom fade, ink diffusion
+- `SystemPreview.tsx` — System accent colours, ambient glow, editorial divider
+- `AtmosphericCursor.tsx` — Cursor radial gradient
+- `TrustSignal.tsx` — Atmospheric depth, separator gradient
+- `OrbitalVisual.tsx` — Stroke colours, fill colours, ambient glow
+
+**Colour Token Mappings Applied**
+- `--ei-void-plum-rgb` → Deep atmospheric layers, vignettes
+- `--ei-stellar-lilac-rgb` → Text accents, subtle glows, dividers
+- `--ei-ion-violet-rgb` → Primary atmospheric glows, gradients
+- `--ei-orbit-blue-rgb` → Secondary atmospheric accents
+- `--ei-neon-magenta-rgb` → Accent highlights, gradient stops
+- `--ei-electric-cobalt-rgb` → Blue atmospheric variants
+- `--ei-photon-white-rgb` → White opacity controls, dividers
+- `--ei-cosmic-black-rgb` → Deep background layers
+- `--ei-deep-nebula-rgb` → Nebula backgrounds, gradients
+- `--ei-electric-violet` → Stroke colours, fill accents
+- `--ei-orchid-plasma` → Text accents, highlight fills
+
+**Verification**
+- No remaining hardcoded rgba or hex colours in `/src/components`
+- All opacity values preserved exactly from original implementations
+- Gradient structures maintained
+- Brand colour mappings strictly followed
+
+---
+
 ## 2026-05-27 (Phase 1 — Homepage Implementation)
 
 ### New Homepage Restructure
