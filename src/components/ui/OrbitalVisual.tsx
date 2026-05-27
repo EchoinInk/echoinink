@@ -59,7 +59,7 @@ export function OrbitalVisual({
         <line x1={c} y1={11} x2={11} y2={size - 11} stroke={strokeLight} strokeWidth="0.8" />
         <line x1={c} y1={11} x2={size - 11} y2={size - 11} stroke={strokeLight} strokeWidth="0.8" />
         <line x1={11} y1={size - 11} x2={size - 11} y2={size - 11} stroke={strokeLight} strokeWidth="0.8" />
-        <circle cx={c} cy={11} r="2.5" fill={orchid} />
+        <circle cx={c} cy={11} r="2.5" fill={blue} />
         <circle cx={11} cy={size - 11} r="2" fill={strokeLight} />
         <circle cx={size - 11} cy={size - 11} r="2" fill={strokeLight} />
       </svg>
@@ -84,7 +84,7 @@ export function OrbitalVisual({
           stroke={strokeDim} strokeWidth="1.0"
           transform={`rotate(42 ${c} ${c})`}
         />
-        <circle cx={c} cy={c} r="2" fill={orchid} />
+        <circle cx={c} cy={c} r="2" fill={blue} />
       </svg>
     ),
     reflection: (
