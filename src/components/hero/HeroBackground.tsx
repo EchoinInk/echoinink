@@ -15,24 +15,7 @@ export function HeroBackground() {
         src={widePng}
         alt=""
         aria-hidden="true"
-        className="
-          hidden md:block
-
-          absolute
-          left-[46%]
-          top-[53%]
-          -translate-y-1/2
-
-          h-[100vh]
-          w-auto
-          object-contain
-
-          opacity-[0.94]
-
-          pointer-events-none
-          select-none
-          z-[1]
-        "
+        className="hidden md:block absolute left-[46%] top-[53%] -translate-y-1/2 h-[100vh] w-auto object-contain opacity-[0.94] pointer-events-none select-none z-[1]"
         style={{
           filter: `
             brightness(1.02)
@@ -47,18 +30,13 @@ export function HeroBackground() {
         src={mobilePng}
         alt=""
         aria-hidden="true"
-        className="
-          block md:hidden absolute inset-0 h-full w-full object-cover object-center opacity-[0.92]
-pointer-events-none
-        select-none
-          z-[1]
-        "
+        className="block md:hidden absolute inset-0 h-full w-full object-cover object-center opacity-[0.92] pointer-events-none select-none z-[1]"
       />
 
       {/* LEFT READABILITY FADE */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[2]"
+        className="absolute inset-0 pointer-events-none z-[2] "
         style={{
           background: `
   linear-gradient(
