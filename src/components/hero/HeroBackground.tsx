@@ -4,12 +4,6 @@ import mobilePng from '@/assets/ei-hero-monogram.png';
 export function HeroBackground() {
   return (
     <>
-      {/* Base atmosphere */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[var(--ei-deep-nebula)]"
-      />
-
       {/* DESKTOP MONOGRAM */}
 <img
   src={widePng}
@@ -18,7 +12,6 @@ export function HeroBackground() {
   className="hidden md:block absolute left-[46%] top-[53%] -translate-y-1/2 h-[100vh] w-auto object-contain opacity-[0.88] pointer-events-none select-none z-[1]"
   style={{
     filter: 'brightness(0.92) saturate(0.9) contrast(0.96)',
-    mixBlendMode: 'normal',
   }}
 />
 
@@ -31,19 +24,18 @@ export function HeroBackground() {
       />
 
       {/* LEFT READABILITY FADE */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[2]"
-        style={{
-          background: `linear-gradient(
-    90deg,
-    rgb(var(--ei-cosmic-black-rgb) / 0.90) 0%,
-    rgb(var(--ei-cosmic-black-rgb) / 0.72) 22%,
-    rgb(var(--ei-cosmic-black-rgb) / 0.16) 44%,
-    transparent 60%
+<div
+  aria-hidden="true"
+  className="absolute inset-0 pointer-events-none z-[2]"
+  style={{
+    background: `linear-gradient(
+      90deg, rgb(var(--ei-cosmic-black-rgb) / 0.94) 0%,
+      rgb(var(--ei-cosmic-black-rgb) / 0.78) 24%,
+      rgb(var(--ei-cosmic-black-rgb) / 0.28) 46%,
+      transparent 64%
     )`,
-        }}
-      />
+  }}
+/>
 
       {/* TOP CINEMATIC FRAME */}
       <div
