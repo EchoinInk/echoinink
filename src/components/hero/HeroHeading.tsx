@@ -11,7 +11,7 @@ export function HeroHeading() {
         variants={heroReveal}
         className="font-structural text-[11px] tracking-[0.2em] uppercase text-white/60 block mb-3 md:mb-5"
       >
-        WE DESIGN WORLDS</motion.span><div
+        WE DESIGN WORLDS<div
   className="h-px w-12 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
   style={{
     background:
