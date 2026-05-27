@@ -12,8 +12,7 @@ import {
 
 export function Hero() {
   return (
-    <section className="relative w-full overflow-hidden bg-[#05030B] ei-section-hero pt-32 pb-24 md:pt-40 md:pb-28">
-      <HeroBackground />
+<section className="relative w-full min-h-[720px] md:min-h-[760px] flex items-center overflow-hidden bg-[#05030B] ei-section-hero pt-24 pb-20 md:pt-28 md:pb-24">      <HeroBackground />
 
       <div
         aria-hidden="true"
