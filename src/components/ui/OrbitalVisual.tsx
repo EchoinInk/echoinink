@@ -140,6 +140,47 @@ export function OrbitalVisual({
     <circle cx={size-14} cy="16" r="2" fill={blue} />
     <circle cx={size-18} cy={size-18} r="2" fill={strokeLight} />
   </svg>
+  ),
+  signal: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.6" />
+
+    <path
+      d={`M10 ${c} Q ${c} 10 ${size-10} ${c}`}
+      stroke={strokeLight}
+      strokeWidth="0.9"
+      fill="none"
+    />
+
+    <path
+      d={`M10 ${c+8} Q ${c} 18 ${size-10} ${c+8}`}
+      stroke={strokeDim}
+      strokeWidth="0.5"
+      fill="none"
+    />
+
+    <circle cx={size-10} cy={c} r="2.5" fill={blue} />
+  </svg>
+),
+hexgrid: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.6" />
+
+    <polygon
+      points={`
+        ${c},8
+        ${size-12},18
+        ${size-12},${size-18}
+        ${c},${size-8}
+        12,${size-18}
+        12,18
+      `}
+      stroke={strokeLight}
+      strokeWidth="0.8"
+    />
+
+    <circle cx={c} cy={8} r="2.5" fill={orchid} />
+  </svg>
 ),
   };
 
