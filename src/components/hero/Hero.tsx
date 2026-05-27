@@ -51,29 +51,26 @@ export function Hero() {
 
       {/* CONTENT */}
 <Container className="relative z-10">
-          <motion.div
-className="
-  max-w-[680px]
-  items-start
-  text-left
-  max-md:translate-y-3
-  md:translate-y-[1vh]
-"          variants={heroContainer}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div variants={heroReveal}>
-            <HeroHeading />
-          </motion.div>
+  <motion.div
+    className="
+      max-w-[680px]
+      items-start
+      text-left
+      translate-y-0
+    "
+    variants={heroContainer}
+    initial="hidden"
+    animate="visible"
+  >
+    <motion.div variants={heroReveal}>
+      <HeroHeading />
+    </motion.div>
 
-          <motion.div
-            variants={heroReveal}
-            transition={{ delay: 0.2 }}
-          >
-            <HeroCTA />
-          </motion.div>
-        </motion.div>
-   </Container>   </div>
+    <motion.div variants={heroReveal} transition={{ delay: 0.2 }}>
+      <HeroCTA />
+    </motion.div>
+  </motion.div>
+</Container>    
     </section>
   );
 }
