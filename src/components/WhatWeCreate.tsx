@@ -32,7 +32,7 @@ const capabilities = [
   },
 ];
 
-export function Pathways() {
+export function WhatWeCreate() {
   return (
     <Section spacing="sm" className="relative overflow-hidden">
       <div
