@@ -4,66 +4,43 @@ import { heroReveal } from '@/lib/motion-cinematic';
 export function HeroHeading() {
   return (
     <div className="ei-monogram-frame">
-      {/* ═══════════════════════════════════════════════════════════════
-          EYEBROW — Studio identification
-          ═══════════════════════════════════════════════════════════════ */}
       <motion.div
-  variants={heroReveal}
-  className="flex items-center gap-4 mb-3 md:mb-5"
->
-  <span className="font-structural text-[11px] tracking-[0.2em] uppercase text-white/60">
-    WE DESIGN WORLDS
-  </span>
+        variants={heroReveal}
+        className="mb-3 flex items-center gap-4 md:mb-5"
+      >
+        <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
+          WE DESIGN WORLDS
+        </span>
 
-  <div
-    className="h-px w-10 rounded-full shrink-0 shadow-[0_0_12px_rgba(232,121,249,0.45)]"
-    style={{
-      background:
-        'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
-    }}
-  />
-</motion.div>
+        <div
+          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
+          style={{
+            background:
+              'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
+          }}
+        />
+      </motion.div>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          PRIMARY HEADLINE — Clear value proposition
-          The worlds your work lives in
-          ═══════════════════════════════════════════════════════════════ */}
       <h1
         id="hero-heading"
-        className="font-editorial text-[2.25rem] md:text-[3.1rem] lg:text-[3.7rem] text-white/92 leading-[1.06] max-md:leading-[1.12] tracking-tight max-w-[22ch] whitespace-pre-line"
+        className="font-editorial max-w-[20ch] whitespace-pre-line text-[2.25rem] leading-[1.06] tracking-tight text-white/92 max-md:leading-[1.12] md:text-[3.1rem] lg:text-[3.7rem]"
         style={{
           letterSpacing: '-0.025em',
           textShadow: '0 0 90px rgba(123, 92, 255, 0.08)',
         }}
       >
-        {"Designing the worlds \nyour work lives in."}
+        {'Designing the worlds\nyour work lives in.'}
       </h1>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          SUPPORTING TEXT — Expanded context (~52-60ch, improved readability)
-          Identity systems and digital experiences for founders
-          ═══════════════════════════════════════════════════════════════ */}
       <motion.p
         variants={heroReveal}
-        className="font-structural text-[14px] md:text-[15px] leading-[1.65] max-w-[62ch] max-md:max-w-[34ch] mt-3 md:mt-6 whitespace-pre-line"
+        className="font-structural mt-4 max-w-[34rem] text-[14px] leading-[1.65] text-white/72 md:mt-6 md:text-[15px]"
         style={{
-          color: 'rgba(255,255,255,0.78)',
-          letterSpacing: '0.01em',
+          letterSpacing: '0.005em',
         }}
       >
-        {"Crafting identity systems, immersive websites, creative direction, \nand atmospheric digital experiences — \nfor founders, artists, and emerging brands building digital worlds that \nfeel emotionally alive."}
+        Emotionally intelligent identity systems, immersive websites, and atmospheric digital experiences for founders, artists, and emerging brands.
       </motion.p>
-
-     {/* ═══════════════════════════════════════════════════════════════
-          AUDIENCE POSITIONING — Emotional authority statement
-          Refined, emotionally intelligent, premium editorial tone
-          ═══════════════════════════════════════════════════════════════ */}
-  {/*}   <motion.p
-        variants={heroReveal}
-        className="font-structural text-[12px] tracking-[0.06em] text-white/65 max-md:text-white/55 mt-2.5 md:mt-5"
-      >
-        Built for founders, artists, and emerging brands seeking emotionally resonant digital worlds.
-      </motion.p>*/}
     </div>
   );
 }
