@@ -96,17 +96,6 @@ const variants = {
 
     bg-transparent
   `,
-}
-    // TERTIARY — Text link only, minimal presence
-    // Subtle underline reveal on hover
-    tertiary: `
-      group
-      text-[10px] tracking-[0.14em]
-      text-white/60 hover:text-white/80 focus-visible:text-white/85
-      bg-transparent
-      active:text-white/65
-      active:scale-[0.98]
-    `,
   };
 
   const className = `${baseClasses} ${variants[variant]}`;
