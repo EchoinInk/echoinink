@@ -185,3 +185,24 @@ spacious, not dense
 restrained, not performative
 Typography is not decoration.
 It is atmosphere translated into language.
+
+---
+CHANGELOG
+---
+
+2025 — Typography system implemented
+
+Files updated:
+- src/styles/typography.css — Added Neue Montreal @font-face (all 8 weights), updated .font-structural → Neue Montreal, added .font-mono → Geist Mono
+- tailwind.config.ts — font-sans → Neue Montreal, font-mono → Geist Mono added, font-serif/display → Fraunces unchanged
+- src/styles/globals.css — body default font-family → Neue Montreal
+- src/styles/typography-enhanced.css — All Suisse Intl → Neue Montreal, .ei-eyebrow → Geist Mono (0.14em tracking), body sizes lifted to 16px minimum, body opacity corrected to 75-85% primary / 58-68% secondary, CTA/nav tracking corrected per rules
+- src/styles/typography-system.css — Same updates as typography-enhanced.css (canonical file, loads last)
+- src/styles/forms-luxury.css — Suisse Intl → Neue Montreal
+- src/styles/accessibility.css — Suisse Intl → Neue Montreal
+- index.html — Added Geist Mono from Google Fonts, updated Fraunces load to include opsz axis, noted Neue Montreal is local
+
+Notes:
+- "Faunces" in rules = Fraunces (Google Font). Name appears to be a typo in the original rules document. Implementation uses Fraunces throughout.
+- typography-enhanced.css and typography-system.css contain duplicate ei-* class definitions. typography-system.css loads last and takes precedence. Consolidation is deferred as typography debt.
+- Components using raw inline Tailwind classes (e.g. HeroHeading, Button) will inherit Neue Montreal via font-structural and body defaults but retain their individual size/opacity values.
