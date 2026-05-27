@@ -15,7 +15,7 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
   // Secondary: Ghost button, calmer presence
   // Tertiary: Text link, minimal presence
   
-  const baseClasses = 'ei-focus-glow relative inline-flex items-center justify-center font-structural uppercase transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none touch-manipulation min-h-[48px] md:min-h-0';
+  const baseClasses = 'ei-button-glow relative inline-flex items-center justify-center font-structural uppercase transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none touch-manipulation min-h-[48px] md:min-h-0';
 
   const variants = {
     // PRIMARY — Strongest visual weight with neon gradient edge
