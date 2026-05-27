@@ -1,4 +1,4 @@
-import widePng from '@/assets/new-monogram-balanced-t.png';
+import widePng from '@/assets/new-monogram-balanced-2400x2400.png';
 import mobilePng from '@/assets/new-monogram-balanced-9x16.png';
 
 export function HeroBackground() {
