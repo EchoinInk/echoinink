@@ -33,7 +33,7 @@ export function Hero() {
       />
 
       <motion.div
-        className="absolute inset-x-0 bottom-0 z-[6] pointer-events-none h-[14vh] md:h-[20vh]"
+        className="absolute inset-x-0 bottom-0 z-[6] pointer-events-none h-[16vh]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: DURATION.slower, delay: 0.8 }}
@@ -44,12 +44,12 @@ export function Hero() {
       />
 
       <Container className="relative z-10">
-        <motion.div
-          className="max-w-[680px] text-left"
-          variants={heroContainer}
-          initial="hidden"
-          animate="visible"
-        >
+  <motion.div
+    className="max-w-[680px] text-left pt-10 md:pt-12"
+    variants={heroContainer}
+    initial="hidden"
+    animate="visible"
+  >
           <motion.div variants={heroReveal}>
             <HeroHeading />
           </motion.div>
