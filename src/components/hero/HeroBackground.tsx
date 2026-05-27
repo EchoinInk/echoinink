@@ -1,5 +1,5 @@
-import widePng from '@/assets/ei-min-hero-16x9.png';
-import mobilePng from '@/assets/ei-min-hero-9x16.png';
+import widePng from '@/assets/ei-hero-monogram.png';
+import mobilePng from '@/assets/ei-hero-monogram.png';
 
 export function HeroBackground() {
   return (
