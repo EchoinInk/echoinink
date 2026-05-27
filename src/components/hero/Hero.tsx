@@ -1,73 +1,29 @@
-import widePng from '@/assets/ei-hero-monogram.png';
-import mobilePng from '@/assets/ei-hero-monogram.png';
+import { motion } from 'framer-motion';
+import { HeroBackground } from './HeroBackground';
+import { HeroCTA } from './HeroCTA';
+import { HeroHeading } from './HeroHeading';
+import { Container } from '../layout/Container';
 
-export function HeroBackground() {
+import {
+  heroReveal,
+} from '@/lib/motion-cinematic';
+
+export function Hero() {
   return (
-    <>
-      {/* Base atmosphere */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 bg-[var(--ei-cosmic-black)]"
-      />
+    <section className="relative w-full min-h-[720px] md:min-h-[760px] flex items-center overflow-hidden bg-[var(--ei-cosmic-black)] ei-section-hero">
+      <HeroBackground />
 
-      {/* DESKTOP MONOGRAM */}
-      <img
-        src={widePng}
-        alt=""
-        aria-hidden="true"
-        className="hidden md:block absolute left-[48%] top-[52%] -translate-y-1/2 h-[82vh] w-auto object-contain opacity-[0.82] pointer-events-none select-none z-[1]"
-        style={{
-          filter: 'brightness(0.88) saturate(0.88) contrast(0.98)',
-          mixBlendMode: 'normal',
-        }}
-      />
+      <Container size="xl" className="relative z-10">
+        <motion.div className="max-w-[680px] text-left md:pl-10 lg:pl-14 md:-translate-y-[2vh]">
+          <motion.div variants={heroReveal}>
+            <HeroHeading />
+          </motion.div>
 
-      {/* MOBILE MONOGRAM */}
-      <img
-        src={mobilePng}
-        alt=""
-        aria-hidden="true"
-        className="block md:hidden absolute inset-0 h-full w-full object-cover object-center opacity-[0.82] pointer-events-none select-none z-[1]"
-        style={{
-          filter: 'brightness(0.88) saturate(0.88) contrast(0.98)',
-          mixBlendMode: 'normal',
-        }}
-      />
-
-      {/* LEFT READABILITY FADE */}
-<div
-  aria-hidden="true"
-  className="absolute inset-0 pointer-events-none z-[2]"
-  style={{
-    background: `linear-gradient(
-      90deg,
-      rgb(var(--ei-cosmic-black-rgb) / 0.94) 0%,
-      rgb(var(--ei-cosmic-black-rgb) / 0.78) 24%,
-      rgb(var(--ei-cosmic-black-rgb) / 0.28) 46%,
-      transparent 64%
-    )`,
-  }}
-/>
-
-      {/* TOP CLEAN FADE */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[3]"
-        style={{
-          background:
-            'linear-gradient(to bottom, rgb(var(--ei-cosmic-black-rgb) / 0.72) 0%, rgb(var(--ei-cosmic-black-rgb) / 0.32) 12%, transparent 30%)',
-        }}
-      />
-
-      {/* BOTTOM ATMOSPHERIC FADE */}
-      <div
-        aria-hidden="true"
-        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[4] h-[18vh] md:h-[24vh]"
-        style={{
-          background:
-            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-cosmic-black-rgb) / 0.22) 70%, var(--ei-cosmic-black) 100%)',
-        }}
-      />
-    </>
+          <motion.div variants={heroReveal} transition={{ delay: 0.2 }}>
+            <HeroCTA />
+          </motion.div>
+        </motion.div>
+      </Container>
+    </section>
   );
 }
