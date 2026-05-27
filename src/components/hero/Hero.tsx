@@ -41,7 +41,7 @@ export function Hero() {
         style={{
           background:
             'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-nebula-rgb) / 0.18) 50%, var(--ei-cosmic-black) 100%)',
-        }}
+       }}
       />
 
 <Container size="xl" className="relative z-10">
