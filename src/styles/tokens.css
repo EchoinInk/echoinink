@@ -6,7 +6,8 @@
     --ei-indigo-atmosphere: #0C1F5A;     /* Indigo Atmosphere — ambient depth, subtle gradients */
     --ei-atmosphere-blue: #2A6BFF;       /* Atmosphere Blue — motion highlights, interaction glow */
     --ei-electric-violet: #7B5CFF;       /* Electric Violet — identity glow, emphasis states */
-    --ei-orchid-plasma: #B55CFF;         /* Orchid Plasma — cinematic bloom, nebula gradients */
+    --ei-orchid-plasma: #B55CFF; 
+            /* Orchid Plasma — cinematic bloom, nebula gradients */
     --ei-cosmic-lavender: #C8BEFF;       /* Soft Cosmic Lavender — subtle highlights, hover softness */
     --ei-moonlight: #F5F2EB;             /* Moonlight White — hero typography, editorial statements */
 
