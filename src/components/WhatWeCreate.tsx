@@ -73,7 +73,7 @@ export function WhatWeCreate() {
                   aria-label={`Explore ${cap.title}`}
                 >
                   {/* Icon */}
-                  <div className="mb-8 flex items-center justify-center h-16">
+                  <div className="mb-10">
                     <OrbitalVisual variant={cap.variant} size={64} />
                   </div>
 
