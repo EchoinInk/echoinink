@@ -27,7 +27,7 @@ export function OrbitalVisual({
   const c = size / 2;
   const r = c - 4;
   const strokeLight = 'rgba(200,190,255,0.55)';
-  const strokeDim = 'rgba(200,190,255,0.28)';
+  const strokeDim = '#7B5CFF';
   const orchid = '#B55CFF';
   const blue = 'rgba(42,107,255,0.85)';
   const violet = '#7B5CFF';
@@ -35,7 +35,7 @@ export function OrbitalVisual({
   const icons: Record<OrbitalVariant, React.ReactElement> = {
     triangle: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
-        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.2" />
+        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.8" />
         <polygon
           points={`${c},${9} ${size - 9},${size - 9} ${9},${size - 9}`}
           stroke={strokeLight}
