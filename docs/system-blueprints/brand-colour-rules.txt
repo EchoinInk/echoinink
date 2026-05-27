@@ -1,51 +1,58 @@
 Primary Palette
 Void Black
-HEX: #02030ARGB: 2, 3, 10 
+HEX: #02030A RGB: 2, 3, 10 
 Usage:
 global backgrounds
 cinematic negative space
 immersive dark mode foundation
 
 Deep Midnight
-HEX: #050816RGB: 5, 8, 22Usage:
+HEX: #050816 RGB: 5, 8, 22
+Usage:
 layered sections
 elevated surfaces
 card backgrounds
 footer systems
 
 Indigo Atmosphere
-HEX: #0C1F5ARGB: 12, 31, 90Usage:
+HEX: #0C1F5A RGB: 12, 31, 90
+Usage:
 ambient depth
 atmospheric transitions
 subtle radial gradients
 
 Atmosphere Blue
-HEX: #2A6BFFRGB: 42, 107, 255Usage:
+HEX: #2A6BFF RGB: 42, 107, 255
+Usage:
 motion highlights
 interaction glow
 energetic accents
 hero illumination
 
 Electric Violet
-HEX: #7B5CFFRGB: 123, 92, 255Usage:
+HEX: #7B5CFF RGB: 123, 92, 255
+Usage:
 identity glow
 emphasis states
 luminous transitions
 
 Orchid Plasma
-HEX: #B55CFFRGB: 181, 92, 255Usage:
+HEX: #B55CFF RGB: 181, 92, 255
+Usage:
 cinematic bloom
 nebula gradients
 atmospheric lighting
 
 Soft Cosmic Lavender
-HEX: #C8BEFFRGB: 200, 190, 255Usage:
+HEX: #C8BEFF RGB: 200, 190, 255
+Usage:
 subtle highlights
 hover softness
 secondary illumination
 
 Moonlight White
-HEX: #F5F2EBRGB: 245, 242, 235Usage:
+HEX: #F5F2EB RGB: 245, 242, 235
+Usage:
 hero typography
 premium contrast
 editorial statements
@@ -101,7 +108,7 @@ Surface System
 
 Typography Contrast
 Primary Text
-#F6F2FF
+ #F6F2FF
 Secondary Text
 rgba(245,242,235,0.78)
 Tertiary Text
