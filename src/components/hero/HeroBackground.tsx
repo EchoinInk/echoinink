@@ -25,8 +25,8 @@ w-full h-full
 object-cover object-center
 opacity-[0.92]
 scale-[1.01]
-""
-          />
+"
+        
         </picture>
       </div>
 {/* Cinematic top frame */}
