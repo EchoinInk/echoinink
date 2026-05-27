@@ -40,13 +40,14 @@ export function Philosophy() {
         }}
       />
 
-      <Container>
-        <motion.div
-          className="max-w-6xl mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT.normal}
-        >
+    >
+        <Container size="xl">
+  <motion.div
+    className="w-full"
+    initial="hidden"
+    whileInView="visible"
+    viewport={VIEWPORT.normal}
+  >
           {/* Section eyebrow */}
           <motion.div variants={driftUp} className="flex items-center gap-3 mb-8 md:mb-12">
             <span className="ei-eyebrow">Our Philosophy</span>
