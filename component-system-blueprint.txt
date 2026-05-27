@@ -1,0 +1,234 @@
+
+1. AtmosphereCard
+Use for philosophy, service previews, quiet content blocks.
+type AtmosphereCardProps = {
+  eyebrow?: string;
+  title: string;
+  body?: string;
+  children?: React.ReactNode;
+};
+
+export function AtmosphereCard({ eyebrow, title, body, children }: AtmosphereCardProps) {
+  return (
+    <section className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[#070816]/80 p-10 backdrop-blur-2xl">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(138,0,255,0.16),transparent_42%)]" />
+      <div className="relative z-10">
+        {eyebrow && (
+          <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.18em] text-[#FF78D7]">
+            {eyebrow}
+          </p>
+        )}
+        <h2 className="font-editorial text-4xl leading-tight text-[#F6F2FF]">{title}</h2>
+        {body && <p className="mt-6 max-w-xl text-base font-structural leading-7 text-white/65">{body}</p>}
+        {children}
+      </div>
+    </section>
+  );
+}
+
+---
+2. SystemCard
+Use for Identity Canvas, Founder Reflection, Identity GPT, UI Kit.
+type SystemCardProps = {
+  icon?: React.ReactNode;
+  title: string;
+  description: string;
+  meta: string;
+};
+
+export function SystemCard({ icon, title, description, meta }: SystemCardProps) {
+  return (
+    <article className="group rounded-[24px] border border-white/10 bg-[#070816]/70 p-7 transition duration-500 hover:border-[#FF78D7]/40 hover:shadow-[0_0_60px_rgba(138,0,255,0.18)]">
+      <div className="mb-8 flex h-20 items-center justify-center">
+        {icon ?? <OrbitalVisual />}
+      </div>
+
+      <h3 className="font-editorial text-2xl text-[#F6F2FF]">{title}</h3>
+
+      <p className="mt-4 font-structural text-sm leading-6 text-white/60">{description}</p>
+
+      <p className="mt-8 font-mono text-[10px] uppercase tracking-[0.18em] text-white/45">
+        {meta}
+      </p>
+    </article>
+  );
+}
+
+---
+3. WorldCard
+Use for Studio / Systems / Lumo / Work entry points.
+type WorldCardProps = {
+  label: string;
+  title: string;
+  description: string;
+  href: string;
+};
+
+export function WorldCard({ label, title, description, href }: WorldCardProps) {
+  return (
+    <a
+      href={href}
+      className="group block rounded-[28px] border border-white/10 bg-gradient-to-b from-white/[0.04] to-white/[0.015] p-8 transition duration-500 hover:border-[#8A00FF]/40"
+    >
+      <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#FF78D7]">
+        {label}
+      </p>
+
+      <h3 className="mt-12 font-editorial text-3xl text-[#F6F2FF]">{title}</h3>
+
+      <p className="mt-4 max-w-sm font-structural text-sm leading-6 text-white/60">{description}</p>
+
+      <span className="mt-8 inline-block font-mono text-[11px] uppercase tracking-[0.16em] text-[#FF78D7]">
+        Explore →
+      </span>
+    </a>
+  );
+}
+
+---
+4. FeaturedWorld
+Use for LUMO / main proof anchor.
+type FeaturedWorldProps = {
+  title: string;
+  subtitle: string;
+  body: string;
+  image: string;
+  href: string;
+};
+
+export function FeaturedWorld({ title, subtitle, body, image, href }: FeaturedWorldProps) {
+  return (
+    <section className="grid overflow-hidden rounded-[32px] border border-white/10 bg-[#070816]/80 md:grid-cols-[0.9fr_1.4fr]">
+      <div className="p-10 md:p-14">
+        <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-[#FF78D7]">
+          Featured World
+        </p>
+
+        <h2 className="mt-24 font-editorial text-5xl text-[#F6F2FF]">{title}</h2>
+        <p className="mt-3 font-editorial text-2xl text-white/80">{subtitle}</p>
+        <p className="mt-6 font-structural max-w-md text-sm leading-7 text-white/60">{body}</p>
+
+        <a className="mt-10 inline-block font-mono text-[11px] uppercase tracking-[0.16em] text-[#FF78D7]" href={href}>
+          View Case Study →
+        </a>
+      </div>
+
+      <div
+        className="min-h-[360px] bg-cover bg-center"
+        style={{ backgroundImage: `url(${image})` }}
+      />
+    </section>
+  );
+}
+
+---
+5. SignalPanel
+type SignalPanelProps = {
+  items: { title: string; body: string }[];
+};
+
+export function SignalPanel({ items }: SignalPanelProps) {
+  return (
+    <div className="grid rounded-[28px] border border-white/10 bg-[#050816]/70 md:grid-cols-4">
+      {items.map((item) => (
+        <div key={item.title} className="border-white/10 p-8 md:border-l first:border-l-0">
+          <GlowAnchor />
+          <h4 className="mt-6 font-editorial text-xl text-[var(--ice)]">{item.title}</h4>
+          <p className="mt-3 font-structural text-sm leading-6 text-[var(--text-soft)]">{item.body}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+---
+6. OrbitalVisual
+export function OrbitalVisual() {
+  return (
+    <div className="relative h-20 w-20">
+      <div className="absolute inset-0 rounded-full border border-[var(--violet)]/40" />
+      <div className="absolute inset-3 rounded-full border border-[var(--blue)]/35" />
+      <div className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--magenta)] shadow-[0_0_24px_rgba(255,77,219,0.9)]" />
+      <div className="absolute inset-0 rotate-45 rounded-full border border-[var(--pink)]/25" />
+    </div>
+  );
+}
+
+---
+7. ReflectivePrompt
+type ReflectivePromptProps = {
+  quote: string;
+  caption?: string;
+};
+
+export function ReflectivePrompt({ quote, caption }: ReflectivePromptProps) {
+  return (
+    <section className="relative overflow-hidden rounded-[32px] border border-white/10 px-10 py-20 text-center">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(123,92,255,0.16),transparent_55%)]" />
+
+      <div className="relative z-10 mx-auto max-w-3xl">
+        <p className="font-structural text-4xl italic leading-tight text-[var(--ice)]">
+          “{quote}”
+        </p>
+        {caption && (
+          <p className="mt-6 text-sm text-[var(--text-muted)]">{caption}</p>
+        )}
+      </div>
+    </section>
+  );
+}
+
+---
+8. MonogramField
+type MonogramFieldProps = {
+  image: string;
+};
+
+export function MonogramField({ image }: MonogramFieldProps) {
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      <img
+        src={image}
+        alt=""
+        className="absolute right-0 top-0 h-full w-[68%] object-cover opacity-80"
+      />
+      <div className="absolute inset-0 bg-gradient-to-r from-[var(--bg-ink)] via-[var(--bg-ink)]/45 to-transparent" />
+    </div>
+  );
+}
+
+---
+9. GlowAnchor
+export function GlowAnchor() {
+  return (
+    <span className="relative block h-4 w-4">
+      <span className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[var(--magenta)]" />
+      <span className="absolute inset-0 rounded-full bg-[var(--violet)]/30 blur-md" />
+    </span>
+  );
+}
+
+---
+Suggested hierarchy
+<MonogramField image="/ei-hero.webp" />
+
+<AtmosphereCard />
+
+<div className="grid grid-cols-4 gap-6">
+  <WorldCard />
+  <WorldCard />
+  <WorldCard />
+  <WorldCard />
+</div>
+
+<FeaturedWorld />
+
+<div className="grid grid-cols-5 gap-5">
+  <SystemCard />
+  <SystemCard />
+  <SystemCard />
+  <SystemCard />
+  <SystemCard />
+</div>
+
+<ReflectivePrompt />
