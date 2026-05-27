@@ -26,11 +26,11 @@ export function OrbitalVisual({
 }: OrbitalVisualProps) {
   const c = size / 2;
   const r = c - 4;
-  const strokeLight = 'rgba(200,190,255,0.55)';
-  const strokeDim = '#7B5CFF';
-  const orchid = '#B55CFF';
-  const blue = 'rgba(42,107,255,0.85)';
-  const violet = '#7B5CFF';
+  const strokeLight = 'rgb(var(--ei-stellar-lilac-rgb) / 0.55)';
+  const strokeDim = 'var(--ei-electric-violet)';
+  const orchid = 'var(--ei-orchid-plasma)';
+  const blue = 'rgb(var(--ei-electric-cobalt-rgb) / 0.85)';
+  const violet = 'var(--ei-electric-violet)';
 
   const icons: Record<OrbitalVariant, React.ReactElement> = {
     triangle: (
@@ -99,10 +99,10 @@ export function OrbitalVisual({
     gpt: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
         <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.8" />
-        <circle cx={c} cy={c} r={14} stroke={strokeDim} strokeWidth="0.6" fill="rgba(181,92,255,0.07)" />
-        <circle cx={c} cy={c} r={5} fill="rgba(181,92,255,0.22)" />
+        <circle cx={c} cy={c} r={14} stroke={strokeDim} strokeWidth="0.6" fill="rgb(var(--ei-ion-violet-rgb) / 0.07)" />
+        <circle cx={c} cy={c} r={5} fill="rgb(var(--ei-ion-violet-rgb) / 0.22)" />
         <circle cx={c} cy={c} r={2.5} fill={orchid} />
-        <circle cx={c} cy={c} r={1} fill="rgba(255,255,255,0.85)" />
+        <circle cx={c} cy={c} r={1} fill="rgb(var(--ei-photon-white-rgb) / 0.85)" />
       </svg>
     ),
     uikit: (
@@ -152,7 +152,7 @@ hexgrid: (
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(circle, rgba(123,92,255,0.1) 0%, transparent 65%)',
+          background: 'radial-gradient(circle, rgb(var(--ei-ion-violet-rgb) / 0.1) 0%, transparent 65%)',
           filter: 'blur(6px)',
           borderRadius: '50%',
         }}
