@@ -7,18 +7,22 @@ export function HeroHeading() {
       {/* ═══════════════════════════════════════════════════════════════
           EYEBROW — Studio identification
           ═══════════════════════════════════════════════════════════════ */}
-      <motion.span
-        variants={heroReveal}
-        className="font-structural text-[11px] tracking-[0.2em] uppercase text-white/60 block mb-3 md:mb-5"
-      >
-        WE DESIGN WORLDS<div
-  className="h-px w-12 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
-  style={{
-    background:
-      'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
-  }}
-/>
-      </motion.span>
+      <motion.div
+  variants={heroReveal}
+  className="flex items-center gap-4 mb-3 md:mb-5"
+>
+  <span className="font-structural text-[11px] tracking-[0.2em] uppercase text-white/60">
+    WE DESIGN WORLDS
+  </span>
+
+  <div
+    className="h-px w-12 rounded-full shrink-0 shadow-[0_0_12px_rgba(232,121,249,0.45)]"
+    style={{
+      background:
+        'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
+    }}
+  />
+</motion.div>
 
       {/* ═══════════════════════════════════════════════════════════════
           PRIMARY HEADLINE — Clear value proposition
