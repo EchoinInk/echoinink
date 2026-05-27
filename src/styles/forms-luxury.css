@@ -66,7 +66,7 @@
   .ei-form-input:focus,
   .ei-form-textarea:focus,
   .ei-form-select:focus {
-    border-color: rgba(99, 102, 241, 0.25);
+    border-color: rgba(123, 92, 255, 0.25);
     color: rgba(255, 255, 255, 0.90);
     padding-left: 0.5rem;
   }
@@ -157,7 +157,7 @@
 
   .ei-form-input:valid:not(:placeholder-shown),
   .ei-form-textarea:valid:not(:placeholder-shown) {
-    border-color: rgba(99, 102, 241, 0.15);
+    border-color: rgba(123, 92, 255, 0.15);
   }
 
   /* ── Autofill Styling ────────────────────────────────────── */

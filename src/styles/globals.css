@@ -30,7 +30,7 @@
   }
 
   ::selection {
-    background: rgba(30, 200, 255, 0.25);
-    color: #ffffff;
+    background: rgba(123, 92, 255, 0.25);
+    color: var(--ei-text-primary);
   }
 }
