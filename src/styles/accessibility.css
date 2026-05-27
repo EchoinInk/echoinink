@@ -44,13 +44,41 @@
   }
 
   /* Glow focus variant for atmospheric elements */
-  .ei-focus-glow:focus-visible {
-    outline: none;
-    box-shadow:
-      0 0 0 1.5px rgba(255, 255, 255, 0.4),
-      0 0 20px -4px rgba(139, 92, 246, 0.25);
-    outline-offset: 0;
-  }
+  /* Atmospheric CTA glow */
+
+.ei-button-glow::before {
+
+  content: '';
+
+  position: absolute;
+
+  inset: -24px;
+
+  border-radius: inherit;
+
+  background:
+
+    radial-gradient(
+
+      circle,
+
+      rgba(168,85,247,0.22) 0%,
+
+      rgba(99,102,241,0.12) 34%,
+
+      transparent 72%
+
+    );
+
+  filter: blur(24px);
+
+  opacity: 0.9;
+
+  pointer-events: none;
+
+  z-index: -1;
+
+}
 
   /* Cards and blocks */
   .ei-focus-block:focus-visible {
