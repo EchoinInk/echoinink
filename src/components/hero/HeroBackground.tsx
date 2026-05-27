@@ -17,7 +17,7 @@ export function HeroBackground() {
           <source srcSet={wideWebp} type="image/webp" />
           <img
             src={widePng}
-            alt=""
+            alt="EchoinInk background"
             aria-hidden="true"
 className="absolute
   inset-0
