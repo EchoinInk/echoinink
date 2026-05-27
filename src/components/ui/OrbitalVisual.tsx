@@ -76,8 +76,8 @@ export function OrbitalVisual({
     ),
     canvas: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
-        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="  1.2" />
-        <circle cx={c} cy={c} r={r - 9} stroke={strokeLight} strokeWidth="1.4" />
+        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.3" />
+        <circle cx={c} cy={c} r={r - 9} stroke={strokeLight} strokeWidth="1.1" />
         <ellipse
           cx={c} cy={c}
           rx={r - 9} ry={(r - 9) * 0.48}
@@ -89,7 +89,7 @@ export function OrbitalVisual({
     ),
     reflection: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
-        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.8" />
+        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.3" />
         <line x1={c} y1={9} x2={c} y2={size - 9} stroke={strokeLight} strokeWidth="0.6" />
         <line x1={9} y1={c} x2={size - 9} y2={c} stroke={strokeLight} strokeWidth="0.6" />
         <line x1={15} y1={15} x2={size - 15} y2={size - 15} stroke={strokeDim} strokeWidth="0.9" />
