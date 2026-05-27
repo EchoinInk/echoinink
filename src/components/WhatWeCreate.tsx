@@ -118,20 +118,25 @@ export function WhatWeCreate() {
           className="max-w-4xl mx-auto"
         >
           {/* Section header */}
-          <motion.div variants={driftUp} className="text-center mb-7 md:mb-12">
-            <span className="ei-eyebrow ei-text-space-md block">
-              Capabilities
-            </span>
-            <h2 className="ei-section-title">
-              What we create
-            </h2><div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
-          style={{
-            background:
-              'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
-          }}
-        />
-          </motion.div>
+          <motion.div variants={driftUp} className="mb-7 text-center md:mb-12">
+  <div className="mb-3 flex items-center justify-center gap-4">
+    <span className="ei-eyebrow ei-text-space-md">
+      Capabilities
+    </span>
+
+    <div
+      className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgba(42,107,255,0.35)]"
+      style={{
+        background:
+          'linear-gradient(90deg, rgba(42,107,255,0.15) 0%, rgba(42,107,255,0.95) 100%)',
+      }}
+    />
+  </div>
+
+  <h2 className="ei-section-title">
+    What we create
+  </h2>
+</motion.div>
 
           {/* Editorial divider */}
           <motion.div
