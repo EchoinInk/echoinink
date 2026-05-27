@@ -8,6 +8,10 @@ export type OrbitalVariant =
   | 'architect'   // Narrative Architect
   | 'gpt'         // Identity GPT
   | 'uikit';      // Atmosphere UI Kit
+  'hexgrid';
+  'signal';
+  'constellation';
+  
 
 interface OrbitalVisualProps {
   variant?: OrbitalVariant;
