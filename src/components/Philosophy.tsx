@@ -35,7 +35,8 @@ export function Philosophy() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 50% 30% at 30% 40%, rgba(123,92,255,0.018) 0%, transparent 60%)',
+          background:
+            'radial-gradient(ellipse 50% 30% at 30% 40%, rgba(123,92,255,0.018) 0%, transparent 60%)',
           filter: 'blur(50px)',
         }}
       />
@@ -48,15 +49,20 @@ export function Philosophy() {
           viewport={VIEWPORT.normal}
         >
           {/* Section eyebrow */}
-          <motion.div variants={driftUp} className="flex items-center gap-3 mb-8 md:mb-12">
+          <motion.div
+            variants={driftUp}
+            className="flex items-center gap-3 mb-8 md:mb-12"
+          >
             <span className="ei-eyebrow">Our Philosophy</span>
-<div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
-          style={{
-            background:
-              'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
-          }}
-        />          </motion.div>
+
+            <div
+              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
+              style={{
+                background:
+                  'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
+              }}
+            />
+          </motion.div>
 
           {/* Two-column: heading left, fragments right */}
           <div className="grid md:grid-cols-[2fr_3fr] gap-8 md:gap-16 items-start">
@@ -67,14 +73,15 @@ export function Philosophy() {
                 variants={blurEmergence}
                 className="ei-section-title whitespace-pre-line mb-5"
               >
-                {"Atmosphere is not decoration —\nit is how meaning is felt."}
+                {'Atmosphere is not decoration —\nit is how meaning is felt.'}
               </motion.h2>
 
               <motion.p
                 variants={driftUp}
                 className="font-structural text-[14px] md:text-[15px] leading-[1.75] text-white/60 max-w-[38ch]"
               >
-                Everything we create is immersed in the invisible. A language of emotion, memory, and intention.
+                Everything we create is immersed in the invisible. A language of
+                emotion, memory, and intention.
               </motion.p>
             </motion.div>
 
@@ -87,18 +94,44 @@ export function Philosophy() {
                 <motion.div
                   key={i}
                   variants={driftUp}
-                  className="relative"
+                  className="relative pl-6"
                 >
+                  {/* Vertical divider */}
+                  {i !== 0 && (
+                    <div
+                      className="
+                        absolute
+                        left-0
+                        top-0
+                        h-full
+                        w-px
+                      "
+                      style={{
+                        background:
+                          'linear-gradient(to bottom, transparent 0%, rgba(255,255,255,0.08) 18%, rgba(255,255,255,0.08) 82%, transparent 100%)',
+                      }}
+                    />
+                  )}
+
                   {/* Glow anchor dot */}
                   <div className="mb-4" aria-hidden="true">
                     <span className="relative inline-block h-3 w-3">
                       <span
                         className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full"
-                        style={{ background: fragment.accent ? 'var(--ei-orchid-plasma)' : 'rgba(200,190,255,0.45)' }}
+                        style={{
+                          background: fragment.accent
+                            ? 'var(--ei-orchid-plasma)'
+                            : 'rgba(200,190,255,0.45)',
+                        }}
                       />
+
                       <span
                         className="absolute inset-0 rounded-full blur-sm"
-                        style={{ background: fragment.accent ? 'rgba(181,92,255,0.3)' : 'rgba(123,92,255,0.2)' }}
+                        style={{
+                          background: fragment.accent
+                            ? 'rgba(181,92,255,0.3)'
+                            : 'rgba(123,92,255,0.2)',
+                        }}
                       />
                     </span>
                   </div>
