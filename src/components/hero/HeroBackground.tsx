@@ -34,25 +34,7 @@ export function HeroBackground() {
       transparent 64%
     )`,
   }}
-/> {/* TOP CINEMATIC FRAME */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[3]"
-        style={{
-          background: 
-            'linear-gradient(to bottom, rgb(var(--ei-deep-nebula-rgb) / 0.18) 0%, rgb(var(--ei-deep-nebula-rgb) / 0.04) 12%, transparent 26%)',
-        }}
-      />
-
-      {/* BOTTOM ATMOSPHERIC FADE */}
-      <div
-        aria-hidden="true"
-        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[4] h-[16vh] md:h-[28vh]"
-        style={{
-          background:
-            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-plum-rgb) / 0.18) 42%, rgb(var(--ei-void-plum-rgb) / 0.38) 74%, var(--ei-cosmic-black) 100%)',
-        }}
-      />
+/>
     </>
   );
 }
