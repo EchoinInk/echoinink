@@ -1,25 +1,56 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
-import { Link } from 'react-router-dom';
-import GlowCard from '@/components/GlowCard';
-import systemsImage from '@/assets/ei-systems-bg.png';
-import vaultImage from '@/assets/ei-vault-bg.png';
-import { 
-  driftUp, 
-  staggerContainer,
-  STAGGER,
-  VIEWPORT 
-} from '@/lib/motion-cinematic';
+import { OrbitalVisual } from '@/components/ui/OrbitalVisual';
+import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
+
+const systems = [
+  {
+    variant: 'canvas' as const,
+    title: 'Identity Canvas',
+    description: 'Map your essence, influence, and emotional positioning.',
+    meta: 'Framework',
+    href: '/systems',
+  },
+  {
+    variant: 'reflection' as const,
+    title: 'Founder Reflection',
+    description: 'A guided system for clarity, identity, and next alignment.',
+    meta: 'Reflective Tool',
+    href: '/systems',
+  },
+  {
+    variant: 'architect' as const,
+    title: 'Narrative Architect',
+    description: 'Build stories that hold meaning, tension, and transformation.',
+    meta: 'Framework',
+    href: '/systems',
+  },
+  {
+    variant: 'gpt' as const,
+    title: 'Identity GPT',
+    description: 'An AI companion for identity clarity and narrative direction.',
+    meta: 'GPT System',
+    href: '/systems',
+  },
+  {
+    variant: 'uikit' as const,
+    title: 'Atmosphere UI Kit',
+    description: 'Cinematic UI components for immersive digital worlds.',
+    meta: 'UI System',
+    href: '/systems',
+  },
+];
 
 export function EmergingSystems() {
   return (
     <Section spacing="sm" className="relative overflow-hidden">
-      {/* Soft atmospheric continuation */}
       <div
+        aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 50% 40% at 50% 60%, rgba(30,200,255,0.02) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 55% 40% at 50% 55%, rgba(42,107,255,0.02) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -32,40 +63,56 @@ export function EmergingSystems() {
           viewport={VIEWPORT.normal}
           className="max-w-6xl mx-auto"
         >
-          {/* Centered heading */}
-          <motion.div variants={driftUp} className="text-center mb-6 md:mb-10">
-            <span className="ei-eyebrow ei-text-space-md block">
-              Worlds in Formation
-            </span>
-            <h2 className="ei-section-title whitespace-pre-line">
-              {"Active archives and systems\nshaping the future."}
-            </h2>
+          {/* Section header — eyebrow left, explore link right */}
+          <motion.div
+            variants={driftUp}
+            className="flex items-center justify-between mb-10 md:mb-14"
+          >
+            <div className="flex items-center gap-3">
+              <span className="ei-eyebrow">Our Systems</span>
+              <div className="h-px w-8 bg-[var(--ei-orchid-plasma)]/40 flex-shrink-0" aria-hidden="true" />
+            </div>
+
+            <Link
+              to="/systems"
+              className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/45 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-500"
+            >
+              Explore All Systems
+              <span className="group-hover:translate-x-1 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">→</span>
+            </Link>
           </motion.div>
 
-          {/* Horizontal cards */}
-          <div className="flex flex-col md:flex-row gap-5 md:gap-6 items-stretch justify-center">
-            <motion.article variants={driftUp} className="flex-1">
-              <Link to="/systems" className="ei-focus-block block h-full rounded-[28px]">
-                <GlowCard
-                  title="Echo Systems"
-                  description={`Intentional frameworks for \nbuilding identities, stories, and \ndigital worlds with cinematic \nclarity and creative precision.`}
-                  image={systemsImage}
-                  horizontal
-                  className="h-full min-h-[200px]"
-                />
-              </Link>
-            </motion.article>
-            <motion.article variants={driftUp} className="flex-1">
-              <Link to="/vault" className="ei-focus-block block h-full rounded-[28px]">
-                <GlowCard
-                  title="Echo Vault"
-                  description={`A curated archive of textures, \nreferences, and emotional \nenvironments for creators shaping \natmosphere with intention.`}
-                  image={vaultImage}
-                  horizontal
-                  className="h-full min-h-[200px]"
-                />
-              </Link>
-            </motion.article>
+          {/* 5 system cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-4">
+            {systems.map((system) => (
+              <motion.article key={system.title} variants={driftUp}>
+                <Link
+                  to={system.href}
+                  className="group flex flex-col h-full rounded-[24px] border border-white/10 bg-[#070816]/70 p-7 transition-all duration-500 hover:border-[var(--ei-electric-violet)]/30 hover:shadow-[0_0_60px_rgba(123,92,255,0.12)]"
+                  aria-label={system.title}
+                >
+                  {/* Orbital icon */}
+                  <div className="mb-7 flex items-center justify-center h-20">
+                    <OrbitalVisual variant={system.variant} size={72} />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-editorial text-lg text-[var(--ei-text-primary)] mb-3 leading-tight">
+                    {system.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-structural text-[12px] leading-[1.7] text-white/55 mb-6 flex-1">
+                    {system.description}
+                  </p>
+
+                  {/* Meta label */}
+                  <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/35">
+                    {system.meta}
+                  </span>
+                </Link>
+              </motion.article>
+            ))}
           </div>
         </motion.div>
       </Container>

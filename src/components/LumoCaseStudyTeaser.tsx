@@ -11,7 +11,6 @@ import {
   orchestratedReveal,
   STAGGER,
   VIEWPORT,
-  EASE_LUXURY,
   DURATION,
 } from '@/lib/motion-cinematic';
 

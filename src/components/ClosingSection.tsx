@@ -51,7 +51,7 @@ export function ClosingSection() {
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.1 }}
           className="font-structural text-[15px] md:text-[16px] text-white/60 leading-[1.85] max-w-[40ch] mx-auto mb-6 md:mb-8"
         >
-          If the resonance is there, we'll build the language your work has been waiting to speak.
+          Let's build something meaningful, atmospheric, and unforgettable.
         </motion.p>
 
         {/* CTA — refined invitation button */}
