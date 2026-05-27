@@ -40,10 +40,10 @@ export function Philosophy() {
         }}
       />
 
-    >
-        <Container size="xl">
-  <motion.div
-    className="w-full"
+
+      <Container size="xl">
+           <motion.div
+     className="w-full"
     initial="hidden"
     whileInView="visible"
     viewport={VIEWPORT.normal}
