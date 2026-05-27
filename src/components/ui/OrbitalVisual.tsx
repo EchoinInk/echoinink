@@ -38,7 +38,7 @@ export function OrbitalVisual({
         <polygon
           points={`${c},${9} ${size - 9},${size - 9} ${9},${size - 9}`}
           stroke={strokeLight}
-          strokeWidth="1.1"
+          strokeWidth="1.5"
         />
         <circle cx={c} cy={9} r="2.5" fill={orchid} />
         <circle cx={c} cy={c} r="1.5" fill={strokeDim} />
@@ -47,7 +47,7 @@ export function OrbitalVisual({
     orbit: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
         <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.0" />
-        <ellipse cx={c} cy={c} rx={r - 4} ry={(r - 4) * 0.42} stroke={strokeLight} strokeWidth="1.1" />
+        <ellipse cx={c} cy={c} rx={r - 4} ry={(r - 4) * 0.42} stroke={strokeLight} strokeWidth="1.5" />
         <circle cx={c + (r - 4)} cy={c} r="2.5" fill={blue} />
         <circle cx={c} cy={c} r="2" fill={strokeDim} />
       </svg>
@@ -66,7 +66,7 @@ export function OrbitalVisual({
     compass: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
         <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.0" />
-        <circle cx={c} cy={c} r={r - 9} stroke={strokeLight} strokeWidth="1.1" />
+        <circle cx={c} cy={c} r={r - 9} stroke={strokeLight} strokeWidth="1.5" />
         <line x1={c} y1={7} x2={c} y2={size - 7} stroke={strokeDim} strokeWidth="0.9" />
         <line x1={7} y1={c} x2={size - 7} y2={c} stroke={strokeDim} strokeWidth="0.9" />
         <circle cx={c} cy={c} r="2.5" fill={orchid} />
@@ -89,8 +89,8 @@ export function OrbitalVisual({
     reflection: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
         <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.0" />
-        <line x1={c} y1={9} x2={c} y2={size - 9} stroke={strokeLight} strokeWidth="1.1" />
-        <line x1={9} y1={c} x2={size - 9} y2={c} stroke={strokeLight} strokeWidth="1.1" />
+        <line x1={c} y1={9} x2={c} y2={size - 9} stroke={strokeLight} strokeWidth="1.5" />
+        <line x1={9} y1={c} x2={size - 9} y2={c} stroke={strokeLight} strokeWidth="1.5" />
         <line x1={15} y1={15} x2={size - 15} y2={size - 15} stroke={strokeDim} strokeWidth="0.9" />
         <line x1={size - 15} y1={15} x2={15} y2={size - 15} stroke={strokeDim} strokeWidth="0.9" />
         <circle cx={c} cy={c} r="2.5" fill={orchid} />
@@ -99,7 +99,7 @@ export function OrbitalVisual({
     architect: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
         <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.0" />
-        <ellipse cx={c} cy={c} rx={r - 5} ry={(r - 5) * 0.38} stroke={strokeLight} strokeWidth="1.1" />
+        <ellipse cx={c} cy={c} rx={r - 5} ry={(r - 5) * 0.38} stroke={strokeLight} strokeWidth="1.5" />
         <ellipse
           cx={c} cy={c}
           rx={r - 5} ry={(r - 5) * 0.38}
@@ -148,7 +148,7 @@ export function OrbitalVisual({
     <path
       d={`M10 ${c} Q ${c} 10 ${size-10} ${c}`}
       stroke={strokeLight}
-      strokeWidth="1.1"
+      strokeWidth="1.5"
       fill="none"
     />
 
