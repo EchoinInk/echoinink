@@ -36,7 +36,7 @@ export function HeroBackground() {
       {/* LEFT READABILITY FADE */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[2] "
+        className="absolute inset-0 pointer-events-none z-[2]"
         style={{
           background: `
   linear-gradient(

@@ -27,7 +27,7 @@ export function AtmospherePause() {
           duration: AMBIENT.luminance.duration * 1.2,
         }}
         style={{
-          background: 'radial-gradient(ellipse 30% 22% at 50% 48%, rgba(99,102,241,0.025) 0%, transparent 65%)',
+          background: 'radial-gradient(ellipse 30% 22% at 50% 48%, rgb(var(--ei-orbit-blue-rgb) / 0.025) 0%, transparent 65%)',
           filter: 'blur(60px)',
         }}
       />
@@ -36,7 +36,7 @@ export function AtmospherePause() {
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 50% at 40% 60%, rgba(3,5,12,0.3) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 60% 50% at 40% 60%, rgb(var(--ei-cosmic-black-rgb) / 0.3) 0%, transparent 70%)',
           filter: 'blur(80px)',
         }}
       />
@@ -72,7 +72,7 @@ export function AtmospherePause() {
             variants={fadeSoft}
             className="mx-auto w-px h-12 mt-12"
             style={{
-              background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.1), transparent)',
+              background: 'linear-gradient(to bottom, transparent, rgb(var(--ei-photon-white-rgb) / 0.1), transparent)',
             }}
           />
         </motion.div>
@@ -82,7 +82,7 @@ export function AtmospherePause() {
       <div 
         className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(12,14,24,0.3) 50%, rgba(15,18,32,0.7) 100%)',
+          background: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-nebula-rgb) / 0.3) 50%, rgb(var(--ei-deep-nebula-rgb) / 0.7) 100%)',
         }}
       />
     </section>
