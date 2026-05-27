@@ -30,7 +30,7 @@ export function HeroBackground() {
 
     md:right-[-1%]
     md:top-[3%]
-    md:h-[90%]
+    md:h-[96%]
   "
 />
         </picture>
