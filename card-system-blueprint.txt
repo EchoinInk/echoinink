@@ -1,0 +1,237 @@
+ECHO IN INK — CARD SYSTEM BLUEPRINT
+Unified Component Architecture for Transformation, Systems, and Worlds
+---
+1. Purpose of This System
+Create a cohesive, atmospheric, premium card architecture that supports all Echo in Ink experiences across Studio, Systems, and LUMO.
+Cards are not UI elements.
+They are atmospheric containers — portals into worlds, systems, and transformations.
+This blueprint defines the three canonical card types, their shared foundations, and their emotional distinctions.
+---
+2. Canonical Card Types
+There are only three true card archetypes in the Echo in Ink ecosystem:
+1. Transformation Cards
+Brand Identity / Narrative Architecture
+Emotional, spacious, editorial.
+2. Systems Cards
+Identity Canvas / GPT Systems / UI Kit
+Infrastructural, archival, intelligent.
+3. Featured World Cards
+LUMO / World Features
+Cinematic, immersive, narrative.
+All other cards are variations of these three.
+---
+3. Core Card Foundation
+All cards share the same atmospheric base.
+---
+3.1 Background Layer
+background:
+linear-gradient(
+  180deg,
+  rgba(10,12,30,0.72),
+  rgba(5,6,18,0.92)
+);
+
+Deep, atmospheric gradient
+Never pure black
+Creates world‑depth and visual quiet
+---
+3.2 Border
+--border-card 1px solid
+
+Whisper‑thin
+Almost invisible
+Light catching glass, not UI chrome
+---
+3.3 Radius
+--radius-card: 28px;
+
+Avoids tech‑startup sharpness
+Avoids SaaS pill‑roundness
+Feels crafted, intentional, premium
+---
+3.4 Backdrop Blur
+backdrop-filter: blur(24px);
+
+Atmospheric depth
+Softens background noise
+Creates spatial layering
+---
+3.5 Shadow
+box-shadow:
+0 0 60px rgba(90,60,255,0.08);
+
+Ambient glow
+No hard shadows
+No UI‑style elevation
+---
+4. Universal Card Structure
+Every card follows the same editorial hierarchy:
+ICON / VISUAL
+
+TITLE
+
+DESCRIPTION
+
+META / CTA
+
+Clean
+Spacious
+Never cluttered
+Typography carries the atmosphere
+---
+5. Card Type Specifications
+---
+5.1 TRANSFORMATION CARDS
+Brand Identity / Narrative Architecture
+Emotional Tone
+Warm, editorial, human, spacious.
+Layout
+[Icon]
+
+Heading
+
+2–3 lines of body copy
+
+Explore →
+
+Padding
+padding: 36px;
+
+Iconography
+Use:
+orbital geometry
+symbolic systems
+atmospheric line structures
+Avoid:
+generic UI icons
+literal symbols
+Hover Behavior
+slight border glow
+subtle elevation
+ambient light increase
+minimal background shift
+Avoid:
+scaling
+bouncy motion
+flashy transitions
+---
+5.2 SYSTEMS CARDS
+Identity Canvas / GPT Systems / UI Kit
+Emotional Tone
+Archival. Infrastructural. Intelligent.
+Layout
+System Visual
+
+System Name
+
+One-sentence description
+
+Metadata label
+
+Typography
+Use Geist Mono for:
+FRAMEWORK
+GPT SYSTEM
+REFLECTIVE TOOL
+This is a critical emotional distinction.
+Stylistic Rules
+smaller type
+more symmetry
+more structure
+more restraint
+These should feel like instruments, not marketing.
+---
+5.3 FEATURED WORLD CARDS
+LUMO / World Features
+Emotional Tone
+Cinematic. Immersive. Narrative.
+Layout
+Left:
+  Headline + narrative
+
+Right:
+  Atmospheric visual (film-still energy)
+
+Important
+This should NOT feel like:
+a portfolio project
+a case study
+a UI component
+It should feel like:
+entering a world.
+---
+6. Density & Luxury Principles
+Low Density = Premium
+Echo in Ink’s strongest designs succeed because they contain:
+minimal text
+generous breathing room
+restrained hierarchy
+slow, emotional pacing
+Luxury systems remove, not add.
+---
+7. Visual System Rules
+1. No Pure Black
+Use:
+--ei-deep-midnight
+
+2. Glow Is Sacred
+Use glow only for:
+focal visuals
+monograms
+system nodes
+CTA anchors
+If everything glows, nothing feels sacred.
+3. Borders Should Almost Disappear
+Barely visible.
+Glass‑edge shimmer.
+4. Typography Does the Heavy Lifting
+Atmosphere comes from type, not ornament.
+5. Spacing Creates Luxury
+Increase:
+top padding
+breathing room
+paragraph spacing
+More than you think.
+---
+8. Component Library Specification
+Recommended core components:
+AtmosphereCard
+SystemCard
+WorldCard
+FeaturedWorld
+SignalPanel
+OrbitalVisual
+ReflectivePrompt
+MonogramField
+GlowAnchor
+
+This ensures ecosystem‑wide coherence.
+---
+9. Technology Stack Alignment
+If using Next.js + Tailwind, this system supports:
+reusable atmospheric primitives
+layered gradients
+motion systems
+responsive scaling
+component‑driven ecosystems
+Perfect for Echo in Ink’s identity.
+---
+10. Motion Principles
+Motion should feel:
+environmental
+atmospheric
+gravitational
+slow intelligence
+NOT:
+interactive
+playful
+app‑like
+Think: ambient world‑behavior, not UI feedback.
+---
+11. Core Emotional Principle
+Every card must feel like:
+a portal fragment.
+Not a UI element.
+Not a content box.
+Not a SaaS component.
+A fragment of a world.
