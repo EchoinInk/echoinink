@@ -34,18 +34,18 @@
 
   /* ── Text Selection ───────────────────────────────────────── */
   ::selection {
-    background: rgba(99, 102, 241, 0.25);
+    background: rgba(123, 92, 255, 0.25);
     color: rgba(255, 255, 255, 0.95);
   }
 
   ::-moz-selection {
-    background: rgba(99, 102, 241, 0.25);
+    background: rgba(123, 92, 255, 0.25);
     color: rgba(255, 255, 255, 0.95);
   }
 
   /* ── Tap Highlight (Mobile) ───────────────────────────────── */
   * {
-    -webkit-tap-highlight-color: rgba(99, 102, 241, 0.15);
+    -webkit-tap-highlight-color: rgba(123, 92, 255, 0.15);
   }
 
   /* ── Focus Outline Treatment ──────────────────────────────── */
@@ -54,7 +54,7 @@
   }
 
   *:focus-visible {
-    outline: 1px solid rgba(99, 102, 241, 0.3);
+    outline: 1px solid rgba(123, 92, 255, 0.3);
     outline-offset: 2px;
   }
 
@@ -69,11 +69,11 @@
 
   /* ── Viewport + Background Flash Prevention ───────────────── */
   html {
-    background-color: #05070f;
+    background-color: #02030A;
   }
 
   body {
-    background-color: #05070f;
+    background-color: #02030A;
     min-height: 100vh;
   }
 

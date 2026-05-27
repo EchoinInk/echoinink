@@ -10,8 +10,8 @@
   .ei-glow-violet {
     background: radial-gradient(
       ellipse 55% 50% at 50% 55%,
-      rgba(139, 92, 246, 0.045) 0%,
-      rgba(99, 102, 241, 0.022) 50%,
+      rgba(123, 92, 255, 0.045) 0%,
+      rgba(123, 92, 255, 0.022) 50%,
       transparent 70%
     );
     filter: blur(100px);
@@ -22,8 +22,8 @@
   .ei-glow-indigo {
     background: radial-gradient(
       ellipse 60% 55% at 45% 50%,
-      rgba(99, 102, 241, 0.038) 0%,
-      rgba(79, 70, 229, 0.015) 55%,
+      rgba(123, 92, 255, 0.038) 0%,
+      rgba(42, 107, 255, 0.015) 55%,
       transparent 75%
     );
     filter: blur(110px);
@@ -34,8 +34,8 @@
   .ei-glow-aqua {
     background: radial-gradient(
       ellipse 50% 45% at 55% 48%,
-      rgba(30, 200, 255, 0.03) 0%,
-      rgba(30, 150, 255, 0.015) 50%,
+      rgba(42, 107, 255, 0.03) 0%,
+      rgba(42, 107, 255, 0.015) 50%,
       transparent 70%
     );
     filter: blur(90px);
@@ -49,7 +49,7 @@
     background: radial-gradient(
       circle at center,
       transparent 30%,
-      rgba(3, 5, 12, 0.4) 100%
+      rgba(2, 3, 10, 0.4) 100%
     );
     pointer-events: none;
   }
@@ -59,7 +59,7 @@
     background: radial-gradient(
       ellipse 80% 80% at 50% 50%,
       transparent 50%,
-      rgba(5, 7, 16, 0.25) 100%
+      rgba(5, 8, 22, 0.25) 100%
     );
     pointer-events: none;
   }
@@ -71,8 +71,8 @@
     background: linear-gradient(
       to bottom,
       transparent 0%,
-      rgba(15, 18, 32, 0.5) 60%,
-      rgba(15, 18, 32, 0.95) 100%
+      rgba(2, 3, 10, 0.5) 60%,
+      rgba(2, 3, 10, 0.95) 100%
     );
     pointer-events: none;
   }
@@ -82,7 +82,7 @@
     background: linear-gradient(
       to top,
       transparent 0%,
-      rgba(15, 18, 32, 0.15) 100%
+      rgba(2, 3, 10, 0.15) 100%
     );
     pointer-events: none;
   }
@@ -112,7 +112,7 @@
     box-shadow: 
       0 0 0 1px rgba(255, 255, 255, 0.04),
       0 20px 50px -20px rgba(0, 0, 0, 0.4),
-      0 0 60px -30px rgba(99, 102, 241, 0.1);
+      0 0 60px -30px rgba(123, 92, 255, 0.1);
   }
 
   /* ── Breathing Space Atmosphere ──────────────────────────── */
@@ -122,7 +122,7 @@
     background: 
       radial-gradient(
         ellipse 35% 25% at 50% 50%,
-        rgba(99, 102, 241, 0.015) 0%,
+        rgba(123, 92, 255, 0.015) 0%,
         transparent 55%
       );
     position: relative;
@@ -141,7 +141,7 @@
     inset: -15%;
     background: radial-gradient(
       ellipse 45% 40% at 50% 50%,
-      rgba(99, 102, 241, 0.022) 0%,
+      rgba(123, 92, 255, 0.022) 0%,
       transparent 65%
     );
     filter: blur(60px);
