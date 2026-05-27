@@ -20,22 +20,43 @@ export function Button({ children, onClick, to, variant = 'primary' }: ButtonPro
   const variants = {
     // PRIMARY — Strongest visual weight with neon gradient edge
     // Layered border: vivid gradient outer + dark glass interior
-    primary: `
-      ei-btn-primary-cinematic
-      group
-      px-8 py-4
-      text-[10px] tracking-[0.16em] font-medium
-      text-white/[0.95] hover:text-white focus-visible:text-white
-      border border-white/[0.08] hover:border-white/[0.14] focus-visible:border-white/[0.18]
-      rounded-full
-      bg-gradient-to-b from-black/60 via-black/50 to-black/70 hover:from-black/55 hover:via-black/45 hover:to-black/65
-      shadow-[0_0_60px_-12px_rgba(139,92,246,0.28),inset_0_1px_0_rgba(255,255,255,0.08)]
-      hover:shadow-[0_0_80px_-10px_rgba(232,121,249,0.42),inset_0_1px_0_rgba(255,255,255,0.12)]
-      hover:-translate-y-[2px] hover:scale-[1.01]
-      active:translate-y-0 active:scale-[0.98]
-      active:bg-black/70
-      transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
-    `,
+   primary: `
+  ei-btn-primary-cinematic
+  group
+  relative isolate
+
+  px-8 py-4
+
+  text-[10px]
+  tracking-[0.18em]
+  font-medium
+
+  text-white/[0.92]
+  hover:text-white
+
+  rounded-full
+
+  border border-white/[0.08]
+  hover:border-white/[0.14]
+
+  bg-gradient-to-b
+  from-black/58
+  via-black/48
+  to-black/68
+
+  hover:from-black/54
+  hover:via-black/44
+  hover:to-black/62
+
+  shadow-[inset_0_1px_0_rgba(255,255,255,0.08)]
+
+  transition-all
+  duration-700
+  ease-[cubic-bezier(0.22,1,0.36,1)]
+
+  hover:-translate-y-[1px]
+  active:translate-y-0
+`,
     // SECONDARY — Quieter edge treatment, visible gradient, dark interior
     secondary: `
       ei-btn-secondary-cinematic
