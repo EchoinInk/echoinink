@@ -14,7 +14,6 @@ export function HeroBackground() {
     filter: 'brightness(0.92) saturate(0.9) contrast(0.96)',
   }}
 />
-
       {/* MOBILE MONOGRAM */}
       <img
         src={mobilePng}
@@ -35,9 +34,7 @@ export function HeroBackground() {
       transparent 64%
     )`,
   }}
-/>
-
-      {/* TOP CINEMATIC FRAME */}
+/> {/* TOP CINEMATIC FRAME */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none z-[3]"
