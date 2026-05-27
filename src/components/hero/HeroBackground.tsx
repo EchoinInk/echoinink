@@ -45,14 +45,7 @@ export function HeroBackground() {
       />
 
       {/* Radial vignette */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[5]"
-        style={{
-          background:
-            'radial-gradient(circle at center, transparent 38%, rgba(3,5,12,0.13) 100%)',
-        }}
-      />
+      
     </>
   );
 }
