@@ -11,16 +11,16 @@ export function HeroBackground() {
       />
 
       {/* DESKTOP MONOGRAM */}
-      <img
-        src={widePng}
-        alt=""
-        aria-hidden="true"
-        className="hidden md:block absolute left-[46%] top-[53%] -translate-y-1/2 h-[100vh] w-auto object-contain opacity-[0.94] pointer-events-none select-none z-[1]"
-        style={{         
-           filter: 'brightness(1.02) saturate(1)',
-          mixBlendMode: 'screen',
-        }}
-      />
+<img
+  src={widePng}
+  alt=""
+  aria-hidden="true"
+  className="hidden md:block absolute left-[46%] top-[53%] -translate-y-1/2 h-[100vh] w-auto object-contain opacity-[0.88] pointer-events-none select-none z-[1]"
+  style={{
+    filter: 'brightness(0.92) saturate(0.9) contrast(0.96)',
+    mixBlendMode: 'normal',
+  }}
+/>
 
       {/* MOBILE MONOGRAM */}
       <img
