@@ -15,7 +15,7 @@ export function HeroBackground() {
         src={widePng}
         alt=""
         aria-hidden="true"
-        className="hidden md:block absolute left-[52%] top-[52%] -translate-y-1/2 h-[82vh] w-auto object-contain opacity-[0.78] pointer-events-none select-none z-[1]"
+        className="hidden md:block absolute left-[52%] top-[52%] -translate-y-1/2 h-[82vh] w-auto object-contain opacity-[0.72] pointer-events-none select-none z-[1]"
         style={{
           filter: 'brightness(0.82) saturate(0.85) contrast(1)',
           mixBlendMode: 'normal',
