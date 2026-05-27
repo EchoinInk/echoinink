@@ -1,65 +1,45 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
-import { Link } from 'react-router-dom';
-import GlowCard from '@/components/GlowCard';
-import sessionsImage from '@/assets/ei-sessions-9x16.png';
-import identityImage from '@/assets/ei-identity-9x16.png';
-import worldsImage from '@/assets/ei-worlds-9x16.png';
-import { 
-  driftUp, 
-  staggerContainer,
-  STAGGER,
-  VIEWPORT 
-} from '@/lib/motion-cinematic';
+import { OrbitalVisual } from '@/components/ui/OrbitalVisual';
+import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
+
+const capabilities = [
+  {
+    variant: 'triangle' as const,
+    title: 'Brand Identity',
+    description: 'Identity systems that uncover essence and create emotional resonance.',
+    href: '/identity',
+  },
+  {
+    variant: 'orbit' as const,
+    title: 'Digital Experiences',
+    description: 'Immersive websites and interfaces that feel like entering a world.',
+    href: '/worlds',
+  },
+  {
+    variant: 'nodes' as const,
+    title: 'Narrative Architecture',
+    description: 'Story systems that bring coherence, clarity, and transformational depth.',
+    href: '/sessions',
+  },
+  {
+    variant: 'compass' as const,
+    title: 'Creative Direction',
+    description: 'Atmospheric direction that aligns every detail with the bigger vision.',
+    href: '/works',
+  },
+];
 
 export function Pathways() {
-  const pathways = [
-    {
-      to: '/sessions',
-      title: 'Sessions',
-      description:
-        'Focused creative guidance for moments of transition, misalignment, or becoming. A quiet space to clarify what wants to emerge.',
-      image: sessionsImage,
-      glow: 'bg-gradient-to-br from-blue-600/[0.12] via-indigo-500/[0.08] to-transparent',
-      featured: false,
-      glowPosition: 'top' as const,
-      archetype: 'sessions' as const,
-    },
-    {
-      to: '/identity',
-      title: 'Identity',
-      description:
-        'Emotional, narrative, and visual systems for brands in evolution. Inner meaning translated into a coherent, enduring external form.',
-      image: identityImage,
-      glow: 'bg-gradient-to-br from-fuchsia-600/[0.14] via-violet-500/[0.08] to-transparent',
-      featured: true,
-      glowPosition: 'center' as const,
-      archetype: 'identity' as const,
-    },
-    {
-      to: '/worlds',
-      title: 'Worlds',
-      description:
-        'Immersive digital environments shaped around atmosphere, coherence, and resonance. Identity expanded into a living experience.',
-      image: worldsImage,
-      glow: 'bg-gradient-to-br from-cyan-600/[0.11] via-blue-500/[0.07] to-transparent',
-      featured: false,
-      glowPosition: 'bottom' as const,
-      archetype: 'worlds' as const,
-    },
-  ];
-
   return (
     <Section spacing="sm" className="relative overflow-hidden">
-      {/* Unified atmospheric layer - continuous with adjacent sections */}
       <div
+        aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: `
-            radial-gradient(ellipse 60% 30% at 50% 20%, rgba(99,102,241,0.03) 0%, transparent 60%),
-            radial-gradient(ellipse 40% 40% at 70% 80%, rgba(139,92,246,0.02) 0%, transparent 60%)
-          `,
+          background: 'radial-gradient(ellipse 60% 40% at 50% 30%, rgba(123,92,255,0.025) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -72,41 +52,40 @@ export function Pathways() {
           viewport={VIEWPORT.normal}
           className="max-w-6xl mx-auto"
         >
-          {/* Section header - elegant and restrained */}
-          <motion.div variants={driftUp} className="text-center mb-6 md:mb-10">
-            <span
-              className="block text-[10px] font-medium tracking-[0.3em] uppercase text-white/45 mb-3 md:mb-4"
-            >
-              What We Design
-            </span>
-            <h2
-              className="font-serif text-3xl md:text-4xl lg:text-[2.75rem] font-light tracking-tight text-white/88 leading-tight"
-              style={{ letterSpacing: '-0.02em' }}
-            >
-              We build worlds with
-              <br />
-              intention and precision.
-            </h2>
+          {/* Section header */}
+          <motion.div variants={driftUp} className="flex items-center gap-3 mb-10 md:mb-14">
+            <span className="ei-eyebrow">What We Create</span>
+            <div className="h-px w-8 bg-[var(--ei-orchid-plasma)]/40 flex-shrink-0" aria-hidden="true" />
           </motion.div>
 
-          {/* Pathways grid - full-bleed cinematic panels */}
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-5">
-            {pathways.map((pathway) => (
-              <motion.article
-                key={pathway.to}
-                variants={driftUp}
-                className="h-full"
-              >
-                <Link to={pathway.to} className="ei-focus-block block h-full rounded-[28px]">
-                  <GlowCard
-                    title={pathway.title}
-                    description={pathway.description}
-                    image={pathway.image}
-                    glow={pathway.glow}
-                    featured={pathway.featured}
-                    glowPosition={pathway.glowPosition}
-                    archetype={pathway.archetype}
-                  />
+          {/* 4-card transformation grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+            {capabilities.map((cap) => (
+              <motion.article key={cap.title} variants={driftUp}>
+                <Link
+                  to={cap.href}
+                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[#050816]/80 p-8 transition-all duration-500 hover:border-[var(--ei-electric-violet)]/30 hover:shadow-[0_0_60px_rgba(123,92,255,0.08)] backdrop-blur-sm"
+                  aria-label={`Explore ${cap.title}`}
+                >
+                  {/* Icon */}
+                  <div className="mb-8 flex items-center justify-center h-16">
+                    <OrbitalVisual variant={cap.variant} size={64} />
+                  </div>
+
+                  {/* Title */}
+                  <h3 className="font-editorial text-xl text-[var(--ei-text-primary)] mb-3 leading-tight">
+                    {cap.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-structural text-[13px] leading-[1.7] text-white/60 mb-6 flex-1">
+                    {cap.description}
+                  </p>
+
+                  {/* CTA */}
+                  <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--ei-orchid-plasma)]/75 group-hover:text-[var(--ei-orchid-plasma)] transition-colors duration-500">
+                    Explore →
+                  </span>
                 </Link>
               </motion.article>
             ))}

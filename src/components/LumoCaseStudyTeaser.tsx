@@ -7,7 +7,9 @@ import { Container } from '@/components/layout/Container';
 import {
   blurEmergence,
   driftUp,
+  staggerContainer,
   orchestratedReveal,
+  STAGGER,
   VIEWPORT,
   EASE_LUXURY,
   DURATION,
