@@ -72,13 +72,14 @@ export function HeroBackground() {
         className="absolute inset-0 pointer-events-none z-[2]"
         style={{
           background: `
-            linear-gradient(
-              90deg,
-              rgba(4,6,14,0.92) 0%,
-              rgba(4,6,14,0.78) 24%,
-              rgba(4,6,14,0.38) 48%,
-              transparent 70%
-            )
+  linear-gradient(
+    90deg,
+    rgba(4,6,14,0.90) 0%,
+    rgba(4,6,14,0.72) 22%,
+    rgba(4,6,14,0.16) 44%,
+    transparent 60%
+  )
+`,
           `,
         }}
       />
