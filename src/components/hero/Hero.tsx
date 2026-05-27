@@ -43,12 +43,28 @@ export function Hero() {
         }}
       />
 
-<Container size="lg" className="relative z-10">
-    <motion.div
-    className="max-w-[680px] text-left pt-10 md:pt-12"
+<Container size="xl" className="relative z-10">
+
+  <motion.div
+
+    className="
+
+      max-w-[680px]
+
+      text-left
+
+      md:pl-10
+
+      lg:pl-14
+
+    "
+
     variants={heroContainer}
+
     initial="hidden"
+
     animate="visible"
+
   >
           <motion.div variants={heroReveal}>
             <HeroHeading />
