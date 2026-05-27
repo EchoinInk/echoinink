@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { HeroBackground } from './HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
+import { Container } from '../layout/Container';
+
 import {
   heroContainer,
   heroReveal,
@@ -48,8 +50,8 @@ export function Hero() {
       />
 
       {/* CONTENT */}
-      <div className="ei-container w-full relative z-10">
-        <motion.div
+<Container className="relative z-10">
+          <motion.div
 className="
   max-w-[680px]
   items-start
@@ -71,7 +73,7 @@ className="
             <HeroCTA />
           </motion.div>
         </motion.div>
-      </div>
+   </Container>   </div>
     </section>
   );
 }
