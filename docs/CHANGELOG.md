@@ -1,5 +1,78 @@
 # Changelog
 
+## 2026-05-27 (Phase 1 — Homepage Implementation)
+
+### New Homepage Restructure
+
+**New Component Created**
+- `src/components/ui/OrbitalVisual.tsx` — 9-variant SVG orbital icon primitive (triangle, orbit, nodes, compass, canvas, reflection, architect, gpt, uikit) with ambient radial glow; shared by Pathways and EmergingSystems
+
+**Hero Refinements**
+- `HeroHeading.tsx`: Eyebrow text updated from "Echo in Ink" → "WE DESIGN WORLDS"
+- `HeroHeading.tsx`: textShadow updated to brand Electric Violet rgba(123,92,255,0.08)
+- `HeroCTA.tsx`: Secondary button updated "View Work" → "View Our Work"
+
+**Philosophy.tsx — Structural Refactor**
+- Layout: 2-column (heading left, 4-column fragment grid right)
+- Section eyebrow added with orchid accent line
+- Right column: 4 philosophy fragments with glow-dot anchors
+- Fragment 4 highlighted in `--ei-orchid-plasma` accent
+- Removed old 4-paragraph list format
+
+**Pathways.tsx — Full Rewrite (WHAT WE CREATE)**
+- Replaces Sessions/Identity/Worlds image cards
+- 4 transformation cards: Brand Identity, Digital Experiences, Narrative Architecture, Creative Direction
+- Each card: OrbitalVisual icon (triangle/orbit/nodes/compass), editorial title, structural description, Explore → mono CTA
+- Links: /identity, /worlds, /sessions, /works
+- Card style: `--radius-card`, `from-white/[0.04]`, `border-white/10`, violet hover glow
+- Removed: GlowCard, sessionsImage, identityImage, worldsImage imports
+
+**LumoCaseStudyTeaser.tsx — Refactor**
+- Layout: 2-column split card — text panel left (2fr), parallax image right (3fr)
+- Discipline tags strip below card: Identity System + Narrative Architecture + Interface Direction + Emotional UX
+- Route fix: `/work/lumo` → `/works/lumo`
+- Removed: editorial proof block (Scope/Problem/Outcome/Positioning grid)
+- Ambient glow layer added behind card
+- Left-edge image fade for seamless text/image blend
+- Removed unused `EASE_LUXURY` import
+
+**EmergingSystems.tsx — Full Rewrite (OUR SYSTEMS)**
+- Replaces 2-card (Echo Systems, Echo Vault) layout
+- 5 system cards: Identity Canvas, Founder Reflection, Narrative Architect, Identity GPT, Atmosphere UI Kit
+- Each card: OrbitalVisual (canvas/reflection/architect/gpt/uikit), title, description, mono meta label (Framework/Reflective Tool/GPT System/UI System)
+- Header: eyebrow left + "Explore All Systems →" link right
+- Grid: `lg:grid-cols-5`
+- Removed: GlowCard, systemsImage, vaultImage imports
+
+**ClosingSection.tsx**
+- Description text updated to: "Let's build something meaningful, atmospheric, and unforgettable."
+
+**Footer.tsx — Full Rewrite (4-Column)**
+- Column 1 — Brand: "Echo in Ink" + tagline + © 2024
+- Column 2 — Navigation: Studio, Systems, Work, Lumo, About, Contact
+- Column 3 — Connect: hello@echoin.ink, Los Angeles CA, IG/LN/X social links
+- Column 4 — Atmospheric Intelligence: description + "Learn more →" + OrbitalVisual (uikit, opacity 30%)
+- Location updated: "Aotearoa New Zealand" → "Los Angeles, CA"
+- Added OrbitalVisual import
+
+**Home.tsx — Section Order**
+- Removed: WhatWeCreate, HowWeWork, CinematicStatement, TrustSignal
+- Added: Footer import (direct render in page)
+- Final order: Hero → Philosophy → Pathways → LumoCaseStudyTeaser → EmergingSystems → ClosingSection → Footer
+- Meta title updated: "Echo in Ink — We design worlds"
+- Meta description updated to match new studio positioning
+
+**Build**
+- TypeScript: 0 errors
+- Vite build: 484 modules, exit 0
+- Image optimizer ENOENT errors: pre-existing (avifenc/cwebp/pngquant binaries absent from environment)
+
+**Known Outstanding**
+- `/systems` route does not exist — EmergingSystems and Footer link to it (will 404)
+- Orphaned components (WhatWeCreate, HowWeWork, CinematicStatement, TrustSignal) preserved but unused on homepage
+
+---
+
 ## 2025-05-26 (Second Refinement Pass)
 
 ### 7-Phase Compression + Refinement
