@@ -23,7 +23,7 @@ export function HeroHeading() {
 
       <h1
         id="hero-heading"
-        className="font-editorial max-w-[20ch] whitespace-pre-line text-[2.25rem] leading-[1.06] tracking-tight text-white/92 max-md:leading-[1.12] md:text-[3.1rem] lg:text-[3.7rem]"
+        className="font-editorial max-w-[22ch] whitespace-pre-line text-[2.25rem] leading-[1.06] tracking-tight text-white/92 max-md:leading-[1.12] md:text-[3.1rem] lg:text-[3.7rem]"
         style={{
           letterSpacing: '-0.025em',
           textShadow: '0 0 90px rgba(123, 92, 255, 0.08)',
