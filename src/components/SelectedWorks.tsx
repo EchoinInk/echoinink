@@ -10,10 +10,10 @@ const works = [
     description:
       'Atmospheric visual experiments exploring identity through light, shadow, and digital texture.',
     gradient:
-      'radial-gradient(ellipse 70% 65% at 38% 55%, rgba(232,121,249,0.28) 0%, rgba(168,85,247,0.16) 32%, rgba(99,102,241,0.07) 62%, transparent 82%), radial-gradient(ellipse 40% 50% at 75% 30%, rgba(30,200,255,0.10) 0%, transparent 65%)',
-    bg: '#05040D',
+      'radial-gradient(ellipse 70% 65% at 38% 55%, rgb(var(--ei-neon-magenta-rgb) / 0.28) 0%, rgb(var(--ei-ion-violet-rgb) / 0.16) 32%, rgb(var(--ei-orbit-blue-rgb) / 0.07) 62%, transparent 82%), radial-gradient(ellipse 40% 50% at 75% 30%, rgb(var(--ei-electric-cobalt-rgb) / 0.10) 0%, transparent 65%)',
+    bg: 'var(--ei-cosmic-black)',
     scene:
-      'radial-gradient(ellipse 22% 50% at 68% 30%, rgba(255,240,200,0.07) 0%, transparent 65%), radial-gradient(ellipse 30% 25% at 18% 82%, rgba(180,80,160,0.07) 0%, transparent 60%)',
+      'radial-gradient(ellipse 22% 50% at 68% 30%, rgb(var(--ei-photon-white-rgb) / 0.07) 0%, transparent 65%), radial-gradient(ellipse 30% 25% at 18% 82%, rgb(var(--ei-stellar-lilac-rgb) / 0.07) 0%, transparent 60%)',
   },
   {
     index: '02',
@@ -22,10 +22,10 @@ const works = [
     description:
       'Hand-crafted digital portraits shaped through layered ink, motion, and emotional storytelling.',
     gradient:
-      'radial-gradient(ellipse 65% 72% at 58% 42%, rgba(30,200,255,0.22) 0%, rgba(99,102,241,0.12) 42%, transparent 72%)',
-    bg: '#03060F',
+      'radial-gradient(ellipse 65% 72% at 58% 42%, rgb(var(--ei-electric-cobalt-rgb) / 0.22) 0%, rgb(var(--ei-orbit-blue-rgb) / 0.12) 42%, transparent 72%)',
+    bg: 'var(--ei-cosmic-black)',
     scene:
-      'linear-gradient(172deg, rgba(30,180,255,0.08) 0%, transparent 38%), radial-gradient(ellipse 16% 62% at 56% 8%, rgba(200,230,255,0.07) 0%, transparent 70%)',
+      'linear-gradient(172deg, rgb(var(--ei-electric-cobalt-rgb) / 0.08) 0%, transparent 38%), radial-gradient(ellipse 16% 62% at 56% 8%, rgb(var(--ei-stellar-lilac-rgb) / 0.07) 0%, transparent 70%)',
   },
   {
     index: '03',
@@ -34,10 +34,10 @@ const works = [
     description:
       'Cinematic micro-worlds built from sound, colour, and narrative fragments.',
     gradient:
-      'radial-gradient(ellipse 68% 60% at 42% 60%, rgba(168,85,247,0.24) 0%, rgba(99,102,241,0.12) 45%, transparent 88%)',
-    bg: '#06040E',
+      'radial-gradient(ellipse 68% 60% at 42% 60%, rgb(var(--ei-ion-violet-rgb) / 0.24) 0%, rgb(var(--ei-orbit-blue-rgb) / 0.12) 45%, transparent 88%)',
+    bg: 'var(--ei-cosmic-black)',
     scene:
-      'radial-gradient(circle at 22% 28%, rgba(210,180,250,0.06) 0%, transparent 28%), radial-gradient(circle at 74% 62%, rgba(170,130,240,0.05) 0%, transparent 24%), radial-gradient(circle at 85% 20%, rgba(180,150,230,0.04) 0%, transparent 18%)',
+      'radial-gradient(circle at 22% 28%, rgb(var(--ei-stellar-lilac-rgb) / 0.06) 0%, transparent 28%), radial-gradient(circle at 74% 62%, rgb(var(--ei-stellar-lilac-rgb) / 0.05) 0%, transparent 24%), radial-gradient(circle at 85% 20%, rgb(var(--ei-stellar-lilac-rgb) / 0.04) 0%, transparent 18%)',
   },
   {
     index: '04',
@@ -46,10 +46,10 @@ const works = [
     description:
       'An exploration of digital memory, distortion, and the stories we carry in fragments.',
     gradient:
-      'radial-gradient(ellipse 55% 70% at 62% 38%, rgba(30,200,255,0.20) 0%, rgba(30,80,200,0.12) 40%, transparent 70%), radial-gradient(ellipse 45% 45% at 18% 72%, rgba(232,121,249,0.12) 0%, transparent 62%)',
-    bg: '#030810',
+      'radial-gradient(ellipse 55% 70% at 62% 38%, rgb(var(--ei-electric-cobalt-rgb) / 0.20) 0%, rgb(var(--ei-orbit-blue-rgb) / 0.12) 40%, transparent 70%), radial-gradient(ellipse 45% 45% at 18% 72%, rgb(var(--ei-neon-magenta-rgb) / 0.12) 0%, transparent 62%)',
+    bg: 'var(--ei-cosmic-black)',
     scene:
-      'repeating-linear-gradient(90deg, transparent, transparent 48px, rgba(30,200,255,0.013) 48px, rgba(30,200,255,0.013) 49px), linear-gradient(118deg, transparent 28%, rgba(255,255,255,0.04) 44%, transparent 62%)',
+      'repeating-linear-gradient(90deg, transparent, transparent 48px, rgb(var(--ei-electric-cobalt-rgb) / 0.013) 48px, rgb(var(--ei-electric-cobalt-rgb) / 0.013) 49px), linear-gradient(118deg, transparent 28%, rgb(var(--ei-photon-white-rgb) / 0.04) 44%, transparent 62%)',
   },
   {
     index: '05',
@@ -58,10 +58,10 @@ const works = [
     description:
       'A growing collection of experimental scenes, sketches, and atmospheric studies.',
     gradient:
-      'radial-gradient(ellipse 72% 65% at 44% 52%, rgba(232,121,249,0.20) 0%, rgba(168,85,247,0.11) 42%, transparent 86%)',
-    bg: '#07040C',
+      'radial-gradient(ellipse 72% 65% at 44% 52%, rgb(var(--ei-neon-magenta-rgb) / 0.20) 0%, rgb(var(--ei-ion-violet-rgb) / 0.11) 42%, transparent 86%)',
+    bg: 'var(--ei-cosmic-black)',
     scene:
-      'radial-gradient(ellipse 38% 28% at 22% 72%, rgba(220,150,60,0.08) 0%, transparent 60%), radial-gradient(ellipse 25% 35% at 82% 22%, rgba(180,90,200,0.07) 0%, transparent 55%)',
+      'radial-gradient(ellipse 38% 28% at 22% 72%, rgb(var(--ei-stellar-lilac-rgb) / 0.08) 0%, transparent 60%), radial-gradient(ellipse 25% 35% at 82% 22%, rgb(var(--ei-stellar-lilac-rgb) / 0.07) 0%, transparent 55%)',
   },
   {
     index: '06',
@@ -70,10 +70,10 @@ const works = [
     description:
       'Short-form motion pieces examining light as an emotional and narrative tool.',
     gradient:
-      'radial-gradient(ellipse 58% 74% at 52% 44%, rgba(255,255,255,0.07) 0%, rgba(200,180,240,0.14) 25%, rgba(168,85,247,0.18) 50%, rgba(99,102,241,0.08) 72%, transparent 88%)',
-    bg: '#060608',
+      'radial-gradient(ellipse 58% 74% at 52% 44%, rgb(var(--ei-photon-white-rgb) / 0.07) 0%, rgb(var(--ei-stellar-lilac-rgb) / 0.14) 25%, rgb(var(--ei-ion-violet-rgb) / 0.18) 50%, rgb(var(--ei-orbit-blue-rgb) / 0.08) 72%, transparent 88%)',
+    bg: 'var(--ei-cosmic-black)',
     scene:
-      'linear-gradient(78deg, transparent 18%, rgba(220,200,255,0.06) 36%, rgba(168,85,247,0.04) 52%, transparent 68%), linear-gradient(78deg, transparent 42%, rgba(200,180,240,0.04) 58%, transparent 74%)',
+      'linear-gradient(78deg, transparent 18%, rgb(var(--ei-stellar-lilac-rgb) / 0.06) 36%, rgb(var(--ei-ion-violet-rgb) / 0.04) 52%, transparent 68%), linear-gradient(78deg, transparent 42%, rgb(var(--ei-stellar-lilac-rgb) / 0.04) 58%, transparent 74%)',
   },
 ] as const;
 
@@ -100,13 +100,13 @@ function WorkPanel({
 
   const titleClass = {
     featured:
-      'font-editorial text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] text-[#E8EAF6]/90 leading-[1.14] mb-1.5',
+      'font-editorial text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] text-[var(--ei-stellar-lilac)]/90 leading-[1.14] mb-1.5',
     standard:
-      'font-editorial text-[1.3rem] md:text-[1.7rem] text-[#E8EAF6]/85 leading-[1.16] mb-1.5',
+      'font-editorial text-[1.3rem] md:text-[1.7rem] text-[var(--ei-stellar-lilac)]/85 leading-[1.16] mb-1.5',
     landscape:
-      'font-editorial text-[1.1rem] md:text-[1.35rem] text-[#E8EAF6]/80 leading-[1.16] mb-1.5',
+      'font-editorial text-[1.1rem] md:text-[1.35rem] text-[var(--ei-stellar-lilac)]/80 leading-[1.16] mb-1.5',
     square:
-      'font-editorial text-[1.05rem] md:text-[1.25rem] text-[#E8EAF6]/75 leading-[1.18] mb-1.5',
+      'font-editorial text-[1.05rem] md:text-[1.25rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.18] mb-1.5',
   }[variant];
 
   const padClass = {

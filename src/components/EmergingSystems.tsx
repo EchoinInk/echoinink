@@ -50,7 +50,7 @@ export function EmergingSystems() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 55% 40% at 50% 55%, rgba(42,107,255,0.02) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 55% 40% at 50% 55%, rgb(var(--ei-electric-cobalt-rgb) / 0.02) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -71,10 +71,10 @@ export function EmergingSystems() {
             <div className="flex items-center gap-3">
               <span className="ei-eyebrow">Our Systems</span>
 <div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
+          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-neon-magenta-rgb)/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
+              'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.15) 0%, rgb(var(--ei-neon-magenta-rgb) / 0.95) 100%)',
           }}
         />            </div>
 
@@ -93,7 +93,7 @@ export function EmergingSystems() {
               <motion.article key={system.title} variants={driftUp}>
                 <Link
                   to={system.href}
-                  className="group flex flex-col h-full rounded-[24px] border border-white/10 bg-[#070816]/70 p-7 transition-all duration-500 hover:border-[var(--ei-electric-violet)]/30 hover:shadow-[0_0_60px_rgba(123,92,255,0.12)]"
+                  className="group flex flex-col h-full rounded-[24px] border border-white/10 bg-[var(--ei-deep-nebula)]/70 p-7 transition-all duration-500 hover:border-[var(--ei-electric-violet)]/30 hover:shadow-[0_0_60px_rgb(var(--ei-ion-violet-rgb)/0.12)]"
                   aria-label={system.title}
                 >
                   {/* Orbital icon */}
