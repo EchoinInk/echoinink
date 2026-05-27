@@ -41,7 +41,7 @@ export function HeroHeading() {
           letterSpacing: '0.01em',
         }}
       >
-        {"Crafting identity systems, immersive websites, creative direction, and atmospheric digital experiences for founders, artists, and emerging brands building digital worlds that feel emotionally alive."}
+        {"Crafting identity systems, immersive websites, creative direction, and atmospheric digital experiences -- for founders, artists, and emerging brands building digital worlds that feel emotionally alive."}
       </motion.p>
 
      {/* ═══════════════════════════════════════════════════════════════
