@@ -50,8 +50,14 @@ export function Hero() {
       {/* CONTENT */}
       <div className="ei-container w-full relative z-10">
         <motion.div
-          className="max-w-[680px] items-start text-left translate-y-[2vh] max-md:translate-y-5 md:translate-y-[4vh]"
-          variants={heroContainer}
+className="
+  max-w-[680px]
+  items-start
+  text-left
+  translate-y-[1vh]
+  max-md:translate-y-3
+  md:translate-y-[1.5vh]
+"          variants={heroContainer}
           initial="hidden"
           animate="visible"
         >
