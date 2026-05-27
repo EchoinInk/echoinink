@@ -30,7 +30,7 @@ export function OrbitalVisual({
   const strokeDim = 'rgba(200,190,255,0.28)';
   const orchid = '#B55CFF';
   const blue = 'rgba(42,107,255,0.85)';
-  const violet = '#7B5CFF,
+  const violet = '#7B5CFF';
 
   const icons: Record<OrbitalVariant, React.ReactElement> = {
     triangle: (
@@ -49,7 +49,7 @@ export function OrbitalVisual({
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
         <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.2" />
         <ellipse cx={c} cy={c} rx={r - 4} ry={(r - 4) * 0.42} stroke={strokeLight} strokeWidth="1.3" />
-        <circle cx={c + (r - 4)} cy={c} r="2.5" fill={blue} />
+        <circle cx={c + (r - 4)} cy={c} r="2.5" fill={violet} />
         <circle cx={c} cy={c} r="2" fill={strokeDim} />
       </svg>
     ),
@@ -70,7 +70,7 @@ export function OrbitalVisual({
         <circle cx={c} cy={c} r={r - 9} stroke={strokeLight} strokeWidth="1.3" />
         <line x1={c} y1={7} x2={c} y2={size - 7} stroke={strokeDim} strokeWidth="0.9" />
         <line x1={7} y1={c} x2={size - 7} y2={c} stroke={strokeDim} strokeWidth="0.9" />
-        <circle cx={c} cy={c} r="2.5" fill={orchid} />
+        <circle cx={c} cy={c} r="2.5" fill={violet} />
         <circle cx={c} cy={7} r="1.5" fill={strokeLight} />
       </svg>
     ),
