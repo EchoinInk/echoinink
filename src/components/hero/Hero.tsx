@@ -39,7 +39,7 @@ export function Hero() {
         transition={{ duration: DURATION.slower, delay: 0.8 }}
         style={{
           background:
-            'linear-gradient(to bottom, transparent %, rgb(var(--ei-deep-nebula-rgb) / 0.18) 0%, var(--ei-cosmic-black) 100%)',
+            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-nebula-rgb) / 0.18) 50%, var(--ei-cosmic-black) 100%)',
         }}
       />
 
