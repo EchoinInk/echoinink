@@ -19,8 +19,25 @@ export function HeroBackground() {
             src={widePng}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 w-full h-full object-cover object-center opacity-[0.92] scale-[1.01]"
-          />
+className="
+absolute
+top-[4%]
+right-[-6%]
+w-[92%]
+h-auto
+object-contain
+object-top
+
+md:top-0
+md:right-[-4%]
+md:w-[78%]
+md:h-full
+md:object-contain
+md:object-right
+
+opacity-[0.92]
+scale-[0.92]
+"          />
         </picture>
       </div>
 
