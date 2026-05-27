@@ -1,0 +1,127 @@
+Primary Palette
+Void Black
+HEX: #02030A RGB: 2, 3, 10 Usage:
+global backgrounds
+cinematic negative space
+immersive dark mode foundation
+
+Deep Midnight
+HEX: #050816 RGB: 5, 8, 22 Usage:
+layered sections
+elevated surfaces
+card backgrounds
+footer systems
+
+Indigo Atmosphere
+HEX: #0C1F5A RGB: 12, 31, 90 Usage:
+ambient depth
+atmospheric transitions
+subtle radial gradients
+
+Atmosphere Blue
+HEX: #2A6BFF RGB: 42, 107, 255 Usage:
+motion highlights
+interaction glow
+energetic accents
+hero illumination
+
+Electric Violet
+HEX: #7B5CFF RGB: 123, 92, 255 Usage:
+identity glow
+emphasis states
+luminous transitions
+
+Orchid Plasma
+HEX: #B55CFF RGB: 181, 92, 255 Usage:
+cinematic bloom
+nebula gradients
+atmospheric lighting
+
+Soft Cosmic Lavender
+HEX: #C8BEFF RGB: 200, 190, 255 Usage:
+subtle highlights
+hover softness
+secondary illumination
+
+Moonlight White
+HEX: #F5F2EB RGB: 245, 242, 235 Usage:
+hero typography
+premium contrast
+editorial statements
+
+Updated Gradient System
+Primary Signature Gradient
+
+linear-gradient(
+  135deg,
+  #2A6BFF 0%,
+  #7B5CFF 45%,
+  #B55CFF 100%
+)
+
+
+Atmospheric Glow Gradient
+
+radial-gradient(
+  circle,
+  rgba(42,107,255,0.35) 0%,
+  rgba(123,92,255,0.22) 45%,
+  rgba(181,92,255,0) 100%
+)
+
+
+Deep Space Surface
+
+linear-gradient(
+  180deg,
+  #02030A 0%,
+  #050816 100%
+)
+
+
+UI Glow Rules
+Use
+soft radial bloom
+layered opacity
+atmospheric diffusion
+subtle blur
+low-contrast transitions
+glow as atmosphere, not decoration
+Avoid
+hard neon outlines
+aggressive bloom
+cyberpunk saturation
+high-contrast magenta overload
+glossy gradients
+oversharpened effects
+
+Surface System
+
+
+Typography Contrast
+Primary Text
+#F6F2FF
+Secondary Text
+rgba(245,242,235,0.78)
+Tertiary Text
+rgba(245,242,235,0.62)
+Accent Text
+#B55CFF
+
+Emotional Colour Direction
+The updated palette feels:
+quieter
+deeper
+more cinematic
+more luxurious
+more immersive
+less “neon tech”
+more atmospheric editorial
+It now resembles:
+sci-fi cinema lighting
+luxury title sequences
+atmospheric art direction
+cosmic editorial systems
+emotionally intelligent interfaces
+This is much closer to:
+light meeting ink.

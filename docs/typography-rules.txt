@@ -1,13 +1,13 @@
 ECHO IN INK — Typography System
 Font Roles
-Fraunces
+Faunces
 Use for emotional display moments only:
 hero headlines
 manifesto lines
 poetic section titles
 cinematic statements
 editorial emphasis
-Fraunces carries the emotional gravity of the brand.
+Faunces carries the emotional gravity of the brand.
 It should feel atmospheric, restrained, and intentional.
 Neue Montreal
 Use for everything practical:
@@ -30,7 +30,7 @@ architectural references
 Geist Mono introduces subtle system intelligence and structured rhythm.
 Desktop Typography Rules
 Hero Headline
-Font: Fraunces
+Font: Faunces
 Size: 72–96px
 Line-height: 0.95–1.05
 Letter spacing: -0.04em
@@ -40,7 +40,7 @@ hero sections
 cinematic opening statements
 emotional positioning moments
 Large Section Statement
-Font: Fraunces
+Font: Faunces
 Size: 48–64px
 Line-height: 1.05
 Letter spacing: -0.035em
@@ -50,7 +50,7 @@ philosophy statements
 manifesto blocks
 immersive editorial sections
 Section Heading
-Font: Fraunces or Neue Montreal
+Font: Faunces or Neue Montreal
 Size: 32–44px
 Line-height: 1.1
 Letter spacing: -0.025em
@@ -114,16 +114,16 @@ interface systems
 atmospheric annotations
 Mobile Typography Rules
 Hero Headline
-Font: Fraunces
+Font: Faunces
 Size: 44–56px
 Line-height: 0.95–1.05
 Letter spacing: -0.035em
 Section Statement
-Font: Fraunces
+Font: Faunces
 Size: 34–42px
 Line-height: 1.05–1.1
 Section Heading
-Font: Fraunces / Neue Montreal
+Font: Faunces / Neue Montreal
 Size: 26–32px
 Line-height: 1.1
 Body Copy
@@ -170,7 +170,7 @@ emotionally intelligent
 calm
 spacious
 Best Pairing Structure
-Fraunces = soul
+Faunces = soul
 Emotional gravity. Editorial atmosphere. Human resonance.
 Neue Montreal = clarity
 Precision. Structure. Readability. Modern restraint.
@@ -185,24 +185,3 @@ spacious, not dense
 restrained, not performative
 Typography is not decoration.
 It is atmosphere translated into language.
-
----
-CHANGELOG
----
-
-2025 — Typography system implemented
-
-Files updated:
-- src/styles/typography.css — Added Neue Montreal @font-face (all 8 weights), updated .font-structural → Neue Montreal, added .font-mono → Geist Mono
-- tailwind.config.ts — font-sans → Neue Montreal, font-mono → Geist Mono added, font-serif/display → Fraunces unchanged
-- src/styles/globals.css — body default font-family → Neue Montreal
-- src/styles/typography-enhanced.css — All Suisse Intl → Neue Montreal, .ei-eyebrow → Geist Mono (0.14em tracking), body sizes lifted to 16px minimum, body opacity corrected to 75-85% primary / 58-68% secondary, CTA/nav tracking corrected per rules
-- src/styles/typography-system.css — Same updates as typography-enhanced.css (canonical file, loads last)
-- src/styles/forms-luxury.css — Suisse Intl → Neue Montreal
-- src/styles/accessibility.css — Suisse Intl → Neue Montreal
-- index.html — Added Geist Mono from Google Fonts, updated Fraunces load to include opsz axis, noted Neue Montreal is local
-
-Notes:
-- "Faunces" in rules = Fraunces (Google Font). Name appears to be a typo in the original rules document. Implementation uses Fraunces throughout.
-- typography-enhanced.css and typography-system.css contain duplicate ei-* class definitions. typography-system.css loads last and takes precedence. Consolidation is deferred as typography debt.
-- Components using raw inline Tailwind classes (e.g. HeroHeading, Button) will inherit Neue Montreal via font-structural and body defaults but retain their individual size/opacity values.
