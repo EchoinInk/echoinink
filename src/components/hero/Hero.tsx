@@ -17,15 +17,6 @@ export function Hero() {
 
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[4]"
-        style={{
-          background:
-            'linear-gradient(90deg, rgb(var(--ei-cosmic-black-rgb) / 0.94) 0%, rgb(var(--ei-cosmic-black-rgb) / 0.72) 30%, rgb(var(--ei-cosmic-black-rgb) / 0.16) 52%, transparent 68%)',
-        }}
-      />
-
-      <div
-        aria-hidden="true"
         className="absolute inset-0 pointer-events-none z-[5]"
         style={{
           background:
