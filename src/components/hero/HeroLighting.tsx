@@ -34,7 +34,7 @@ export function HeroLighting() {
             style={{
   width: 'clamp(140px, 18vw, 280px)',
 height: 'clamp(150px, 20vw, 320px)',
-              background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.25) 0%, rgba(168,85,247,0.15) 38%, rgba(99,102,241,0.07) 62%, transparent 100%)',
+              background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgb(var(--ei-neon-magenta-rgb) / 0.25) 0%, rgb(var(--ei-ion-violet-rgb) / 0.15) 38%, rgb(var(--ei-orbit-blue-rgb) / 0.07) 62%, transparent 100%)',
               filter: 'blur(32px)',
               mixBlendMode: 'screen' as const,
             }}
@@ -46,7 +46,7 @@ height: 'clamp(150px, 20vw, 320px)',
             style={{
               width: 'clamp(140px, 18vw, 280px)',
               height: 'clamp(150px, 20vw, 320px)',
-              background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgba(232,121,249,0.18) 0%, rgba(168,85,247,0.10) 38%, rgba(99,102,241,0.05) 62%, transparent 100%)',
+              background: 'radial-gradient(ellipse 50% 64% at 46% 49%, rgb(var(--ei-neon-magenta-rgb) / 0.18) 0%, rgb(var(--ei-ion-violet-rgb) / 0.10) 38%, rgb(var(--ei-orbit-blue-rgb) / 0.05) 62%, transparent 100%)',
               filter: 'blur(24px)',
               mixBlendMode: 'screen',
             }}
@@ -60,7 +60,7 @@ height: 'clamp(150px, 20vw, 320px)',
         style={{
           width: 'clamp(58px, 6vw, 110px)',
           height: 'clamp(62px, 7vw, 120px)',
-          background: 'radial-gradient(ellipse at 44% 50%, rgba(255,255,255,0.07) 0%, rgba(232,121,249,0.16) 45%, transparent 100%)',
+          background: 'radial-gradient(ellipse at 44% 50%, rgb(var(--ei-photon-white-rgb) / 0.07) 0%, rgb(var(--ei-neon-magenta-rgb) / 0.16) 45%, transparent 100%)',
           filter: 'blur(14px)',
           mixBlendMode: 'screen',
           zIndex: 1,

@@ -13,10 +13,10 @@ export function HeroHeading() {
         </span>
 
         <div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
+          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-neon-magenta-rgb)/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
+              'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.15) 0%, rgb(var(--ei-neon-magenta-rgb) / 0.95) 100%)',
           }}
         />
       </motion.div>
@@ -26,7 +26,7 @@ export function HeroHeading() {
         className="font-editorial max-w-[30ch] whitespace-pre-line text-[2.25rem] leading-[1.06] tracking-tight text-white/92 max-md:leading-[1.12] md:text-[3.1rem] lg:text-[3.7rem] pt-8 md:pt-12"
         style={{
           letterSpacing: '-0.025em',
-          textShadow: '0 0 90px rgba(123, 92, 255, 0.08)',
+          textShadow: '0 0 90px rgb(var(--ei-ion-violet-rgb) / 0.08)',
         }}
       >
         {'Designing the worlds\nyour work lives in.'}

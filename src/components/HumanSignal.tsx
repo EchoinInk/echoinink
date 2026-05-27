@@ -20,7 +20,7 @@ export function HumanSignal() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 55% 45% at 50% 50%, rgba(232,121,249,0.03) 0%, rgba(167,139,250,0.02) 40%, transparent 70%)',
+            'radial-gradient(ellipse 55% 45% at 50% 50%, rgb(var(--ei-neon-magenta-rgb) / 0.03) 0%, rgb(var(--ei-stellar-lilac-rgb) / 0.02) 40%, transparent 70%)',
           filter: 'blur(80px)',
         }}
       />
@@ -70,13 +70,13 @@ export function HumanSignal() {
       <div
         className="absolute inset-x-0 top-0 h-20 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, rgba(8,10,18,0.5) 0%, transparent 100%)',
+          background: 'linear-gradient(to bottom, rgb(var(--ei-deep-nebula-rgb) / 0.5) 0%, transparent 100%)',
         }}
       />
       <div
         className="absolute inset-x-0 bottom-0 h-20 pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, rgba(8,10,18,0.5) 0%, transparent 100%)',
+          background: 'linear-gradient(to top, rgb(var(--ei-deep-nebula-rgb) / 0.5) 0%, transparent 100%)',
         }}
       />
     </section>

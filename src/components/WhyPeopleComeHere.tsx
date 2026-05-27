@@ -31,7 +31,7 @@ export function WhyPeopleComeHere() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 40% 50% at 50% 50%, rgba(139,92,246,0.025) 0%, transparent 60%)',
+            'radial-gradient(ellipse 40% 50% at 50% 50%, rgb(var(--ei-ion-violet-rgb) / 0.025) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -58,7 +58,7 @@ export function WhyPeopleComeHere() {
             className="w-full h-px mb-8"
             style={{
               background:
-                'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 20%, rgba(139,92,246,0.12) 50%, rgba(255,255,255,0.06) 80%, transparent 100%)',
+                'linear-gradient(90deg, transparent 0%, rgb(var(--ei-photon-white-rgb) / 0.06) 20%, rgb(var(--ei-ion-violet-rgb) / 0.12) 50%, rgb(var(--ei-photon-white-rgb) / 0.06) 80%, transparent 100%)',
             }}
           />
 
@@ -85,7 +85,7 @@ export function WhyPeopleComeHere() {
             className="w-full h-px mt-8"
             style={{
               background:
-                'linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 20%, rgba(139,92,246,0.12) 50%, rgba(255,255,255,0.06) 80%, transparent 100%)',
+                'linear-gradient(90deg, transparent 0%, rgb(var(--ei-photon-white-rgb) / 0.06) 20%, rgb(var(--ei-ion-violet-rgb) / 0.12) 50%, rgb(var(--ei-photon-white-rgb) / 0.06) 80%, transparent 100%)',
             }}
           />
         </motion.div>

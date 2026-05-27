@@ -1,0 +1,60 @@
+{
+  "brand": "Echo in Ink",
+  "palette": [
+    {
+      "name": "Electric Cobalt",
+      "hex": "#1336E7",
+      "role": "Primary energy stroke"
+    },
+    {
+      "name": "Orbit Blue",
+      "hex": "#0B0E96",
+      "role": "Deep blue support"
+    },
+    {
+      "name": "Deep Nebula",
+      "hex": "#070454",
+      "role": "Midnight gradient depth"
+    },
+    {
+      "name": "Stellar Lilac",
+      "hex": "#CBB9FB",
+      "role": "Highlight / glow tint"
+    },
+    {
+      "name": "Ion Violet",
+      "hex": "#690EB9",
+      "role": "Secondary accent"
+    },
+    {
+      "name": "Void Plum",
+      "hex": "#45045D",
+      "role": "Dark purple support"
+    },
+    {
+      "name": "Neon Magenta",
+      "hex": "#C23BE5",
+      "role": "Signature accent"
+    },
+    {
+      "name": "Cosmic Black",
+      "hex": "#02030A",
+      "role": "Core background"
+    },
+    {
+      "name": "Photon White",
+      "hex": "#F7F2FF",
+      "role": "Text / contrast"
+    }
+  ],
+  "gradients": [
+    {
+      "name": "Signature Orbit",
+      "css": "linear-gradient(135deg, #1336E7 0%, #690EB9 48%, #C23BE5 100%)"
+    },
+    {
+      "name": "Deep Space Glow",
+      "css": "radial-gradient(circle at 25% 35%, #1336E7 0%, #070454 36%, #02030A 72%)"
+    }
+  ]
+}

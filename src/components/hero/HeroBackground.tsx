@@ -7,7 +7,7 @@ export function HeroBackground() {
       {/* Base atmosphere */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[#050816]"
+        className="absolute inset-0 bg-[var(--ei-deep-nebula)]"
       />
 
       {/* DESKTOP MONOGRAM */}
@@ -74,9 +74,9 @@ export function HeroBackground() {
           background: `
   linear-gradient(
     90deg,
-    rgba(4,6,14,0.90) 0%,
-    rgba(4,6,14,0.72) 22%,
-    rgba(4,6,14,0.16) 44%,
+    rgb(var(--ei-cosmic-black-rgb) / 0.90) 0%,
+    rgb(var(--ei-cosmic-black-rgb) / 0.72) 22%,
+    rgb(var(--ei-cosmic-black-rgb) / 0.16) 44%,
     transparent 60%
   )`,
         }}
@@ -88,7 +88,7 @@ export function HeroBackground() {
         className="absolute inset-0 pointer-events-none z-[3]"
         style={{
           background:
-            'linear-gradient(to bottom, rgba(5,7,16,0.18) 0%, rgba(5,7,16,0.04) 12%, transparent 26%)',
+            'linear-gradient(to bottom, rgb(var(--ei-deep-nebula-rgb) / 0.18) 0%, rgb(var(--ei-deep-nebula-rgb) / 0.04) 12%, transparent 26%)',
         }}
       />
 
@@ -98,7 +98,7 @@ export function HeroBackground() {
         className="absolute bottom-0 left-0 right-0 pointer-events-none z-[4] h-[16vh] md:h-[28vh]"
         style={{
           background:
-            'linear-gradient(to bottom, transparent 0%, rgba(7,11,23,0.18) 42%, rgba(7,11,23,0.38) 74%, #070B17 100%)',
+            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-plum-rgb) / 0.18) 42%, rgb(var(--ei-void-plum-rgb) / 0.38) 74%, var(--ei-cosmic-black) 100%)',
         }}
       />
     </>

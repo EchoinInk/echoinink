@@ -43,7 +43,7 @@ export function LumoCaseStudyTeaser() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 50% 35% at 65% 45%, rgba(123,92,255,0.04) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 50% 35% at 65% 45%, rgb(var(--ei-ion-violet-rgb) / 0.04) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -63,24 +63,24 @@ export function LumoCaseStudyTeaser() {
           >
             <span className="ei-eyebrow">Featured Work</span>
 <div
-          className="h-px w-9 shrink-0 rounded-full shadow-[0_0_12px_rgba(232,121,249,0.45)]"
+          className="h-px w-9 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-neon-magenta-rgb)/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgba(99,102,241,0.15) 0%, rgba(232,121,249,0.95) 100%)',
+              'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.15) 0%, rgb(var(--ei-neon-magenta-rgb) / 0.95) 100%)',
           }}
         />          </motion.div>
 
           {/* Featured world card — 2-col split */}
           <motion.div
             variants={blurEmergence}
-            className="relative overflow-hidden rounded-[var(--radius-card)] border border-white/10 bg-[#070816]/80 grid md:grid-cols-[2fr_3fr] min-h-[380px]"
+            className="relative overflow-hidden rounded-[var(--radius-card)] border border-white/10 bg-[var(--ei-deep-nebula)]/80 grid md:grid-cols-[2fr_3fr] min-h-[380px]"
           >
             {/* Ambient glow behind card */}
             <div
               aria-hidden="true"
               className="absolute inset-0 pointer-events-none"
               style={{
-                background: 'radial-gradient(ellipse 60% 55% at 68% 50%, rgba(123,92,255,0.07) 0%, transparent 65%)',
+                background: 'radial-gradient(ellipse 60% 55% at 68% 50%, rgb(var(--ei-ion-violet-rgb) / 0.07) 0%, transparent 65%)',
                 filter: 'blur(40px)',
               }}
             />
@@ -145,7 +145,7 @@ export function LumoCaseStudyTeaser() {
                 aria-hidden="true"
                 className="absolute inset-y-0 left-0 w-24 pointer-events-none"
                 style={{
-                  background: 'linear-gradient(to right, rgba(7,8,22,0.85), transparent)',
+                  background: 'linear-gradient(to right, rgb(var(--ei-deep-nebula-rgb) / 0.85), transparent)',
                 }}
               />
 

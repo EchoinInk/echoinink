@@ -12,14 +12,14 @@ import {
 
 export function Hero() {
   return (
-<section className="relative w-full min-h-[720px] md:min-h-[760px] flex items-center overflow-hidden bg-[#05030B] ei-section-hero">       <HeroBackground />
+<section className="relative w-full min-h-[720px] md:min-h-[760px] flex items-center overflow-hidden bg-[var(--ei-cosmic-black)] ei-section-hero">       <HeroBackground />
 
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none z-[4]"
         style={{
           background:
-            'linear-gradient(90deg, rgba(5,3,11,0.94) 0%, rgba(5,3,11,0.72) 30%, rgba(5,3,11,0.16) 52%, transparent 68%)',
+            'linear-gradient(90deg, rgb(var(--ei-cosmic-black-rgb) / 0.94) 0%, rgb(var(--ei-cosmic-black-rgb) / 0.72) 30%, rgb(var(--ei-cosmic-black-rgb) / 0.16) 52%, transparent 68%)',
         }}
       />
 
@@ -28,7 +28,7 @@ export function Hero() {
         className="absolute inset-0 pointer-events-none z-[5]"
         style={{
           background:
-            'linear-gradient(to bottom, rgba(5,3,11,0.22) 0%, transparent 24%)',
+            'linear-gradient(to bottom, rgb(var(--ei-cosmic-black-rgb) / 0.22) 0%, transparent 24%)',
         }}
       />
 
@@ -39,7 +39,7 @@ export function Hero() {
         transition={{ duration: DURATION.slower, delay: 0.8 }}
         style={{
           background:
-            'linear-gradient(to bottom, transparent 0%, rgba(7,10,20,0.18) 48%, #05030B 100%)',
+            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-nebula-rgb) / 0.18) 48%, var(--ei-cosmic-black) 100%)',
         }}
       />
 

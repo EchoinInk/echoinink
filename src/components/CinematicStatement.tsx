@@ -26,8 +26,8 @@ export function CinematicStatement() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% 40%, rgba(139,92,246,0.06) 0%, transparent 60%),
-            radial-gradient(ellipse 60% 50% at 30% 60%, rgba(168,85,247,0.04) 0%, transparent 50%)
+            radial-gradient(ellipse 80% 60% at 50% 40%, rgb(var(--ei-ion-violet-rgb) / 0.06) 0%, transparent 60%),
+            radial-gradient(ellipse 60% 50% at 30% 60%, rgb(var(--ei-ion-violet-rgb) / 0.04) 0%, transparent 50%)
           `,
           filter: 'blur(100px)',
         }}
@@ -41,7 +41,7 @@ export function CinematicStatement() {
         viewport={VIEWPORT.normal}
         transition={{ duration: DURATION.slower, ease: EASE_LUXURY }}
         style={{
-          background: 'radial-gradient(ellipse 50% 40% at 50% 45%, rgba(232,121,249,0.03) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 50% 40% at 50% 45%, rgb(var(--ei-neon-magenta-rgb) / 0.03) 0%, transparent 60%)',
           filter: 'blur(80px)',
         }}
       />
@@ -86,7 +86,7 @@ export function CinematicStatement() {
       <div
         className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgba(8,10,18,0.5) 50%, rgba(12,14,24,0.9) 100%)',
+          background: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-nebula-rgb) / 0.5) 50%, rgb(var(--ei-cosmic-black-rgb) / 0.9) 100%)',
         }}
       />
     </section>

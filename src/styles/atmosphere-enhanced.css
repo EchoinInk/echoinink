@@ -10,8 +10,8 @@
   .ei-glow-violet {
     background: radial-gradient(
       ellipse 55% 50% at 50% 55%,
-      rgba(123, 92, 255, 0.045) 0%,
-      rgba(123, 92, 255, 0.022) 50%,
+      rgb(var(--ei-ion-violet-rgb) / 0.045) 0%,
+      rgb(var(--ei-ion-violet-rgb) / 0.022) 50%,
       transparent 70%
     );
     filter: blur(100px);
@@ -22,8 +22,8 @@
   .ei-glow-indigo {
     background: radial-gradient(
       ellipse 60% 55% at 45% 50%,
-      rgba(123, 92, 255, 0.038) 0%,
-      rgba(42, 107, 255, 0.015) 55%,
+      rgb(var(--ei-ion-violet-rgb) / 0.038) 0%,
+      rgb(var(--ei-electric-cobalt-rgb) / 0.015) 55%,
       transparent 75%
     );
     filter: blur(110px);
@@ -34,8 +34,8 @@
   .ei-glow-aqua {
     background: radial-gradient(
       ellipse 50% 45% at 55% 48%,
-      rgba(42, 107, 255, 0.03) 0%,
-      rgba(42, 107, 255, 0.015) 50%,
+      rgb(var(--ei-electric-cobalt-rgb) / 0.03) 0%,
+      rgb(var(--ei-electric-cobalt-rgb) / 0.015) 50%,
       transparent 70%
     );
     filter: blur(90px);
@@ -49,7 +49,7 @@
     background: radial-gradient(
       circle at center,
       transparent 30%,
-      rgba(2, 3, 10, 0.4) 100%
+      rgb(var(--ei-cosmic-black-rgb) / 0.4) 100%
     );
     pointer-events: none;
   }
@@ -59,7 +59,7 @@
     background: radial-gradient(
       ellipse 80% 80% at 50% 50%,
       transparent 50%,
-      rgba(5, 8, 22, 0.25) 100%
+      rgb(var(--ei-deep-nebula-rgb) / 0.25) 100%
     );
     pointer-events: none;
   }
@@ -71,8 +71,8 @@
     background: linear-gradient(
       to bottom,
       transparent 0%,
-      rgba(2, 3, 10, 0.5) 60%,
-      rgba(2, 3, 10, 0.95) 100%
+      rgb(var(--ei-cosmic-black-rgb) / 0.5) 60%,
+      rgb(var(--ei-cosmic-black-rgb) / 0.95) 100%
     );
     pointer-events: none;
   }
@@ -82,7 +82,7 @@
     background: linear-gradient(
       to top,
       transparent 0%,
-      rgba(2, 3, 10, 0.15) 100%
+      rgb(var(--ei-cosmic-black-rgb) / 0.15) 100%
     );
     pointer-events: none;
   }
@@ -102,17 +102,17 @@
   
   /* Card background base */
   .ei-card-bg {
-    background: rgba(255, 255, 255, 0.018);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgb(var(--ei-photon-white-rgb) / 0.018);
+    border: 1px solid rgb(var(--ei-photon-white-rgb) / 0.05);
     backdrop-filter: blur(16px);
   }
 
   /* Hover glow for cards */
   .ei-card-glow {
     box-shadow: 
-      0 0 0 1px rgba(255, 255, 255, 0.04),
-      0 20px 50px -20px rgba(0, 0, 0, 0.4),
-      0 0 60px -30px rgba(123, 92, 255, 0.1);
+      0 0 0 1px rgb(var(--ei-photon-white-rgb) / 0.04),
+      0 20px 50px -20px rgb(var(--ei-cosmic-black-rgb) / 0.4),
+      0 0 60px -30px rgb(var(--ei-ion-violet-rgb) / 0.1);
   }
 
   /* ── Breathing Space Atmosphere ──────────────────────────── */
@@ -122,7 +122,7 @@
     background: 
       radial-gradient(
         ellipse 35% 25% at 50% 50%,
-        rgba(123, 92, 255, 0.015) 0%,
+        rgb(var(--ei-ion-violet-rgb) / 0.015) 0%,
         transparent 55%
       );
     position: relative;
@@ -141,7 +141,7 @@
     inset: -15%;
     background: radial-gradient(
       ellipse 45% 40% at 50% 50%,
-      rgba(123, 92, 255, 0.022) 0%,
+      rgb(var(--ei-ion-violet-rgb) / 0.022) 0%,
       transparent 65%
     );
     filter: blur(60px);

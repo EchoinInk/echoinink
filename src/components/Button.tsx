@@ -47,12 +47,12 @@ const variants = {
     text-white/[0.92]
     hover:text-white
 
-    border border-[#2A6BFF]/[0.16]
-    hover:border-[#2A6BFF]/[0.28]
+    border-[var(--ei-electric-cobalt)]/[0.16]
+    hover:border-[var(--ei-electric-cobalt)]/[0.28]
 
-    bg-[linear-gradient(to_bottom,rgba(10,14,24,0.82),rgba(6,8,16,0.92))]
+    bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-nebula-rgb)/0.82),rgb(var(--ei-cosmic-black-rgb)/0.92))]
 
-    shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]
+    shadow-[inset_0_1px_0_rgb(var(--ei-photon-white-rgb)/0.06)]
 
     hover:-translate-y-[1px]
     active:translate-y-0
@@ -78,7 +78,7 @@ const variants = {
     bg-black/[0.22]
     hover:bg-black/[0.28]
 
-    shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]
+    shadow-[inset_0_1px_0_rgb(var(--ei-photon-white-rgb)/0.04)]
 
     hover:-translate-y-[1px]
     active:translate-y-0

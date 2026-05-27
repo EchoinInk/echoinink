@@ -13,7 +13,7 @@
     font-weight: 300;
     letter-spacing: -0.018em;
     line-height: 1.05;
-    color: rgba(240, 244, 255, 0.94);
+    color: rgb(var(--ei-photon-white-rgb) / 0.94);
   }
 
   /* Hero Lead — The tagline beneath display */
@@ -23,7 +23,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.48);
+    color: rgb(var(--ei-photon-white-rgb) / 0.48);
     max-width: 44ch;
   }
 
@@ -37,7 +37,7 @@
     letter-spacing: 0.14em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.42);
+    color: rgb(var(--ei-photon-white-rgb) / 0.42);
   }
 
   /* Section Title — main editorial heading */
@@ -47,7 +47,7 @@
     font-weight: 300;
     letter-spacing: -0.012em;
     line-height: 1.18;
-    color: rgba(232, 234, 246, 0.92);
+    color: rgb(var(--ei-stellar-lilac-rgb) / 0.92);
   }
 
   /* Section Description — supporting text */
@@ -57,7 +57,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.58);
+    color: rgb(var(--ei-photon-white-rgb) / 0.58);
     max-width: 52ch;
   }
 
@@ -70,7 +70,7 @@
     font-weight: 400;
     letter-spacing: -0.005em;
     line-height: 1.65;
-    color: rgba(255, 255, 255, 0.78);
+    color: rgb(var(--ei-photon-white-rgb) / 0.78);
   }
 
   /* Body Standard — general content (min 16px, 75–85% opacity per rules) */
@@ -80,7 +80,7 @@
     font-weight: 400;
     letter-spacing: -0.005em;
     line-height: 1.65;
-    color: rgba(255, 255, 255, 0.76);
+    color: rgb(var(--ei-photon-white-rgb) / 0.76);
   }
 
   /* Body Small — captions, card descriptions, metadata (14–16px, 58–68% opacity) */
@@ -90,7 +90,7 @@
     font-weight: 400;
     letter-spacing: -0.003em;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.58);
+    color: rgb(var(--ei-photon-white-rgb) / 0.58);
   }
 
   /* ── UI Elements ──────────────────────────────────────────── */
@@ -102,7 +102,7 @@
     font-weight: 500;
     letter-spacing: 0.01em;
     line-height: 1.4;
-    color: rgba(255, 255, 255, 0.90);
+    color: rgb(var(--ei-photon-white-rgb) / 0.90);
   }
 
   /* Card Title */
@@ -112,7 +112,7 @@
     font-weight: 300;
     letter-spacing: -0.008em;
     line-height: 1.24;
-    color: rgba(232, 234, 246, 0.88);
+    color: rgb(var(--ei-stellar-lilac-rgb) / 0.88);
   }
 
   /* Card Description (14–16px, small body per rules, 58–68% opacity) */
@@ -122,7 +122,7 @@
     font-weight: 400;
     letter-spacing: -0.003em;
     line-height: 1.65;
-    color: rgba(255, 255, 255, 0.62);
+    color: rgb(var(--ei-photon-white-rgb) / 0.62);
   }
 
   /* Navigation (13–14px, 0.02em tracking per rules) */
@@ -133,7 +133,7 @@
     letter-spacing: 0.02em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.60);
+    color: rgb(var(--ei-photon-white-rgb) / 0.60);
   }
 
   /* Footer Heading */
@@ -143,7 +143,7 @@
     font-weight: 300;
     letter-spacing: -0.015em;
     line-height: 1.05;
-    color: rgba(232, 234, 246, 0.90);
+    color: rgb(var(--ei-stellar-lilac-rgb) / 0.90);
   }
 
   /* ── Special Treatments ───────────────────────────────────── */
@@ -155,7 +155,7 @@
     font-weight: 300;
     letter-spacing: -0.006em;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.34);
+    color: rgb(var(--ei-photon-white-rgb) / 0.34);
     font-style: italic;
   }
 
@@ -166,7 +166,7 @@
     font-weight: 400;
     letter-spacing: -0.01em;
     line-height: 1.5;
-    color: rgba(232, 234, 246, 0.75);
+    color: rgb(var(--ei-stellar-lilac-rgb) / 0.75);
   }
 }
 
@@ -179,12 +179,12 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.50);
+    color: rgb(var(--ei-photon-white-rgb) / 0.50);
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
   
   .ei-link:hover {
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(var(--ei-photon-white-rgb) / 0.75);
   }
   
   /* Subtle link — tertiary navigation */
@@ -194,12 +194,12 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.40);
+    color: rgb(var(--ei-photon-white-rgb) / 0.40);
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
   
   .ei-link-subtle:hover {
-    color: rgba(255, 255, 255, 0.60);
+    color: rgb(var(--ei-photon-white-rgb) / 0.60);
   }
 }
 

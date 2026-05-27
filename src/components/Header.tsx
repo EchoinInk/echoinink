@@ -25,7 +25,7 @@ export function Header() {
       <div
         className="absolute inset-0 pointer-events-none backdrop-blur-[1px]"
         style={{
-          background: 'linear-gradient(to bottom, rgba(5,7,16,0.78) 0%, rgba(5,7,16,0.42) 45%, transparent 100%)',
+          background: 'linear-gradient(to bottom, rgb(var(--ei-deep-nebula-rgb) / 0.78) 0%, rgb(var(--ei-deep-nebula-rgb) / 0.42) 45%, transparent 100%)',
         }}
       />
 

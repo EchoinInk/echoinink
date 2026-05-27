@@ -46,7 +46,7 @@ export function HowWeWork() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 45% 50% at 30% 40%, rgba(99,102,241,0.04) 0%, transparent 55%)',
+          background: 'radial-gradient(ellipse 45% 50% at 30% 40%, rgb(var(--ei-orbit-blue-rgb) / 0.04) 0%, transparent 55%)',
           filter: 'blur(100px)',
         }}
       />
@@ -55,7 +55,7 @@ export function HowWeWork() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 40% at 70% 60%, rgba(139,92,246,0.03) 0%, transparent 50%)',
+          background: 'radial-gradient(ellipse 60% 40% at 70% 60%, rgb(var(--ei-ion-violet-rgb) / 0.03) 0%, transparent 50%)',
           filter: 'blur(80px)',
         }}
       />
@@ -64,7 +64,7 @@ export function HowWeWork() {
       <div
         className="absolute inset-x-0 bottom-0 h-[55%] pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, rgba(99,102,241,0.035) 0%, rgba(139,92,246,0.015) 30%, transparent 70%)',
+          background: 'linear-gradient(to top, rgb(var(--ei-orbit-blue-rgb) / 0.035) 0%, rgb(var(--ei-ion-violet-rgb) / 0.015) 30%, transparent 70%)',
           filter: 'blur(50px)',
         }}
       />
@@ -100,7 +100,7 @@ export function HowWeWork() {
               viewport={{ once: true }}
               transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
               style={{
-                background: 'linear-gradient(to bottom, rgba(139,92,246,0.15) 0%, rgba(99,102,241,0.2) 20%, rgba(139,92,246,0.2) 50%, rgba(99,102,241,0.2) 80%, rgba(139,92,246,0.15) 100%)',
+                background: 'linear-gradient(to bottom, rgb(var(--ei-ion-violet-rgb) / 0.15) 0%, rgb(var(--ei-orbit-blue-rgb) / 0.2) 20%, rgb(var(--ei-ion-violet-rgb) / 0.2) 50%, rgb(var(--ei-orbit-blue-rgb) / 0.2) 80%, rgb(var(--ei-ion-violet-rgb) / 0.15) 100%)',
                 transformOrigin: 'top',
                 filter: 'blur(0.5px)',
               }}
@@ -121,7 +121,7 @@ export function HowWeWork() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 + i * 0.1 }}
                     style={{
-                      background: 'linear-gradient(to bottom, rgba(139,92,246,0.12) 0%, rgba(99,102,241,0.06) 50%, rgba(139,92,246,0.03) 100%)',
+                      background: 'linear-gradient(to bottom, rgb(var(--ei-ion-violet-rgb) / 0.12) 0%, rgb(var(--ei-orbit-blue-rgb) / 0.06) 50%, rgb(var(--ei-ion-violet-rgb) / 0.03) 100%)',
                     }}
                   />
                 )}
@@ -133,7 +133,7 @@ export function HowWeWork() {
                     <motion.div
                       className="absolute w-8 h-8 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                       style={{
-                        background: 'radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%)',
+                        background: 'radial-gradient(circle, rgb(var(--ei-ion-violet-rgb) / 0.15) 0%, transparent 70%)',
                         filter: 'blur(8px)',
                       }}
                     />
@@ -142,9 +142,9 @@ export function HowWeWork() {
                     <div
                       className="relative w-2.5 h-2.5 md:w-3 md:h-3 opacity-60 group-hover:opacity-100 transition-all duration-500"
                       style={{
-                        background: 'linear-gradient(135deg, rgba(139,92,246,0.8) 0%, rgba(99,102,241,0.6) 100%)',
+                        background: 'linear-gradient(135deg, rgb(var(--ei-ion-violet-rgb) / 0.8) 0%, rgb(var(--ei-orbit-blue-rgb) / 0.6) 100%)',
                         transform: 'rotate(45deg)',
-                        boxShadow: '0 0 12px rgba(139,92,246,0.3)',
+                        boxShadow: '0 0 12px rgb(var(--ei-ion-violet-rgb) / 0.3)',
                       }}
                     />
 
@@ -176,7 +176,7 @@ export function HowWeWork() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.3 + i * 0.1 }}
                     style={{
-                      background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.08) 20%, rgba(99,102,241,0.06) 50%, rgba(139,92,246,0.08) 80%, transparent 100%)',
+                      background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-ion-violet-rgb) / 0.08) 20%, rgb(var(--ei-orbit-blue-rgb) / 0.06) 50%, rgb(var(--ei-ion-violet-rgb) / 0.08) 80%, transparent 100%)',
                     }}
                   />
                 )}
@@ -189,7 +189,7 @@ export function HowWeWork() {
             variants={blurEmergence}
             className="mt-8 md:mt-16 w-full h-px"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgba(139,92,246,0.08) 30%, rgba(99,102,241,0.08) 70%, transparent 100%)',
+              background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-ion-violet-rgb) / 0.08) 30%, rgb(var(--ei-orbit-blue-rgb) / 0.08) 70%, transparent 100%)',
             }}
           />
         </motion.div>
