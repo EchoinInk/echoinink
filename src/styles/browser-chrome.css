@@ -33,30 +33,34 @@
   }
 
   /* ── Text Selection ───────────────────────────────────────── */
-  ::selection {
-    background: rgba(123, 92, 255, 0.25);
-    color: rgba(255, 255, 255, 0.95);
-  }
+::selection {
+  background: rgba(42, 107, 255, 0.26);
+  color: rgba(255, 255, 255, 0.96);
+}
 
-  ::-moz-selection {
-    background: rgba(123, 92, 255, 0.25);
-    color: rgba(255, 255, 255, 0.95);
-  }
+::-moz-selection {
+  background: rgba(42, 107, 255, 0.26);
+  color: rgba(255, 255, 255, 0.96);
+}
 
-  /* ── Tap Highlight (Mobile) ───────────────────────────────── */
-  * {
-    -webkit-tap-highlight-color: rgba(123, 92, 255, 0.15);
-  }
+/* ── Tap Highlight (Mobile) ───────────────────────────────── */
+* {
+  -webkit-tap-highlight-color: rgba(42, 107, 255, 0.16);
+}
 
-  /* ── Focus Outline Treatment ──────────────────────────────── */
-  *:focus {
-    outline: none;
-  }
+/* ── Focus Outline Treatment ──────────────────────────────── */
+*:focus {
+  outline: none;
+}
 
-  *:focus-visible {
-    outline: 1px solid rgba(123, 92, 255, 0.3);
-    outline-offset: 2px;
-  }
+*:focus-visible {
+  outline: 1px solid rgba(42, 107, 255, 0.42);
+  outline-offset: 2px;
+
+  box-shadow:
+    0 0 0 1px rgba(42,107,255,0.18),
+    0 0 18px rgba(42,107,255,0.16);
+}
 
   /* ── Overscroll Behavior ─────────────────────────────────── */
   html {
