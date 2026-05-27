@@ -43,8 +43,8 @@ export function Hero() {
         }}
       />
 
-      <Container className="relative z-10">
-  <motion.div
+<Container size="lg" className="relative z-10">
+    <motion.div
     className="max-w-[680px] text-left pt-10 md:pt-12"
     variants={heroContainer}
     initial="hidden"
