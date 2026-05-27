@@ -20,7 +20,7 @@ export function HeroBackground() {
 
           absolute
           left-[46%]
-          top-[52%]
+          top-[53%]
           -translate-y-1/2
 
           h-[100vh]
