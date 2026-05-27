@@ -78,9 +78,7 @@ export function HeroBackground() {
     rgba(4,6,14,0.72) 22%,
     rgba(4,6,14,0.16) 44%,
     transparent 60%
-  )
-`,
-          `,
+  )`,
         }}
       />
 
