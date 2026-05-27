@@ -116,13 +116,15 @@
   /* ── Cinematic Gradient Border Buttons ───────────────────── */
   /* Primary — stronger glow, more confident presence */
   .ei-btn-primary-cinematic {
-    position: relative;
-    z-index: 1;
-    border-radius: 9999px;
-    cursor: pointer;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
+  position: relative;
+  isolation: isolate;
+  z-index: 1;
+  border-radius: 9999px;
+  cursor: pointer;
+  overflow: visible;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
 
 .ei-btn-primary-cinematic::before {
   content: "";
@@ -152,24 +154,27 @@
 }
 
 .ei-btn-primary-cinematic::after {
-  inset: -12px;
-
+  content: "";
+  position: absolute;
+  inset: -18px;
+  border-radius: 9999px;
   background: radial-gradient(
     circle,
-    rgba(42, 107, 255, 0.34) 0%,
-    rgba(42, 107, 255, 0.18) 36%,
+    rgba(42, 107, 255, 0.38) 0%,
+    rgba(42, 107, 255, 0.20) 36%,
     rgba(42, 107, 255, 0.08) 58%,
     transparent 78%
   );
-
-  filter: blur(26px);
-
-  opacity: 0.72;
+  filter: blur(28px);
+  opacity: 0.78;
+  pointer-events: none;
+  z-index: -2;
+  transition: opacity 0.6s var(--ei-ease-soft), transform 0.6s var(--ei-ease-soft);
 }
 
 .ei-btn-primary-cinematic:hover::after {
-  opacity: 0.9;
-  transform: scale(1.03);
+  opacity: 1;
+  transform: scale(1.04);
 }
 
   /* Legacy button (deprecated, for backwards compatibility) */
