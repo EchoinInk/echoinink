@@ -54,9 +54,8 @@ className="
   max-w-[680px]
   items-start
   text-left
-  translate-y-[1vh]
   max-md:translate-y-3
-  md:translate-y-[1.5vh]
+  md:translate-y-[1vh]
 "          variants={heroContainer}
           initial="hidden"
           animate="visible"
