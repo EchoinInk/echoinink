@@ -7,27 +7,23 @@ import { Container } from '../layout/Container';
 import {
   heroContainer,
   heroReveal,
-  EASE_LUXURY,
   DURATION,
 } from '@/lib/motion-cinematic';
 
 export function Hero() {
   return (
-    <section className="relative w-full max-md:min-h-0 md:min-h-screen flex items-start md:items-center justify-start overflow-hidden bg-[#05030B] ei-section-hero pt-80 pb-32 md:pt-0 md:pb-0">
-      {/* Background */}
+    <section className="relative w-full overflow-hidden bg-[#05030B] ei-section-hero pt-32 pb-24 md:pt-40 md:pb-28">
       <HeroBackground />
 
-      {/* LEFT TEXT READABILITY FADE */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none z-[4]"
         style={{
           background:
-            'linear-gradient(90deg, rgba(5,3,11,0.94) 0%, rgba(5,3,11,0.72) 32%, rgba(5,3,11,0.18) 58%, transparent 78%)',
+            'linear-gradient(90deg, rgba(5,3,11,0.94) 0%, rgba(5,3,11,0.72) 30%, rgba(5,3,11,0.16) 52%, transparent 68%)',
         }}
       />
 
-      {/* TOP CINEMATIC FRAME */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none z-[5]"
@@ -37,9 +33,8 @@ export function Hero() {
         }}
       />
 
-      {/* BOTTOM ATMOSPHERIC FADE */}
       <motion.div
-        className="absolute inset-x-0 bottom-0 z-[6] pointer-events-none h-[14vh] md:h-[28vh]"
+        className="absolute inset-x-0 bottom-0 z-[6] pointer-events-none h-[14vh] md:h-[20vh]"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: DURATION.slower, delay: 0.8 }}
@@ -49,28 +44,22 @@ export function Hero() {
         }}
       />
 
-      {/* CONTENT */}
-<section></section><Container className="relative z-10">
-  <motion.div
-    className="
-      max-w-[680px]
-      items-start
-      text-left
-      translate-y-0
-    "
-    variants={heroContainer}
-    initial="hidden"
-    animate="visible"
-  >
-    <motion.div variants={heroReveal}>
-      <HeroHeading />
-    </motion.div>
+      <Container className="relative z-10">
+        <motion.div
+          className="max-w-[680px] text-left"
+          variants={heroContainer}
+          initial="hidden"
+          animate="visible"
+        >
+          <motion.div variants={heroReveal}>
+            <HeroHeading />
+          </motion.div>
 
-    <motion.div variants={heroReveal} transition={{ delay: 0.2 }}>
-      <HeroCTA />
-    </motion.div>
-  </motion.div>
-</Container>    
+          <motion.div variants={heroReveal} transition={{ delay: 0.2 }}>
+            <HeroCTA />
+          </motion.div>
+        </motion.div>
+      </Container>
     </section>
   );
 }
