@@ -4,6 +4,12 @@ import mobilePng from '@/assets/ei-hero-monogram.png';
 export function HeroBackground() {
   return (
     <>
+      {/* Base atmosphere */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 bg-[var(--ei-cosmic-black)]"
+      />
+
       {/* DESKTOP MONOGRAM */}
 <img
   src={widePng}
@@ -14,6 +20,7 @@ export function HeroBackground() {
     filter: 'brightness(0.92) saturate(0.9) contrast(0.96)',
   }}
 />
+
       {/* MOBILE MONOGRAM */}
       <img
         src={mobilePng}
@@ -35,6 +42,26 @@ export function HeroBackground() {
     )`,
   }}
 />
+
+      {/* TOP CINEMATIC FRAME */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none z-[3]"
+        style={{
+          background: 
+            'linear-gradient(to bottom, rgb(var(--ei-deep-nebula-rgb) / 0.18) 0%, rgb(var(--ei-deep-nebula-rgb) / 0.04) 12%, transparent 26%)',
+        }}
+      />
+
+      {/* BOTTOM ATMOSPHERIC FADE */}
+      <div
+        aria-hidden="true"
+        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[4] h-[16vh] md:h-[28vh]"
+        style={{
+          background:
+            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-plum-rgb) / 0.18) 42%, rgb(var(--ei-void-plum-rgb) / 0.38) 74%, var(--ei-cosmic-black) 100%)',
+        }}
+      />
     </>
   );
 }
