@@ -14,7 +14,7 @@ import {
 
 export function Hero() {
   return (
-    <section className="relative w-full max-md:min-h-0 md:min-h-screen flex items-start md:items-center justify-start overflow-hidden bg-[#05030B] ei-section-hero pt-80 pb-32 md:pt-0 md:pb-0">
+    
       {/* Background */}
       <HeroBackground />
 
@@ -73,4 +73,5 @@ export function Hero() {
   </motion.div>
 </Container>    
 </Section></section>
-  )
+  );
+}
