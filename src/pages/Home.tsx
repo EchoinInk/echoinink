@@ -38,7 +38,7 @@ export function Home() {
       <ClosingSection />
 
       {/* ── FOOTER — 4-column atmospheric epilogue ───────────── */}
-      <Footer />
+      
     </PageShell>
   );
 }
