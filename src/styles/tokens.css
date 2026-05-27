@@ -27,6 +27,9 @@
     --ei-text-tertiary: rgba(245, 242, 235, 0.62);
     --ei-text-accent: #B55CFF;           /* = Orchid Plasma */
 
+    /* --- BORDERS --- */
+  --border-soft: rgba(245, 242, 235, 0.10);
+  --border-glow: rgba(181, 92, 255, 0.32);
     /* ── Glow Tokens ─────────────────────────────────────────────── */
     --ei-glow-blue: rgba(42, 107, 255, 0.35);     /* Atmosphere Blue */
     --ei-glow-violet: rgba(123, 92, 255, 0.35);   /* Electric Violet */
