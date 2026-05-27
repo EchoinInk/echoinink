@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { PageShell } from '@/components/system';
 import { Hero } from '@/components/hero/Hero';
 import { Philosophy } from '@/components/Philosophy';
-import { Pathways } from '@/components/Pathways';
+import { <WhatWeCreate></WhatWeCreate> } from '@/components/Pathways';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/ClosingSection';
