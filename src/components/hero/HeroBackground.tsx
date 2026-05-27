@@ -21,16 +21,17 @@ export function HeroBackground() {
   aria-hidden="true"
   className="
     absolute
-    right-[-2%]
-    top-[4%]
-    h-[82%]
+    right-[-4%]
+    top-1/2
+    -translate-y-1/2
+
+    h-[88%]
     w-auto
     object-contain
-    opacity-[0.9]
 
-    md:right-[-1%]
-    md:top-[3%]
-    md:h-[96%]
+    opacity-[0.92]
+    pointer-events-none
+    select-none
   "
 />
         </picture>
