@@ -77,7 +77,7 @@
   position: relative;
   isolation: isolate;
 }
-..ei-btn-primary-cinematic::before {
+.ei-btn-primary-cinematic::before {
   content: '';
   position: absolute;
 
