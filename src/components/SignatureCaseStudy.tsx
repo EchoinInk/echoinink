@@ -310,7 +310,7 @@ function HeldAtmosphere() {
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgb(var(--ei-void-plum-rgb) / 0.28) 0%, transparent 62%)' }} />
       <GlowField
         style={{ top: '-2%', left: '-8%', width: 'clamp(500px, 65vw, 880px)', height: 'clamp(500px, 65vw, 880px)' }}
-        gradient="radial-gradient(ellipse 52% 50% at 44% 46%, rgb(var(--ei-ion-violet-rgb) / 0.068) 0%, rgba(95,72,180,0.028) 50%, transparent 72%)"
+        gradient="radial-gradient(ellipse 52% 50% at 44% 46%, rgb(var(--ei-ion-violet-rgb) / 0.068) 0%, rgb(var(--ei-void-plum-rgb) / 0.028) 50%, transparent 72%)"
         blur={75}
         anim={{ opacity: [0.65, 1, 0.65] }}
         duration={38}
