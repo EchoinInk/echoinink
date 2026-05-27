@@ -4,7 +4,6 @@ import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from './HeroHeading';
 import { Container } from '../layout/Container';
 
-
 import {
   heroContainer,
   heroReveal,
