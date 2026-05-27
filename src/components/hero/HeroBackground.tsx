@@ -16,20 +16,23 @@ export function HeroBackground() {
           <source srcSet={wideAvif} type="image/avif" />
           <source srcSet={wideWebp} type="image/webp" />
           <img
-            src={widePng}
-            alt="EchoinInk background"
-            aria-hidden="true"
-className="absolute
-  inset-0
-  w-full
-  h-full
-  object-cover
-  object-[62%_center]
-  md:object-[58%_center]
-  opacity-[0.94]
-"          />
-        </picture>
-      </div>
+  src={widePng}
+  alt=""
+  aria-hidden="true"
+  className="
+    absolute
+    right-[-2%]
+    top-[4%]
+    h-[82%]
+    w-auto
+    object-contain
+    opacity-[0.9]
+
+    md:right-[-1%]
+    md:top-[3%]
+    md:h-[84%]
+  "
+/>
 
       {/* Cinematic top frame */}
       <div
