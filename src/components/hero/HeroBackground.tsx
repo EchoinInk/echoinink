@@ -11,16 +11,16 @@ export function HeroBackground() {
       />
 
       {/* DESKTOP MONOGRAM */}
-      <img
-        src={widePng}
-        alt=""
-        aria-hidden="true"
-        className="hidden md:block absolute left-[52%] top-[52%] -translate-y-1/2 h-[82vh] w-auto object-contain opacity-[0.72] pointer-events-none select-none z-[1]"
-        style={{
-          filter: 'brightness(0.82) saturate(0.85) contrast(1)',
-          mixBlendMode: 'normal',
-        }}
-      />
+<img
+  src={widePng}
+  alt=""
+  aria-hidden="true"
+  className="hidden md:block absolute left-[52%] top-[52%] -translate-y-1/2 h-[82vh] w-auto object-contain opacity-[0.96] pointer-events-none select-none z-[1]"
+  style={{
+    filter: 'brightness(1) saturate(1) contrast(1)',
+    mixBlendMode: 'normal',
+  }}
+/>
 
       {/* MOBILE MONOGRAM */}
       <img
@@ -34,35 +34,35 @@ export function HeroBackground() {
         }}
       />
 
-      {/* LEFT BLACK FADE ONLY */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[2]"
-        style={{
-          background: `linear-gradient(
-            90deg,
-            rgb(var(--ei-cosmic-black-rgb) / 1) 0%,
-            rgb(var(--ei-cosmic-black-rgb) / 0.98) 22%,
-            rgb(var(--ei-cosmic-black-rgb) / 0.82) 40%,
-            rgb(var(--ei-cosmic-black-rgb) / 0.36) 56%,
-            transparent 72%
-          )`,
-        }}
-      />
+     {/* LEFT BLACK FADE ONLY */}
+<div
+  aria-hidden="true"
+  className="absolute inset-0 pointer-events-none z-[2]"
+  style={{
+    background: `linear-gradient(
+      90deg,
+      rgb(var(--ei-cosmic-black-rgb) / 1) 0%,
+      rgb(var(--ei-cosmic-black-rgb) / 0.96) 20%,
+      rgb(var(--ei-cosmic-black-rgb) / 0.72) 34%,
+      rgb(var(--ei-cosmic-black-rgb) / 0.22) 46%,
+      transparent 54%
+    )`,
+  }}
+/>
 
-      {/* TOP BLACK FADE ONLY */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[3]"
-        style={{
-          background: `linear-gradient(
-            to bottom,
-            rgb(var(--ei-cosmic-black-rgb) / 0.88) 0%,
-            rgb(var(--ei-cosmic-black-rgb) / 0.44) 14%,
-            transparent 34%
-          )`,
-        }}
-      />
+     {/* TOP BLACK FADE ONLY */}
+<div
+  aria-hidden="true"
+  className="absolute inset-0 pointer-events-none z-[3]"
+  style={{
+    background: `linear-gradient(
+      to bottom,
+      rgb(var(--ei-cosmic-black-rgb) / 0.72) 0%,
+      rgb(var(--ei-cosmic-black-rgb) / 0.24) 10%,
+      transparent 22%
+    )`,
+  }}
+/>
 
       {/* BOTTOM BLACK FADE ONLY */}
       <div
