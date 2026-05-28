@@ -28,18 +28,19 @@ export function HeroBackground() {
     w-auto
     -translate-x-1/2
     -translate-y-1/2
+
     opacity-[0.9]
+    brightness-100
+    saturate-100
 
     sm:left-[52%]
     sm:h-[92vh]
 
     md:left-[60%]
     md:h-[86vh]
-    md:opacity-[0.92]
 
     lg:left-[68%]
     lg:h-[88vh]
-    lg:opacity-[0.96]
 
     xl:left-[70%]
     xl:h-[92vh]
@@ -48,7 +49,6 @@ export function HeroBackground() {
     2xl:h-[96vh]
   "
   style={{
-    filter: 'brightness(1) saturate(1) contrast(1)',
     mixBlendMode: 'normal',
   }}
 />
