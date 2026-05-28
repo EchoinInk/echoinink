@@ -22,22 +22,13 @@ export function HeroHeading() {
       </motion.div>
 
       <h1
-        id="hero-heading"
-        className="
-          font-editorial
-          max-w-[11.5ch]
-          text-[clamp(2.55rem,7.2vw,5.25rem)]
-          leading-[1.02]
-          tracking-[-0.035em]
-          text-white/92
-          sm:max-w-[12.5ch]
-          md:max-w-[13ch]
-          lg:max-w-[13.5ch]
-        "
-        style={{
-          textShadow: '0 0 90px rgb(var(--ei-ion-violet-rgb) / 0.08)',
-        }}
-      >
+  id="hero-heading"
+  className="font-editorial max-w-[30ch] whitespace-pre-line text-[2.25rem] leading-[1.06] tracking-tight text-white/92 max-md:leading-[1.12] md:text-[3.1rem] lg:text-[3.7rem] pt-8 md:pt-12"
+  style={{
+    letterSpacing: '-0.025em',
+    textShadow: '0 0 90px rgb(var(--ei-ion-violet-rgb) / 0.08)',
+  }}
+>
         Designing the worlds your work lives in.
       </h1>
 
