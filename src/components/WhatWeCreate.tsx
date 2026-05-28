@@ -50,7 +50,8 @@ export function WhatWeCreate() {
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.normal}
-    className="max-w-[1240px] mx-auto"        >
+          className="max-w-6xl mx-auto"
+        >
           {/* Section header */}
           <motion.div variants={driftUp} className="flex items-center gap-3 mb-10 md:mb-14">
             <span className="ei-eyebrow">What We Create</span>
