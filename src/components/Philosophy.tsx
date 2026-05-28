@@ -43,7 +43,7 @@ export function Philosophy() {
 
      <Container>
   <motion.div
-    className="max-w-[1280px] mx-auto"
+    className="max-w-[1240px] mx-auto"
     initial="hidden"
     whileInView="visible"
     viewport={VIEWPORT.normal}
