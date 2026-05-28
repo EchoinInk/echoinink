@@ -133,7 +133,7 @@ export function Philosophy() {
               className="font-structural text-[12px] md:text-[13px] leading-[1.7]"
               style={{
                 color: fragment.accent
-                  ? 'var(--ei-orchid-plasma)'
+                  ? 'var(--ei-electric-cobalt)'
                   : 'rgb(var(--ei-photon-white-rgb) / 0.62)',
               }}
             >
