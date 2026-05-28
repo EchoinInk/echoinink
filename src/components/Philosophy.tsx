@@ -50,7 +50,7 @@ export function Philosophy() {
           {/* Section eyebrow */}
           <motion.div
             variants={driftUp}
-            className="mb-8 flex items-center gap-4 md:mb-12"
+            className="flex items-center gap-3 mb-8 md:mb-12"
           >
             <span className="ei-eyebrow">Our Philosophy</span>
 
@@ -64,8 +64,7 @@ export function Philosophy() {
           </motion.div>
 
           {/* Two-column: heading left, fragments right */}
-<div className="grid items-start gap-8 md:grid-cols-[1.15fr_1fr] md:gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-12">            <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
-              <motion.h2
+<div className="grid md:grid-cols-[2fr_3fr] gap-8 md:gap-16 items-start">              <motion.h2
                 variants={blurEmergence}
                 className="ei-section-title mb-5 mt-3 max-w-[23ch] whitespace-pre-line md:mt-4"
               >
