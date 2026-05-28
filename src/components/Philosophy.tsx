@@ -66,8 +66,7 @@ export function Philosophy() {
           {/* Two-column: heading left, fragments right */}
 <div className="grid md:grid-cols-[2fr_3fr] gap-8 md:gap-16 items-start">              <motion.h2
                 variants={blurEmergence}
-                className="ei-section-title mb-5 mt-3 max-w-[23ch] whitespace-pre-line md:mt-4"
-              >
+                className="ei-section-title whitespace-pre-line mb-5"              >
                 {'Atmosphere is not decoration —\nit is how meaning is felt.'}
               </motion.h2>
 
@@ -83,7 +82,7 @@ export function Philosophy() {
             {/* Right — 4 philosophy fragment columns */}
             <motion.div
               variants={staggerContainer(STAGGER.normal, 0.25)}
-              className="mt-2 grid grid-cols-2 gap-x-8 gap-y-10 md:mt-0 xl:grid-cols-4"
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mt-2 md:mt-0"
             >
               {fragments.map((fragment, i) => (
                 <motion.div
