@@ -89,7 +89,7 @@ export function Philosophy() {
       {/* Right — 4 philosophy fragment columns */}
       <motion.div
         variants={staggerContainer(STAGGER.normal, 0.25)}
-        className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 mt-2 md:mt-0"
+        className="grid grid-cols-2 xl:grid-cols-4 gap-x-8 gap-y-10 mt-2 md:mt-0"
       >
         {fragments.map((fragment, i) => (
           <motion.div
