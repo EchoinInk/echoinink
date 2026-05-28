@@ -16,7 +16,7 @@
           />
         </div>
 
-        <h2 className="font-editorial max-w-[32ch] text-[clamp(2.8rem,5vw,5.25rem)] leading-[1.08] tracking-[-0.035em] text-white/72">
+        <h2 className="font-editorial max-w-[40ch] text-[clamp(2.8rem,5vw,5.25rem)] leading-[1.08] tracking-[-0.035em] text-white/72">
           Atmosphere is not decoration — it is how meaning is felt.
         </h2>
 
