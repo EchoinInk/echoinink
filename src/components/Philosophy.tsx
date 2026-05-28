@@ -65,8 +65,7 @@ export function Philosophy() {
           </motion.div>
 
           {/* Two-column: heading left, fragments right */}
-          <div className="grid md:grid-cols-[2fr_3fr] gap-8 md:gap-16 items-start">
-
+<div className="grid md:grid-cols-[1.25fr_1fr] lg:grid-cols-[1.35fr_1fr] gap-10 md:gap-20 lg:gap-24 items-start">
             {/* Left — Heading + body */}
             <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
               <motion.h2
