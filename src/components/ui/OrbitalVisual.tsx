@@ -66,7 +66,7 @@ export function OrbitalVisual({
         <circle cx={c} cy={c} r={r - 9} stroke={strokeLight} strokeWidth="0.3" />
         <line x1={c} y1={7} x2={c} y2={size - 7} stroke={strokeDim} strokeWidth="1.1" />
         <line x1={7} y1={c} x2={size - 7} y2={c} stroke={strokeDim} strokeWidth="1.6" />
-        <circle cx={c} cy={c} r="2.5" fill={violet} />
+        <circle cx={c} cy={c} r="2.5" fill={blue} />
         <circle cx={c} cy={7} r="1.5" fill={strokeLight} />
       </svg>
     ),
