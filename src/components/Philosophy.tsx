@@ -82,7 +82,7 @@ export function Philosophy() {
                 Everything we create is immersed in the invisible. A language of
                 emotion, memory, and intention.
               </motion.p>
-            </motion.di>
+            </motion.div>
 
             {/* Right — 4 philosophy fragment columns */}
             <motion.div
@@ -93,7 +93,7 @@ export function Philosophy() {
                 <motion.div
                   key={i}
                   variants={driftUp}
-                  className="relative pl-3"
+                  className="relative pl-4"
                 >
                   {/* Vertical divider */}
                   {i !== 0 && (
