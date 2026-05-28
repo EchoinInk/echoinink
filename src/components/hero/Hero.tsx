@@ -13,7 +13,7 @@ export function Hero() {
 <section className="relative w-full min-h-[clamp(720px,100vh,860px)] flex items-center overflow-hidden bg-[var(--ei-cosmic-black)] ei-section-hero">      
   <HeroBackground />
 
-      <Container size="lg" className="relative z-10">
+      <Container size="xl" className="relative z-10">
   <motion.div
     className="
       w-full

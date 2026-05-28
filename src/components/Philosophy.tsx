@@ -41,8 +41,8 @@ export function Philosophy() {
         }}
       />
 
-     <Container>
-  <motion.div
+ <Container size="xl" className="relative z-10">
+    <motion.div
           className="max-w-6xl mx-auto"
     initial="hidden"
     whileInView="visible"
