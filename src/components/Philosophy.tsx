@@ -71,11 +71,11 @@ export function Philosophy() {
         className="max-w-[780px]"
       >
         <motion.h2
-          variants={blurEmergence}
-          className="ei-section-title mb-5 max-w-[14ch]"
-        >
-          Atmosphere is not decoration — it is how meaning is felt.
-        </motion.h2>
+  variants={blurEmergence}
+  className="ei-section-title mb-5 max-w-[18ch] whitespace-pre-line"
+>
+  {'Atmosphere is not decoration —\nit is how meaning is felt.'}
+</motion.h2>
 
         <motion.p
           variants={driftUp}
