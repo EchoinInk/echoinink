@@ -93,7 +93,7 @@ export function Philosophy() {
                 <motion.div
                   key={i}
                   variants={driftUp}
-                  className="relative pl-6"
+                  className="relative pl-2"
                 >
                   {/* Vertical divider */}
                   {i !== 0 && (
