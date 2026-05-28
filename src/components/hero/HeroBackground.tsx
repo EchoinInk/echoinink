@@ -84,21 +84,21 @@ export function HeroBackground() {
 
 />
 
-      {/* LEFT FADE */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[2]"
-        style={{
-          background: `linear-gradient(
-            90deg,
-            rgb(var(--ei-cosmic-black-rgb) / 1) 0%,
-            rgb(var(--ei-cosmic-black-rgb) / 0.98) 20%,
-            rgb(var(--ei-cosmic-black-rgb) / 0.78) 36%,
-            rgb(var(--ei-cosmic-black-rgb) / 0.28) 50%,
-            transparent 62%
-          )`,
-        }}
-      />
+     {/* LEFT FADE */}
+<div
+  aria-hidden="true"
+  className="absolute inset-0 pointer-events-none z-[2]"
+  style={{
+    background: `linear-gradient(
+      90deg,
+      rgb(var(--ei-cosmic-black-rgb) / 1) 0%,
+      rgb(var(--ei-cosmic-black-rgb) / 0.96) 18%,
+      rgb(var(--ei-cosmic-black-rgb) / 0.74) 34%,
+      rgb(var(--ei-cosmic-black-rgb) / 0.26) 48%,
+      transparent 60%
+    )`,
+  }}
+/>
 
       {/* TOP FADE */}
       <div
