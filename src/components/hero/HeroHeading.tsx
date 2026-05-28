@@ -6,7 +6,7 @@ export function HeroHeading() {
     <div className="ei-monogram-frame max-w-[640px] md:max-w-[620px] lg:max-w-[680px]">
       <motion.div
         variants={heroReveal}
-        className="mb-4 flex items-center gap-4 md:mb-6"
+        className="mb-3 flex items-center gap-4 md:mb-5"
       >
         <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
           WE DESIGN WORLDS
