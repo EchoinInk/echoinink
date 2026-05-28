@@ -17,7 +17,7 @@ export function Hero() {
   <motion.div
     className="
       w-full
-      max-w-[680px]
+      max-w-6x
       px-6
       text-left
       md:px-10
