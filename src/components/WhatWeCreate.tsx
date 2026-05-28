@@ -56,7 +56,7 @@ export function WhatWeCreate() {
           <motion.div variants={driftUp} className="flex items-center gap-3 mb-10 md:mb-14">
             <span className="ei-eyebrow">What We Create</span>
 <div
-          className="h-px w-11 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-neon-magenta-rgb)/0.45)]"
+          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-neon-magenta-rgb)/0.45)]"
           style={{
             background:
               'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.15) 0%, rgb(var(--ei-neon-magenta-rgb) / 0.95) 100%)',
