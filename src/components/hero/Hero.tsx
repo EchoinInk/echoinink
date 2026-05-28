@@ -14,16 +14,26 @@ export function Hero() {
       <HeroBackground />
 
       <Container size="xl" className="relative z-10">
-        <motion.div className="max-w-[680px] text-left md:pl-10 lg:pl-14 md:-translate-y-[2vh]">
-          <motion.div variants={heroReveal}>
-            <HeroHeading />
-          </motion.div>
+  <motion.div
+    className="
+      w-full
+      max-w-[680px]
+      px-6
+      text-left
+      md:px-10
+      lg:px-14
+      md:-translate-y-[1vh]
+    "
+  >
+    <motion.div variants={heroReveal}>
+      <HeroHeading />
+    </motion.div>
 
-          <motion.div variants={heroReveal} transition={{ delay: 0.2 }}>
-            <HeroCTA />
-          </motion.div>
-        </motion.div>
-      </Container>
+    <motion.div variants={heroReveal} transition={{ delay: 0.2 }}>
+      <HeroCTA />
+    </motion.div>
+  </motion.div>
+</Container>
     </section>
   );
 }
