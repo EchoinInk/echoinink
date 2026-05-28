@@ -10,8 +10,7 @@ import {
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[720px] md:min-h-[760px] flex items-center overflow-hidden bg-[var(--ei-cosmic-black)] ei-section-hero">
-      <HeroBackground />
+<section className="relative w-full min-h-[clamp(720px,100vh,860px)] flex items-center overflow-hidden bg-[var(--ei-cosmic-black)] ei-section-hero">      <HeroBackground />
 
       <Container size="xl" className="relative z-10">
   <motion.div
@@ -34,6 +33,6 @@ export function Hero() {
     </motion.div>
   </motion.div>
 </Container>
-    </section>
+</section>
   );
 }
