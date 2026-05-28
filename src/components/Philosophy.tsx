@@ -69,7 +69,7 @@ export function Philosophy() {
       {/* Left — Heading + body */}
       <motion.div
         variants={staggerContainer(STAGGER.loose, 0)}
-        className="max-w-[680px]"
+        className="max-w-[780px]"
       >
         <motion.h2
           variants={blurEmergence}
