@@ -65,22 +65,21 @@ export function Philosophy() {
     </motion.div>
 
     {/* Two-column: heading left, fragments right */}
-<div className="grid md:grid-cols-[0.95fr_1.25fr] lg:grid-cols-[1fr_1.35fr] gap-10 md:gap-14 lg:gap-16 items-start">      {/* Left — Heading + body */}
-      <motion.div
-        variants={staggerContainer(STAGGER.loose, 0)}
-        className="max-w-[780px]"
-      >
-        <motion.h2
-  variants={blurEmergence}
-  className="ei-section-title mt-3 md:mt-4 mb-5 max-w-[23ch] whitespace-pre-line"
->
+          <div className="grid md:grid-cols-[2fr_3fr] gap-8 md:gap-16 items-start">
+
+            {/* Left — Heading + body */}
+            <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
+              <motion.h2
+                variants={blurEmergence}
+                className="ei-section-title whitespace-pre-line mb-5"
+              >
   {'Atmosphere is not decoration —\nit is how meaning is felt.'}
 </motion.h2>
 
         <motion.p
-          variants={driftUp}
-          className="font-structural text-[14px] md:text-[15px] leading-[1.75] text-white/60 max-w-[52ch]"
-        >
+                variants={driftUp}
+                className="font-structural text-[14px] md:text-[15px] leading-[1.75] text-white/60 max-w-[38ch]"
+              >
           Everything we create is immersed in the invisible. A language of
           emotion, memory, and intention.
         </motion.p>
