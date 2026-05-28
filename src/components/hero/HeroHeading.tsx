@@ -34,8 +34,7 @@ export function HeroHeading() {
 
       <motion.p
         variants={heroReveal}
-        className="
-          font-structural
+        className="font-structural
           mt-5
           max-w-[42ch]
           text-[14px]

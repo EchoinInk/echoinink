@@ -14,7 +14,7 @@ export function HeroBackground() {
 
       <img
         src={widePng}
-        alt=""
+        alt="Echo in Ink monogram"
         aria-hidden="true"
         className="absolute z-[1] pointer-events-none select-none left-1/2 top-[50%] h-[92vh] w-auto max-w-none -translate-x-1/2 -translate-y-1/2 object-contain opacity-[0.9] sm:left-[50%] sm:h-[92vh] md:left-[56%] md:h-[86vh] md:opacity-[0.92] lg:left-[62%] lg:h-[88vh] lg:opacity-[0.96] xl:left-[64%] xl:h-[92vh] 2xl:left-[63%] 2xl:h-[96vh]"
         style={{
