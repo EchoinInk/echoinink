@@ -28,7 +28,7 @@ export function HeroBackground() {
   aria-hidden="true"
   className="absolute inset-0 pointer-events-none z-[2]"
   style={{
-    background: `linear-gradient( 90deg,
+    background: `linear-gradient(90deg,
       rgb(var(--ei-cosmic-black-rgb) / 1) 0%,
       rgb(var(--ei-cosmic-black-rgb) / 0.96) 18%,
       rgb(var(--ei-cosmic-black-rgb) / 0.74) 34%,
@@ -43,7 +43,7 @@ export function HeroBackground() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none z-[3]"
         style={{
-          background: `linear-gradient(            to bottom,
+          background: `linear-gradient(to bottom,
             rgb(var(--ei-cosmic-black-rgb) / 0.82) 0%,
             rgb(var(--ei-cosmic-black-rgb) / 0.34) 12%,
             transparent 28%
@@ -56,8 +56,7 @@ export function HeroBackground() {
         aria-hidden="true"
         className="absolute bottom-0 left-0 right-0 pointer-events-none z-[4] h-[22vh]"
         style={{
-          background: `linear-gradient(
-            to bottom,
+          background: `linear-gradient(to bottom,
             transparent 0%,
             rgb(var(--ei-cosmic-black-rgb) / 0.42) 68%,
             var(--ei-cosmic-black) 100%
