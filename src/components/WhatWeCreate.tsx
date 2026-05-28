@@ -74,7 +74,7 @@ export function WhatWeCreate() {
                 >
                   {/* Icon */}
                   <div className="mb-10">
-                    <OrbitalVisual variant={cap.variant} size={64} />
+                    <OrbitalVisual variant={cap.variant} size={72} />
                   </div>
 
                   {/* Title */}
