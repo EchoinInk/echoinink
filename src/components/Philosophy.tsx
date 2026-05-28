@@ -41,8 +41,8 @@ export function Philosophy() {
         }}
       />
 
- <Container size="xl" className="relative z-10">
-    <motion.div
+     <Container>
+  <motion.div
           className="max-w-6xl mx-auto"
     initial="hidden"
     whileInView="visible"
@@ -68,13 +68,12 @@ export function Philosophy() {
           <div className="grid md:grid-cols-[2fr_3fr] gap-8 md:gap-16 items-start">
 
             {/* Left — Heading + body */}
-            <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
-              <motion.h2
-                variants={blurEmergence}
-                className="ei-section-title whitespace-pre-line mb-5"
-              >
+            <motion.h2
+  variants={blurEmergence}
+  className="ei-section-title mb-5 max-w-[23ch] whitespace-pre-line"
+>
   {'Atmosphere is not decoration —\nit is how meaning is felt.'}
-</motion.h2>
+</motion.h2>x 
 
         <motion.p
                 variants={driftUp}
