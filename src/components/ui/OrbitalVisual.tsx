@@ -28,7 +28,7 @@ export function OrbitalVisual({
   const r = c - 4;
   const strokeLight = 'rgb(var(--ei-electric-cobalt-rgb) / 0.65)';
   const strokeDim = 'var(--ei-electric-violet)';
-  const orchid = 'var(--ei-orchid-plasma)';
+  const white = 'var(--ei-photon-white)';
   const blue = 'rgb(var(--ei-electric-cobalt-rgb) / 0.85)';
   const violet = 'var(--ei-electric-violet)';
 
@@ -37,7 +37,7 @@ export function OrbitalVisual({
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
         <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.8" />
         <polygon points={`${c},${9} ${size - 9},${size - 9} ${9},${size - 9}`} stroke={strokeLight} strokeWidth="0.3" />
-        <circle cx={c} cy={9} r="2.5" fill={orchid} />
+        <circle cx={c} cy={9} r="2.5" fill={white} />
         <circle cx={c} cy={c} r="1.5" fill={strokeDim} />
       </svg>
     ),
