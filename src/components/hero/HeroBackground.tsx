@@ -12,22 +12,11 @@ export function HeroBackground() {
 
       {/* MONOGRAM — one responsive image, no breakpoint swapping */}
 
-<img
-  src={widePng}
-  alt=""
-  aria-hidden="true"
-  className="
-    absolute
-
-    z-[1]
-
-    pointer-events-none
-
-    select-none
-
-    left-1/2
-
-    top-[50%]
+      <img
+        src={widePng}
+        alt=""
+        aria-hidden="true"
+        className="absolute z-[1] pointer-events-none select-none left-1/2 top-[50%]
 
     h-[92vh]
 
@@ -66,6 +55,7 @@ export function HeroBackground() {
     2xl:left-[63%]
 
     2xl:h-[96vh]
+
   "
 
   style={{
