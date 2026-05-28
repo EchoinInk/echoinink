@@ -11,47 +11,47 @@ export function HeroBackground() {
 
       {/* MONOGRAM — one responsive image, no breakpoint swapping */}
       <img
-        src={widePng}
-        alt=""
-        aria-hidden="true"
-        className="
-          absolute
-          z-[1]
-          pointer-events-none
-          select-none
-          max-w-none
-          object-contain
+  src={widePng}
+  alt=""
+  aria-hidden="true"
+  className="
+    absolute
+    z-[1]
+    pointer-events-none
+    select-none
+    max-w-none
+    object-contain
 
-          left-1/2
-          top-1/2
-          h-[92vh]
-          w-auto
-          -translate-x-1/2
-          -translate-y-1/2
-          opacity-[0.9]
+    left-1/2
+    top-1/2
+    h-[92vh]
+    w-auto
+    -translate-x-1/2
+    -translate-y-1/2
+    opacity-[0.9]
 
-          sm:left-[50%]
-          sm:h-[92vh]
+    sm:left-[52%]
+    sm:h-[92vh]
 
-          md:left-[56%]
-          md:h-[86vh]
-          md:opacity-[0.92]
+    md:left-[60%]
+    md:h-[86vh]
+    md:opacity-[0.92]
 
-          lg:left-[62%]
-          lg:h-[88vh]
-          lg:opacity-[0.96]
+    lg:left-[68%]
+    lg:h-[88vh]
+    lg:opacity-[0.96]
 
-          xl:left-[64%]
-          xl:h-[92vh]
+    xl:left-[70%]
+    xl:h-[92vh]
 
-          2xl:left-[63%]
-          2xl:h-[96vh]
-        "
-        style={{
-          filter: 'brightness(1) saturate(1) contrast(1)',
-          mixBlendMode: 'normal',
-        }}
-      />
+    2xl:left-[69%]
+    2xl:h-[96vh]
+  "
+  style={{
+    filter: 'brightness(1) saturate(1) contrast(1)',
+    mixBlendMode: 'normal',
+  }}
+/>
 
       {/* LEFT FADE */}
       <div
