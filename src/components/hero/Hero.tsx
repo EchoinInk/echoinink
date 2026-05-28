@@ -10,30 +10,20 @@ import {
 
 export function Hero() {
   return (
-<section className="relative w-full min-h-[clamp(720px,100vh,860px)] flex items-center overflow-hidden bg-[var(--ei-cosmic-black)] ei-section-hero">      
-  <HeroBackground />
+    <section className="relative w-full min-h-[720px] md:min-h-[760px] flex items-center overflow-hidden bg-[var(--ei-cosmic-black)] ei-section-hero">
+      <HeroBackground />
 
       <Container size="xl" className="relative z-10">
-  <motion.div
-    className="
-      w-full
-      max-w-[680px]
-      px-6
-      text-left
-      md:px-10
-      lg:px-14
-      md:-translate-y-[1vh]
-    "
-  >
-    <motion.div variants={heroReveal}>
-      <HeroHeading />
-    </motion.div>
+        <motion.div className="max-w-[680px] text-left md:pl-10 lg:pl-14 md:-translate-y-[2vh]">
+          <motion.div variants={heroReveal}>
+            <HeroHeading />
+          </motion.div>
 
-    <motion.div variants={heroReveal} transition={{ delay: 0.2 }}>
-      <HeroCTA />
-    </motion.div>
-  </motion.div>
-</Container>
-</section>
+          <motion.div variants={heroReveal} transition={{ delay: 0.2 }}>
+            <HeroCTA />
+          </motion.div>
+        </motion.div>
+      </Container>
+    </section>
   );
 }
