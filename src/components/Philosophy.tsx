@@ -51,7 +51,7 @@ export function Philosophy() {
     {/* Section eyebrow */}
     <motion.div
       variants={driftUp}
-      className="flex items-center gap-3 mb-8 md:mb-12"
+      className="flex items-center gap-4 mb-8 md:mb-12"
     >
       <span className="ei-eyebrow">Our Philosophy</span>
 
@@ -69,7 +69,7 @@ export function Philosophy() {
       {/* Left — Heading + body */}
       <motion.div
         variants={staggerContainer(STAGGER.loose, 0)}
-        className="max-w-[780px]"
+        className="max-w-[680px]"
       >
         <motion.h2
           variants={blurEmergence}
