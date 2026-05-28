@@ -122,7 +122,7 @@ export function Philosophy() {
                   className="absolute inset-0 rounded-full blur-sm"
                   style={{
                     background: fragment.accent
-                      ? 'rgb(var(--ei-void-plum-rgb) / 0.3)'
+                      ? 'rgb(var(--ei-ion-violet-rgb) / 0.3)'
                       : 'rgb(var(--ei-ion-violet-rgb) / 0.2)',
                   }}
                 />
