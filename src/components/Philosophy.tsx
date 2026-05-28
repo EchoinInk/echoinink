@@ -72,7 +72,7 @@ export function Philosophy() {
       >
         <motion.h2
   variants={blurEmergence}
-  className="ei-section-title mt-3 md:mt-4 mb-5 max-w-[38ch] whitespace-pre-line"
+  className="ei-section-title mt-3 md:mt-4 mb-5 max-w-[23ch] whitespace-pre-line"
 >
   {'Atmosphere is not decoration —\nit is how meaning is felt.'}
 </motion.h2>
