@@ -26,7 +26,7 @@ export function OrbitalVisual({
 }: OrbitalVisualProps) {
   const c = size / 2;
   const r = c - 4;
-  const strokeLight = 'rgb(var(--ei-stellar-lilac-rgb) / 0.55)';
+  const strokeLight = 'rgb(var(--ei-electric-cobalt-rgb) / 0.65)';
   const strokeDim = 'var(--ei-electric-violet)';
   const orchid = 'var(--ei-orchid-plasma)';
   const blue = 'rgb(var(--ei-electric-cobalt-rgb) / 0.85)';
