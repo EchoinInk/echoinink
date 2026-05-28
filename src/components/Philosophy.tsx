@@ -1,33 +1,158 @@
-<section className="ei-section ei-section-standard relative overflow-hidden py-20 md:py-28 lg:py-32">
-  <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 md:px-10 xl:px-16">
-    <div className="grid grid-cols-1 gap-14 lg:grid-cols-[1.2fr_1.8fr] lg:gap-20 xl:gap-28">
-      <div className="max-w-[780px]">
-        <div className="mb-10 flex items-center gap-4">
-          <span className="font-structural text-[11px] uppercase tracking-[0.22em] text-white/46">
-            OUR PHILOSOPHY
-          </span>
+import { motion } from 'framer-motion';
+import { Section } from '@/components/layout/Section';
+import { Container } from '@/components/layout/Container';
+import {
+  blurEmergence,
+  driftUp,
+  staggerContainer,
+  STAGGER,
+  VIEWPORT,
+} from '@/lib/motion-cinematic';
 
-          <div
-            className="h-px w-12 rounded-full"
-            style={{
-              background:
-                'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.12) 0%, rgb(var(--ei-neon-magenta-rgb) / 0.9) 100%)',
-            }}
-          />
-        </div>
+const fragments = [
+  {
+    text: 'Brands change now and forget later. We build worlds.',
+    accent: false,
+  },
+  {
+    text: 'Worlds that hold feeling, depth, and intelligence.',
+    accent: false,
+  },
+  {
+    text: 'Worlds that make people remember what cannot be explained.',
+    accent: false,
+  },
+  {
+    text: 'We do not decorate brands. We reveal what they are becoming.',
+    accent: true,
+  },
+];
 
-        <h2 className="font-editorial max-w-[40ch] text-[clamp(2.8rem,5vw,5.25rem)] leading-[1.08] tracking-[-0.035em] text-white/72">
-          Atmosphere is not decoration — it is how meaning is felt.
-        </h2>
+export function Philosophy() {
+  return (
+    <Section spacing="sm" className="ei-section-standard overflow-hidden relative">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse 50% 30% at 30% 40%, rgb(var(--ei-ion-violet-rgb) / 0.018) 0%, transparent 60%)',
+          filter: 'blur(50px)',
+        }}
+      />
 
-        <p className="mt-8 max-w-[54ch] font-structural text-[clamp(1rem,1.1vw,1.2rem)] leading-[1.75] text-white/56">
-          Everything we create is immersed in the invisible. A language of emotion, memory, and intention.
-        </p>
-      </div>
+      <Container>
+        <motion.div
+          className="max-w-6xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.normal}
+        >
+          {/* Section eyebrow */}
+          <motion.div
+            variants={driftUp}
+            className="flex items-center gap-3 mb-8 md:mb-12"
+          >
+            <span className="ei-eyebrow">Our Philosophy</span>
 
-      <div className="grid grid-cols-1 gap-8 pt-2 md:grid-cols-2 xl:grid-cols-4">
-        {/* philosophy cards/items */}
-      </div>
-    </div>
-  </div>
-</section>
+            <div
+              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-neon-magenta-rgb)/0.45)]"
+              style={{
+                background:
+                  'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.15) 0%, rgb(var(--ei-neon-magenta-rgb) / 0.95) 100%)',
+              }}
+            />
+          </motion.div>
+
+          {/* Two-column: heading left, fragments right */}
+          <div className="grid md:grid-cols-[2fr_3fr] gap-8 md:gap-16 items-start">
+
+            {/* Left — Heading + body */}
+            <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
+              <motion.h2
+                variants={blurEmergence}
+                className="ei-section-title whitespace-pre-line mb-5"
+              >
+                {'Atmosphere is not decoration —\nit is how meaning is felt.'}
+              </motion.h2>
+
+              <motion.p
+                variants={driftUp}
+                className="font-structural text-[14px] md:text-[15px] leading-[1.75] text-white/60 max-w-[38ch]"
+              >
+                Everything we create is immersed in the invisible. A language of
+                emotion, memory, and intention.
+              </motion.p>
+            </motion.div>
+
+            {/* Right — 4 philosophy fragment columns */}
+            <motion.div
+              variants={staggerContainer(STAGGER.normal, 0.25)}
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5 mt-2 md:mt-0"
+            >
+              {fragments.map((fragment, i) => (
+                <motion.div
+                  key={i}
+                  variants={driftUp}
+                  className="relative pl-6"
+                >
+                  {/* Vertical divider */}
+                  {i !== 0 && (
+                    <div
+                      className="
+                        absolute
+                        left-0
+                        top-0
+                        h-full
+                        w-px
+                      "
+                      style={{
+                        background:
+                          'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-photon-white-rgb) / 0.08) 18%, rgb(var(--ei-photon-white-rgb) / 0.08) 82%, transparent 100%)',
+                      }}
+                    />
+                  )}
+
+                  {/* Glow anchor dot */}
+                  <div className="mb-4" aria-hidden="true">
+                    <span className="relative inline-block h-3 w-3">
+                      <span
+                        className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full"
+                        style={{
+                          background: fragment.accent
+                            ? 'var(--ei-orchid-plasma)'
+                            : 'rgb(var(--ei-stellar-lilac-rgb) / 0.45)',
+                        }}
+                      />
+
+                      <span
+                        className="absolute inset-0 rounded-full blur-sm"
+                        style={{
+                          background: fragment.accent
+                            ? 'rgb(var(--ei-ion-violet-rgb) / 0.3)'
+                            : 'rgb(var(--ei-ion-violet-rgb) / 0.2)',
+                        }}
+                      />
+                    </span>
+                  </div>
+
+                  {/* Fragment text */}
+                  <p
+                    className="font-structural text-[12px] md:text-[13px] leading-[1.7]"
+                    style={{
+                      color: fragment.accent
+                        ? 'var(--ei-orchid-plasma)'
+                        : 'rgb(var(--ei-photon-white-rgb) / 0.62)',
+                    }}
+                  >
+                    {fragment.text}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
+        </motion.div>
+      </Container>
+    </Section>
+  );
+}
