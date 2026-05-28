@@ -34,16 +34,7 @@ export function HeroHeading() {
 
       <motion.p
         variants={heroReveal}
-        className="font-structural
-          mt-5
-          max-w-[42ch]
-          text-[14px]
-          leading-[1.65]
-          text-white/84
-          md:mt-6
-          md:max-w-[46ch]
-          md:text-[15px]
-        "
+        className="font-structural mt-5 max-w-[42ch] text-[14px] leading-[1.65] text-white/84 md:mt-6 md:max-w-[46ch] md:text-[15px]"
         style={{
           letterSpacing: '0.005em',
         }}
