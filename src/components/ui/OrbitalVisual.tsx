@@ -51,10 +51,10 @@ export function OrbitalVisual({
     ),
     nodes: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
-        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.4" />
-        <line x1={c} y1={11} x2={11} y2={size - 11} stroke={strokeLight} strokeWidth="0.8" />
-        <line x1={c} y1={11} x2={size - 11} y2={size - 11} stroke={strokeLight} strokeWidth="1.0" />
-        <line x1={11} y1={size - 11} x2={size - 11} y2={size - 11} stroke={strokeLight} strokeWidth="0.3" />
+        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="1.3" />
+        <line x1={c} y1={11} x2={11} y2={size - 11} stroke={strokeLight} strokeWidth="0.3" />
+        <line x1={c} y1={11} x2={size - 11} y2={size - 11} stroke={strokeLight} strokeWidth="0.5" />
+        <line x1={11} y1={size - 11} x2={size - 11} y2={size - 11} stroke={strokeLight} strokeWidth="0.3=8" />
         <circle cx={c} cy={11} r="2.5" fill={blue} />
         <circle cx={11} cy={size - 11} r="2" fill={strokeLight} />
         <circle cx={size - 11} cy={size - 11} r="2" fill={strokeLight} />
