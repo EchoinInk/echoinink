@@ -43,7 +43,7 @@ export function Philosophy() {
 
      <Container>
   <motion.div
-    className="max-w-[1440px] mx-auto"
+    className="max-w-[1280px] mx-auto"
     initial="hidden"
     whileInView="visible"
     viewport={VIEWPORT.normal}
@@ -65,8 +65,7 @@ export function Philosophy() {
     </motion.div>
 
     {/* Two-column: heading left, fragments right */}
-    <div className="grid md:grid-cols-[1.25fr_1fr] lg:grid-cols-[1.35fr_1fr] gap-10 md:gap-20 lg:gap-24 items-start">
-      {/* Left — Heading + body */}
+<div className="grid md:grid-cols-[0.95fr_1.25fr] lg:grid-cols-[1fr_1.35fr] gap-10 md:gap-14 lg:gap-16 items-start">      {/* Left — Heading + body */}
       <motion.div
         variants={staggerContainer(STAGGER.loose, 0)}
         className="max-w-[780px]"
