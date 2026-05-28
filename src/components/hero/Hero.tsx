@@ -17,11 +17,11 @@ export function Hero() {
   <motion.div
     className="
       w-full
-      max-w-6xl
+      max-w-[680px]
       px-6
       text-left
       md:px-10
-      lg:px-12
+      lg:px-14
       md:-translate-y-[1vh]
     "
   >
