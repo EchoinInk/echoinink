@@ -6,7 +6,7 @@ export function HeroHeading() {
     <div className="ei-monogram-frame max-w-[640px] md:max-w-[620px] lg:max-w-[680px]">
       <motion.div
         variants={heroReveal}
-        className="mb-4 flex items-center gap-4 md:mb-6"
+        className="mb-3 flex items-center gap-4 md:mb-5"
       >
         <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
           WE DESIGN WORLDS
@@ -23,17 +23,7 @@ export function HeroHeading() {
 
       <h1
         id="hero-heading"
-        className="
-          font-editorial
-          max-w-[11.5ch]
-          text-[clamp(2.55rem,7.2vw,5.25rem)]
-          leading-[1.02]
-          tracking-[-0.035em]
-          text-white/92
-          sm:max-w-[12.5ch]
-          md:max-w-[13ch]
-          lg:max-w-[13.5ch]
-        "
+        className="font-editorial max-w-[30ch] whitespace-pre-line text-[2.25rem] leading-[1.06] tracking-tight text-white/92 max--md:leading-[1.12] md:text-[3.1rem] lg:text-[3.7rem] pt-8 md:pt-12"
         style={{
           textShadow: '0 0 90px rgb(var(--ei-ion-violet-rgb) / 0.08)',
         }}
@@ -43,17 +33,7 @@ export function HeroHeading() {
 
       <motion.p
         variants={heroReveal}
-        className="
-          font-structural
-          mt-5
-          max-w-[42ch]
-          text-[14px]
-          leading-[1.65]
-          text-white/84
-          md:mt-6
-          md:max-w-[46ch]
-          md:text-[15px]
-        "
+        className="font-structural mt-5 max-w-[42ch] text-[14px] leading-[1.65] text-white/84 md:mt-6 md:max-w-[46ch] md:text-[15px]"
         style={{
           letterSpacing: '0.005em',
         }}
