@@ -102,7 +102,7 @@ export function Philosophy() {
                   )}
 
                   {/* Glow anchor dot */}
-                  <div className="mb-4" aria-hidden="true">
+                  <div className="mb-3" aria-hidden="true">
                     <span className="relative inline-block h-3 w-3">
                       <span
                         className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full"
