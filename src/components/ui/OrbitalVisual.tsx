@@ -85,7 +85,7 @@ export function OrbitalVisual({
         <line x1={9} y1={c} x2={size - 9} y2={c} stroke={strokeLight} strokeWidth="0.2" />
         <line x1={15} y1={15} x2={size - 15} y2={size - 15} stroke={strokeDim} strokeWidth="0.4" />
         <line x1={size - 15} y1={15} x2={15} y2={size - 15} stroke={strokeDim} strokeWidth="0.9" />
-        <circle cx={c} cy={c} r="2.5" fill={orchid} />
+        <circle cx={c} cy={c} r="2.5" fill={white} />
       </svg>
     ),
     architect: (
@@ -101,7 +101,7 @@ export function OrbitalVisual({
         <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.8" />
         <circle cx={c} cy={c} r={14} stroke={strokeDim} strokeWidth="0.6" fill="rgb(var(--ei-ion-violet-rgb) / 0.07)" />
         <circle cx={c} cy={c} r={5} fill="rgb(var(--ei-ion-violet-rgb) / 0.22)" />
-        <circle cx={c} cy={c} r={2.5} fill={orchid} />
+        <circle cx={c} cy={c} r={2.5} fill={white} />
         <circle cx={c} cy={c} r={1} fill="rgb(var(--ei-photon-white-rgb) / 0.85)" />
       </svg>
     ),
@@ -121,7 +121,7 @@ export function OrbitalVisual({
     <line x1={c} y1={c} x2={size-14} y2="16" stroke={strokeLight} strokeWidth="1.4" />
     <line x1={c} y1={c} x2={size-18} y2={size-18} stroke={strokeLight} strokeWidth="0.6" />
     <circle cx="16" cy="18" r="2" fill={strokeLight} />
-    <circle cx={c} cy={c} r="2.5" fill={orchid} />
+    <circle cx={c} cy={c} r="2.5" fill={white} />
     <circle cx={size-14} cy="16" r="2" fill={blue} />
     <circle cx={size-18} cy={size-18} r="2" fill={strokeLight} />
   </svg>
@@ -138,7 +138,7 @@ hexgrid: (
   <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
     <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.9" />
     <polygon points={`${c},8 ${size-12},18 ${size-12},${size-18} ${c},${size-8} 12,${size-18} 12,18`} stroke={strokeLight} strokeWidth="0.3" />
-    <circle cx={c} cy={8} r="2.5" fill={orchid} />
+    <circle cx={c} cy={8} r="2.5" fill={white} />
   </svg>
 ),
   };
