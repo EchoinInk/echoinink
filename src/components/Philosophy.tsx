@@ -68,13 +68,12 @@ export function Philosophy() {
           <div className="grid md:grid-cols-[2fr_3fr] gap-8 md:gap-16 items-start">
 
             {/* Left — Heading + body */}
-            <motion.h2
+           <motion.h2
   variants={blurEmergence}
-  className="ei-section-title mb-5 max-w-[23ch] whitespace-pre-line"
+  className="ei-section-title mt-3 md:mt-4 mb-5 max-w-[23ch] whitespace-pre-line"
 >
   {'Atmosphere is not decoration —\nit is how meaning is felt.'}
-</motion.h2>x 
-
+</motion.h2>
         <motion.p
                 variants={driftUp}
                 className="font-structural text-[14px] md:text-[15px] leading-[1.75] text-white/60 max-w-[38ch]"
