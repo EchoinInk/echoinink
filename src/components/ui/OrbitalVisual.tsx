@@ -35,16 +35,16 @@ export function OrbitalVisual({
   const icons: Record<OrbitalVariant, React.ReactElement> = {
     triangle: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
-        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.4" />
-        <polygon points={`${c},${9} ${size - 9},${size - 9} ${9},${size - 9}`} stroke={strokeLight} strokeWidth="0.6" />
+        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.8" />
+        <polygon points={`${c},${9} ${size - 9},${size - 9} ${9},${size - 9}`} stroke={strokeLight} strokeWidth="0.3" />
         <circle cx={c} cy={9} r="2.5" fill={orchid} />
         <circle cx={c} cy={c} r="1.5" fill={strokeDim} />
       </svg>
     ),
     orbit: (
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
-        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.4" />
-        <ellipse cx={c} cy={c} rx={r - 4} ry={(r - 4) * 0.42} stroke={strokeLight} strokeWidth="0.6" />
+        <circle cx={c} cy={c} r={r} stroke={strokeDim} strokeWidth="0.3" />
+        <ellipse cx={c} cy={c} rx={r - 4} ry={(r - 4) * 0.42} stroke={strokeLight} strokeWidth="0.9" />
         <circle cx={c + (r - 4)} cy={c} r="2.5" fill={violet} />
         <circle cx={c} cy={c} r="2" fill={strokeDim} />
       </svg>
