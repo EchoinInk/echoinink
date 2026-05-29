@@ -5,7 +5,7 @@ export function CtaOrbitalBackground() {
       className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
     >
       <svg
-        className="absolute left-1/2 top-1/2 h-[360px] w-[1800px] -translate-x-1/2 -translate-y-1/2"
+className="absolute left-1/2 top-[44%] h-[260px] w-[1700px] -translate-x-1/2 -translate-y-1/2"
         viewBox="0 0 1600 320"
         preserveAspectRatio="xMidYMid slice"
         fill="none"
