@@ -19,19 +19,19 @@
     --ei-void-black-rgb: 7 10 18;
 
     --ei-deep-indigo: #121827; /* Ink navy with a hint of cosmic depth */
-    --ei-deep-indigo-rgb: 17 24 46;
+    --ei-deep-indigo-rgb: 18 24 39;
 
-    --ei-aurora-blue: #8FCFE3;
-    --ei-aurora-blue-rgb: 67 217 255;
+    --ei-aurora-blue: #8FCFE3; /* Soft cyan with a luminous, ethereal quality */
+    --ei-aurora-blue-rgb: 143 207 227;
 
-    --ei-electric-cyan: #6AF6FF;
-    --ei-electric-cyan-rgb: 106 246 255;
+    --ei-electric-cyan: #2E4A68; /* Slate blue with a vibrant, electric energy */
+    --ei-electric-cyan-rgb: 46 74 104;
 
-    --ei-orchid-pink: #FF4FD8;
-    --ei-orchid-pink-rgb: 255 79 216;
+    --ei-orchid-pink: #D98AB8; /* Muted rose with a rich, orchid-inspired hue */
+    --ei-orchid-pink-rgb: 217 138 184;
 
-    --ei-luxe-violet: #9A5CFF;
-    --ei-luxe-violet-rgb: 154 92 255;
+    --ei-luxe-violet: #8A7BB8; /* Dusty violet with a luxurious, regal tone */
+    --ei-luxe-violet-rgb: 138 123 184;
 
     --ei-soft-lavender: #D8C7FF;
     --ei-soft-lavender-rgb: 216 199 255;
