@@ -104,8 +104,8 @@ export function CtaOrbitalBackground() {
         <circle cx="1182" cy="150" r="3.4" fill="rgb(var(--ei-luxe-violet-rgb))" opacity="0.9" />
         <circle cx="1182" cy="150" r="28" fill="url(#cta-violet-glow)" opacity="0.6" />
 
-        <circle cx="676" cy="230" r="2.6" fill="rgb(var(--ei-cobalt-rgb))" opacity="0.7" />
-        <circle cx="676" cy="230" r="22" fill="url(#cta-cobalt-glow)" opacity="0.45" />
+        <circle cx="676" cy="230" r="2.6" fill="rgb(var(--ei-electric-cyan-rgb))" opacity="0.7" />
+        <circle cx="676" cy="230" r="22" fill="url(#cta-cyan-glow)" opacity="0.45" />
       </svg>
     </div>
   );
