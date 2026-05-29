@@ -33,7 +33,7 @@ export function ProductHero({
   description,
   ctaLabel = 'Explore',
   ctaHref = '/contact',
-  accentColor = 'rgb(var(--ei-ion-violet-rgb) / 0.07)',
+  accentColor = 'rgb(var(--ei-luxe-violet-rgb) / 0.07)',
 }: ProductHeroProps) {
   return (
     <section className="relative min-h-[60vh] md:min-h-[75vh] flex items-center justify-start overflow-hidden py-20 md:py-32">
@@ -55,7 +55,7 @@ export function ProductHero({
         transition={{ duration: DURATION.slower, ease: EASE_LUXURY, delay: 0.3 }}
         style={{
           background:
-            'radial-gradient(ellipse 50% 40% at 50% 50%, rgb(var(--ei-photon-white-rgb) / 0.008) 0%, transparent 65%)',
+            'radial-gradient(ellipse 50% 40% at 50% 50%, rgb(var(--ei-ice-white-rgb) / 0.008) 0%, transparent 65%)',
           filter: 'blur(60px)',
         }}
       />
@@ -65,7 +65,7 @@ export function ProductHero({
         className="absolute inset-x-0 bottom-0 h-32 pointer-events-none z-10"
         style={{
           background:
-            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-nebula-rgb) / 0.6) 60%, var(--ei-cosmic-black) 100%)',
+            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-indigo-rgb) / 0.6) 60%, var(--ei-void-black) 100%)',
         }}
       />
 

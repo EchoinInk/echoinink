@@ -22,8 +22,8 @@ const layers = [
     headline: 'Identity systems, immersive worlds, creative direction.',
     description:
       'The studio arm. Bespoke creative work for founders and artists building something real.',
-    accent: 'rgb(var(--ei-stellar-lilac-rgb) / 0.08)',
-    accentLine: 'rgb(var(--ei-stellar-lilac-rgb) / 0.4)',
+    accent: 'rgb(var(--ei-soft-lavender-rgb) / 0.08)',
+    accentLine: 'rgb(var(--ei-soft-lavender-rgb) / 0.4)',
     tag: '01',
   },
   {
@@ -32,8 +32,8 @@ const layers = [
     headline: 'Frameworks, cognitive tools, identity maps, atmospheric UI systems.',
     description:
       'Structured tools for building identity, narrative, and digital worlds with cinematic clarity.',
-    accent: 'rgb(var(--ei-electric-cobalt-rgb) / 0.07)',
-    accentLine: 'rgb(var(--ei-electric-cobalt-rgb) / 0.35)',
+    accent: 'rgb(var(--ei-aurora-blue-rgb) / 0.07)',
+    accentLine: 'rgb(var(--ei-aurora-blue-rgb) / 0.35)',
     tag: '02',
   },
   {
@@ -42,8 +42,8 @@ const layers = [
     headline: 'Reflective technology for identity, narrative, and emotional clarity.',
     description:
       'An intelligent companion for people navigating creative becoming. Built on reflection, not noise.',
-    accent: 'rgb(var(--ei-neon-magenta-rgb) / 0.08)',
-    accentLine: 'rgb(var(--ei-neon-magenta-rgb) / 0.4)',
+    accent: 'rgb(var(--ei-orchid-pink-rgb) / 0.08)',
+    accentLine: 'rgb(var(--ei-orchid-pink-rgb) / 0.4)',
     tag: '03',
   },
 ];
@@ -56,7 +56,7 @@ export function EcosystemPathways() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 65% 40% at 50% 50%, rgb(var(--ei-orbit-blue-rgb) / 0.03) 0%, transparent 65%)',
+            'radial-gradient(ellipse 65% 40% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.03) 0%, transparent 65%)',
           filter: 'blur(70px)',
         }}
       />
@@ -90,8 +90,8 @@ export function EcosystemPathways() {
                   to={layer.to}
                   className="ei-focus-block group block rounded-2xl overflow-hidden"
                   style={{
-                    background: `radial-gradient(ellipse 80% 100% at 0% 50%, ${layer.accent} 0%, transparent 55%), rgb(var(--ei-photon-white-rgb) / 0.025)`,
-                    border: '1px solid rgb(var(--ei-photon-white-rgb) / 0.07)',
+                    background: `radial-gradient(ellipse 80% 100% at 0% 50%, ${layer.accent} 0%, transparent 55%), rgb(var(--ei-ice-white-rgb) / 0.025)`,
+                    border: '1px solid rgb(var(--ei-ice-white-rgb) / 0.07)',
                   }}
                 >
                   {/* Inner hover glow */}

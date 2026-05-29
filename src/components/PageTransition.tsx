@@ -49,7 +49,7 @@ export function PageTransition({ children }: PageTransitionProps) {
         }}
         className="fixed inset-0 z-[100] pointer-events-none"
         style={{ 
-          background: 'var(--ei-cosmic-black)',
+          background: 'var(--ei-void-black)',
           willChange: 'opacity',
         }}
       />
@@ -72,7 +72,7 @@ export function SectionLoading() {
       <div 
         className="w-32 h-px"
         style={{
-          background: 'linear-gradient(90deg, transparent, rgb(var(--ei-photon-white-rgb) / 0.08), transparent)',
+          background: 'linear-gradient(90deg, transparent, rgb(var(--ei-ice-white-rgb) / 0.08), transparent)',
         }}
       />
     </motion.div>
@@ -89,7 +89,7 @@ export function ImageLoading() {
       transition={{ duration: 0.3 }}
       className="absolute inset-0"
       style={{
-        background: 'linear-gradient(135deg, rgb(var(--ei-deep-nebula-rgb) / 0.8) 0%, rgb(var(--ei-deep-nebula-rgb) / 0.6) 100%)',
+        background: 'linear-gradient(135deg, rgb(var(--ei-deep-indigo-rgb) / 0.8) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.6) 100%)',
       }}
     />
   );

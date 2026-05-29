@@ -36,7 +36,7 @@ export function Philosophy() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 50% 30% at 30% 40%, rgb(var(--ei-ion-violet-rgb) / 0.018) 0%, transparent 60%)',
+            'radial-gradient(ellipse 50% 30% at 30% 40%, rgb(var(--ei-luxe-violet-rgb) / 0.018) 0%, transparent 60%)',
           filter: 'blur(50px)',
         }}
       />
@@ -55,10 +55,10 @@ export function Philosophy() {
             <span className="ei-eyebrow">Our Philosophy</span>
 
             <div
-              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-neon-magenta-rgb)/0.45)]"
+              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-orchid-pink-rgb)/0.45)]"
               style={{
                 background:
-                  'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.15) 0%, rgb(var(--ei-neon-magenta-rgb) / 0.95) 100%)',
+                  'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-orchid-pink-rgb) / 0.95) 100%)',
               }}
             />
           </motion.div>
@@ -101,7 +101,7 @@ export function Philosophy() {
                       className="absolute left-0 top-0 h-full w-px"
                       style={{
                         background:
-                          'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-photon-white-rgb) / 0.08) 18%, rgb(var(--ei-photon-white-rgb) / 0.08) 82%, transparent 100%)',
+                          'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-ice-white-rgb) / 0.08) 18%, rgb(var(--ei-ice-white-rgb) / 0.08) 82%, transparent 100%)',
                       }}
                     />
                   )}
@@ -114,7 +114,7 @@ export function Philosophy() {
                         style={{
                           background: fragment.accent
                             ? 'var(--ei-orchid-plasma)'
-                            : 'rgb(var(--ei-stellar-lilac-rgb) / 0.45)',
+                            : 'rgb(var(--ei-soft-lavender-rgb) / 0.45)',
                         }}
                       />
 
@@ -122,8 +122,8 @@ export function Philosophy() {
                         className="absolute inset-0 rounded-full blur-sm"
                         style={{
                           background: fragment.accent
-                            ? 'rgb(var(--ei-ion-violet-rgb) / 0.3)'
-                            : 'rgb(var(--ei-ion-violet-rgb) / 0.2)',
+                            ? 'rgb(var(--ei-luxe-violet-rgb) / 0.3)'
+                            : 'rgb(var(--ei-luxe-violet-rgb) / 0.2)',
                         }}
                       />
                     </span>
@@ -134,8 +134,8 @@ export function Philosophy() {
                     className="font-structural text-[12px] leading-[1.7] md:text-[13px]"
                     style={{
                       color: fragment.accent
-                        ? 'var(--ei-neon-magenta)'
-                        : 'rgb(var(--ei-photon-white-rgb) / 0.62)',
+                        ? 'var(--ei-orchid-pink)'
+                        : 'rgb(var(--ei-ice-white-rgb) / 0.62)',
                     }}
                   >
                     {fragment.text}

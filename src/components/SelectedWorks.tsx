@@ -141,7 +141,7 @@ function WorkPanel({
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 85% 85% at 50% 50%, transparent 30%, rgb(var(--ei-cosmic-black-rgb) / 0.65) 100%)',
+            'radial-gradient(ellipse 85% 85% at 50% 50%, transparent 30%, rgb(var(--ei-void-black-rgb) / 0.65) 100%)',
         }}
       />
 
@@ -150,7 +150,7 @@ function WorkPanel({
         className="absolute bottom-0 left-0 right-0 pointer-events-none"
         style={{
           height: isFull ? '60%' : '72%',
-          background: 'linear-gradient(to bottom, transparent, rgb(var(--ei-cosmic-black-rgb) / 0.92) 100%)',
+          background: 'linear-gradient(to bottom, transparent, rgb(var(--ei-void-black-rgb) / 0.92) 100%)',
         }}
       />
 
@@ -187,7 +187,7 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 70% at 50% 50%, rgb(var(--ei-orbit-blue-rgb) / 0.012) 0%, transparent 75%)',
+          background: 'radial-gradient(ellipse 60% 70% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.012) 0%, transparent 75%)',
         }}
       />
       {/* Section header */}
@@ -216,7 +216,7 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
           className="w-full h-px mt-5"
           style={{
             background:
-              'linear-gradient(90deg, transparent, rgb(var(--ei-photon-white-rgb) / 0.07) 25%, rgb(var(--ei-photon-white-rgb) / 0.07) 75%, transparent)',
+              'linear-gradient(90deg, transparent, rgb(var(--ei-ice-white-rgb) / 0.07) 25%, rgb(var(--ei-ice-white-rgb) / 0.07) 75%, transparent)',
           }}
         />
       </div>

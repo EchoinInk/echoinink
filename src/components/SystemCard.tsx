@@ -21,9 +21,9 @@ const statusLabel: Record<string, string> = {
 };
 
 const statusColor: Record<string, string> = {
-  available: 'rgb(var(--ei-electric-cobalt-rgb) / 0.55)',
-  soon: 'rgb(var(--ei-stellar-lilac-rgb) / 0.45)',
-  active: 'rgb(var(--ei-neon-magenta-rgb) / 0.55)',
+  available: 'rgb(var(--ei-aurora-blue-rgb) / 0.55)',
+  soon: 'rgb(var(--ei-soft-lavender-rgb) / 0.45)',
+  active: 'rgb(var(--ei-orchid-pink-rgb) / 0.55)',
 };
 
 export function SystemCard({
@@ -31,15 +31,15 @@ export function SystemCard({
   description,
   category,
   status = 'available',
-  accent = 'rgb(var(--ei-ion-violet-rgb) / 0.06)',
+  accent = 'rgb(var(--ei-luxe-violet-rgb) / 0.06)',
 }: SystemCardProps) {
   return (
     <motion.div
       variants={driftUp}
       className="group relative rounded-2xl overflow-hidden cursor-default"
       style={{
-        background: `radial-gradient(ellipse 80% 80% at 50% 0%, ${accent} 0%, transparent 60%), rgb(var(--ei-photon-white-rgb) / 0.02)`,
-        border: '1px solid rgb(var(--ei-photon-white-rgb) / 0.07)',
+        background: `radial-gradient(ellipse 80% 80% at 50% 0%, ${accent} 0%, transparent 60%), rgb(var(--ei-ice-white-rgb) / 0.02)`,
+        border: '1px solid rgb(var(--ei-ice-white-rgb) / 0.07)',
       }}
     >
       {/* Hover glow */}

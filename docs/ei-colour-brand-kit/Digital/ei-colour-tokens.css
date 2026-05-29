@@ -1,13 +1,13 @@
 :root {
-  --ei-electric-cobalt: #1336E7; /* Primary energy stroke */
-  --ei-orbit-blue: #0B0E96; /* Deep blue support */
-  --ei-deep-nebula: #070454; /* Midnight gradient depth */
-  --ei-stellar-lilac: #CBB9FB; /* Highlight / glow tint */
-  --ei-ion-violet: #690EB9; /* Secondary accent */
-  --ei-void-plum: #45045D; /* Dark purple support */
-  --ei-neon-magenta: #C23BE5; /* Signature accent */
-  --ei-cosmic-black: #02030A; /* Core background */
-  --ei-photon-white: #F7F2FF; /* Text / contrast */
+  --ei-aurora-blue: #1336E7; /* Primary energy stroke */
+  --ei-deep-indigo: #0B0E96; /* Deep blue support */
+  --ei-deep-indigo: #070454; /* Midnight gradient depth */
+  --ei-soft-lavender: #CBB9FB; /* Highlight / glow tint */
+  --ei-luxe-violet: #690EB9; /* Secondary accent */
+  --ei-deep-indigo: #45045D; /* Dark purple support */
+  --ei-orchid-pink: #C23BE5; /* Signature accent */
+  --ei-void-black: #02030A; /* Core background */
+  --ei-ice-white: #F7F2FF; /* Text / contrast */
 }
 
 .ei-gradient-signature { background: linear-gradient(135deg, #1336E7 0%, #690EB9 48%, #C23BE5 100%); }

@@ -40,10 +40,10 @@ export default function GlowCard({
   const archetypeConfig = {
     sessions: {
       // PRECISE, DIAGNOSTIC, GEOMETRIC, QUIETER
-      vignette: 'bg-[radial-gradient(circle_at_center,transparent_35%,rgb(var(--ei-cosmic-black-rgb)/0.60)_100%)]',
+      vignette: 'bg-[radial-gradient(circle_at_center,transparent_35%,rgb(var(--ei-void-black-rgb)/0.60)_100%)]',
       edgeGlow: 'from-cyan-500/[0.07] via-blue-500/[0.04] to-transparent',
-      shadowDepth: 'shadow-[inset_0_1px_30px_-8px_rgb(var(--ei-cosmic-black-rgb)/0.45)]',
-      overlayIntensity: 'via-[var(--ei-deep-nebula)]/55',
+      shadowDepth: 'shadow-[inset_0_1px_30px_-8px_rgb(var(--ei-void-black-rgb)/0.45)]',
+      overlayIntensity: 'via-[var(--ei-deep-indigo)]/55',
       // Precise, minimal motion — clinical restraint
       hoverLift: -1.5,
       hoverScale: 1.002,
@@ -58,10 +58,10 @@ export default function GlowCard({
     },
     identity: {
       // EMOTIONAL, FLUID, EXPRESSIVE, SOFTER
-      vignette: 'bg-[radial-gradient(circle_at_center,transparent_50%,rgb(var(--ei-cosmic-black-rgb)/0.40)_100%)]',
+      vignette: 'bg-[radial-gradient(circle_at_center,transparent_50%,rgb(var(--ei-void-black-rgb)/0.40)_100%)]',
       edgeGlow: 'from-fuchsia-500/[0.12] via-violet-500/[0.07] to-transparent',
-      shadowDepth: 'shadow-[inset_0_3px_50px_-12px_rgb(var(--ei-cosmic-black-rgb)/0.25)]',
-      overlayIntensity: 'via-[var(--ei-deep-nebula)]/30',
+      shadowDepth: 'shadow-[inset_0_3px_50px_-12px_rgb(var(--ei-void-black-rgb)/0.25)]',
+      overlayIntensity: 'via-[var(--ei-deep-indigo)]/30',
       // Fluid, expressive motion — emotional breathing
       hoverLift: -3,
       hoverScale: 1.008,
@@ -76,10 +76,10 @@ export default function GlowCard({
     },
     worlds: {
       // DIMENSIONAL, SPATIAL, IMMERSIVE, DEEPER
-      vignette: 'bg-[radial-gradient(ellipse_85%_65%_at_50%_75%,transparent_15%,rgb(var(--ei-cosmic-black-rgb)/0.70)_100%)]',
+      vignette: 'bg-[radial-gradient(ellipse_85%_65%_at_50%_75%,transparent_15%,rgb(var(--ei-void-black-rgb)/0.70)_100%)]',
       edgeGlow: 'from-indigo-500/[0.11] via-purple-500/[0.06] to-transparent',
-      shadowDepth: 'shadow-[inset_0_-3px_70px_-8px_rgb(var(--ei-cosmic-black-rgb)/0.55)]',
-      overlayIntensity: 'via-[var(--ei-deep-nebula)]/60',
+      shadowDepth: 'shadow-[inset_0_-3px_70px_-8px_rgb(var(--ei-void-black-rgb)/0.55)]',
+      overlayIntensity: 'via-[var(--ei-deep-indigo)]/60',
       // Dimensional, immersive motion — spatial depth
       hoverLift: -2.5,
       hoverScale: 1.005,
@@ -119,9 +119,9 @@ export default function GlowCard({
         horizontal
           ? featured ? "min-h-[240px] md:min-h-[280px]" : "min-h-[220px] md:min-h-[260px]"
           : featured ? "min-h-[420px] md:min-h-[560px]" : "min-h-[380px] md:min-h-[520px]",
-        featured ? "shadow-[0_0_60px_-20px_rgb(var(--ei-orbit-blue-rgb)/0.15)]" : "",
+        featured ? "shadow-[0_0_60px_-20px_rgb(var(--ei-deep-indigo-rgb)/0.15)]" : "",
         config.shadowDepth,
-        "bg-[var(--ei-cosmic-black)]",
+        "bg-[var(--ei-void-black)]",
         /* Mobile differentiation — subtle left accent per archetype */
         archetype === 'sessions' && 'max-md:border-l-2 max-md:border-cyan-500/20',
         archetype === 'identity' && 'max-md:border-l-2 max-md:border-fuchsia-500/20',
@@ -139,8 +139,8 @@ export default function GlowCard({
           />
 
           {/* CINEMATIC OVERLAY - stronger on left for text legibility */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[var(--ei-deep-nebula)]/95 via-[var(--ei-deep-nebula)]/60 to-black/20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[var(--ei-deep-nebula)]/80 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--ei-deep-indigo)]/95 via-[var(--ei-deep-indigo)]/60 to-black/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--ei-deep-indigo)]/80 via-transparent to-transparent" />
 
           {/* ATMOSPHERIC GLOW — differentiated placement */}
           {glow && (
@@ -148,7 +148,7 @@ export default function GlowCard({
           )}
 
           {/* VIGNETTE */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,transparent_40%,rgb(var(--ei-cosmic-black-rgb)/0.6)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,transparent_40%,rgb(var(--ei-void-black-rgb)/0.6)_100%)]" />
 
           {/* CONTENT - anchored bottom-left */}
           <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 md:p-10">
@@ -175,7 +175,7 @@ export default function GlowCard({
           />
 
           {/* ARCHETYPE-SPECIFIC CINEMATIC OVERLAY */}
-          <div className={cn("absolute inset-0 bg-gradient-to-b from-black/10", config.overlayIntensity, "to-[var(--ei-deep-nebula)]/95")} />
+          <div className={cn("absolute inset-0 bg-gradient-to-b from-black/10", config.overlayIntensity, "to-[var(--ei-deep-indigo)]/95")} />
 
           {/* ATMOSPHERIC GLOW — archetype-specific intensity */}
           {glow && (
@@ -192,7 +192,7 @@ export default function GlowCard({
           {/* SUBTLE EDGE SOFTENING */}
           <div 
             className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-            style={{ boxShadow: 'inset 0 1px 0 0 rgb(var(--ei-photon-white-rgb)/0.04)' }}
+            style={{ boxShadow: 'inset 0 1px 0 0 rgb(var(--ei-ice-white-rgb)/0.04)' }}
           />
 
           {/* CONTENT - positioned at bottom of card */}

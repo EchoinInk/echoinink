@@ -46,7 +46,7 @@ export function HowWeWork() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 45% 50% at 30% 40%, rgb(var(--ei-orbit-blue-rgb) / 0.04) 0%, transparent 55%)',
+          background: 'radial-gradient(ellipse 45% 50% at 30% 40%, rgb(var(--ei-deep-indigo-rgb) / 0.04) 0%, transparent 55%)',
           filter: 'blur(100px)',
         }}
       />
@@ -55,7 +55,7 @@ export function HowWeWork() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 40% at 70% 60%, rgb(var(--ei-ion-violet-rgb) / 0.03) 0%, transparent 50%)',
+          background: 'radial-gradient(ellipse 60% 40% at 70% 60%, rgb(var(--ei-luxe-violet-rgb) / 0.03) 0%, transparent 50%)',
           filter: 'blur(80px)',
         }}
       />
@@ -64,7 +64,7 @@ export function HowWeWork() {
       <div
         className="absolute inset-x-0 bottom-0 h-[55%] pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, rgb(var(--ei-orbit-blue-rgb) / 0.035) 0%, rgb(var(--ei-ion-violet-rgb) / 0.015) 30%, transparent 70%)',
+          background: 'linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / 0.035) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.015) 30%, transparent 70%)',
           filter: 'blur(50px)',
         }}
       />
@@ -100,7 +100,7 @@ export function HowWeWork() {
               viewport={{ once: true }}
               transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
               style={{
-                background: 'linear-gradient(to bottom, rgb(var(--ei-ion-violet-rgb) / 0.15) 0%, rgb(var(--ei-orbit-blue-rgb) / 0.2) 20%, rgb(var(--ei-ion-violet-rgb) / 0.2) 50%, rgb(var(--ei-orbit-blue-rgb) / 0.2) 80%, rgb(var(--ei-ion-violet-rgb) / 0.15) 100%)',
+                background: 'linear-gradient(to bottom, rgb(var(--ei-luxe-violet-rgb) / 0.15) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.2) 20%, rgb(var(--ei-luxe-violet-rgb) / 0.2) 50%, rgb(var(--ei-deep-indigo-rgb) / 0.2) 80%, rgb(var(--ei-luxe-violet-rgb) / 0.15) 100%)',
                 transformOrigin: 'top',
                 filter: 'blur(0.5px)',
                         background: 'radial-gradient(circle, rgb(var(--ei-luxe-violet-rgb) / 0.15) 0%, transparent 70%)',
@@ -121,7 +121,7 @@ export function HowWeWork() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.2 + i * 0.1 }}
                     style={{
-                      background: 'linear-gradient(to bottom, rgb(var(--ei-ion-violet-rgb) / 0.12) 0%, rgb(var(--ei-orbit-blue-rgb) / 0.06) 50%, rgb(var(--ei-ion-violet-rgb) / 0.03) 100%)',
+                      background: 'linear-gradient(to bottom, rgb(var(--ei-luxe-violet-rgb) / 0.12) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.06) 50%, rgb(var(--ei-luxe-violet-rgb) / 0.03) 100%)',
                     }}
                   />
                 )}

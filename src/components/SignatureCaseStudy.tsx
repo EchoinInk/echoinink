@@ -47,7 +47,7 @@ function Separator() {
       className="w-full h-px"
       style={{
         background:
-          'linear-gradient(90deg, transparent, rgb(var(--ei-photon-white-rgb) / 0.06) 25%, rgb(var(--ei-photon-white-rgb) / 0.06) 75%, transparent)',
+          'linear-gradient(90deg, transparent, rgb(var(--ei-ice-white-rgb) / 0.06) 25%, rgb(var(--ei-ice-white-rgb) / 0.06) 75%, transparent)',
       }}
     />
   );
@@ -56,11 +56,11 @@ function Separator() {
 const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E")`;
 
 const TINTS = {
-  violet:  'radial-gradient(ellipse 58% 55% at 36% 46%, rgb(var(--ei-ion-violet-rgb) / 0.20) 0%, transparent 68%)',
-  aqua:    'radial-gradient(ellipse 55% 50% at 63% 37%, rgb(var(--ei-electric-cobalt-rgb) / 0.16) 0%, transparent 65%)',
-  pink:    'radial-gradient(ellipse 50% 55% at 44% 52%, rgb(var(--ei-neon-magenta-rgb) / 0.17) 0%, transparent 66%)',
-  indigo:  'radial-gradient(ellipse 58% 52% at 52% 42%, rgb(var(--ei-orbit-blue-rgb) / 0.18) 0%, transparent 70%)',
-  neutral: 'radial-gradient(ellipse 50% 50% at 50% 45%, rgb(var(--ei-stellar-lilac-rgb) / 0.07) 0%, transparent 70%)',
+  violet:  'radial-gradient(ellipse 58% 55% at 36% 46%, rgb(var(--ei-luxe-violet-rgb) / 0.20) 0%, transparent 68%)',
+  aqua:    'radial-gradient(ellipse 55% 50% at 63% 37%, rgb(var(--ei-aurora-blue-rgb) / 0.16) 0%, transparent 65%)',
+  pink:    'radial-gradient(ellipse 50% 55% at 44% 52%, rgb(var(--ei-orchid-pink-rgb) / 0.17) 0%, transparent 66%)',
+  indigo:  'radial-gradient(ellipse 58% 52% at 52% 42%, rgb(var(--ei-deep-indigo-rgb) / 0.18) 0%, transparent 70%)',
+  neutral: 'radial-gradient(ellipse 50% 50% at 50% 45%, rgb(var(--ei-soft-lavender-rgb) / 0.07) 0%, transparent 70%)',
 } as const;
 
 function ImagePlaceholder({
@@ -79,18 +79,18 @@ function ImagePlaceholder({
   const y = useSpring(rawY, { stiffness: 30, damping: 42, restDelta: 0.001 });
 
   return (
-    <div ref={ref} className={`relative w-full ${aspect} overflow-hidden`} style={{ backgroundColor: 'var(--ei-cosmic-black)' }}>
+    <div ref={ref} className={`relative w-full ${aspect} overflow-hidden`} style={{ backgroundColor: 'var(--ei-void-black)' }}>
       {/* Parallax atmospheric layers */}
       <motion.div
         className="pointer-events-none"
         style={{ position: 'absolute', top: '-5%', left: '-3%', right: '-3%', bottom: '-5%', y }}
       >
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 85% 75% at 50% 58%, var(--ei-deep-nebula) 0%, var(--ei-cosmic-black) 55%, var(--ei-cosmic-black) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 85% 75% at 50% 58%, var(--ei-deep-indigo) 0%, var(--ei-void-black) 55%, var(--ei-void-black) 100%)' }} />
         <div className="absolute inset-0" style={{ background: TINTS[tint] }} />
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 30% 34% at 82% 16%, rgb(var(--ei-photon-white-rgb) / 0.03) 0%, transparent 62%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 30% 34% at 82% 16%, rgb(var(--ei-ice-white-rgb) / 0.03) 0%, transparent 62%)' }} />
         <div className="absolute inset-0" style={{ backgroundImage: GRAIN, backgroundRepeat: 'repeat', backgroundSize: '200px 200px', opacity: 0.055, mixBlendMode: 'overlay' }} />
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 86% 82% at 50% 50%, transparent 30%, rgb(var(--ei-cosmic-black-rgb) / 0.80) 100%)' }} />
-        <div className="absolute bottom-0 left-0 right-0 h-2/5" style={{ background: 'linear-gradient(to top, rgb(var(--ei-deep-nebula-rgb) / 0.55), transparent)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 86% 82% at 50% 50%, transparent 30%, rgb(var(--ei-void-black-rgb) / 0.80) 100%)' }} />
+        <div className="absolute bottom-0 left-0 right-0 h-2/5" style={{ background: 'linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / 0.55), transparent)' }} />
       </motion.div>
       {/* Label — fixed, outside parallax */}
       {label && (
@@ -105,17 +105,17 @@ function ImagePlaceholder({
 function OriginPulseAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(155deg, rgb(var(--ei-void-plum-rgb) / 0.45) 0%, rgb(var(--ei-cosmic-black-rgb) / 0.22) 48%, transparent 80%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(155deg, rgb(var(--ei-deep-indigo-rgb) / 0.45) 0%, rgb(var(--ei-void-black-rgb) / 0.22) 48%, transparent 80%)' }} />
       <GlowField
         style={{ top: '-8%', left: '-12%', width: 'clamp(560px, 74vw, 980px)', height: 'clamp(560px, 74vw, 980px)', transformOrigin: '40% 44%' }}
-        gradient="radial-gradient(ellipse 50% 47% at 40% 44%, rgb(var(--ei-orbit-blue-rgb) / 0.14) 0%, rgb(var(--ei-ion-violet-rgb) / 0.055) 44%, transparent 70%)"
+        gradient="radial-gradient(ellipse 50% 47% at 40% 44%, rgb(var(--ei-deep-indigo-rgb) / 0.14) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.055) 44%, transparent 70%)"
         blur={65}
         anim={{ opacity: [0.68, 1, 0.68], scale: [1, 1.038, 1] }}
         duration={24}
       />
       <GlowField
         style={{ top: '-20%', left: '-20%', width: 'clamp(700px, 96vw, 1280px)', height: 'clamp(700px, 96vw, 1280px)', transformOrigin: '42% 44%' }}
-        gradient="radial-gradient(ellipse 46% 44% at 42% 44%, transparent 40%, rgb(var(--ei-void-plum-rgb) / 0.065) 57%, transparent 72%)"
+        gradient="radial-gradient(ellipse 46% 44% at 42% 44%, transparent 40%, rgb(var(--ei-deep-indigo-rgb) / 0.065) 57%, transparent 72%)"
         blur={55}
         anim={{ opacity: [0.45, 0.85, 0.45], scale: [0.97, 1.025, 0.97] }}
         duration={32} delay={6}
@@ -123,7 +123,7 @@ function OriginPulseAtmosphere() {
       <VerticalBeam
         left="calc(30% - 44px)"
         width={88}
-        gradient="linear-gradient(180deg, transparent 0%, rgb(var(--ei-ion-violet-rgb) / 0.055) 18%, rgb(var(--ei-ion-violet-rgb) / 0.095) 50%, rgb(var(--ei-ion-violet-rgb) / 0.055) 82%, transparent 100%)"
+        gradient="linear-gradient(180deg, transparent 0%, rgb(var(--ei-luxe-violet-rgb) / 0.055) 18%, rgb(var(--ei-luxe-violet-rgb) / 0.095) 50%, rgb(var(--ei-luxe-violet-rgb) / 0.055) 82%, transparent 100%)"
       />
       <GrainOverlay range={[0.016, 0.040]} duration={9} delay={2} />
     </div>
@@ -133,30 +133,30 @@ function OriginPulseAtmosphere() {
 function CognitiveLandscapeAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(138deg, rgb(var(--ei-void-plum-rgb) / 0.42) 0%, rgb(var(--ei-cosmic-black-rgb) / 0.16) 52%, rgb(var(--ei-void-plum-rgb) / 0.10) 100%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(138deg, rgb(var(--ei-deep-indigo-rgb) / 0.42) 0%, rgb(var(--ei-void-black-rgb) / 0.16) 52%, rgb(var(--ei-deep-indigo-rgb) / 0.10) 100%)' }} />
       <GlowField
         style={{ inset: 0 }}
-        gradient="radial-gradient(ellipse 52% 58% at 78% 54%, rgb(var(--ei-ion-violet-rgb) / 0.065) 0%, transparent 68%)"
+        gradient="radial-gradient(ellipse 52% 58% at 78% 54%, rgb(var(--ei-luxe-violet-rgb) / 0.065) 0%, transparent 68%)"
         blur={40}
       />
       <ContourField
         viewBox="0 0 1000 600"
         paths={[
-          { d: 'M -40 228 Q 240 196 490 238 T 1040 212', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.052)', sw: 1 },
-          { d: 'M -40 332 Q 300 290 558 334 T 1040 314', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.042)', sw: 0.7 },
-          { d: 'M -40 418 Q 185 388 448 430 T 1040 408', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.6 },
+          { d: 'M -40 228 Q 240 196 490 238 T 1040 212', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.052)', sw: 1 },
+          { d: 'M -40 332 Q 300 290 558 334 T 1040 314', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.042)', sw: 0.7 },
+          { d: 'M -40 418 Q 185 388 448 430 T 1040 408', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.6 },
         ]}
       />
       <GlowField
         style={{ top: '20%', right: '8%', width: 'clamp(200px, 26vw, 360px)', height: 'clamp(200px, 26vw, 360px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-ion-violet-rgb) / 0.075) 0%, rgb(var(--ei-void-plum-rgb) / 0.03) 55%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.075) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.03) 55%, transparent 72%)"
         blur={44}
         anim={{ opacity: [0.65, 1, 0.65] }}
         duration={28}
       />
       <GlowField
         style={{ top: '48%', left: '15%', width: 'clamp(160px, 20vw, 280px)', height: 'clamp(160px, 20vw, 280px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-void-plum-rgb) / 0.058) 0%, transparent 70%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.058) 0%, transparent 70%)"
         blur={38}
         anim={{ opacity: [0.45, 0.82, 0.45] }}
         duration={36} delay={9}
@@ -165,9 +165,9 @@ function CognitiveLandscapeAtmosphere() {
         style={{ top: '10%', right: '4%', width: 'clamp(260px, 34vw, 500px)', height: 'clamp(220px, 28vw, 420px)', transformOrigin: '50% 50%' }}
         viewBox="0 0 400 320"
         rings={[
-          { cx: 200, cy: 160, rx: 185, ry: 145, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.042)', sw: 0.8 },
-          { cx: 200, cy: 160, rx: 145, ry: 112, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.032)', sw: 0.6 },
-          { cx: 200, cy: 160, rx: 105, ry: 80,  stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.024)', sw: 0.5 },
+          { cx: 200, cy: 160, rx: 185, ry: 145, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.042)', sw: 0.8 },
+          { cx: 200, cy: 160, rx: 145, ry: 112, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.032)', sw: 0.6 },
+          { cx: 200, cy: 160, rx: 105, ry: 80,  stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.024)', sw: 0.5 },
         ]}
         anim={{ opacity: [0.55, 0.95, 0.55], scale: [0.975, 1.028, 0.975] }}
         duration={34} delay={5}
@@ -182,7 +182,7 @@ function BreathingIdentityAtmosphere() {
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
       <GlowField
         style={{ top: '-5%', right: '-14%', width: 'clamp(420px, 58vw, 800px)', height: 'clamp(420px, 58vw, 800px)', transformOrigin: '60% 44%' }}
-        gradient="radial-gradient(ellipse 54% 52% at 60% 44%, rgb(var(--ei-ion-violet-rgb) / 0.13) 0%, rgb(var(--ei-ion-violet-rgb) / 0.07) 35%, rgb(var(--ei-void-plum-rgb) / 0.03) 60%, transparent 75%)"
+        gradient="radial-gradient(ellipse 54% 52% at 60% 44%, rgb(var(--ei-luxe-violet-rgb) / 0.13) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.07) 35%, rgb(var(--ei-deep-indigo-rgb) / 0.03) 60%, transparent 75%)"
         blur={55}
         anim={{ opacity: [0.72, 1, 0.72], scale: [1, 1.022, 1] }}
         duration={26}
@@ -190,7 +190,7 @@ function BreathingIdentityAtmosphere() {
       <EchoRing
         style={{ top: '-12%', right: '-22%', width: 'clamp(580px, 78vw, 1060px)', height: 'clamp(580px, 78vw, 1060px)', transformOrigin: '60% 44%' }}
         viewBox="0 0 600 600"
-        rings={[{ cx: 300, cy: 300, rx: 270, ry: 252, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.042)', sw: 0.8 }]}
+        rings={[{ cx: 300, cy: 300, rx: 270, ry: 252, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.042)', sw: 0.8 }]}
         anim={{ opacity: [0.45, 0.82, 0.45], scale: [0.98, 1.018, 0.98] }}
         duration={38} delay={7}
       />
@@ -198,9 +198,9 @@ function BreathingIdentityAtmosphere() {
         viewBox="0 0 1000 700"
         blur={0.8}
         paths={[
-          { d: 'M 720 48 Q 850 42 930 118',  stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.048)', sw: 0.7, cap: 'round' },
-          { d: 'M 958 210 Q 985 310 920 408', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.6, cap: 'round' },
-          { d: 'M 640 30 Q 679 16 718 28',   stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.5, cap: 'round' },
+          { d: 'M 720 48 Q 850 42 930 118',  stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.048)', sw: 0.7, cap: 'round' },
+          { d: 'M 958 210 Q 985 310 920 408', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.6, cap: 'round' },
+          { d: 'M 640 30 Q 679 16 718 28',   stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.5, cap: 'round' },
         ]}
       />
     </div>
@@ -210,24 +210,24 @@ function BreathingIdentityAtmosphere() {
 function HumaneFrameworkAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(145deg, rgb(var(--ei-void-plum-rgb) / 0.38) 0%, rgb(var(--ei-cosmic-black-rgb) / 0.16) 55%, transparent 85%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(145deg, rgb(var(--ei-deep-indigo-rgb) / 0.38) 0%, rgb(var(--ei-void-black-rgb) / 0.16) 55%, transparent 85%)' }} />
       <GlowField
         style={{ top: '5%', left: '-4%', width: 'clamp(200px, 28vw, 380px)', height: 'clamp(200px, 28vw, 380px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-void-plum-rgb) / 0.078) 0%, rgb(var(--ei-void-plum-rgb) / 0.030) 55%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.078) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.030) 55%, transparent 72%)"
         blur={48}
         anim={{ opacity: [0.60, 1, 0.60] }}
         duration={24}
       />
       <GlowField
         style={{ top: '8%', right: '-2%', width: 'clamp(200px, 26vw, 360px)', height: 'clamp(200px, 26vw, 360px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-void-plum-rgb) / 0.070) 0%, rgb(var(--ei-void-plum-rgb) / 0.026) 55%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.070) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.026) 55%, transparent 72%)"
         blur={44}
         anim={{ opacity: [0.45, 0.88, 0.45] }}
         duration={31} delay={6}
       />
       <GlowField
         style={{ bottom: '8%', right: '4%', width: 'clamp(180px, 24vw, 340px)', height: 'clamp(180px, 24vw, 340px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-void-plum-rgb) / 0.072) 0%, rgb(var(--ei-void-plum-rgb) / 0.026) 55%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.072) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.026) 55%, transparent 72%)"
         blur={46}
         anim={{ opacity: [0.55, 0.90, 0.55] }}
         duration={28} delay={16}
@@ -236,10 +236,10 @@ function HumaneFrameworkAtmosphere() {
         viewBox="0 0 1000 700"
         blur={1.2}
         paths={[
-          { d: 'M 220 195 Q 500 140 760 178', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.048)', sw: 0.8, cap: 'round' },
-          { d: 'M 214 248 Q 148 420 218 568', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.7, cap: 'round' },
-          { d: 'M 768 228 Q 840 390 752 548', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.7, cap: 'round' },
-          { d: 'M 268 572 Q 500 620 748 554', stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.044)', sw: 0.6, cap: 'round' },
+          { d: 'M 220 195 Q 500 140 760 178', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.048)', sw: 0.8, cap: 'round' },
+          { d: 'M 214 248 Q 148 420 218 568', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.7, cap: 'round' },
+          { d: 'M 768 228 Q 840 390 752 548', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.7, cap: 'round' },
+          { d: 'M 268 572 Q 500 620 748 554', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.044)', sw: 0.6, cap: 'round' },
         ]}
       />
     </div>
@@ -251,20 +251,20 @@ function FragmentsAtmosphere() {
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
       <GlowField
         style={{ top: '-5%', left: '-10%', width: 'clamp(500px, 68vw, 900px)', height: 'clamp(500px, 68vw, 900px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 40% 46%, rgb(var(--ei-ion-violet-rgb) / 0.080) 0%, rgb(var(--ei-void-plum-rgb) / 0.033) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 40% 46%, rgb(var(--ei-luxe-violet-rgb) / 0.080) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.033) 52%, transparent 72%)"
         blur={68}
         anim={{ opacity: [0.60, 0.94, 0.60] }}
         duration={32}
       />
       <GlowField
         style={{ bottom: '15%', right: '-6%', width: 'clamp(280px, 38vw, 560px)', height: 'clamp(280px, 38vw, 560px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 50% 50%, rgb(var(--ei-void-plum-rgb) / 0.068) 0%, rgb(var(--ei-void-plum-rgb) / 0.028) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.068) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.028) 52%, transparent 72%)"
         blur={62}
         anim={{ opacity: [0.48, 0.80, 0.48] }}
         duration={38} delay={10}
       />
-      <div style={{ position: 'absolute', top: '46%', left: 0, right: 0, height: '12%', background: 'linear-gradient(180deg, transparent 0%, rgb(var(--ei-cosmic-black-rgb) / 0.10) 50%, transparent 100%)', filter: 'blur(18px)' }} />
-      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 72% at 50% 48%, transparent 40%, rgb(var(--ei-cosmic-black-rgb) / 0.10) 72%, rgb(var(--ei-cosmic-black-rgb) / 0.15) 100%)' }} />
+      <div style={{ position: 'absolute', top: '46%', left: 0, right: 0, height: '12%', background: 'linear-gradient(180deg, transparent 0%, rgb(var(--ei-void-black-rgb) / 0.10) 50%, transparent 100%)', filter: 'blur(18px)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 72% at 50% 48%, transparent 40%, rgb(var(--ei-void-black-rgb) / 0.10) 72%, rgb(var(--ei-void-black-rgb) / 0.15) 100%)' }} />
       <GrainOverlay range={[0.016, 0.040]} duration={28} delay={5} size={180} />
     </div>
   );
@@ -273,17 +273,17 @@ function FragmentsAtmosphere() {
 function BecomingAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 28%, rgb(var(--ei-cosmic-black-rgb) / 0.10) 100%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 28%, rgb(var(--ei-void-black-rgb) / 0.10) 100%)' }} />
       <AtmosphericBloom
         size="clamp(640px, 92vw, 1240px)"
-        gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-ion-violet-rgb) / 0.092) 0%, rgb(var(--ei-void-plum-rgb) / 0.036) 48%, transparent 72%)"
+        gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.092) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.036) 48%, transparent 72%)"
         blur={70}
         anim={{ opacity: [0.60, 1, 0.60], scale: [1, 1.024, 1] }}
         duration={30}
       />
       <GlowField
         style={{ bottom: '-8%', left: '-15%', right: '-15%', height: 'clamp(320px, 44vw, 640px)' }}
-        gradient="radial-gradient(ellipse 88% 48% at 50% 82%, rgb(var(--ei-ion-violet-rgb) / 0.075) 0%, rgb(var(--ei-void-plum-rgb) / 0.030) 50%, transparent 74%)"
+        gradient="radial-gradient(ellipse 88% 48% at 50% 82%, rgb(var(--ei-luxe-violet-rgb) / 0.075) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.030) 50%, transparent 74%)"
         blur={68}
         anim={{ opacity: [0.50, 0.82, 0.50] }}
         duration={38} delay={8}
@@ -292,9 +292,9 @@ function BecomingAtmosphere() {
         style={{ top: '50%', left: '50%', width: 'clamp(380px, 54vw, 760px)', height: 'clamp(380px, 54vw, 760px)', transform: 'translate(-50%, -50%)', transformOrigin: 'center center' }}
         viewBox="0 0 600 600"
         rings={[
-          { cx: 300, cy: 300, rx: 268, ry: 268, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.042)', sw: 0.8 },
-          { cx: 300, cy: 300, rx: 210, ry: 210, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.032)', sw: 0.6 },
-          { cx: 300, cy: 300, rx: 152, ry: 152, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.024)', sw: 0.5 },
+          { cx: 300, cy: 300, rx: 268, ry: 268, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.042)', sw: 0.8 },
+          { cx: 300, cy: 300, rx: 210, ry: 210, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.032)', sw: 0.6 },
+          { cx: 300, cy: 300, rx: 152, ry: 152, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.024)', sw: 0.5 },
         ]}
         anim={{ opacity: [0.48, 0.88, 0.48], scale: [0.974, 1.022, 0.974] }}
         duration={36} delay={5}
@@ -307,17 +307,17 @@ function BecomingAtmosphere() {
 function HeldAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgb(var(--ei-void-plum-rgb) / 0.28) 0%, transparent 62%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgb(var(--ei-deep-indigo-rgb) / 0.28) 0%, transparent 62%)' }} />
       <GlowField
         style={{ top: '-2%', left: '-8%', width: 'clamp(500px, 65vw, 880px)', height: 'clamp(500px, 65vw, 880px)' }}
-        gradient="radial-gradient(ellipse 52% 50% at 44% 46%, rgb(var(--ei-ion-violet-rgb) / 0.068) 0%, rgb(var(--ei-void-plum-rgb) / 0.028) 50%, transparent 72%)"
+        gradient="radial-gradient(ellipse 52% 50% at 44% 46%, rgb(var(--ei-luxe-violet-rgb) / 0.068) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.028) 50%, transparent 72%)"
         blur={75}
         anim={{ opacity: [0.65, 1, 0.65] }}
         duration={38}
       />
       <GlowField
         style={{ top: '20%', left: '5%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 48% 50%, rgb(var(--ei-void-plum-rgb) / 0.048) 0%, rgb(var(--ei-void-plum-rgb) / 0.018) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 48% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.048) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.018) 52%, transparent 72%)"
         blur={62}
         anim={{ opacity: [0.55, 0.85, 0.55] }}
         duration={40} delay={12}
@@ -325,7 +325,7 @@ function HeldAtmosphere() {
       <EchoRing
         style={{ inset: 0 }}
         viewBox="0 0 1000 800"
-        rings={[{ cx: 360, cy: 360, rx: 310, ry: 288, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.7 }]}
+        rings={[{ cx: 360, cy: 360, rx: 310, ry: 288, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.7 }]}
         blur={2}
         preserveAspect
       />
@@ -340,7 +340,7 @@ function ExhaleAtmosphere() {
       <div style={{ position: 'absolute', top: '50%', left: '50%', width: 'clamp(480px, 65vw, 860px)', height: 'clamp(480px, 65vw, 860px)', transform: 'translate(-50%, -55%)' }}>
         <GlowField
           style={{ inset: 0 }}
-          gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-ion-violet-rgb) / 0.075) 0%, rgb(var(--ei-void-plum-rgb) / 0.030) 48%, transparent 72%)"
+          gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.075) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.030) 48%, transparent 72%)"
           blur={90}
           anim={{ opacity: [0.58, 0.92, 0.58] }}
           duration={40}
@@ -349,13 +349,13 @@ function ExhaleAtmosphere() {
       <VerticalBeam
         left="calc(50% - 50px)"
         width={100}
-        gradient="linear-gradient(180deg, transparent 0%, rgb(var(--ei-ion-violet-rgb) / 0.052) 22%, rgb(var(--ei-ion-violet-rgb) / 0.088) 50%, rgb(var(--ei-ion-violet-rgb) / 0.052) 78%, transparent 100%)"
+        gradient="linear-gradient(180deg, transparent 0%, rgb(var(--ei-luxe-violet-rgb) / 0.052) 22%, rgb(var(--ei-luxe-violet-rgb) / 0.088) 50%, rgb(var(--ei-luxe-violet-rgb) / 0.052) 78%, transparent 100%)"
         blur={40}
       />
       <EchoRing
         style={{ inset: 0 }}
         viewBox="0 0 1000 600"
-        rings={[{ cx: 500, cy: 288, rx: 300, ry: 220, stroke: 'rgb(var(--ei-stellar-lilac-rgb) / 0.040)', sw: 0.6 }]}
+        rings={[{ cx: 500, cy: 288, rx: 300, ry: 220, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.6 }]}
         blur={1}
         preserveAspect
       />
@@ -424,7 +424,7 @@ export function SignatureCaseStudy() {
       {/* Global film-grain layer */}
       <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: GRAIN, backgroundRepeat: 'repeat', backgroundSize: '200px 200px', opacity: 0.02, mixBlendMode: 'overlay', zIndex: 10 }} />
       {/* Header ambient bloom — violet, upper right */}
-      <div className="absolute pointer-events-none" style={{ top: '-8%', right: '-10%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)', background: 'radial-gradient(ellipse 60% 60% at 64% 36%, rgb(var(--ei-ion-violet-rgb) / 0.055) 0%, transparent 70%)', filter: 'blur(60px)' }} />
+      <div className="absolute pointer-events-none" style={{ top: '-8%', right: '-10%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)', background: 'radial-gradient(ellipse 60% 60% at 64% 36%, rgb(var(--ei-luxe-violet-rgb) / 0.055) 0%, transparent 70%)', filter: 'blur(60px)' }} />
 
       {/* ── SECTION HEADER ──────────────────────────────────────────── */}
       <div className="ei-container py-16 md:py-28">
@@ -438,7 +438,7 @@ export function SignatureCaseStudy() {
           </motion.span>
           <motion.h2
             {...headFade(0.15)}
-            className="font-editorial text-[2rem] md:text-[3rem] lg:text-[3.8rem] text-[var(--ei-stellar-lilac)]/85 leading-[1.18] mb-6"
+            className="font-editorial text-[2rem] md:text-[3rem] lg:text-[3.8rem] text-[var(--ei-soft-lavender)]/85 leading-[1.18] mb-6"
             style={{ letterSpacing: '-0.015em' }}
           >
             LUMO — A World Built
@@ -471,7 +471,7 @@ export function SignatureCaseStudy() {
             </motion.span>
             <motion.p
               {...headFade(0.12)}
-              className="font-editorial text-[1.35rem] md:text-[1.75rem] text-[var(--ei-stellar-lilac)]/80 leading-[1.4] mb-8"
+              className="font-editorial text-[1.35rem] md:text-[1.75rem] text-[var(--ei-soft-lavender)]/80 leading-[1.4] mb-8"
               style={{ letterSpacing: '-0.01em' }}
             >
               LUMO began not with a brief but with a feeling — something between
@@ -515,7 +515,7 @@ export function SignatureCaseStudy() {
           <div>
             <motion.p
               {...fade(0.08)}
-              className="font-editorial text-[1.2rem] md:text-[1.45rem] text-[var(--ei-stellar-lilac)]/70 leading-[1.52] mb-6"
+              className="font-editorial text-[1.2rem] md:text-[1.45rem] text-[var(--ei-soft-lavender)]/70 leading-[1.52] mb-6"
               style={{ letterSpacing: '-0.006em' }}
             >
               In the early discovery phase, we found a user base that wasn't looking
@@ -608,11 +608,11 @@ export function SignatureCaseStudy() {
             {/* Pull-quote — cinematic isolation */}
             <motion.blockquote
               {...headFade(0.1)}
-              className="text-center font-editorial text-[1.55rem] md:text-[2.1rem] lg:text-[2.5rem] text-[var(--ei-stellar-lilac)]/65 leading-[1.38] mt-16 md:mt-24 pt-12 md:pt-16"
+              className="text-center font-editorial text-[1.55rem] md:text-[2.1rem] lg:text-[2.5rem] text-[var(--ei-soft-lavender)]/65 leading-[1.38] mt-16 md:mt-24 pt-12 md:pt-16"
               style={{
                 letterSpacing: '-0.012em',
                 fontStyle: 'italic',
-                borderTop: '1px solid rgb(var(--ei-photon-white-rgb) / 0.05)',
+                borderTop: '1px solid rgb(var(--ei-ice-white-rgb) / 0.05)',
               }}
             >
               "Design as emotional architecture."
@@ -642,13 +642,13 @@ export function SignatureCaseStudy() {
               key={card.title}
               {...fade(0.07 * i)}
               className="pt-7"
-              style={{ borderTop: '1px solid rgb(var(--ei-photon-white-rgb) / 0.07)' }}
+              style={{ borderTop: '1px solid rgb(var(--ei-ice-white-rgb) / 0.07)' }}
             >
               <span className="block font-structural text-[9px] tracking-[0.28em] uppercase text-white/40 mb-5">
                 0{i + 1}
               </span>
               <h3
-                className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.24] mb-6"
+                className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-soft-lavender)]/75 leading-[1.24] mb-6"
                 style={{ letterSpacing: '-0.006em' }}
               >
                 {card.title}
@@ -669,11 +669,11 @@ export function SignatureCaseStudy() {
 
         <motion.p
           {...envFade(0.2)}
-          className="font-editorial text-[1.15rem] md:text-[1.35rem] text-[var(--ei-stellar-lilac)]/55 leading-[1.5] pt-14 md:pt-20"
+          className="font-editorial text-[1.15rem] md:text-[1.35rem] text-[var(--ei-soft-lavender)]/55 leading-[1.5] pt-14 md:pt-20"
           style={{
             letterSpacing: '-0.005em',
             fontStyle: 'italic',
-            borderTop: '1px solid rgb(var(--ei-photon-white-rgb) / 0.05)',
+            borderTop: '1px solid rgb(var(--ei-ice-white-rgb) / 0.05)',
           }}
         >
           This wasn't a feature set. It was a feeling set.
@@ -703,7 +703,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[0].title} tint="violet" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-soft-lavender)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[0].title}
@@ -717,7 +717,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[2/3]" label={snapshots[1].title} tint="aqua" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-soft-lavender)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[1].title}
@@ -734,7 +734,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[3/4]" label={snapshots[2].title} tint="pink" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-soft-lavender)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[2].title}
@@ -748,7 +748,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[3].title} tint="neutral" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-soft-lavender)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[3].title}
@@ -765,7 +765,7 @@ export function SignatureCaseStudy() {
       {/* ── 06 — THE TRANSFORMATION ─────────────────────────────────── */}
       <section
         className="relative overflow-hidden py-24 md:py-48"
-        style={{ background: 'linear-gradient(180deg, var(--ei-cosmic-black) 0%, var(--ei-deep-nebula) 50%, var(--ei-cosmic-black) 100%)' }}
+        style={{ background: 'linear-gradient(180deg, var(--ei-void-black) 0%, var(--ei-deep-indigo) 50%, var(--ei-void-black) 100%)' }}
       >
         <BecomingAtmosphere />
         <div className="ei-container">
@@ -793,7 +793,7 @@ export function SignatureCaseStudy() {
               <motion.li
                 key={item}
                 variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 2.2, ease: EASE } } }}
-                className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[var(--ei-stellar-lilac)]/60 leading-[1.35]"
+                className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[var(--ei-soft-lavender)]/60 leading-[1.35]"
                 style={{ letterSpacing: '-0.008em' }}
               >
                 {item}
@@ -845,11 +845,11 @@ export function SignatureCaseStudy() {
 
           <motion.p
             {...envFade(0.2)}
-            className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[var(--ei-stellar-lilac)]/75 leading-[1.38] pt-14 md:pt-20"
+            className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[var(--ei-soft-lavender)]/75 leading-[1.38] pt-14 md:pt-20"
             style={{
               letterSpacing: '-0.008em',
               fontStyle: 'italic',
-              borderTop: '1px solid rgb(var(--ei-photon-white-rgb) / 0.06)',
+              borderTop: '1px solid rgb(var(--ei-ice-white-rgb) / 0.06)',
             }}
           >
             The product didn't just work. It held people.
@@ -861,7 +861,7 @@ export function SignatureCaseStudy() {
       {/* ── 08 — THE ECHO IN INK SIGNATURE ──────────────────────────── */}
       <section
         className="relative py-24 md:py-40 text-center overflow-hidden"
-        style={{ background: 'linear-gradient(180deg, var(--ei-cosmic-black) 0%, var(--ei-deep-nebula) 45%, var(--ei-cosmic-black) 100%)' }}
+        style={{ background: 'linear-gradient(180deg, var(--ei-void-black) 0%, var(--ei-deep-indigo) 45%, var(--ei-void-black) 100%)' }}
       >
         <ExhaleAtmosphere />
         <div className="ei-container max-w-xl mx-auto">
@@ -874,7 +874,7 @@ export function SignatureCaseStudy() {
 
           <motion.p
             {...headFade(0.2)}
-            className="font-editorial text-[1.3rem] md:text-[1.7rem] text-[var(--ei-stellar-lilac)]/70 leading-[1.52] mb-7"
+            className="font-editorial text-[1.3rem] md:text-[1.7rem] text-[var(--ei-soft-lavender)]/70 leading-[1.52] mb-7"
             style={{ letterSpacing: '-0.01em' }}
           >
             LUMO was not a design project. It was an act of care.

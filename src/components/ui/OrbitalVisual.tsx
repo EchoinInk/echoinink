@@ -26,23 +26,23 @@ export function OrbitalVisual({
 }: OrbitalVisualProps) {
   const c = size / 2;
   const r = c - 4;
-  const photon = 'rgb(var(--ei-photon-white-rgb) / 0.88)';
-const photonSoft = 'rgb(var(--ei-photon-white-rgb) / 0.48)';
-const photonDim = 'rgb(var(--ei-photon-white-rgb) / 0.22)';
+  const photon = 'rgb(var(--ei-ice-white-rgb) / 0.88)';
+const photonSoft = 'rgb(var(--ei-ice-white-rgb) / 0.48)';
+const photonDim = 'rgb(var(--ei-ice-white-rgb) / 0.22)';
 
-const cobalt = 'rgb(var(--ei-electric-cobalt-rgb) / 0.92)';
-const cobaltSoft = 'rgb(var(--ei-electric-cobalt-rgb) / 0.52)';
-const cobaltDim = 'rgb(var(--ei-electric-cobalt-rgb) / 0.28)';
+const cobalt = 'rgb(var(--ei-aurora-blue-rgb) / 0.92)';
+const cobaltSoft = 'rgb(var(--ei-aurora-blue-rgb) / 0.52)';
+const cobaltDim = 'rgb(var(--ei-aurora-blue-rgb) / 0.28)';
 
-const orbitBlue = 'rgb(var(--ei-orbit-blue-rgb) / 0.72)';
-const orbitBlueSoft = 'rgb(var(--ei-orbit-blue-rgb) / 0.42)';
+const orbitBlue = 'rgb(var(--ei-deep-indigo-rgb) / 0.72)';
+const orbitBlueSoft = 'rgb(var(--ei-deep-indigo-rgb) / 0.42)';
 
-const violet = 'rgb(var(--ei-ion-violet-rgb) / 0.82)';
-const violetSoft = 'rgb(var(--ei-ion-violet-rgb) / 0.48)';
-const violetDim = 'rgb(var(--ei-ion-violet-rgb) / 0.24)';
+const violet = 'rgb(var(--ei-luxe-violet-rgb) / 0.82)';
+const violetSoft = 'rgb(var(--ei-luxe-violet-rgb) / 0.48)';
+const violetDim = 'rgb(var(--ei-luxe-violet-rgb) / 0.24)';
 
-const magenta = 'rgb(var(--ei-neon-magenta-rgb) / 0.78)';
-const magentaSoft = 'rgb(var(--ei-neon-magenta-rgb) / 0.42)';
+const magenta = 'rgb(var(--ei-orchid-pink-rgb) / 0.78)';
+const magentaSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.42)';
 const orchid = 'rgb(var(--ei-orchid-pink-rgb) / 0.72)';
 
  const icons: Record<OrbitalVariant, React.ReactElement> = {
@@ -259,11 +259,11 @@ const orchid = 'rgb(var(--ei-orchid-pink-rgb) / 0.72)';
 
           strokeWidth="0.6"
 
-          fill="rgb(var(--ei-ion-violet-rgb) / 0.09)"
+          fill="rgb(var(--ei-luxe-violet-rgb) / 0.09)"
 
         />
 
-        <circle cx={c} cy={c} r={5} fill="rgb(var(--ei-electric-cobalt-rgb) / 0.18)" />
+        <circle cx={c} cy={c} r={5} fill="rgb(var(--ei-aurora-blue-rgb) / 0.18)" />
 
         <circle cx={c} cy={c} r={2.5} fill={photon} />
 
@@ -385,7 +385,7 @@ const orchid = 'rgb(var(--ei-orchid-pink-rgb) / 0.72)';
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle, rgb(var(--ei-electric-cobalt-rgb) / 0.13) 0%, rgb(var(--ei-ion-violet-rgb) / 0.09) 42%, rgb(var(--ei-orchid-pink-rgb) / 0.05) 62%, transparent 72%)',
+            'radial-gradient(circle, rgb(var(--ei-aurora-blue-rgb) / 0.13) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.09) 42%, rgb(var(--ei-orchid-pink-rgb) / 0.05) 62%, transparent 72%)',
           filter: 'blur(7px)',
           borderRadius: '50%',
         }}
