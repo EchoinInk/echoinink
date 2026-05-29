@@ -2,8 +2,21 @@
   :root {
     /* ── EI Aurora Luxe Palette — Single Source of Truth ────────────────────────────────────────────── */
 
-    --ei-void-black: #05070D;
-    --ei-void-black-rgb: 5 7 13;
+  --ei-ink-navy: #121827;
+
+  --ei-slate-blue: #2E4A68;
+
+  --ei-soft-cyan: #8FCFE3;
+
+  --ei-muted-rose: #D98AB8;
+
+  --ei-dusty-violet: #8A7BB8;
+
+  --ei-cloud-lavender: #D9D7EA;
+
+  --ei-warm-white: #F6F3F8;
+    --ei-void-black: #070A12; /* Midnight black with depth and richness */
+    --ei-void-black-rgb: 7 10 18;
 
     --ei-deep-indigo: #11182E;
     --ei-deep-indigo-rgb: 17 24 46;
