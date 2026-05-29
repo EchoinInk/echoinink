@@ -55,6 +55,17 @@
     --ei-paper-white: var(--ei-ice-white);
     --ei-photon-white: var(--ei-ice-white);
 
+    /* ── Backwards-compat RGB aliases (map legacy -rgb names to new palette rgb tokens) ───────── */
+    --ei-cosmic-black-rgb: var(--ei-void-black-rgb);
+    --ei-deep-nebula-rgb: var(--ei-deep-indigo-rgb);
+    --ei-orbit-blue-rgb: var(--ei-deep-indigo-rgb);
+    --ei-void-plum-rgb: var(--ei-deep-indigo-rgb);
+    --ei-electric-cobalt-rgb: var(--ei-aurora-blue-rgb);
+    --ei-ion-violet-rgb: var(--ei-luxe-violet-rgb);
+    --ei-neon-magenta-rgb: var(--ei-orchid-pink-rgb);
+    --ei-stellar-lilac-rgb: var(--ei-soft-lavender-rgb);
+    --ei-photon-white-rgb: var(--ei-ice-white-rgb);
+
     /* ── Typography Contrast ─────────────────────────────────────────────────────────────────────── */
     --ei-text-primary: var(--ei-ice-white);
     --ei-text-secondary: rgb(var(--ei-ice-white-rgb) / 0.72);
