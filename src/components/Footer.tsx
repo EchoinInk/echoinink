@@ -173,10 +173,10 @@ export default function Footer() {
           />
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
             <span className="font-structural text-[10px] tracking-[0.1em] text-white/35">
-              © 2024 Echo in Ink
+              © 2025 Echo in Ink
             </span>
             <span className="font-structural text-[10px] tracking-[0.12em] uppercase text-white/25">
-              Founded MMXXV
+              Founded 2025
             </span>
           </div>
         </motion.div>
