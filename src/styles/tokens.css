@@ -2,13 +2,27 @@
   :root {
     /* ── EI Colour Brand Kit — Single Source of Truth ────────────────────────────────────────────── */
     /* Source: /docs/ei-colour-brand-kit/Digital/ei-colour-tokens.json */
+--ei-void-black: #05070D;
 
+  --ei-deep-indigo: #11182E;
+
+  --ei-aurora-blue: #43D9FF;
+
+  --ei-electric-cyan: #6AF6FF;
+
+  --ei-orchid-pink: #FF4FD8;
+
+  --ei-luxe-violet: #9A5CFF;
+
+  --ei-soft-lavender: #D8C7FF;
+
+  --ei-ice-white: #F7FBFF;
     /* ── Core Palette (Hex + RGB for opacity composition) ─────────────────────────────────────────── */
-    --ei-cosmic-black: #02030A;
-    --ei-cosmic-black-rgb: 2 3 10;
+    --ei-cosmic-black: #05070D;
+    --ei-cosmic-black-rgb: 5 7 13;
 
-    --ei-orbit-blue: #0B0E96;
-    --ei-orbit-blue-rgb: 11 14 150;
+    --ei-orbit-blue: #43D9FF;
+    --ei-orbit-blue-rgb: 67 217 255;
 
     --ei-deep-nebula: #070454;
     --ei-deep-nebula-rgb: 7 4 84;
