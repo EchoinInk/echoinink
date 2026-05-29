@@ -6,7 +6,6 @@ import { WhatWeCreate } from '@/components/WhatWeCreate';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/ClosingSection';
-import Footer from '@/components/Footer';
 
 export function Home() {
   return (
