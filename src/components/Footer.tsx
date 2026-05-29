@@ -66,7 +66,7 @@ export default function Footer() {
               <span className="font-structural text-[11px] tracking-[0.18em] uppercase text-white/75 block mb-3">
                 Echo in Ink
               </span>
-              <p className="font-structural text-[12px] leading-[1.7] text-white/45 max-w-[36ch] mb-4">
+              <p className="font-structural text-[12px] leading-[1.7] text-white/45 max-w-[30ch] mb-4">
                 Designing worlds that hold meaning, transform perception, and
                 outlive trends.
               </p>
