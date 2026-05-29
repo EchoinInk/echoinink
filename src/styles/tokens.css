@@ -2,10 +2,10 @@
   :root {
     /* ── EI Aurora Luxe Palette — Single Source of Truth ────────────────────────────────────────────── */
 
-    --ei-void-black: #070A12; /* Midnight black with depth and richness */
-    --ei-void-black-rgb: 7 10 18;
+    --ei-void-black: #101729; /* Midnight Navy - Website sections, app UI */
+    --ei-void-black-rgb: 16 23 41;
 
-    --ei-deep-indigo: #121827; /* Ink navy with a hint of cosmic depth */
+    --ei-deep-indigo: #263954; /* Ink navy with a hint of cosmic depth */
     --ei-deep-indigo-rgb: 18 24 39;
 
     --ei-electric-cyan: #8FCFE3; /* Soft cyan with a luminous, ethereal quality */
