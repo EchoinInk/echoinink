@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { Button } from '@/components/Button';
-
+import { CtaOrbitalBackground } from '@/components/ui/CTAOrbitalBackground';
 import {
 
   driftUp,
