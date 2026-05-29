@@ -139,7 +139,7 @@ export default function Footer() {
 
   <Link
     to="/systems"
-    className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-orchid-plasma)]/60 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-400"
+    className="group inline-flex items-center font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-orchid-plasma)]/60 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-400"
   >
     Learn more about our future systems
     <span className="group-hover:translate-x-0.5 transition-transform duration-400">
