@@ -11,18 +11,19 @@ import {
 
 export function ClosingSection() {
   return (
-    <section className="relative isolate min-h-[260px] overflow-hidden bg-[#05070D] py-12 md:py-16">
-      <CtaOrbitalBackground />
+<section className="relative isolate min-h-[300px] overflow-hidden bg-[#05070D] py-14 md:py-20">
+        <CtaOrbitalBackground />
 
       {/* Soft vignette so the text stays readable */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[1]"
-        style={{
-          background:
-            'radial-gradient(circle at center, transparent 0%, transparent 46%, rgba(5, 7, 13, 0.72) 100%)',
-        }}
-      />
+     <div
+  aria-hidden="true"
+  className="pointer-events-none absolute left-1/2 top-[46%] z-[1] h-[190px] w-[760px] max-w-[92vw] -translate-x-1/2 -translate-y-1/2 rounded-full"
+  style={{
+    background:
+      'radial-gradient(circle, rgba(5, 7, 13, 0.68) 0%, rgba(5, 7, 13, 0.38) 46%, transparent 76%)',
+    filter: 'blur(12px)',
+  }}
+/>
 
       {/* Subtle darkening behind the copy */}
       <div
