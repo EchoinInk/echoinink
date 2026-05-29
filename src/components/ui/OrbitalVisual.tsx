@@ -22,7 +22,16 @@ export type OrbitalVariant =
   | 'flare'
   | 'glyph'
   | 'archive'
-  | 'beacon';
+  | 'beacon'
+  | 'veil'
+  | 'ribbon'
+  | 'lens'
+  | 'lattice'
+  | 'hinge'
+  | 'spiral'
+  | 'monolith'
+  | 'pulse'
+  | 'ember';
 
 
 interface OrbitalVisualProps {
@@ -697,6 +706,223 @@ beacon: (
     />
     <circle cx={c} cy={10} r="2.5" fill={photon} />
     <circle cx={c} cy={30} r="1.8" fill={cobalt} />
+  </svg>
+),
+veil: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <path
+      d={`M12 ${c + 10} C20 ${c - 18}, 36 ${c - 20}, ${size - 12} ${c - 6}`}
+      stroke={cobaltSoft}
+      strokeWidth="0.9"
+      fill="none"
+    />
+    <path
+      d={`M14 ${c + 16} C24 ${c - 4}, 38 ${c - 8}, ${size - 14} ${c + 4}`}
+      stroke={violetSoft}
+      strokeWidth="0.6"
+      fill="none"
+    />
+    <path
+      d={`M18 ${c - 2} C28 ${c - 16}, 42 ${c - 14}, ${size - 18} ${c - 20}`}
+      stroke={magentaSoft}
+      strokeWidth="0.45"
+      fill="none"
+    />
+    <circle cx={12} cy={c + 10} r="1.8" fill={photonSoft} />
+    <circle cx={size - 12} cy={c - 6} r="2.2" fill={cobalt} />
+  </svg>
+),
+
+ribbon: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <path
+      d={`M12 ${c} C18 12, ${c + 8} 12, ${c} ${c} S${size - 18} ${size - 12}, ${size - 12} ${c}`}
+      stroke={cobaltSoft}
+      strokeWidth="0.9"
+      fill="none"
+    />
+    <path
+      d={`M16 ${c + 8} C24 20, ${c + 4} 20, ${c} ${c + 6} S${size - 24} ${size - 18}, ${size - 16} ${c + 8}`}
+      stroke={violetSoft}
+      strokeWidth="0.5"
+      fill="none"
+    />
+    <circle cx={c} cy={c} r="2" fill={photon} />
+    <circle cx={size - 12} cy={c} r="2" fill={magenta} />
+  </svg>
+),
+
+lens: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <ellipse
+      cx={c}
+      cy={c}
+      rx={r - 7}
+      ry={r - 18}
+      stroke={cobaltSoft}
+      strokeWidth="0.7"
+      transform={`rotate(-28 ${c} ${c})`}
+    />
+    <ellipse
+      cx={c}
+      cy={c}
+      rx={r - 12}
+      ry={r - 22}
+      stroke={violetSoft}
+      strokeWidth="0.5"
+      transform={`rotate(28 ${c} ${c})`}
+    />
+    <path
+      d={`M14 ${c} H${size - 14}`}
+      stroke={photonDim}
+      strokeWidth="0.5"
+    />
+    <circle cx={c} cy={c} r="2.2" fill={cobalt} />
+    <circle cx={c + 10} cy={c - 10} r="1.5" fill={photonSoft} />
+  </svg>
+),
+
+lattice: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <path
+      d={`M16 16 L${size - 16} 24 L${size - 24} ${size - 16} L24 ${size - 24} Z`}
+      stroke={violetSoft}
+      strokeWidth="0.7"
+    />
+    <path
+      d={`M16 16 L${size - 24} ${size - 16}`}
+      stroke={photonDim}
+      strokeWidth="0.5"
+    />
+    <path
+      d={`M${size - 16} 24 L24 ${size - 24}`}
+      stroke={cobaltSoft}
+      strokeWidth="0.7"
+    />
+    <path
+      d={`M${c} 12 V${size - 12}`}
+      stroke={magentaSoft}
+      strokeWidth="0.45"
+    />
+    <circle cx={16} cy={16} r="1.8" fill={photonSoft} />
+    <circle cx={size - 16} cy={24} r="2" fill={cobalt} />
+    <circle cx={c} cy={c} r="1.8" fill={photon} />
+  </svg>
+),
+
+hinge: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <path
+      d={`M14 16 H${c} V${size - 14}`}
+      stroke={cobaltSoft}
+      strokeWidth="0.8"
+    />
+    <path
+      d={`M${c} ${c} H${size - 12} V18`}
+      stroke={violetSoft}
+      strokeWidth="0.8"
+    />
+    <path
+      d={`M${c} 16 V${c}`}
+      stroke={photonDim}
+      strokeWidth="0.5"
+    />
+    <path
+      d={`M${c} ${c} L${size - 12} ${size - 12}`}
+      stroke={magentaSoft}
+      strokeWidth="0.5"
+    />
+    <circle cx={c} cy={c} r="2.4" fill={photon} />
+    <circle cx={size - 12} cy={18} r="1.8" fill={cobalt} />
+  </svg>
+),
+
+spiral: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <path
+      d={`M${size - 12} ${c} C${size - 14} 16, 18 16, 18 ${c} C18 ${size - 12}, ${size - 16} ${size - 12}, ${size - 16} ${c + 4} C${size - 16} 26, 28 26, 28 ${c} C28 ${c + 10}, ${c + 8} ${c + 10}, ${c + 8} ${c}`}
+      stroke={cobaltSoft}
+      strokeWidth="0.9"
+      fill="none"
+    />
+    <path
+      d={`M${size - 16} ${c + 8} C${size - 22} ${size - 6}, 14 ${size - 8}, 14 ${c}`}
+      stroke={violetSoft}
+      strokeWidth="0.45"
+      fill="none"
+    />
+    <circle cx={c + 8} cy={c} r="2" fill={cobalt} />
+    <circle cx={size - 12} cy={c} r="1.8" fill={photonSoft} />
+  </svg>
+),
+
+monolith: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <path
+      d={`M${c - 10} 12 L${c + 10} 18 L${c + 8} ${size - 12} L${c - 12} ${size - 18} Z`}
+      stroke={violetSoft}
+      strokeWidth="0.8"
+    />
+    <path
+      d={`M${c + 10} 18 L${c + 8} ${size - 12}`}
+      stroke={cobaltSoft}
+      strokeWidth="0.7"
+    />
+    <path
+      d={`M${c - 10} 12 L${c - 12} ${size - 18}`}
+      stroke={photonDim}
+      strokeWidth="0.5"
+    />
+    <path
+      d={`M${c - 12} ${size - 18} L${c + 8} ${size - 12}`}
+      stroke={magentaSoft}
+      strokeWidth="0.5"
+    />
+    <circle cx={c} cy={18} r="2" fill={photon} />
+  </svg>
+),
+
+pulse: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <path
+      d={`M10 ${c} H22 L28 ${c - 12} L36 ${c + 12} L42 ${c} H${size - 10}`}
+      stroke={cobaltSoft}
+      strokeWidth="0.9"
+      fill="none"
+    />
+    <path
+      d={`M12 ${c + 10} H24 L30 ${c + 2} L36 ${c + 14} L44 ${c + 6} H${size - 12}`}
+      stroke={violetSoft}
+      strokeWidth="0.5"
+      fill="none"
+    />
+    <circle cx={10} cy={c} r="1.8" fill={photonSoft} />
+    <circle cx={size - 10} cy={c} r="2" fill={cobalt} />
+  </svg>
+),
+
+ember: (
+  <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} fill="none">
+    <path
+      d={`M${c} 10 C${size - 8} 24, ${size - 18} ${size - 8}, ${c} ${size - 10} C14 ${size - 18}, 10 28, ${c} 10 Z`}
+      stroke={magentaSoft}
+      strokeWidth="0.7"
+      fill="rgb(var(--ei-orchid-pink-rgb) / 0.035)"
+    />
+    <path
+      d={`M${c} 18 C${size - 16} 28, ${size - 24} ${size - 18}, ${c} ${size - 16} C22 ${size - 22}, 20 32, ${c} 18 Z`}
+      stroke={violetSoft}
+      strokeWidth="0.6"
+      fill="none"
+    />
+    <path
+      d={`M${c} 26 C${c + 8} 34, ${c + 6} 44, ${c} ${size - 18}`}
+      stroke={cobaltSoft}
+      strokeWidth="0.7"
+      fill="none"
+    />
+    <circle cx={c} cy={size - 18} r="2.2" fill={cobalt} />
+    <circle cx={c} cy={10} r="1.8" fill={photon} />
   </svg>
 ),
 
