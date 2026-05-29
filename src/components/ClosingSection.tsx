@@ -11,8 +11,7 @@ import {
 
 export function ClosingSection() {
   return (
-    <section className="relative isolate overflow-hidden bg-[rgb(var(--ei-cosmic-black-rgb))] py-10 md:py-20">
-      <CtaOrbitalBackground />
+<section className="relative isolate min-h-[320px] overflow-hidden bg-[#05070D] py-16 md:py-24">      <CtaOrbitalBackground />
 
       {/* Soft vignette so the text stays readable */}
       <div
