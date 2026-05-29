@@ -11,7 +11,8 @@ import {
 
 export function ClosingSection() {
   return (
-<section className="relative isolate min-h-[320px] overflow-hidden bg-[#05070D] py-16 md:py-24">      <CtaOrbitalBackground />
+    <section className="relative isolate min-h-[260px] overflow-hidden bg-[#05070D] py-12 md:py-16">
+      <CtaOrbitalBackground />
 
       {/* Soft vignette so the text stays readable */}
       <div
@@ -19,12 +20,23 @@ export function ClosingSection() {
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
-            'radial-gradient(circle at center, transparent 0%, transparent 42%, rgb(var(--ei-cosmic-black-rgb) / 0.55) 100%)',
+            'radial-gradient(circle at center, transparent 0%, transparent 46%, rgba(5, 7, 13, 0.72) 100%)',
+        }}
+      />
+
+      {/* Subtle darkening behind the copy */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-1/2 z-[1] h-[220px] w-[680px] max-w-[90vw] -translate-x-1/2 -translate-y-1/2 rounded-full"
+        style={{
+          background:
+            'radial-gradient(circle, rgba(5, 7, 13, 0.48) 0%, rgba(5, 7, 13, 0.22) 45%, transparent 72%)',
+          filter: 'blur(10px)',
         }}
       />
 
       <motion.div
-        className="relative z-10 max-w-3xl mx-auto px-6 text-center"
+        className="relative z-10 mx-auto max-w-3xl px-6 text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: '-50px' }}
@@ -35,7 +47,7 @@ export function ClosingSection() {
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
-          className="font-structural text-[10px] tracking-[0.28em] uppercase text-white/45 block mb-3 md:mb-4"
+          className="font-structural mb-3 block text-[10px] uppercase tracking-[0.28em] text-white/45 md:mb-4"
         >
           Begin
         </motion.span>
@@ -45,8 +57,12 @@ export function ClosingSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.05 }}
-          className="font-editorial text-[2.1rem] md:text-[1.8rem] lg:text-[2.2rem] text-[var(--ei-stellar-lilac)] leading-[1.24] mb-3 md:mb-4"
+          transition={{
+            duration: DURATION.slow,
+            ease: EASE_LUXURY,
+            delay: 0.05,
+          }}
+          className="font-editorial mb-3 text-[2.1rem] leading-[1.24] text-[var(--ei-stellar-lilac)] md:mb-4 md:text-[1.8rem] lg:text-[2.2rem]"
           style={{ letterSpacing: '-0.01em' }}
         >
           Ready to translate your world?
@@ -57,8 +73,12 @@ export function ClosingSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.1 }}
-          className="font-structural text-[15px] md:text-[16px] text-white/60 leading-[1.85] max-w-[40ch] mx-auto mb-6 md:mb-8"
+          transition={{
+            duration: DURATION.slow,
+            ease: EASE_LUXURY,
+            delay: 0.1,
+          }}
+          className="font-structural mx-auto mb-6 max-w-[40ch] text-[15px] leading-[1.85] text-white/60 md:mb-8 md:text-[16px]"
         >
           Let&apos;s build something meaningful, atmospheric, and unforgettable.
         </motion.p>
@@ -67,7 +87,11 @@ export function ClosingSection() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.15 }}
+          transition={{
+            duration: DURATION.slow,
+            ease: EASE_LUXURY,
+            delay: 0.15,
+          }}
         >
           <Button to="/contact" variant="primary">
             Start a Conversation
