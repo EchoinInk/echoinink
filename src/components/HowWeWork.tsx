@@ -19,7 +19,7 @@ const phases = [
   {
     label: 'Strategic Foundation',
     description: 'Understanding the inner terrain. What truth wants to emerge.',
-  },
+          background: 'radial-gradient(ellipse 45% 50% at 30% 40%, rgb(var(--ei-deep-indigo-rgb) / 0.04) 0%, transparent 55%)',
   {
     label: 'Identity System',
     description: 'Translating meaning into form. Visual, narrative, and emotional coherence.',
@@ -27,7 +27,7 @@ const phases = [
   {
     label: 'Digital Experience',
     description: 'Building the environment where the identity lives and breathes.',
-  },
+          background: 'radial-gradient(ellipse 60% 40% at 70% 60%, rgb(var(--ei-luxe-violet-rgb) / 0.03) 0%, transparent 50%)',
   {
     label: 'Atmospheric Launch',
     description: 'Release into the world with quiet confidence and lasting resonance.',
@@ -35,7 +35,7 @@ const phases = [
 ];
 
 export function HowWeWork() {
-  return (
+          background: 'linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / 0.035) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.015) 30%, transparent 70%)',
     <Section spacing="sm" className="relative overflow-hidden">
       {/* ═══════════════════════════════════════════════════════════════
           ATMOSPHERIC LAYERS — Ceremonial depth
@@ -70,7 +70,7 @@ export function HowWeWork() {
       />
 
       <Container className="relative z-10">
-        <motion.div
+                background: 'linear-gradient(to bottom, rgb(var(--ei-luxe-violet-rgb) / 0.15) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.2) 20%, rgb(var(--ei-luxe-violet-rgb) / 0.2) 50%, rgb(var(--ei-deep-indigo-rgb) / 0.2) 80%, rgb(var(--ei-luxe-violet-rgb) / 0.15) 100%)',
           variants={staggerContainer(STAGGER.loose, 0)}
           initial="hidden"
           whileInView="visible"
@@ -91,7 +91,7 @@ export function HowWeWork() {
               CEREMONIAL PHASE SEQUENCE — Ritualistic journey
               Vertical illuminated timeline, geometric markers, sacred spacing
               ═══════════════════════════════════════════════════════════════ */}
-          <div className="space-y-0 relative">
+                      background: 'linear-gradient(to bottom, rgb(var(--ei-luxe-violet-rgb) / 0.12) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.06) 50%, rgb(var(--ei-luxe-violet-rgb) / 0.03) 100%)',
             {/* Illuminated timeline — the sacred path */}
             <motion.div
               className="absolute left-6 md:left-8 top-0 bottom-0 w-[2px] pointer-events-none hidden md:block"
@@ -103,7 +103,7 @@ export function HowWeWork() {
                 background: 'linear-gradient(to bottom, rgb(var(--ei-ion-violet-rgb) / 0.15) 0%, rgb(var(--ei-orbit-blue-rgb) / 0.2) 20%, rgb(var(--ei-ion-violet-rgb) / 0.2) 50%, rgb(var(--ei-orbit-blue-rgb) / 0.2) 80%, rgb(var(--ei-ion-violet-rgb) / 0.15) 100%)',
                 transformOrigin: 'top',
                 filter: 'blur(0.5px)',
-              }}
+                        background: 'radial-gradient(circle, rgb(var(--ei-luxe-violet-rgb) / 0.15) 0%, transparent 70%)',
             />
 
             {phases.map((phase, i) => (
@@ -112,9 +112,9 @@ export function HowWeWork() {
                 variants={driftUp}
                 className="group relative"
               >
-                {/* Phase connector — atmospheric bridge to next phase */}
+                        background: 'linear-gradient(135deg, rgb(var(--ei-luxe-violet-rgb) / 0.8) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.6) 100%)',
                 {i < phases.length - 1 && (
-                  <motion.div
+                        boxShadow: '0 0 12px rgb(var(--ei-luxe-violet-rgb) / 0.3)',
                     className="absolute left-6 md:left-8 top-[5rem] md:top-[5.5rem] w-[2px] h-[calc(100%-4rem)] pointer-events-none hidden md:block"
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -146,7 +146,7 @@ export function HowWeWork() {
                         transform: 'rotate(45deg)',
                         boxShadow: '0 0 12px rgb(var(--ei-ion-violet-rgb) / 0.3)',
                       }}
-                    />
+                      background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-luxe-violet-rgb) / 0.08) 20%, rgb(var(--ei-deep-indigo-rgb) / 0.06) 50%, rgb(var(--ei-luxe-violet-rgb) / 0.08) 80%, transparent 100%)',
 
                     {/* Phase number — ceremonial typography */}
                     <span className="font-structural text-[10px] tracking-[0.2em] uppercase text-white/45 group-hover:text-white/52 transition-colors duration-500 mt-2 md:mt-3">
@@ -159,7 +159,7 @@ export function HowWeWork() {
                     {/* Phase label — ritualistic presence */}
                     <h3 className="font-structural text-[13px] md:text-[14px] tracking-[0.08em] uppercase text-white/72 group-hover:text-white/90 transition-colors duration-500">
                       {phase.label}
-                    </h3>
+              background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-luxe-violet-rgb) / 0.08) 30%, rgb(var(--ei-deep-indigo-rgb) / 0.08) 70%, transparent 100%)',
                     {/* Phase description — ceremonial clarity */}
                     <p className="font-structural text-[13px] md:text-[14px] leading-[1.6] md:leading-[1.75] text-white/60 group-hover:text-white/72 transition-colors duration-500 max-w-[44ch]">
                       {phase.description}

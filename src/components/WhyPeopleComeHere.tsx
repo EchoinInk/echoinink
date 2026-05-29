@@ -30,8 +30,8 @@ export function WhyPeopleComeHere() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background:
-            'radial-gradient(ellipse 40% 50% at 50% 50%, rgb(var(--ei-ion-violet-rgb) / 0.025) 0%, transparent 60%)',
+            background:
+              'radial-gradient(ellipse 40% 50% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.025) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -57,8 +57,8 @@ export function WhyPeopleComeHere() {
             variants={blurEmergence}
             className="w-full h-px mb-8"
             style={{
-              background:
-                'linear-gradient(90deg, transparent 0%, rgb(var(--ei-photon-white-rgb) / 0.06) 20%, rgb(var(--ei-ion-violet-rgb) / 0.12) 50%, rgb(var(--ei-photon-white-rgb) / 0.06) 80%, transparent 100%)',
+                background:
+                  'linear-gradient(90deg, transparent 0%, rgb(var(--ei-ice-white-rgb) / 0.06) 20%, rgb(var(--ei-luxe-violet-rgb) / 0.12) 50%, rgb(var(--ei-ice-white-rgb) / 0.06) 80%, transparent 100%)',
             }}
           />
 
@@ -84,8 +84,8 @@ export function WhyPeopleComeHere() {
             variants={blurEmergence}
             className="w-full h-px mt-8"
             style={{
-              background:
-                'linear-gradient(90deg, transparent 0%, rgb(var(--ei-photon-white-rgb) / 0.06) 20%, rgb(var(--ei-ion-violet-rgb) / 0.12) 50%, rgb(var(--ei-photon-white-rgb) / 0.06) 80%, transparent 100%)',
+                background:
+                  'linear-gradient(90deg, transparent 0%, rgb(var(--ei-ice-white-rgb) / 0.06) 20%, rgb(var(--ei-luxe-violet-rgb) / 0.12) 50%, rgb(var(--ei-ice-white-rgb) / 0.06) 80%, transparent 100%)',
             }}
           />
         </motion.div>
