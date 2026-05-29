@@ -13,19 +13,19 @@ const capabilities = [
     href: '/identity',
   },
   {
-    variant: 'echo' as const,
+    variant: 'lens' as const,
     title: 'Digital Experiences',
     description: 'Immersive websites and interfaces that feel like entering a world.',
     href: '/worlds',
   },
   {
-    variant: 'pathway' as const,
+    variant: 'ribbon' as const,
     title: 'Narrative Architecture',
     description: 'Story systems that bring coherence, clarity, and transformational depth.',
     href: '/sessions',
   },
   {
-    variant: 'fold' as const,
+    variant: 'veil' as const,
     title: 'Creative Direction',
     description: 'Atmospheric direction that aligns every detail with the bigger vision.',
     href: '/works',
