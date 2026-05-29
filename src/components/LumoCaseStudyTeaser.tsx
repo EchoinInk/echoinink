@@ -61,7 +61,7 @@ export function LumoCaseStudyTeaser() {
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="mx-auto max-w-[1320px]"
+          className="max-w-6xl mx-auto"
         >
           {/* Section eyebrow */}
           <motion.div
