@@ -2,8 +2,8 @@
   :root {
     /* ── EI Aurora Luxe Palette — Single Source of Truth ────────────────────────────────────────────── */
 
-    --ei-void-black: #101729; /* Midnight Navy - Website sections, app UI */
-    --ei-void-black-rgb: 16 23 41;
+    --ei-void-black: #060812; /* Midnight Navy - Website sections, app UI */
+    --ei-void-black-rgb: 6 8 18;
 
     --ei-deep-indigo: #101729; /* Steel Indigo - Cards, outlines, secondary blocks */
     --ei-deep-indigo-rgb: 38 57 84;
