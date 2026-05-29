@@ -30,23 +30,23 @@
     --ei-orchid-pink: #FF4FD8;
     --ei-orchid-pink-rgb: 255 79 216;
 
-    --ei-electric-cobalt: #1336E7;
-    --ei-electric-cobalt-rgb: 19 54 231;
+    --ei-electric-cobalt: #6AF6FF;
+    --ei-electric-cobalt-rgb: 106 246 255;
 
     --ei-ion-violet: #9A5CFF;
     --ei-ion-violet-rgb: 154 92 255;
 
-    --ei-void-plum: #45045D;
-    --ei-void-plum-rgb: 69 4 93;
+    --ei-void-plum: #11182E;
+    --ei-void-plum-rgb: 17 24 46;
 
     --ei-stellar-lilac: #D8C7FF;
-    --ei-stellar-lilac-rgb: 203 185 251;
+    --ei-stellar-lilac-rgb: 216 199 255;
 
     --ei-neon-magenta: #C23BE5;
     --ei-neon-magenta-rgb: 194 59 229;
 
-    --ei-photon-white: #F7F2FF;
-    --ei-photon-white-rgb: 247 242 255;
+    --ei-photon-white: #F7FBFF;
+    --ei-photon-white-rgb: 247 251 255;
 
     /* ── Backwards Compat Aliases (mapped to new EI tokens) ───────────────────────────────────────── */
     --ei-void: var(--ei-cosmic-black);
