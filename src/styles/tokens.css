@@ -8,13 +8,13 @@
     --ei-deep-indigo: #263954; /* Steel Indigo - Cards, outlines, secondary blocks */
     --ei-deep-indigo-rgb: 38 57 84;
 
-    --ei-electric-cyan: #63CBE3; /* Refined cyan with a luminous, ethereal quality */
+    --ei-electric-cyan: #63CBE3; /* Refined Cyan - Main accent */
     --ei-electric-cyan-rgb: 143 207 227;
 
-    --ei-aurora-blue: #2E4A68; /* Slate blue with a vibrant, electric energy */
-    --ei-aurora-blue-rgb: 46 74 104;
+    --ei-aurora-blue: #48AEE6; /* Aurora blue - Secondary blue highlight */
+    --ei-aurora-blue-rgb: 72 174 230;
 
-    --ei-orchid-pink: #D98AB8; /* Muted rose with a rich, orchid-inspired hue */
+    --ei-orchid-pink: #7D68B3; /* Muted rose with a rich, orchid-inspired hue */
     --ei-orchid-pink-rgb: 217 138 184;
 
     --ei-luxe-violet: #8A7BB8; /* Dusty violet with a luxurious, regal tone */
