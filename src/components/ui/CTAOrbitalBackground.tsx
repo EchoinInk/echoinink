@@ -69,7 +69,7 @@ export function CtaOrbitalBackground() {
           cy="160"
           rx="565"
           ry="78"
-          stroke="#--ei"
+          stroke="rgb(var(--ei-luxe-violet-rgb))"
           strokeOpacity="0.22"
           strokeWidth="1"
           transform="rotate(-7 800 160)"
@@ -80,7 +80,7 @@ export function CtaOrbitalBackground() {
           cy="160"
           rx="455"
           ry="62"
-          stroke="#6AF6FF"
+          stroke="rgb(var(--ei-cobalt-rgb))"
           strokeOpacity="0.16"
           strokeWidth="0.9"
           transform="rotate(6 800 160)"
@@ -95,16 +95,16 @@ export function CtaOrbitalBackground() {
           opacity="0.38"
         />
 
-        <circle cx="800" cy="74" r="4" fill="#9A5CFF" opacity="0.95" />
+        <circle cx="800" cy="74" r="4" fill="rgb(var(--ei-luxe-violet-rgb))" opacity="0.95" />
         <circle cx="800" cy="74" r="26" fill="url(#cta-violet-glow)" opacity="0.75" />
 
-        <circle cx="418" cy="166" r="3" fill="#9A5CFF" opacity="0.85" />
+        <circle cx="418" cy="166" r="3" fill="rgb(var(--ei-luxe-violet-rgb))" opacity="0.85" />
         <circle cx="418" cy="166" r="22" fill="url(#cta-violet-glow)" opacity="0.55" />
 
-        <circle cx="1182" cy="150" r="3.4" fill="#9A5CFF" opacity="0.9" />
+        <circle cx="1182" cy="150" r="3.4" fill="rgb(var(--ei-luxe-violet-rgb))" opacity="0.9" />
         <circle cx="1182" cy="150" r="28" fill="url(#cta-violet-glow)" opacity="0.6" />
 
-        <circle cx="676" cy="230" r="2.6" fill="#6AF6FF" opacity="0.7" />
+        <circle cx="676" cy="230" r="2.6" fill="rgb(var(--ei-cobalt-rgb))" opacity="0.7" />
         <circle cx="676" cy="230" r="22" fill="url(#cta-cobalt-glow)" opacity="0.45" />
       </svg>
     </div>
