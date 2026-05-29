@@ -6,8 +6,8 @@
 .ei-nebula-violet {
   background: radial-gradient(
     ellipse 68% 60% at 35% 48%,
-    rgb(var(--ei-ion-violet-rgb) / 0.07) 0%,
-    rgb(var(--ei-void-plum-rgb) / 0.04) 50%,
+    rgb(var(--ei-luxe-violet-rgb) / 0.07) 0%,
+    rgb(var(--ei-deep-indigo-rgb) / 0.04) 50%,
     transparent 80%
   );
   filter: blur(72px);
@@ -17,8 +17,8 @@
 .ei-nebula-cyan {
   background: radial-gradient(
     ellipse 60% 66% at 58% 46%,
-    rgb(var(--ei-electric-cobalt-rgb) / 0.07) 0%,
-    rgb(var(--ei-orbit-blue-rgb) / 0.035) 54%,
+    rgb(var(--ei-aurora-blue-rgb) / 0.07) 0%,
+    rgb(var(--ei-deep-indigo-rgb) / 0.035) 54%,
     transparent 82%
   );
   filter: blur(60px);
