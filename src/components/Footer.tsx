@@ -103,7 +103,7 @@ export default function Footer() {
                 hello@echoin.ink
               </a>
               <span className="font-structural text-[12px] text-white/40 block mb-5">
-                Los Angeles, CA
+                Auckland, New Zealand
               </span>
               <div className="flex items-center gap-4">
                 {socialLinks.map((s) => (
