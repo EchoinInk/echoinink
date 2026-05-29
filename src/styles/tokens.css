@@ -21,10 +21,10 @@
     --ei-deep-indigo: #121827; /* Ink navy with a hint of cosmic depth */
     --ei-deep-indigo-rgb: 18 24 39;
 
-    --ei-aurora-blue: #8FCFE3; /* Soft cyan with a luminous, ethereal quality */
+    --ei-electric-cyan: #8FCFE3; /* Soft cyan with a luminous, ethereal quality */
     --ei-aurora-blue-rgb: 143 207 227;
 
-    --ei-electric-cyan: #2E4A68; /* Slate blue with a vibrant, electric energy */
+    --ei-aurora-blue: #2E4A68; /* Slate blue with a vibrant, electric energy */
     --ei-electric-cyan-rgb: 46 74 104;
 
     --ei-orchid-pink: #D98AB8; /* Muted rose with a rich, orchid-inspired hue */
@@ -33,11 +33,11 @@
     --ei-luxe-violet: #8A7BB8; /* Dusty violet with a luxurious, regal tone */
     --ei-luxe-violet-rgb: 138 123 184;
 
-    --ei-soft-lavender: #D8C7FF;
-    --ei-soft-lavender-rgb: 216 199 255;
+    --ei-soft-lavender: #D9D7EA; /* Cloud lavender with a soft, dreamy quality */
+    --ei-soft-lavender-rgb: 217 215 234;
 
-    --ei-ice-white: #F7FBFF;
-    --ei-ice-white-rgb: 247 251 255;
+    --ei-ice-white: #F6F3F8; /* Warm white with a crisp, icy undertone */
+    --ei-ice-white-rgb: 246 243 248;
 
     /* ── Typography Contrast ─────────────────────────────────────────────────────────────────────── */
     --ei-text-primary: var(--ei-ice-white);
