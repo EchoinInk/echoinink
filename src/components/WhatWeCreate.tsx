@@ -19,13 +19,13 @@ const capabilities = [
     href: '/worlds',
   },
   {
-    variant: 'nodes' as const,
+    variant: 'pathway' as const,
     title: 'Narrative Architecture',
     description: 'Story systems that bring coherence, clarity, and transformational depth.',
     href: '/sessions',
   },
   {
-    variant: 'compass' as const,
+    variant: 'fold' as const,
     title: 'Creative Direction',
     description: 'Atmospheric direction that aligns every detail with the bigger vision.',
     href: '/works',
