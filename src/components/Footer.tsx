@@ -121,11 +121,10 @@ export default function Footer() {
                 Atmospheric Intelligence
                </span>
                <div className="flex items-end justify-between gap-5">
-    <div>
-      <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[26ch]">
-        Exploring the intersection of identity, emotion, and reflective technology.
-      </p>
-
+               <div>
+                 <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[26ch]">
+                   Exploring the intersection of identity, emotion, and reflective technology.
+                  </p>
       <Link
         to="/systems"
         className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-orchid-plasma)]/60 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-400"
