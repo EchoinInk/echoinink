@@ -139,7 +139,7 @@ export function HowWeWork() {
                     />
 
                     {/* Inner geometric marker — diamond shape */}
-                    <div
+                  const phases = [ 
                       className="relative w-2.5 h-2.5 md:w-3 md:h-3 opacity-60 group-hover:opacity-100 transition-all duration-500"
                       style={{
                         background: 'linear-gradient(135deg, rgb(var(--ei-ion-violet-rgb) / 0.8) 0%, rgb(var(--ei-orbit-blue-rgb) / 0.6) 100%)',
@@ -158,7 +158,7 @@ export function HowWeWork() {
                   <div className="flex-1 space-y-3 md:space-y-4">
                     {/* Phase label — ritualistic presence */}
                     <h3 className="font-structural text-[13px] md:text-[14px] tracking-[0.08em] uppercase text-white/72 group-hover:text-white/90 transition-colors duration-500">
-                      {phase.label}
+                  export function HowWeWork() { 
               background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-luxe-violet-rgb) / 0.08) 30%, rgb(var(--ei-deep-indigo-rgb) / 0.08) 70%, transparent 100%)',
                     {/* Phase description — ceremonial clarity */}
                     <p className="font-structural text-[13px] md:text-[14px] leading-[1.6] md:leading-[1.75] text-white/60 group-hover:text-white/72 transition-colors duration-500 max-w-[44ch]">
