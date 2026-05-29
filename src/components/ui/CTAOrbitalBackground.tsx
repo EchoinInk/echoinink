@@ -24,11 +24,11 @@ export function CtaOrbitalBackground() {
           </radialGradient>
 
           <linearGradient id="cta-orbit-line" x1="0" y1="0" x2="1600" y2="0">
-            <stop offset="0%" stopColor="#9A5CFF" stopOpacity="0" />
-            <stop offset="32%" stopColor="#9A5CFF" stopOpacity="0.35" />
-            <stop offset="50%" stopColor="#6AF6FF" stopOpacity="0.55" />
-            <stop offset="68%" stopColor="#FF4FD8" stopOpacity="0.28" />
-            <stop offset="100%" stopColor="#9A5CFF" stopOpacity="0" />
+            <stop offset="0%" stopColor="rgb(var(--ei-luxe-violet-rgb))" stopOpacity="0" />
+            <stop offset="32%" stopColor="rgb(var(--ei-luxe-violet-rgb))" stopOpacity="0.35" />
+            <stop offset="50%" stopColor="rgb(var(--ei-cobalt-rgb))" stopOpacity="0.55" />
+            <stop offset="68%" stopColor="rgb(var(--ei-orchid-pink-rgb))" stopOpacity="0.28" />
+            <stop offset="100%" stopColor="rgb(var(--ei-luxe-violet-rgb))" stopOpacity="0" />
           </linearGradient>
         </defs>
 
@@ -69,7 +69,7 @@ export function CtaOrbitalBackground() {
           cy="160"
           rx="565"
           ry="78"
-          stroke="#9A5CFF"
+          stroke="#--ei"
           strokeOpacity="0.22"
           strokeWidth="1"
           transform="rotate(-7 800 160)"
