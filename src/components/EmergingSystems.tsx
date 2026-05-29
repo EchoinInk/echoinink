@@ -14,7 +14,7 @@ const systems = [
     href: '/systems',
   },
   {
-    variant: 'reflection' as const,
+    variant: 'hexgrid' as const,
     title: 'Founder Reflection',
     description: 'A guided system for clarity, identity, and next alignment.',
     meta: 'Reflective Tool',
@@ -28,7 +28,7 @@ const systems = [
     href: '/systems',
   },
   {
-    variant: 'gpt' as const,
+    variant: 'signal' as const,
     title: 'Identity GPT',
     description: 'An AI companion for identity clarity and narrative direction.',
     meta: 'GPT System',
