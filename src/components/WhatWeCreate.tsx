@@ -7,7 +7,7 @@ import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinem
 
 const capabilities = [
   {
-    variant: 'flare' as const,
+    variant: 'hinge' as const,
     title: 'Brand Identity',
     description: 'Identity systems that uncover essence and create emotional resonance.',
     href: '/identity',

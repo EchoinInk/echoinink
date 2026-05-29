@@ -28,14 +28,14 @@ const systems = [
     href: '/systems',
   },
   {
-    variant: 'spira' as const,
+    variant: 'spiral' as const,
     title: 'Identity GPT',
     description: 'An AI companion for identity clarity and narrative direction.',
     meta: 'GPT System',
     href: '/systems',
   },
   {
-    variant: 'uikit' as const,
+    variant: 'lattice' as const,
     title: 'Atmosphere UI Kit',
     description: 'Cinematic UI components for immersive digital worlds.',
     meta: 'UI System',
