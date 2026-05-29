@@ -21,7 +21,7 @@ const systems = [
     href: '/systems',
   },
   {
-    variant: 'architect' as const,
+    variant: 'sigil' as const,
     title: 'Narrative Architect',
     description: 'Build stories that hold meaning, tension, and transformation.',
     meta: 'Framework',
