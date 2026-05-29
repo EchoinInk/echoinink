@@ -117,24 +117,32 @@ export default function Footer() {
 
             {/* Col 4 — Atmospheric Intelligence */}
             <div className="relative">
-              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/35 block mb-4">
-                Atmospheric Intelligence
-              </span>
-              <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[26ch]">
-                Exploring the intersection of identity, emotion, and reflective technology.
-              </p>
-              <Link
-                to="/systems"
-                className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-orchid-plasma)]/60 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-400"
-              >
-                Learn more about our future systems
-                <span className="group-hover:translate-x-0.5 transition-transform duration-400">→</span>
-              </Link>
-              {/* Orbital visual — atmospheric detail */}
-              <div className="mt-5 flex justify-end opacity-30">
-                <OrbitalVisual variant="uikit" size={56} />
-              </div>
-            </div>
+               <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/35 block mb-4">
+    Atmospheric Intelligence
+  </span>
+
+  <div className="flex items-end justify-between gap-5">
+    <div>
+      <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[26ch]">
+        Exploring the intersection of identity, emotion, and reflective technology.
+      </p>
+
+      <Link
+        to="/systems"
+        className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-orchid-plasma)]/60 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-400"
+      >
+        Learn more about our future systems
+        <span className="group-hover:translate-x-0.5 transition-transform duration-400">
+          →
+        </span>
+      </Link>
+    </div>
+
+    <div className="shrink-0 opacity-30">
+      <OrbitalVisual variant="uikit" size={56} />
+    </div>
+  </div>
+</div>
           </div>
         </motion.div>
 
