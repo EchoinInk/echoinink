@@ -61,7 +61,7 @@ export default function Footer() {
           className="pt-12 md:pt-16 pb-5"
         >
           {/* 4-column grid */}
-<div className="grid grid-cols-2 md:grid-cols-[1.35fr_0.75fr_0.9fr_1fr] gap-10 md:gap-10 items-start">              {/* Col 1 — Brand */}
+<div className="grid grid-cols-2 md:grid-cols-[1.35fr_0.75fr_0.9fr_1.fr] gap-10 md:gap-10 items-start">              {/* Col 1 — Brand */}
             <div className="col-span-2 md:col-span-1">
               <span className="font-structural text-[11px] tracking-[0.18em] uppercase text-white/75 block mb-3">
                 Echo in Ink
@@ -139,7 +139,7 @@ export default function Footer() {
 
   <Link
     to="/systems"
-    className="group inline-flex items-center font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-orchid-plasma)]/60 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-400"
+    className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-orchid-plasma)]/60 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-400"
   >
     Learn more about our future systems
     <span className="group-hover:translate-x-0.5 transition-transform duration-400">
