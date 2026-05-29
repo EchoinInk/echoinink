@@ -50,7 +50,7 @@ export function LumoCaseStudyTeaser() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 45% 28% at 66% 48%, rgb(var(--ei-ion-violet-rgb) / 0.045) 0%, transparent 68%)',
+            'radial-gradient(ellipse 45% 28% at 66% 48%, rgb(var(--ei-luxe-violet-rgb) / 0.045) 0%, transparent 68%)',
           filter: 'blur(70px)',
         }}
       />
@@ -74,7 +74,7 @@ export function LumoCaseStudyTeaser() {
               className="h-px w-9 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-orchid-pink-rgb)/0.35)]"
               style={{
                 background:
-                  'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.12) 0%, rgb(var(--ei-orchid-pink-rgb) / 0.85) 100%)',
+                  'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.12) 0%, rgb(var(--ei-orchid-pink-rgb) / 0.85) 100%)',
               }}
             />
           </motion.div>
@@ -86,7 +86,7 @@ export function LumoCaseStudyTeaser() {
               relative grid overflow-hidden
               rounded-[28px]
               border border-white/[0.085]
-              bg-[rgb(var(--ei-cosmic-black-rgb)/0.88)]
+              bg-[rgb(var(--ei-void-black-rgb)/0.88)]
               shadow-[0_24px_80px_rgb(0_0_0/0.28)]
               md:grid-cols-[40%_60%]
               lg:grid-cols-[40%_60%]
@@ -100,7 +100,7 @@ export function LumoCaseStudyTeaser() {
               className="pointer-events-none absolute inset-0"
               style={{
                 background:
-                  'linear-gradient(90deg, rgb(var(--ei-cosmic-black-rgb) / 0.92) 0%, rgb(var(--ei-cosmic-black-rgb) / 0.78) 38%, transparent 70%)',
+                  'linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.92) 0%, rgb(var(--ei-void-black-rgb) / 0.78) 38%, transparent 70%)',
               }}
             />
 
@@ -221,7 +221,7 @@ export function LumoCaseStudyTeaser() {
                 className="pointer-events-none absolute inset-y-0 left-0 w-[34%]"
                 style={{
                   background:
-                    'linear-gradient(to right, rgb(var(--ei-cosmic-black-rgb) / 0.92) 0%, rgb(var(--ei-cosmic-black-rgb) / 0.45) 42%, transparent 100%)',
+                    'linear-gradient(to right, rgb(var(--ei-void-black-rgb) / 0.92) 0%, rgb(var(--ei-void-black-rgb) / 0.45) 42%, transparent 100%)',
                 }}
               />
 
