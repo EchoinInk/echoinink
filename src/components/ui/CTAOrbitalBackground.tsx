@@ -12,15 +12,15 @@ export function CtaOrbitalBackground() {
       >
         <defs>
           <radialGradient id="cta-violet-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#9A5CFF" stopOpacity="0.75" />
-            <stop offset="45%" stopColor="#9A5CFF" stopOpacity="0.22" />
-            <stop offset="100%" stopColor="#9A5CFF" stopOpacity="0" />
+            <stop offset="0%" stopColor="rgb(var(--ei-luxe-violet-rgb))" stopOpacity="0.75" />
+            <stop offset="45%" stopColor="rgb(var(--ei-luxe-violet-rgb))" stopOpacity="0.22" />
+            <stop offset="100%" stopColor="rgb(var(--ei-luxe-violet-rgb))" stopOpacity="0" />
           </radialGradient>
 
           <radialGradient id="cta-cobalt-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#6AF6FF" stopOpacity="0.55" />
-            <stop offset="55%" stopColor="#6AF6FF" stopOpacity="0.16" />
-            <stop offset="100%" stopColor="#6AF6FF" stopOpacity="0" />
+            <stop offset="0%" stopColor="rgb(var(--ei-cobalt-rgb))" stopOpacity="0.55" />
+            <stop offset="55%" stopColor="rgb(var(--ei-cobalt-rgb))" stopOpacity="0.16" />
+            <stop offset="100%" stopColor="rgb(var(--ei-cobalt-rgb))" stopOpacity="0" />
           </radialGradient>
 
           <linearGradient id="cta-orbit-line" x1="0" y1="0" x2="1600" y2="0">
