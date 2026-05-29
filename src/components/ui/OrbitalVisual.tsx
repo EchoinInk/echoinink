@@ -1,16 +1,28 @@
 export type OrbitalVariant =
-  | 'triangle'    // Brand Identity
-  | 'orbit'       // Digital Experiences
-  | 'nodes'       // Narrative Architecture
-  | 'compass'     // Creative Direction
-  | 'canvas'      // Identity Canvas
-  | 'reflection'  // Founder Reflection
-  | 'architect'   // Narrative Architect
-  | 'gpt'         // Identity GPT
-  | 'uikit'       // Atmosphere UI Kit
+  | 'triangle'
+  | 'orbit'
+  | 'nodes'
+  | 'compass'
+  | 'canvas'
+  | 'reflection'
+  | 'architect'
+  | 'gpt'
+  | 'uikit'
   | 'hexgrid'
   | 'signal'
-  | 'constellation';
+  | 'constellation'
+  | 'prism'
+  | 'threshold'
+  | 'fold'
+  | 'sigil'
+  | 'pathway'
+  | 'axis'
+  | 'frame'
+  | 'echo'
+  | 'flare'
+  | 'glyph'
+  | 'archive'
+  | 'beacon';
 
 
 interface OrbitalVisualProps {
