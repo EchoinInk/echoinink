@@ -29,13 +29,13 @@ export function CtaOrbitalBackground() {
             <stop offset="100%" stopColor="#05070D" stopOpacity="0" />
           </radialGradient>
 
-          <linearGradient id="cta-orbit-line" x1="0" y1="0" x2="1600" y2="0">
-            <stop offset="0%" stopColor="#9A5CFF" stopOpacity="0" />
-            <stop offset="30%" stopColor="#9A5CFF" stopOpacity="0.16" />
-            <stop offset="50%" stopColor="#6AF6FF" stopOpacity="0.22" />
-            <stop offset="70%" stopColor="#FF4FD8" stopOpacity="0.11" />
-            <stop offset="100%" stopColor="#9A5CFF" stopOpacity="0" />
-          </linearGradient>
+<linearGradient id="cta-orbit-line" x1="0" y1="0" x2="1600" y2="0">
+  <stop offset="0%" stopColor="#9A5CFF" stopOpacity="0" />
+  <stop offset="30%" stopColor="#9A5CFF" stopOpacity="0.09" />
+  <stop offset="50%" stopColor="#6AF6FF" stopOpacity="0.13" />
+  <stop offset="70%" stopColor="#FF4FD8" stopOpacity="0.07" />
+  <stop offset="100%" stopColor="#9A5CFF" stopOpacity="0" />
+</linearGradient>
 
           <filter id="cta-soft-blur">
             <feGaussianBlur stdDeviation="10" />
