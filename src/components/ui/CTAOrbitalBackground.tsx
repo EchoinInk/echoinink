@@ -17,16 +17,16 @@ export function CtaOrbitalBackground() {
             <stop offset="100%" stopColor="rgb(var(--ei-luxe-violet-rgb))" stopOpacity="0" />
           </radialGradient>
 
-          <radialGradient id="cta-cobalt-glow" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="rgb(var(--ei-cobalt-rgb))" stopOpacity="0.55" />
-            <stop offset="55%" stopColor="rgb(var(--ei-cobalt-rgb))" stopOpacity="0.16" />
-            <stop offset="100%" stopColor="rgb(var(--ei-cobalt-rgb))" stopOpacity="0" />
+          <radialGradient id="cta-cyan-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="rgb(var(--ei-electric-cyan-rgb))" stopOpacity="0.55" />
+            <stop offset="55%" stopColor="rgb(var(--ei-electric-cyan-rgb))" stopOpacity="0.16" />
+            <stop offset="100%" stopColor="rgb(var(--ei-electric-cyan-rgb))" stopOpacity="0" />
           </radialGradient>
 
           <linearGradient id="cta-orbit-line" x1="0" y1="0" x2="1600" y2="0">
             <stop offset="0%" stopColor="rgb(var(--ei-luxe-violet-rgb))" stopOpacity="0" />
             <stop offset="32%" stopColor="rgb(var(--ei-luxe-violet-rgb))" stopOpacity="0.35" />
-            <stop offset="50%" stopColor="rgb(var(--ei-cobalt-rgb))" stopOpacity="0.55" />
+            <stop offset="50%" stopColor="rgb(var(--ei-electric-cyan-rgb))" stopOpacity="0.55" />
             <stop offset="68%" stopColor="rgb(var(--ei-orchid-pink-rgb))" stopOpacity="0.28" />
             <stop offset="100%" stopColor="rgb(var(--ei-luxe-violet-rgb))" stopOpacity="0" />
           </linearGradient>
@@ -80,7 +80,7 @@ export function CtaOrbitalBackground() {
           cy="160"
           rx="455"
           ry="62"
-          stroke="rgb(var(--ei-cobalt-rgb))"
+          stroke="rgb(var(--ei-electric-cyan-rgb))"
           strokeOpacity="0.16"
           strokeWidth="0.9"
           transform="rotate(6 800 160)"
