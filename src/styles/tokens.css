@@ -58,8 +58,8 @@
     --gradient-primary: linear-gradient(
       135deg,
       var(--ei-aurora-blue) 0%,
-      var(--ei-luxe-violet) 48%,
-      var(--ei-orchid-pink) 100%
+      var(--ei-orchid-pink) 48%,
+      var(--ei-luxe-violet) 100%,-pink) 100%
     );
 
     --gradient-glow-field: radial-gradient(
