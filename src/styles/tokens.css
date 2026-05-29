@@ -23,8 +23,8 @@
     --ei-soft-lavender: #DDD7EC; /* Mist Lavender - Borders, pale UI accents */
     --ei-soft-lavender-rgb: 217 215 234;
 
-    --ei-ice-white: #F7F5FA; /* Paper white with a crisp, icy undertone */
-    --ei-ice-white-rgb: 246 243 248;
+    --ei-ice-white: #F7F5FA; /* Paper white - Text on dark backgrounds */
+    --ei-ice-white-rgb: 247 245 250;
 
     /* ── Typography Contrast ─────────────────────────────────────────────────────────────────────── */
     --ei-text-primary: var(--ei-ice-white);
