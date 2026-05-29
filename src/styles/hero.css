@@ -15,10 +15,10 @@
     padding: 1px; /* Thinner border */
     background: linear-gradient(
       135deg,
-      rgb(var(--ei-electric-cobalt-rgb) / 0.6) 0%,
-      rgb(var(--ei-ion-violet-rgb) / 0.5) 35%,
-      rgb(var(--ei-stellar-lilac-rgb) / 0.4) 70%,
-      rgb(var(--ei-neon-magenta-rgb) / 0.35) 100%
+      rgb(var(--ei-aurora-blue-rgb) / 0.6) 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.5) 35%,
+      rgb(var(--ei-soft-lavender-rgb) / 0.4) 70%,
+      rgb(var(--ei-orchid-pink-rgb) / 0.35) 100%
     );
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -41,10 +41,10 @@
     border-radius: 9999px;
     background: linear-gradient(
       135deg,
-      rgb(var(--ei-electric-cobalt-rgb) / 0.12),
-      rgb(var(--ei-ion-violet-rgb) / 0.08),
-      rgb(var(--ei-stellar-lilac-rgb) / 0.06),
-      rgb(var(--ei-neon-magenta-rgb) / 0.04)
+      rgb(var(--ei-aurora-blue-rgb) / 0.12),
+      rgb(var(--ei-luxe-violet-rgb) / 0.08),
+      rgb(var(--ei-soft-lavender-rgb) / 0.06),
+      rgb(var(--ei-orchid-pink-rgb) / 0.04)
     );
     filter: blur(16px);
     opacity: 0;
@@ -72,10 +72,10 @@
     padding: 1px;
     background: linear-gradient(
       160deg,
-      rgb(var(--ei-neon-magenta-rgb) / 0.4) 0%,
-      rgb(var(--ei-stellar-lilac-rgb) / 0.35) 25%,
-      rgb(var(--ei-ion-violet-rgb) / 0.3) 60%,
-      rgb(var(--ei-electric-cobalt-rgb) / 0.25) 100%
+      rgb(var(--ei-orchid-pink-rgb) / 0.4) 0%,
+      rgb(var(--ei-soft-lavender-rgb) / 0.35) 25%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.3) 60%,
+      rgb(var(--ei-aurora-blue-rgb) / 0.25) 100%
     );
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -98,10 +98,10 @@
     border-radius: 9999px;
     background: linear-gradient(
       160deg,
-      rgb(var(--ei-neon-magenta-rgb) / 0.1),
-      rgb(var(--ei-stellar-lilac-rgb) / 0.07),
-      rgb(var(--ei-ion-violet-rgb) / 0.05),
-      rgb(var(--ei-electric-cobalt-rgb) / 0.03)
+      rgb(var(--ei-orchid-pink-rgb) / 0.1),
+      rgb(var(--ei-soft-lavender-rgb) / 0.07),
+      rgb(var(--ei-luxe-violet-rgb) / 0.05),
+      rgb(var(--ei-aurora-blue-rgb) / 0.03)
     );
     filter: blur(20px);
     opacity: 0;
@@ -134,10 +134,10 @@
   padding: 1.5px;
   background: linear-gradient(
     135deg,
-    rgb(var(--ei-electric-cobalt-rgb) / 0.95) 0%,
-    rgb(var(--ei-electric-cobalt-rgb) / 0.72) 42%,
-    rgb(var(--ei-stellar-lilac-rgb) / 0.52) 72%,
-    rgb(var(--ei-photon-white-rgb) / 0.34) 100%
+    rgb(var(--ei-aurora-blue-rgb) / 0.95) 0%,
+    rgb(var(--ei-aurora-blue-rgb) / 0.72) 42%,
+    rgb(var(--ei-soft-lavender-rgb) / 0.52) 72%,
+    rgb(var(--ei-ice-white-rgb) / 0.34) 100%
   );
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -160,9 +160,9 @@
   border-radius: 9999px;
   background: radial-gradient(
     circle,
-    rgb(var(--ei-electric-cobalt-rgb) / 0.38) 0%,
-    rgb(var(--ei-electric-cobalt-rgb) / 0.20) 36%,
-    rgb(var(--ei-electric-cobalt-rgb) / 0.08) 58%,
+    rgb(var(--ei-aurora-blue-rgb) / 0.38) 0%,
+    rgb(var(--ei-aurora-blue-rgb) / 0.20) 36%,
+    rgb(var(--ei-aurora-blue-rgb) / 0.08) 58%,
     transparent 78%
   );
   filter: blur(28px);
@@ -181,7 +181,7 @@
   .ei-gradient-border-btn {
     position: relative;
     z-index: 1;
-    background: rgb(var(--ei-deep-nebula-rgb) / 0.6);
+    background: rgb(var(--ei-deep-indigo-rgb) / 0.6);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 9999px;
@@ -208,7 +208,7 @@
     position: absolute;
     inset: -4px;
     border-radius: 9999px;
-    background: linear-gradient(135deg, rgb(var(--ei-electric-cobalt-rgb) / 0.3), rgb(var(--ei-ion-violet-rgb) / 0.2), rgb(var(--ei-stellar-lilac-rgb) / 0.15));
+    background: linear-gradient(135deg, rgb(var(--ei-aurora-blue-rgb) / 0.3), rgb(var(--ei-luxe-violet-rgb) / 0.2), rgb(var(--ei-soft-lavender-rgb) / 0.15));
     filter: blur(12px);
     opacity: 0;
     transition: opacity 0.5s var(--ei-ease-soft);

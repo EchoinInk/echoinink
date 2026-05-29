@@ -1,85 +1,87 @@
 @layer base {
   :root {
-    /* ── EI Colour Brand Kit — Single Source of Truth ────────────────────────────────────────────── */
-    /* Source: /docs/ei-colour-brand-kit/Digital/ei-colour-tokens.json */
+    /* ── EI Aurora Luxe Palette — Single Source of Truth ────────────────────────────────────────────── */
 
     /* ── Core Palette (Hex + RGB for opacity composition) ─────────────────────────────────────────── */
-    --ei-cosmic-black: #05070D;
-    --ei-cosmic-black-rgb: 5 7 13;
+    --ei-void-black: #05070D;
+    --ei-void-black-rgb: 5 7 13;
 
-    --ei-orbit-blue: #43D9FF;
-    --ei-orbit-blue-rgb: 67 217 255;
+    --ei-deep-indigo: #11182E;
+    --ei-deep-indigo-rgb: 17 24 46;
 
-    --ei-deep-nebula: #070454;
-    --ei-deep-nebula-rgb: 7 4 84;
+    --ei-aurora-blue: #43D9FF;
+    --ei-aurora-blue-rgb: 67 217 255;
+
+    --ei-electric-cyan: #6AF6FF;
+    --ei-electric-cyan-rgb: 106 246 255;
 
     --ei-orchid-pink: #FF4FD8;
     --ei-orchid-pink-rgb: 255 79 216;
 
-    --ei-electric-cobalt: #6AF6FF;
-    --ei-electric-cobalt-rgb: 106 246 255;
+    --ei-luxe-violet: #9A5CFF;
+    --ei-luxe-violet-rgb: 154 92 255;
 
-    --ei-ion-violet: #9A5CFF;
-    --ei-ion-violet-rgb: 154 92 255;
+    --ei-soft-lavender: #D8C7FF;
+    --ei-soft-lavender-rgb: 216 199 255;
 
-    --ei-void-plum: #11182E;
-    --ei-void-plum-rgb: 17 24 46;
-
-    --ei-stellar-lilac: #D8C7FF;
-    --ei-stellar-lilac-rgb: 216 199 255;
-
-    --ei-neon-magenta: #C23BE5;
-    --ei-neon-magenta-rgb: 194 59 229;
-
-    --ei-photon-white: #F7FBFF;
-    --ei-photon-white-rgb: 247 251 255;
+    --ei-ice-white: #F7FBFF;
+    --ei-ice-white-rgb: 247 251 255;
 
     /* ── Backwards Compat Aliases (mapped to new EI tokens) ───────────────────────────────────────── */
-    --ei-void: var(--ei-cosmic-black);
-    --ei-ink-black: var(--ei-cosmic-black);
-    --ei-deep-midnight: var(--ei-deep-nebula);
-    --ei-deep-ink: var(--ei-deep-nebula);
-    --ei-indigo-atmosphere: var(--ei-deep-nebula);
-    --ei-plum: var(--ei-void-plum);
-    --ei-atmosphere-blue: var(--ei-electric-cobalt);
-    --ei-aqua: var(--ei-electric-cobalt);
-    --ei-electric-violet: var(--ei-ion-violet);
-    --ei-indigo: var(--ei-ion-violet);
-    --ei-orchid-plasma: var(--ei-neon-magenta);
-    --ei-magenta-plasma: var(--ei-neon-magenta);
-    --ei-violet: var(--ei-neon-magenta);
-    --ei-pink: var(--ei-neon-magenta);
-    --ei-cosmic-lavender: var(--ei-stellar-lilac);
-    --ei-moonlight: var(--ei-photon-white);
-    --ei-paper-white: var(--ei-photon-white);
+    --ei-void: var(--ei-void-black);
+    --ei-ink-black: var(--ei-void-black);
+    --ei-cosmic-black: var(--ei-void-black);
+    --ei-deep-midnight: var(--ei-deep-indigo);
+    --ei-deep-ink: var(--ei-deep-indigo);
+    --ei-deep-nebula: var(--ei-deep-indigo);
+    --ei-orbit-blue: var(--ei-deep-indigo);
+    --ei-indigo-atmosphere: var(--ei-deep-indigo);
+    --ei-plum: var(--ei-deep-indigo);
+    --ei-void-plum: var(--ei-deep-indigo);
+    --ei-atmosphere-blue: var(--ei-aurora-blue);
+    --ei-aqua: var(--ei-aurora-blue);
+    --ei-electric-cobalt: var(--ei-aurora-blue);
+    --ei-electric-violet: var(--ei-luxe-violet);
+    --ei-indigo: var(--ei-luxe-violet);
+    --ei-ion-violet: var(--ei-luxe-violet);
+    --ei-orchid-plasma: var(--ei-orchid-pink);
+    --ei-magenta-plasma: var(--ei-orchid-pink);
+    --ei-neon-magenta: var(--ei-orchid-pink);
+    --ei-violet: var(--ei-orchid-pink);
+    --ei-pink: var(--ei-orchid-pink);
+    --ei-cosmic-lavender: var(--ei-soft-lavender);
+    --ei-stellar-lilac: var(--ei-soft-lavender);
+    --ei-moonlight: var(--ei-ice-white);
+    --ei-paper-white: var(--ei-ice-white);
+    --ei-photon-white: var(--ei-ice-white);
 
     /* ── Typography Contrast ─────────────────────────────────────────────────────────────────────── */
-    --ei-text-primary: var(--ei-photon-white);
-    --ei-text-secondary: rgb(var(--ei-photon-white-rgb) / 0.72);
-    --ei-text-tertiary: rgb(var(--ei-photon-white-rgb) / 0.58);
-    --ei-text-muted: rgb(var(--ei-stellar-lilac-rgb) / 0.85);
-    --ei-text-accent: var(--ei-electric-cobalt);
-    --ei-text-accent-secondary: var(--ei-neon-magenta);
+    --ei-text-primary: var(--ei-ice-white);
+    --ei-text-secondary: rgb(var(--ei-ice-white-rgb) / 0.72);
+    --ei-text-tertiary: rgb(var(--ei-ice-white-rgb) / 0.58);
+    --ei-text-muted: rgb(var(--ei-soft-lavender-rgb) / 0.85);
+    --ei-text-accent: var(--ei-aurora-blue);
+    --ei-text-accent-secondary: var(--ei-orchid-pink);
 
     /* ── Surface & Background ───────────────────────────────────────────────────────────────────── */
-    --ei-surface-deep: var(--ei-cosmic-black);
-    --ei-surface-panel: rgb(var(--ei-deep-nebula-rgb) / 0.35);
-    --ei-surface-card: rgb(var(--ei-void-plum-rgb) / 0.25);
-    --ei-surface-elevated: rgb(var(--ei-orbit-blue-rgb) / 0.15);
+    --ei-surface-deep: var(--ei-void-black);
+    --ei-surface-panel: rgb(var(--ei-deep-indigo-rgb) / 0.35);
+    --ei-surface-card: rgb(var(--ei-deep-indigo-rgb) / 0.25);
+    --ei-surface-elevated: rgb(var(--ei-aurora-blue-rgb) / 0.15);
 
     /* ── Border System ───────────────────────────────────────────────────────────────────────────── */
-    --border-soft: rgb(var(--ei-photon-white-rgb) / 0.10);
-    --border-glow: rgb(var(--ei-ion-violet-rgb) / 0.32);
-    --border-card: rgb(var(--ei-stellar-lilac-rgb) / 0.12);
-    --border-cobalt: rgb(var(--ei-electric-cobalt-rgb) / 0.28);
-    --border-magenta: rgb(var(--ei-neon-magenta-rgb) / 0.25);
+    --border-soft: rgb(var(--ei-ice-white-rgb) / 0.10);
+    --border-glow: rgb(var(--ei-luxe-violet-rgb) / 0.32);
+    --border-card: rgb(var(--ei-soft-lavender-rgb) / 0.12);
+    --border-cobalt: rgb(var(--ei-aurora-blue-rgb) / 0.28);
+    --border-magenta: rgb(var(--ei-orchid-pink-rgb) / 0.25);
 
     /* ── Glow System ─────────────────────────────────────────────────────────────────────────────── */
-    --glow-cobalt: rgb(var(--ei-electric-cobalt-rgb) / 0.35);
-    --glow-violet: rgb(var(--ei-ion-violet-rgb) / 0.32);
-    --glow-magenta: rgb(var(--ei-neon-magenta-rgb) / 0.28);
-    --glow-lilac: rgb(var(--ei-stellar-lilac-rgb) / 0.22);
-    --glow-nebula: rgb(var(--ei-deep-nebula-rgb) / 0.40);
+    --glow-cobalt: rgb(var(--ei-aurora-blue-rgb) / 0.35);
+    --glow-violet: rgb(var(--ei-luxe-violet-rgb) / 0.32);
+    --glow-magenta: rgb(var(--ei-orchid-pink-rgb) / 0.28);
+    --glow-lilac: rgb(var(--ei-soft-lavender-rgb) / 0.22);
+    --glow-nebula: rgb(var(--ei-deep-indigo-rgb) / 0.40);
 
     /* Backwards compat glow names */
     --ei-glow-blue: var(--glow-cobalt);
@@ -91,43 +93,52 @@
     --ei-glow-pink: var(--glow-magenta);
 
     /* ── Gradient System ─────────────────────────────────────────────────────────────────────────── */
-    /* Signature Orbit: Electric Cobalt → Ion Violet → Neon Magenta */
-    --gradient-signature-orbit: linear-gradient(
+    /* Primary Aurora: Aurora Blue → Luxe Violet → Orchid Pink */
+    --gradient-primary: linear-gradient(
       135deg,
-      var(--ei-electric-cobalt) 0%,
-      var(--ei-ion-violet) 48%,
-      var(--ei-neon-magenta) 100%
+      var(--ei-aurora-blue) 0%,
+      var(--ei-luxe-violet) 48%,
+      var(--ei-orchid-pink) 100%
     );
 
-    /* Deep Space Glow: Cobalt core → Nebula mid → Cosmic Black edge */
+    /* Glow Field: Aurora Blue → Orchid Pink fade */
+    --gradient-glow-field: radial-gradient(
+      circle,
+      rgb(var(--ei-aurora-blue-rgb) / 0.45),
+      rgb(var(--ei-orchid-pink-rgb) / 0.18),
+      transparent 70%
+    );
+
+    /* Deep Space Glow: Aurora Blue core → Deep Indigo mid → Void Black edge */
     --gradient-deep-space-glow: radial-gradient(
       circle at 25% 35%,
-      var(--ei-electric-cobalt) 0%,
-      var(--ei-deep-nebula) 36%,
-      var(--ei-cosmic-black) 72%
+      var(--ei-aurora-blue) 0%,
+      var(--ei-deep-indigo) 36%,
+      var(--ei-void-black) 72%
     );
 
     /* Nebula Atmosphere: soft violet depth */
     --gradient-nebula: linear-gradient(
       180deg,
-      var(--ei-cosmic-black) 0%,
-      rgb(var(--ei-deep-nebula-rgb) / 0.5) 50%,
-      var(--ei-cosmic-black) 100%
+      var(--ei-void-black) 0%,
+      rgb(var(--ei-deep-indigo-rgb) / 0.5) 50%,
+      var(--ei-void-black) 100%
     );
 
-    /* Orbital Border: thin violet-magenta edge */
+    /* Orbital Border: thin violet-pink edge */
     --gradient-orbital-border: linear-gradient(
       135deg,
-      rgb(var(--ei-ion-violet-rgb) / 0.6) 0%,
-      rgb(var(--ei-neon-magenta-rgb) / 0.5) 50%,
-      rgb(var(--ei-ion-violet-rgb) / 0.6) 100%
+      rgb(var(--ei-luxe-violet-rgb) / 0.6) 0%,
+      rgb(var(--ei-orchid-pink-rgb) / 0.5) 50%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.6) 100%
     );
 
     /* Backwards compat gradient names */
-    --ei-gradient-signature: var(--gradient-signature-orbit);
-    --ei-gradient-glow: var(--gradient-deep-space-glow);
+    --gradient-signature-orbit: var(--gradient-primary);
+    --ei-gradient-signature: var(--gradient-primary);
+    --ei-gradient-glow: var(--gradient-glow-field);
     --ei-gradient-deep-space: var(--gradient-nebula);
-    --ei-gradient-hero: var(--gradient-signature-orbit);
+    --ei-gradient-hero: var(--gradient-primary);
     --ei-gradient-subtle: var(--gradient-nebula);
 
     /* ── Spacing scale (px → rem) ────────────────────────────────────────────────────────────────── */

@@ -12,7 +12,7 @@
     font-weight: 300;
     letter-spacing: -0.018em;
     line-height: 1.05;
-    color: rgb(var(--ei-photon-white-rgb) / 0.94);
+    color: rgb(var(--ei-ice-white-rgb) / 0.94);
   }
 
   /* Hero lead — the line beneath the headline */
@@ -22,7 +22,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.75;
-    color: rgb(var(--ei-photon-white-rgb) / 0.48);
+    color: rgb(var(--ei-ice-white-rgb) / 0.48);
     max-width: 44ch;
   }
 
@@ -33,7 +33,7 @@
     font-weight: 300;
     letter-spacing: -0.006em;
     line-height: 1.6;
-    color: rgb(var(--ei-photon-white-rgb) / 0.34);
+    color: rgb(var(--ei-ice-white-rgb) / 0.34);
     font-style: italic;
   }
 
@@ -43,7 +43,7 @@
     font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.5;
-    color: rgb(var(--ei-stellar-lilac-rgb) / 0.75);
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.75);
   }
 
   /* ── Atmospheric Body Copy ───────────────────────────────── */
@@ -53,7 +53,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.95;
-    color: rgb(var(--ei-photon-white-rgb) / 0.60);
+    color: rgb(var(--ei-ice-white-rgb) / 0.60);
   }
 
   .text-atmospheric-large {
@@ -62,7 +62,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.8;
-    color: rgb(var(--ei-photon-white-rgb) / 0.58);
+    color: rgb(var(--ei-ice-white-rgb) / 0.58);
     max-width: 52ch;
   }
 
@@ -72,7 +72,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.75;
-    color: rgb(var(--ei-photon-white-rgb) / 0.56);
+    color: rgb(var(--ei-ice-white-rgb) / 0.56);
   }
 
   /* ── Structural Labels ───────────────────────────────────── */
@@ -83,7 +83,7 @@
     letter-spacing: 0.14em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgb(var(--ei-photon-white-rgb) / 0.42);
+    color: rgb(var(--ei-ice-white-rgb) / 0.42);
   }
 
   .text-structural-nav {
@@ -93,7 +93,7 @@
     letter-spacing: 0.02em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgb(var(--ei-photon-white-rgb) / 0.60);
+    color: rgb(var(--ei-ice-white-rgb) / 0.60);
   }
 
   .text-structural-cta {
@@ -102,7 +102,7 @@
     font-weight: 500;
     letter-spacing: 0.01em;
     line-height: 1.4;
-    color: rgb(var(--ei-photon-white-rgb) / 0.90);
+    color: rgb(var(--ei-ice-white-rgb) / 0.90);
   }
 
   /* ── Whisper Text ────────────────────────────────────────── */
@@ -112,7 +112,7 @@
     font-weight: 400;
     letter-spacing: 0.02em;
     line-height: 1.6;
-    color: rgb(var(--ei-photon-white-rgb) / 0.40);
+    color: rgb(var(--ei-ice-white-rgb) / 0.40);
   }
 
   .text-whisper-uppercase {
@@ -122,7 +122,7 @@
     letter-spacing: 0.22em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgb(var(--ei-photon-white-rgb) / 0.40);
+    color: rgb(var(--ei-ice-white-rgb) / 0.40);
   }
 
   /* ── Cinematic Section Headings ────────────────────────── */
@@ -132,7 +132,7 @@
     font-weight: 300;
     letter-spacing: -0.012em;
     line-height: 1.18;
-    color: rgb(var(--ei-stellar-lilac-rgb) / 0.92);
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.92);
   }
 
   .text-cinematic-heading-large {
@@ -141,7 +141,7 @@
     font-weight: 300;
     letter-spacing: -0.015em;
     line-height: 1.05;
-    color: rgb(var(--ei-stellar-lilac-rgb) / 0.90);
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.90);
   }
 
   /* ── Card Typography ─────────────────────────────────────── */
@@ -151,7 +151,7 @@
     font-weight: 300;
     letter-spacing: -0.008em;
     line-height: 1.24;
-    color: rgb(var(--ei-stellar-lilac-rgb) / 0.88);
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.88);
   }
 
   .text-card-body {
@@ -160,7 +160,7 @@
     font-weight: 400;
     letter-spacing: -0.003em;
     line-height: 1.65;
-    color: rgb(var(--ei-photon-white-rgb) / 0.62);
+    color: rgb(var(--ei-ice-white-rgb) / 0.62);
   }
 
   /* ── Quote / Testimonial ───────────────────────────────── */
@@ -170,7 +170,7 @@
     font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.5;
-    color: rgb(var(--ei-stellar-lilac-rgb) / 0.75);
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.75);
   }
 }
 
@@ -182,12 +182,12 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgb(var(--ei-photon-white-rgb) / 0.50);
+    color: rgb(var(--ei-ice-white-rgb) / 0.50);
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .link-primary:hover {
-    color: rgb(var(--ei-photon-white-rgb) / 0.75);
+    color: rgb(var(--ei-ice-white-rgb) / 0.75);
   }
 
   .link-subtle {
@@ -196,12 +196,12 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgb(var(--ei-photon-white-rgb) / 0.40);
+    color: rgb(var(--ei-ice-white-rgb) / 0.40);
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .link-subtle:hover {
-    color: rgb(var(--ei-photon-white-rgb) / 0.60);
+    color: rgb(var(--ei-ice-white-rgb) / 0.60);
   }
 }
 
@@ -222,7 +222,7 @@
     font-weight: 300;
     letter-spacing: -0.018em;
     line-height: 1.05;
-    color: rgb(var(--ei-photon-white-rgb) / 0.94);
+    color: rgb(var(--ei-ice-white-rgb) / 0.94);
   }
 
   .ei-hero-lead {
@@ -231,7 +231,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.75;
-    color: rgb(var(--ei-photon-white-rgb) / 0.48);
+    color: rgb(var(--ei-ice-white-rgb) / 0.48);
     max-width: 44ch;
   }
 
@@ -242,7 +242,7 @@
     letter-spacing: 0.14em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgb(var(--ei-photon-white-rgb) / 0.42);
+    color: rgb(var(--ei-ice-white-rgb) / 0.42);
   }
 
   .ei-section-title {
@@ -251,7 +251,7 @@
     font-weight: 300;
     letter-spacing: -0.012em;
     line-height: 1.18;
-    color: rgb(var(--ei-stellar-lilac-rgb) / 0.92);
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.92);
   }
 
   .ei-section-description {
@@ -260,7 +260,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.8;
-    color: rgb(var(--ei-photon-white-rgb) / 0.58);
+    color: rgb(var(--ei-ice-white-rgb) / 0.58);
     max-width: 52ch;
   }
 
@@ -270,7 +270,7 @@
     font-weight: 400;
     letter-spacing: -0.005em;
     line-height: 1.65;
-    color: rgb(var(--ei-photon-white-rgb) / 0.78);
+    color: rgb(var(--ei-ice-white-rgb) / 0.78);
   }
 
   .ei-body {
@@ -279,7 +279,7 @@
     font-weight: 400;
     letter-spacing: -0.005em;
     line-height: 1.65;
-    color: rgb(var(--ei-photon-white-rgb) / 0.76);
+    color: rgb(var(--ei-ice-white-rgb) / 0.76);
   }
 
   .ei-body-small {
@@ -288,7 +288,7 @@
     font-weight: 400;
     letter-spacing: -0.003em;
     line-height: 1.6;
-    color: rgb(var(--ei-photon-white-rgb) / 0.58);
+    color: rgb(var(--ei-ice-white-rgb) / 0.58);
   }
 
   .ei-cta-text {
@@ -297,7 +297,7 @@
     font-weight: 500;
     letter-spacing: 0.01em;
     line-height: 1.4;
-    color: rgb(var(--ei-photon-white-rgb) / 0.90);
+    color: rgb(var(--ei-ice-white-rgb) / 0.90);
   }
 
   .ei-card-title {
@@ -306,7 +306,7 @@
     font-weight: 300;
     letter-spacing: -0.008em;
     line-height: 1.24;
-    color: rgb(var(--ei-stellar-lilac-rgb) / 0.88);
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.88);
   }
 
   .ei-card-description {
@@ -315,7 +315,7 @@
     font-weight: 400;
     letter-spacing: -0.003em;
     line-height: 1.65;
-    color: rgb(var(--ei-photon-white-rgb) / 0.62);
+    color: rgb(var(--ei-ice-white-rgb) / 0.62);
   }
 
   .ei-nav-text {
@@ -325,7 +325,7 @@
     letter-spacing: 0.02em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgb(var(--ei-photon-white-rgb) / 0.60);
+    color: rgb(var(--ei-ice-white-rgb) / 0.60);
   }
 
   .ei-footer-heading {
@@ -334,7 +334,7 @@
     font-weight: 300;
     letter-spacing: -0.015em;
     line-height: 1.05;
-    color: rgb(var(--ei-stellar-lilac-rgb) / 0.90);
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.90);
   }
 
   .ei-atmosphere-text {
@@ -343,7 +343,7 @@
     font-weight: 300;
     letter-spacing: -0.006em;
     line-height: 1.6;
-    color: rgb(var(--ei-photon-white-rgb) / 0.34);
+    color: rgb(var(--ei-ice-white-rgb) / 0.34);
     font-style: italic;
   }
 
@@ -353,6 +353,6 @@
     font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.5;
-    color: rgb(var(--ei-stellar-lilac-rgb) / 0.75);
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.75);
   }
 }

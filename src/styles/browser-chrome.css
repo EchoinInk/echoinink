@@ -17,35 +17,35 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgb(var(--ei-photon-white-rgb) / 0.08);
+    background: rgb(var(--ei-ice-white-rgb) / 0.08);
     border-radius: 3px;
     transition: background 0.3s ease;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgb(var(--ei-photon-white-rgb) / 0.15);
+    background: rgb(var(--ei-ice-white-rgb) / 0.15);
   }
 
   /* Firefox scrollbar */
   html {
     scrollbar-width: thin;
-    scrollbar-color: rgb(var(--ei-photon-white-rgb) / 0.08) transparent;
+    scrollbar-color: rgb(var(--ei-ice-white-rgb) / 0.08) transparent;
   }
 
   /* ── Text Selection ───────────────────────────────────────── */
 ::selection {
-  background: rgb(var(--ei-electric-cobalt-rgb) / 0.26);
-  color: rgb(var(--ei-photon-white-rgb) / 0.96);
+  background: rgb(var(--ei-aurora-blue-rgb) / 0.26);
+  color: rgb(var(--ei-ice-white-rgb) / 0.96);
 }
 
 ::-moz-selection {
-  background: rgb(var(--ei-electric-cobalt-rgb) / 0.26);
-  color: rgb(var(--ei-photon-white-rgb) / 0.96);
+  background: rgb(var(--ei-aurora-blue-rgb) / 0.26);
+  color: rgb(var(--ei-ice-white-rgb) / 0.96);
 }
 
 /* ── Tap Highlight (Mobile) ───────────────────────────────── */
 * {
-  -webkit-tap-highlight-color: rgb(var(--ei-electric-cobalt-rgb) / 0.16);
+  -webkit-tap-highlight-color: rgb(var(--ei-aurora-blue-rgb) / 0.16);
 }
 
 /* ── Focus Outline Treatment ──────────────────────────────── */
@@ -54,12 +54,12 @@
 }
 
 *:focus-visible {
-  outline: 1px solid rgb(var(--ei-electric-cobalt-rgb) / 0.42);
+  outline: 1px solid rgb(var(--ei-aurora-blue-rgb) / 0.42);
   outline-offset: 2px;
 
   box-shadow:
-    0 0 0 1px rgb(var(--ei-electric-cobalt-rgb) / 0.18),
-    0 0 18px rgb(var(--ei-electric-cobalt-rgb) / 0.16);
+    0 0 0 1px rgb(var(--ei-aurora-blue-rgb) / 0.18),
+    0 0 18px rgb(var(--ei-aurora-blue-rgb) / 0.16);
 }
 
   /* ── Overscroll Behavior ─────────────────────────────────── */
@@ -73,11 +73,11 @@
 
   /* ── Viewport + Background Flash Prevention ───────────────── */
   html {
-    background-color: var(--ei-cosmic-black);
+    background-color: var(--ei-void-black);
   }
 
   body {
-    background-color: var(--ei-cosmic-black);
+    background-color: var(--ei-void-black);
     min-height: 100vh;
   }
 
@@ -109,8 +109,8 @@
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
     transition: background-color 1000000s ease-in-out 0s;
-    -webkit-text-fill-color: rgb(var(--ei-photon-white-rgb) / 0.75) !important;
-    caret-color: rgb(var(--ei-photon-white-rgb) / 0.75);
+    -webkit-text-fill-color: rgb(var(--ei-ice-white-rgb) / 0.75) !important;
+    caret-color: rgb(var(--ei-ice-white-rgb) / 0.75);
   }
 
   /* ── iOS Momentum Scrolling ───────────────────────────────── */
