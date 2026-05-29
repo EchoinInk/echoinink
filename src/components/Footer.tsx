@@ -148,12 +148,6 @@ export default function Footer() {
     </span>
   </Link>
 </div>
-
-                <div className="shrink-0 opacity-30">
-                  <OrbitalVisual variant="uikit" size={56} />
-                </div>
-              </div>
-            </div>
           </div>
         </motion.div>
 
