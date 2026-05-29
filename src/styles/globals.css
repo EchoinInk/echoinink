@@ -17,6 +17,14 @@
 @tailwind utilities;
 
 @layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    background: var(--ei-void-black);
+    color: var(--ei-ice-white);
+  }
+
   html {
     scroll-behavior: smooth;
   }
