@@ -7,7 +7,7 @@ import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinem
 
 const systems = [
   {
-    variant: 'prism' as const,
+    variant: 'ember' as const,
     title: 'Identity Canvas',
     description: 'Map your essence, influence, and emotional positioning.',
     meta: 'Framework',
