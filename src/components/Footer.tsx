@@ -1,26 +1,26 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { OrbitalVisual } from '@/components/ui/OrbitalVisual';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
 import {
   atmosphericFade,
   EASE_LUXURY,
   DURATION,
   VIEWPORT,
-} from '@/system/motion/cinematic';
+} from "@/system/motion/cinematic";
 
 const navLinks = [
-  { label: 'Studio', href: '/studio' },
-  { label: 'Systems', href: '/systems' },
-  { label: 'Work', href: '/works' },
-  { label: 'Lumo', href: '/works/lumo' },
-  { label: 'About', href: '/studio' },
-  { label: 'Contact', href: '/contact' },
+  { label: "Studio", href: "/studio" },
+  { label: "Systems", href: "/systems" },
+  { label: "Work", href: "/works" },
+  { label: "Lumo", href: "/works/lumo" },
+  { label: "About", href: "/studio" },
+  { label: "Contact", href: "/contact" },
 ];
 
 const socialLinks = [
-  { label: 'IG', href: 'https://instagram.com' },
-  { label: 'LN', href: 'https://linkedin.com' },
-  { label: 'X', href: 'https://x.com' },
+  { label: "IG", href: "https://instagram.com" },
+  { label: "LN", href: "https://linkedin.com" },
+  { label: "X", href: "https://x.com" },
 ];
 
 export default function Footer() {
@@ -31,7 +31,8 @@ export default function Footer() {
         aria-hidden="true"
         className="absolute top-0 left-0 right-0 h-px pointer-events-none"
         style={{
-          background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-ice-white-rgb) / 0.06) 30%, rgb(var(--ei-ice-white-rgb) / 0.08) 50%, rgb(var(--ei-ice-white-rgb) / 0.06) 70%, transparent 100%)',
+          background:
+            "linear-gradient(90deg, transparent 0%, rgb(var(--ei-ice-white-rgb) / 0.06) 30%, rgb(var(--ei-ice-white-rgb) / 0.08) 50%, rgb(var(--ei-ice-white-rgb) / 0.06) 70%, transparent 100%)",
         }}
       />
 
@@ -40,8 +41,9 @@ export default function Footer() {
         aria-hidden="true"
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-[50%] pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 50% 50% at 50% 0%, rgb(var(--ei-luxe-violet-rgb) / 0.035) 0%, transparent 70%)',
-          filter: 'blur(80px)',
+          background:
+            "radial-gradient(ellipse 50% 50% at 50% 0%, rgb(var(--ei-luxe-violet-rgb) / 0.035) 0%, transparent 70%)",
+          filter: "blur(80px)",
         }}
       />
 
@@ -51,19 +53,23 @@ export default function Footer() {
           whileInView="visible"
           viewport={VIEWPORT.normal}
           variants={atmosphericFade}
-          transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.1 }}
+          transition={{
+            duration: DURATION.slow,
+            ease: EASE_LUXURY,
+            delay: 0.1,
+          }}
           className="pt-12 md:pt-16 pb-5"
         >
           {/* 4-column grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 items-start">
-
             {/* Col 1 — Brand */}
             <div className="col-span-2 md:col-span-1">
               <span className="font-structural text-[11px] tracking-[0.18em] uppercase text-white/75 block mb-3">
                 Echo in Ink
               </span>
               <p className="font-structural text-[12px] leading-[1.7] text-white/45 max-w-[26ch] mb-4">
-                Designing worlds that hold meaning, transform perception, and outlive trends.
+                Designing worlds that hold meaning, transform perception, and
+                outlive trends.
               </p>
             </div>
 
@@ -117,30 +123,31 @@ export default function Footer() {
 
             {/* Col 4 — Atmospheric Intelligence */}
             <div className="relative">
-               <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/35 block mb-4">
+              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/35 block mb-4">
                 Atmospheric Intelligence
-               </span>
-               <div className="flex items-end justify-between gap-5">
-               <div>
-                 <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[26ch]">
-                   Exploring the intersection of identity, emotion, and reflective technology.
+              </span>
+              <div className="flex items-end justify-between gap-5">
+                <div>
+                  <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[26ch]">
+                    Exploring the intersection of identity, emotion, and
+                    reflective technology.
                   </p>
-      <Link
-        to="/systems"
-        className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-orchid-plasma)]/60 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-400"
-      >
-        Learn more about our future systems
-        <span className="group-hover:translate-x-0.5 transition-transform duration-400">
-          →
-        </span>
-      </Link>
-    </div>
+                  <Link
+                    to="/systems"
+                    className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-orchid-plasma)]/60 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-400"
+                  >
+                    Learn more about our future systems
+                    <span className="group-hover:translate-x-0.5 transition-transform duration-400">
+                      →
+                    </span>
+                  </Link>
+                </div>
 
-    <div className="shrink-0 opacity-30">
-      <OrbitalVisual variant="uikit" size={56} />
-    </div>
-  </div>
-</div>
+                <div className="shrink-0 opacity-30">
+                  <OrbitalVisual variant="uikit" size={56} />
+                </div>
+              </div>
+            </div>
           </div>
         </motion.div>
 
@@ -150,14 +157,19 @@ export default function Footer() {
           whileInView="visible"
           viewport={VIEWPORT.normal}
           variants={atmosphericFade}
-          transition={{ duration: DURATION.slower, ease: EASE_LUXURY, delay: 0.2 }}
+          transition={{
+            duration: DURATION.slower,
+            ease: EASE_LUXURY,
+            delay: 0.2,
+          }}
           className="py-5"
         >
           <div
             aria-hidden="true"
             className="w-full h-px mb-5"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-ice-white-rgb) / 0.04) 25%, rgb(var(--ei-ice-white-rgb) / 0.05) 50%, rgb(var(--ei-ice-white-rgb) / 0.04) 75%, transparent 100%)',
+              background:
+                "linear-gradient(90deg, transparent 0%, rgb(var(--ei-ice-white-rgb) / 0.04) 25%, rgb(var(--ei-ice-white-rgb) / 0.05) 50%, rgb(var(--ei-ice-white-rgb) / 0.04) 75%, transparent 100%)",
             }}
           />
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
