@@ -128,10 +128,10 @@ export default function Footer() {
   </span>
 
   <div className="flex items-start justify-between gap-5">
-    <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[22ch]">
-      Exploring the intersection of identity, emotion, and reflective
-      technology.
-    </p>
+   <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[30ch]">
+  Exploring the intersection of identity, emotion, and reflective
+  technology.
+</p>
 
     <div className="shrink-0 pt-0.5 opacity-30">
       <OrbitalVisual variant="uikit" size={52} />
