@@ -14,11 +14,6 @@ import {
   DURATION,
 } from '@/lib/motion-cinematic';
 
-// ═══════════════════════════════════════════════════════════════
-// LUMO CASE STUDY TEASER — Cinematic editorial moment
-// Breaks from standard card patterns — more magazine, less component
-// ═══════════════════════════════════════════════════════════════
-
 const disciplines = [
   'Identity System',
   'Narrative Architecture',
@@ -29,22 +24,34 @@ const disciplines = [
 export function LumoCaseStudyTeaser() {
   const prefersReduced = useReducedMotion();
   const sectionRef = useRef<HTMLDivElement>(null);
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start end', 'end start'],
   });
 
-  const rawImageY = useTransform(scrollYProgress, [0, 1], prefersReduced ? [0, 0] : [14, -14]);
-  const imageY = useSpring(rawImageY, { stiffness: 28, damping: 44, restDelta: 0.001 });
+  const rawImageY = useTransform(
+    scrollYProgress,
+    [0, 1],
+    prefersReduced ? [0, 0] : [10, -10]
+  );
+
+  const imageY = useSpring(rawImageY, {
+    stiffness: 28,
+    damping: 44,
+    restDelta: 0.001,
+  });
 
   return (
-    <Section spacing="sm" className="overflow-hidden relative">
+    <Section spacing="sm" className="relative overflow-hidden">
+      {/* Very subtle atmospheric wash, like the mockup */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
+        className="pointer-events-none absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse 50% 35% at 65% 45%, rgb(var(--ei-ion-violet-rgb) / 0.04) 0%, transparent 60%)',
-          filter: 'blur(60px)',
+          background:
+            'radial-gradient(ellipse 45% 28% at 66% 48%, rgb(var(--ei-ion-violet-rgb) / 0.045) 0%, transparent 68%)',
+          filter: 'blur(70px)',
         }}
       />
 
@@ -54,126 +61,222 @@ export function LumoCaseStudyTeaser() {
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="max-w-6xl mx-auto"
+          className="mx-auto max-w-[1320px]"
         >
           {/* Section eyebrow */}
           <motion.div
             variants={driftUp}
-            className="flex items-center gap-3 mb-8 md:mb-10"
+            className="mb-8 flex items-center gap-3 md:mb-10"
           >
             <span className="ei-eyebrow">Featured Work</span>
-<div
-          className="h-px w-9 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-neon-magenta-rgb)/0.45)]"
-          style={{
-            background:
-              'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.15) 0%, rgb(var(--ei-neon-magenta-rgb) / 0.95) 100%)',
-          }}
-        />          </motion.div>
 
-          {/* Featured world card — 2-col split */}
-          <motion.div
+            <div
+              className="h-px w-9 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-orchid-pink-rgb)/0.35)]"
+              style={{
+                background:
+                  'linear-gradient(90deg, rgb(var(--ei-orbit-blue-rgb) / 0.12) 0%, rgb(var(--ei-orchid-pink-rgb) / 0.85) 100%)',
+              }}
+            />
+          </motion.div>
+
+          {/* Featured world card */}
+          <motion.article
             variants={blurEmergence}
-            className="relative overflow-hidden rounded-[var(--radius-card)] border border-white/10 bg-[var(--ei-deep-nebula)]/80 grid md:grid-cols-[2fr_3fr] min-h-[380px]"
+            className="
+              relative grid overflow-hidden
+              rounded-[28px]
+              border border-white/[0.085]
+              bg-[rgb(var(--ei-cosmic-black-rgb)/0.88)]
+              shadow-[0_24px_80px_rgb(0_0_0/0.28)]
+              md:grid-cols-[40%_60%]
+              lg:grid-cols-[40%_60%]
+              min-h-[330px]
+              md:min-h-[350px]
+            "
           >
-            {/* Ambient glow behind card */}
+            {/* Inner low glow */}
             <div
               aria-hidden="true"
-              className="absolute inset-0 pointer-events-none"
+              className="pointer-events-none absolute inset-0"
               style={{
-                background: 'radial-gradient(ellipse 60% 55% at 68% 50%, rgb(var(--ei-ion-violet-rgb) / 0.07) 0%, transparent 65%)',
-                filter: 'blur(40px)',
+                background:
+                  'linear-gradient(90deg, rgb(var(--ei-cosmic-black-rgb) / 0.92) 0%, rgb(var(--ei-cosmic-black-rgb) / 0.78) 38%, transparent 70%)',
               }}
             />
 
             {/* LEFT — Text content */}
             <motion.div
               variants={staggerContainer(STAGGER.normal, 0.15)}
-              className="relative z-10 flex flex-col p-10 md:p-12"
+              className="
+                relative z-10 flex flex-col
+                px-8 py-10
+                sm:px-10
+                md:px-12 md:py-12
+                lg:px-14 lg:py-14
+              "
             >
               <motion.h2
                 variants={orchestratedReveal(0, 3)}
-                className="font-editorial text-[3.5rem] md:text-[4.5rem] text-[var(--ei-text-primary)] leading-none mb-3"
-                style={{ letterSpacing: '-0.025em' }}
+                className="
+                  font-editorial
+                  text-[3.75rem]
+                  leading-[0.92]
+                  tracking-[-0.045em]
+                  text-white
+                  md:text-[4.6rem]
+                  lg:text-[5.15rem]
+                "
               >
                 LUMO
               </motion.h2>
 
               <motion.p
                 variants={orchestratedReveal(1, 3)}
-                className="font-editorial text-lg md:text-xl text-white/75 mb-5 leading-[1.35]"
-                style={{ letterSpacing: '-0.01em' }}
+                className="
+                  mt-5 max-w-[18ch]
+                  font-editorial
+                  text-[1.35rem]
+                  leading-[1.18]
+                  tracking-[-0.025em]
+                  text-white/72
+                  md:text-[1.5rem]
+                "
               >
                 A world built for overwhelmed humans.
               </motion.p>
 
               <motion.p
                 variants={orchestratedReveal(2, 3)}
-                className="font-structural text-[13px] text-white/55 leading-[1.75] max-w-[38ch] mb-auto"
+                className="
+                  mt-7 max-w-[35ch]
+                  font-structural
+                  text-[13px]
+                  leading-[1.8]
+                  tracking-[-0.01em]
+                  text-white/48
+                "
               >
-                An emotionally intelligent app shaped by an identity system built to calm cognitive noise through atmosphere, rhythm, and restraint.
+                An emotionally intelligent app shaped by an identity system built
+                to calm cognitive noise through atmosphere, rhythm, and restraint.
               </motion.p>
 
-              <motion.div variants={driftUp} className="mt-8">
+              <motion.div variants={driftUp} className="mt-auto pt-10">
                 <Link
                   to="/works/lumo"
-                  className="group inline-flex items-center gap-2.5 font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--ei-orchid-plasma)]/75 hover:text-[var(--ei-orchid-plasma)] transition-colors duration-500"
+                  className="
+                    group inline-flex items-center gap-2.5
+                    font-mono text-[10px] uppercase tracking-[0.22em]
+                    text-white/62 transition-colors duration-500
+                    hover:text-[var(--ei-orchid-pink)]
+                  "
                 >
                   <span className="relative">
                     View Case Study
-                    <span className="absolute -bottom-px left-0 w-0 h-px bg-[var(--ei-orchid-plasma)]/40 group-hover:w-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                    <span
+                      className="
+                        absolute -bottom-px left-0 h-px w-0
+                        bg-[var(--ei-orchid-pink)]/55
+                        transition-all duration-500
+                        ease-[cubic-bezier(0.22,1,0.36,1)]
+                        group-hover:w-full
+                      "
+                    />
                   </span>
-                  <span className="group-hover:translate-x-1 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">→</span>
+
+                  <span
+                    className="
+                      transition-transform duration-500
+                      ease-[cubic-bezier(0.22,1,0.36,1)]
+                      group-hover:translate-x-1
+                    "
+                  >
+                    →
+                  </span>
                 </Link>
               </motion.div>
             </motion.div>
 
-            {/* RIGHT — Parallax image */}
-            <div className="relative overflow-hidden min-h-[260px] md:min-h-0">
+            {/* RIGHT — Image */}
+            <div className="relative min-h-[260px] overflow-hidden md:min-h-full">
               <motion.div
                 className="absolute inset-0"
-                style={{ y: imageY, scale: 1.05 }}
+                style={{
+                  y: imageY,
+                  scale: 1.04,
+                }}
               >
                 <img
                   src={lumoinkdrift}
                   alt="LUMO — atmospheric UI exploration"
-                  className="w-full h-full object-cover"
+                  className="
+                    h-full w-full object-cover
+                    object-[58%_50%]
+                  "
                 />
               </motion.div>
 
-              {/* Left-edge fade to blend with text panel */}
+              {/* Mockup-style fade from text into image */}
               <div
                 aria-hidden="true"
-                className="absolute inset-y-0 left-0 w-24 pointer-events-none"
+                className="pointer-events-none absolute inset-y-0 left-0 w-[34%]"
                 style={{
-                  background: 'linear-gradient(to right, rgb(var(--ei-deep-nebula-rgb) / 0.85), transparent)',
+                  background:
+                    'linear-gradient(to right, rgb(var(--ei-cosmic-black-rgb) / 0.92) 0%, rgb(var(--ei-cosmic-black-rgb) / 0.45) 42%, transparent 100%)',
                 }}
               />
 
-              {/* Grain */}
+              {/* Darken far edges slightly */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0"
+                style={{
+                  background:
+                    'linear-gradient(180deg, rgb(0 0 0 / 0.16) 0%, transparent 35%, rgb(0 0 0 / 0.22) 100%)',
+                }}
+              />
+
+              {/* Soft grain */}
               <motion.div
                 aria-hidden="true"
-                className="absolute inset-0 mix-blend-overlay pointer-events-none"
+                className="pointer-events-none absolute inset-0 mix-blend-overlay"
                 style={{
+                  opacity: 0.025,
                   backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
                 }}
-                animate={prefersReduced ? undefined : { opacity: [0.01, 0.02, 0.01] }}
-                transition={prefersReduced ? undefined : { duration: DURATION.breath, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
+                animate={prefersReduced ? undefined : { opacity: [0.015, 0.03, 0.015] }}
+                transition={
+                  prefersReduced
+                    ? undefined
+                    : {
+                        duration: DURATION.breath,
+                        ease: 'easeInOut',
+                        repeat: Infinity,
+                        repeatType: 'mirror',
+                      }
+                }
               />
             </div>
-          </motion.div>
+          </motion.article>
 
           {/* Discipline tags strip */}
           <motion.div
             variants={driftUp}
-            className="mt-4 md:mt-5 flex flex-wrap items-center gap-x-0 gap-y-2"
+            className="
+              mt-5 flex flex-wrap items-center
+              gap-y-2
+              md:justify-end
+            "
           >
             {disciplines.map((tag, i) => (
               <span key={tag} className="flex items-center">
-                <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-white/40">
+                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/42">
                   {tag}
                 </span>
+
                 {i < disciplines.length - 1 && (
-                  <span className="font-mono text-[10px] text-white/20 mx-3">+</span>
+                  <span className="mx-4 font-mono text-[10px] text-white/24">
+                    +
+                  </span>
                 )}
               </span>
             ))}
