@@ -127,7 +127,7 @@ export default function Footer() {
   </span>
 
   <div className="flex items-start justify-between gap-5">
-   <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[30ch]">
+   <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[20ch]">
   Exploring the intersection of identity, emotion, and reflective
   technology.
 </p>
