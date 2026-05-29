@@ -1,37 +1,34 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const repoRoot = path.resolve(__dirname, '..');
+const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const exts = new Set(['.ts', '.tsx', '.js', '.jsx', '.css', '.mjs']);
 
 const replacements = [
-  // RGB first
-  ['--ei-deep-indigo-rgb', '--ei-deep-indigo-rgb'],
-  ['--ei-deep-indigo-rgb', '--ei-deep-indigo-rgb'],
-  ['--ei-aurora-blue-rgb', '--ei-aurora-blue-rgb'],
-  ['--ei-luxe-violet-rgb', '--ei-luxe-violet-rgb'],
-  ['--ei-orchid-pink-rgb', '--ei-orchid-pink-rgb'],
-  ['--ei-soft-lavender-rgb', '--ei-soft-lavender-rgb'],
-  ['--ei-deep-indigo-rgb', '--ei-deep-indigo-rgb'],
-  ['--ei-void-black-rgb', '--ei-void-black-rgb'],
-  ['--ei-ice-white-rgb', '--ei-ice-white-rgb'],
-  // Non-rgb
-  ['--ei-deep-indigo', '--ei-deep-indigo'],
-  ['--ei-deep-indigo', '--ei-deep-indigo'],
-  ['--ei-aurora-blue', '--ei-aurora-blue'],
-  ['--ei-luxe-violet', '--ei-luxe-violet'],
-  ['--ei-orchid-pink', '--ei-orchid-pink'],
-  ['--ei-soft-lavender', '--ei-soft-lavender'],
-  ['--ei-deep-indigo', '--ei-deep-indigo'],
-  ['--ei-void-black', '--ei-void-black'],
-  ['--ei-ice-white', '--ei-ice-white'],
+  ['--ei-orbit-blue-rgb', '--ei-deep-indigo-rgb'],
+  ['--ei-deep-nebula-rgb', '--ei-deep-indigo-rgb'],
+  ['--ei-electric-cobalt-rgb', '--ei-aurora-blue-rgb'],
+  ['--ei-ion-violet-rgb', '--ei-luxe-violet-rgb'],
+  ['--ei-neon-magenta-rgb', '--ei-orchid-pink-rgb'],
+  ['--ei-stellar-lilac-rgb', '--ei-soft-lavender-rgb'],
+  ['--ei-void-plum-rgb', '--ei-deep-indigo-rgb'],
+  ['--ei-cosmic-black-rgb', '--ei-void-black-rgb'],
+  ['--ei-photon-white-rgb', '--ei-ice-white-rgb'],
+  ['--ei-orbit-blue', '--ei-deep-indigo'],
+  ['--ei-deep-nebula', '--ei-deep-indigo'],
+  ['--ei-electric-cobalt', '--ei-aurora-blue'],
+  ['--ei-ion-violet', '--ei-luxe-violet'],
+  ['--ei-neon-magenta', '--ei-orchid-pink'],
+  ['--ei-stellar-lilac', '--ei-soft-lavender'],
+  ['--ei-void-plum', '--ei-deep-indigo'],
+  ['--ei-cosmic-black', '--ei-void-black'],
+  ['--ei-photon-white', '--ei-ice-white'],
 ];
 
 const legacyNames = [
   'cosmic-black','deep-nebula','orbit-blue','electric-cobalt','ion-violet','neon-magenta','stellar-lilac','void-plum','photon-white'
 ];
-
-const isBinary = (filePath) => false;
 
 function walk(dir) {
   const files = [];
@@ -49,22 +46,19 @@ function processFile(file) {
   const ext = path.extname(file);
   if (!exts.has(ext) && !/tailwind\.config\.(js|ts|mjs)$/.test(file)) return false;
   let s = fs.readFileSync(file, 'utf8');
-  let orig = s;
+  const orig = s;
 
   for (const [from, to] of replacements) {
     const rx = new RegExp(from.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&'), 'g');
     s = s.replace(rx, to);
   }
 
-  // For tokens.css: remove legacy alias section between the Backwards Compat Aliases comment and the next comment
-  if (file.endsWith(path.join('src','styles','tokens.css'))) {
+  if (file.endsWith(path.join('src', 'styles', 'tokens.css'))) {
     s = s.replace(/\/\*[\s\S]*?Backwards Compat Aliases[\s\S]*?\*\/[\s\S]*?(?=\/\*\s*─{1,} Typography Contrast)/, '');
-    // Also remove any leftover lines that define legacy --ei-...: var(--ei-...);
     s = s.split('\n').filter(line => {
       for (const ln of legacyNames) {
         if (line.includes(`--ei-${ln}:`)) return false;
       }
-      // also remove legacy -rgb aliases if present
       for (const ln of legacyNames) {
         if (line.includes(`--ei-${ln}-rgb:`)) return false;
       }
