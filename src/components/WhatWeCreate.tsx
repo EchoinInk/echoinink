@@ -69,7 +69,7 @@ export function WhatWeCreate() {
               <motion.article key={cap.title} variants={driftUp}>
                 <Link
                   to={cap.href}
-                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[var(--ei-deep-nebula)]/80 p-8 transition-all duration-500 hover:border-[var(--ei-electric-violet)]/30 hover:shadow-[0_0_60px_rgb(var(--ei-ion-violet-rgb)/0.08)] backdrop-blur-sm"
+                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[var(--ei-deep-nebula)]/80 p-6 transition-all duration-500 hover:border-[var(--ei-electric-violet)]/30 hover:shadow-[0_0_60px_rgb(var(--ei-ion-violet-rgb)/0.08)] backdrop-blur-sm"
                   aria-label={`Explore ${cap.title}`}
                 >
                   {/* Icon */}
