@@ -133,7 +133,7 @@ export default function Footer() {
 </p>
 
     <div className="shrink-0 pt-0.5 opacity-70">
-      <OrbitalVisual variant="uikit" size={52} />
+      <OrbitalVisual variant="compass" size={52} />
     </div>
   </div>
 
