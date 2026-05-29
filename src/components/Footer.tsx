@@ -118,10 +118,9 @@ export default function Footer() {
             {/* Col 4 — Atmospheric Intelligence */}
             <div className="relative">
                <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/35 block mb-4">
-    Atmospheric Intelligence
-  </span>
-
-  <div className="flex items-end justify-between gap-5">
+                Atmospheric Intelligence
+               </span>
+               <div className="flex items-end justify-between gap-5">
     <div>
       <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[26ch]">
         Exploring the intersection of identity, emotion, and reflective technology.
