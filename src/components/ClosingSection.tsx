@@ -11,16 +11,16 @@ import {
 
 export function ClosingSection() {
   return (
-    <section className="relative overflow-hidden bg-[rgb(var(--ei-cosmic-black-rgb))] py-10 md:py-20">
+    <section className="relative isolate overflow-hidden bg-[rgb(var(--ei-cosmic-black-rgb))] py-10 md:py-20">
       <CtaOrbitalBackground />
 
       {/* Soft vignette so the text stays readable */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
+        className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
-            'radial-gradient(circle at center, transparent 0%, transparent 38%, rgb(var(--ei-cosmic-black-rgb) / 0.62) 100%)',
+            'radial-gradient(circle at center, transparent 0%, transparent 42%, rgb(var(--ei-cosmic-black-rgb) / 0.55) 100%)',
         }}
       />
 
