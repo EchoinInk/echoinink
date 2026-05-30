@@ -55,10 +55,10 @@ export function Philosophy() {
             <span className="ei-eyebrow">Our Philosophy</span>
 
             <div
-              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-electric-cyan-rgb)/0.75)]"
+              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.75)]"
               style={{
                 background:
-                  'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-electric-cyan-rgb) / 0.95) 100%)',
+                  'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
               }}
             />
           </motion.div>
@@ -134,7 +134,7 @@ export function Philosophy() {
                     className="font-structural text-[12px] leading-[1.7] md:text-[13px]"
                     style={{
                       color: fragment.accent
-                        ? 'var(--ei-electric-cyan)'
+                        ? 'var(--ei-ele-blue)'
                         : 'rgb(var(--ei-ice-white-rgb) / 0.62)',
                     }}
                   >
