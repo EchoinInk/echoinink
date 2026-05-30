@@ -186,7 +186,8 @@ export function Contact() {
             background:
               'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
           }}
-        />
+        /></motion.div>
+
             <h1 className="mt-9 font-editorial text-[clamp(3.15rem,7vw,5.9rem)] leading-[0.95] tracking-normal text-white/92">
               Let's build something{' '}
               <em className="font-normal italic text-[rgb(var(--ei-soft-lavender-rgb)/0.9)]">
@@ -196,7 +197,6 @@ export function Contact() {
             <p className="mt-8 max-w-[430px] font-structural text-[1rem] leading-[1.85] text-white/58 md:text-[1.05rem]">
               Share a little about your project and I'll get back to you within two days.
             </p>
-          </motion.div>
 
           <motion.div variants={fadeSoft} className="hidden justify-center md:flex">
             <ContactOrbital />
