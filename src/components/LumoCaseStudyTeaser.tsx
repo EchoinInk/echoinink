@@ -133,7 +133,7 @@ export function LumoCaseStudyTeaser() {
               <motion.p
                 variants={orchestratedReveal(1, 3)}
                 className="
-                  mt-5 max-w-[28ch]
+                  mt-5 max-w-[18ch]
                   font-editorial
                   text-[1.35rem]
                   leading-[1.18]
@@ -175,7 +175,7 @@ export function LumoCaseStudyTeaser() {
                     <span
                       className="
                         absolute -bottom-px left-0 h-px w-0
-                        bg-[var(--ei-orchid-pink)]/55
+                        bg-[var(--ei-luxe-pink)]/55
                         transition-all duration-500
                         ease-[cubic-bezier(0.22,1,0.36,1)]
                         group-hover:w-full
