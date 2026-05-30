@@ -89,19 +89,16 @@
       rgb(var(--ei-aurora-blue-rgb) / 0.6) 100%
     );
 
+    /* ── Shadows / Rings ─────────────────────────────────────────────────────────── */
     --shadow-ei-glow:
       0 0 24px var(--glow-cobalt),
       0 0 52px var(--glow-violet);
 
-    --ring-ei-orbital: 0 0 0 1px var(--border-glow), 0 0 28px var(--glow-magenta);
-  }
+    --ring-ei-orbital:
+      0 0 0 1px var(--border-glow),
+      0 0 28px var(--glow-magenta);
 
-  body {
-    background: var(--ei-surface-deep);
-    color: var(--ei-text-primary);
-  }
-
-    /* ── Spacing scale (px → rem) ────────────────────────────────────────────────────────────────── */
+    /* ── Spacing scale ───────────────────────────────────────────────────────────── */
     --ei-space-8: 0.5rem;
     --ei-space-12: 0.75rem;
     --ei-space-16: 1rem;
@@ -112,7 +109,7 @@
     --ei-space-96: 6rem;
     --ei-space-128: 8rem;
 
-    /* ── Typography scale ────────────────────────────────────────────────────────────────────────── */
+    /* ── Typography scale ────────────────────────────────────────────────────────── */
     --ei-text-xs: 0.75rem;
     --ei-text-sm: 0.875rem;
     --ei-text-base: 1rem;
@@ -123,17 +120,26 @@
     --ei-text-3xl: 4.5rem;
     --ei-text-4xl: 6rem;
 
-    /* ── Radius & Blur ──────────────────────────────────────────────────────────────────────────── */
+    /* ── Radius & Blur ───────────────────────────────────────────────────────────── */
     --radius-card: 28px;
     --radius-button: 9999px;
     --blur-glass: blur(24px);
     --blur-atmosphere: blur(60px);
 
-    /* ── Motion ─────────────────────────────────────────────────────────────────────────────────── */
+    /* ── Motion ─────────────────────────────────────────────────────────────────── */
     --ei-ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
     --ei-duration-fast: 0.2s;
     --ei-duration-normal: 0.4s;
     --ei-duration-slow: 0.8s;
     --ei-duration-slower: 1.2s;
   }
-}}
+
+  html {
+    background: var(--ei-surface-deep);
+  }
+
+  body {
+    background: var(--ei-surface-deep);
+    color: var(--ei-text-primary);
+  }
+}
