@@ -167,7 +167,7 @@ export function LumoCaseStudyTeaser() {
                     group inline-flex items-center gap-2.5
                     font-mono text-[10px] uppercase tracking-[0.22em]
                     text-white/62 transition-colors duration-500
-                    hover:text-[var(--ei-orchid-pink)]
+                    hover:text-[var(--ei-luxe-violet)]
                   "
                 >
                   <span className="relative">
@@ -175,7 +175,7 @@ export function LumoCaseStudyTeaser() {
                     <span
                       className="
                         absolute -bottom-px left-0 h-px w-0
-                        bg-[var(--ei-luxe-pink)]/55
+                        bg-[var(--ei-luxe-violet)]/55
                         transition-all duration-500
                         ease-[cubic-bezier(0.22,1,0.36,1)]
                         group-hover:w-full
