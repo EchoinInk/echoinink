@@ -133,7 +133,7 @@ export function LumoCaseStudyTeaser() {
               <motion.p
                 variants={orchestratedReveal(1, 3)}
                 className="
-                  mt-5 max-w-[18ch]
+                  mt-5 max-w-[28ch]
                   font-editorial
                   text-[1.35rem]
                   leading-[1.18]
