@@ -2,28 +2,28 @@
   :root {
     /* ── EI Aurora Luxe Palette — Single Source of Truth ────────────────────────────────────────────── */
 
-    --ei-void-black: #060812; /* Midnight Navy - Website sections, app UI */
+    --ei-void-black: #060812; /* Website sections, app UI */
     --ei-void-black-rgb: 6 8 18;
 
-    --ei-deep-indigo: #101729; /* Steel Indigo - Cards, outlines, secondary blocks */
+    --ei-deep-indigo: #263954; /* Cards, outlines, secondary blocks */
     --ei-deep-indigo-rgb: 38 57 84;
 
-    --ei-electric-cyan: #63CBE3; /* Refined Cyan - Main accent */
+    --ei-electric-cyan: #8FCFE3; /* Main accent */
     --ei-electric-cyan-rgb: 143 207 227;
 
-    --ei-aurora-blue: #48AEE6; /* Aurora blue - Secondary blue highlight */
+    --ei-aurora-blue: #48AEE6; /* Secondary blue highlight */
     --ei-aurora-blue-rgb: 72 174 230;
 
-    --ei-orchid-pink: #7D68B3; /* Smoked Violet - Gradient bridge */
+    --ei-orchid-pink: #D98AB8; /* Gradient bridge */
     --ei-orchid-pink-rgb: 217 138 184;
 
-    --ei-luxe-violet: #C978B8; /* Soft Orchid - Warm accent, premium contrast */
+    --ei-luxe-violet: #C978B8; /* Warm accent, premium contrast */
     --ei-luxe-violet-rgb: 201 120 184;
 
-    --ei-soft-lavender: #DDD7EC; /* Mist Lavender - Borders, pale UI accents */
+    --ei-soft-lavender: #D9D7EA; /* Borders, pale UI accents */
     --ei-soft-lavender-rgb: 217 215 234;
 
-    --ei-ice-white: #F7F5FA; /* Paper white - Text on dark backgrounds */
+    --ei-ice-white: #F7F5FA; /* Text on dark backgrounds */
     --ei-ice-white-rgb: 247 245 250;
 
     /* ── Typography Contrast ─────────────────────────────────────────────────────────────────────── */
@@ -31,7 +31,7 @@
     --ei-text-secondary: rgb(var(--ei-ice-white-rgb) / 0.72);
     --ei-text-tertiary: rgb(var(--ei-ice-white-rgb) / 0.58);
     --ei-text-muted: rgb(var(--ei-soft-lavender-rgb) / 0.85);
-    --ei-text-accent: var(--ei-aurora-blue);
+    --ei-text-accent: var(--ei-electric-cyan);
     --ei-text-accent-secondary: var(--ei-orchid-pink);
 
     /* ── Surface & Background ───────────────────────────────────────────────────────────────────── */
@@ -57,21 +57,21 @@
     /* ── Gradient System ─────────────────────────────────────────────────────────────────────────── */
     --gradient-primary: linear-gradient(
       135deg,
-      var(--ei-aurora-blue) 0%,
+      var(--ei-electric-cyan) 0%,
       var(--ei-orchid-pink) 48%,
       var(--ei-luxe-violet) 100%,
     );
 
     --gradient-glow-field: radial-gradient(
       circle,
-      rgb(var(--ei-aurora-blue-rgb) / 0.45),
+      rgb(var(--ei-electric-cyan-rgb) / 0.45),
       rgb(var(--ei-orchid-pink-rgb) / 0.18),
       transparent 70%
     );
 
     --gradient-deep-space-glow: radial-gradient(
       circle at 25% 35%,
-      var(--ei-aurora-blue) 0%,
+      var(--ei-electric-cyan) 0%,
       var(--ei-deep-indigo) 36%,
       var(--ei-void-black) 72%
     );

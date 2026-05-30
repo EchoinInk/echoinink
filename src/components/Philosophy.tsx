@@ -55,10 +55,10 @@ export function Philosophy() {
             <span className="ei-eyebrow">Our Philosophy</span>
 
             <div
-              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-orchid-pink-rgb)/0.45)]"
+              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-electric-cyan-rgb)/0.75)]"
               style={{
                 background:
-                  'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-orchid-pink-rgb) / 0.95) 100%)',
+                  'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-electric-cyan-rgb) / 0.95) 100%)',
               }}
             />
           </motion.div>
@@ -113,7 +113,7 @@ export function Philosophy() {
                         className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full"
                         style={{
                           background: fragment.accent
-                            ? 'var(--ei-luxe-violet)'
+                            ? 'var(--ei-aurora-blue)'
                             : 'rgb(var(--ei-luxe-violet-rgb) / 0.45)',
                         }}
                       />
@@ -122,8 +122,8 @@ export function Philosophy() {
                         className="absolute inset-0 rounded-full blur-sm"
                         style={{
                           background: fragment.accent
-                            ? 'rgb(var(--ei-luxe-violet-rgb) / 0.3)'
-                            : 'rgb(var(--ei-luxe-violet-rgb) / 0.2)',
+                            ? 'rgb(var(--ei-aurora-blue-rgb) / 0.3)'
+                            : 'rgb(var(--ei-ice-white-rgb) / 0.2)',
                         }}
                       />
                     </span>
@@ -134,7 +134,7 @@ export function Philosophy() {
                     className="font-structural text-[12px] leading-[1.7] md:text-[13px]"
                     style={{
                       color: fragment.accent
-                        ? 'var(--ei-luxe-violet)'
+                        ? 'var(--ei-electric-cyan)'
                         : 'rgb(var(--ei-ice-white-rgb) / 0.62)',
                     }}
                   >
