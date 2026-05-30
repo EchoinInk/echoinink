@@ -180,14 +180,7 @@ export function Contact() {
           <motion.div variants={driftUp} className="max-w-[520px]">
             <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/45">
               Contact
-            </span><div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
-          style={{
-            background:
-              'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
-          }}
-        /></motion.div>
-
+            </span>
             <h1 className="mt-9 font-editorial text-[clamp(3.15rem,7vw,5.9rem)] leading-[0.95] tracking-normal text-white/92">
               Let's build something{' '}
               <em className="font-normal italic text-[rgb(var(--ei-soft-lavender-rgb)/0.9)]">
@@ -197,6 +190,7 @@ export function Contact() {
             <p className="mt-8 max-w-[430px] font-structural text-[1rem] leading-[1.85] text-white/58 md:text-[1.05rem]">
               Share a little about your project and I'll get back to you within two days.
             </p>
+          </motion.div>
 
           <motion.div variants={fadeSoft} className="hidden justify-center md:flex">
             <ContactOrbital />
