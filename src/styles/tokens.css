@@ -1,5 +1,4 @@
 @layer base {
-@layer base {
   :root {
     /* ── EI Aurora Luxe Palette — Single Source of Truth ───────────────────────────── */
     --ei-void-black: #060812;
@@ -137,4 +136,4 @@
     --ei-duration-slow: 0.8s;
     --ei-duration-slower: 1.2s;
   }
-}
+}}
