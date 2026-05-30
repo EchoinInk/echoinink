@@ -88,7 +88,7 @@ export function WhatWeCreate() {
                   </p>
 
                   {/* CTA */}
-                  <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--ei-luxe-violet)/75] group-hover:text-[var(--ei-aurora-blue)] transition-colors duration-500">
+                  <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--ei-luxe-violet)/75] group-hover:text-[var(--ei-luxe-violet)] transition-colors duration-500">
                     Explore →
                   </span>
                 </Link>
