@@ -175,7 +175,7 @@ export function Contact() {
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="grid items-center gap-14 md:grid-cols-[1.05fr_0.95fr] md:gap-20"
+          className="grid items-center gap-14 md:grid-cols-[1.35fr_0.95fr] md:gap-20"
         >
           <motion.div variants={driftUp} className="max-w-[520px]">
             <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/45">
