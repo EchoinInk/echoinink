@@ -169,7 +169,7 @@ export function Contact() {
         />
       </div>
 
-      <div className="relative z-10 ei-container max-w-[1180px] pt-36 md:pt-44 pb-24 md:pb-32">
+      <div className="relative z-10 ei-container max-w-[1480px] pt-36 md:pt-44 pb-24 md:pb-32">
         <motion.section
           variants={staggerContainer(STAGGER.cinematic, 0)}
           initial="hidden"
