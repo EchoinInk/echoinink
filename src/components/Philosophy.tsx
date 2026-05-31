@@ -77,7 +77,7 @@ export function Philosophy() {
 
               <motion.p
                 variants={driftUp}
-                className="font-structural max-w-[38ch] text-[14px] leading-[1.75] text-white/60 md:text-[15px]"
+                className="font-structural max-w-[38ch] text-[14px] leading-[1.75] text-white/68 md:text-[15px]"
               >
                 Everything we create is immersed in the invisible. A language of
                 emotion, memory, and intention.

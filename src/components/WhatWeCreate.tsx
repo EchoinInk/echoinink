@@ -83,13 +83,13 @@ export function WhatWeCreate() {
                   </h3>
 
                   {/* Description */}
-                  <p className="font-structural text-[13px] leading-[1.7] text-white/60 mb-6 flex-1">
+                  <p className="font-structural text-[13px] leading-[1.7] text-white/65 mb-6 flex-1">
                     {cap.description}
                   </p>
 
                   {/* CTA */}
-                  <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--ei-luxe-violet)/75] group-hover:text-[var(--ei-luxe-violet)] transition-colors duration-500">
-                    Explore →
+                  <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--ei-luxe-violet)/75] group-hover:text-[var(--ei-luxe-violet)] transition-colors duration-500 inline-flex items-center gap-1.5">
+                    Explore <span className="group-hover:translate-x-0.5 transition-transform duration-500">→</span>
                   </span>
                 </Link>
               </motion.article>

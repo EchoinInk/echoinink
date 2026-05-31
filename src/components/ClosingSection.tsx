@@ -88,7 +88,7 @@ export function ClosingSection() {
 
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
 
-          className="font-structural mb-3 block text-[10px] uppercase tracking-[0.28em] text-white/45 md:mb-4"
+          className="font-structural mb-3 block text-[10px] uppercase tracking-[0.28em] text-white/55 md:mb-4"
 
         >
 
@@ -146,7 +146,7 @@ export function ClosingSection() {
 
           }}
 
-          className="font-structural mx-auto mb-6 max-w-[40ch] text-[15px] leading-[1.85] text-white/60 md:mb-8 md:text-[16px]"
+          className="font-structural mx-auto mb-6 max-w-[40ch] text-[15px] leading-[1.85] text-white/68 md:mb-8 md:text-[16px]"
 
         >
 

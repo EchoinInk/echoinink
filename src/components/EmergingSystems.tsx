@@ -80,7 +80,7 @@ export function EmergingSystems() {
 
             <Link
               to="/systems"
-              className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/45 hover:text-[var(--ei-luxe-violet)] transition-colors duration-500"
+              className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/55 hover:text-[var(--ei-luxe-violet)] transition-colors duration-500"
             >
               Explore All Systems
               <span className="group-hover:translate-x-1 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">→</span>
@@ -107,12 +107,12 @@ export function EmergingSystems() {
                   </h3>
 
                   {/* Description */}
-                  <p className="font-structural text-[12px] leading-[1.7] text-white/55 mb-6 flex-1">
+                  <p className="font-structural text-[12px] leading-[1.7] text-white/62 mb-6 flex-1">
                     {system.description}
                   </p>
 
                   {/* Meta label */}
-                  <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/50">
+                  <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/58">
                     {system.meta}
                   </span>
                 </Link>

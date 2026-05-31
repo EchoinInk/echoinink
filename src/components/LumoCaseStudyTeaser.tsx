@@ -138,7 +138,7 @@ export function LumoCaseStudyTeaser() {
                   text-[1.35rem]
                   leading-[1.18]
                   tracking-[-0.025em]
-                  text-white/72
+                  text-white/78
                   md:text-[1.5rem]
                 "
               >
@@ -153,7 +153,7 @@ export function LumoCaseStudyTeaser() {
                   text-[13px]
                   leading-[1.8]
                   tracking-[-0.01em]
-                  text-white/48
+                  text-white/58
                 "
               >
                 An emotionally intelligent app shaped by an identity system built
@@ -166,7 +166,7 @@ export function LumoCaseStudyTeaser() {
                   className="
                     group inline-flex items-center gap-2.5
                     font-mono text-[10px] uppercase tracking-[0.22em]
-                    text-white/62 transition-colors duration-500
+                    text-white/70 transition-colors duration-500
                     hover:text-[var(--ei-luxe-violet)]
                   "
                 >
@@ -269,12 +269,12 @@ export function LumoCaseStudyTeaser() {
           >
             {disciplines.map((tag, i) => (
               <span key={tag} className="flex items-center">
-                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/42">
+                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/52">
                   {tag}
                 </span>
 
                 {i < disciplines.length - 1 && (
-                  <span className="mx-4 font-mono text-[10px] text-white/24">
+                  <span className="mx-4 font-mono text-[10px] text-white/32">
                     +
                   </span>
                 )}
