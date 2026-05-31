@@ -20,6 +20,7 @@ const phases = [
     label: 'Strategic Foundation',
     description: 'Understanding the inner terrain. What truth wants to emerge.',
           background: 'radial-gradient(ellipse 45% 50% at 30% 40%, rgb(var(--ei-deep-indigo-rgb) / 0.04) 0%, transparent 55%)',
+  },
   {
     label: 'Identity System',
     description: 'Translating meaning into form. Visual, narrative, and emotional coherence.',
@@ -28,14 +29,15 @@ const phases = [
     label: 'Digital Experience',
     description: 'Building the environment where the identity lives and breathes.',
           background: 'radial-gradient(ellipse 60% 40% at 70% 60%, rgb(var(--ei-luxe-violet-rgb) / 0.03) 0%, transparent 50%)',
-  {
+   },
+    {
     label: 'Atmospheric Launch',
     description: 'Release into the world with quiet confidence and lasting resonance.',
   },
 ];
 
 export function HowWeWork() {
-          background: 'linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / 0.035) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.015) 30%, transparent 70%)',
+  const background = 'linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / 0.035) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.015) 30%, transparent 70%)';
     <Section spacing="sm" className="relative overflow-hidden">
       {/* ═══════════════════════════════════════════════════════════════
           ATMOSPHERIC LAYERS — Ceremonial depth
