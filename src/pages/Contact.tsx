@@ -5,6 +5,8 @@ import { motion } from 'framer-motion';
 import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
 import sessionImage from '@/assets/Sessions 2.png';
+import nebulaDesktop from '@/assets/digital-nebula-bg.png';
+import nebulaMobile from '@/assets/digital-nebula-mobile.png';
 import {
   fadeSoft,
   driftUp,
@@ -96,32 +98,6 @@ function ContactIcon({ name }: { name: IconName }) {
   );
 }
 
-function ContactOrbital() {
-  return (
-    <div className="relative mx-auto h-[240px] w-[240px] md:h-[320px] md:w-[320px]" aria-hidden="true">
-      <div className="absolute inset-0 rounded-full border border-white/[0.035]" />
-      <div className="absolute inset-[14%] rounded-full border border-white/[0.045]" />
-      <div className="absolute inset-[28%] rounded-full border border-[rgb(var(--ei-aurora-blue-rgb)/0.075)]" />
-      <div className="absolute inset-[40%] rounded-full border border-[rgb(var(--ei-luxe-violet-rgb)/0.08)]" />
-      <div
-        className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[rgb(var(--ei-soft-lavender-rgb)/0.9)]"
-        style={{
-          boxShadow:
-            '0 0 22px rgb(var(--ei-aurora-blue-rgb) / 0.38), 0 0 46px rgb(var(--ei-luxe-violet-rgb) / 0.18)',
-        }}
-      />
-      <div
-        className="absolute inset-[34%] rounded-full"
-        style={{
-          background:
-            'radial-gradient(circle, rgb(var(--ei-aurora-blue-rgb) / 0.10) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.045) 42%, transparent 70%)',
-          filter: 'blur(18px)',
-        }}
-      />
-    </div>
-  );
-}
-
 export function Contact() {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [formData, setFormData] = useState({
@@ -176,10 +152,47 @@ export function Contact() {
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="relative flex min-h-[680px] items-center overflow-hidden pt-28 md:min-h-[760px] md:pt-20"
+          className="relative flex min-h-[58vh] items-center overflow-hidden pt-24 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]"
         >
+          <picture className="absolute inset-0 z-0 block" aria-hidden="true">
+            <source media="(min-width: 768px)" srcSet={nebulaDesktop} />
+            <img
+              src={nebulaMobile}
+              alt=""
+              className="h-full w-full object-cover object-center md:object-[72%_50%]"
+              fetchPriority="high"
+            />
+          </picture>
+
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-[1] pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(180deg, rgba(6, 8, 18, 0.15) 0%, rgba(6, 8, 18, 0.45) 100%)',
+            }}
+          />
+
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-[2] pointer-events-none"
+            style={{
+              background:
+                'radial-gradient(ellipse 54% 62% at 20% 48%, rgb(var(--ei-void-black-rgb) / 0.54) 0%, rgb(var(--ei-void-black-rgb) / 0.34) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.32) 0%, transparent 54%)',
+            }}
+          />
+
+          <div
+            aria-hidden="true"
+            className="absolute bottom-0 left-0 right-0 z-[3] h-[20vh] pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-black-rgb) / 0.34) 70%, var(--ei-void-black) 100%)',
+            }}
+          />
+
           <Container size="xl" className="relative z-10">
-            <div className="grid items-center gap-14 md:grid-cols-[minmax(0,0.62fr)_minmax(260px,0.38fr)] md:gap-16 lg:gap-20">
+            <div className="max-w-[680px]">
               <motion.div variants={driftUp} className="max-w-[680px] text-left md:pl-10 md:-translate-y-[2vh] lg:pl-14">
                 <div className="mb-3 flex items-center gap-4 md:mb-5">
                   <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
@@ -209,10 +222,6 @@ export function Contact() {
                 >
                   Share a little about your project and I'll get back to you within two days.
                 </p>
-              </motion.div>
-
-              <motion.div variants={fadeSoft} className="hidden justify-center md:flex">
-                <ContactOrbital />
               </motion.div>
             </div>
           </Container>
