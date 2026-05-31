@@ -119,15 +119,15 @@ export function EchoSelect({
         onKeyDown={handleKeyDown}
         className="
           group relative min-h-[58px] w-full overflow-hidden rounded-[14px]
-          border border-white/[0.08]
-          bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.22),rgb(var(--ei-void-black-rgb)/0.78))]
+          border border-white/[0.12]
+          bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.24),rgb(var(--ei-void-black-rgb)/0.80))]
           px-5 py-4 pr-12 text-left
           font-mono text-[13px]
-          shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04)]
+          shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
           outline-none transition-all duration-500
-          hover:border-white/[0.14]
-          hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.30),rgb(var(--ei-void-black-rgb)/0.82))]
-          focus-visible:border-[rgb(var(--ei-aurora-blue-rgb)/0.42)]
+          hover:border-white/[0.18]
+          hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.32),rgb(var(--ei-void-black-rgb)/0.86))]
+          focus-visible:border-[rgb(var(--ei-aurora-blue-rgb)/0.54)]
           focus-visible:ring-2
           focus-visible:ring-white/35
           focus-visible:ring-offset-2
@@ -141,7 +141,7 @@ export function EchoSelect({
 
         <span
           aria-hidden="true"
-          className={`pointer-events-none absolute right-5 top-1/2 z-10 -translate-y-1/2 text-[12px] text-white/45 transition-transform duration-500 ${
+          className={`pointer-events-none absolute right-5 top-1/2 z-10 -translate-y-1/2 text-[12px] text-white/55 transition-transform duration-500 ${
             isOpen ? 'rotate-180' : ''
           }`}
         >
@@ -178,7 +178,7 @@ export function EchoSelect({
             onClick={() => selectOption('')}
             className="
               relative cursor-pointer select-none rounded-[11px] px-4 py-3
-              font-mono text-[13px] text-white/55 transition-colors duration-300
+              font-mono text-[13px] text-white/60 transition-colors duration-300
               hover:bg-white/[0.07] hover:text-white/88
             "
           >

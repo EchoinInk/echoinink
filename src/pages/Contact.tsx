@@ -357,11 +357,7 @@ export function Contact() {
   type="submit"
   variant="primary"
   disabled={formState === 'submitting'}
-  className="min-h-[58px] w-full sm:w-auto"
->
-  {formState === 'submitting' ? 'Sending...' : 'Send Message'}
-</Button>
-
+  className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.9),rgb(var(--ei-void-black-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.92),rgb(var(--ei-void-black-rgb)/0.96))] focus-visible:ring-white/55 disabled:opacity-80"
                   <p className="flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65] text-white/60">
                     <span className="mt-0.5 text-white/65">
                       <ContactIcon name="lock" />
@@ -388,12 +384,7 @@ export function Contact() {
     className="absolute inset-0"
     style={{
       background:
-        'linear-gradient(90deg, rgba(6, 8, 18, 0.88) 0%, rgba(6, 8, 18, 0.72) 35%, rgba(6, 8, 18, 0.38) 100%)',
-    }}
-  />
-
-  <div
-    aria-hidden="true"
+        'linear-gradient(90deg, rgba(6, 8, 18, 0.92) 0%, rgba(6, 8, 18, 0.80) 35%, rgba(6, 8, 18, 0.48) 100%)',
     className="absolute inset-0"
     style={{
       background:

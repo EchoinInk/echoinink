@@ -82,7 +82,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       to={link.href}
-                      className="font-structural text-[12px] text-white/65 hover:text-white/90 transition-colors duration-400"
+                      className="font-structural text-[12px] text-white/70 hover:text-white/90 transition-colors duration-400"
                     >
                       {link.label}
                     </Link>
@@ -112,7 +112,7 @@ export default function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-[10px] tracking-[0.14em] text-white/65 hover:text-white/80 transition-colors duration-400"
+                    className="font-mono text-[10px] tracking-[0.14em] text-white/68 hover:text-white/82 transition-colors duration-400"
                   >
                     {s.label}
                   </a>
@@ -139,7 +139,7 @@ export default function Footer() {
 
   <Link
     to="/systems"
-    className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-luxe-violet)]/60 hover:text-[var(--ei-luxe-violet)] transition-colors duration-400"
+    className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-luxe-violet)]/70 hover:text-[var(--ei-luxe-violet)] transition-colors duration-400"
   >
     Learn more about our future systems
     <span className="group-hover:translate-x-0.5 transition-transform duration-400">
