@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
+import { NumberedSectionLabel } from '@/components/editorial/NumberedSectionLabel';
 import { PhilosophyCard } from '@/components/studio/PhilosophyCard';
-import { SectionLabel } from '@/components/studio/SectionLabel';
 import { valueItems } from '@/data/studioContent';
 import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
 
@@ -11,11 +11,11 @@ export function ValuesGrid() {
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className="py-[clamp(4rem,10vw,7.5rem)]"
+      className="py-[clamp(5rem,12vw,7.5rem)]"
       aria-labelledby="values-heading"
     >
       <motion.div variants={driftUp}>
-        <SectionLabel>03 — Values</SectionLabel>
+        <NumberedSectionLabel number="03" label="Values" />
       </motion.div>
 
       <motion.h2 id="values-heading" variants={driftUp} className="sr-only">
@@ -24,7 +24,7 @@ export function ValuesGrid() {
 
       <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 md:gap-6">
         {valueItems.map((item, index) => (
-          <PhilosophyCard key={item.title} {...item} index={index} compact />
+          <PhilosophyCard key={item.title} {...item} index={index} variant="value" />
         ))}
       </div>
     </motion.section>

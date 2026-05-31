@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
+import { NumberedSectionLabel } from '@/components/editorial/NumberedSectionLabel';
 import { PhilosophyCard } from '@/components/studio/PhilosophyCard';
-import { SectionLabel } from '@/components/studio/SectionLabel';
 import { philosophyItems } from '@/data/studioContent';
 import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
 
@@ -11,24 +11,20 @@ export function PhilosophyGrid() {
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className="py-[clamp(4rem,10vw,7.5rem)]"
+      className="py-[clamp(5rem,12vw,7.5rem)]"
       aria-labelledby="philosophy-heading"
     >
       <motion.div variants={driftUp}>
-        <SectionLabel>02 — Philosophy</SectionLabel>
+        <NumberedSectionLabel number="02" label="Philosophy" />
       </motion.div>
 
-      <motion.h2
-        id="philosophy-heading"
-        variants={driftUp}
-        className="sr-only"
-      >
+      <motion.h2 id="philosophy-heading" variants={driftUp} className="sr-only">
         Philosophy
       </motion.h2>
 
       <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-7">
         {philosophyItems.map((item, index) => (
-          <PhilosophyCard key={item.title} {...item} index={index} />
+          <PhilosophyCard key={item.title} {...item} index={index} variant="philosophy" />
         ))}
       </div>
     </motion.section>

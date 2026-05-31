@@ -13,16 +13,21 @@ export interface ValueItem {
 }
 
 export const originCopy = {
-  label: '01 — Origin',
-  heading: 'Echo in Ink began quietly — not as a plan, but as a response.',
+  number: '01',
+  label: 'Origin',
+  heading: 'Echo in Ink began quietly —\nnot as a plan, but as a response.',
   paragraphs: [
-    'A fatigue with work that looked polished but felt hollow. With brands performing coherence instead of embodying it. With design reduced to aesthetics instead of emotional structure.',
-    'This studio formed as a counter-space. Where identity is approached with care. Where atmosphere carries meaning. Where clarity does not require self-erasure.',
+    'A fatigue with work that looked polished but felt hollow. With brands performing coherence instead of embodying it.',
+    'This studio formed as a counter-space.',
+    'Where identity is approached with care. Where atmosphere carries meaning. Where clarity does not require self-erasure.',
   ],
 };
 
-export const studioQuote =
-  'Not creating identity. Protecting what is true from being lost in expression.';
+export const studioQuoteLines = [
+  'Not creating identity.',
+  'Protecting what is true',
+  'from being lost in expression.',
+];
 
 export const philosophyItems: PhilosophyItem[] = [
   {
@@ -40,7 +45,7 @@ export const philosophyItems: PhilosophyItem[] = [
   {
     title: 'Atmosphere is Information',
     description:
-      'Nothing is neutral. Spacing, rhythm, motion, silence — all carry meaning.',
+      'Nothing is neutral. Spacing, rhythm, motion and silence all carry meaning. Atmosphere shapes how a message is received.',
     icon: 'pulse',
   },
 ];

@@ -1,5 +1,6 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
+import { EyebrowLabel } from '@/components/editorial/EyebrowLabel';
 import {
   blurEmergence,
   driftUp,
@@ -27,7 +28,6 @@ export function StudioHero({
   mobileImage,
   imageAlt,
 }: StudioHeroProps) {
-  const prefersReducedMotion = useReducedMotion();
   const titleParts = italicWord
     ? title.split(new RegExp(`(${italicWord})`, 'i'))
     : [title];
@@ -42,7 +42,7 @@ export function StudioHero({
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 50% 45% at 72% 42%, rgb(var(--ei-luxe-violet-rgb) / 0.06) 0%, transparent 68%), radial-gradient(ellipse 40% 35% at 20% 20%, rgb(var(--ei-aurora-blue-rgb) / 0.04) 0%, transparent 70%)',
+            'radial-gradient(ellipse 42% 38% at 78% 44%, rgb(var(--ei-luxe-violet-rgb) / 0.05) 0%, transparent 68%)',
         }}
       />
 
@@ -52,33 +52,20 @@ export function StudioHero({
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-16 xl:gap-20"
+          className="grid items-center gap-12 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:gap-14 lg:gap-16"
         >
-          <div className="max-w-[640px]">
-            <motion.div variants={driftUp} className="mb-5 flex items-center gap-4">
-              <span
-                className="font-structural text-[11px] uppercase tracking-[0.2em]"
-                style={{ color: 'var(--ei-text-tertiary)' }}
-              >
-                {eyebrow}
-              </span>
-              <div
-                className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
-                style={{
-                  background:
-                    'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
-                }}
-                aria-hidden="true"
-              />
+          <div className="max-w-[520px]">
+            <motion.div variants={driftUp} className="mb-6 md:mb-8">
+              <EyebrowLabel>{eyebrow}</EyebrowLabel>
             </motion.div>
 
             <motion.h1
               id="studio-hero-heading"
               variants={blurEmergence}
-              className="font-editorial text-[clamp(2.35rem,4.5vw,3.85rem)] leading-[1.06] tracking-tight"
+              className="font-editorial text-[clamp(2.35rem,4.2vw,3.75rem)] leading-[1.06] tracking-tight"
               style={{
                 color: 'var(--ei-text-primary)',
-                textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.08)',
+                textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.06)',
               }}
             >
               {italicWord
@@ -106,48 +93,42 @@ export function StudioHero({
 
             <motion.p
               variants={driftUp}
-              className="mt-6 max-w-[38ch] font-structural text-[15px] leading-[1.7] md:text-[16px]"
+              className="mt-6 max-w-[36ch] font-structural text-[15px] leading-[1.72] md:text-[16px]"
               style={{ color: 'var(--ei-text-secondary)' }}
             >
               {description}
             </motion.p>
           </div>
 
-          <motion.div variants={blurEmergence} className="relative mx-auto w-full max-w-[640px] lg:max-w-none">
-            <div
-              aria-hidden="true"
-              className="pointer-events-none absolute -inset-[12%] rounded-full opacity-70"
-              style={{
-                background:
-                  'radial-gradient(ellipse 58% 58% at 50% 48%, rgb(var(--ei-luxe-violet-rgb) / 0.14) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.06) 42%, transparent 72%)',
-                filter: 'blur(40px)',
-              }}
-            />
+          <motion.div variants={blurEmergence} className="relative w-full">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] md:aspect-[5/4] lg:aspect-[16/11]">
+              <picture className="absolute inset-0 block">
+                <source media="(min-width: 768px)" srcSet={image} />
+                <img
+                  src={mobileImage}
+                  alt={imageAlt}
+                  className="h-full w-full object-cover object-[58%_50%]"
+                />
+              </picture>
 
-            <picture className="relative block">
-              <source media="(min-width: 768px)" srcSet={image} />
-              <motion.img
-                src={mobileImage}
-                alt={imageAlt}
-                className="relative z-[1] mx-auto w-full max-w-[520px] object-contain lg:max-w-none"
+              <div
+                aria-hidden="true"
+                className="absolute inset-0"
                 style={{
-                  maskImage:
-                    'radial-gradient(ellipse 72% 72% at 50% 48%, black 42%, transparent 100%)',
-                  WebkitMaskImage:
-                    'radial-gradient(ellipse 72% 72% at 50% 48%, black 42%, transparent 100%)',
+                  background:
+                    'linear-gradient(90deg, rgba(5, 7, 13, 0.9) 0%, rgba(5, 7, 13, 0.2) 55%, rgba(5, 7, 13, 0.05) 100%)',
                 }}
-                animate={
-                  prefersReducedMotion
-                    ? undefined
-                    : { y: [0, -6, 0] }
-                }
-                transition={
-                  prefersReducedMotion
-                    ? undefined
-                    : { duration: 14, ease: 'easeInOut', repeat: Infinity }
-                }
               />
-            </picture>
+
+              <div
+                aria-hidden="true"
+                className="absolute inset-0"
+                style={{
+                  background:
+                    'radial-gradient(ellipse 70% 65% at 72% 48%, transparent 35%, rgb(var(--ei-void-black-rgb) / 0.45) 100%)',
+                }}
+              />
+            </div>
           </motion.div>
         </motion.div>
       </Container>
