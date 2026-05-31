@@ -6,8 +6,8 @@ import { OriginSection } from '@/components/studio/OriginSection';
 import { PhilosophyGrid } from '@/components/studio/PhilosophyGrid';
 import { ValuesGrid } from '@/components/studio/ValuesGrid';
 import { ProjectCTA } from '@/components/works/ProjectCTA';
-import heroDesktop from '@/assets/imagery/hero/hero-01.png';
-import heroLandscape from '@/assets/imagery/backgrounds/hero-01.png';
+import studioHeroDesktop from '@/assets/imagery/hero/studio-hero.png';
+import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.png';
 import { motion } from 'framer-motion';
 import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
 
