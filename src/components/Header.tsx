@@ -4,7 +4,7 @@ import { DURATION } from '@/lib/motion-cinematic';
 import wordmark from "@/assets/brand/marks/echo-in-ink-wordmark.png";
 
 const navItems = [
-  { label: "Studio", href: "/" },
+  { label: "Studio", href: "/studio" },
   { label: "Works", href: "/works" },
   { label: "Identity", href: "/identity" },
   { label: "Sessions", href: "/sessions" },
