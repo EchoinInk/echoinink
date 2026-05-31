@@ -18,11 +18,12 @@ export function Studio() {
       </Helmet>
    
       <Section>
-      <Container><h1 className="font-serif text-4xl md:text-5xl tracking-tight">
-            Works
+      <Container>
+        <h1 className="font-serif text-4xl md:text-5xl tracking-tight">
+            Studio
           </h1>
           <p className="mt-4 text-lg text-muted">
-            Selected expressions of translation.
+          The philosophy behind the worlds.
           </p>
           <p className="mt-1 text-sm text-muted/70">
             Where inner worlds become visible form.
