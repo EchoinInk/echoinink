@@ -44,7 +44,7 @@ export function Studio() {
           <OriginSection />
           <PhilosophyGrid />
           <ValuesGrid />
-          </div>
+        </div>
           </motion.section>
 
           <div className="pt-[clamp(5rem,10vw,7.5rem)]">
