@@ -16,10 +16,19 @@ export function Studio() {
       <Helmet>
         <title>Studio | Echo In Ink</title>
       </Helmet>
-      <PageShell atmosphere="studio" withTopSpacing={false}>
    
-      <StudioHero
-        eyebrow="Studio"
+      <Section>
+      <Container><h1 className="font-serif text-4xl md:text-5xl tracking-tight">
+            Works
+          </h1>
+          <p className="mt-4 text-lg text-muted">
+            Selected expressions of translation.
+          </p>
+          <p className="mt-1 text-sm text-muted/70">
+            Where inner worlds become visible form.
+          </p>
+        </Container>
+      </Section>
         title="The philosophy behind the worlds."
         italicWord="worlds."
         description="Translating inner worlds into coherent external form."
