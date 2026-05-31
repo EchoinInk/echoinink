@@ -112,7 +112,7 @@ export function EmergingSystems() {
                   </p>
 
                   {/* Meta label */}
-                  <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/35">
+                  <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/50">
                     {system.meta}
                   </span>
                 </Link>

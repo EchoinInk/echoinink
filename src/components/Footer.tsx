@@ -74,7 +74,7 @@ export default function Footer() {
 
             {/* Col 2 — Navigation */}
             <nav aria-label="Footer navigation">
-              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/35 block mb-4">
+              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/50 block mb-4">
                 Navigation
               </span>
               <ul className="space-y-2.5">
@@ -93,7 +93,7 @@ export default function Footer() {
 
             {/* Col 3 — Connect */}
             <div>
-              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/35 block mb-4">
+              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/5 block mb-4">
                 Connect
               </span>
               <a
