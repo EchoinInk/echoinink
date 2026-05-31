@@ -56,14 +56,9 @@ export function Studio() {
               }
               buttonLabel="Work with the Studio"
               buttonHref="/contact"
-              secondaryLinks={[
-                { label: 'Book a Session', href: '/sessions' },
-                { label: 'Explore the Works', href: '/works' },
-              ]}
               backgroundImage={studioCTABg}
             />
           </div>
-        </div>
       </Container>
     </PageShell>
   );
