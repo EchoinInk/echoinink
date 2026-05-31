@@ -17,15 +17,14 @@ import {
   VIEWPORT
 } from '@/lib/motion-cinematic';
 
-const explorationOptions = [
-  'Identity System',
-  'Website Experience',
-  'Creative Direction',
-  'Lumo',
-  'Partnership',
-  'Something Else',
+const projectOptions = [
+  { label: 'Identity System', value: 'identity-system' },
+  { label: 'Website Experience', value: 'website-experience' },
+  { label: 'Creative Direction', value: 'creative-direction' },
+  { label: 'Lumo', value: 'lumo' },
+  { label: 'Partnership', value: 'partnership' },
+  { label: 'Something Else', value: 'something-else' },
 ];
-
 const budgetOptions = [
   'Under $2k',
   '$2k-5k',
@@ -317,18 +316,18 @@ export function Contact() {
 
                 <div className="space-y-3">
                   <label htmlFor="exploration" className="ei-form-label">What are you exploring?</label>
-                  <select
-                    id="exploration"
-                    name="exploration"
-                    value={formData.exploration}
-                    onChange={handleChange}
-                    className="ei-form-select"
-                  >
-                    <option value="">Select an option</option>
-                    {explorationOptions.map(option => (
-                      <option key={option} value={option}>{option}</option>
-                    ))}
-                  </select>
+                  <EchoSelect
+  label="What are you exploring?"
+  value={formData.projectType}
+  onChange={(value) =>
+    setFormData((current) => ({
+      ...current,
+      projectType: value,
+    }))
+  }
+  options={projectOptions}
+  placeholder="Select an option"
+/>
                 </div>
 
                 <div className="space-y-3">
