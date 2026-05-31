@@ -86,7 +86,8 @@ export function Studio() {
 
           <QuoteCard lines={studioQuoteLines} />
         </motion.section>
-
+</Container>
+<Container size="xl" className="relative z-10">
         <motion.section
           variants={fadeSoft}
           initial="hidden"
@@ -114,7 +115,7 @@ export function Studio() {
             ))}
           </div>
         </motion.section>
-
+</
         <ValuesGrid />
 
         <div className="mx-auto mt-16 max-w-[1180px] md:mt-24">
@@ -125,8 +126,7 @@ export function Studio() {
             buttonLabel="Work with the Studio"
             buttonHref="/contact"
             backgroundImage={studioCTABg}
-          />
-        </section>
+          /></div>
       </Container>
     </PageShell>
   );
