@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { DURATION } from '@/lib/motion-cinematic';
-import wordmark from "@/assets/marks/echo-in-ink-wordmark.png";
+import wordmark from "@/assets/brand/marks/echo-in-ink-wordmark.png";
 
 const navItems = [
   { label: "Studio", href: "/" },
