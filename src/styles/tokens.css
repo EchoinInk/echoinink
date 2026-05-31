@@ -129,15 +129,15 @@
         180deg,
         rgb(var(--ei-void-black-rgb) / 0) 0%,
         rgb(var(--ei-void-black-rgb) / 0.72) 100%
-  );
+       );
 
---ei-image-overlay-left:
-  linear-gradient(
-    90deg,
-    rgb(var(--ei-void-black-rgb) / 0.86) 0%,
-    rgb(var(--ei-void-black-rgb) / 0.48) 45%,
-    rgb(var(--ei-void-black-rgb) / 0) 100%
-  );
+      --ei-image-overlay-left:
+        linear-gradient(
+          90deg,
+          rgb(var(--ei-void-black-rgb) / 0.86) 0%,
+          rgb(var(--ei-void-black-rgb) / 0.48) 45%,
+          rgb(var(--ei-void-black-rgb) / 0) 100%
+        );
     /* ── Spacing scale ───────────────────────────────────────────────────────────── */
     --ei-space-8: 0.5rem;
     --ei-space-12: 0.75rem;
