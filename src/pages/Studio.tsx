@@ -5,11 +5,11 @@ import { EditorialHero } from '@/components/hero/EditorialHero';
 import { OriginSection } from '@/components/studio/OriginSection';
 import { PhilosophyGrid } from '@/components/studio/PhilosophyGrid';
 import { ValuesGrid } from '@/components/studio/ValuesGrid';
-import { StudioCTA } from '@/components/studio/StudioCTA';
-import studioHeroDesktop from '@/assets/imagery/hero/studio-hero.png';
-import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.png';
+import { ProjectCTA } from '@/components/works/ProjectCTA';
+import heroDesktop from '@/assets/imagery/hero/hero-01.png';
 import heroLandscape from '@/assets/imagery/backgrounds/hero-01.png';
 import { motion } from 'framer-motion';
+import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
 
 export function Studio() {
   return (
@@ -47,7 +47,7 @@ export function Studio() {
           </motion.section>
 
           <div className="pt-[clamp(5rem,10vw,7.5rem)]">
-            <StudioCTA
+            <ProjectCTA
               eyebrow="Continue the conversation"
               heading="Aligned in philosophy?"
               body={
