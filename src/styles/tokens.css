@@ -112,23 +112,23 @@
     --ei-card-border-hover: rgb(var(--ei-aurora-blue-rgb) / 0.34);
 
     --ei-card-shadow-hover:
-  0 0 32px rgb(var(--ei-aurora-blue-rgb) / 0.12),
-  0 0 64px rgb(var(--ei-luxe-violet-rgb) / 0.10);
+      0 0 32px rgb(var(--ei-aurora-blue-rgb) / 0.12),
+      0 0 64px rgb(var(--ei-luxe-violet-rgb) / 0.10);
 
---ei-button-bg: rgb(var(--ei-deep-indigo-rgb) / 0.42);
---ei-button-bg-hover: rgb(var(--ei-aurora-blue-rgb) / 0.18);
---ei-button-border: rgb(var(--ei-soft-lavender-rgb) / 0.16);
---ei-button-border-hover: rgb(var(--ei-aurora-blue-rgb) / 0.42);
+      --ei-button-bg: rgb(var(--ei-deep-indigo-rgb) / 0.42);
+      --ei-button-bg-hover: rgb(var(--ei-aurora-blue-rgb) / 0.18);
+      --ei-button-border: rgb(var(--ei-soft-lavender-rgb) / 0.16);
+      --ei-button-border-hover: rgb(var(--ei-aurora-blue-rgb) / 0.42);
 
---ei-filter-bg: rgb(var(--ei-deep-indigo-rgb) / 0.18);
---ei-filter-bg-active: rgb(var(--ei-aurora-blue-rgb) / 0.15);
---ei-filter-border-active: rgb(var(--ei-aurora-blue-rgb) / 0.38);
+      --ei-filter-bg: rgb(var(--ei-deep-indigo-rgb) / 0.18);
+      --ei-filter-bg-active: rgb(var(--ei-aurora-blue-rgb) / 0.15);
+      --ei-filter-border-active: rgb(var(--ei-aurora-blue-rgb) / 0.38);
 
---ei-image-overlay-soft:
-  linear-gradient(
-    180deg,
-    rgb(var(--ei-void-black-rgb) / 0) 0%,
-    rgb(var(--ei-void-black-rgb) / 0.72) 100%
+      --ei-image-overlay-soft:
+        linear-gradient(
+        180deg,
+        rgb(var(--ei-void-black-rgb) / 0) 0%,
+        rgb(var(--ei-void-black-rgb) / 0.72) 100%
   );
 
 --ei-image-overlay-left:
