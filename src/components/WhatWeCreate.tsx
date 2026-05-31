@@ -69,7 +69,7 @@ export function WhatWeCreate() {
               <motion.article key={cap.title} variants={driftUp}>
                 <Link
                   to={cap.href}
-                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[var(--ei-deep-indigo)]/80 p-6 transition-all duration-500 hover:border-[var(--ei-luxe-violet)]/30 hover:shadow-[0_0_60px_rgb(var(--ei-luxe-violet-rgb)/0.08)] backdrop-blur-sm"
+                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[var(--ei-deep-indigo)]/80 p-6 transition-all duration-500 motion-reduce:transition-none hover:border-[var(--ei-luxe-violet)]/40 hover:shadow-[inset_0_10px_40px_rgb(var(--ei-luxe-violet-rgb)/0.04),0_18px_50px_rgb(0_0_0_/_0.36)] hover:-translate-y-[2px] motion-reduce:transform-none backdrop-blur-sm"
                   aria-label={`Explore ${cap.title}`}
                 >
                   {/* Icon */}
@@ -83,13 +83,13 @@ export function WhatWeCreate() {
                   </h3>
 
                   {/* Description */}
-                  <p className="font-structural text-[13px] leading-[1.7] text-white/65 mb-6 flex-1">
+                  <p className="font-structural text-[13px] leading-[1.7] text-white/68 mb-6 flex-1">
                     {cap.description}
                   </p>
 
                   {/* CTA */}
                   <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--ei-luxe-violet)/75] group-hover:text-[var(--ei-luxe-violet)] transition-colors duration-500 inline-flex items-center gap-1.5">
-                    Explore <span className="group-hover:translate-x-0.5 transition-transform duration-500">→</span>
+                    Explore <span className="group-hover:translate-x-0.5 motion-reduce:transition-none transition-transform duration-500">→</span>
                   </span>
                 </Link>
               </motion.article>

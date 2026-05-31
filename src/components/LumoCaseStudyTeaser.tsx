@@ -166,8 +166,8 @@ export function LumoCaseStudyTeaser() {
                   className="
                     group inline-flex items-center gap-2.5
                     font-mono text-[10px] uppercase tracking-[0.22em]
-                    text-white/70 transition-colors duration-500
-                    hover:text-[var(--ei-luxe-violet)]
+                    text-white/76 transition-colors duration-500
+                    hover:text-[var(--ei-luxe-violet)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.32)]
                   "
                 >
                   <span className="relative">
@@ -175,7 +175,7 @@ export function LumoCaseStudyTeaser() {
                     <span
                       className="
                         absolute -bottom-px left-0 h-px w-0
-                        bg-[var(--ei-luxe-violet)]/55
+                        bg-[var(--ei-luxe-violet)]/70
                         transition-all duration-500
                         ease-[cubic-bezier(0.22,1,0.36,1)]
                         group-hover:w-full

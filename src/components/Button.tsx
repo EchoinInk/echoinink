@@ -85,11 +85,11 @@ export function Button({
       text-[9px]
       tracking-[0.2em]
 
-      text-white/68
-      hover:text-white/88
+      text-white/60
+      hover:text-white/82
 
-      border border-white/[0.08]
-      hover:border-white/[0.16]
+      border border-white/[0.06]
+      hover:border-white/[0.14]
 
       bg-black/[0.22]
       hover:bg-black/[0.28]
