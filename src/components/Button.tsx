@@ -1,124 +1,147 @@
-import type { ReactNode } from 'react';
+import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
-  onClick?: () => void;
   to?: string;
   variant?: 'primary' | 'secondary' | 'tertiary';
 }
 
-export function Button({ children, onClick, to, variant = 'primary' }: ButtonProps) {
+export function Button({
+  children,
+  onClick,
+  to,
+  variant = 'primary',
+  className = '',
+  type = 'button',
+  disabled,
+  ...props
+}: ButtonProps) {
   // CTA Hierarchy System — clear visual weight differentiation
   // Primary: Confident, filled glow, strongest presence
   // Secondary: Ghost button, calmer presence
   // Tertiary: Text link, minimal presence
-  
+
   const baseClasses = `
-  relative isolate
-  inline-flex items-center justify-center
+    relative isolate
+    inline-flex items-center justify-center
 
-  font-structural uppercase
+    font-structural uppercase
 
-  transition-all duration-700
-  ease-[cubic-bezier(0.22,1,0.36,1)]
+    transition-all duration-700
+    ease-[cubic-bezier(0.22,1,0.36,1)]
 
-  focus:outline-none
-  touch-manipulation
+    focus-visible:outline-none
+    focus-visible:ring-2
+    focus-visible:ring-white/45
+    focus-visible:ring-offset-2
+    focus-visible:ring-offset-[#05070D]
 
-  min-h-[48px] md:min-h-0
-`;
+    touch-manipulation
 
-const variants = {
-  /* PRIMARY — Atmospheric cinematic CTA */
-  primary: `
-    ei-btn-primary-cinematic
-    group
+    disabled:pointer-events-none
+    disabled:cursor-not-allowed
+    disabled:opacity-50
 
-    px-8 py-4
+    min-h-[48px] md:min-h-0
+  `;
 
-    rounded-full
+  const variants = {
+    /* PRIMARY — Atmospheric cinematic CTA */
+    primary: `
+      ei-btn-primary-cinematic
+      group
 
-    text-[10px]
-    tracking-[0.18em]
-    font-medium
+      px-8 py-4
 
-    text-white/[0.92]
-    hover:text-white
+      rounded-full
 
-    border-[var(--ei-aurora-blue)]/[0.16]
-    hover:border-[var(--ei-aurora-blue)]/[0.28]
+      text-[10px]
+      tracking-[0.18em]
+      font-medium
 
-    bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.82),rgb(var(--ei-void-black-rgb)/0.92))]
+      text-white/[0.92]
+      hover:text-white
 
-    shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.06)]
+      border border-[rgb(var(--ei-aurora-blue-rgb)/0.16)]
+      hover:border-[rgb(var(--ei-aurora-blue-rgb)/0.28)]
 
-    hover:-translate-y-[1px]
-    active:translate-y-0
-  `,
+      bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.82),rgb(var(--ei-void-black-rgb)/0.92))]
 
-  /* SECONDARY — Quiet ghost */
-  secondary: `
-    group
+      shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.06)]
 
-    px-6 py-3
+      hover:-translate-y-[1px]
+      active:translate-y-0
+    `,
 
-    rounded-full
+    /* SECONDARY — Quiet ghost */
+    secondary: `
+      group
 
-    text-[9px]
-    tracking-[0.2em]
+      px-6 py-3
 
-    text-white/68
-    hover:text-white/88
+      rounded-full
 
-    border border-white/[0.06]
-    hover:border-white/[0.12]
+      text-[9px]
+      tracking-[0.2em]
 
-    bg-black/[0.22]
-    hover:bg-black/[0.28]
+      text-white/68
+      hover:text-white/88
 
-    shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04)]
+      border border-white/[0.08]
+      hover:border-white/[0.16]
 
-    hover:-translate-y-[1px]
-    active:translate-y-0
-  `,
+      bg-black/[0.22]
+      hover:bg-black/[0.28]
 
-  /* TERTIARY — Minimal editorial link */
-  tertiary: `
-    group
+      shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04)]
 
-    text-[10px]
-    tracking-[0.14em]
+      hover:-translate-y-[1px]
+      active:translate-y-0
+    `,
 
-    text-white/56
-    hover:text-white/82
+    /* TERTIARY — Minimal editorial link */
+    tertiary: `
+      group
 
-    bg-transparent
-  `,
+      text-[10px]
+      tracking-[0.14em]
+
+      text-white/60
+      hover:text-white/86
+
+      bg-transparent
+    `,
   };
 
-  const className = `${baseClasses} ${variants[variant]}`;
+  const buttonClassName = `${baseClasses} ${variants[variant]} ${className}`;
 
   const content = (
     <>
       <span className="relative z-10">{children}</span>
+
       {variant === 'tertiary' && (
-        <span className="absolute bottom-0 left-0 w-0 h-px bg-white/30 group-hover:w-full transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]" />
+        <span className="absolute bottom-0 left-0 h-px w-0 bg-white/35 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:w-full" />
       )}
     </>
   );
 
   if (to) {
     return (
-      <Link to={to} className={className}>
+      <Link to={to} className={buttonClassName}>
         {content}
       </Link>
     );
   }
 
   return (
-    <button onClick={onClick} className={className}>
+    <button
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+      className={buttonClassName}
+      {...props}
+    >
       {content}
     </button>
   );
