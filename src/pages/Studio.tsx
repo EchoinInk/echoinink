@@ -209,7 +209,14 @@ export function Studio() {
         },
       ]}
     /><div className="mt-6 flex flex-wrap items-center gap-6">
-    {secondaryLinks?.map((link) => (
+    {[{
+      label: 'Book a Session',
+      href: '/sessions',
+    },
+    {
+      label: 'Explore the Works',
+      href: '/works',
+    },]?.map((link) => (
       <Link
         key={link.href}
         to={link.href}

@@ -1,4 +1,6 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+
 import { Button } from '@/components/Button';
 import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
 
@@ -9,7 +11,6 @@ type ProjectCTAProps = {
   buttonLabel: string;
   buttonHref: string;
   backgroundImage: string;
-
   secondaryLinks?: {
     label: string;
     href: string;
@@ -23,6 +24,7 @@ export function ProjectCTA({
   buttonLabel,
   buttonHref,
   backgroundImage,
+  secondaryLinks,
 }: ProjectCTAProps) {
   return (
     <motion.section
@@ -78,37 +80,37 @@ export function ProjectCTA({
           </p>
         </div>
 
-        <Button
-          to={buttonHref}
-          variant="secondary"
-          className="min-h-[42px] gap-3 self-start px-5 py-3"
-        >
-          {buttonLabel}
-          <span aria-hidden="true">→</span>
-        </Button>
-        <div className="mt-8">
-  <Button href={buttonHref}>
-    {buttonLabel}
-  </Button>
+        <div>
+          <Button
+            to={buttonHref}
+            variant="secondary"
+            className="min-h-[42px] gap-3 self-start px-5 py-3"
+          >
+            {buttonLabel}
+            <span aria-hidden="true">→</span>
+          </Button>
 
-  {secondaryLinks?.length ? (
-    <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
-      {secondaryLinks.map((link) => (
-        <Link
-          key={link.href}
-          to={link.href}
-          className="group inline-flex items-center"
-          style={{ color: 'var(--ei-text-secondary)' }}
-        >
-          {link.label}
-          <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
-            →
-          </span>
-        </Link>
-      ))}
-    </div>
-  ) : null}
-</div>
+          {secondaryLinks?.length ? (
+            <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
+              {secondaryLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className="group inline-flex items-center font-structural text-sm transition-colors duration-300 hover:text-[var(--ei-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.38)] focus-visible:ring-offset-4 focus-visible:ring-offset-transparent"
+                  style={{ color: 'var(--ei-text-secondary)' }}
+                >
+                  {link.label}
+                  <span
+                    aria-hidden="true"
+                    className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+                  >
+                    →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          ) : null}
+        </div>
       </div>
     </motion.section>
   );
