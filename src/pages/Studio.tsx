@@ -24,7 +24,7 @@ export function Studio() {
       <StudioHero
         eyebrow="Studio"
         title="The philosophy behind the worlds."
-        italicWord="worlds"
+        italicWord="worlds."
         description="Translating inner worlds into coherent external form."
         image={studioHeroDesktop}
         mobileImage={studioHeroMobile}
@@ -51,6 +51,7 @@ export function Studio() {
                 { label: 'Explore the Works', href: '/works' },
               ]}
               backgroundImage={heroLandscape}
+              backgroundPosition="center 82%"
             />
           </div>
         </div>

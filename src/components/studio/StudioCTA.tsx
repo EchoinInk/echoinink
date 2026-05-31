@@ -12,6 +12,7 @@ interface StudioCTAProps {
   primaryHref: string;
   secondaryLinks: Array<{ label: string; href: string }>;
   backgroundImage: string;
+  backgroundPosition?: string;
 }
 
 export function StudioCTA({
@@ -22,6 +23,7 @@ export function StudioCTA({
   primaryHref,
   secondaryLinks,
   backgroundImage,
+  backgroundPosition = 'center 78%',
 }: StudioCTAProps) {
   return (
     <motion.section
@@ -29,18 +31,19 @@ export function StudioCTA({
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className="relative mx-auto min-h-[400px] max-w-[1180px] overflow-hidden rounded-[var(--radius-card)] border md:min-h-[420px]"
+      className="relative mx-auto min-h-[400px] max-w-[1180px] overflow-hidden rounded-[var(--radius-card)] border md:min-h-[430px]"
       style={{
-        background: 'var(--ei-surface-card)',
+        background: 'var(--ei-void-black)',
         borderColor: 'rgb(var(--ei-ice-white-rgb) / 0.08)',
       }}
       aria-labelledby="studio-cta-heading"
     >
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-cover bg-right bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-no-repeat"
         style={{
           backgroundImage: `url(${backgroundImage})`,
+          backgroundPosition,
         }}
       />
 
@@ -49,7 +52,7 @@ export function StudioCTA({
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(90deg, rgba(5, 7, 13, 0.92) 0%, rgba(5, 7, 13, 0.72) 42%, rgba(5, 7, 13, 0.28) 68%, rgba(5, 7, 13, 0.12) 100%)',
+            'linear-gradient(90deg, rgba(5, 7, 13, 0.94) 0%, rgba(5, 7, 13, 0.78) 38%, rgba(5, 7, 13, 0.42) 62%, rgba(5, 7, 13, 0.18) 100%)',
         }}
       />
 
@@ -58,60 +61,56 @@ export function StudioCTA({
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 50% 60% at 18% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.18) 0%, transparent 70%)',
+            'radial-gradient(ellipse 48% 58% at 16% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.16) 0%, transparent 68%)',
         }}
       />
 
-      <div className="relative z-10 grid min-h-[400px] md:min-h-[420px] md:grid-cols-[minmax(0,0.55fr)_minmax(0,0.45fr)]">
-        <div className="flex flex-col justify-center gap-8 p-7 md:p-12 lg:p-14">
-          <div>
-            <EyebrowLabel>{eyebrow}</EyebrowLabel>
+      <div className="relative z-10 flex min-h-[400px] flex-col justify-center p-7 md:min-h-[430px] md:max-w-[58%] md:p-12 lg:p-14">
+        <div>
+          <EyebrowLabel>{eyebrow}</EyebrowLabel>
 
-            <h2
-              id="studio-cta-heading"
-              className="mt-6 font-editorial text-[clamp(2rem,3vw,3.1rem)] leading-tight"
-              style={{ color: 'var(--ei-text-primary)' }}
-            >
-              {heading}
-            </h2>
+          <h2
+            id="studio-cta-heading"
+            className="mt-6 font-editorial text-[clamp(2rem,3vw,3.1rem)] leading-tight"
+            style={{ color: 'var(--ei-text-primary)' }}
+          >
+            {heading}
+          </h2>
 
-            <p
-              className="mt-4 max-w-[36ch] whitespace-pre-line font-structural text-[0.98rem] leading-[1.75]"
-              style={{ color: 'var(--ei-text-secondary)' }}
-            >
-              {body}
-            </p>
-          </div>
-
-          <div className="flex flex-col items-start gap-5">
-            <Button to={primaryHref} variant="primary" className="self-start">
-              {primaryLabel}
-            </Button>
-
-            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">
-              {secondaryLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="group inline-flex items-center gap-2 font-structural text-[10px] uppercase tracking-[0.18em] transition-colors duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)]"
-                  style={{ color: 'var(--ei-text-tertiary)' }}
-                >
-                  <span className="transition-colors duration-500 group-hover:text-[var(--ei-text-primary)]">
-                    {link.label}
-                  </span>
-                  <span
-                    aria-hidden="true"
-                    className="transition-transform duration-500 group-hover:translate-x-1"
-                  >
-                    →
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
+          <p
+            className="mt-4 max-w-[36ch] whitespace-pre-line font-structural text-[0.98rem] leading-[1.75]"
+            style={{ color: 'rgb(var(--ei-ice-white-rgb) / 0.72)' }}
+          >
+            {body}
+          </p>
         </div>
 
-        <div className="hidden md:block" aria-hidden="true" />
+        <div className="mt-8 flex flex-col items-start gap-5">
+          <Button to={primaryHref} variant="primary" className="self-start">
+            {primaryLabel}
+          </Button>
+
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-6">
+            {secondaryLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className="group inline-flex items-center gap-2 font-structural text-[10px] uppercase tracking-[0.18em] transition-colors duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)]"
+                style={{ color: 'var(--ei-text-tertiary)' }}
+              >
+                <span className="transition-colors duration-500 group-hover:text-[var(--ei-text-primary)]">
+                  {link.label}
+                </span>
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-500 group-hover:translate-x-1"
+                >
+                  →
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </motion.section>
   );

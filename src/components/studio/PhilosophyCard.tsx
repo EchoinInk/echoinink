@@ -40,32 +40,34 @@ export function PhilosophyCard({
       }
       className={`group relative flex h-full flex-col rounded-[var(--radius-card)] border transition-[border-color,background,box-shadow] duration-500 ${
         isValue
-          ? 'min-h-[180px] hover:border-[rgb(var(--ei-ice-white-rgb)/0.088)] hover:shadow-[inset_0_0_0_1px_rgb(var(--ei-luxe-violet-rgb)/0.04)]'
-          : 'hover:border-[var(--ei-card-border-hover)] hover:bg-[var(--ei-card-bg-hover)]'
-      } ${isValue ? 'p-5 md:p-6' : 'p-6 md:p-7'}`}
+          ? 'min-h-[210px] hover:border-[rgb(var(--ei-ice-white-rgb)/0.10)] hover:shadow-[inset_0_0_0_1px_rgb(var(--ei-luxe-violet-rgb)/0.05)]'
+          : 'min-h-[300px] hover:border-[rgb(var(--ei-ice-white-rgb)/0.12)] hover:bg-[rgb(var(--ei-deep-indigo-rgb)/0.22)]'
+      } ${isValue ? 'p-6 md:p-7' : 'p-8 md:p-9'}`}
       style={{
-        background: 'var(--ei-card-bg)',
-        borderColor: 'rgb(var(--ei-ice-white-rgb) / 0.08)',
+        background: 'rgb(var(--ei-deep-indigo-rgb) / 0.18)',
+        borderColor: 'rgb(var(--ei-ice-white-rgb) / 0.10)',
       }}
     >
       <div
-        className={`mb-4 flex items-center justify-center rounded-full border transition-[border-color,box-shadow] duration-500 ${
+        className={`flex items-center justify-center rounded-full border transition-[border-color,box-shadow] duration-500 ${
           isValue
-            ? 'h-10 w-10 group-hover:shadow-[0_0_16px_rgb(var(--ei-luxe-violet-rgb)/0.08)]'
-            : 'mb-5 h-14 w-14 group-hover:border-[var(--ei-card-border-hover)] group-hover:shadow-[0_0_20px_rgb(var(--ei-aurora-blue-rgb)/0.08)]'
+            ? 'mb-5 h-11 w-11 border-[rgb(var(--ei-luxe-violet-rgb)/0.22)] group-hover:shadow-[0_0_20px_rgb(var(--ei-luxe-violet-rgb)/0.10)]'
+            : 'mb-7 h-12 w-12 group-hover:border-[rgb(var(--ei-ice-white-rgb)/0.14)] group-hover:shadow-[0_0_24px_rgb(var(--ei-aurora-blue-rgb)/0.06)]'
         }`}
         style={{
-          borderColor: 'rgb(var(--ei-ice-white-rgb) / 0.08)',
-          background: 'rgb(var(--ei-deep-indigo-rgb) / 0.28)',
+          borderColor: isValue
+            ? 'rgb(var(--ei-luxe-violet-rgb) / 0.22)'
+            : 'rgb(var(--ei-ice-white-rgb) / 0.10)',
+          background: 'rgb(var(--ei-deep-indigo-rgb) / 0.24)',
         }}
         aria-hidden="true"
       >
-        <OrbitalVisual variant={icon} size={isValue ? 24 : 34} />
+        <OrbitalVisual variant={icon} size={isValue ? 26 : 30} />
       </div>
 
       <h3
-        className={`font-editorial leading-[1.16] tracking-tight ${
-          isValue ? 'text-[1rem] md:text-[1.05rem]' : 'text-[1.25rem] md:text-[1.4rem]'
+        className={`font-editorial leading-[1.14] tracking-tight ${
+          isValue ? 'text-[1.05rem] md:text-[1.15rem]' : 'text-[1.4rem] md:text-[1.55rem]'
         }`}
         style={{ color: 'var(--ei-text-primary)' }}
       >
@@ -73,10 +75,10 @@ export function PhilosophyCard({
       </h3>
 
       <p
-        className={`mt-2.5 font-structural leading-[1.66] ${
-          isValue ? 'text-[12px] md:text-[13px]' : 'text-[13px] md:text-[14px]'
+        className={`mt-4 font-structural leading-[1.72] ${
+          isValue ? 'text-[13px] md:text-[14px]' : 'text-[14px] md:text-[15px]'
         }`}
-        style={{ color: 'var(--ei-text-secondary)' }}
+        style={{ color: 'rgb(var(--ei-ice-white-rgb) / 0.68)' }}
       >
         {description}
       </p>

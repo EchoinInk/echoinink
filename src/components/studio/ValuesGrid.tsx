@@ -11,7 +11,7 @@ export function ValuesGrid() {
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className="py-[clamp(5rem,12vw,7.5rem)]"
+      className="py-[clamp(4rem,8vw,6.5rem)]"
       aria-labelledby="values-heading"
     >
       <motion.div variants={driftUp}>
@@ -22,7 +22,7 @@ export function ValuesGrid() {
         Values
       </motion.h2>
 
-      <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 md:gap-6">
+      <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 md:gap-7 xl:gap-8">
         {valueItems.map((item, index) => (
           <PhilosophyCard key={item.title} {...item} index={index} variant="value" />
         ))}

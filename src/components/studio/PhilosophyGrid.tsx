@@ -11,7 +11,7 @@ export function PhilosophyGrid() {
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className="py-[clamp(5rem,12vw,7.5rem)]"
+      className="py-[clamp(4rem,8vw,6.5rem)]"
       aria-labelledby="philosophy-heading"
     >
       <motion.div variants={driftUp}>
@@ -22,7 +22,7 @@ export function PhilosophyGrid() {
         Philosophy
       </motion.h2>
 
-      <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-7">
+      <div className="mt-10 grid grid-cols-1 gap-7 md:grid-cols-2 lg:grid-cols-3 md:gap-8">
         {philosophyItems.map((item, index) => (
           <PhilosophyCard key={item.title} {...item} index={index} variant="philosophy" />
         ))}

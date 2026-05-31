@@ -17,10 +17,10 @@ export function OriginSection() {
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className="py-[clamp(5rem,12vw,7.5rem)]"
+      className="pt-[clamp(2.5rem,6vw,4rem)] pb-[clamp(4.5rem,9vw,6.5rem)]"
       aria-labelledby="origin-heading"
     >
-      <div className="grid items-start gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16 xl:gap-20">
+      <div className="grid items-stretch gap-12 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-14 xl:gap-20">
         <div>
           <motion.div variants={driftUp}>
             <NumberedSectionLabel number={originCopy.number} label={originCopy.label} />
@@ -40,7 +40,7 @@ export function OriginSection() {
               <p
                 key={paragraph.slice(0, 24)}
                 className="max-w-[38ch] font-structural text-[15px] leading-[1.82] md:text-[16px]"
-                style={{ color: 'var(--ei-text-secondary)' }}
+                style={{ color: 'rgb(var(--ei-ice-white-rgb) / 0.70)' }}
               >
                 {paragraph}
               </p>
