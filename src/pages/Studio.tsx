@@ -208,40 +208,7 @@ export function Studio() {
           href: '/works',
         },
       ]}
-    /><div className="mt-6 flex flex-wrap items-center gap-6">
-    {[{
-      label: 'Book a Session',
-      href: '/sessions',
-    },
-    {
-      label: 'Explore the Works',
-      href: '/works',
-    },]?.map((link) => (
-      <Link
-        key={link.href}
-        to={link.href}
-        className="
-          group inline-flex items-center
-          text-sm font-medium
-          transition-colors duration-300
-        "
-        style={{
-          color: 'var(--ei-text-secondary)',
-        }}
-      >
-        {link.label}
-  
-        <span
-          className="
-            ml-2 transition-transform duration-300
-            group-hover:translate-x-1
-          "
-        >
-          →
-        </span>
-      </Link>
-    ))}
-  </div>
+    />
   </div>
 </Container>
     </PageShell>
