@@ -154,7 +154,7 @@ export function Contact() {
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="relative flex min-h-[58vh] items-center overflow-hidden pt-24 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]"
+          className="relative flex min-h-[48vh] items-center overflow-hidden pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]"
         >
           <picture className="absolute inset-0 z-0 block" aria-hidden="true">
             <source media="(min-width: 768px)" srcSet={nebulaDesktop} />
