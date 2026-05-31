@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
+import { Button } from '@/components/Button';
 import nebulaDesktop from '@/assets/digital-nebula-bg.png';
 import nebulaMobile from '@/assets/digital-nebula-mobile.png';
 import digitalNebulaBookSession from '@/assets/digital-nebula-book-session.png';
