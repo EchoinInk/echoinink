@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { motion } from 'framer-motion';
-import { EASE_LUXURY, DURATION } from '@/lib/motion-cinematic';
+import { DURATION } from '@/lib/motion-cinematic';
 import wordmark from "@/assets/echo-in-ink-wordmark.png";
 
 const navItems = [
@@ -18,7 +18,7 @@ export function Header() {
     <motion.header
       initial={{ opacity: 0, y: -12 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: DURATION.slower, ease: EASE_LUXURY, delay: 0.3 }}
+      transition={{ duration: DURATION.slower, ease: 'easeOut', delay: 0.3 }}
       className="fixed top-0 left-0 w-full z-50 px-6 md:px-10 lg:px-12 py-4 md:py-7"
     >
       {/* Refined background gradient for readability — stronger separation */}
@@ -54,6 +54,18 @@ export function Header() {
                     active
                       ? "text-white/90"
                       : "text-white/65 hover:text-white/90"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
+
+          <Link
+            to="/contact"
+            className="ei-focus-rounded px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.02] text-[10px] tracking-[0.18em] uppercase text-white/70 hover:text-white/90 hover:bg-white/[0.05] hover:border-white/[0.12] transition-all duration-700"
+          >
             Start a Project
           </Link>
         </div>
