@@ -83,7 +83,7 @@
     letter-spacing: 0.14em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgb(var(--ei-ice-white-rgb) / 0.55);
+    color: rgb(var(--ei-ice-white-rgb) / 0.42);
   }
 
   .text-structural-nav {
@@ -242,7 +242,7 @@
     letter-spacing: 0.14em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgb(var(--ei-ice-white-rgb) / 0.55);
+    color: rgb(var(--ei-ice-white-rgb) / 0.42);
   }
 
   .ei-section-title {
@@ -260,7 +260,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.8;
-    color: rgb(var(--ei-ice-white-rgb) / 0.65);
+    color: rgb(var(--ei-ice-white-rgb) / 0.58);
     max-width: 52ch;
   }
 
@@ -315,7 +315,7 @@
     font-weight: 400;
     letter-spacing: -0.003em;
     line-height: 1.65;
-    color: rgb(var(--ei-ice-white-rgb) / 0.68);
+    color: rgb(var(--ei-ice-white-rgb) / 0.62);
   }
 
   .ei-nav-text {
@@ -325,7 +325,7 @@
     letter-spacing: 0.02em;
     line-height: 1.4;
     text-transform: uppercase;
-    color: rgb(var(--ei-ice-white-rgb) / 0.68);
+    color: rgb(var(--ei-ice-white-rgb) / 0.60);
   }
 
   .ei-footer-heading {
