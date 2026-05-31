@@ -6,7 +6,6 @@ import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
 import nebulaDesktop from '@/assets/digital-nebula-bg.png';
 import nebulaMobile from '@/assets/digital-nebula-mobile.png';
-import digitalNebulaBookSession from '@/assets/digital-nebula-book-session.png';
 import {
   fadeSoft,
   driftUp,
@@ -383,26 +382,30 @@ export function Contact() {
   initial="hidden"
   whileInView="visible"
   viewport={VIEWPORT.loose}
-  className="mx-auto mt-20 max-w-[1180px] overflow-hidden border border-white/[0.08] bg-transparent shadow-[0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] backdrop-blur-sm"
+  className="relative mx-auto mt-20 min-h-[360px] max-w-[1180px] overflow-hidden rounded-[10px] border border-white/[0.08] bg-cover bg-center bg-no-repeat shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] md:min-h-[390px]"
+  style={{
+    backgroundImage: `url(${nebulaDesktop})`,
+  }}
 >
-  <div className="grid gap-0 md:grid-cols-[0.42fr_0.58fr] md:items-stretch">
-    <div className="relative min-h-[220px] overflow-hidden rounded-[10px] md:min-h-[280px] md:rounded-r-none">
-      <img
-        src={digitalNebulaBookSession}
-        alt=""
-        className="absolute inset-0 h-full w-full object-cover object-center opacity-100"
-        loading="lazy"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background: 'linear-gradient(90deg, rgba(6,8,18,0.15), rgba(6,8,18,0.45))',
-        }}
-      />
-    </div>
+  <div
+    aria-hidden="true"
+    className="absolute inset-0"
+    style={{
+      background:
+        'linear-gradient(90deg, rgba(6,8,18,0.82) 0%, rgba(6,8,18,0.62) 35%, rgba(6,8,18,0.55) 100%)',
+    }}
+  />
 
-    <div className="grid gap-7 p-7 md:grid-cols-[1fr_auto] md:items-center md:p-9 lg:p-10">
+  <div
+    aria-hidden="true"
+    className="absolute inset-0"
+    style={{
+      background:
+        'radial-gradient(ellipse 54% 65% at 20% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.18) 0%, transparent 70%), radial-gradient(ellipse 42% 48% at 72% 45%, rgb(var(--ei-luxe-violet-rgb) / 0.12) 0%, transparent 68%)',
+    }}
+  />
+
+  <div className="relative z-10 flex min-h-[360px] flex-col justify-center gap-9 p-7 md:min-h-[390px] md:max-w-[620px] md:p-12 lg:p-14">
       <div>
         <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/48">
           Prefer a quick chat?
@@ -419,14 +422,13 @@ export function Contact() {
 
       <Link
         to="/sessions"
-        className="group inline-flex items-center gap-3 font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-white/78 transition-colors duration-500 hover:text-white"
+        className="group inline-flex items-center gap-3 self-start font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-white/78 transition-all duration-500 hover:text-[rgb(var(--ei-aurora-blue-rgb)/0.92)] hover:drop-shadow-[0_0_10px_rgb(var(--ei-aurora-blue-rgb)/0.28)]"
       >
         View session options
         <span className="transition-transform duration-500 group-hover:translate-x-1">
           →
         </span>
       </Link>
-    </div>
   </div>
 </motion.section>
         </Container>
