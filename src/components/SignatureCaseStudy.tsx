@@ -644,7 +644,7 @@ export function SignatureCaseStudy() {
               className="pt-7"
               style={{ borderTop: '1px solid rgb(var(--ei-ice-white-rgb) / 0.07)' }}
             >
-              <span className="block font-structural text-[9px] tracking-[0.28em] uppercase text-white/40 mb-5">
+              <span className="block font-structural text-[9px] tracking-[0.28em] uppercase text-white/60 mb-5">
                 0{i + 1}
               </span>
               <h3
@@ -689,7 +689,7 @@ export function SignatureCaseStudy() {
           <div className="pt-14 md:pt-20">
             <motion.span
               {...labelFade(0)}
-              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-12"
+              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/60 mb-12"
             >
               05 — The Work (Selected Snapshots)
             </motion.span>
@@ -771,7 +771,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container">
           <motion.span
             {...labelFade(0)}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-14 text-center"
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/60 mb-14 text-center"
           >
             06 — The Transformation
           </motion.span>
@@ -811,7 +811,7 @@ export function SignatureCaseStudy() {
         <div className="pt-14 md:pt-20 max-w-2xl">
           <motion.span
             {...labelFade(0)}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-12"
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/60 mb-12"
           >
             07 — The Outcome
           </motion.span>
@@ -867,7 +867,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container max-w-xl mx-auto">
           <motion.span
             {...labelFade(0)}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-14"
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/60 mb-14"
           >
             08 — The Echo in Ink Signature
           </motion.span>
@@ -881,13 +881,13 @@ export function SignatureCaseStudy() {
           </motion.p>
           <motion.p
             {...fade(0.55)}
-            className="font-structural text-[13px] md:text-[14px] text-white/40 leading-[1.95] mb-5"
+            className="font-structural text-[13px] md:text-[14px] text-white/60 leading-[1.95] mb-5"
           >
             Echo in Ink built a world where overwhelmed humans could finally breathe.
           </motion.p>
           <motion.p
             {...fade(0.85)}
-            className="font-structural text-[12px] md:text-[13px] text-white/40 leading-[1.95]"
+            className="font-structural text-[12px] md:text-[13px] text-white/60 leading-[1.95]"
           >
             This is what we mean when we say design is emotional architecture.
           </motion.p>
