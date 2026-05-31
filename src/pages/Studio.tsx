@@ -117,8 +117,8 @@ export function Studio() {
 
         <ValuesGrid />
 
-        <section className="pt-20 pb-24 md:pt-28 md:pb-32">
-          <ProjectCTA
+        <div className="mx-auto mt-16 max-w-[1180px] md:mt-24">
+            <ProjectCTA
             eyebrow="Continue the conversation"
             heading="Aligned in philosophy?"
             body="If our approach resonates, let's explore how we can build something meaningful together."
