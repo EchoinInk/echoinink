@@ -13,7 +13,7 @@ import { ProjectCTA } from '@/components/works/ProjectCTA';
 
 import studioHeroDesktop from '@/assets/imagery/hero/studio-hero.png';
 import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.png';
-import studioCTABg from '@/assets/imagery/sessions/studio-cta-bg.png';
+import studioCTABg from '@/assets/imagery/sections/studio-ct-bg.png';
 
 import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
 
