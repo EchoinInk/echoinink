@@ -2,10 +2,23 @@
 
 ## 2026-06-01 — Studio Page Redesign
 
+### Studio Page Refinement (mockup alignment)
+
+**Editorial primitives**
+- `src/components/editorial/NumberedSectionLabel.tsx` — Reusable `01 — Origin` section labels
+- `src/components/editorial/EyebrowLabel.tsx` — Shared eyebrow + cobalt line pattern
+
+**Layout & visual tuning**
+- `StudioHero` — 40/60 text/image split, cropped hero with `linear-gradient(90deg, rgba(5,7,13,0.9), rgba(5,7,13,0.2))`, no floating motion
+- `QuoteCard` — Restrained indigo surface, no glassmorphism, line-broken quote copy
+- `StudioCTA` — Text left / image right with landscape `hero-01.png` and left-weighted overlay
+- Removed `SectionImagery` chapter pauses for quieter editorial flow
+- Origin copy and philosophy text aligned to spec; values use `-2px` hover only
+
 ### Studio Page Restructure
 
 **New Components**
-- `src/components/studio/StudioHero.tsx` — Two-column editorial hero with gradient italic word, atmospheric image bleed, and slow drift motion
+- `src/components/studio/StudioHero.tsx` — Two-column editorial hero with gradient italic word and atmospheric image treatment
 - `src/components/studio/OriginSection.tsx` — Two-column origin narrative with section label and body copy
 - `src/components/studio/QuoteCard.tsx` — Glass quote card with orbital glow accent and subtle hover shift
 - `src/components/studio/PhilosophyCard.tsx` — Shared card for philosophy and values grids with `OrbitalVisual` icon badges
