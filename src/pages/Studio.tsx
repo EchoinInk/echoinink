@@ -7,7 +7,7 @@ import { EditorialHero } from '@/components/hero/EditorialHero';
 import { NumberedSectionLabel } from '@/components/editorial/NumberedSectionLabel';
 import { QuoteCard } from '@/components/studio/QuoteCard';
 
-import { PhilosophyGrid } from '@/components/studio/PhilosophyGrid';
+import { PhilosophyCard } from '@/components/studio/PhilosophyCard';
 import { ValuesGrid } from '@/components/studio/ValuesGrid';
 
 import { ProjectCTA } from '@/components/works/ProjectCTA';
@@ -112,8 +112,6 @@ export function Studio() {
     </motion.section>
     );
           <ValuesGrid />
-        </motion.section>
-
         <section className="pt-20 pb-24 md:pt-28 md:pb-32">
           <ProjectCTA
             eyebrow="Continue the conversation"
