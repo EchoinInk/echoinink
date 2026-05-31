@@ -29,102 +29,43 @@ export function StudioHero({
   imageAlt,
 }: StudioHeroProps) {
   const titleParts = italicWord
-    ? title.split(new RegExp(`(${italicWord.replace('.', '\\.')})`, 'i'))
+    ? title.split(new RegExp(`(${italicWord})`, 'i'))
     : [title];
 
   return (
     <section
-      className="relative min-h-[88vh] overflow-hidden pt-20 md:min-h-[92vh] md:pt-24"
+      className="relative flex min-h-[80vh] items-center overflow-hidden pt-20 md:pt-24"
       aria-labelledby="studio-hero-heading"
     >
-      {/* Atmospheric depth — page-level haze */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(circle at 72% 24%, rgb(var(--ei-luxe-violet-rgb) / 0.20) 0%, transparent 36%), radial-gradient(circle at 80% 38%, rgb(var(--ei-aurora-blue-rgb) / 0.16) 0%, transparent 32%), radial-gradient(ellipse 55% 45% at 18% 62%, rgb(var(--ei-deep-indigo-rgb) / 0.12) 0%, transparent 58%)',
+            'radial-gradient(ellipse 42% 38% at 78% 44%, rgb(var(--ei-luxe-violet-rgb) / 0.05) 0%, transparent 68%)',
         }}
       />
 
-      {/* Hero vignette */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(ellipse 90% 80% at 50% 50%, transparent 42%, rgb(var(--ei-void-black-rgb) / 0.55) 100%)',
-        }}
-      />
-
-      {/* Desktop — environmental image layer */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute right-0 top-0 hidden h-full w-[62vw] md:block lg:w-[58vw]"
-      >
-        <img
-          src={image}
-          alt=""
-          className="h-full w-full object-cover object-[58%_42%]"
-        />
-
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(to right, var(--ei-void-black) 0%, transparent 42%, rgba(5, 7, 13, 0.25) 100%)',
-          }}
-        />
-
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'radial-gradient(ellipse 75% 70% at 68% 48%, transparent 32%, rgb(var(--ei-void-black-rgb) / 0.38) 100%)',
-          }}
-        />
-
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              'linear-gradient(to bottom, transparent 58%, rgb(var(--ei-void-black-rgb) / 0.45) 88%, var(--ei-void-black) 100%)',
-          }}
-        />
-      </div>
-
-      {/* Bottom dissolve into page */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 left-0 right-0 z-[2] h-32 md:h-40"
-        style={{
-          background:
-            'linear-gradient(to bottom, transparent 0%, var(--ei-void-black) 100%)',
-        }}
-      />
-
-      <Container size="xl" className="relative z-10 flex min-h-[calc(88vh-5rem)] items-center md:min-h-[calc(92vh-6rem)]">
+      <Container size="xl" className="relative z-10 w-full">
         <motion.div
           variants={staggerContainer(STAGGER.cinematic, 0)}
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="w-full max-w-[1180px]"
+          className="grid items-center gap-12 md:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] md:gap-14 lg:gap-16"
         >
-          <div className="max-w-[640px] md:max-w-[52%] lg:max-w-[46%]">
-            <motion.div variants={driftUp} className="mb-7 md:mb-9">
+          <div className="max-w-[520px]">
+            <motion.div variants={driftUp} className="mb-6 md:mb-8">
               <EyebrowLabel>{eyebrow}</EyebrowLabel>
             </motion.div>
 
             <motion.h1
               id="studio-hero-heading"
               variants={blurEmergence}
-              className="font-editorial tracking-[-0.045em]"
+              className="font-editorial text-[clamp(2.35rem,4.2vw,3.75rem)] leading-[1.06] tracking-tight"
               style={{
-                fontSize: 'clamp(3.75rem, 7vw, 7rem)',
-                lineHeight: 0.94,
                 color: 'var(--ei-text-primary)',
-                textShadow: '0 0 120px rgb(var(--ei-luxe-violet-rgb) / 0.10)',
+                textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.06)',
               }}
             >
               {italicWord
@@ -136,7 +77,7 @@ export function StudioHero({
                         style={{
                           color: 'transparent',
                           backgroundImage:
-                            'linear-gradient(135deg, rgb(var(--ei-soft-lavender-rgb) / 0.95) 0%, var(--ei-luxe-violet) 48%, var(--ei-orchid-pink) 100%)',
+                            'linear-gradient(135deg, var(--ei-soft-lavender) 0%, var(--ei-luxe-violet) 55%, var(--ei-orchid-pink) 100%)',
                           backgroundClip: 'text',
                           WebkitBackgroundClip: 'text',
                         }}
@@ -152,36 +93,42 @@ export function StudioHero({
 
             <motion.p
               variants={driftUp}
-              className="mt-7 max-w-[36ch] font-structural text-[15px] leading-[1.68] md:mt-8 md:text-[17px]"
-              style={{ color: 'rgb(var(--ei-ice-white-rgb) / 0.78)' }}
+              className="mt-6 max-w-[36ch] font-structural text-[15px] leading-[1.72] md:text-[16px]"
+              style={{ color: 'var(--ei-text-secondary)' }}
             >
               {description}
             </motion.p>
           </div>
 
-          {/* Mobile — full-width atmospheric image */}
-          <motion.div variants={blurEmergence} className="relative mt-12 w-full md:hidden">
-            <img
-              src={mobileImage}
-              alt={imageAlt}
-              className="h-[min(58vh,520px)] w-full object-cover object-[50%_42%]"
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0"
-              style={{
-                background:
-                  'linear-gradient(to top, var(--ei-void-black) 0%, transparent 28%), linear-gradient(to right, var(--ei-void-black) 0%, transparent 35%)',
-              }}
-            />
-            <div
-              aria-hidden="true"
-              className="absolute inset-0"
-              style={{
-                background:
-                  'radial-gradient(ellipse 80% 60% at 50% 40%, transparent 40%, rgb(var(--ei-void-black-rgb) / 0.35) 100%)',
-              }}
-            />
+          <motion.div variants={blurEmergence} className="relative w-full">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-[var(--radius-card)] md:aspect-[5/4] lg:aspect-[16/11]">
+              <picture className="absolute inset-0 block">
+                <source media="(min-width: 768px)" srcSet={image} />
+                <img
+                  src={mobileImage}
+                  alt={imageAlt}
+                  className="h-full w-full object-cover object-[58%_50%]"
+                />
+              </picture>
+
+              <div
+                aria-hidden="true"
+                className="absolute inset-0"
+                style={{
+                  background:
+                    'linear-gradient(90deg, rgba(5, 7, 13, 0.9) 0%, rgba(5, 7, 13, 0.2) 55%, rgba(5, 7, 13, 0.05) 100%)',
+                }}
+              />
+
+              <div
+                aria-hidden="true"
+                className="absolute inset-0"
+                style={{
+                  background:
+                    'radial-gradient(ellipse 70% 65% at 72% 48%, transparent 35%, rgb(var(--ei-void-black-rgb) / 0.45) 100%)',
+                }}
+              />
+            </div>
           </motion.div>
         </motion.div>
       </Container>
