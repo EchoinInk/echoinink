@@ -69,7 +69,7 @@ export function WorksPage() {
             <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/50">
               INK MEETS LIGHT.
             </span>
-            <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/35">
+            <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/50">
               EMOTIONS BECOME DESIGN.
             </span>
           </div>
