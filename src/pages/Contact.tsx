@@ -7,7 +7,7 @@ import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/Button';
 import nebulaDesktop from '@/assets/imagery/hero/contact-hero.png';
-import nebulaMobile from '@/assets/digital-nebula-mobile.png';
+import nebulaMobile from '@/assets/imagery/hero/contact-hero-mobile.png';
 import digitalNebulaBookSession from '@/assets/imagery/sections/book-session-bg.png';
 import {
   fadeSoft,
