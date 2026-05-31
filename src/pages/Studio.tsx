@@ -6,10 +6,8 @@ import { Container } from '@/components/layout/Container';
 import { EditorialHero } from '@/components/hero/EditorialHero';
 import { NumberedSectionLabel } from '@/components/editorial/NumberedSectionLabel';
 import { QuoteCard } from '@/components/studio/QuoteCard';
-
 import { PhilosophyCard } from '@/components/studio/PhilosophyCard';
 import { ValuesGrid } from '@/components/studio/ValuesGrid';
-
 import { ProjectCTA } from '@/components/works/ProjectCTA';
 
 import studioHeroDesktop from '@/assets/imagery/hero/studio-hero.png';
@@ -88,90 +86,37 @@ export function Studio() {
 
           <QuoteCard lines={studioQuoteLines} />
         </motion.section>
-        </Container>
 
-        <Container size="xl" className="relative z-10">
         <motion.section
           variants={fadeSoft}
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="py-[clamp(5rem,10vw,7.5rem)]"
+          className="mx-auto max-w-[1180px] py-[clamp(5rem,10vw,7.5rem)]"
           aria-labelledby="philosophy-heading"
-        ><motion.div variants={driftUp}>
-        <NumberedSectionLabel number="02" label="Philosophy" />
-      </motion.div>
+        >
+          <motion.div variants={driftUp}>
+            <NumberedSectionLabel number="02" label="Philosophy" />
+          </motion.div>
 
-      <motion.h2 id="philosophy-heading" variants={driftUp} className="sr-only">
-        Philosophy
-      </motion.h2>
+          <motion.h2 id="philosophy-heading" variants={driftUp} className="sr-only">
+            Philosophy
+          </motion.h2>
 
-      <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-7">
-        {philosophyItems.map((item, index) => (
-          <PhilosophyCard key={item.title} {...item} index={index} variant="philosophy" />
-        ))}
-      </div>
-    </motion.section>
-    </Container>
-    );<Container>
-    <motion.article
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={VIEWPORT.normal}
-      transition={{
-        duration: DURATION.normal,
-        ease: EASE_CINEMATIC,
-        delay: index * 0.08,
-      }}
-      whileHover={
-        prefersReducedMotion
-          ? undefined
-          : {
-              y: -2,
-              transition: { duration: DURATION.instant, ease: EASE_CINEMATIC },
-            }
-      }
-      className={`group relative flex h-full flex-col rounded-[var(--radius-card)] border transition-[border-color,background] duration-500 hover:border-[var(--ei-card-border-hover)] ${
-        isValue ? 'min-h-[196px] p-6' : 'min-h-[280px] p-7 md:p-8'
-      } hover:bg-[var(--ei-card-bg-hover)]`}
-      style={{
-        background: 'var(--ei-card-bg)',
-        borderColor: 'var(--ei-card-border)',
-      }}
-    >
-      <div
-        className={`flex items-center justify-center rounded-full border ${
-          isValue ? 'mb-4 h-10 w-10' : 'mb-6 h-12 w-12'
-        }`}
-        style={{
-          borderColor: isValue
-            ? 'rgb(var(--ei-luxe-violet-rgb) / 0.20)'
-            : 'var(--border-soft)',
-          background: 'rgb(var(--ei-deep-indigo-rgb) / 0.24)',
-        }}
-        aria-hidden="true"
-      >
-        <OrbitalVisual variant={icon} size={isValue ? 24 : 30} />
-      </div>
+          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
+            {philosophyItems.map((item, index) => (
+              <PhilosophyCard
+                key={item.title}
+                {...item}
+                index={index}
+                variant="philosophy"
+              />
+            ))}
+          </div>
+        </motion.section>
 
-      <h3
-        className={`font-editorial leading-[1.14] tracking-tight ${
-          isValue ? 'text-[1.05rem]' : 'text-[1.35rem] md:text-[1.45rem]'
-        }`}
-        style={{ color: 'var(--ei-text-primary)' }}
-      >
-        {title}
-      </h3>
+        <ValuesGrid />
 
-      <p
-        className={`mt-3 font-structural leading-[1.68] ${
-          isValue ? 'text-[13px]' : 'text-[14px] md:text-[15px]'
-        }`}
-        style={{ color: 'var(--ei-text-secondary)' }}
-      >
-        {description}
-      </p>
-    </motion.article>
         <section className="pt-20 pb-24 md:pt-28 md:pb-32">
           <ProjectCTA
             eyebrow="Continue the conversation"
