@@ -98,6 +98,46 @@
       0 0 0 1px var(--border-glow),
       0 0 28px var(--glow-magenta);
 
+/* ── Component Semantics ───────────────────────────────────────────────────── */
+
+    --ei-page-max-width: 1280px;
+    --ei-page-gutter: clamp(1.5rem, 4vw, 4rem);
+
+    --ei-section-padding-y: clamp(5rem, 10vw, 9rem);
+    --ei-section-padding-y-sm: clamp(3rem, 7vw, 6rem);
+
+    --ei-card-bg: rgb(var(--ei-deep-indigo-rgb) / 0.18);
+    --ei-card-bg-hover: rgb(var(--ei-deep-indigo-rgb) / 0.28);
+    --ei-card-border: rgb(var(--ei-soft-lavender-rgb) / 0.12);
+    --ei-card-border-hover: rgb(var(--ei-aurora-blue-rgb) / 0.34);
+
+    --ei-card-shadow-hover:
+  0 0 32px rgb(var(--ei-aurora-blue-rgb) / 0.12),
+  0 0 64px rgb(var(--ei-luxe-violet-rgb) / 0.10);
+
+--ei-button-bg: rgb(var(--ei-deep-indigo-rgb) / 0.42);
+--ei-button-bg-hover: rgb(var(--ei-aurora-blue-rgb) / 0.18);
+--ei-button-border: rgb(var(--ei-soft-lavender-rgb) / 0.16);
+--ei-button-border-hover: rgb(var(--ei-aurora-blue-rgb) / 0.42);
+
+--ei-filter-bg: rgb(var(--ei-deep-indigo-rgb) / 0.18);
+--ei-filter-bg-active: rgb(var(--ei-aurora-blue-rgb) / 0.15);
+--ei-filter-border-active: rgb(var(--ei-aurora-blue-rgb) / 0.38);
+
+--ei-image-overlay-soft:
+  linear-gradient(
+    180deg,
+    rgb(var(--ei-void-black-rgb) / 0) 0%,
+    rgb(var(--ei-void-black-rgb) / 0.72) 100%
+  );
+
+--ei-image-overlay-left:
+  linear-gradient(
+    90deg,
+    rgb(var(--ei-void-black-rgb) / 0.86) 0%,
+    rgb(var(--ei-void-black-rgb) / 0.48) 45%,
+    rgb(var(--ei-void-black-rgb) / 0) 100%
+  );
     /* ── Spacing scale ───────────────────────────────────────────────────────────── */
     --ei-space-8: 0.5rem;
     --ei-space-12: 0.75rem;
