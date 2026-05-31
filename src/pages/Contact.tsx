@@ -40,7 +40,7 @@ const contactBlocks = [
     title: "Let's Connect",
     icon: 'send',
     lines: [
-      <a key="email" href="mailto:hello@echoin.ink" className="hover:text-white/85 transition-colors duration-500">
+      <a key="email" href="mailto:hello@echoin.ink" className="text-white/78 hover:text-white/95 transition-colors duration-500">
         hello@echoin.ink
       </a>,
       'Auckland, New Zealand',
@@ -353,11 +353,15 @@ export function Contact() {
                 </div>
 
                 <div className="flex flex-col gap-6 pt-1 sm:flex-row sm:items-center">
-               <Button
-  type="submit"
-  variant="primary"
-  disabled={formState === 'submitting'}
-  className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.9),rgb(var(--ei-void-black-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.92),rgb(var(--ei-void-black-rgb)/0.96))] focus-visible:ring-white/55 disabled:opacity-80"
+                  <Button
+                    type="submit"
+                    variant="primary"
+                    disabled={formState === 'submitting'}
+                    className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.9),rgb(var(--ei-void-black-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.92),rgb(var(--ei-void-black-rgb)/0.96))] focus-visible:ring-white/55 disabled:opacity-80"
+                  >
+                    {formState === 'submitting' ? 'Sending...' : 'Send Message'}
+                  </Button>
+
                   <p className="flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65] text-white/60">
                     <span className="mt-0.5 text-white/65">
                       <ContactIcon name="lock" />
@@ -385,6 +389,11 @@ export function Contact() {
     style={{
       background:
         'linear-gradient(90deg, rgba(6, 8, 18, 0.92) 0%, rgba(6, 8, 18, 0.80) 35%, rgba(6, 8, 18, 0.48) 100%)',
+    }}
+  />
+
+  <div
+    aria-hidden="true"
     className="absolute inset-0"
     style={{
       background:
@@ -394,27 +403,27 @@ export function Contact() {
 
   <div className="relative z-10 flex min-h-[360px] flex-col justify-center gap-9 p-7 md:min-h-[390px] md:max-w-[620px] md:p-12 lg:p-14">
       <div>
-        <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/72">
+        <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/75">
           Prefer a quick chat?
         </span>
 
-        <h2 className="mt-4 font-editorial text-[clamp(2rem,3vw,3.1rem)] leading-tight text-white/88">
+        <h2 className="mt-4 font-editorial text-[clamp(2rem,3vw,3.1rem)] leading-tight text-white/92">
           Book a session
         </h2>
 
-        <p className="mt-4 max-w-[430px] font-structural text-[0.98rem] leading-[1.75] text-white/82">
+        <p className="mt-4 max-w-[430px] font-structural text-[0.98rem] leading-[1.75] text-white/86">
           Schedule a focused call to explore your project and see if we're a good fit.
         </p>
       </div>
 
       <Button
-  to="/sessions"
-  variant="secondary"
-  className="min-h-[42px] gap-3 self-start px-5 py-3"
->
-  View session options
-  <span aria-hidden="true">→</span>
-</Button>
+        to="/sessions"
+        variant="secondary"
+        className="min-h-[42px] gap-3 self-start px-5 py-3 border-white/[0.12] text-white/78 hover:text-white hover:border-white/[0.18]"
+      >
+        View session options
+        <span aria-hidden="true">→</span>
+      </Button>
   </div>
 </motion.section>
         </Container>
