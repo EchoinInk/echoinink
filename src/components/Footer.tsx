@@ -93,7 +93,7 @@ export default function Footer() {
 
             {/* Col 3 — Connect */}
             <div>
-              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/5 block mb-4">
+              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/50 block mb-4">
                 Connect
               </span>
               <a
@@ -122,7 +122,7 @@ export default function Footer() {
 
             {/* Col 4 — Atmospheric Intelligence */}
 <div className="relative">
-  <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/35 block mb-4">
+  <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/50 block mb-4">
     Atmospheric Intelligence
   </span>
 
@@ -172,7 +172,7 @@ export default function Footer() {
             }}
           />
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
-            <span className="font-structural text-[10px] tracking-[0.1em] text-white/35">
+            <span className="font-structural text-[10px] tracking-[0.1em] text-white/50">
               © 2025 Echo in Ink
             </span>
             <span className="font-structural text-[10px] tracking-[0.12em] uppercase text-white/25">

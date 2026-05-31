@@ -63,7 +63,7 @@ export function SystemCard({
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1">
             {category && (
-              <span className="font-structural text-[9px] tracking-[0.24em] uppercase text-white/35 block mb-1.5">
+              <span className="font-structural text-[9px] tracking-[0.24em] uppercase text-white/50 block mb-1.5">
                 {category}
               </span>
             )}

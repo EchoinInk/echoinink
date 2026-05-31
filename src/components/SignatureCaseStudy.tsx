@@ -708,7 +708,7 @@ export function SignatureCaseStudy() {
                 >
                   {snapshots[0].title}
                 </h3>
-                <p className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.85]">
+                <p className="font-structural text-[12px] md:text-[13px] text-white/50 leading-[1.85]">
                   {snapshots[0].desc}
                 </p>
               </div>
@@ -722,7 +722,7 @@ export function SignatureCaseStudy() {
                 >
                   {snapshots[1].title}
                 </h3>
-                <p className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.85]">
+                <p className="font-structural text-[12px] md:text-[13px] text-white/50 leading-[1.85]">
                   {snapshots[1].desc}
                 </p>
               </div>
@@ -739,7 +739,7 @@ export function SignatureCaseStudy() {
                 >
                   {snapshots[2].title}
                 </h3>
-                <p className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.85]">
+                <p className="font-structural text-[12px] md:text-[13px] text-white/50 leading-[1.85]">
                   {snapshots[2].desc}
                 </p>
               </div>
@@ -753,7 +753,7 @@ export function SignatureCaseStudy() {
                 >
                   {snapshots[3].title}
                 </h3>
-                <p className="font-structural text-[12px] md:text-[13px] text-white/35 leading-[1.85]">
+                <p className="font-structural text-[12px] md:text-[13px] text-white/50 leading-[1.85]">
                   {snapshots[3].desc}
                 </p>
               </div>

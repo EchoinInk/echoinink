@@ -59,7 +59,7 @@ export function HumanSignal() {
           <motion.span
             variants={driftUp}
             transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.14 }}
-            className="font-structural text-[10px] tracking-[0.22em] uppercase text-white/35 block pt-2"
+            className="font-structural text-[10px] tracking-[0.22em] uppercase text-white/50 block pt-2"
           >
             Echo in Ink
           </motion.span>
