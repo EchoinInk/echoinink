@@ -11,9 +11,10 @@ import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.png';
 import studioCTABg from '@/assets/imagery/sessions/studio-cta-bg.png';
 import { motion } from 'framer-motion';
 import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
+
 export function Studio() {
   return (
-    <Layout>
+    <PageShell atmosphere="studio" withTopSpacing={false}>
       <Helmet>
         <title>Studio | Echo In Ink</title>
         <meta
@@ -21,6 +22,7 @@ export function Studio() {
           content="The philosophy, principles, and creative direction behind Echo In Ink."
         />
       </Helmet>
+
       <EditorialHero
         eyebrow="Studio"
         title="The philosophy behind the worlds."
@@ -52,13 +54,13 @@ export function Studio() {
               body={
                 "If our approach resonates,\nlet's explore how we can build\nsomething meaningful together."
               }
-              primaryLabel="Work with the Studio"
-              primaryHref="/contact"
+              buttonLabel="Work with the Studio"
+              buttonHref="/contact"
               secondaryLinks={[
                 { label: 'Book a Session', href: '/sessions' },
                 { label: 'Explore the Works', href: '/works' },
               ]}
-              backgroundImage={heroLandscape}
+              backgroundImage={studioCTABg}
             />
           </div>
         </div>
