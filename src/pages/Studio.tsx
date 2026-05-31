@@ -26,18 +26,12 @@ export function Studio() {
           The philosophy behind the worlds.
           </p>
           <p className="mt-1 text-sm text-muted/70">
-            Where inner worlds become visible form.
+          Translating inner worlds into coherent external form.
           </p>
         </Container>
       </Section>
-        title="The philosophy behind the worlds."
-        italicWord="worlds."
-        description="Translating inner worlds into coherent external form."
-        image={studioHeroDesktop}
-        mobileImage={studioHeroMobile}
-        imageAlt="Cinematic cosmic void surrounded by violet and blue nebula energy"
-      />
-
+    
+      <Section>
       <Container size="xl" className="relative z-10 pb-24 md:pb-32">
         <div className="mx-auto max-w-[1180px]">
           <OriginSection />
@@ -62,6 +56,8 @@ export function Studio() {
           </div>
         </div>
       </Container>
+      </Section>
+      </Layout>
     </PageShell>
   );
 }
