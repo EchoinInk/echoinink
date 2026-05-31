@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { PageShell } from '@/components/system';
+import { Layout } from '@/components/Layout';
 import { Container } from '@/components/layout/Container';
 import { Section } from '@/components/layout/Section';
 import { OriginSection } from '@/components/studio/OriginSection';
