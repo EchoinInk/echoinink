@@ -119,7 +119,7 @@ export function Studio() {
   <Container size="xl" className="relative z-10">
         <ValuesGrid />
   </Container>
-        <div className="mx-auto mt-16 max-w-[1180px] md:mt-24">
+          <div className="mx-auto mt-16 max-w-[1180px] md:mt-24">
             <ProjectCTA
             eyebrow="Continue the conversation"
             heading="Aligned in philosophy?"
@@ -128,6 +128,6 @@ export function Studio() {
             buttonHref="/contact"
             backgroundImage={studioCTABg}
           /></div>
-    </PageShell>
+  </PageShell>
   );
 }
