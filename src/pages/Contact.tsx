@@ -317,18 +317,14 @@ export function Contact() {
 
                 <div className="space-y-3">
                   <label htmlFor="exploration" className="ei-form-label">What are you exploring?</label>
-                  <select
-                    id="exploration"
-                    name="exploration"
-                    value={formData.exploration}
-                    onChange={handleChange}
-                    className="ei-form-select"
-                  >
-                    <option value="">Select an option</option>
-                    {explorationOptions.map(option => (
-                      <option key={option} value={option}>{option}</option>
-                    ))}
-                  </select>
+                  <EchoSelect
+  id="exploration"
+  name="exploration"
+  value={formData.exploration}
+  onChange={handleChange}
+  options={explorationOptions}
+  placeholder="Select an option"
+/>
                 </div>
 
                 <div className="space-y-3">
@@ -346,18 +342,14 @@ export function Contact() {
 
                 <div className="space-y-3">
                   <label htmlFor="budget" className="ei-form-label">Budget Range (optional)</label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    className="ei-form-select"
-                  >
-                    <option value="">Select an option</option>
-                    {budgetOptions.map(option => (
-                      <option key={option} value={option}>{option}</option>
-                    ))}
-                  </select>
+                  <EchoSelect
+  id="budget"
+  name="budget"
+  value={formData.budget}
+  onChange={handleChange}
+  options={budgetOptions}
+  placeholder="Select an option"
+/>
                 </div>
 
                 <div className="flex flex-col gap-6 pt-1 sm:flex-row sm:items-center">
