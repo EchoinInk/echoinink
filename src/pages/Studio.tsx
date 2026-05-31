@@ -16,7 +16,7 @@ import studioHeroDesktop from '@/assets/imagery/hero/studio-hero.png';
 import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.png';
 import studioCTABg from '@/assets/imagery/sections/studio-ct-bg.png';
 
-import { originCopy, studioQuoteLines } from '@/data/studioContent';
+import { originCopy, philosophyItems, studioQuoteLines } from '@/data/studioContent';
 
 import {
   driftUp,
@@ -95,8 +95,29 @@ export function Studio() {
           whileInView="visible"
           viewport={VIEWPORT.loose}
           className="mx-auto max-w-[1180px]"
-        >
-          <PhilosophyGrid />
+        ><motion.section
+        variants={staggerContainer(STAGGER.loose, 0)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={VIEWPORT.loose}
+        className="py-[clamp(5rem,10vw,7.5rem)]"
+        aria-labelledby="philosophy-heading"
+      >
+        <motion.div variants={driftUp}>
+          <NumberedSectionLabel number="02" label="Philosophy" />
+        </motion.div>
+  
+        <motion.h2 id="philosophy-heading" variants={driftUp} className="sr-only">
+          Philosophy
+        </motion.h2>
+  
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 md:gap-7">
+          {philosophyItems.map((item, index) => (
+            <PhilosophyCard key={item.title} {...item} index={index} variant="philosophy" />
+          ))}
+        </div>
+      </motion.section>
+    );
           <ValuesGrid />
         </motion.section>
 
