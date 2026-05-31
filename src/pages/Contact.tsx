@@ -316,18 +316,18 @@ export function Contact() {
 
                 <div className="space-y-3">
                   <label htmlFor="exploration" className="ei-form-label">What are you exploring?</label>
-                  <EchoSelect
-  label="What are you exploring?"
-  value={formData.projectType}
-  onChange={(value) =>
-    setFormData((current) => ({
-      ...current,
-      projectType: value,
-    }))
-  }
-  options={projectOptions}
-  placeholder="Select an option"
-/>
+                  <select
+                    id="exploration"
+                    name="exploration"
+                    value={formData.exploration}
+                    onChange={handleChange}
+                    className="ei-form-select"
+                  >
+                    <option value="">Select an option</option>
+                    {explorationOptions.map(option => (
+                      <option key={option} value={option}>{option}</option>
+                    ))}
+                  </select>
                 </div>
 
                 <div className="space-y-3">
