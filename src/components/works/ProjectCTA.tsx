@@ -2,14 +2,19 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/Button';
 import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
 
-interface ProjectCTAProps {
+type ProjectCTAProps = {
   eyebrow: string;
   heading: string;
   body: string;
   buttonLabel: string;
   buttonHref: string;
   backgroundImage: string;
-}
+
+  secondaryLinks?: {
+    label: string;
+    href: string;
+  }[];
+};
 
 export function ProjectCTA({
   eyebrow,
