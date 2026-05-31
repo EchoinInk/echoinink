@@ -6,6 +6,7 @@ import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
 import nebulaDesktop from '@/assets/digital-nebula-bg.png';
 import nebulaMobile from '@/assets/digital-nebula-mobile.png';
+import digitalNebulaBookSession from '@/assets/digital-nebula-book-session.png';
 import {
   fadeSoft,
   driftUp,
@@ -384,7 +385,7 @@ export function Contact() {
   viewport={VIEWPORT.loose}
   className="relative mx-auto mt-20 min-h-[360px] max-w-[1180px] overflow-hidden rounded-[10px] border border-white/[0.08] bg-cover bg-center bg-no-repeat shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] md:min-h-[390px]"
   style={{
-    backgroundImage: `url(${nebulaDesktop})`,
+    backgroundImage: `url(${digitalNebulaBookSession})`,
   }}
 >
   <div
