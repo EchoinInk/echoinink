@@ -86,6 +86,29 @@ export function ProjectCTA({
           {buttonLabel}
           <span aria-hidden="true">→</span>
         </Button>
+        <div className="mt-8">
+  <Button href={buttonHref}>
+    {buttonLabel}
+  </Button>
+
+  {secondaryLinks?.length ? (
+    <div className="mt-5 flex flex-wrap gap-x-8 gap-y-3">
+      {secondaryLinks.map((link) => (
+        <Link
+          key={link.href}
+          to={link.href}
+          className="group inline-flex items-center"
+          style={{ color: 'var(--ei-text-secondary)' }}
+        >
+          {link.label}
+          <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1">
+            →
+          </span>
+        </Link>
+      ))}
+    </div>
+  ) : null}
+</div>
       </div>
     </motion.section>
   );
