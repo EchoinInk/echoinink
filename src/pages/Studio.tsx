@@ -14,7 +14,7 @@ export function Studio() {
   return (
     <Layout>
       <Helmet>
-        <title>Studio | Echo In Ink</title>
+        <title>Studio — Echo in Ink</title>
       </Helmet>
    
       <Section>
