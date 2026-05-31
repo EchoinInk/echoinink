@@ -357,7 +357,7 @@ export function Contact() {
                     type="submit"
                     variant="primary"
                     disabled={formState === 'submitting'}
-                    className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.9),rgb(var(--ei-void-black-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.92),rgb(var(--ei-void-black-rgb)/0.96))] focus-visible:ring-white/55 disabled:opacity-80"
+                    className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.9),rgb(var(--ei-void-black-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.92),rgb(var(--ei-void-black-rgb)/0.96))] focus-visible:ring-white/55 focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.36)] hover:shadow-[0_10px_40px_rgb(var(--ei-aurora-blue-rgb)/0.08)] disabled:opacity-80"
                   >
                     {formState === 'submitting' ? 'Sending...' : 'Send Message'}
                   </Button>

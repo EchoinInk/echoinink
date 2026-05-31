@@ -66,7 +66,7 @@ export default function Footer() {
               <span className="font-structural text-[11px] tracking-[0.18em] uppercase text-white/75 block mb-3">
                 Echo in Ink
               </span>
-              <p className="font-structural text-[12px] leading-[1.7] text-white/55 max-w-[30ch] mb-4">
+              <p className="font-structural text-[12px] leading-[1.7] text-white/60 max-w-[30ch] mb-4">
                 Designing worlds that hold meaning, transform perception, and
                 outlive trends.
               </p>
@@ -74,7 +74,7 @@ export default function Footer() {
 
             {/* Col 2 — Navigation */}
             <nav aria-label="Footer navigation">
-              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/55 block mb-4">
+              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/60 block mb-4">
                 Navigation
               </span>
               <ul className="space-y-2.5">
@@ -93,7 +93,7 @@ export default function Footer() {
 
             {/* Col 3 — Connect */}
             <div>
-              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/55 block mb-4">
+              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/60 block mb-4">
                 Connect
               </span>
               <a
@@ -102,7 +102,7 @@ export default function Footer() {
               >
                 hello@echoin.ink
               </a>
-              <span className="font-structural text-[12px] text-white/65 block mb-5">
+              <span className="font-structural text-[12px] text-white/68 block mb-5">
                 Auckland, New Zealand
               </span>
               <div className="flex items-center gap-4">
@@ -122,12 +122,12 @@ export default function Footer() {
 
             {/* Col 4 — Atmospheric Intelligence */}
 <div className="relative">
-  <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/55 block mb-4">
+  <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/60 block mb-4">
     Atmospheric Intelligence
   </span>
 
   <div className="flex items-start justify-between gap-5">
-   <p className="font-structural text-[12px] leading-[1.7] text-white/55 mb-4 max-w-[30ch]">
+   <p className="font-structural text-[12px] leading-[1.7] text-white/60 mb-4 max-w-[30ch]">
   Exploring the intersection of identity, emotion, and reflective
   technology.
 </p>
@@ -172,10 +172,10 @@ export default function Footer() {
             }}
           />
           <div className="flex flex-col md:flex-row items-center justify-between gap-3">
-            <span className="font-structural text-[10px] tracking-[0.1em] text-white/50">
+            <span className="font-structural text-[10px] tracking-[0.1em] text-white/55">
               © 2025 Echo in Ink
             </span>
-            <span className="font-structural text-[10px] tracking-[0.12em] uppercase text-white/25">
+            <span className="font-structural text-[10px] tracking-[0.12em] uppercase text-white/32">
               Founded 2025
             </span>
           </div>
