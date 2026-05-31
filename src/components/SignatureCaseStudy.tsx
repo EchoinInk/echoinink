@@ -631,7 +631,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container py-16 md:py-28">
         <motion.span
           {...labelFade(0)}
-          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-12 md:mb-16"
+          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/60 mb-12 md:mb-16"
         >
           04 — The System We Built
         </motion.span>
