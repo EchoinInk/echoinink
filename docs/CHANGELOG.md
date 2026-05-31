@@ -1,5 +1,47 @@
 # Changelog
 
+## 2026-06-01 — Works Page Redesign
+
+### Works Page Restructure
+
+**New Components**
+- `src/components/hero/EditorialHero.tsx` — Reusable cinematic page hero with eyebrow, editorial title (optional italic word), description, CTA, and responsive `<picture>` background
+- `src/components/works/ProjectCard.tsx` — Reusable project card with `large` / `small` variants; featured horizontal split for LUMO; image-led overlay for large cards; compact layout for small cards
+- `src/components/works/WorkFilterBar.tsx` — Category filter row with `aria-pressed` states + `EchoSelect` sort dropdown
+- `src/components/works/WorksGrid.tsx` — Data-driven responsive grid with filter/sort logic
+- `src/components/works/ProjectCTA.tsx` — Full-width cinematic CTA card (Contact “Book a session” pattern)
+- `src/data/worksProjects.ts` — Centralised project data for LUMO, Aurora, Obsidian, Verde, Nexus
+
+**WorksPage.tsx — Full Rewrite**
+- Replaced inline typography hero with `EditorialHero` using `works-hero.png` / `works-hero-mobile.png`
+- Replaced `SelectedWorks` gallery and `PageCTA` with filter bar, grid, and `ProjectCTA`
+- Removed custom footer strip (“INK MEETS LIGHT.”)
+- SEO: title → “Works | Echo In Ink”; updated meta description
+- Existing `Header` (via `Layout`) and `Footer` (via `PageShell`) preserved — no duplicate variants
+
+**Design System**
+- Card styling uses `--ei-card-bg`, `--ei-card-border`, `--ei-card-shadow-hover`, `--radius-card`
+- Filter active states use `--ei-filter-bg-active`, `--ei-filter-border-active`
+- Hover: border brighten, -4px lift, image scale 1.02/1.025, CTA arrow shift; respects `prefers-reduced-motion`
+- Motion via `@/lib/motion-cinematic` (`fadeSoft`, `driftUp`, `staggerContainer`)
+
+**Token Cleanup**
+- `--ei-text-muted`: 85% → 48% opacity (decorative/minor text)
+- `--ei-text-soft`: new token at 85% opacity (editorial italic accents)
+- Tailwind `ei.text-muted` and `ei.text-soft` updated to match
+
+**Imagery Wired**
+- Hero: `works-hero.png`, `works-hero-mobile.png`
+- Cards: `lumo-featured-bg.png`, `ei-lightwave-work-card.png`, `ei-planetsilhouette-work-card.png`, `placeholder-works-card.png`, `nexus-work-card.png`
+- CTA: `cosmic-rings-bg.png`
+
+**Verification**
+- TypeScript: 0 errors
+- Vite build: exit 0
+- Image optimizer ENOENT errors: pre-existing (avifenc/cwebp/pngquant binaries absent from environment)
+
+---
+
 ## 2026-05-28 (Phase 4 — EI Colour Brand Kit Implementation)
 
 ### Global Colour Token Migration
