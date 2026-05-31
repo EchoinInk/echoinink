@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
-import { StudioHero } from '@/components/studio/StudioHero';
+import { Section } from '@/components/layout/Section';
 import { OriginSection } from '@/components/studio/OriginSection';
 import { PhilosophyGrid } from '@/components/studio/PhilosophyGrid';
 import { ValuesGrid } from '@/components/studio/ValuesGrid';
@@ -58,6 +58,5 @@ export function Studio() {
       </Container>
       </Section>
       </Layout>
-    </PageShell>
   );
 }
