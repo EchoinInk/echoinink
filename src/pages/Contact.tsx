@@ -360,13 +360,14 @@ export function Contact() {
                 </div>
 
                 <div className="flex flex-col gap-6 pt-1 sm:flex-row sm:items-center">
-                  <button
-                    type="submit"
-                    disabled={formState === 'submitting'}
-                    className="ei-gradient-border-btn-refined min-h-[58px] w-full bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.30),rgb(var(--ei-void-black-rgb)/0.78))] px-10 py-5 font-structural text-[11px] font-medium uppercase tracking-[0.22em] text-white/86 transition-all duration-700 hover:-translate-y-px hover:text-white disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
-                  >
-                    {formState === 'submitting' ? 'Sending...' : 'Send Message'}
-                  </button>
+               <Button
+  type="submit"
+  variant="primary"
+  disabled={formState === 'submitting'}
+  className="min-h-[58px] w-full sm:w-auto"
+>
+  {formState === 'submitting' ? 'Sending...' : 'Send Message'}
+</Button>
 
                   <p className="flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65] text-white/48">
                     <span className="mt-0.5 text-white/52">
