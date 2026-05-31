@@ -32,7 +32,13 @@ export function Studio() {
       />
 
       <Container size="xl" className="relative z-10 pb-24 md:pb-32">
-        <div className="mx-auto max-w-[1180px]">
+      <motion.section
+          variants={fadeSoft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.loose}
+          className="mx-auto max-w-[1180px] pt-12 md:pt-16"
+        ><div className="mx-auto max-w-[1180px]">
           <OriginSection />
           <PhilosophyGrid />
           <ValuesGrid />
