@@ -159,7 +159,7 @@ export function Contact() {
             <img
               src={nebulaMobile}
               alt=""
-              className="h-full w-full object-cover object-center md:object-[72%_50%]"
+              className="h-full w-full object-cover object-center saturate-[0.84] md:object-[72%_50%]"
               fetchPriority="high"
             />
           </picture>
@@ -170,6 +170,15 @@ export function Contact() {
             style={{
               background:
                 'linear-gradient(180deg, rgba(6, 8, 18, 0.15) 0%, rgba(6, 8, 18, 0.45) 100%)',
+            }}
+          />
+
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-[1] pointer-events-none"
+            style={{
+              background:
+                'linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-void-black-rgb) / 0.16) 100%)',
             }}
           />
 
@@ -213,7 +222,7 @@ export function Contact() {
                     textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.08)',
                   }}
                 >
-                  Let's build <span className="md:whitespace-nowrap">something <em className="font-normal italic text-[rgb(var(--ei-soft-lavender-rgb)/0.9)]">meaningful.</em></span>
+                  Let's build <span className="inline-flex flex-wrap items-baseline gap-x-[0.14em] md:flex-nowrap md:whitespace-nowrap">something <em className="font-normal italic text-[rgb(var(--ei-soft-lavender-rgb)/0.9)]">meaningful.</em></span>
                 </h1>
 
                 <p
