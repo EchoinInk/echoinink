@@ -88,7 +88,9 @@ export function Studio() {
 
           <QuoteCard lines={studioQuoteLines} />
         </motion.section>
+        </Container>
 
+        <Container size="xl" className="relative z-10">
         <motion.section
           variants={fadeSoft}
           initial="hidden"
@@ -110,8 +112,9 @@ export function Studio() {
         ))}
       </div>
     </motion.section>
+    </Container>
     );
-          <ValuesGrid />
+    </Container>
         <section className="pt-20 pb-24 md:pt-28 md:pb-32">
           <ProjectCTA
             eyebrow="Continue the conversation"
