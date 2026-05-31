@@ -8,12 +8,12 @@ import { ValuesGrid } from '@/components/studio/ValuesGrid';
 import { ProjectCTA } from '@/components/works/ProjectCTA';
 import studioHeroDesktop from '@/assets/imagery/hero/studio-hero.png';
 import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.png';
+import studioCTABg from '@/assets/imagery/sessions/studio-cta-bg.png';
 import { motion } from 'framer-motion';
 import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
-
 export function Studio() {
   return (
-    <PageShell atmosphere="studio" withTopSpacing={false}>
+    <Layout>
       <Helmet>
         <title>Studio | Echo In Ink</title>
         <meta
@@ -21,7 +21,6 @@ export function Studio() {
           content="The philosophy, principles, and creative direction behind Echo In Ink."
         />
       </Helmet>
-
       <EditorialHero
         eyebrow="Studio"
         title="The philosophy behind the worlds."
