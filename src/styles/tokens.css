@@ -29,7 +29,8 @@
     --ei-text-primary: var(--ei-ice-white);
     --ei-text-secondary: rgb(var(--ei-ice-white-rgb) / 0.72);
     --ei-text-tertiary: rgb(var(--ei-ice-white-rgb) / 0.58);
-    --ei-text-muted: rgb(var(--ei-soft-lavender-rgb) / 0.85);
+    --ei-text-muted: rgb(var(--ei-soft-lavender-rgb) / 0.48);
+    --ei-text-soft: rgb(var(--ei-soft-lavender-rgb) / 0.85);
     --ei-text-accent: var(--ei-aurora-blue);
     --ei-text-accent-secondary: var(--ei-orchid-pink);
 

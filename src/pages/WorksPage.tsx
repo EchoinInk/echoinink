@@ -1,80 +1,76 @@
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { PageShell } from '@/components/system';
-import {
-  fadeSoft,
-  driftUp,
-  staggerContainer,
-  STAGGER,
-  VIEWPORT
-} from '@/lib/motion-cinematic';
-import { SelectedWorks } from '@/components/SelectedWorks';
-import { PageCTA } from '@/components/PageCTA';
+import { Container } from '@/components/layout/Container';
+import { EditorialHero } from '@/components/hero/EditorialHero';
+import { WorkFilterBar } from '@/components/works/WorkFilterBar';
+import { WorksGrid } from '@/components/works/WorksGrid';
+import { ProjectCTA } from '@/components/works/ProjectCTA';
+import worksHeroDesktop from '@/assets/imagery/hero/works-hero.png';
+import worksHeroMobile from '@/assets/imagery/hero/works-hero-mobile.png';
+import cosmicRingsBg from '@/assets/imagery/backgrounds/cosmic-rings-bg.png';
+import type { WorkFilter, WorkSort } from '@/data/worksProjects';
+import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
 
 export function WorksPage() {
+  const [activeFilter, setActiveFilter] = useState<WorkFilter>('All Works');
+  const [sortBy, setSortBy] = useState<WorkSort>('Latest');
+
   return (
     <PageShell atmosphere="works" withTopSpacing={false}>
       <Helmet>
-        <title>Selected Works — Echo in Ink</title>
-        <meta name="description" content="A curated record of visual and narrative experiments — atmospheres built, identities discovered, and worlds made luminous." />
+        <title>Works | Echo In Ink</title>
+        <meta
+          name="description"
+          content="Selected identity systems, immersive websites, and atmospheric digital experiences by Echo In Ink."
+        />
       </Helmet>
 
-      {/* Page header */}
-      <section className="relative ei-section-expansive overflow-hidden">
-        <div className="ei-container max-w-4xl">
-          <motion.div
-            variants={staggerContainer(STAGGER.cinematic, 0)}
-            initial="hidden"
-            whileInView="visible"
-            viewport={VIEWPORT.loose}
-          >
-            <motion.span 
-              variants={driftUp}
-              className="ei-eyebrow ei-text-space-xl block"
-            >
-              The Archive
-            </motion.span>
-            <motion.h1 
-              variants={driftUp}
-              className="ei-hero-display whitespace-pre-line"
-            >
-              {"Selected\nWorks"}
-            </motion.h1>
-            <motion.p 
-              variants={fadeSoft}
-              className="ei-section-description mt-8 max-w-xl"
-            >
-              A curated record of visual and narrative experiments — atmospheres built, identities discovered, and worlds made luminous.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+      <EditorialHero
+        eyebrow="Our Works"
+        title="Worlds we've designed and built."
+        italicWord="built"
+        description="Selected projects that explore identity, emotion, and technology — crafted to leave a lasting impact."
+        ctaLabel="Start a Project →"
+        ctaHref="/contact"
+        image={worksHeroDesktop}
+        mobileImage={worksHeroMobile}
+        imageAlt="Cinematic nebula visual representing Echo In Ink selected works"
+        align="left"
+      />
 
-      {/* Works gallery */}
-      <SelectedWorks hideViewAll />
-
-      {/* CTA */}
-      <PageCTA page="works" />
-
-      {/* Page footer strip */}
-      <section className="relative ei-section-intimate overflow-hidden">
-        <div className="ei-container">
-          <div
-            className="w-full h-px mb-10 md:mb-14"
-            style={{
-              background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.04) 75%, transparent)',
-            }}
+      <Container size="xl" className="relative z-10 pb-24 md:pb-32">
+        <motion.section
+          variants={fadeSoft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.loose}
+          className="mx-auto max-w-[1180px] pt-12 md:pt-16"
+        >
+          <WorkFilterBar
+            activeFilter={activeFilter}
+            sortBy={sortBy}
+            onFilterChange={setActiveFilter}
+            onSortChange={setSortBy}
           />
-          <div className="flex items-center justify-between">
-            <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/50">
-              INK MEETS LIGHT.
-            </span>
-            <span className="font-structural text-[9px] tracking-[0.28em] uppercase text-white/50">
-              EMOTIONS BECOME DESIGN.
-            </span>
+
+          <div className="mt-10 md:mt-14">
+            <WorksGrid activeFilter={activeFilter} sortBy={sortBy} />
           </div>
+        </motion.section>
+
+        <div className="mx-auto mt-16 max-w-[1180px] md:mt-24">
+          <ProjectCTA
+            eyebrow="Have a project in mind?"
+            heading="Let's build something meaningful."
+            body="We partner with founders, creators, and teams to design and build experiences that resonate."
+            buttonLabel="Start a Project"
+            buttonHref="/contact"
+            backgroundImage={cosmicRingsBg}
+          />
         </div>
-      </section>
+      </Container>
     </PageShell>
   );
 }

@@ -1,0 +1,174 @@
+import { motion } from 'framer-motion';
+import { Container } from '@/components/layout/Container';
+import { Button } from '@/components/Button';
+import {
+  driftUp,
+  fadeSoft,
+  staggerContainer,
+  STAGGER,
+  VIEWPORT,
+} from '@/lib/motion-cinematic';
+
+interface EditorialHeroProps {
+  eyebrow: string;
+  title: string;
+  italicWord?: string;
+  description: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+  image: string;
+  mobileImage: string;
+  imageAlt: string;
+  align?: 'left' | 'center';
+}
+
+export function EditorialHero({
+  eyebrow,
+  title,
+  italicWord,
+  description,
+  ctaLabel,
+  ctaHref,
+  image,
+  mobileImage,
+  imageAlt,
+  align = 'left',
+}: EditorialHeroProps) {
+  const titleParts = italicWord
+    ? title.split(new RegExp(`(${italicWord})`, 'i'))
+    : [title];
+
+  const isLeft = align === 'left';
+
+  return (
+    <motion.section
+      variants={staggerContainer(STAGGER.cinematic, 0)}
+      initial="hidden"
+      whileInView="visible"
+      viewport={VIEWPORT.loose}
+      className="relative flex min-h-[52vh] items-center overflow-hidden pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]"
+      aria-labelledby="editorial-hero-heading"
+    >
+      <picture className="absolute inset-0 z-0 block" aria-hidden="true">
+        <source media="(min-width: 768px)" srcSet={image} />
+        <img
+          src={mobileImage}
+          alt=""
+          className="h-full w-full object-cover object-center saturate-[0.84] md:object-[72%_50%]"
+          fetchPriority="high"
+        />
+      </picture>
+
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[1] pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(180deg, rgba(6, 8, 18, 0.15) 0%, rgba(6, 8, 18, 0.45) 100%)',
+        }}
+      />
+
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[1] pointer-events-none"
+        style={{
+          background: isLeft
+            ? 'linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-void-black-rgb) / 0.16) 100%)'
+            : 'linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.16) 0%, transparent 56%, transparent 100%)',
+        }}
+      />
+
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[2] pointer-events-none"
+        style={{
+          background: isLeft
+            ? 'radial-gradient(ellipse 54% 62% at 20% 48%, rgb(var(--ei-void-black-rgb) / 0.54) 0%, rgb(var(--ei-void-black-rgb) / 0.34) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.32) 0%, transparent 54%)'
+            : 'radial-gradient(ellipse 54% 62% at 80% 48%, rgb(var(--ei-void-black-rgb) / 0.54) 0%, rgb(var(--ei-void-black-rgb) / 0.34) 42%, transparent 72%), linear-gradient(270deg, rgb(var(--ei-void-black-rgb) / 0.32) 0%, transparent 54%)',
+        }}
+      />
+
+      <div
+        aria-hidden="true"
+        className="absolute bottom-0 left-0 right-0 z-[3] h-[20vh] pointer-events-none"
+        style={{
+          background:
+            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-black-rgb) / 0.34) 70%, var(--ei-void-black) 100%)',
+        }}
+      />
+
+      <Container size="xl" className="relative z-10">
+        <div className={`max-w-[680px] ${isLeft ? '' : 'mx-auto text-center'}`}>
+          <motion.div
+            variants={driftUp}
+            className={`max-w-[680px] md:-translate-y-[2vh] ${isLeft ? 'text-left md:pl-10 lg:pl-14' : 'text-center'}`}
+          >
+            <div
+              className={`mb-3 flex items-center gap-4 md:mb-5 ${isLeft ? '' : 'justify-center'}`}
+            >
+              <span
+                className="font-structural text-[11px] uppercase tracking-[0.2em]"
+                style={{ color: 'var(--ei-text-tertiary)' }}
+              >
+                {eyebrow}
+              </span>
+              <div
+                className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
+                style={{
+                  background:
+                    'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
+                }}
+                aria-hidden="true"
+              />
+            </div>
+
+            <h1
+              id="editorial-hero-heading"
+              className="font-editorial max-w-[680px] pt-8 text-[2.25rem] leading-[1.06] tracking-tight max-md:leading-[1.12] md:pt-12 md:text-[3.1rem] lg:text-[3.7rem]"
+              style={{
+                color: 'var(--ei-text-primary)',
+                textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.08)',
+              }}
+            >
+              {italicWord
+                ? titleParts.map((part, i) =>
+                    part.toLowerCase() === italicWord.toLowerCase() ? (
+                      <em
+                        key={i}
+                        className="font-normal italic"
+                        style={{ color: 'var(--ei-text-soft)' }}
+                      >
+                        {part}
+                      </em>
+                    ) : (
+                      <span key={i}>{part}</span>
+                    ),
+                  )
+                : title}
+            </h1>
+
+            <p
+              className="mt-5 max-w-[42ch] font-structural text-[14px] leading-[1.65] md:mt-6 md:max-w-[46ch] md:text-[15px]"
+              style={{
+                color: 'var(--ei-text-secondary)',
+                letterSpacing: '0.005em',
+              }}
+            >
+              {description}
+            </p>
+
+            {ctaLabel && ctaHref && (
+              <motion.div variants={fadeSoft} className="mt-8 md:mt-10">
+                <Button to={ctaHref} variant="primary" className="self-start">
+                  {ctaLabel}
+                </Button>
+              </motion.div>
+            )}
+          </motion.div>
+        </div>
+      </Container>
+
+      <span className="sr-only">{imageAlt}</span>
+    </motion.section>
+  );
+}
