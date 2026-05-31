@@ -378,48 +378,50 @@ export function Contact() {
             )}
           </motion.div>
         </motion.section>
+<motion.section
+  variants={fadeSoft}
+  initial="hidden"
+  whileInView="visible"
+  viewport={VIEWPORT.loose}
+  className="mx-auto mt-20 max-w-[1180px] overflow-hidden border border-white/[0.08] bg-transparent shadow-[0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] backdrop-blur-sm"
+>
+  <div className="grid gap-8 p-7 md:grid-cols-[0.34fr_0.66fr] md:items-center md:p-9 lg:p-10">
+    <div className="relative min-h-[160px] overflow-hidden rounded-[10px] md:min-h-[150px]">
+      <img
+        src={sessionImage}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover opacity-100"
+        loading="lazy"
+      />
+    </div>
 
-        <motion.section
-          variants={fadeSoft}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT.loose}
-          className="mx-auto mt-20 max-w-[1180px] overflow-hidden border border-white/[0.08] bg-[linear-gradient(135deg,rgb(var(--ei-deep-indigo-rgb)/0.18),rgb(var(--ei-void-black-rgb)/0.62)_48%,rgb(var(--ei-luxe-violet-rgb)/0.055))] shadow-[0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] backdrop-blur-sm"
-        >
-          <div className="grid gap-8 p-7 md:grid-cols-[0.34fr_0.66fr] md:items-center md:p-9 lg:p-10">
-            <div className="relative min-h-[160px] overflow-hidden rounded-[10px] md:min-h-[150px]">
-              <img
-                src={sessionImage}
-                alt=""
-                className="absolute inset-0 h-full w-full object-cover opacity-72"
-                loading="lazy"
-              />
-              <div className="absolute inset-0 bg-[linear-gradient(135deg,rgb(var(--ei-void-black-rgb)/0.10),rgb(var(--ei-void-black-rgb)/0.58))]" />
-            </div>
+    <div className="grid gap-7 md:grid-cols-[1fr_auto] md:items-center">
+      <div>
+        <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/48">
+          Prefer a quick chat?
+        </span>
 
-            <div className="grid gap-7 md:grid-cols-[1fr_auto] md:items-center">
-              <div>
-                <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/48">
-                  Prefer a quick chat?
-                </span>
-                <h2 className="mt-4 font-editorial text-[clamp(2rem,3vw,3.1rem)] leading-tight text-white/88">
-                  Book a session
-                </h2>
-                <p className="mt-4 max-w-[430px] font-structural text-[0.98rem] leading-[1.75] text-white/56">
-                  Schedule a focused call to explore your project and see if we're a good fit.
-                </p>
-              </div>
+        <h2 className="mt-4 font-editorial text-[clamp(2rem,3vw,3.1rem)] leading-tight text-white/88">
+          Book a session
+        </h2>
 
-              <Link
-                to="/sessions"
-                className="group inline-flex items-center gap-3 font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-white/78 transition-colors duration-500 hover:text-white"
-              >
-                View session options
-                <span className="transition-transform duration-500 group-hover:translate-x-1">→</span>
-              </Link>
-            </div>
-          </div>
-        </motion.section>
+        <p className="mt-4 max-w-[430px] font-structural text-[0.98rem] leading-[1.75] text-white/56">
+          Schedule a focused call to explore your project and see if we're a good fit.
+        </p>
+      </div>
+
+      <Link
+        to="/sessions"
+        className="group inline-flex items-center gap-3 font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-white/78 transition-colors duration-500 hover:text-white"
+      >
+        View session options
+        <span className="transition-transform duration-500 group-hover:translate-x-1">
+          →
+        </span>
+      </Link>
+    </div>
+  </div>
+</motion.section>
         </Container>
       </div>
     </PageShell>
