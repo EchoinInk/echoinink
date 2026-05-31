@@ -186,18 +186,31 @@ export function Studio() {
         </motion.section>
       </Container>
 
-      <Container size="xl" className="relative z-10 pb-[clamp(5rem,8vw,7rem)]">
-        <div className="mx-auto max-w-[1180px]">
-          <ProjectCTA
-            eyebrow="Continue the conversation"
-            heading="Aligned in philosophy?"
-            body="If our approach resonates, let's explore how we can build something meaningful together."
-            buttonLabel="Work with the Studio"
-            buttonHref="/contact"
-            backgroundImage={studioCTABg}
-          />
-        </div>
-      </Container>
+      <Container
+  size="xl"
+  className="relative z-10 pb-[clamp(5rem,8vw,7rem)]"
+>
+  <div className="mx-auto max-w-[1180px]">
+    <ProjectCTA
+      eyebrow="Continue the conversation"
+      heading="Aligned in philosophy?"
+      body="If our approach resonates, let's explore how we can build something meaningful together."
+      buttonLabel="Work with the Studio"
+      buttonHref="/contact"
+      backgroundImage={studioCTABg}
+      secondaryLinks={[
+        {
+          label: 'Book a Session',
+          href: '/sessions',
+        },
+        {
+          label: 'Explore the Works',
+          href: '/works',
+        },
+      ]}
+    />
+  </div>
+</Container>
     </PageShell>
   );
 }

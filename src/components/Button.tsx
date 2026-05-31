@@ -9,6 +9,11 @@ type BaseButtonProps = {
   className?: string;
 };
 
+type SecondaryLink = {
+  label: string;
+  href: string;
+};
+
 type NativeButtonProps = BaseButtonProps &
   ButtonHTMLAttributes<HTMLButtonElement> & {
     to?: never;
