@@ -3,10 +3,12 @@ import { NumberedSectionLabel } from '@/components/editorial/NumberedSectionLabe
 import { PhilosophyCard } from '@/components/studio/PhilosophyCard';
 import { valueItems } from '@/data/studioContent';
 import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
+import { Container } from '../layout/Container';
 
 export function ValuesGrid() {
   return (
-    <motion.section
+    <Container size="xl" className="relative z-10">
+      <motion.section
       variants={staggerContainer(STAGGER.loose, 0)}
       initial="hidden"
       whileInView="visible"
@@ -28,5 +30,6 @@ export function ValuesGrid() {
         ))}
       </div>
     </motion.section>
+    </Container>
   );
 }
