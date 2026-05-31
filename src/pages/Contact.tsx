@@ -8,7 +8,7 @@ import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/Button';
 import nebulaDesktop from '@/assets/imagery/hero/contact-hero.png';
 import nebulaMobile from '@/assets/digital-nebula-mobile.png';
-import digitalNebulaBookSession from '@/assets/imagery/contact/book-session.png';
+import digitalNebulaBookSession from '@/assets/imagery/sections/book-session.png';
 import {
   fadeSoft,
   driftUp,

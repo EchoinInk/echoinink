@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion, useScroll, useTransform, useSpring } from 'framer-motion';
-import lumoinkdrift from '@/assets/ei-lumofeatured-bg.png';
+import lumoinkdrift from '@/assets/imagery/sections/lumo-featured-bg.png';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import {
