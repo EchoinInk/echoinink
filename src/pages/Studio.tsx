@@ -15,10 +15,6 @@ export function Studio() {
     <Layout>
       <Helmet>
         <title>Studio | Echo In Ink</title>
-        <meta
-          name="description"
-          content="The philosophy, principles, and creative direction behind Echo In Ink."
-        />
       </Helmet>
       <PageShell atmosphere="studio" withTopSpacing={false}>
    
