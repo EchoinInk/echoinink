@@ -465,7 +465,7 @@ export function SignatureCaseStudy() {
           <div className="max-w-3xl">
             <motion.span
               {...labelFade(0)}
-              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-10"
+              className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/60 mb-10"
             >
               01 — The Beginning: A Feeling, Not a Brief
             </motion.span>
@@ -505,7 +505,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container py-16 md:py-28">
         <motion.span
           {...labelFade(0)}
-          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-12 md:mb-16"
+          className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/60 mb-12 md:mb-16"
         >
           02 — The World We Found
         </motion.span>
@@ -572,7 +572,7 @@ export function SignatureCaseStudy() {
         <div className="ei-container pt-14 md:pt-20">
           <motion.span
             {...labelFade(0)}
-            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/40 mb-12 text-center"
+            className="block font-structural text-[10px] tracking-[0.38em] uppercase text-white/60 mb-12 text-center"
           >
             03 — The Identity Beneath the Identity
           </motion.span>

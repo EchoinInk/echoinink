@@ -102,7 +102,7 @@ export default function Footer() {
               >
                 hello@echoin.ink
               </a>
-              <span className="font-structural text-[12px] text-white/40 block mb-5">
+              <span className="font-structural text-[12px] text-white/60 block mb-5">
                 Auckland, New Zealand
               </span>
               <div className="flex items-center gap-4">
@@ -112,7 +112,7 @@ export default function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-[10px] tracking-[0.14em] text-white/40 hover:text-white/75 transition-colors duration-400"
+                    className="font-mono text-[10px] tracking-[0.14em] text-white/60 hover:text-white/75 transition-colors duration-400"
                   >
                     {s.label}
                   </a>
