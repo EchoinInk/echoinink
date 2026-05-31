@@ -14,7 +14,11 @@ import studioHeroDesktop from '@/assets/imagery/hero/studio-hero.png';
 import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.png';
 import studioCTABg from '@/assets/imagery/sections/studio-ct-bg.png';
 
-import { originCopy, philosophyItems, studioQuoteLines } from '@/data/studioContent';
+import {
+  originCopy,
+  philosophyItems,
+  studioQuoteLines,
+} from '@/data/studioContent';
 
 import {
   driftUp,
@@ -51,8 +55,13 @@ export function Studio() {
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="mx-auto grid max-w-[1180px] items-stretch gap-12 py-[clamp(5rem,10vw,7.5rem)] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:gap-16 xl:gap-20"
           aria-labelledby="origin-heading"
+          className="
+            mx-auto grid max-w-[1180px] items-stretch gap-12
+            py-[clamp(4rem,8vw,6.5rem)]
+            lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]
+            lg:gap-16 xl:gap-20
+          "
         >
           <div>
             <motion.div variants={driftUp}>
@@ -65,7 +74,11 @@ export function Studio() {
             <motion.h2
               id="origin-heading"
               variants={driftUp}
-              className="mt-6 max-w-[24ch] whitespace-pre-line font-editorial text-[clamp(1.75rem,3vw,2.5rem)] leading-[1.2] tracking-tight"
+              className="
+                mt-6 max-w-[24ch] whitespace-pre-line
+                font-editorial text-[clamp(1.75rem,3vw,2.5rem)]
+                leading-[1.2] tracking-tight
+              "
               style={{ color: 'var(--ei-text-primary)' }}
             >
               {originCopy.heading}
@@ -74,8 +87,11 @@ export function Studio() {
             <motion.div variants={fadeSoft} className="mt-8 space-y-5">
               {originCopy.paragraphs.map((paragraph) => (
                 <p
-                  key={paragraph.slice(0, 24)}
-                  className="max-w-[38ch] font-structural text-[15px] leading-[1.78] md:text-[16px]"
+                  key={paragraph.slice(0, 32)}
+                  className="
+                    max-w-[38ch] font-structural text-[15px]
+                    leading-[1.78] md:text-[16px]
+                  "
                   style={{ color: 'var(--ei-text-secondary)' }}
                 >
                   {paragraph}
@@ -87,22 +103,43 @@ export function Studio() {
           <QuoteCard lines={studioQuoteLines} />
         </motion.section>
       </Container>
-    <Container size="xl" className="relative z-10">
+
+      <Container size="xl" className="relative z-10">
         <motion.section
           variants={fadeSoft}
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="mx-auto max-w-[1180px] py-[clamp(5rem,10vw,7.5rem)]"
           aria-labelledby="philosophy-heading"
+          className="mx-auto max-w-[1180px] py-[clamp(4rem,8vw,6.5rem)]"
         >
           <motion.div variants={driftUp}>
             <NumberedSectionLabel number="02" label="Philosophy" />
           </motion.div>
 
-          <motion.h2 id="philosophy-heading" variants={driftUp} className="sr-only">
-            Philosophy
-          </motion.h2>
+          <motion.div variants={driftUp} className="mt-6">
+            <h2
+              id="philosophy-heading"
+              className="
+                max-w-[18ch] font-editorial text-[clamp(1.75rem,3vw,2.4rem)]
+                leading-[1.18] tracking-tight
+              "
+              style={{ color: 'var(--ei-text-primary)' }}
+            >
+              Three beliefs shape the work.
+            </h2>
+
+            <p
+              className="
+                mt-4 max-w-[40ch] font-structural text-[15px]
+                leading-[1.75] md:text-[16px]
+              "
+              style={{ color: 'var(--ei-text-secondary)' }}
+            >
+              A studio philosophy built around clarity, emotional truth, and
+              meaningful expression.
+            </p>
+          </motion.div>
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
             {philosophyItems.map((item, index) => (
@@ -115,19 +152,52 @@ export function Studio() {
             ))}
           </div>
         </motion.section>
-    </Container>
-    <Container size="xl" className="relative z-10">
-        <ValuesGrid />
-    </Container>
-          <div className="mx-auto mt-16 max-w-[1180px] md:mt-24">
-            <ProjectCTA
+      </Container>
+
+      <Container size="xl" className="relative z-10">
+        <motion.section
+          variants={fadeSoft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.loose}
+          aria-labelledby="values-heading"
+          className="mx-auto max-w-[1180px] py-[clamp(4rem,8vw,6.5rem)]"
+        >
+          <motion.div variants={driftUp}>
+            <NumberedSectionLabel number="03" label="Values" />
+          </motion.div>
+
+          <motion.div variants={driftUp} className="mt-6">
+            <h2
+              id="values-heading"
+              className="
+                max-w-[20ch] font-editorial text-[clamp(1.75rem,3vw,2.4rem)]
+                leading-[1.18] tracking-tight
+              "
+              style={{ color: 'var(--ei-text-primary)' }}
+            >
+              The principles that keep the work clear.
+            </h2>
+          </motion.div>
+
+          <div className="mt-10">
+            <ValuesGrid />
+          </div>
+        </motion.section>
+      </Container>
+
+      <Container size="xl" className="relative z-10 pb-[clamp(5rem,8vw,7rem)]">
+        <div className="mx-auto max-w-[1180px]">
+          <ProjectCTA
             eyebrow="Continue the conversation"
             heading="Aligned in philosophy?"
             body="If our approach resonates, let's explore how we can build something meaningful together."
             buttonLabel="Work with the Studio"
             buttonHref="/contact"
             backgroundImage={studioCTABg}
-          /></div>
-  </PageShell>
+          />
+        </div>
+      </Container>
+    </PageShell>
   );
 }
