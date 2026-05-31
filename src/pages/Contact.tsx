@@ -383,7 +383,7 @@ export function Contact() {
   initial="hidden"
   whileInView="visible"
   viewport={VIEWPORT.loose}
-  className="relative mx-auto mt-20 min-h-[360px] max-w-[1180px] overflow-hidden rounded-[10px] border border-white/[0.08] bg-cover bg-center bg-no-repeat shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] md:min-h-[390px]"
+  className="relative mx-auto mt-12 min-h-[360px] max-w-[1180px] overflow-hidden rounded-[10px] border border-white/[0.08] bg-cover bg-center bg-no-repeat shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] md:mt-14 md:min-h-[390px]"
   style={{
     backgroundImage: `url(${digitalNebulaBookSession})`,
   }}
@@ -393,7 +393,7 @@ export function Contact() {
     className="absolute inset-0"
     style={{
       background:
-        'linear-gradient(90deg, rgba(6,8,18,0.82) 0%, rgba(6,8,18,0.62) 35%, rgba(6,8,18,0.55) 100%)',
+        'linear-gradient(90deg, rgba(6, 8, 18, 0.88) 0%, rgba(6, 8, 18, 0.72) 35%, rgba(6, 8, 18, 0.38) 100%)',
     }}
   />
 
@@ -408,7 +408,7 @@ export function Contact() {
 
   <div className="relative z-10 flex min-h-[360px] flex-col justify-center gap-9 p-7 md:min-h-[390px] md:max-w-[620px] md:p-12 lg:p-14">
       <div>
-        <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/48">
+        <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/72">
           Prefer a quick chat?
         </span>
 
@@ -416,17 +416,17 @@ export function Contact() {
           Book a session
         </h2>
 
-        <p className="mt-4 max-w-[430px] font-structural text-[0.98rem] leading-[1.75] text-white/56">
+        <p className="mt-4 max-w-[430px] font-structural text-[0.98rem] leading-[1.75] text-white/82">
           Schedule a focused call to explore your project and see if we're a good fit.
         </p>
       </div>
 
       <Link
         to="/sessions"
-        className="group inline-flex items-center gap-3 self-start font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-white/78 transition-all duration-500 hover:text-[rgb(var(--ei-aurora-blue-rgb)/0.92)] hover:drop-shadow-[0_0_10px_rgb(var(--ei-aurora-blue-rgb)/0.28)]"
+        className="group inline-flex min-h-[42px] items-center gap-3 self-start rounded-full border border-white/10 bg-transparent px-5 py-3 font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-[border-color,color,box-shadow] duration-500 hover:border-[rgb(var(--ei-aurora-blue-rgb)/0.34)] hover:text-[rgb(var(--ei-aurora-blue-rgb)/0.94)] hover:shadow-[0_0_20px_rgb(var(--ei-aurora-blue-rgb)/0.12)]"
       >
         View session options
-        <span className="transition-transform duration-500 group-hover:translate-x-1">
+        <span>
           →
         </span>
       </Link>
