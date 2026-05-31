@@ -41,7 +41,7 @@ export function WhyPeopleComeHere() {
           variants={staggerContainer(STAGGER.loose, 0)}
           initial="hidden"
           whileInView="visible"
-          viewport={VIEWPORT.normal}5
+          viewport={VIEWPORT.normal}
           className="max-w-3xl mx-auto text-center"
         >
           {/* Eyebrow */}
