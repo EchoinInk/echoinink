@@ -423,15 +423,14 @@ export function Contact() {
         </p>
       </div>
 
-      <Link
-        to="/sessions"
-        className="group inline-flex min-h-[42px] items-center gap-3 self-start rounded-full border border-white/10 bg-transparent px-5 py-3 font-mono text-[10px] font-medium uppercase tracking-[0.22em] text-white/90 transition-[border-color,color,box-shadow] duration-500 hover:border-[rgb(var(--ei-aurora-blue-rgb)/0.34)] hover:text-[rgb(var(--ei-aurora-blue-rgb)/0.94)] hover:shadow-[0_0_20px_rgb(var(--ei-aurora-blue-rgb)/0.12)]"
-      >
-        View session options
-        <span>
-          →
-        </span>
-      </Link>
+      <Button
+  to="/sessions"
+  variant="secondary"
+  className="min-h-[42px] gap-3 self-start px-5 py-3"
+>
+  View session options
+  <span aria-hidden="true">→</span>
+</Button>
   </div>
 </motion.section>
         </Container>
