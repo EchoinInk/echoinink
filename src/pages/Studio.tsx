@@ -113,8 +113,7 @@ export function Studio() {
       </div>
     </motion.section>
     </Container>
-    );
-    </Container>
+    );<Container>
         <section className="pt-20 pb-24 md:pt-28 md:pb-32">
           <ProjectCTA
             eyebrow="Continue the conversation"
