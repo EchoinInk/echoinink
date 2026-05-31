@@ -116,7 +116,9 @@ export function Studio() {
           </div>
         </motion.section>
     </Container>
+    <Container size="xl" className="relative z-10">
         <ValuesGrid />
+    </Container>
           <div className="mx-auto mt-16 max-w-[1180px] md:mt-24">
             <ProjectCTA
             eyebrow="Continue the conversation"

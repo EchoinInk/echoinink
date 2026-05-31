@@ -13,7 +13,7 @@ export function ValuesGrid() {
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className="py-[clamp(5rem,10vw,7.5rem)]"
+      className="mx-auto max-w-[1180px] py-[clamp(5rem,10vw,7.5rem)]"
       aria-labelledby="values-heading"
     >
       <motion.div variants={driftUp}>
