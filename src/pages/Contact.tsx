@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PageShell } from '@/components/system';
+import { Container } from '@/components/layout/Container';
 import sessionImage from '@/assets/Sessions 2.png';
 import {
   fadeSoft,
@@ -169,40 +170,61 @@ export function Contact() {
         />
       </div>
 
-      <div className="relative z-10 ei-container max-w-[1180px] pt-36 md:pt-44 pb-24 md:pb-32">
+      <div className="relative z-10 pb-24 md:pb-32">
         <motion.section
           variants={staggerContainer(STAGGER.cinematic, 0)}
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="grid items-center gap-14 md:grid-cols-[1.05fr_0.95fr] md:gap-20"
+          className="relative flex min-h-[680px] items-center overflow-hidden pt-28 md:min-h-[760px] md:pt-20"
         >
-          <motion.div variants={driftUp} className="max-w-[520px]">
-            <span className="font-mono text-[10px] uppercase tracking-[0.28em] text-white/45">
-              Contact
-            </span>
-            <h1 className="mt-9 font-editorial text-[clamp(3.15rem,7vw,5.9rem)] leading-[0.95] tracking-normal text-white/92">
-              Let's build something{' '}
-              <em className="font-normal italic text-[rgb(var(--ei-soft-lavender-rgb)/0.9)]">
-                meaningful.
-              </em>
-            </h1>
-            <p className="mt-8 max-w-[430px] font-structural text-[1rem] leading-[1.85] text-white/58 md:text-[1.05rem]">
-              Share a little about your project and I'll get back to you within two days.
-            </p>
-          </motion.div>
+          <Container size="xl" className="relative z-10">
+            <div className="grid items-center gap-14 md:grid-cols-[minmax(0,0.62fr)_minmax(260px,0.38fr)] md:gap-16 lg:gap-20">
+              <motion.div variants={driftUp} className="max-w-[680px] text-left md:pl-10 md:-translate-y-[2vh] lg:pl-14">
+                <div className="mb-3 flex items-center gap-4 md:mb-5">
+                  <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
+                    Contact
+                  </span>
+                  <div
+                    className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
+                    style={{
+                      background:
+                        'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
+                    }}
+                  />
+                </div>
 
-          <motion.div variants={fadeSoft} className="hidden justify-center md:flex">
-            <ContactOrbital />
-          </motion.div>
+                <h1
+                  className="font-editorial max-w-[680px] pt-8 text-[2.25rem] leading-[1.06] tracking-tight text-white/92 max--md:leading-[1.12] md:pt-12 md:text-[3.1rem] lg:text-[3.7rem]"
+                  style={{
+                    textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.08)',
+                  }}
+                >
+                  Let's build <span className="md:whitespace-nowrap">something <em className="font-normal italic text-[rgb(var(--ei-soft-lavender-rgb)/0.9)]">meaningful.</em></span>
+                </h1>
+
+                <p
+                  className="mt-5 max-w-[42ch] font-structural text-[14px] leading-[1.65] text-white/84 md:mt-6 md:max-w-[46ch] md:text-[15px]"
+                  style={{ letterSpacing: '0.005em' }}
+                >
+                  Share a little about your project and I'll get back to you within two days.
+                </p>
+              </motion.div>
+
+              <motion.div variants={fadeSoft} className="hidden justify-center md:flex">
+                <ContactOrbital />
+              </motion.div>
+            </div>
+          </Container>
         </motion.section>
 
+        <Container size="xl" className="relative z-10">
         <motion.section
           variants={staggerContainer(STAGGER.cinematic, 0.08)}
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="mt-24 grid gap-12 md:mt-28 md:grid-cols-[0.36fr_0.64fr] md:gap-16"
+          className="mx-auto mt-8 grid max-w-[1180px] gap-12 md:mt-16 md:grid-cols-[0.36fr_0.64fr] md:gap-16 lg:mt-20"
         >
           <motion.aside variants={fadeSoft} className="md:border-r md:border-white/[0.08] md:pr-9 lg:pr-12">
             <div className="space-y-9 md:space-y-0">
@@ -344,7 +366,7 @@ export function Contact() {
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="mt-20 overflow-hidden border border-white/[0.08] bg-[linear-gradient(135deg,rgb(var(--ei-deep-indigo-rgb)/0.18),rgb(var(--ei-void-black-rgb)/0.62)_48%,rgb(var(--ei-luxe-violet-rgb)/0.055))] shadow-[0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] backdrop-blur-sm"
+          className="mx-auto mt-20 max-w-[1180px] overflow-hidden border border-white/[0.08] bg-[linear-gradient(135deg,rgb(var(--ei-deep-indigo-rgb)/0.18),rgb(var(--ei-void-black-rgb)/0.62)_48%,rgb(var(--ei-luxe-violet-rgb)/0.055))] shadow-[0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] backdrop-blur-sm"
         >
           <div className="grid gap-8 p-7 md:grid-cols-[0.34fr_0.66fr] md:items-center md:p-9 lg:p-10">
             <div className="relative min-h-[160px] overflow-hidden rounded-[10px] md:min-h-[150px]">
@@ -380,6 +402,7 @@ export function Contact() {
             </div>
           </div>
         </motion.section>
+        </Container>
       </div>
     </PageShell>
   );
