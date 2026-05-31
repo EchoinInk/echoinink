@@ -66,7 +66,7 @@ export function HowWeWork() {
       <div
         className="absolute inset-x-0 bottom-0 h-[55%] pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / 0.035) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.015) 30%, transparent 70%)',
+          background: background,
           filter: 'blur(50px)',
         }}
       />
