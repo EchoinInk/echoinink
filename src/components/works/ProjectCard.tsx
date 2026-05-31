@@ -75,8 +75,6 @@ export function ProjectCard({
         transition: { duration: DURATION.instant, ease: EASE_CINEMATIC },
       };
 
-  const imageScale = prefersReducedMotion ? 1 : isLarge ? 1.02 : 1.025;
-
   if (featured && isLarge) {
     return (
       <motion.article
@@ -97,7 +95,7 @@ export function ProjectCard({
       >
         <Link
           to={href}
-          className="grid min-h-[420px] md:min-h-[360px] md:grid-cols-[1fr_1.1fr] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)]"
+          className="grid min-h-[420px] grid-cols-1 md:min-h-[360px] xl:grid-cols-[1fr_1.1fr] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)]"
           aria-label={`${title} — ${category}. ${description}`}
         >
           <div className="flex flex-col justify-between gap-8 p-7 md:p-10 lg:p-12">
@@ -138,14 +136,12 @@ export function ProjectCard({
             </div>
           </div>
 
-          <div className="relative min-h-[220px] overflow-hidden md:min-h-full">
-            <motion.img
+          <div className="relative min-h-[220px] overflow-hidden xl:min-h-full">
+            <img
               src={image}
               alt=""
               aria-hidden="true"
-              className="absolute inset-0 h-full w-full object-cover"
-              whileHover={{ scale: imageScale }}
-              transition={{ duration: 0.7, ease: EASE_CINEMATIC }}
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
             />
             <div
               aria-hidden="true"
@@ -181,13 +177,11 @@ export function ProjectCard({
           className="relative block min-h-[480px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)] md:min-h-[520px]"
           aria-label={`${title} — ${category}. ${description}`}
         >
-          <motion.img
+          <img
             src={image}
             alt=""
             aria-hidden="true"
-            className="absolute inset-0 h-full w-full object-cover"
-            whileHover={{ scale: imageScale }}
-            transition={{ duration: 0.7, ease: EASE_CINEMATIC }}
+            className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
           />
 
           <div
@@ -250,13 +244,11 @@ export function ProjectCard({
         aria-label={`${title} — ${category}. ${description}`}
       >
         <div className="relative aspect-[16/10] overflow-hidden">
-          <motion.img
+          <img
             src={image}
             alt=""
             aria-hidden="true"
-            className="h-full w-full object-cover"
-            whileHover={{ scale: imageScale }}
-            transition={{ duration: 0.7, ease: EASE_CINEMATIC }}
+            className="h-full w-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.025] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
           />
           <div
             aria-hidden="true"
