@@ -53,27 +53,14 @@ export function Header() {
                   className={`font-structural text-[11px] tracking-[0.16em] uppercase transition-colors duration-500 ${
                     active
                       ? "text-white/90"
-                      : "text-white/60 hover:text-white/90"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </div>
-
-          {/* CTA — refined, more premium invitation style */}
-          <Link
-            to="/contact"
-            className="ei-focus-rounded px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.02] text-[10px] tracking-[0.18em] uppercase text-white/65 hover:text-white/90 hover:bg-white/[0.05] hover:border-white/[0.12] transition-all duration-700"
-          >
+                      : "text-white/65 hover:text-white/90"
             Start a Project
           </Link>
         </div>
 
         {/* Mobile Menu Trigger */}
         <button
-          className="md:hidden font-structural text-[11px] tracking-[0.16em] uppercase text-white/55 hover:text-white/80 transition-colors duration-500 min-h-[44px] min-w-[60px] flex items-center justify-center"
+          className="md:hidden font-structural text-[11px] tracking-[0.16em] uppercase text-white/65 hover:text-white/90 transition-colors duration-500 min-h-[44px] min-w-[60px] flex items-center justify-center"
           aria-label="Open navigation menu"
         >
           Menu

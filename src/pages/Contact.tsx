@@ -260,7 +260,7 @@ export function Contact() {
                     <h2 className="font-mono text-[10px] font-medium uppercase tracking-[0.24em] text-white/78">
                       {block.title}
                     </h2>
-                    <div className="mt-5 space-y-2 font-structural text-[0.95rem] leading-[1.45] text-white/58">
+                    <div className="mt-5 space-y-2 font-structural text-[0.95rem] leading-[1.45] text-white/64">
                       {block.lines.map((line, lineIndex) => (
                         <p key={`${block.title}-${lineIndex}`} className={index === 2 ? 'max-w-[26ch] leading-[1.7]' : ''}>
                           {line}
@@ -362,8 +362,8 @@ export function Contact() {
   {formState === 'submitting' ? 'Sending...' : 'Send Message'}
 </Button>
 
-                  <p className="flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65] text-white/48">
-                    <span className="mt-0.5 text-white/52">
+                  <p className="flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65] text-white/60">
+                    <span className="mt-0.5 text-white/65">
                       <ContactIcon name="lock" />
                     </span>
                     Your information is kept private and never shared.

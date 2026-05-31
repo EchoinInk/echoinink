@@ -135,7 +135,7 @@ export function EchoSelect({
           focus-visible:shadow-[0_0_0_1px_rgb(var(--ei-aurora-blue-rgb)/0.22),0_0_28px_rgb(var(--ei-aurora-blue-rgb)/0.08)]
         "
       >
-        <span className={value ? 'relative z-10 block truncate text-white/82' : 'relative z-10 block truncate text-white/45'}>
+        <span className={value ? 'relative z-10 block truncate text-white/82' : 'relative z-10 block truncate text-white/55'}>
           {displayValue}
         </span>
 
@@ -178,7 +178,7 @@ export function EchoSelect({
             onClick={() => selectOption('')}
             className="
               relative cursor-pointer select-none rounded-[11px] px-4 py-3
-              font-mono text-[13px] text-white/48 transition-colors duration-300
+              font-mono text-[13px] text-white/55 transition-colors duration-300
               hover:bg-white/[0.07] hover:text-white/88
             "
           >

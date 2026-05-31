@@ -66,7 +66,7 @@ export default function Footer() {
               <span className="font-structural text-[11px] tracking-[0.18em] uppercase text-white/75 block mb-3">
                 Echo in Ink
               </span>
-              <p className="font-structural text-[12px] leading-[1.7] text-white/45 max-w-[30ch] mb-4">
+              <p className="font-structural text-[12px] leading-[1.7] text-white/55 max-w-[30ch] mb-4">
                 Designing worlds that hold meaning, transform perception, and
                 outlive trends.
               </p>
@@ -74,7 +74,7 @@ export default function Footer() {
 
             {/* Col 2 — Navigation */}
             <nav aria-label="Footer navigation">
-              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/50 block mb-4">
+              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/55 block mb-4">
                 Navigation
               </span>
               <ul className="space-y-2.5">
@@ -82,7 +82,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       to={link.href}
-                      className="font-structural text-[12px] text-white/55 hover:text-white/85 transition-colors duration-400"
+                      className="font-structural text-[12px] text-white/65 hover:text-white/90 transition-colors duration-400"
                     >
                       {link.label}
                     </Link>
@@ -93,16 +93,16 @@ export default function Footer() {
 
             {/* Col 3 — Connect */}
             <div>
-              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/50 block mb-4">
+              <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/55 block mb-4">
                 Connect
               </span>
               <a
                 href="mailto:hello@echoin.ink"
-                className="font-structural text-[12px] text-white/65 hover:text-white/90 transition-colors duration-400 block mb-1.5"
+                className="font-structural text-[12px] text-white/70 hover:text-white/90 transition-colors duration-400 block mb-1.5"
               >
                 hello@echoin.ink
               </a>
-              <span className="font-structural text-[12px] text-white/60 block mb-5">
+              <span className="font-structural text-[12px] text-white/65 block mb-5">
                 Auckland, New Zealand
               </span>
               <div className="flex items-center gap-4">
@@ -112,7 +112,7 @@ export default function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-mono text-[10px] tracking-[0.14em] text-white/60 hover:text-white/75 transition-colors duration-400"
+                    className="font-mono text-[10px] tracking-[0.14em] text-white/65 hover:text-white/80 transition-colors duration-400"
                   >
                     {s.label}
                   </a>
@@ -122,12 +122,12 @@ export default function Footer() {
 
             {/* Col 4 — Atmospheric Intelligence */}
 <div className="relative">
-  <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/50 block mb-4">
+  <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/55 block mb-4">
     Atmospheric Intelligence
   </span>
 
   <div className="flex items-start justify-between gap-5">
-   <p className="font-structural text-[12px] leading-[1.7] text-white/45 mb-4 max-w-[30ch]">
+   <p className="font-structural text-[12px] leading-[1.7] text-white/55 mb-4 max-w-[30ch]">
   Exploring the intersection of identity, emotion, and reflective
   technology.
 </p>

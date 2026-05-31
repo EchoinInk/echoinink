@@ -14,10 +14,12 @@ export function HeroBackground() {
         src={widePng}
         alt="Echo in Ink monogram"
         aria-hidden="true"
-        className="absolute z-[1] pointer-events-none select-none max-w-none object-contain left-1/2 top-1/2 h-[92vh] w-auto -translate-x-1/2 -translate-y-1/2 opacity-[0.9] brightness-100 saturate-100
+        className="absolute z-[1] pointer-events-none select-none max-w-none object-contain left-1/2 top-1/2 h-[92vh] w-auto -translate-x-1/2 -translate-y-1/2 opacity-[0.9] brightness-[0.94] saturate-[0.82]
 
     sm:left-[52%]
     sm:h-[92vh]
+    sm:brightness-[0.98]
+    sm:saturate-[0.90]
   
     md:left-[60%]
     md:h-[86vh]
@@ -66,10 +68,25 @@ export function HeroBackground() {
         }}
       />
 
+      {/* MOBILE COPY FADE */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none z-[4] md:hidden"
+        style={{
+          background: `linear-gradient(
+            90deg,
+            rgba(6, 8, 18, 0.94) 0%,
+            rgba(6, 8, 18, 0.72) 30%,
+            rgba(6, 8, 18, 0.32) 52%,
+            transparent 100%
+          )`,
+        }}
+      />
+
       {/* BOTTOM FADE */}
       <div
         aria-hidden="true"
-        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[4] h-[22vh]"
+        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[5] h-[22vh]"
         style={{
           background: `linear-gradient(
             to bottom,
