@@ -17,14 +17,15 @@ import {
   VIEWPORT
 } from '@/lib/motion-cinematic';
 
-const projectOptions = [
-  { label: 'Identity System', value: 'identity-system' },
-  { label: 'Website Experience', value: 'website-experience' },
-  { label: 'Creative Direction', value: 'creative-direction' },
-  { label: 'Lumo', value: 'lumo' },
-  { label: 'Partnership', value: 'partnership' },
-  { label: 'Something Else', value: 'something-else' },
+const explorationOptions = [
+  'Identity System',
+  'Website Experience',
+  'Creative Direction',
+  'Lumo',
+  'Partnership',
+  'Something Else',
 ];
+
 const budgetOptions = [
   'Under $2k',
   '$2k-5k',
