@@ -12,7 +12,7 @@ import heroLandscape from '@/assets/imagery/backgrounds/hero-01.png';
 
 export function Studio() {
   return (
-    <PageShell atmosphere="studio" withTopSpacing={false}>
+    <Layout>
       <Helmet>
         <title>Studio | Echo In Ink</title>
         <meta
@@ -20,7 +20,8 @@ export function Studio() {
           content="The philosophy, principles, and creative direction behind Echo In Ink."
         />
       </Helmet>
-
+      <PageShell atmosphere="studio" withTopSpacing={false}>
+   
       <StudioHero
         eyebrow="Studio"
         title="The philosophy behind the worlds."

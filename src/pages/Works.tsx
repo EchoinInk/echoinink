@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion';
+import { EASE_CINEMATIC as EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion-cinematic';
 import { Layout } from "@/components/Layout";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
