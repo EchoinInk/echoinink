@@ -4,9 +4,9 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
-import sessionImage from '@/assets/signal-book.png';
 import nebulaDesktop from '@/assets/digital-nebula-bg.png';
 import nebulaMobile from '@/assets/digital-nebula-mobile.png';
+import digitalNebulaBookSession from '@/assets/digital-nebula-book-session.png';
 import {
   fadeSoft,
   driftUp,
@@ -385,17 +385,24 @@ export function Contact() {
   viewport={VIEWPORT.loose}
   className="mx-auto mt-20 max-w-[1180px] overflow-hidden border border-white/[0.08] bg-transparent shadow-[0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] backdrop-blur-sm"
 >
-  <div className="grid gap-8 p-7 md:grid-cols-[0.34fr_0.66fr] md:items-center md:p-9 lg:p-10">
-    <div className="relative min-h-[160px] overflow-hidden rounded-[10px] md:min-h-[150px]">
+  <div className="grid gap-0 md:grid-cols-[0.42fr_0.58fr] md:items-stretch">
+    <div className="relative min-h-[220px] overflow-hidden rounded-[10px] md:min-h-[280px] md:rounded-r-none">
       <img
-        src={sessionImage}
+        src={digitalNebulaBookSession}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-100"
+        className="absolute inset-0 h-full w-full object-cover object-center opacity-100"
         loading="lazy"
+      />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(90deg, rgba(6,8,18,0.15), rgba(6,8,18,0.45))',
+        }}
       />
     </div>
 
-    <div className="grid gap-7 md:grid-cols-[1fr_auto] md:items-center">
+    <div className="grid gap-7 p-7 md:grid-cols-[1fr_auto] md:items-center md:p-9 lg:p-10">
       <div>
         <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/48">
           Prefer a quick chat?
