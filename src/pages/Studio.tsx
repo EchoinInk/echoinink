@@ -9,6 +9,7 @@ import { StudioCTA } from '@/components/studio/StudioCTA';
 import studioHeroDesktop from '@/assets/imagery/hero/studio-hero.png';
 import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.png';
 import heroLandscape from '@/assets/imagery/backgrounds/hero-01.png';
+import { motion } from 'framer-motion';
 
 export function Studio() {
   return (
@@ -38,10 +39,12 @@ export function Studio() {
           whileInView="visible"
           viewport={VIEWPORT.loose}
           className="mx-auto max-w-[1180px] pt-12 md:pt-16"
-        ><div className="mx-auto max-w-[1180px]">
+        ><div>
           <OriginSection />
           <PhilosophyGrid />
           <ValuesGrid />
+          </div>
+          </motion.section>
 
           <div className="pt-[clamp(5rem,10vw,7.5rem)]">
             <StudioCTA
