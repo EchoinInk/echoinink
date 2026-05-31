@@ -1,5 +1,42 @@
 # Changelog
 
+## 2026-06-01 — Studio Page Redesign
+
+### Studio Page Restructure
+
+**New Components**
+- `src/components/studio/StudioHero.tsx` — Two-column editorial hero with gradient italic word, atmospheric image bleed, and slow drift motion
+- `src/components/studio/OriginSection.tsx` — Two-column origin narrative with section label and body copy
+- `src/components/studio/QuoteCard.tsx` — Glass quote card with orbital glow accent and subtle hover shift
+- `src/components/studio/PhilosophyCard.tsx` — Shared card for philosophy and values grids with `OrbitalVisual` icon badges
+- `src/components/studio/PhilosophyGrid.tsx` — 3-column philosophy section (02 — Philosophy)
+- `src/components/studio/ValuesGrid.tsx` — 5-column responsive values section (03 — Values)
+- `src/components/studio/SectionImagery.tsx` — Full-width cinematic pauses between sections
+- `src/components/studio/StudioCTA.tsx` — Full-width CTA with primary button and secondary text links
+- `src/components/studio/SectionLabel.tsx` — Reusable editorial section label
+- `src/data/studioContent.ts` — Origin copy, quote, philosophy, and values data arrays
+
+**Studio.tsx — Full Rewrite**
+- Replaced typography-only sections with component-driven editorial layout
+- Hero uses `studio-hero.png` / `studio-hero-mobile.png` embedded into page (no card container)
+- Section pauses via `SectionImagery` using `hero-01.png` and `cosmic-rings-bg.png`
+- CTA uses `hero-01.png` landscape background with left gradient overlay
+- Removed `PageCTA` in favour of `StudioCTA`
+- SEO: title → “Studio | Echo In Ink”; updated meta description
+- Existing `Header` and `Footer` preserved via shared layout
+
+**Design & Motion**
+- Generous vertical rhythm (~120px section spacing via clamp)
+- Token-based card borders, backgrounds, and hover states
+- Motion via `@/lib/motion-cinematic` (`blurEmergence`, `driftUp`, `fadeSoft`, `staggerContainer`)
+- Reduced-motion respected on parallax and hover animations
+
+**Verification**
+- TypeScript: 0 errors
+- Vite build: exit 0
+
+---
+
 ## 2026-06-01 — Works Page Redesign
 
 ### Works Page Restructure
