@@ -1,5 +1,24 @@
 # Changelog
 
+## 2026-06-01 — Studio Page Redesign
+
+### Studio Page (editorial, measured spec)
+
+**New components**
+- `StudioHero` — 45/55 grid, `clamp(3.5rem, 5vw, 5.8rem)` heading, integrated hero image (no card container)
+- `NumberedSectionLabel`, `EyebrowLabel` — reusable editorial labels
+- `OriginSection`, `QuoteCard`, `PhilosophyGrid`, `ValuesGrid`, `StudioCTA`
+- `PhilosophyCard` — shared philosophy/value card with quiet hover
+- `src/data/studioContent.ts` — page copy and card data
+
+**Design notes**
+- Hero image uses left-edge gradient blend, not absolute bleed or rounded card
+- Quote card: indigo surface, serif italic, subtle glow point
+- CTA: `hero-01.png` horizon crop, text left / image right
+- Existing Header, Footer, tokens, Button, and motion system preserved
+
+---
+
 ## 2026-06-01 — Works Page Redesign
 
 ### Works Page Restructure
