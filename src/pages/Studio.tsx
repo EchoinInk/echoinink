@@ -46,9 +46,7 @@ export function Studio() {
           viewport={VIEWPORT.loose}
           className="mx-auto max-w-[1180px] pt-12 md:pt-16"
         >
-          <OriginSection />
-          <PhilosophyGrid />
-          <ValuesGrid />
+         
         </motion.section>
 
         <section className="pt-20 md:pt-28 pb-24 md:pb-32">
