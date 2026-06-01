@@ -77,9 +77,9 @@ export function Button({
   ]
 
   hover:shadow-[
-    inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.16),
-    0_0_40px_rgb(var(--ei-aurora-blue-rgb)/0.14),
-    0_0_100px_rgb(var(--ei-aurora-blue-rgb)/0.06)
+  inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.16),
+  0_0_32px_rgb(var(--ei-aurora-blue-rgb)/0.12),
+  0_0_80px_rgb(var(--ei-aurora-blue-rgb)/0.04)
   ]
 
   hover:-translate-y-[2px]
