@@ -21,30 +21,54 @@ export function HeroHeading() {
         />
       </motion.div>
 
-      <h1
-        id="hero-heading"
-        className="font-editorial max-w-[30ch] whitespace-pre-line text-[2.4rem] leading-[1.04] tracking-tight text-white/[0.94] max--md:leading-[1.1] md:text-[3.35rem] lg:text-[4rem]"
-        style={{
-          textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.08)',
-        }}
-      >
-        Designing the worlds your work lives in.
-      </h1>
+    <h1
+  id="hero-heading"
+  className="
+    font-editorial
+    max-w-[29ch]
+    whitespace-pre-line
+    text-[2.45rem]
+    leading-[1.06]
+    tracking-tight
+    text-white/[0.94]
+    md:text-[3.45rem]
+    md:leading-[1.04]
+    lg:text-[4.15rem]
+  "
+  style={{
+    textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.08)',
+  }}
+>
+  Designing the worlds your work lives in.
+</h1>
 
-      {/* SERVICE DESCRIPTOR — clarifies offering while preserving intrigue */}
-      <p className="font-structural mt-3 text-[12px] md:text-[13px] tracking-[0.14em] uppercase text-ei-orchid/80">
-        Identity Systems, Digital Experiences & Narrative Direction
-      </p>
+<p className="
+  font-structural
+  mt-4
+  text-[11px]
+  md:text-[12px]
+  tracking-[0.16em]
+  uppercase
+  text-ei-orchid/70
+">
+  Identity Systems, Digital Experiences & Narrative Direction
+</p>
 
-      <motion.p
-        variants={heroReveal}
-        className="font-structural mt-5 max-w-[42ch] text-[15px] leading-[1.62] text-white/88 md:mt-6 md:max-w-[46ch] md:text-[16px]"
-        style={{
-          letterSpacing: '0.005em',
-        }}
-      >
-        Emotionally intelligent identity systems, immersive websites, and atmospheric digital experiences for founders, artists, and emerging brands.
-      </motion.p>
+<motion.p
+  variants={heroReveal}
+  className="
+    font-structural
+    mt-6
+    max-w-[46ch]
+    text-[16px]
+    md:text-[17px]
+    leading-[1.68]
+    text-white/88
+  "
+  style={{ letterSpacing: '0.005em' }}
+>
+  Emotionally intelligent identity systems, immersive websites, and atmospheric digital experiences for founders, artists, and emerging brands.
+</motion.p>
     </div>
   );
 }
