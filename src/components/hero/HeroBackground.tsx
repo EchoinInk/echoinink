@@ -15,26 +15,15 @@ export function HeroBackground() {
   alt="Echo in Ink monogram"
   aria-hidden="true"
   className="
-    absolute z-[1] pointer-events-none select-none max-w-none object-contain
-    left-[48%] top-1/2 h-[92vh] w-auto -translate-x-1/2 -translate-y-1/2
+    absolute z-[1] pointer-events-none select-none max-w-none object-cover
+    left-0 top-1/2 h-[92vh] w-auto -translate-y-1/2
     opacity-[0.9] brightness-[0.94] saturate-[0.82]
 
-    sm:left-[50%]
-    sm:h-[92vh]
-    sm:brightness-[0.98]
-    sm:saturate-[0.90]
-
-    md:left-[52%]
-    md:h-[86vh]
-
-    lg:left-[55%]
-    lg:h-[88vh]
-
-    xl:left-[57%]
-    xl:h-[92vh]
-
-    2xl:left-[56%]
-    2xl:h-[96vh]
+    sm:left-0
+    md:left-0
+    lg:left-0
+    xl:left-0
+    2xl:left-0
   "
   style={{ mixBlendMode: 'normal' }}
 />
