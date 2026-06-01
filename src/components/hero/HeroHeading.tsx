@@ -44,7 +44,7 @@ export function HeroHeading() {
 
 <p className="
   font-structural
-  mt-4
+  mt-5
   text-[11px]
   md:text-[12px]
   tracking-[0.16em]
