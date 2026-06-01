@@ -19,7 +19,7 @@ export function HeroBackground() {
     w-full h-full object-cover
     opacity-[0.9] brightness-[0.94] saturate-[0.82]
   "
-  style={{ mixBlendMode: 'normal' }}
+  style={{ mixBlendMode: 'normal', objectPosition: '56% center' }}
 />
 
       {/* LEFT FADE */}
@@ -38,16 +38,16 @@ export function HeroBackground() {
         }}
       />
 
-      {/* TOP FADE */}
+      {/* NAVIGATION PROTECTION — soft gradient behind header only */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none z-[3]"
+        className="absolute top-0 left-0 right-0 h-[140px] pointer-events-none z-[3]"
         style={{
           background: `linear-gradient(
-            to bottom,
-            rgb(var(--ei-void-black-rgb) / 0.82) 0%,
-            rgb(var(--ei-void-black-rgb) / 0.34) 12%,
-            transparent 28%
+            180deg,
+            rgb(var(--ei-void-black-rgb) / 0.78) 0%,
+            rgb(var(--ei-void-black-rgb) / 0.42) 55%,
+            rgb(var(--ei-void-black-rgb) / 0) 100%
           )`,
         }}
       />
@@ -75,7 +75,7 @@ export function HeroBackground() {
           background: `linear-gradient(
             to bottom,
             transparent 0%,
-            rgb(var(--ei-void-black-rgb) / 0.42) 68%,
+            rgb(var(--ei-void-black-rgb) / 0.36) 68%,
             var(--ei-void-black) 100%
           )`,
         }}
