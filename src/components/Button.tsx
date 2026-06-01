@@ -53,7 +53,7 @@ export function Button({
     primary: `
       ei-btn-primary-cinematic
       group
-      px-11 py-4.5
+      px-11 py-[18px]
       min-w-[200px]
       rounded-full
       text-[10px]
