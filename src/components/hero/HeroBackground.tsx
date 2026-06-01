@@ -11,32 +11,34 @@ export function HeroBackground() {
 
       {/* MONOGRAM — one responsive image, no breakpoint swapping */}
       <img
-        src={widePng}
-        alt="Echo in Ink monogram"
-        aria-hidden="true"
-        className="absolute z-[1] pointer-events-none select-none max-w-none object-contain left-30% top-1/2 h-[92vh] w-auto -translate-x-1/2 -translate-y-1/2 opacity-[0.9] brightness-[0.94] saturate-[0.82]
+  src={widePng}
+  alt="Echo in Ink monogram"
+  aria-hidden="true"
+  className="
+    absolute z-[1] pointer-events-none select-none max-w-none object-contain
+    left-[48%] top-1/2 h-[92vh] w-auto -translate-x-1/2 -translate-y-1/2
+    opacity-[0.9] brightness-[0.94] saturate-[0.82]
 
-    sm:left-[35%]
+    sm:left-[50%]
     sm:h-[92vh]
     sm:brightness-[0.98]
     sm:saturate-[0.90]
-  
-    md:left-[40%]
+
+    md:left-[52%]
     md:h-[86vh]
 
-    lg:left-[45%]
+    lg:left-[55%]
     lg:h-[88vh]
 
-    xl:left-[50%]
+    xl:left-[57%]
     xl:h-[92vh]
 
-    2xl:left-[45%]
+    2xl:left-[56%]
     2xl:h-[96vh]
   "
-  style={{
-    mixBlendMode: 'normal',
-  }}
+  style={{ mixBlendMode: 'normal' }}
 />
+
 
       {/* LEFT FADE */}
       <div
