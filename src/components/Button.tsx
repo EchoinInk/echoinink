@@ -61,7 +61,7 @@ export function Button({
       font-medium
       text-white/[0.94]
       hover:text-white
-      border border-[rgb(var(--ei-aurora-blue-rgb)/0.22)]
+      border border-[rgb(var(--ei-aurora-blue-rgb)/0.)]
       hover:border-[rgb(var(--ei-aurora-blue-rgb)/0.38)]
       bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.85),rgb(var(--ei-void-black-rgb)/0.94))]
       shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.08),0_0_40px_rgb(var(--ei-aurora-blue-rgb)/0.06)]
