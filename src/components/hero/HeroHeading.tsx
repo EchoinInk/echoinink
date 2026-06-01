@@ -23,7 +23,7 @@ export function HeroHeading() {
 
       <h1
         id="hero-heading"
-        className="font-editorial max-w-[30ch] whitespace-pre-line text-[2.25rem] leading-[1.06] tracking-tight text-white/92 max--md:leading-[1.12] md:text-[3.1rem] lg:text-[3.7rem] pt-8 md:pt-12"
+        className="font-editorial max-w-[30ch] whitespace-pre-line text-[2.4rem] leading-[1.04] tracking-tight text-white/[0.94] max--md:leading-[1.1] md:text-[3.35rem] lg:text-[4rem] pt-8 md:pt-12"
         style={{
           textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.08)',
         }}
@@ -31,9 +31,14 @@ export function HeroHeading() {
         Designing the worlds your work lives in.
       </h1>
 
+      {/* SERVICE DESCRIPTOR — clarifies offering while preserving intrigue */}
+      <p className="font-structural mt-3 text-[12px] md:text-[13px] tracking-[0.14em] uppercase text-ei-orchid/80">
+        Identity Systems, Digital Experiences & Narrative Direction
+      </p>
+
       <motion.p
         variants={heroReveal}
-        className="font-structural mt-5 max-w-[42ch] text-[14px] leading-[1.65] text-white/84 md:mt-6 md:max-w-[46ch] md:text-[15px]"
+        className="font-structural mt-5 max-w-[42ch] text-[15px] leading-[1.62] text-white/88 md:mt-6 md:max-w-[46ch] md:text-[16px]"
         style={{
           letterSpacing: '0.005em',
         }}

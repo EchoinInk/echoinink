@@ -50,10 +50,10 @@ export function Header() {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className={`font-structural text-[11px] tracking-[0.16em] uppercase transition-colors duration-500 ${
+                  className={`font-structural text-[11px] tracking-[0.16em] uppercase font-medium transition-colors duration-500 ${
                     active
-                      ? "text-white/90"
-                      : "text-white/65 hover:text-white/90"
+                      ? "text-white/92"
+                      : "text-white/72 hover:text-white/92"
                   }`}
                 >
                   {item.label}
@@ -64,7 +64,7 @@ export function Header() {
 
           <Link
             to="/contact"
-            className="ei-focus-rounded px-4 py-2 rounded-full border border-white/[0.08] bg-white/[0.02] text-[10px] tracking-[0.18em] uppercase text-white/70 hover:text-white/90 hover:bg-white/[0.05] hover:border-white/[0.12] transition-all duration-700"
+            className="ei-focus-rounded px-4 py-2 rounded-full border border-white/[0.1] bg-white/[0.03] text-[10px] tracking-[0.18em] uppercase font-medium text-white/76 hover:text-white/92 hover:bg-white/[0.06] hover:border-white/[0.14] transition-all duration-700"
           >
             Start a Project
           </Link>
@@ -72,7 +72,7 @@ export function Header() {
 
         {/* Mobile Menu Trigger */}
         <button
-          className="md:hidden font-structural text-[11px] tracking-[0.16em] uppercase text-white/65 hover:text-white/90 transition-colors duration-500 min-h-[44px] min-w-[60px] flex items-center justify-center"
+          className="md:hidden font-structural text-[11px] tracking-[0.16em] uppercase font-medium text-white/72 hover:text-white/90 transition-colors duration-500 min-h-[44px] min-w-[60px] flex items-center justify-center"
           aria-label="Open navigation menu"
         >
           Menu

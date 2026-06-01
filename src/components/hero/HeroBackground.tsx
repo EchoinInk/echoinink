@@ -17,9 +17,10 @@ export function HeroBackground() {
   className="
     absolute inset-0 z-[1] pointer-events-none select-none
     w-full h-full object-cover
-    opacity-[0.9] brightness-[0.94] saturate-[0.82]
+    opacity-[0.88] brightness-[0.94] saturate-[0.82]
+    scale-[0.86]
   "
-  style={{ mixBlendMode: 'normal', objectPosition: '56% center' }}
+  style={{ mixBlendMode: 'normal', objectPosition: '62% center' }}
 />
 
       {/* LEFT FADE */}

@@ -53,34 +53,35 @@ export function Button({
     primary: `
       ei-btn-primary-cinematic
       group
-      px-8 py-4
+      px-9 py-4.5
       rounded-full
       text-[10px]
       tracking-[0.18em]
       font-medium
-      text-white/[0.92]
+      text-white/[0.94]
       hover:text-white
-      border border-[rgb(var(--ei-aurora-blue-rgb)/0.16)]
-      hover:border-[rgb(var(--ei-aurora-blue-rgb)/0.28)]
-      bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.82),rgb(var(--ei-void-black-rgb)/0.92))]
-      shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.06)]
+      border border-[rgb(var(--ei-aurora-blue-rgb)/0.22)]
+      hover:border-[rgb(var(--ei-aurora-blue-rgb)/0.38)]
+      bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.85),rgb(var(--ei-void-black-rgb)/0.94))]
+      shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.08),0_0_40px_rgb(var(--ei-aurora-blue-rgb)/0.06)]
+      hover:shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.1),0_0_54px_rgb(var(--ei-aurora-blue-rgb)/0.12)]
       hover:-translate-y-[1px]
       active:translate-y-0
     `,
 
     secondary: `
       group
-      px-6 py-3
+      px-6 py-3.5
       rounded-full
-      text-[9px]
-      tracking-[0.2em]
-      text-white/60
-      hover:text-white/82
-      border border-white/[0.06]
-      hover:border-white/[0.14]
-      bg-black/[0.22]
-      hover:bg-black/[0.28]
-      shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04)]
+      text-[10px]
+      tracking-[0.18em]
+      text-white/72
+      hover:text-white/88
+      border border-white/[0.09]
+      hover:border-white/[0.18]
+      bg-black/[0.26]
+      hover:bg-black/[0.32]
+      shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
       hover:-translate-y-[1px]
       active:translate-y-0
     `,
