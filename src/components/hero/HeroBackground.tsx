@@ -15,19 +15,12 @@ export function HeroBackground() {
   alt="Echo in Ink monogram"
   aria-hidden="true"
   className="
-    absolute z-[1] pointer-events-none select-none max-w-none object-cover
-    left-0 top-1/2 h-[92vh] w-auto -translate-y-1/2
+    absolute inset-0 z-[1] pointer-events-none select-none
+    w-full h-full object-cover
     opacity-[0.9] brightness-[0.94] saturate-[0.82]
-
-    sm:left-0
-    md:left-0
-    lg:left-0
-    xl:left-0
-    2xl:left-0
   "
   style={{ mixBlendMode: 'normal' }}
 />
-
 
       {/* LEFT FADE */}
       <div
