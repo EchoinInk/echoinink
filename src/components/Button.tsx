@@ -50,25 +50,45 @@ export function Button({
   `;
 
   const variants: Record<ButtonVariant, string> = {
-    primary: `
-      ei-btn-primary-cinematic
-      group
-      px-11 py-[18px]
-      min-w-[200px]
-      rounded-full
-      text-[10px]
-      tracking-[0.18em]
-      font-medium
-      text-white/[0.94]
-      hover:text-white
-      border border-[rgb(var(--ei-aurora-blue-rgb)/0.30)]
-      hover:border-[rgb(var(--ei-aurora-blue-rgb)/0.45)]
-      bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.85),rgb(var(--ei-void-black-rgb)/0.94))]
-      shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.14),0_0_40px_rgb(var(--ei-aurora-blue-rgb)/0.10)]
-      hover:shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.1),0_0_60px_rgb(var(--ei-aurora-blue-rgb)/0.16)]
-      hover:-translate-y-[1px]
-      active:translate-y-0
-    `,
+   primary: `
+  ei-btn-primary-cinematic
+  group
+  relative
+  px-11 py-[18px]
+  min-w-[200px]
+  rounded-full
+
+  text-[10px]
+  tracking-[0.18em]
+  font-medium
+
+  text-white/[0.94]
+  hover:text-white
+
+  border border-[rgb(var(--ei-aurora-blue-rgb)/0.30)]
+  hover:border-[rgb(var(--ei-aurora-blue-rgb)/0.45)]
+
+  bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.85),rgb(var(--ei-void-black-rgb)/0.94))]
+
+  shadow-[
+    inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.14),
+    0_0_30px_rgb(var(--ei-aurora-blue-rgb)/0.10),
+    0_0_90px_rgb(var(--ei-aurora-blue-rgb)/0.035)
+  ]
+
+  hover:shadow-[
+    inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.16),
+    0_0_40px_rgb(var(--ei-aurora-blue-rgb)/0.14),
+    0_0_100px_rgb(var(--ei-aurora-blue-rgb)/0.06)
+  ]
+
+  hover:-translate-y-[2px]
+  active:translate-y-0
+
+  transition-all
+  duration-500
+  ease-[cubic-bezier(.22,1,.36,1)]
+`,
 
     secondary: `
       group
