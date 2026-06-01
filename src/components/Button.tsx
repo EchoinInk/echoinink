@@ -54,6 +54,13 @@ export function Button({
   ei-btn-primary-cinematic
   group
   relative
+
+  before:absolute
+before:inset-0
+before:rounded-full
+before:pointer-events-none
+before:bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_65%)]
+
   px-11 py-[18px]
   min-w-[200px]
   rounded-full
