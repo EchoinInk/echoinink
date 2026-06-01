@@ -14,14 +14,14 @@ export function HeroBackground() {
         src={widePng}
         alt="Echo in Ink monogram"
         aria-hidden="true"
-        className="absolute z-[1] pointer-events-none select-none max-w-none object-contain left-1/2 top-1/2 h-[92vh] w-auto -translate-x-1/2 -translate-y-1/2 opacity-[0.9] brightness-[0.94] saturate-[0.82]
+        className="absolute z-[1] pointer-events-none select-none max-w-none object-contain left-40% top-1/2 h-[92vh] w-auto -translate-x-1/2 -translate-y-1/2 opacity-[0.9] brightness-[0.94] saturate-[0.82]
 
-    sm:left-[52%]
+    sm:left-[45%]
     sm:h-[92vh]
     sm:brightness-[0.98]
     sm:saturate-[0.90]
   
-    md:left-[60%]
+    md:left-[50%]
     md:h-[86vh]
 
     lg:left-[68%]
