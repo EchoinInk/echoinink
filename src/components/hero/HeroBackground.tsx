@@ -22,7 +22,20 @@ export function HeroBackground() {
   "
   style={{ mixBlendMode: 'normal', objectPosition: '58% center' }}
 />
-
+<div
+  className="
+    absolute
+    inset-y-0
+    left-0
+    z-[2]
+    w-[55%]
+    pointer-events-none
+    bg-gradient-to-r
+    from-[#020615]
+    via-[#020615]/85
+    to-transparent
+  "
+/>
       {/* LEFT FADE */}
       <div
         aria-hidden="true"
