@@ -40,8 +40,8 @@ export function PhilosophyCard({
       }
       className={`group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border transition-[border-color,background,box-shadow,transform] duration-500 hover:border-[var(--ei-card-border-hover)] ${
         isValue
-          ? 'min-h-[230px] p-7'
-          : 'min-h-[340px] p-8 md:p-10'
+  ? 'min-h-[250px] p-7 md:p-8'
+  : 'min-h-[360px] p-8 md:p-10'
       } hover:bg-[var(--ei-card-bg-hover)]`}
       style={{
         background:
