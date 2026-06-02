@@ -126,7 +126,7 @@ export function Studio() {
             </h2>
 
             <p
-              className="ei-section-description"
+              className="<p class="font-structural max-w-[38ch] text-[14px] leading-[1.75] text-white/68 md:text-[15px]" style="opacity: 1; transform: none;">Everything we create is immersed in the invisible. A language of emotion, memory, and intention"
               style={{ color: 'var(--ei-text-secondary)' }}
             >
               A studio philosophy built around clarity, emotional truth, and
