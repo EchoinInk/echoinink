@@ -51,67 +51,68 @@ export function Studio() {
       />
 
       {/* ORIGIN */}
-      <Container size="xl" className="relative z-10">
-        <motion.section
-          variants={staggerContainer(STAGGER.loose, 0)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT.loose}
-          aria-labelledby="origin-heading"
-          className="
-            mx-auto grid max-w-[1180px] items-center gap-12
-            py-12 md:py-16
-            lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.78fr)]
-            lg:gap-16
-          "
-        >
-        <div className="grid grid-cols-[40px_160px_minmax(0,1fr)] gap-x-4 md:grid-cols-[48px_190px_minmax(0,1fr)] md:gap-x-6">
-  <motion.span
-    variants={driftUp}
-    className="pt-1 font-structural text-[11px] uppercase tracking-[0.2em]"
-    style={{ color: 'var(--ei-text-tertiary)' }}
+     <Container size="xl" className="relative z-10">
+  <motion.section
+    variants={staggerContainer(STAGGER.loose, 0)}
+    initial="hidden"
+    whileInView="visible"
+    viewport={VIEWPORT.loose}
+    aria-labelledby="origin-heading"
+    className="relative mx-auto max-w-[1180px] py-12 md:py-16"
   >
-    {originCopy.number}
-  </motion.span>
-
-  <motion.div variants={driftUp} className="pt-1">
-    <NumberedSectionLabel number="" label={originCopy.label} />
-  </motion.div>
-
-  <div className="pt-10 md:pt-14">
-    <motion.h2
-      id="origin-heading"
+    <motion.div
       variants={driftUp}
-      className="
-        max-w-[24ch] whitespace-pre-line
-        font-editorial text-[clamp(2rem,3.4vw,3rem)]
-        leading-[1.16] tracking-tight
-      "
-      style={{ color: 'var(--ei-text-primary)' }}
+      className="absolute left-0 top-12 md:top-16"
     >
-      {originCopy.heading}
-    </motion.h2>
-
-    <motion.div variants={fadeSoft} className="mt-8 space-y-5">
-      {originCopy.paragraphs.map((paragraph) => (
-        <p
-          key={paragraph.slice(0, 32)}
-          className="
-            max-w-[46ch] font-structural text-[15px]
-            leading-[1.78] md:text-[16px]
-          "
-          style={{ color: 'var(--ei-text-secondary)' }}
-        >
-          {paragraph}
-        </p>
-      ))}
+      <NumberedSectionLabel
+        number={originCopy.number}
+        label={originCopy.label}
+      />
     </motion.div>
-  </div>
-</div>
 
-          <QuoteCard lines={studioQuoteLines} />
-        </motion.section>
-      </Container>
+    <div className="pl-[clamp(10rem,18vw,18rem)]">
+      <div
+        className="
+          grid items-center gap-12
+          lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)]
+          lg:gap-14
+        "
+      >
+        <div className="pt-10 md:pt-14">
+          <motion.h2
+            id="origin-heading"
+            variants={driftUp}
+            className="
+              max-w-[24ch] whitespace-pre-line
+              font-editorial text-[clamp(2rem,3.4vw,3rem)]
+              leading-[1.16] tracking-tight
+            "
+            style={{ color: 'var(--ei-text-primary)' }}
+          >
+            {originCopy.heading}
+          </motion.h2>
+
+          <motion.div variants={fadeSoft} className="mt-8 space-y-5">
+            {originCopy.paragraphs.map((paragraph) => (
+              <p
+                key={paragraph.slice(0, 32)}
+                className="
+                  max-w-[46ch] font-structural text-[15px]
+                  leading-[1.78] md:text-[16px]
+                "
+                style={{ color: 'var(--ei-text-secondary)' }}
+              >
+                {paragraph}
+              </p>
+            ))}
+          </motion.div>
+        </div>
+
+        <QuoteCard lines={studioQuoteLines} />
+      </div>
+    </div>
+  </motion.section>
+</Container>
 
       {/* PHILOSOPHY */}
       <Container size="xl" className="relative z-10">
