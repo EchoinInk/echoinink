@@ -111,7 +111,7 @@ export function Studio() {
           whileInView="visible"
           viewport={VIEWPORT.loose}
           aria-labelledby="philosophy-heading"
-          className="mx-auto max-w-[1180px] py-[clamp(4rem,8vw,6.5rem)]"
+          className="mx-auto max-w-[1180px] py-[clamp(5.5rem,10vw,8rem)]"
         >
           <motion.div variants={driftUp}>
             <NumberedSectionLabel number="02" label="Philosophy" />
