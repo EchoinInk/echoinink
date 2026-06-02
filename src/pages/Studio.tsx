@@ -123,10 +123,7 @@ export function Studio() {
           <motion.div variants={driftUp} className="mt-6">
             <h2
               id="philosophy-heading"
-              className="
-                max-w-[18ch] font-editorial text-[clamp(1.85rem,3.2vw,2.5rem)]
-                leading-[1.18] tracking-tight
-              "
+              className="ei-section-title whitespace-pre-line mb-5              "
               style={{ color: 'var(--ei-text-primary)' }}
             >
               Three beliefs shape the work.
