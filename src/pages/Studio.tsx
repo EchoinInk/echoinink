@@ -65,41 +65,43 @@ export function Studio() {
     "
   >
           <div>
-            <motion.div variants={driftUp}>
-              <NumberedSectionLabel
-                number={originCopy.number}
-                label={originCopy.label}
-              />
-            </motion.div>
+  <motion.div variants={driftUp}>
+    <NumberedSectionLabel
+      number={originCopy.number}
+      label={originCopy.label}
+    />
+  </motion.div>
 
-            <motion.h2
-              id="origin-heading"
-              variants={driftUp}
-              className="
-                mt-6 max-w-[24ch] whitespace-pre-line
-                font-editorial text-[clamp(2rem,3.4vw,3rem)]
-                leading-[1.16] tracking-tight
-              "
-              style={{ color: 'var(--ei-text-primary)' }}
-            >
-              {originCopy.heading}
-            </motion.h2>
+  <div className="pl-12 md:pl-16 lg:pl-20">
+    <motion.h2
+      id="origin-heading"
+      variants={driftUp}
+      className="
+        mt-6 max-w-[24ch] whitespace-pre-line
+        font-editorial text-[clamp(2rem,3.4vw,3rem)]
+        leading-[1.16] tracking-tight
+      "
+      style={{ color: 'var(--ei-text-primary)' }}
+    >
+      {originCopy.heading}
+    </motion.h2>
 
-            <motion.div variants={fadeSoft} className="mt-8 space-y-5">
-              {originCopy.paragraphs.map((paragraph) => (
-                <p
-                  key={paragraph.slice(0, 32)}
-                  className="
-                    max-w-[46ch] font-structural text-[15px]
-                    leading-[1.78] md:text-[16px]
-                  "
-                  style={{ color: 'var(--ei-text-secondary)' }}
-                >
-                  {paragraph}
-                </p>
-              ))}
-            </motion.div>
-          </div>
+    <motion.div variants={fadeSoft} className="mt-8 space-y-5">
+      {originCopy.paragraphs.map((paragraph) => (
+        <p
+          key={paragraph.slice(0, 32)}
+          className="
+            max-w-[46ch] font-structural text-[15px]
+            leading-[1.78] md:text-[16px]
+          "
+          style={{ color: 'var(--ei-text-secondary)' }}
+        >
+          {paragraph}
+        </p>
+      ))}
+    </motion.div>
+  </div>
+</div>
 
           <QuoteCard lines={studioQuoteLines} />
         </motion.section>
