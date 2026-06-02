@@ -86,7 +86,7 @@ export function Studio() {
       {originCopy.paragraphs.map((paragraph) => (
         <p
           key={paragraph.slice(0, 32)}
-          className="              className="font-structural max-w-[38ch] text-[14px] leading-[1.75] text-white/68 md:text-[15px]"
+          className="font-structural max-w-[38ch] text-[14px] leading-[1.75] text-white/68 md:text-[15px]"
           style={{ color: 'var(--ei-text-secondary)' }}
         >
           {paragraph}
