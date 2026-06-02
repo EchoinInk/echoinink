@@ -60,8 +60,8 @@ export function PhilosophyCard({
       />
 
       <div
-        className={`relative z-10 flex items-center justify-center rounded-full border ${
-          isValue ? 'mb-5 h-11 w-11' : 'mb-7 h-13 w-13'
+        className={`relative z-10 flex items-center justify-center rounded-full border 
+          ${isValue ? 'mb-6 h-11 w-11' : 'mb-8 h-13 w-13'}
         }`}
         style={{
           width: isValue ? '2.75rem' : '3.25rem',
