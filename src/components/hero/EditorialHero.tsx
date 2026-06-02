@@ -54,8 +54,8 @@ export function EditorialHero({
         pt-16 sm:pt-20 md:pt-20
         ${
           isStudio
-  ? 'min-h-[620px] md:min-h-[76vh] lg:min-h-[820px]'
-  : 'min-h-[52vh] md:min-h-[78vh] lg:min-h-[82vh]'
+  ? 'object-[68%_42%] opacity-[0.92] saturate-[0.9] brightness-[0.95] contrast-[1.02]'
+  : 'object-center saturate-[0.84] md:object-[72%_50%]'
         }
       `}
       aria-labelledby="editorial-hero-heading"
