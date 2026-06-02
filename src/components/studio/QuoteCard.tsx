@@ -1,111 +1,216 @@
-import { motion, useReducedMotion } from 'framer-motion';
-import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
 
-interface QuoteCardProps {
-  lines: string[];
-}
+import { PageShell } from '@/components/system';
+import { Container } from '@/components/layout/Container';
+import { EditorialHero } from '@/components/hero/EditorialHero';
+import { NumberedSectionLabel } from '@/components/editorial/NumberedSectionLabel';
+import { QuoteCard } from '@/components/studio/QuoteCard';
+import { PhilosophyCard } from '@/components/studio/PhilosophyCard';
+import { ValuesGrid } from '@/components/studio/ValuesGrid';
+import { ProjectCTA } from '@/components/works/ProjectCTA';
 
-export function QuoteCard({ lines }: QuoteCardProps) {
-  const prefersReducedMotion = useReducedMotion();
+import studioHeroDesktop from '@/assets/imagery/hero/studio-hero.png';
+import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.png';
+import studioCTABg from '@/assets/imagery/sections/studio-ct-bg.png';
 
+import {
+  originCopy,
+  philosophyItems,
+  studioQuoteLines,
+} from '@/data/studioContent';
+
+import {
+  driftUp,
+  fadeSoft,
+  staggerContainer,
+  STAGGER,
+  VIEWPORT,
+} from '@/lib/motion-cinematic';
+
+export function Studio() {
   return (
-    <motion.blockquote
-      variants={fadeSoft}
-      initial="hidden"
-      whileInView="visible"
-      viewport={VIEWPORT.normal}
-      className="
-        group relative flex min-h-[340px] flex-col items-center justify-center
-        overflow-hidden rounded-[var(--radius-card)] border px-9 py-14 text-center
-        transition-[border-color,box-shadow,transform] duration-700
-        md:min-h-[380px] md:px-11 md:py-16
-      "
-      style={{
-        background:
-          `
-          radial-gradient(
-            circle at 50% 68%,
-            rgb(var(--ei-luxe-violet-rgb) / 0.14) 0%,
-            rgb(var(--ei-luxe-violet-rgb) / 0.055) 22%,
-            transparent 46%
-          ),
-          radial-gradient(
-            ellipse 78% 66% at 50% 42%,
-            rgb(var(--ei-deep-indigo-rgb) / 0.34) 0%,
-            rgb(var(--ei-deep-indigo-rgb) / 0.16) 54%,
-            rgb(var(--ei-void-black-rgb) / 0.42) 100%
-          )
-          `,
-        borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.18)',
-        boxShadow:
-          `
-          inset 0 0 72px rgb(var(--ei-luxe-violet-rgb) / 0.055),
-          0 0 42px rgb(var(--ei-luxe-violet-rgb) / 0.045)
-          `,
-      }}
-      whileHover={
-        prefersReducedMotion
-          ? undefined
-          : {
-              borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.28)',
-              boxShadow:
-                `
-                inset 0 0 82px rgb(var(--ei-luxe-violet-rgb) / 0.075),
-                0 0 54px rgb(var(--ei-luxe-violet-rgb) / 0.07)
-                `,
-            }
-      }
-    >
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[150px] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-[999px] border opacity-45"
-        style={{
-          borderColor: 'rgb(var(--ei-soft-lavender-rgb) / 0.09)',
-          transform:
-            'translate(-50%, -50%) rotate(-7deg)',
-        }}
-        aria-hidden="true"
-      />
-
-      <div
-        className="pointer-events-none absolute left-1/2 top-[58%] h-[92px] w-[62%] -translate-x-1/2 -translate-y-1/2 rounded-[999px] border opacity-35"
-        style={{
-          borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.13)',
-          transform:
-            'translate(-50%, -50%) rotate(-9deg)',
-        }}
-        aria-hidden="true"
-      />
-
-      <p
-        className="
-          relative z-10 max-w-[24ch] whitespace-pre-line
-          font-editorial text-[clamp(1.28rem,2vw,1.72rem)]
-          italic leading-[1.62] tracking-tight
-        "
-        style={{
-          color: 'rgb(var(--ei-soft-lavender-rgb) / 0.88)',
-          textShadow: '0 0 18px rgb(var(--ei-luxe-violet-rgb) / 0.10)',
-        }}
-      >
-        &ldquo;{lines.join('\n')}&rdquo;
-      </p>
-
-      <div
-        className="absolute bottom-9 left-1/2 z-10 -translate-x-1/2"
-        aria-hidden="true"
-      >
-        <span
-          className="block h-1.5 w-1.5 rounded-full"
-          style={{
-            background: 'var(--ei-ice-white)',
-            boxShadow:
-              `
-              0 0 10px rgb(var(--ei-ice-white-rgb) / 0.58),
-              0 0 22px rgb(var(--ei-luxe-violet-rgb) / 0.52)
-              `,
-          }}
+    <PageShell atmosphere="studio" withTopSpacing={false}>
+      <Helmet>
+        <title>Studio | Echo In Ink</title>
+        <meta
+          name="description"
+          content="The philosophy, principles, and creative direction behind Echo In Ink."
         />
-      </div>
-    </motion.blockquote>
+      </Helmet>
+
+      <EditorialHero
+        eyebrow="Studio"
+        title="The philosophy behind the worlds."
+        italicWord="worlds."
+        description="Translating inner worlds into coherent external form."
+        image={studioHeroDesktop}
+        mobileImage={studioHeroMobile}
+        imageAlt="Cinematic cosmic void surrounded by violet and blue nebula energy"
+      />
+
+      <Container size="xl" className="relative z-10">
+        <motion.section
+          variants={staggerContainer(STAGGER.loose, 0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.loose}
+          aria-labelledby="origin-heading"
+          className="
+            mx-auto grid max-w-[1180px] items-center gap-12
+            py-[clamp(6rem,11vw,9rem)]
+            lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]
+            lg:gap-20
+          "
+        >
+          <div>
+            <motion.div variants={driftUp}>
+              <NumberedSectionLabel
+                number={originCopy.number}
+                label={originCopy.label}
+              />
+            </motion.div>
+
+            <motion.h2
+              id="origin-heading"
+              variants={driftUp}
+              className="
+                mt-6 max-w-[24ch] whitespace-pre-line
+                font-editorial text-[clamp(1.9rem,3.25vw,2.75rem)]
+                leading-[1.16] tracking-tight
+              "
+              style={{ color: 'var(--ei-text-primary)' }}
+            >
+              {originCopy.heading}
+            </motion.h2>
+
+            <motion.div variants={fadeSoft} className="mt-8 space-y-5">
+              {originCopy.paragraphs.map((paragraph) => (
+                <p
+                  key={paragraph.slice(0, 32)}
+                  className="
+                    max-w-[40ch] font-structural text-[15px]
+                    leading-[1.78] md:text-[16px]
+                  "
+                  style={{ color: 'var(--ei-text-secondary)' }}
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </motion.div>
+          </div>
+
+          <QuoteCard lines={studioQuoteLines} />
+        </motion.section>
+      </Container>
+
+      <Container size="xl" className="relative z-10">
+        <motion.section
+          variants={fadeSoft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.loose}
+          aria-labelledby="philosophy-heading"
+          className="mx-auto max-w-[1180px] py-[clamp(5.5rem,10vw,8rem)]"
+        >
+          <motion.div variants={driftUp}>
+            <NumberedSectionLabel number="02" label="Philosophy" />
+          </motion.div>
+
+          <motion.div variants={driftUp} className="mt-6">
+            <h2
+              id="philosophy-heading"
+              className="
+                max-w-[18ch] font-editorial text-[clamp(1.85rem,3.2vw,2.5rem)]
+                leading-[1.18] tracking-tight
+              "
+              style={{ color: 'var(--ei-text-primary)' }}
+            >
+              Three beliefs shape the work.
+            </h2>
+
+            <p
+              className="
+                mt-4 max-w-[40ch] font-structural text-[15px]
+                leading-[1.75] md:text-[16px]
+              "
+              style={{ color: 'var(--ei-text-secondary)' }}
+            >
+              A studio philosophy built around clarity, emotional truth, and
+              meaningful expression.
+            </p>
+          </motion.div>
+
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
+            {philosophyItems.map((item, index) => (
+              <PhilosophyCard
+                key={item.title}
+                {...item}
+                index={index}
+                variant="philosophy"
+              />
+            ))}
+          </div>
+        </motion.section>
+      </Container>
+
+      <Container size="xl" className="relative z-10">
+        <motion.section
+          variants={fadeSoft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.loose}
+          aria-labelledby="values-heading"
+          className="mx-auto max-w-[1180px] py-[clamp(5.5rem,10vw,8rem)]"
+        >
+          <motion.div variants={driftUp}>
+            <NumberedSectionLabel number="03" label="Values" />
+          </motion.div>
+
+          <motion.div variants={driftUp} className="mt-6">
+            <h2
+              id="values-heading"
+              className="
+                max-w-[20ch] font-editorial text-[clamp(1.85rem,3.2vw,2.5rem)]
+                leading-[1.18] tracking-tight
+              "
+              style={{ color: 'var(--ei-text-primary)' }}
+            >
+              The principles that keep the work clear.
+            </h2>
+          </motion.div>
+
+          <div className="mt-12">
+            <ValuesGrid showHeader={false} />
+          </div>
+        </motion.section>
+      </Container>
+
+      <Container
+        size="xl"
+        className="relative z-10 pb-[clamp(6rem,10vw,9rem)]"
+      >
+        <div className="mx-auto max-w-[1180px]">
+          <ProjectCTA
+            eyebrow="Continue the conversation"
+            heading="Aligned in philosophy?"
+            body="If our approach resonates, let's explore how we can build something meaningful together."
+            buttonLabel="Work with the Studio"
+            buttonHref="/contact"
+            backgroundImage={studioCTABg}
+            secondaryLinks={[
+              {
+                label: 'Book a Session',
+                href: '/sessions',
+              },
+              {
+                label: 'Explore the Works',
+                href: '/works',
+              },
+            ]}
+          />
+        </div>
+      </Container>
+    </PageShell>
   );
 }
