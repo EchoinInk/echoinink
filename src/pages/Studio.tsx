@@ -39,15 +39,16 @@ export function Studio() {
         />
       </Helmet>
 
-      <EditorialHero
-        eyebrow="Studio"
-        title="The philosophy behind the worlds."
-        italicWord="worlds."
-        description="Translating inner worlds into coherent external form."
-        image={studioHeroDesktop}
-        mobileImage={studioHeroMobile}
-        imageAlt="Cinematic cosmic void surrounded by violet and blue nebula energy"
-      />
+     <EditorialHero
+  variant="studio"
+  eyebrow="Studio"
+  title="The philosophy behind the worlds."
+  italicWord="worlds."
+  description="Translating inner worlds into coherent external form."
+  image={studioHeroDesktop}
+  mobileImage={studioHeroMobile}
+  imageAlt="Cinematic cosmic void surrounded by violet and blue nebula energy"
+/>
 
       <Container size="xl" className="relative z-10">
         <motion.section
@@ -59,7 +60,7 @@ export function Studio() {
           className="
             mx-auto grid max-w-[1180px] items-center gap-12
             py-[clamp(6rem,11vw,9rem)]
-            lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]
+            lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1fr)]
             lg:gap-20
           "
         >
@@ -76,7 +77,7 @@ export function Studio() {
               variants={driftUp}
               className="
                 mt-6 max-w-[24ch] whitespace-pre-line
-                font-editorial text-[clamp(1.9rem,3.25vw,2.75rem)]
+                font-editorial text-[clamp(2rem,3.4vw,3rem)]
                 leading-[1.16] tracking-tight
               "
               style={{ color: 'var(--ei-text-primary)' }}
@@ -89,7 +90,7 @@ export function Studio() {
                 <p
                   key={paragraph.slice(0, 32)}
                   className="
-                    max-w-[40ch] font-structural text-[15px]
+                    max-w-[46ch] font-structural text-[15px]
                     leading-[1.78] md:text-[16px]
                   "
                   style={{ color: 'var(--ei-text-secondary)' }}
