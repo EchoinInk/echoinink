@@ -1,4 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
+
 import { OrbitalVisual, type OrbitalVariant } from '@/components/ui/OrbitalVisual';
 import { DURATION, EASE_CINEMATIC, VIEWPORT } from '@/lib/motion-cinematic';
 
@@ -22,7 +23,7 @@ export function PhilosophyCard({
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 14 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={VIEWPORT.normal}
       transition={{
@@ -34,27 +35,65 @@ export function PhilosophyCard({
         prefersReducedMotion
           ? undefined
           : {
-              y: -2,
-              transition: { duration: DURATION.instant, ease: EASE_CINEMATIC },
+              y: -4,
+              transition: {
+                duration: DURATION.instant,
+                ease: EASE_CINEMATIC,
+              },
             }
       }
-      className={`group relative flex h-full flex-col rounded-[var(--radius-card)] border transition-[border-color,background] duration-500 hover:border-[var(--ei-card-border-hover)] ${
-        isValue ? 'min-h-[196px] p-6' : 'min-h-[280px] p-7 md:p-8'
-      } hover:bg-[var(--ei-card-bg-hover)]`}
+      className={`
+        group relative flex h-full flex-col overflow-hidden
+        rounded-[var(--radius-card)] border
+        transition-[transform,border-color,background,box-shadow]
+        duration-500
+        ${
+          isValue
+            ? 'min-h-[220px] p-6 md:p-7'
+            : 'min-h-[300px] p-7 md:min-h-[320px] md:p-9'
+        }
+      `}
       style={{
-        background: 'var(--ei-card-bg)',
-        borderColor: 'var(--ei-card-border)',
+        background:
+          'linear-gradient(180deg, rgb(var(--ei-deep-indigo-rgb) / 0.28) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.14) 52%, rgb(var(--ei-void-black-rgb) / 0.22) 100%)',
+        borderColor: 'rgb(var(--ei-soft-lavender-rgb) / 0.12)',
+        boxShadow: 'inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.04)',
       }}
     >
       <div
-        className={`flex items-center justify-center rounded-full border ${
-          isValue ? 'mb-4 h-10 w-10' : 'mb-6 h-12 w-12'
-        }`}
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
         style={{
+          background:
+            'radial-gradient(circle at 20% 12%, rgb(var(--ei-aurora-blue-rgb) / 0.13), transparent 34%), radial-gradient(circle at 84% 88%, rgb(var(--ei-luxe-violet-rgb) / 0.12), transparent 38%)',
+        }}
+        aria-hidden="true"
+      />
+
+      <div
+        className="pointer-events-none absolute -right-16 -top-16 h-44 w-44 rounded-full opacity-35 blur-[48px]"
+        style={{
+          background:
+            'rgb(var(--ei-luxe-violet-rgb) / 0.12)',
+        }}
+        aria-hidden="true"
+      />
+
+      <div
+        className={`
+          relative z-10 flex items-center justify-center rounded-full border
+          transition-[border-color,background,box-shadow] duration-500
+          ${isValue ? 'mb-5 h-11 w-11' : 'mb-7 h-13 w-13'}
+        `}
+        style={{
+          width: isValue ? '2.75rem' : '3.25rem',
+          height: isValue ? '2.75rem' : '3.25rem',
           borderColor: isValue
-            ? 'rgb(var(--ei-luxe-violet-rgb) / 0.20)'
-            : 'var(--border-soft)',
-          background: 'rgb(var(--ei-deep-indigo-rgb) / 0.24)',
+            ? 'rgb(var(--ei-luxe-violet-rgb) / 0.24)'
+            : 'rgb(var(--ei-soft-lavender-rgb) / 0.14)',
+          background:
+            'radial-gradient(circle at 50% 38%, rgb(var(--ei-aurora-blue-rgb) / 0.16), rgb(var(--ei-deep-indigo-rgb) / 0.24) 64%, rgb(var(--ei-void-black-rgb) / 0.22) 100%)',
+          boxShadow:
+            '0 0 22px rgb(var(--ei-luxe-violet-rgb) / 0.08), inset 0 0 18px rgb(var(--ei-ice-white-rgb) / 0.025)',
         }}
         aria-hidden="true"
       >
@@ -62,22 +101,33 @@ export function PhilosophyCard({
       </div>
 
       <h3
-        className={`font-editorial leading-[1.14] tracking-tight ${
-          isValue ? 'text-[1.05rem]' : 'text-[1.35rem] md:text-[1.45rem]'
-        }`}
+        className={`
+          relative z-10 font-editorial leading-[1.14] tracking-tight
+          ${isValue ? 'text-[1.08rem]' : 'text-[1.42rem] md:text-[1.58rem]'}
+        `}
         style={{ color: 'var(--ei-text-primary)' }}
       >
         {title}
       </h3>
 
       <p
-        className={`mt-3 font-structural leading-[1.68] ${
-          isValue ? 'text-[13px]' : 'text-[14px] md:text-[15px]'
-        }`}
+        className={`
+          relative z-10 mt-4 font-structural leading-[1.72]
+          ${isValue ? 'text-[13.5px]' : 'text-[14.5px] md:text-[15.5px]'}
+        `}
         style={{ color: 'var(--ei-text-secondary)' }}
       >
         {description}
       </p>
+
+      <div
+        className="pointer-events-none absolute inset-x-6 bottom-0 h-px opacity-0 transition-opacity duration-700 group-hover:opacity-100"
+        style={{
+          background:
+            'linear-gradient(90deg, transparent, rgb(var(--ei-aurora-blue-rgb) / 0.36), rgb(var(--ei-luxe-violet-rgb) / 0.3), transparent)',
+        }}
+        aria-hidden="true"
+      />
     </motion.article>
   );
 }
