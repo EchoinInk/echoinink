@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+
 import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
 import { EditorialHero } from '@/components/hero/EditorialHero';
@@ -57,10 +57,10 @@ export function Studio() {
           viewport={VIEWPORT.loose}
           aria-labelledby="origin-heading"
           className="
-            mx-auto grid max-w-[1180px] items-stretch gap-12
-            py-[clamp(4rem,8vw,6.5rem)]
+            mx-auto grid max-w-[1180px] items-center gap-12
+            py-[clamp(6rem,11vw,9rem)]
             lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]
-            lg:gap-16 xl:gap-20
+            lg:gap-20
           "
         >
           <div>
@@ -76,8 +76,8 @@ export function Studio() {
               variants={driftUp}
               className="
                 mt-6 max-w-[24ch] whitespace-pre-line
-                font-editorial text-[clamp(1.75rem,3vw,2.5rem)]
-                leading-[1.2] tracking-tight
+                font-editorial text-[clamp(1.9rem,3.25vw,2.75rem)]
+                leading-[1.16] tracking-tight
               "
               style={{ color: 'var(--ei-text-primary)' }}
             >
@@ -89,7 +89,7 @@ export function Studio() {
                 <p
                   key={paragraph.slice(0, 32)}
                   className="
-                    max-w-[38ch] font-structural text-[15px]
+                    max-w-[40ch] font-structural text-[15px]
                     leading-[1.78] md:text-[16px]
                   "
                   style={{ color: 'var(--ei-text-secondary)' }}
@@ -121,7 +121,7 @@ export function Studio() {
             <h2
               id="philosophy-heading"
               className="
-                max-w-[18ch] font-editorial text-[clamp(1.75rem,3vw,2.4rem)]
+                max-w-[18ch] font-editorial text-[clamp(1.85rem,3.2vw,2.5rem)]
                 leading-[1.18] tracking-tight
               "
               style={{ color: 'var(--ei-text-primary)' }}
@@ -141,7 +141,7 @@ export function Studio() {
             </p>
           </motion.div>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
             {philosophyItems.map((item, index) => (
               <PhilosophyCard
                 key={item.title}
@@ -180,37 +180,37 @@ export function Studio() {
             </h2>
           </motion.div>
 
-          <div className="mt-10">
-            <ValuesGrid />
+          <div className="mt-12">
+            <ValuesGrid showHeader={false} />
           </div>
         </motion.section>
       </Container>
 
       <Container
-  size="xl"
-  className="relative z-10 pb-[clamp(5.5rem,10vw,8rem)]"
->
-  <div className="mx-auto max-w-[1180px]">
-    <ProjectCTA
-      eyebrow="Continue the conversation"
-      heading="Aligned in philosophy?"
-      body="If our approach resonates, let's explore how we can build something meaningful together."
-      buttonLabel="Work with the Studio"
-      buttonHref="/contact"
-      backgroundImage={studioCTABg}
-      secondaryLinks={[
-        {
-          label: 'Book a Session',
-          href: '/sessions',
-        },
-        {
-          label: 'Explore the Works',
-          href: '/works',
-        },
-      ]}
-    />
-  </div>
-</Container>
+        size="xl"
+        className="relative z-10 pb-[clamp(6rem,10vw,9rem)]"
+      >
+        <div className="mx-auto max-w-[1180px]">
+          <ProjectCTA
+            eyebrow="Continue the conversation"
+            heading="Aligned in philosophy?"
+            body="If our approach resonates, let's explore how we can build something meaningful together."
+            buttonLabel="Work with the Studio"
+            buttonHref="/contact"
+            backgroundImage={studioCTABg}
+            secondaryLinks={[
+              {
+                label: 'Book a Session',
+                href: '/sessions',
+              },
+              {
+                label: 'Explore the Works',
+                href: '/works',
+              },
+            ]}
+          />
+        </div>
+      </Container>
     </PageShell>
   );
 }
