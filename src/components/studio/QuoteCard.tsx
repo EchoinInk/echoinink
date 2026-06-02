@@ -15,11 +15,12 @@ export function QuoteCard({ lines }: QuoteCardProps) {
       whileInView="visible"
       viewport={VIEWPORT.normal}
       className="
-        group relative flex min-h-[340px] flex-col items-center justify-center
-        overflow-hidden rounded-[var(--radius-card)] border px-9 py-14 text-center
-        transition-[border-color,box-shadow,transform] duration-700
-        md:min-h-[380px] md:px-11 md:py-16
-      "
+  group relative mx-auto flex min-h-[260px] w-full max-w-[420px]
+  flex-col items-center justify-center overflow-hidden
+  rounded-[var(--radius-card)] border px-8 py-10 text-center
+  transition-[border-color,box-shadow,transform] duration-700
+  md:min-h-[300px] md:px-9 md:py-12
+"
       style={{
         background:
           `
