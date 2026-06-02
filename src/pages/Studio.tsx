@@ -161,7 +161,7 @@ export function Studio() {
           whileInView="visible"
           viewport={VIEWPORT.loose}
           aria-labelledby="values-heading"
-          className="mx-auto max-w-[1180px] py-[clamp(4rem,8vw,6.5rem)]"
+          className="mx-auto max-w-[1180px] py-[clamp(5.5rem,10vw,8rem)]"
         >
           <motion.div variants={driftUp}>
             <NumberedSectionLabel number="03" label="Values" />
@@ -171,7 +171,7 @@ export function Studio() {
             <h2
               id="values-heading"
               className="
-                max-w-[20ch] font-editorial text-[clamp(1.75rem,3vw,2.4rem)]
+                max-w-[20ch] font-editorial text-[clamp(1.85rem,3.2vw,2.5rem)]
                 leading-[1.18] tracking-tight
               "
               style={{ color: 'var(--ei-text-primary)' }}
@@ -188,7 +188,7 @@ export function Studio() {
 
       <Container
   size="xl"
-  className="relative z-10 pb-[clamp(5rem,8vw,7rem)]"
+  className="relative z-10 pb-[clamp(5.5rem,10vw,8rem)]"
 >
   <div className="mx-auto max-w-[1180px]">
     <ProjectCTA
