@@ -32,18 +32,26 @@ export function ProjectCTA({
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className="relative mx-auto min-h-[360px] max-w-[1180px] overflow-hidden rounded-[var(--radius-card)] border bg-cover bg-center bg-no-repeat shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] md:min-h-[390px]"
+      className="
+        relative mx-auto min-h-[360px] max-w-[1180px] overflow-hidden
+        rounded-[var(--radius-card)] border
+        shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)]
+        md:min-h-[390px]
+      "
       style={{
         background: 'var(--ei-surface-card)',
         borderColor: 'var(--border-card)',
-        backgroundImage: `url(${backgroundImage})`,
       }}
       aria-labelledby="project-cta-heading"
     >
-      <div
+      <img
+        src={backgroundImage}
+        alt=""
         aria-hidden="true"
-        className="absolute inset-0"
-        style={{ background: 'var(--ei-image-overlay-left)' }}
+        className="
+          absolute inset-0 h-full w-full object-cover object-center
+          opacity-[0.82] saturate-[0.9] brightness-[0.82]
+        "
       />
 
       <div
@@ -51,15 +59,49 @@ export function ProjectCTA({
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 54% 65% at 20% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.18) 0%, transparent 70%), radial-gradient(ellipse 42% 48% at 72% 45%, rgb(var(--ei-luxe-violet-rgb) / 0.12) 0%, transparent 68%)',
+            `
+            linear-gradient(
+              90deg,
+              rgb(var(--ei-void-black-rgb) / 0.86) 0%,
+              rgb(var(--ei-void-black-rgb) / 0.66) 38%,
+              rgb(var(--ei-void-black-rgb) / 0.28) 68%,
+              rgb(var(--ei-void-black-rgb) / 0.08) 100%
+            ),
+            linear-gradient(
+              180deg,
+              rgb(var(--ei-void-black-rgb) / 0.16) 0%,
+              rgb(var(--ei-void-black-rgb) / 0.26) 54%,
+              rgb(var(--ei-void-black-rgb) / 0.56) 100%
+            )
+            `,
         }}
       />
 
-      <div className="relative z-10 flex min-h-[360px] flex-col justify-center gap-9 p-7 md:min-h-[390px] md:max-w-[620px] md:p-12 lg:p-14">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            `
+            radial-gradient(
+              ellipse 54% 65% at 18% 48%,
+              rgb(var(--ei-deep-indigo-rgb) / 0.2) 0%,
+              transparent 70%
+            ),
+            radial-gradient(
+              ellipse 42% 48% at 72% 45%,
+              rgb(var(--ei-luxe-violet-rgb) / 0.14) 0%,
+              transparent 68%
+            )
+            `,
+        }}
+      />
+
+      <div className="relative z-10 flex min-h-[360px] flex-col justify-center gap-9 p-7 md:min-h-[390px] md:max-w-[640px] md:p-12 lg:p-14">
         <div>
           <span
             className="font-mono text-[10px] uppercase tracking-[0.24em]"
-            style={{ color: 'var(--ei-text-muted)' }}
+            style={{ color: 'var(--ei-text-tertiary)' }}
           >
             {eyebrow}
           </span>
@@ -96,7 +138,16 @@ export function ProjectCTA({
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="group inline-flex items-center font-structural text-sm transition-colors duration-300 hover:text-[var(--ei-text-primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.38)] focus-visible:ring-offset-4 focus-visible:ring-offset-transparent"
+                  className="
+                    group inline-flex items-center font-structural text-sm
+                    transition-colors duration-300
+                    hover:text-[var(--ei-text-primary)]
+                    focus-visible:outline-none
+                    focus-visible:ring-2
+                    focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.38)]
+                    focus-visible:ring-offset-4
+                    focus-visible:ring-offset-transparent
+                  "
                   style={{ color: 'var(--ei-text-secondary)' }}
                 >
                   {link.label}
