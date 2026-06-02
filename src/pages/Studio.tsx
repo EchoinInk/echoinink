@@ -107,13 +107,13 @@ export function Studio() {
 
       <Container size="xl" className="relative z-10">
         <motion.section
-          variants={fadeSoft}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT.loose}
-          aria-labelledby="philosophy-heading"
-          className="mx-auto max-w-[1180px] pt-12 md:pt-16"
-        >
+  variants={fadeSoft}
+  initial="hidden"
+  whileInView="visible"
+  viewport={VIEWPORT.loose}
+  aria-labelledby="philosophy-heading"
+  className="mx-auto max-w-[1180px] pt-12 md:pt-16"
+>
           <motion.div variants={driftUp}>
             <NumberedSectionLabel number="02" label="Philosophy" />
           </motion.div>
@@ -157,13 +157,13 @@ export function Studio() {
 
       <Container size="xl" className="relative z-10">
         <motion.section
-          variants={fadeSoft}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT.loose}
-          aria-labelledby="values-heading"
-          className="mx-auto max-w-[1180px] pt-12 md:pt-16"
-        >
+  variants={fadeSoft}
+  initial="hidden"
+  whileInView="visible"
+  viewport={VIEWPORT.loose}
+  aria-labelledby="values-heading"
+  className="mx-auto max-w-[1180px] pt-12 md:pt-16"
+>
           <motion.div variants={driftUp}>
             <NumberedSectionLabel number="03" label="Values" />
           </motion.div>
