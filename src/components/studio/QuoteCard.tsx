@@ -14,34 +14,95 @@ export function QuoteCard({ lines }: QuoteCardProps) {
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.normal}
-      className="group relative flex min-h-[340px] flex-col items-center justify-center overflow-hidden rounded-[var(--radius-card)] border px-9 py-14 text-center transition-[border-color,box-shadow] duration-700 md:min-h-[380px] md:px-11 md:py-16"
+      className="
+        group relative flex min-h-[340px] flex-col items-center justify-center
+        overflow-hidden rounded-[var(--radius-card)] border px-9 py-14 text-center
+        transition-[border-color,box-shadow,transform] duration-700
+        md:min-h-[380px] md:px-11 md:py-16
+      "
       style={{
         background:
-          'radial-gradient(ellipse 80% 70% at 50% 42%, rgb(var(--ei-deep-indigo-rgb) / 0.28) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.14) 55%, rgb(var(--ei-void-black-rgb) / 0.32) 100%)',
-        borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.14)',
-        boxShadow: 'inset 0 0 72px rgb(var(--ei-luxe-violet-rgb) / 0.04)',
+          `
+          radial-gradient(
+            circle at 50% 68%,
+            rgb(var(--ei-luxe-violet-rgb) / 0.14) 0%,
+            rgb(var(--ei-luxe-violet-rgb) / 0.055) 22%,
+            transparent 46%
+          ),
+          radial-gradient(
+            ellipse 78% 66% at 50% 42%,
+            rgb(var(--ei-deep-indigo-rgb) / 0.34) 0%,
+            rgb(var(--ei-deep-indigo-rgb) / 0.16) 54%,
+            rgb(var(--ei-void-black-rgb) / 0.42) 100%
+          )
+          `,
+        borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.18)',
+        boxShadow:
+          `
+          inset 0 0 72px rgb(var(--ei-luxe-violet-rgb) / 0.055),
+          0 0 42px rgb(var(--ei-luxe-violet-rgb) / 0.045)
+          `,
       }}
       whileHover={
         prefersReducedMotion
           ? undefined
           : {
-              borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.22)',
+              borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.28)',
+              boxShadow:
+                `
+                inset 0 0 82px rgb(var(--ei-luxe-violet-rgb) / 0.075),
+                0 0 54px rgb(var(--ei-luxe-violet-rgb) / 0.07)
+                `,
             }
       }
     >
+      <div
+        className="pointer-events-none absolute left-1/2 top-1/2 h-[150px] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-[999px] border opacity-45"
+        style={{
+          borderColor: 'rgb(var(--ei-soft-lavender-rgb) / 0.09)',
+          transform:
+            'translate(-50%, -50%) rotate(-7deg)',
+        }}
+        aria-hidden="true"
+      />
+
+      <div
+        className="pointer-events-none absolute left-1/2 top-[58%] h-[92px] w-[62%] -translate-x-1/2 -translate-y-1/2 rounded-[999px] border opacity-35"
+        style={{
+          borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.13)',
+          transform:
+            'translate(-50%, -50%) rotate(-9deg)',
+        }}
+        aria-hidden="true"
+      />
+
       <p
-        className="max-w-[24ch] whitespace-pre-line font-editorial text-[clamp(1.25rem,2vw,1.6rem)] italic leading-[1.58] tracking-tight"
-        style={{ color: 'var(--ei-text-soft)' }}
+        className="
+          relative z-10 max-w-[24ch] whitespace-pre-line
+          font-editorial text-[clamp(1.28rem,2vw,1.72rem)]
+          italic leading-[1.62] tracking-tight
+        "
+        style={{
+          color: 'rgb(var(--ei-soft-lavender-rgb) / 0.88)',
+          textShadow: '0 0 18px rgb(var(--ei-luxe-violet-rgb) / 0.10)',
+        }}
       >
         &ldquo;{lines.join('\n')}&rdquo;
       </p>
 
-      <div className="absolute bottom-9 left-1/2 -translate-x-1/2" aria-hidden="true">
+      <div
+        className="absolute bottom-9 left-1/2 z-10 -translate-x-1/2"
+        aria-hidden="true"
+      >
         <span
           className="block h-1.5 w-1.5 rounded-full"
           style={{
             background: 'var(--ei-ice-white)',
-            boxShadow: '0 0 10px rgb(var(--ei-luxe-violet-rgb) / 0.45)',
+            boxShadow:
+              `
+              0 0 10px rgb(var(--ei-ice-white-rgb) / 0.58),
+              0 0 22px rgb(var(--ei-luxe-violet-rgb) / 0.52)
+              `,
           }}
         />
       </div>
