@@ -65,44 +65,49 @@ export function Studio() {
             lg:gap-16
           "
         >
-          <div className="grid grid-cols-[88px_minmax(0,1fr)] gap-6 md:grid-cols-[120px_minmax(0,1fr)] md:gap-8">
-            <motion.div variants={driftUp}>
-              <NumberedSectionLabel
-                number={originCopy.number}
-                label={originCopy.label}
-              />
-            </motion.div>
+        <div className="grid grid-cols-[40px_160px_minmax(0,1fr)] gap-x-4 md:grid-cols-[48px_190px_minmax(0,1fr)] md:gap-x-6">
+  <motion.span
+    variants={driftUp}
+    className="pt-1 font-structural text-[11px] uppercase tracking-[0.2em]"
+    style={{ color: 'var(--ei-text-tertiary)' }}
+  >
+    {originCopy.number}
+  </motion.span>
 
-            <div>
-              <motion.h2
-                id="origin-heading"
-                variants={driftUp}
-                className="
-                  max-w-[24ch] whitespace-pre-line
-                  font-editorial text-[clamp(2rem,3.4vw,3rem)]
-                  leading-[1.16] tracking-tight
-                "
-                style={{ color: 'var(--ei-text-primary)' }}
-              >
-                {originCopy.heading}
-              </motion.h2>
+  <motion.div variants={driftUp} className="pt-1">
+    <NumberedSectionLabel number="" label={originCopy.label} />
+  </motion.div>
 
-              <motion.div variants={fadeSoft} className="mt-8 space-y-5">
-                {originCopy.paragraphs.map((paragraph) => (
-                  <p
-                    key={paragraph.slice(0, 32)}
-                    className="
-                      max-w-[46ch] font-structural text-[15px]
-                      leading-[1.78] md:text-[16px]
-                    "
-                    style={{ color: 'var(--ei-text-secondary)' }}
-                  >
-                    {paragraph}
-                  </p>
-                ))}
-              </motion.div>
-            </div>
-          </div>
+  <div className="pt-10 md:pt-14">
+    <motion.h2
+      id="origin-heading"
+      variants={driftUp}
+      className="
+        max-w-[24ch] whitespace-pre-line
+        font-editorial text-[clamp(2rem,3.4vw,3rem)]
+        leading-[1.16] tracking-tight
+      "
+      style={{ color: 'var(--ei-text-primary)' }}
+    >
+      {originCopy.heading}
+    </motion.h2>
+
+    <motion.div variants={fadeSoft} className="mt-8 space-y-5">
+      {originCopy.paragraphs.map((paragraph) => (
+        <p
+          key={paragraph.slice(0, 32)}
+          className="
+            max-w-[46ch] font-structural text-[15px]
+            leading-[1.78] md:text-[16px]
+          "
+          style={{ color: 'var(--ei-text-secondary)' }}
+        >
+          {paragraph}
+        </p>
+      ))}
+    </motion.div>
+  </div>
+</div>
 
           <QuoteCard lines={studioQuoteLines} />
         </motion.section>
@@ -118,42 +123,50 @@ export function Studio() {
           aria-labelledby="philosophy-heading"
           className="mx-auto max-w-[1180px] py-12 md:py-16"
         >
-          <div className="grid grid-cols-[88px_minmax(0,1fr)] gap-6 md:grid-cols-[120px_minmax(0,1fr)] md:gap-8">
-            <motion.div variants={driftUp}>
-              <NumberedSectionLabel number="02" label="Philosophy" />
-            </motion.div>
+         <div className="grid grid-cols-[40px_160px_minmax(0,1fr)] gap-x-4 md:grid-cols-[48px_190px_minmax(0,1fr)] md:gap-x-6">
+  <motion.span
+    variants={driftUp}
+    className="pt-1 font-structural text-[11px] uppercase tracking-[0.2em]"
+    style={{ color: 'var(--ei-text-tertiary)' }}
+  >
+    02
+  </motion.span>
 
-            <div>
-              <motion.div variants={driftUp}>
-                <h2
-                  id="philosophy-heading"
-                  className="ei-section-title mb-5 whitespace-pre-line"
-                  style={{ color: 'var(--ei-text-primary)' }}
-                >
-                  Three beliefs shape the work.
-                </h2>
+  <motion.div variants={driftUp} className="pt-1">
+    <NumberedSectionLabel number="" label="Philosophy" />
+  </motion.div>
 
-                <p
-                  className="max-w-[38ch] font-structural text-[14px] leading-[1.75] md:text-[15px]"
-                  style={{ color: 'var(--ei-text-secondary)' }}
-                >
-                  A studio philosophy built around clarity, emotional truth, and
-                  meaningful expression.
-                </p>
-              </motion.div>
+  <div className="pt-10 md:pt-14">
+    <motion.div variants={driftUp}>
+      <h2
+        id="philosophy-heading"
+        className="ei-section-title mb-5 whitespace-pre-line"
+        style={{ color: 'var(--ei-text-primary)' }}
+      >
+        Three beliefs shape the work.
+      </h2>
 
-              <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
-                {philosophyItems.map((item, index) => (
-                  <PhilosophyCard
-                    key={item.title}
-                    {...item}
-                    index={index}
-                    variant="philosophy"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
+      <p
+        className="max-w-[38ch] font-structural text-[14px] leading-[1.75] md:text-[15px]"
+        style={{ color: 'var(--ei-text-secondary)' }}
+      >
+        A studio philosophy built around clarity, emotional truth, and
+        meaningful expression.
+      </p>
+    </motion.div>
+
+    <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
+      {philosophyItems.map((item, index) => (
+        <PhilosophyCard
+          key={item.title}
+          {...item}
+          index={index}
+          variant="philosophy"
+        />
+      ))}
+    </div>
+  </div>
+</div>
         </motion.section>
       </Container>
 
@@ -167,27 +180,35 @@ export function Studio() {
           aria-labelledby="values-heading"
           className="mx-auto max-w-[1180px] py-12 md:py-16"
         >
-          <div className="grid grid-cols-[88px_minmax(0,1fr)] gap-6 md:grid-cols-[120px_minmax(0,1fr)] md:gap-8">
-            <motion.div variants={driftUp}>
-              <NumberedSectionLabel number="03" label="Values" />
-            </motion.div>
+          <div className="grid grid-cols-[40px_160px_minmax(0,1fr)] gap-x-4 md:grid-cols-[48px_190px_minmax(0,1fr)] md:gap-x-6">
+  <motion.span
+    variants={driftUp}
+    className="pt-1 font-structural text-[11px] uppercase tracking-[0.2em]"
+    style={{ color: 'var(--ei-text-tertiary)' }}
+  >
+    03
+  </motion.span>
 
-            <div>
-              <motion.div variants={driftUp}>
-                <h2
-                  id="values-heading"
-                  className="ei-section-title mb-5 whitespace-pre-line"
-                  style={{ color: 'var(--ei-text-primary)' }}
-                >
-                  The principles that keep the work clear.
-                </h2>
-              </motion.div>
+  <motion.div variants={driftUp} className="pt-1">
+    <NumberedSectionLabel number="" label="Values" />
+  </motion.div>
 
-              <div className="mt-12">
-                <ValuesGrid showHeader={false} />
-              </div>
-            </div>
-          </div>
+  <div className="pt-10 md:pt-14">
+    <motion.div variants={driftUp}>
+      <h2
+        id="values-heading"
+        className="ei-section-title mb-5 whitespace-pre-line"
+        style={{ color: 'var(--ei-text-primary)' }}
+      >
+        The principles that keep the work clear.
+      </h2>
+    </motion.div>
+
+    <div className="mt-12">
+      <ValuesGrid showHeader={false} />
+    </div>
+  </div>
+</div>
         </motion.section>
       </Container>
 
