@@ -69,7 +69,7 @@ export function EditorialHero({
             h-full w-full object-cover
             ${
               isStudio
-                ? 'object-[68%_35%] opacity-[0.82] saturate-[0.82] brightness-[0.9] contrast-[0.98]'
+                ? 'object-[68%_35%] opacity-[0.86] saturate-[0.86] brightness-[0.96] contrast-[1]'
                 : 'object-center saturate-[0.84] md:object-[72%_50%]'
             }
           `}
@@ -85,9 +85,9 @@ export function EditorialHero({
             ? `
               linear-gradient(
                 90deg,
-                rgb(var(--ei-void-black-rgb) / 0.86) 0%,
-                rgb(var(--ei-void-black-rgb) / 0.64) 42%,
-                rgb(var(--ei-void-black-rgb) / 0.28) 100%
+                rgb(var(--ei-void-black-rgb) / 0.78) 0%,
+                rgb(var(--ei-void-black-rgb) / 0.54) 42%,
+                rgb(var(--ei-void-black-rgb) / 0.18) 100%
               ),
               linear-gradient(
                 180deg,
