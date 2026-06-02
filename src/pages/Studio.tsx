@@ -112,7 +112,7 @@ export function Studio() {
           whileInView="visible"
           viewport={VIEWPORT.loose}
           aria-labelledby="philosophy-heading"
-          className="mx-auto max-w-[1180px] py-[clamp(5.5rem,10vw,8rem)]"
+          className="mx-auto max-w-[1180px] py-[clamp(4.5rem,7.5vw,6.25rem)]"
         >
           <motion.div variants={driftUp}>
             <NumberedSectionLabel number="02" label="Philosophy" />
@@ -162,7 +162,7 @@ export function Studio() {
           whileInView="visible"
           viewport={VIEWPORT.loose}
           aria-labelledby="values-heading"
-          className="mx-auto max-w-[1180px] py-[clamp(5.5rem,10vw,8rem)]"
+          className="mx-auto max-w-[1180px] py-[clamp(4.25rem,7vw,6rem)]"
         >
           <motion.div variants={driftUp}>
             <NumberedSectionLabel number="03" label="Values" />
