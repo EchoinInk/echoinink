@@ -51,19 +51,19 @@ export function Studio() {
 />
 
       <Container size="xl" className="relative z-10">
-        <motion.section
-          variants={staggerContainer(STAGGER.loose, 0)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT.loose}
-          aria-labelledby="origin-heading"
-          className="
-            mx-auto grid max-w-[1180px] items-center gap-12
-            pb-[clamp(4.5rem,8vw,6.5rem)]
-            lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1fr)]
-            lg:gap-20
-          "
-        >
+  <motion.section
+    variants={staggerContainer(STAGGER.loose, 0)}
+    initial="hidden"
+    whileInView="visible"
+    viewport={VIEWPORT.loose}
+    aria-labelledby="origin-heading"
+    className="
+      mx-auto grid max-w-[1180px] items-center gap-12
+      py-12 md:py-16
+      lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1fr)]
+      lg:gap-20
+    "
+  >
           <div>
             <motion.div variants={driftUp}>
               <NumberedSectionLabel
@@ -191,7 +191,7 @@ export function Studio() {
         size="xl"
         className="relative z-10 pb-[clamp(6rem,10vw,9rem)]"
       >
-        <div className="mx-auto max-w-[1180px]">
+        <div className="relative z-10 py-12 md:py-16">
           <ProjectCTA
             eyebrow="Continue the conversation"
             heading="Aligned in philosophy?"
