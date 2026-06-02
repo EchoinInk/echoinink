@@ -58,7 +58,7 @@ export function Studio() {
           viewport={VIEWPORT.loose}
           aria-labelledby="origin-heading"
           className="
-            mx-auto grid max-w-[1180px] items-center gap-12
+            mx-auto max-w-[1180px] pt-12 md:pt-16 items-center gap-12
             py-[clamp(6rem,11vw,9rem)]
             lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1fr)]
             lg:gap-20
