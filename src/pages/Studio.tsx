@@ -126,10 +126,7 @@ export function Studio() {
             </h2>
 
             <p
-              className="
-                mt-4 max-w-[40ch] font-structural text-[15px]
-                leading-[1.75] md:text-[16px]
-              "
+              className="ei-section-description"
               style={{ color: 'var(--ei-text-secondary)' }}
             >
               A studio philosophy built around clarity, emotional truth, and
