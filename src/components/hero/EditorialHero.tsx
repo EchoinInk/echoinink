@@ -54,8 +54,8 @@ export function EditorialHero({
         pt-16 sm:pt-20 md:pt-20
         ${
           isStudio
-  ? 'object-[68%_42%] opacity-[0.92] saturate-[0.9] brightness-[0.95] contrast-[1.02]'
-  : 'object-center saturate-[0.84] md:object-[72%_50%]'
+            ? 'min-h-[620px] md:min-h-[76vh] lg:min-h-[820px]'
+            : 'min-h-[52vh] md:min-h-[78vh] lg:min-h-[82vh]'
         }
       `}
       aria-labelledby="editorial-hero-heading"
@@ -69,7 +69,7 @@ export function EditorialHero({
             h-full w-full object-cover
             ${
               isStudio
-                ? 'object-[68%_35%] opacity-[0.86] saturate-[0.86] brightness-[0.96] contrast-[1]'
+                ? 'object-[68%_42%] opacity-[0.92] saturate-[0.9] brightness-[0.95] contrast-[1.02]'
                 : 'object-center saturate-[0.84] md:object-[72%_50%]'
             }
           `}
@@ -82,21 +82,21 @@ export function EditorialHero({
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background: isStudio
-            ? `
-              linear-gradient(
-                90deg,
-                rgb(var(--ei-void-black-rgb) / 0.78) 0%,
-                rgb(var(--ei-void-black-rgb) / 0.54) 42%,
-                rgb(var(--ei-void-black-rgb) / 0.18) 100%
-              ),
-              linear-gradient(
-                180deg,
-                rgb(var(--ei-void-black-rgb) / 0.34) 0%,
-                rgb(var(--ei-void-black-rgb) / 0.08) 42%,
-                rgb(var(--ei-void-black-rgb) / 0.82) 100%
-              )
-            `
-            : 'linear-gradient(180deg, rgba(6, 8, 18, 0.15) 0%, rgba(6, 8, 18, 0.45) 100%)',
+  ? `
+    linear-gradient(
+      90deg,
+      rgb(var(--ei-void-black-rgb) / 0.72) 0%,
+      rgb(var(--ei-void-black-rgb) / 0.48) 42%,
+      rgb(var(--ei-void-black-rgb) / 0.12) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgb(var(--ei-void-black-rgb) / 0.22) 0%,
+      rgb(var(--ei-void-black-rgb) / 0.06) 42%,
+      rgb(var(--ei-void-black-rgb) / 0.76) 100%
+    )
+  `
+  : 'linear-gradient(180deg, rgba(6, 8, 18, 0.15) 0%, rgba(6, 8, 18, 0.45) 100%)'
         }}
       />
 
