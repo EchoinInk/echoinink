@@ -64,7 +64,7 @@ export function Studio() {
       lg:gap-16
     "
   >
-          <div>
+         <div className="grid grid-cols-[96px_minmax(0,1fr)] gap-8 md:grid-cols-[120px_minmax(0,1fr)]">
   <motion.div variants={driftUp}>
     <NumberedSectionLabel
       number={originCopy.number}
@@ -72,11 +72,15 @@ export function Studio() {
     />
   </motion.div>
 
-  <div className="pl-12 md:pl-16 lg:pl-20">
+  <div>
     <motion.h2
       id="origin-heading"
       variants={driftUp}
-      className="ei-section-title whitespace-pre-line mb-5"
+      className="
+        max-w-[24ch] whitespace-pre-line
+        font-editorial text-[clamp(2rem,3.4vw,3rem)]
+        leading-[1.16] tracking-tight
+      "
       style={{ color: 'var(--ei-text-primary)' }}
     >
       {originCopy.heading}
@@ -86,7 +90,10 @@ export function Studio() {
       {originCopy.paragraphs.map((paragraph) => (
         <p
           key={paragraph.slice(0, 32)}
-          className="font-structural max-w-[38ch] text-[14px] leading-[1.75] text-white/68 md:text-[15px]"
+          className="
+            max-w-[46ch] font-structural text-[15px]
+            leading-[1.78] md:text-[16px]
+          "
           style={{ color: 'var(--ei-text-secondary)' }}
         >
           {paragraph}
