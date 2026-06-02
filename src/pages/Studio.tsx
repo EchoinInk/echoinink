@@ -60,8 +60,8 @@ export function Studio() {
     className="
       mx-auto grid max-w-[1180px] items-center gap-12
       py-12 md:py-16
-      lg:grid-cols-[minmax(0,0.95fr)_minmax(420px,1fr)]
-      lg:gap-20
+      lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.78fr)]
+      lg:gap-16
     "
   >
           <div>
