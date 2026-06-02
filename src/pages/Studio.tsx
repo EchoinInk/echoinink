@@ -76,11 +76,7 @@ export function Studio() {
     <motion.h2
       id="origin-heading"
       variants={driftUp}
-      className="
-        mt-6 max-w-[24ch] whitespace-pre-line
-        font-editorial text-[clamp(2rem,3.4vw,3rem)]
-        leading-[1.16] tracking-tight
-      "
+      className="ei-section-title whitespace-pre-line mb-5"
       style={{ color: 'var(--ei-text-primary)' }}
     >
       {originCopy.heading}
@@ -123,7 +119,7 @@ export function Studio() {
           <motion.div variants={driftUp} className="mt-6">
             <h2
               id="philosophy-heading"
-              className="ei-section-title whitespace-pre-line mb-5              "
+              className="ei-section-title whitespace-pre-line mb-5"
               style={{ color: 'var(--ei-text-primary)' }}
             >
               Three beliefs shape the work.
@@ -170,10 +166,7 @@ export function Studio() {
           <motion.div variants={driftUp} className="mt-6">
             <h2
               id="values-heading"
-              className="
-                max-w-[20ch] font-editorial text-[clamp(1.85rem,3.2vw,2.5rem)]
-                leading-[1.18] tracking-tight
-              "
+              className="ei-section-title whitespace-pre-line mb-5"
               style={{ color: 'var(--ei-text-primary)' }}
             >
               The principles that keep the work clear.
