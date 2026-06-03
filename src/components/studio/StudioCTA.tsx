@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Button } from '@/components/sections/Button';
+import { Button } from '@/components/ui/Button';
 import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
 import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
 

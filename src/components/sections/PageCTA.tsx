@@ -7,7 +7,7 @@ import {
   STAGGER,
   VIEWPORT 
 } from '@/lib/motion-cinematic';
-import { Button } from '@/components/sections/Button';
+import { Button } from '@/components/ui/Button';
 
 type PageType = 'home' | 'sessions' | 'identity' | 'worlds' | 'works' | 'studio';
 
