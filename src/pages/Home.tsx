@@ -3,7 +3,7 @@ import { PageShell } from '@/components/layout/PageShell';
 import { Hero } from '@/components/sections/Hero';
 import { Philosophy } from '@/components/Studio';
 import { WhatWeCreate } from '@/components/WhatWeCreate';
-import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
+import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyHome';
 import { EmergingSystems } from '@/components/EmergingSystems';
 import { ClosingSection } from '@/components/sections/ClosingSection';
 
