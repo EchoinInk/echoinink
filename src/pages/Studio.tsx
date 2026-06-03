@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
 import { EditorialHero } from '@/components/hero/EditorialHero';
-import { NumberedSectionLabel } from '@/components/editorial/NumberedSectionLabel';
 import { QuoteCard } from '@/components/studio/QuoteCard';
 import { PhilosophyCard } from '@/components/studio/PhilosophyCard';
 import { ValuesGrid } from '@/components/studio/ValuesGrid';
@@ -27,6 +26,46 @@ import {
   STAGGER,
   VIEWPORT,
 } from '@/lib/motion-cinematic';
+
+function StudioSectionRail({
+  number,
+  label,
+}: {
+  number: string;
+  label: string;
+}) {
+  return (
+    <motion.div
+      variants={driftUp}
+      className="
+        grid grid-cols-[52px_72px_minmax(0,1fr)] items-center gap-x-5
+        md:grid-cols-[64px_88px_minmax(0,1fr)] md:gap-x-6
+      "
+    >
+      <span
+        className="font-structural text-[11px] uppercase tracking-[0.2em]"
+        style={{ color: 'var(--ei-text-tertiary)' }}
+      >
+        {number}
+      </span>
+
+      <span
+        className="block h-px w-full"
+        style={{
+          background:
+            'linear-gradient(90deg, rgb(var(--ei-soft-lavender-rgb) / 0.16), rgb(var(--ei-aurora-blue-rgb) / 0.36))',
+        }}
+      />
+
+      <span
+        className="font-structural text-[11px] uppercase tracking-[0.28em]"
+        style={{ color: 'var(--ei-text-tertiary)' }}
+      >
+        {label}
+      </span>
+    </motion.div>
+  );
+}
 
 export function Studio() {
   return (
@@ -51,157 +90,137 @@ export function Studio() {
       />
 
       {/* ORIGIN */}
-     <Container size="xl" className="relative z-10">
-  <motion.section
-    variants={staggerContainer(STAGGER.loose, 0)}
-    initial="hidden"
-    whileInView="visible"
-    viewport={VIEWPORT.loose}
-    aria-labelledby="origin-heading"
-    className="relative mx-auto max-w-[1180px] py-12 md:py-16"
-  >
-    <motion.div
-      variants={driftUp}
-      className="absolute left-0 top-12 md:top-16"
-    >
-      <NumberedSectionLabel
-        number={originCopy.number}
-        label={originCopy.label}
-      />
-    </motion.div>
+      <Container size="xl" className="relative z-10">
+        <motion.section
+          variants={staggerContainer(STAGGER.loose, 0)}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.loose}
+          aria-labelledby="origin-heading"
+          className="mx-auto max-w-[1180px] py-12 md:py-16"
+        >
+          <StudioSectionRail
+            number={originCopy.number}
+            label={originCopy.label}
+          />
 
-    <div className="pl-[clamp(10rem,18vw,18rem)]">
-      <div
-        className="
-          grid items-center gap-12
-          lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)]
-          lg:gap-14
-        "
-      >
-        <div className="pt-10 md:pt-14">
-          <motion.h2
-            id="origin-heading"
-            variants={driftUp}
+          <div
             className="
-              max-w-[24ch] whitespace-pre-line
-              font-editorial text-[clamp(2rem,3.4vw,3rem)]
-              leading-[1.16] tracking-tight
+              mt-10 grid gap-12 pl-[calc(52px+72px+2.5rem)]
+              md:mt-14 md:pl-[calc(64px+88px+3rem)]
+              lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)]
+              lg:gap-14
             "
-            style={{ color: 'var(--ei-text-primary)' }}
           >
-            {originCopy.heading}
-          </motion.h2>
-
-          <motion.div variants={fadeSoft} className="mt-8 space-y-5">
-            {originCopy.paragraphs.map((paragraph) => (
-              <p
-                key={paragraph.slice(0, 32)}
+            <div>
+              <motion.h2
+                id="origin-heading"
+                variants={driftUp}
                 className="
-                  max-w-[46ch] font-structural text-[15px]
-                  leading-[1.78] md:text-[16px]
+                  max-w-[24ch] whitespace-pre-line
+                  font-editorial text-[clamp(2rem,3.4vw,3rem)]
+                  leading-[1.16] tracking-tight
                 "
-                style={{ color: 'var(--ei-text-secondary)' }}
+                style={{ color: 'var(--ei-text-primary)' }}
               >
-                {paragraph}
-              </p>
-            ))}
-          </motion.div>
-        </div>
+                {originCopy.heading}
+              </motion.h2>
 
-        <QuoteCard lines={studioQuoteLines} />
-      </div>
-    </div>
-  </motion.section>
-</Container>
+              <motion.div variants={fadeSoft} className="mt-8 space-y-5">
+                {originCopy.paragraphs.map((paragraph) => (
+                  <p
+                    key={paragraph.slice(0, 32)}
+                    className="
+                      max-w-[46ch] font-structural text-[15px]
+                      leading-[1.78] md:text-[16px]
+                    "
+                    style={{ color: 'var(--ei-text-secondary)' }}
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </motion.div>
+            </div>
+
+            <QuoteCard lines={studioQuoteLines} />
+          </div>
+        </motion.section>
+      </Container>
 
       {/* PHILOSOPHY */}
-     <Container size="xl" className="relative z-10">
-  <motion.section
-    variants={fadeSoft}
-    initial="hidden"
-    whileInView="visible"
-    viewport={VIEWPORT.loose}
-    aria-labelledby="philosophy-heading"
-    className="relative mx-auto max-w-[1180px] py-12 md:py-16"
-  >
-    <motion.div
-      variants={driftUp}
-      className="absolute left-0 top-12 md:top-16"
-    >
-      <NumberedSectionLabel number="02" label="Philosophy" />
-    </motion.div>
+      <Container size="xl" className="relative z-10">
+        <motion.section
+          variants={fadeSoft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.loose}
+          aria-labelledby="philosophy-heading"
+          className="mx-auto max-w-[1180px] py-12 md:py-16"
+        >
+          <StudioSectionRail number="02" label="Philosophy" />
 
-    <div className="pl-[clamp(10rem,18vw,18rem)]">
-      <div className="pt-10 md:pt-14">
-        <motion.div variants={driftUp}>
-          <h2
-            id="philosophy-heading"
-            className="ei-section-title mb-5 whitespace-pre-line"
-            style={{ color: 'var(--ei-text-primary)' }}
-          >
-            Three beliefs shape the work.
-          </h2>
+          <div className="mt-10 pl-[calc(52px+72px+2.5rem)] md:mt-14 md:pl-[calc(64px+88px+3rem)]">
+            <motion.div variants={driftUp}>
+              <h2
+                id="philosophy-heading"
+                className="ei-section-title mb-5 whitespace-pre-line"
+                style={{ color: 'var(--ei-text-primary)' }}
+              >
+                Three beliefs shape the work.
+              </h2>
 
-          <p
-            className="max-w-[38ch] font-structural text-[14px] leading-[1.75] md:text-[15px]"
-            style={{ color: 'var(--ei-text-secondary)' }}
-          >
-            A studio philosophy built around clarity, emotional truth, and
-            meaningful expression.
-          </p>
-        </motion.div>
+              <p
+                className="max-w-[38ch] font-structural text-[14px] leading-[1.75] md:text-[15px]"
+                style={{ color: 'var(--ei-text-secondary)' }}
+              >
+                A studio philosophy built around clarity, emotional truth, and
+                meaningful expression.
+              </p>
+            </motion.div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
-          {philosophyItems.map((item, index) => (
-            <PhilosophyCard
-              key={item.title}
-              {...item}
-              index={index}
-              variant="philosophy"
-            />
-          ))}
-        </div>
-      </div>
-    </div>
-  </motion.section>
-</Container>
+            <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
+              {philosophyItems.map((item, index) => (
+                <PhilosophyCard
+                  key={item.title}
+                  {...item}
+                  index={index}
+                  variant="philosophy"
+                />
+              ))}
+            </div>
+          </div>
+        </motion.section>
+      </Container>
 
       {/* VALUES */}
       <Container size="xl" className="relative z-10">
-  <motion.section
-    variants={fadeSoft}
-    initial="hidden"
-    whileInView="visible"
-    viewport={VIEWPORT.loose}
-    aria-labelledby="values-heading"
-    className="relative mx-auto max-w-[1180px] py-12 md:py-16"
-  >
-    <motion.div
-      variants={driftUp}
-      className="absolute left-0 top-12 md:top-16"
-    >
-      <NumberedSectionLabel number="03" label="Values" />
-    </motion.div>
+        <motion.section
+          variants={fadeSoft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={VIEWPORT.loose}
+          aria-labelledby="values-heading"
+          className="mx-auto max-w-[1180px] py-12 md:py-16"
+        >
+          <StudioSectionRail number="03" label="Values" />
 
-    <div className="pl-[clamp(10rem,18vw,18rem)]">
-      <div className="pt-10 md:pt-14">
-        <motion.div variants={driftUp}>
-          <h2
-            id="values-heading"
-            className="ei-section-title mb-5 whitespace-pre-line"
-            style={{ color: 'var(--ei-text-primary)' }}
-          >
-            The principles that keep the work clear.
-          </h2>
-        </motion.div>
+          <div className="mt-10 pl-[calc(52px+72px+2.5rem)] md:mt-14 md:pl-[calc(64px+88px+3rem)]">
+            <motion.div variants={driftUp}>
+              <h2
+                id="values-heading"
+                className="ei-section-title mb-5 whitespace-pre-line"
+                style={{ color: 'var(--ei-text-primary)' }}
+              >
+                The principles that keep the work clear.
+              </h2>
+            </motion.div>
 
-        <div className="mt-12">
-          <ValuesGrid showHeader={false} />
-        </div>
-      </div>
-    </div>
-  </motion.section>
-</Container>
+            <div className="mt-12">
+              <ValuesGrid showHeader={false} />
+            </div>
+          </div>
+        </motion.section>
+      </Container>
 
       {/* CTA */}
       <Container size="xl" className="relative z-10">
