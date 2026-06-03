@@ -55,7 +55,7 @@ export function EditorialHero({
         ${
           isStudio
   ? 'min-h-[620px] md:min-h-[76vh] lg:min-h-[820px]'
-  : 'min-h-[52vh] md:min-h-[78vh] lg:min-h-[82vh]'
+  : 'min-h-[620PX] md:min-h-[76vh] lg:min-h-[820PX]'
         }
       `}
       aria-labelledby="editorial-hero-heading"
