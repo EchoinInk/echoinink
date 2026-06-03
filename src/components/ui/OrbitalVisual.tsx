@@ -59,7 +59,7 @@ const orbitBlue = 'rgb(var(--ei-deep-indigo-rgb) / 0.72)';
 const orbitBlueSoft = 'rgb(var(--ei-deep-indigo-rgb) / 0.42)';
 
 const violet = 'rgb(var(--ei-luxe-violet-rgb) / 0.82)';
-const violetSoft = 'rgb(var(--ei-luxe-violet-rgb) / 0.48)';
+const violetSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.58)';
 const violetDim = 'rgb(var(--ei-luxe-violet-rgb) / 0.24)';
 
 const magenta = 'rgb(var(--ei-orchid-pink-rgb) / 0.78)';
