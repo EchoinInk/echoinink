@@ -116,7 +116,7 @@ export function Studio() {
               className="
                 grid items-center gap-12
                 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)]
-                lg:gap-14
+                lg:gap-12 
               "
             >
               <div>
