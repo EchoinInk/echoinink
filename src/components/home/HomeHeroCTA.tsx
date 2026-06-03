@@ -1,4 +1,4 @@
-import { Button } from '../sections/Button';
+import { Button } from '../ui/Button';
 
 export function HeroCTA() {
   return (
