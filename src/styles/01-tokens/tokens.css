@@ -199,8 +199,8 @@
 
     --ei-card-bg: rgba(11, 13, 42, 0.64);
     --ei-card-bg-hover: rgba(11, 13, 42, 0.88);
-    --ei-card-border: rgba(227, 216, 253, 0.1);
-    --ei-card-border-hover: rgba(227, 216, 253, 0.2);
+    --ei-card-border: rgba(227, 216, 253, 0.10);
+    --ei-card-border-hover: rgba(227, 216, 253, 0.20);
     --ei-card-shadow: var(--ei-shadow-soft);
     --ei-card-shadow-hover: var(--ei-shadow-hover);
 
