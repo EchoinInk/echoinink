@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet-async';
 import { PageShell } from '@/components/layout/PageShell';
 import { Hero } from '@/components/sections/Hero';
 import { Philosophy } from '@/components/home/HomePhilosophySection';
-import { WhatWeCreate } from '@/components/WhatWeCreate';
+import { WhatWeCreate } from '@/components/home/WhatWeCreate';
 import { LumoCaseStudyTeaser } from '@/components/home/LumoCaseStudyHome';
 import { EmergingSystems } from '@/components/home/OurSystems';
 import { ClosingSection } from '@/components/sections/ClosingSection';
