@@ -134,8 +134,7 @@ export function Studio() {
                     <p
                       key={paragraph.slice(0, 32)}
                       className="
-                        max-w-[59ch] ei-body whitespace-pre-line
-                        leading-[1.78] md:text-[16px]
+                        max-w-[59ch] ei-body-large whitespace-pre-line
                       "
                       style={{ color: 'var(--ei-text-secondary)' }}
                     >
@@ -180,9 +179,7 @@ export function Studio() {
 
                 <p
                   className="
-                    max-w-[38ch] ei-body-large
-                    md:text-[15px]
-                  "
+                    max-w-[38ch] ei-body-large                  "
                   style={{ color: 'var(--ei-text-secondary)' }}
                 >
                   A studio philosophy built around clarity, emotional truth, and
