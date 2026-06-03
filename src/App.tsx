@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
-import { Layout } from '@/components/Layout';
+import { Layout } from '@/components/layout/Layout';
 import { PageTransition } from '@/components/system/PageTransition';
 import { Home } from '@/pages/HomePage';
 import Identity from '@/pages/IdentityPage';
