@@ -49,7 +49,7 @@
     left: 1rem;
     z-index: 9999;
     padding: 0.75rem 1.25rem;
-    background: var(--ei-void-black);
+    background: var(--ei-void);
     color: var(--ei-ice-white);
     border: 1px solid rgb(var(--ei-halo-blue-rgb) / 0.35);
     border-radius: 6px;
@@ -145,7 +145,7 @@
     background: radial-gradient(
       circle at center,
       transparent 30%,
-      rgb(var(--ei-void-black-rgb) / 0.4) 100%
+      rgb(var(--ei-void-rgb) / 0.4) 100%
     );
     pointer-events: none;
   }
@@ -167,8 +167,8 @@
     background: linear-gradient(
       to bottom,
       transparent 0%,
-      rgb(var(--ei-void-black-rgb) / 0.5) 60%,
-      rgb(var(--ei-void-black-rgb) / 0.95) 100%
+      rgb(var(--ei-void-rgb) / 0.5) 60%,
+      rgb(var(--ei-void-rgb) / 0.95) 100%
     );
     pointer-events: none;
   }
@@ -178,7 +178,7 @@
     background: linear-gradient(
       to top,
       transparent 0%,
-      rgb(var(--ei-void-black-rgb) / 0.15) 100%
+      rgb(var(--ei-void-rgb) / 0.15) 100%
     );
     pointer-events: none;
   }
@@ -192,22 +192,6 @@
     mix-blend-mode: overlay;
     opacity: 0.4;
     pointer-events: none;
-  }
-
-  /* ── Card & Component Atmospheres ─────────────────────────── */
-
-  /* Card background base */
-  .ei-card-bg {
-    background: rgb(var(--ei-ice-white-rgb) / 0.018);
-    border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.05);
-    backdrop-filter: blur(16px);
-  }
-
-  /* Hover glow for cards */
-  .ei-card-glow {
-    box-shadow: 0 0 0 1px rgb(var(--ei-ice-white-rgb) / 0.04),
-      0 20px 50px -20px rgb(var(--ei-void-black-rgb) / 0.4),
-      0 0 60px -30px rgb(var(--ei-violet-rgb) / 0.1);
   }
 
   /* ── Breathing Space Atmosphere ──────────────────────────── */
