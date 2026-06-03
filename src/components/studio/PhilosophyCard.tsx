@@ -82,7 +82,7 @@ export function PhilosophyCard({
       >
         <h3
           className={`font-editorial leading-[1.14] tracking-tight ${
-            isValue ? 'text-[1.18rem]' : 'text-[1.42rem] md:text-[1.58rem]'
+            isValue ? 'text-[1.24rem]' : 'text-[1.42rem] md:text-[1.58rem]'
           }`}
           style={{ color: 'var(--ei-text-primary)' }}
         >
