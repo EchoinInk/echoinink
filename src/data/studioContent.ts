@@ -52,7 +52,7 @@ export const philosophyItems: PhilosophyItem[] = [
 export const valueItems: ValueItem[] = [
   {
     title: 'Depth over speed',
-    description: 'We favour understanding over urgency.',
+    description: 'We move with clarity over velocity. Depth requires space.',
     icon: 'pulse',
   },
   {
