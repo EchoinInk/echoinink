@@ -97,10 +97,10 @@ export function QuoteCard({ lines }: QuoteCardProps) {
         <span
           className="block h-1.5 w-1.5 rounded-full"
           style={{
-            background: 'var(--ei-luxe-violet)',
+            background: 'var(--ei-electric-cyan)',
             boxShadow:
               `
-              0 0 10px rgb(var(--ei-luxe-white-rgb) / 0.58),
+              0 0 10px rgb(var(--ei-electric-cyan-rgb) / 0.58),
               0 0 22px rgb(var(--ei-aurora-blue-rgb) / 0.52)
               `,
           }}
