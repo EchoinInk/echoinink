@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { HeroBackground } from './HeroBackground';
+import { HeroBackground } from '../home/HeroBackground';
 import { HeroCTA } from './HeroCTA';
 import { HeroHeading } from '../home/HeroHeading';
 import { Container } from '../layout/Container';
