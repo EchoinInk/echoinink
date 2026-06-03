@@ -133,7 +133,7 @@
 
 ⸻
 
-/Systems Card
+/* Systems Card */
 
 @layer components {
   .ei-card-system {
@@ -201,7 +201,6 @@
     text-transform: uppercase;
   }
 }
-
 ⸻
 
 Featured World Card
