@@ -1,5 +1,11 @@
 # ECHO IN INK — Typography System
 
+Yes — here’s an updated, cleaner **Echo in Ink Typography System** that matches the newer color direction, your current file structure, and the brand’s cinematic tone.
+
+I’d also recommend simplifying the implementation because your current `globals.css` imports **three typography files at once**: `typography.css`, `typography-enhanced.css`, and `typography-system.css`, which can create duplicated class definitions and conflicting typography rules. Your base font setup is already clear: **Fraunces** for editorial display, **Neue Montreal** for structural/body/UI, and **Geist Mono** for labels and metadata.
+
+---
+
 ## Typography Philosophy
 
 Echo in Ink typography should feel:
