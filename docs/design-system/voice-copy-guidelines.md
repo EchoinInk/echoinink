@@ -3,7 +3,7 @@
 
 ---
 
-## **Name** :lips:
+## **Voice Name** 👄
 ### **Echoed Atmosphere**  
 **Luminous · Technical · Deep**
 
