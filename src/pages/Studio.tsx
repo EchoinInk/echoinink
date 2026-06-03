@@ -53,7 +53,7 @@ function StudioSectionRail({
       </span>
 
       <span
-        className="block h-px w-22"
+        className="block h-px w-20"
         style={{
           background:
             'linear-gradient(90deg, rgb(var(--ei-electric-cyan-rgb) / 0.28), rgb(var(--ei-aurora-blue-rgb) / 0.85))',
@@ -123,7 +123,7 @@ export function Studio() {
                 <motion.h2
                   id="origin-heading"
                   variants={driftUp}
-                  className="ei-section-title whitespace-pre-line px-8 mb-5"
+                  className="ei-section-title whitespace-pre-line px-6 mb-5"
                   style={{ color: 'var(--ei-text-primary)' }}
                 >
                   {originCopy.heading}
@@ -168,7 +168,7 @@ export function Studio() {
             "
           >
  
-<div className="mx-auto mt-12 grid max-w-[1180px] grid-cols-1 gap-7 px-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3">               {philosophyItems.map((item, index) => (
+<div className="mx-auto mt-12 grid max-w-[1180px] grid-cols-1 gap-7 px-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">               {philosophyItems.map((item, index) => (
                   <PhilosophyCard
                     key={item.title}
                     {...item}

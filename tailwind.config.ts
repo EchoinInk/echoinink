@@ -86,14 +86,13 @@ export default {
           'surface-elevated': 'rgb(var(--ei-aurora-blue-rgb) / 0.15)',
         },
       },
-      boxShadow: {
-        ei: {
-          aurora: '0 0 32px rgb(var(--ei-aurora-blue-rgb) / 0.22)',
-          cyan: '0 0 28px rgb(var(--ei-electric-cyan-rgb) / 0.2)',
-          orchid: '0 0 30px rgb(var(--ei-orchid-pink-rgb) / 0.18)',
-          luxe: '0 18px 70px rgb(var(--ei-void-black-rgb) / 0.55), 0 0 48px rgb(var(--ei-aurora-blue-rgb) / 0.14)',
-        },
-      },
+      bboxShadow: {
+  'ei-aurora': '0 0 32px rgb(var(--ei-aurora-blue-rgb) / 0.22)',
+  'ei-cyan': '0 0 28px rgb(var(--ei-electric-cyan-rgb) / 0.2)',
+  'ei-orchid': '0 0 30px rgb(var(--ei-orchid-pink-rgb) / 0.18)',
+  'ei-luxe':
+    '0 18px 70px rgb(var(--ei-void-black-rgb) / 0.55), 0 0 48px rgb(var(--ei-aurora-blue-rgb) / 0.14)',
+},
       backgroundImage: {
         'ei-gradient-primary':
           'linear-gradient(135deg, var(--ei-aurora-blue) 0%, var(--ei-luxe-violet) 48%, var(--ei-orchid-pink) 100%)',
