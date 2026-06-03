@@ -68,7 +68,7 @@ export function LumoCaseStudyTeaser() {
             variants={driftUp}
             className="mb-8 flex items-center gap-3 md:mb-10"
           >
-            <span className="ei-eyebrow">Featured Work</span>
+            <span className="ei-type-label">Featured Work</span>
 
             <div
               className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73, 133, 253/0.35)]"

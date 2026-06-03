@@ -5,7 +5,7 @@ interface EyebrowLabelProps {
 export function EyebrowLabel({ children }: EyebrowLabelProps) {
   return (
     <div className="flex items-center gap-4">
-      <span className="ei-eyebrow">{children}</span>
+      <span className="ei-type-label">{children}</span>
       <div
         className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73, 133, 253/0.45)]"
         style={{

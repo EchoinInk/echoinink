@@ -71,10 +71,10 @@ export function EcosystemPathways() {
         >
           {/* Section heading */}
           <motion.div variants={driftUp} className="text-center mb-8 md:mb-14">
-            <span className="ei-eyebrow ei-text-space-md block">
+            <span className="ei-type-label ei-text-space-md block">
               The Ecosystem
             </span>
-            <h2 className="ei-section-title">
+            <h2 className="ei-type-section">
               Three layers. One world.
             </h2>
             <p className="ei-section-description max-w-[42ch] mx-auto mt-4">

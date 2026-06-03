@@ -86,7 +86,7 @@ export function PageCTA({ page }: PageCTAProps) {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-xl block"
+              className="ei-type-label ei-text-space-xl block"
             >
               Continue
             </motion.span>

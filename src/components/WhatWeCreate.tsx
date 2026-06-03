@@ -54,7 +54,7 @@ export function WhatWeCreate() {
         >
           {/* Section header */}
           <motion.div variants={driftUp} className="flex items-center gap-3 mb-10 md:mb-14">
-            <span className="ei-eyebrow">What We Create</span>
+            <span className="ei-type-label">What We Create</span>
 <div
           className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73, 133, 253/0.45)]"
           style={{

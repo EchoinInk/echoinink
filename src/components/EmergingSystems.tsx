@@ -69,7 +69,7 @@ export function EmergingSystems() {
             className="flex items-center justify-between mb-10 md:mb-14"
           >
             <div className="flex items-center gap-3">
-              <span className="ei-eyebrow">Our Systems</span>
+              <span className="ei-type-label">Our Systems</span>
 <div
           className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73, 133, 253/0.45)]"
           style={{

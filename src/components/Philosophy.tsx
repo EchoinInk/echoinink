@@ -52,7 +52,7 @@ export function Philosophy() {
             variants={driftUp}
             className="flex items-center gap-3 mb-8 md:mb-12"
           >
-            <span className="ei-eyebrow">Our Philosophy</span>
+            <span className="ei-type-label">Our Philosophy</span>
 
             <div
               className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73, 133, 253/0.75)]"
@@ -70,7 +70,7 @@ export function Philosophy() {
             <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
               <motion.h2
                 variants={blurEmergence}
-                className="ei-section-title whitespace-pre-line mb-5"
+                className="ei-type-section whitespace-pre-line mb-5"
               >
                 {'Atmosphere is not decoration —\nit is how meaning is felt.'}
               </motion.h2>

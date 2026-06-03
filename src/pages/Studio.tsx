@@ -123,7 +123,7 @@ export function Studio() {
                 <motion.h2
                   id="origin-heading"
                   variants={driftUp}
-                  className="ei-section-title whitespace-pre-line px-6 mb-5"
+                  className="ei-type-section whitespace-pre-line px-6 mb-5"
                   style={{ color: 'var(--ei-text-primary)' }}
                 >
                   {originCopy.heading}
@@ -134,7 +134,7 @@ export function Studio() {
                     <p
                       key={paragraph.slice(0, 32)}
                       className="
-                        max-w-[60ch] px-8 ei-body-large whitespace-pre-line
+                        max-w-[60ch] px-8 ei-type-body-large whitespace-pre-line
                       "
                       style={{ color: 'var(--ei-text-secondary)' }}
                     >

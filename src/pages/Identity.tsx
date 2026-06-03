@@ -67,13 +67,13 @@ export default function Identity() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-lg block"
+              className="ei-type-label ei-text-space-lg block"
             >
               Identity Translation
             </motion.span>
             <motion.h1 
               variants={driftUp}
-              className="ei-section-title"
+              className="ei-type-section"
             >
               Where inner worlds become coherent external form.
             </motion.h1>
@@ -98,7 +98,7 @@ export default function Identity() {
             </motion.p>
             <motion.p 
               variants={fadeSoft}
-              className="ei-body-large mt-10"
+              className="ei-type-body-large mt-10"
             >
               Not because it is unclear internally. But because it has never been translated with enough care.
             </motion.p>
@@ -117,7 +117,7 @@ export default function Identity() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               What it includes
             </motion.span>
@@ -130,7 +130,7 @@ export default function Identity() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body-large"
+                  className="ei-type-body-large"
                 >
                   {item}
                 </motion.p>
@@ -151,7 +151,7 @@ export default function Identity() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               What it does
             </motion.span>
@@ -164,7 +164,7 @@ export default function Identity() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body-large"
+                  className="ei-type-body-large"
                 >
                   {item}
                 </motion.p>
@@ -185,7 +185,7 @@ export default function Identity() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               What it feels like
             </motion.span>
@@ -198,7 +198,7 @@ export default function Identity() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body-large"
+                  className="ei-type-body-large"
                 >
                   {item}
                 </motion.p>
@@ -219,15 +219,15 @@ export default function Identity() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               Investment
             </motion.span>
             
             <motion.div variants={driftUp} className="mt-8">
-              <h3 className="ei-section-title">Identity Translation</h3>
-              <p className="ei-body-large mt-4">$6,500 NZD</p>
-              <p className="ei-body mt-4 max-w-md">
+              <h3 className="ei-type-section">Identity Translation</h3>
+              <p className="ei-type-body-large mt-4">$6,500 NZD</p>
+              <p className="ei-type-body mt-4 max-w-md">
                 A complete identity system shaped with full authorial attention — translated with emotional precision.
               </p>
             </motion.div>
@@ -246,7 +246,7 @@ export default function Identity() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               This is not
             </motion.span>
@@ -259,7 +259,7 @@ export default function Identity() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body"
+                  className="ei-type-body"
                 >
                   {item}
                 </motion.p>
@@ -268,7 +268,7 @@ export default function Identity() {
             
             <motion.p 
               variants={fadeSoft}
-              className="ei-body-large mt-10"
+              className="ei-type-body-large mt-10"
             >
               This is translation — not production.
             </motion.p>
@@ -287,7 +287,7 @@ export default function Identity() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               This is for you if…
             </motion.span>
@@ -300,7 +300,7 @@ export default function Identity() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body-large"
+                  className="ei-type-body-large"
                 >
                   {item}
                 </motion.p>

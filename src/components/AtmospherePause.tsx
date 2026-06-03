@@ -52,7 +52,7 @@ export function AtmospherePause() {
           {/* Eyebrow */}
           <motion.span 
             variants={driftUp}
-            className="ei-eyebrow block"
+            className="ei-type-label block"
             style={{ marginBottom: '3rem' }}
           >
             The Space Between

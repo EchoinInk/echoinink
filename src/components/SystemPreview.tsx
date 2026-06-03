@@ -84,10 +84,10 @@ export function SystemPreview() {
         >
           {/* Section heading */}
           <motion.div variants={driftUp} className="mb-8 md:mb-12">
-            <span className="ei-eyebrow ei-text-space-md block">
+            <span className="ei-type-label ei-text-space-md block">
               Systems
             </span>
-            <h2 className="ei-section-title">
+            <h2 className="ei-type-section">
               Tools for building worlds.
             </h2>
             <p className="ei-section-description max-w-[46ch] mt-3">

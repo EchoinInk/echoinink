@@ -81,13 +81,13 @@ export default function WorldsPage() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-lg block"
+              className="ei-type-label ei-text-space-lg block"
             >
               Studio Systems Build
             </motion.span>
             <motion.h1 
               variants={driftUp}
-              className="ei-section-title whitespace-pre-line"
+              className="ei-type-section whitespace-pre-line"
             >
               {"Identity extended\ninto living systems"}
             </motion.h1>
@@ -112,13 +112,13 @@ export default function WorldsPage() {
             </motion.p>
             <motion.p 
               variants={fadeSoft}
-              className="ei-body-large mt-10"
+              className="ei-type-body-large mt-10"
             >
               They require systems capable of holding continuity across time, expression, interaction, and growth.
             </motion.p>
             <motion.p 
               variants={fadeSoft}
-              className="ei-body mt-6"
+              className="ei-type-body mt-6"
             >
               This is not branding. It is operational philosophy translated into experiential form.
             </motion.p>
@@ -137,7 +137,7 @@ export default function WorldsPage() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               What it includes
             </motion.span>
@@ -150,7 +150,7 @@ export default function WorldsPage() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body-large"
+                  className="ei-type-body-large"
                 >
                   {item}
                 </motion.p>
@@ -171,7 +171,7 @@ export default function WorldsPage() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               What it does
             </motion.span>
@@ -184,7 +184,7 @@ export default function WorldsPage() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body-large"
+                  className="ei-type-body-large"
                 >
                   {item}
                 </motion.p>
@@ -205,7 +205,7 @@ export default function WorldsPage() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               What it feels like
             </motion.span>
@@ -218,7 +218,7 @@ export default function WorldsPage() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body-large"
+                  className="ei-type-body-large"
                 >
                   {item}
                 </motion.p>
@@ -239,7 +239,7 @@ export default function WorldsPage() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               World Architecture
             </motion.span>
@@ -252,7 +252,7 @@ export default function WorldsPage() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body-large"
+                  className="ei-type-body-large"
                 >
                   {item}
                 </motion.p>
@@ -273,14 +273,14 @@ export default function WorldsPage() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               Investment
             </motion.span>
             
             <motion.div variants={driftUp} className="mt-8">
-              <h3 className="ei-section-title">Studio Systems Build</h3>
-              <p className="ei-body-large mt-4">Starting at $12,000 NZD</p>
+              <h3 className="ei-type-section">Studio Systems Build</h3>
+              <p className="ei-type-body-large mt-4">Starting at $12,000 NZD</p>
             </motion.div>
           </motion.div>
         </div>
@@ -297,7 +297,7 @@ export default function WorldsPage() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               This is not
             </motion.span>
@@ -310,7 +310,7 @@ export default function WorldsPage() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body"
+                  className="ei-type-body"
                 >
                   {item}
                 </motion.p>
@@ -319,7 +319,7 @@ export default function WorldsPage() {
             
             <motion.p 
               variants={fadeSoft}
-              className="ei-body-large mt-10"
+              className="ei-type-body-large mt-10"
             >
               This is infrastructure — not execution.
             </motion.p>
@@ -338,7 +338,7 @@ export default function WorldsPage() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               This is for you if…
             </motion.span>
@@ -351,7 +351,7 @@ export default function WorldsPage() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body-large"
+                  className="ei-type-body-large"
                 >
                   {item}
                 </motion.p>

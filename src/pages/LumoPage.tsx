@@ -33,7 +33,7 @@ export function LumoPage() {
           >
             <motion.span 
               variants={driftUp}
-              className="ei-eyebrow ei-text-space-md block"
+              className="ei-type-label ei-text-space-md block"
             >
               The Process
             </motion.span>
@@ -53,7 +53,7 @@ export function LumoPage() {
                 <motion.p 
                   key={i}
                   variants={fadeSoft}
-                  className="ei-body-large"
+                  className="ei-type-body-large"
                 >
                   {step}
                 </motion.p>
