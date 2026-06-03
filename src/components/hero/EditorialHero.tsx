@@ -35,14 +35,12 @@ export function EditorialHero({
   mobileImage,
   imageAlt,
   align = 'left',
-  variant = 'default',
 }: EditorialHeroProps) {
   const titleParts = italicWord
     ? title.split(new RegExp(`(${italicWord})`, 'i'))
     : [title];
 
   const isLeft = align === 'left';
-  const isStudio = variant === 'studio';
 
   return (
     <motion.section
@@ -50,15 +48,11 @@ export function EditorialHero({
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className={`
-        relative flex items-center overflow-hidden bg-[var(--ei-void-black)]
-        pt-16 sm:pt-20 md:pt-20
-        ${
-          isStudio
-            ? 'min-h-[620px] md:min-h-[76vh] lg:min-h-[820px]'
-            : 'min-h-[48vh] md:min-h-[78vh] lg:min-h-[82vh]'
-        }
-      `}
+      className="
+        relative flex min-h-[48vh] items-center overflow-hidden
+        bg-[var(--ei-void-black)]
+        pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]
+      "
       aria-labelledby="editorial-hero-heading"
     >
       <picture className="absolute inset-0 z-0 block" aria-hidden="true">
@@ -66,14 +60,10 @@ export function EditorialHero({
         <img
           src={mobileImage}
           alt=""
-          className={`
-            h-full w-full object-cover
-            ${
-              isStudio
-                ? 'object-[68%_35%] opacity-[0.82] saturate-[0.82] brightness-[0.9] contrast-[0.98]'
-                : 'object-center saturate-[0.84] md:object-[72%_50%]'
-            }
-          `}
+          className="
+            h-full w-full object-cover object-center saturate-[0.84]
+            md:object-[72%_50%]
+          "
           fetchPriority="high"
         />
       </picture>
@@ -82,56 +72,37 @@ export function EditorialHero({
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
-          background: isStudio
-            ? `
-              linear-gradient(
-                90deg,
-                rgb(var(--ei-void-black-rgb) / 0.86) 0%,
-                rgb(var(--ei-void-black-rgb) / 0.64) 42%,
-                rgb(var(--ei-void-black-rgb) / 0.28) 100%
-              ),
-              linear-gradient(
-                180deg,
-                rgb(var(--ei-void-black-rgb) / 0.34) 0%,
-                rgb(var(--ei-void-black-rgb) / 0.08) 42%,
-                rgb(var(--ei-void-black-rgb) / 0.82) 100%
-              )
-            `
-            : 'linear-gradient(180deg, rgba(6, 8, 18, 0.15) 0%, rgba(6, 8, 18, 0.45) 100%)',
+          background:
+            'linear-gradient(180deg, rgba(6, 8, 18, 0.15) 0%, rgba(6, 8, 18, 0.45) 100%)',
         }}
       />
 
-      {!isStudio && (
-        <>
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-[1]"
-            style={{
-              background: isLeft
-                ? 'linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-void-black-rgb) / 0.16) 100%)'
-                : 'linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.16) 0%, transparent 56%, transparent 100%)',
-            }}
-          />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-[1]"
+        style={{
+          background: isLeft
+            ? 'linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-void-black-rgb) / 0.16) 100%)'
+            : 'linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.16) 0%, transparent 56%, transparent 100%)',
+        }}
+      />
 
-          <div
-            aria-hidden="true"
-            className="pointer-events-none absolute inset-0 z-[2]"
-            style={{
-              background: isLeft
-                ? 'radial-gradient(ellipse 54% 62% at 20% 48%, rgb(var(--ei-void-black-rgb) / 0.54) 0%, rgb(var(--ei-void-black-rgb) / 0.34) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.32) 0%, transparent 54%)'
-                : 'radial-gradient(ellipse 54% 62% at 80% 48%, rgb(var(--ei-void-black-rgb) / 0.54) 0%, rgb(var(--ei-void-black-rgb) / 0.34) 42%, transparent 72%), linear-gradient(270deg, rgb(var(--ei-void-black-rgb) / 0.32) 0%, transparent 54%)',
-            }}
-          />
-        </>
-      )}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-[2]"
+        style={{
+          background: isLeft
+            ? 'radial-gradient(ellipse 54% 62% at 20% 48%, rgb(var(--ei-void-black-rgb) / 0.54) 0%, rgb(var(--ei-void-black-rgb) / 0.34) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.32) 0%, transparent 54%)'
+            : 'radial-gradient(ellipse 54% 62% at 80% 48%, rgb(var(--ei-void-black-rgb) / 0.54) 0%, rgb(var(--ei-void-black-rgb) / 0.34) 42%, transparent 72%), linear-gradient(270deg, rgb(var(--ei-void-black-rgb) / 0.32) 0%, transparent 54%)',
+        }}
+      />
 
       <div
         aria-hidden="true"
         className="pointer-events-none absolute bottom-0 left-0 right-0 z-[3] h-[20vh]"
         style={{
-          background: isStudio
-            ? 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-black-rgb) / 0.46) 58%, var(--ei-void-black) 100%)'
-            : 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-black-rgb) / 0.34) 70%, var(--ei-void-black) 100%)',
+          background:
+            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-black-rgb) / 0.34) 70%, var(--ei-void-black) 100%)',
         }}
       />
 
@@ -142,7 +113,7 @@ export function EditorialHero({
             className={`
               max-w-[680px]
               ${isLeft ? 'text-left md:pl-10 lg:pl-14' : 'text-center'}
-              ${isStudio ? 'md:-translate-y-[1vh]' : 'md:-translate-y-[2vh]'}
+              md:-translate-y-[2vh]
             `}
           >
             <div
@@ -151,9 +122,7 @@ export function EditorialHero({
                 ${isLeft ? '' : 'justify-center'}
               `}
             >
-              <span
-                className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60"
-              >
+              <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
                 {eyebrow}
               </span>
 
