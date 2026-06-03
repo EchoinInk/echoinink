@@ -265,3 +265,61 @@
     color: var(--ei-color-text-secondary);
   }
 }
+
+
+@layer components {
+  .ei-card-quote {
+    min-height: 260px;
+    max-width: 420px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--ei-card-radius-lg);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    background:
+      radial-gradient(
+        circle at 50% 68%,
+        rgba(73, 133, 253, 0.14) 0%,
+        rgba(73, 133, 253, 0.055) 22%,
+        transparent 46%
+      ),
+      radial-gradient(
+        ellipse 78% 66% at 50% 42%,
+        rgba(11, 13, 42, 0.34) 0%,
+        rgba(11, 13, 42, 0.16) 54%,
+        rgba(5, 3, 11, 0.42) 100%
+      );
+    border: 1px solid rgba(73, 133, 253, 0.18);
+    box-shadow:
+      inset 0 0 72px rgba(73, 133, 253, 0.055),
+      0 0 42px rgba(73, 133, 253, 0.045);
+  }
+  .ei-card-quote:hover {
+    border-color: rgba(73, 133, 253, 0.28);
+    box-shadow:
+      inset 0 0 82px rgba(73, 133, 253, 0.075),
+      0 0 54px rgba(73, 133, 253, 0.07);
+  }
+  .ei-card-quote-orbit {
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 150px;
+    width: 78%;
+    border-radius: 999px;
+    border: 1px solid rgba(73, 133, 253, 0.09);
+    opacity: 0.45;
+    transform: translate(-50%, -50%) rotate(-7deg);
+  }
+  .ei-card-quote-text {
+    position: relative;
+    z-index: 10;
+    max-width: 24ch;
+    white-space: pre-line;
+    color: rgba(73, 133, 253, 0.88);
+    text-shadow: 0 0 18px rgba(73, 133, 253, 0.10);
+  }
+}
