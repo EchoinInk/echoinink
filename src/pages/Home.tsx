@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import {  } from '@/components/system';
+import { PageShell } from '@/components/layout/PageShell';
 import { Hero } from '@/components/hero/Hero';
 import { Philosophy } from '@/components/Philosophy';
 import { WhatWeCreate } from '@/components/WhatWeCreate';
