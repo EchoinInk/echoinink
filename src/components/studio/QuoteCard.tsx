@@ -80,9 +80,7 @@ export function QuoteCard({ lines }: QuoteCardProps) {
       <p
         className="
           relative z-10 max-w-[24ch] whitespace-pre-line
-          font-editorial text-[clamp(1.28rem,2vw,1.72rem)]
-          italic leading-[1.62] tracking-tight
-        "
+          ei-quote        "
         style={{
           color: 'rgb(var(--ei-soft-lavender-rgb) / 0.88)',
           textShadow: '0 0 18px rgb(var(--ei-luxe-violet-rgb) / 0.10)',
