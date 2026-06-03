@@ -210,4 +210,13 @@
 
   --ei-selection-bg: rgba(221, 18, 203, 0.34);
   --ei-selection-color: var(--ei-ice-white);
+
+
+  /* -------------------------------------------------------
+   * LAYOUT & SPACING
+   * ----------------------------------------------------- */
+
+   Recommended layout tokens
+
+   --ei-page-max: 1440px;  --ei-content-max: 1180px;  --ei-reading-max: 680px;  --ei-narrow-max: 520px;  --ei-gutter-mobile: 1.25rem;  --ei-gutter-tablet: 3rem;  --ei-gutter-desktop: clamp(4rem, 6vw, 6rem);  --ei-grid-gap-sm: 1rem;  --ei-grid-gap-md: 1.5rem;  --ei-grid-gap-lg: 2.5rem;  --ei-grid-gap-xl: 4rem;}
 }
