@@ -278,7 +278,7 @@
   }
 
   .ei-card-system:hover .ei-card-system-copy {
-    color: rgba(227, 216, 253, 0.65);
+    color: rgba(var(--ei-moonlit-rgb) / 0.65);
   }
 
   .ei-card-system-status {
@@ -299,8 +299,8 @@
   }
 
   .ei-card-system[data-status="soon"] {
-    --ei-system-status-color: rgba(227, 216, 253, 0.45);
-    --ei-system-card-accent: rgba(227, 216, 253, 0.04);
+    --ei-system-status-color: rgba(var(--ei-moonlit-rgb) / 0.45);
+    --ei-system-card-accent: rgba(var(--ei-moonlit-rgb) / 0.04);
   }
 
   .ei-card-system[data-status="active"] {
@@ -315,9 +315,9 @@
   }
 
   .ei-card-system-status[data-status="soon"] {
-    color: rgba(227, 216, 253, 0.54);
-    background: rgba(227, 216, 253, 0.08);
-    border: 1px solid rgba(227, 216, 253, 0.16);
+    color: rgba(var(--ei-moonlit-rgb) / 0.54);
+    background: rgba(var(--ei-moonlit-rgb) / 0.08);
+    border: 1px solid rgba(var(--ei-moonlit-rgb) / 0.16);
   }
 
   .ei-card-system-status[data-status="active"] {
@@ -507,7 +507,7 @@
 
   .ei-project-card-tag {
     border-radius: 999px;
-    border: 1px solid var(--border-soft, rgba(227, 216, 253, 0.12));
+    border: 1px solid var(--border-soft, rgba(var(--ei-moonlit-rgb) / 0.12));
     background: rgba(var(--ei-midnight-blue-rgb) / 0.22);
     padding: 0.25rem 0.625rem;
     font-family: var(--ei-font-system);
