@@ -15,19 +15,19 @@
     --ei-card-bg: linear-gradient(
       180deg,
       rgba(var(--ei-midnight-blue-rgb) / 0.72),
-      rgba(5, 3, 11, 0.92)
+      rgba(var(--ei-void-rgb) / 0.92)
     );
 
     --ei-card-bg-soft: linear-gradient(
       180deg,
       rgba(var(--ei-midnight-blue-rgb) / 0.48),
-      rgba(5, 3, 11, 0.72)
+      rgba(var(--ei-void-rgb) / 0.72)
     );
 
     --ei-card-bg-hover: linear-gradient(
       180deg,
       rgba(var(--ei-midnight-blue-rgb) / 0.86),
-      rgba(5, 3, 11, 0.96)
+      rgba(var(--ei-void-rgb) / 0.96)
     );
 
     --ei-card-border: rgba(227, 216, 253, 0.1);
