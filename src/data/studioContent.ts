@@ -57,7 +57,7 @@ export const valueItems: ValueItem[] = [
   },
   {
     title: 'Coherence over volume',
-    description: 'Fewer elements, held with conviction.',
+    description: 'We build fewer things that fit together more powerfully.',
     icon: 'lens',
   },
   {
