@@ -53,7 +53,7 @@ function StudioSectionRail({
       </span>
 
       <span
-        className="block h-px w-16"
+        className="block h-px w-22"
         style={{
           background:
             'linear-gradient(90deg, rgb(var(--ei-electric-cyan-rgb) / 0.28), rgb(var(--ei-aurora-blue-rgb) / 0.85))',
