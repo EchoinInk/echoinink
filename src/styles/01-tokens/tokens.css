@@ -35,7 +35,7 @@
 
     --ei-moonlit-rgb: 227, 216, 253;
     --ei-ice-white-rgb: 247, 245, 250;
-    
+
     /* ───────────────────────────────────────────────────────────────
        SEMANTIC COLORS
        ─────────────────────────────────────────────────────────────── */
@@ -252,17 +252,6 @@
 
     --ei-section-padding-y: clamp(5rem, 10vw, 9rem);
     --ei-section-padding-y-sm: clamp(3rem, 7vw, 6rem);
-
-    /* ── Spacing scale ───────────────────────────────────────────────────────────── */
-    --ei-space-8: 0.5rem;
-    --ei-space-12: 0.75rem;
-    --ei-space-16: 1rem;
-    --ei-space-24: 1.5rem;
-    --ei-space-32: 2rem;
-    --ei-space-48: 3rem;
-    --ei-space-64: 4rem;
-    --ei-space-96: 6rem;
-    --ei-space-128: 8rem;
 
     /* ── Typography scale ────────────────────────────────────────────────────────── */
     --ei-text-xs: 0.75rem;
