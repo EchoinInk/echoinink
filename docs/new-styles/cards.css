@@ -148,7 +148,8 @@
       ),
       rgba(247, 245, 250, 0.02);
     border: 1px solid rgba(247, 245, 250, 0.07);
-  }   
+  }
+}
 
   .ei-card-system::before {
     content: "";
