@@ -266,7 +266,7 @@
   }
 }
 
-
+/* Quote Card */
 @layer components {
   .ei-card-quote {
     min-height: 260px;
