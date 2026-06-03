@@ -69,23 +69,29 @@ export function PhilosophyCard({
   <OrbitalVisual variant={icon} size={isValue ? 44 : 65} />
 </div>
 
-      <h3
-        className={`relative z-10 font-editorial leading-[1.14] tracking-tight ${
-          isValue ? 'text-[1.08rem]' : 'text-[1.42rem] md:text-[1.58rem]'
-        }`}
-        style={{ color: 'var(--ei-text-primary)' }}
-      >
-        {title}
-      </h3>
+      <div
+  className={`relative z-10 flex items-start ${
+    isValue ? 'min-h-[2.6rem]' : 'min-h-[3.8rem]'
+  }`}
+>
+  <h3
+    className={`font-editorial leading-[1.14] tracking-tight ${
+      isValue ? 'text-[1.08rem]' : 'text-[1.42rem] md:text-[1.58rem]'
+    }`}
+    style={{ color: 'var(--ei-text-primary)' }}
+  >
+    {title}
+  </h3>
+</div>
 
-      <p
-        className={`relative z-10 mt-4 font-structural leading-[1.72] ${
-          isValue ? 'text-[13.5px]' : 'text-[14.5px] md:text-[15.5px]'
-        }`}
-        style={{ color: 'var(--ei-text-secondary)' }}
-      >
-        {description}
-      </p>
+<p
+  className={`relative z-10 mt-4 font-structural leading-[1.72] ${
+    isValue ? 'text-[13.5px]' : 'text-[14.5px] md:text-[15.5px]'
+  }`}
+  style={{ color: 'var(--ei-text-secondary)' }}
+>
+  {description}
+</p>
     </motion.article>
   );
 }
