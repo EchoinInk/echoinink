@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { EchoSelect } from '@/components/ui/EchoSelect';
 import { motion } from 'framer-motion';
-import { PageShell } from '@/components/system';
+import { PageShell } from '@/components/layout/PageShell';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/Button';
 import nebulaDesktop from '@/assets/imagery/hero/contact-hero.png';
