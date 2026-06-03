@@ -61,7 +61,7 @@
 
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'../../assets/fonts/Neue Montreal/NeueMontreal-Regular.otf")
+  src: url("'../../assets/fonts/neue-montreal/NeueMontreal-Regular.otf")
     format("opentype");
   font-weight: 400;
   font-style: normal;
@@ -70,7 +70,7 @@
 
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'../../assets/fonts/Neue Montreal/NeueMontreal-Italic.otf")
+  src: url("'../../assets/fonts/neue-montreal/NeueMontreal-Italic.otf")
     format("opentype");
   font-weight: 400;
   font-style: italic;
@@ -79,7 +79,7 @@
 
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'../../assets/fonts/Neue Montreal/NeueMontreal-Medium.otf")
+  src: url("'../../assets/fonts/neue-montreal/NeueMontreal-Medium.otf")
     format("opentype");
   font-weight: 500;
   font-style: normal;
@@ -88,7 +88,7 @@
 
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'../../assets/fonts/Neue Montreal/NeueMontreal-MediumItalic.otf")
+  src: url("'../../assets/fonts/neue-montreal/NeueMontreal-MediumItalic.otf")
     format("opentype");
   font-weight: 500;
   font-style: italic;
@@ -97,7 +97,7 @@
 
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'../../assets/fonts/Neue Montreal/NeueMontreal-Bold.otf")
+  src: url("'../../assets/fonts/neue-montreal/NeueMontreal-Bold.otf")
     format("opentype");
   font-weight: 700;
   font-style: normal;
@@ -106,7 +106,7 @@
 
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'../../assets/fonts/Neue Montreal/NeueMontreal-BoldItalic.otf")
+  src: url("'../../assets/fonts/neue-montreal/NeueMontreal-BoldItalic.otf")
     format("opentype");
   font-weight: 700;
   font-style: italic;
@@ -115,7 +115,7 @@
 
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'../../assets/fonts/Neue Montreal/NeueMontreal-Light.otf")
+  src: url("'../../assets/fonts/neue-montreal/NeueMontreal-Light.otf")
     format("opentype");
   font-weight: 300;
   font-style: normal;
@@ -124,7 +124,7 @@
 
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'../../assets/fonts/Neue Montreal/NeueMontreal-LightItalic.otf")
+  src: url("'../../assets/fonts/neue-montreal/NeueMontreal-LightItalic.otf")
     format("opentype");
   font-weight: 300;
   font-style: italic;
