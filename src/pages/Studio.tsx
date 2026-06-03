@@ -119,7 +119,7 @@ export function Studio() {
                 lg:gap-14
               "
             >
-              <div className="pt-8 md:pt-12">
+              <div">
                 <motion.h2
                   id="origin-heading"
                   variants={driftUp}
