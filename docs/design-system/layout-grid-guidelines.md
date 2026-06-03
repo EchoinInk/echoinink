@@ -44,7 +44,7 @@ These are the core layout values used across the site:
   --ei-grid-gap-xl: 4rem;
 }
 ```
-4. Container Usage
+## 4. Container Usage
 
 Use ei-container for main page sections.
 
@@ -54,16 +54,17 @@ Use ei-container-reading for editorial copy, philosophy, archive text, and long-
 
 Use ei-container-narrow for intimate copy blocks, quotes, form intros, and focused statements.
 
+```
 .ei-container {
   width: 100%;
   max-width: var(--ei-page-max);
   margin-inline: auto;
   padding-inline: var(--ei-gutter-mobile);
 }
-
+```
 ⸻
 
-5. Page Rhythm
+## 5. Page Rhythm
 
 Every major page should follow this structure:
 
@@ -93,9 +94,9 @@ Contact
 
 ⸻
 
-Spacing Guidelines
+# Spacing Guidelines
 
-6. Spacing Philosophy
+## 6. Spacing Philosophy
 
 Spacing is one of the most important parts of the Echo in Ink identity.
 
@@ -108,8 +109,9 @@ Echo in Ink should feel slower than a conventional agency site. Sections need en
 
 ⸻
 
-7. Spacing Scale
+## 7. Spacing Scale
 
+```
 :root {
   --ei-space-1: 0.25rem;
   --ei-space-2: 0.5rem;
@@ -124,7 +126,7 @@ Echo in Ink should feel slower than a conventional agency site. Sections need en
   --ei-space-11: 12rem;
   --ei-space-12: 16rem;
 }
-
+```
 ⸻
 
 8. Section Spacing
