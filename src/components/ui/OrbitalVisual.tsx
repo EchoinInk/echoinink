@@ -49,21 +49,21 @@ export function OrbitalVisual({
   const r = c - 4;
   const photon = 'rgb(var(--ei-ice-white-rgb) / 0.88)';
 const photonSoft = 'rgb(var(--ei-ice-white-rgb) / 0.48)';
-const photonDim = 'rgb(var(--ei-ice-white-rgb) / 0.22)';
+const photonDim = 'rgb(var(--ei-ice-white-rgb) / 0.52)';
 
 const cobalt = 'rgb(var(--ei-aurora-blue-rgb) / 0.92)';
 const cobaltSoft = 'rgb(var(--ei-electric-cyan-rgb) / 0.52)';
-const cobaltDim = 'rgb(var(--ei-aurora-blue-rgb) / 0.28)';
+const cobaltDim = 'rgb(var(--ei-aurora-blue-rgb) / 0.48)';
 
 const orbitBlue = 'rgb(var(--ei-deep-indigo-rgb) / 0.72)';
 const orbitBlueSoft = 'rgb(var(--ei-deep-indigo-rgb) / 0.42)';
 
 const violet = 'rgb(var(--ei-luxe-violet-rgb) / 0.82)';
-const violetSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.58)';
-const violetDim = 'rgb(var(--ei-luxe-violet-rgb) / 0.24)';
+const violetSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.78)';
+const violetDim = 'rgb(var(--ei-luxe-violet-rgb) / 0.54)';
 
 const magenta = 'rgb(var(--ei-orchid-pink-rgb) / 0.78)';
-const magentaSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.42)';
+const magentaSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.92)';
 const orchid = 'rgb(var(--ei-orchid-pink-rgb) / 0.72)';
 
  const icons: Record<OrbitalVariant, React.ReactElement> = {
