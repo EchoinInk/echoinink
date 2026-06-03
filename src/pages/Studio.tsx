@@ -201,7 +201,7 @@ export function Studio() {
           >
         
 
-              <div>
+              <div className="px-6">
                 <ValuesGrid showHeader={false} />
               </div>
             </div>
