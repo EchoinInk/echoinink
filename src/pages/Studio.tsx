@@ -109,8 +109,7 @@ export function Studio() {
         <Container size="xl" className="relative z-10">
           <div
             className="
-              mx-auto max-w-[1180px]
-              md:pl-[clamp(13rem,20vw,18rem)]
+              mx-auto max-w-[1180px] pt-12 md:pt-16
             "
           >
             <div
@@ -170,8 +169,7 @@ export function Studio() {
         <Container size="xl" className="relative z-10">
           <div
             className="
-              mx-auto max-w-[1180px]
-              md:pl-[clamp(13rem,20vw,18rem)]
+              mx-auto max-w-[1180px] pt-12 md:pt-16
             "
           >
             <div className="pt-8 md:pt-12">
@@ -225,8 +223,7 @@ export function Studio() {
         <Container size="xl" className="relative z-10">
           <div
             className="
-              mx-auto max-w-[1180px]
-              md:pl-[clamp(13rem,20vw,18rem)]
+              mx-auto max-w-[1180px] pt-12 md:pt-16
             "
           >
             <div className="pt-8 md:pt-12">
