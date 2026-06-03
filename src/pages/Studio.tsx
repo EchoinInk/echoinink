@@ -180,7 +180,7 @@ export function Studio() {
 
                 <p
                   className="
-                    max-w-[38ch] font-structural text-[14px]
+                    max-w-[38ch] ei-body
                     leading-[1.75] md:text-[15px]
                   "
                   style={{ color: 'var(--ei-text-secondary)' }}
