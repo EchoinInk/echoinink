@@ -211,7 +211,6 @@
   --ei-selection-bg: rgba(221, 18, 203, 0.34);
   --ei-selection-color: var(--ei-ice-white);
 
-
   /* -------------------------------------------------------
    * LAYOUT & SPACING
    * ----------------------------------------------------- */
@@ -230,7 +229,10 @@
    --ei-grid-gap-lg: 2.5rem;
    --ei-grid-gap-xl: 4rem;
 
-   /*
+   /* -------------------------------------------------------
+   * BuTTON SIZING
+   * ----------------------------------------------------- */
+
    --ei-button-padding-xs: 0.75rem;
    --ei-button-padding-sm: 1rem;
    --ei-button-padding-md: 1.25rem;
@@ -243,6 +245,7 @@
    --ei-button-radius-lg: 1rem;
    --ei-button-radius-xl: 1.25rem;
    --ei-button-radius-xxl: 9999px;
+
    --ei-button-font-size-xs: 0.75rem;
    --ei-button-font-size-sm: 0.875rem;
    --ei-button-font-size-md: 1rem;
@@ -250,6 +253,7 @@
    --ei-button-font-size-xl: 1.25rem;
    --ei-button-font-size-xxl: 1.5rem;
 }
+
    @layer base {
   .ei-container {
     width: 100%;
