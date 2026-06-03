@@ -52,7 +52,7 @@ const photonSoft = 'rgb(var(--ei-ice-white-rgb) / 0.48)';
 const photonDim = 'rgb(var(--ei-ice-white-rgb) / 0.22)';
 
 const cobalt = 'rgb(var(--ei-aurora-blue-rgb) / 0.92)';
-const cobaltSoft = 'rgb(var(--ei-aurora-blue-rgb) / 0.52)';
+const cobaltSoft = 'rgb(var(--ei-electric-cyan-rgb) / 0.52)';
 const cobaltDim = 'rgb(var(--ei-aurora-blue-rgb) / 0.28)';
 
 const orbitBlue = 'rgb(var(--ei-deep-indigo-rgb) / 0.72)';
