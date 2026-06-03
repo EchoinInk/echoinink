@@ -250,6 +250,7 @@
    --ei-button-font-size-lg: 1.125rem;
    --ei-button-font-size-xl: 1.25rem;
    --ei-button-font-size-xxl: 1.5rem;
+}
    @layer base {
   .ei-container {
     width: 100%;
