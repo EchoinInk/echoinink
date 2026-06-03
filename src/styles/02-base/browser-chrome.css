@@ -5,7 +5,7 @@
 
 @layer base {
   /* ── Scrollbar Treatment ─────────────────────────────────── */
-  
+
   /* Webkit scrollbars (Chrome, Safari, Edge) */
   ::-webkit-scrollbar {
     width: 6px;
@@ -33,21 +33,20 @@
   }
 
   /* ── Text Selection ───────────────────────────────────────── */
-   ::selection {
-  background: rgb(var(--ei-halo-blue-rgb) / 0.26);
-  color: rgb(var(--ei-ice-white-rgb) / 0.96);
-}
+  ::selection {
+    background: rgb(var(--ei-halo-blue-rgb) / 0.26);
+    color: rgb(var(--ei-ice-white-rgb) / 0.96);
+  }
 
-::-moz-selection {
-  background: rgb(var(--ei-halo-blue-rgb) / 0.26);
-  color: rgb(var(--ei-ice-white-rgb) / 0.96);
-}
+  ::-moz-selection {
+    background: rgb(var(--ei-halo-blue-rgb) / 0.26);
+    color: rgb(var(--ei-ice-white-rgb) / 0.96);
+  }
 
-
-/* ── Tap Highlight (Mobile) ───────────────────────────────── */
-* {
-  -webkit-tap-highlight-color: rgb(var(--ei-halo-blue-rgb) / 0.16);
-}
+  /* ── Tap Highlight (Mobile) ───────────────────────────────── */
+  * {
+    -webkit-tap-highlight-color: rgb(var(--ei-halo-blue-rgb) / 0.16);
+  }
   /* ── Overscroll Behavior ─────────────────────────────────── */
   html {
     overscroll-behavior-y: none;
@@ -66,7 +65,6 @@
     background-color: var(--ei-color-background-body);
     min-height: 100vh;
   }
-
   /* ── Smooth Image Loading ────────────────────────────────── */
   img {
     opacity: 1;
@@ -78,7 +76,8 @@
   }
 
   /* ── Prevent Layout Shift ────────────────────────────────── */
-  img, video {
+  img,
+  video {
     max-width: 100%;
     height: auto;
     display: block;
@@ -123,7 +122,7 @@
     html {
       scroll-behavior: auto;
     }
-    
+
     *,
     *::before,
     *::after {
@@ -139,7 +138,7 @@
     html {
       min-height: -webkit-fill-available;
     }
-    
+
     body {
       min-height: -webkit-fill-available;
     }
@@ -150,12 +149,12 @@
     html {
       background: white;
     }
-    
+
     body {
       background: white;
       color: black;
     }
-    
+
     ::-webkit-scrollbar {
       display: none;
     }
