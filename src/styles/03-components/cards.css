@@ -495,15 +495,16 @@
   }
 
   .ei-project-card-description {
-    display: -webkit-box;
-    overflow: hidden;
-    font-family: var(--ei-font-structural);
-    font-size: 0.8125rem;
-    line-height: 1.68;
-    color: var(--ei-color-text-secondary);
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;
-  }
+  display: -webkit-box;
+  overflow: hidden;
+  font-family: var(--ei-font-structural);
+  font-size: 0.8125rem;
+  line-height: 1.68;
+  color: var(--ei-color-text-secondary);
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
 
   .ei-project-card-tag {
     border-radius: 999px;
