@@ -1,0 +1,43 @@
+@import './01-tokens/tokens.css' layer(base);
+
+@import './02-base/typography-system.css' layer(base);
+@import './02-base/layout.css' layer(base);
+@import './02-base/browser-chrome.css' layer(base);
+@import './02-base/accessibility.css' layer(base);
+
+@import './03-components/atmosphere.css' layer(components);
+@import './03-components/cards.css' layer(components);
+@import './03-components/forms.css' layer(components);
+
+@import './04-utilities/mobile.css' layer(utilities);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+    background: var(--ei-void);
+    color: var(--ei-ice-white);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--ei-void);
+    color: var(--ei-color-text-primary);
+    font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(113, 7, 234, 0.25);
+    color: var(--ei-color-text-primary);
+  }
+}
