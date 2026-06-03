@@ -49,7 +49,7 @@ export function EditorialHero({
       whileInView="visible"
       viewport={VIEWPORT.loose}
       className="
-        relative flex min-h-[48vh] items-center overflow-hidden
+        relative flex min-h-[48vh] items-start overflow-hidden
         bg-[var(--ei-void-black)]
         pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]
       "
@@ -106,14 +106,21 @@ export function EditorialHero({
         }}
       />
 
-      <Container size="xl" className="relative z-10">
+      <Container
+  size="xl"
+  className="
+    relative z-10 w-full
+    pt-[clamp(3.5rem,9vh,5.5rem)]
+    md:pt-[clamp(4.5rem,11vh,6.5rem)]
+    lg:pt-[clamp(5rem,12vh,7rem)]
+  "
+>
         <div className={`max-w-[680px] ${isLeft ? '' : 'mx-auto text-center'}`}>
           <motion.div
             variants={driftUp}
             className={`
               max-w-[680px]
               ${isLeft ? 'text-left md:pl-10 lg:pl-14' : 'text-center'}
-              md:-translate-y-[2vh]
             `}
           >
             <div
