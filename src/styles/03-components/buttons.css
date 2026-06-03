@@ -48,9 +48,9 @@
 
     background: radial-gradient(
       circle,
-      rgb(var(--ei-aurora-blue-rgb) / 0.28) 0%,
-      rgb(var(--ei-aurora-blue-rgb) / 0.16) 34%,
-      rgb(var(--ei-aurora-blue-rgb) / 0.08) 52%,
+      rgb(var(--ei-halo-blue-rgb) / 0.28) 0%,
+      rgb(var(--ei-halo-blue-rgb) / 0.16) 34%,
+      rgb(var(--ei-halo-blue-rgb) / 0.08) 52%,
       transparent 76%
     );
 
@@ -107,7 +107,7 @@
     border-radius: 9999px;
     background: linear-gradient(
       135deg,
-      rgba(73, 133, 253, 0.12),
+      rgb(var(--ei-halo-blue-rgb) / 0.12),
       rgba(113, 7, 234, 0.08),
       rgba(230, 105, 242, 0.06),
       rgba(221, 18, 203, 0.04)
@@ -161,7 +161,7 @@
       rgba(221, 18, 203, 0.1),
       rgba(227, 216, 253, 0.07),
       rgba(113, 7, 234, 0.05),
-      rgba(73, 133, 253, 0.03)
+      rgb(var(--ei-halo-blue-rgb) / 0.03)
     );
     filter: blur(20px);
     opacity: 0;
