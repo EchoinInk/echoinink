@@ -67,7 +67,7 @@ export const valueItems: ValueItem[] = [
   },
   {
     title: 'Restraint over excess',
-    description: 'We remove more \nthan we add to reach clarity.',
+    description: 'We remove more \nthan we add to \nreach clarity.',
     icon: 'veil',
   },
   {

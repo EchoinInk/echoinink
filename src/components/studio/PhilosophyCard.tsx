@@ -91,7 +91,7 @@ export function PhilosophyCard({
       </div>
 
       <p
-        className={`relative z-10 mx-auto mt-4 max-w-[18rem] font-structural leading-[1.72] ${
+        className={`relative z-10 mx-auto mt-4 max-w-[18rem] whitespace-pre-line font-structural leading-[1.72] ${
           isValue ? 'text-[13.5px]' : 'text-[14.5px] md:text-[15.5px]'
         }`}
         style={{ color: 'var(--ei-text-secondary)' }}
