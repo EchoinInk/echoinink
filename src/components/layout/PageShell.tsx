@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
-import Footer from '@/components/Footer';
+import Footer from '@/components/sections/Footer';
 
 export type PageAtmosphere =
   | 'default'

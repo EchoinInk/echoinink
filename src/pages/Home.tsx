@@ -1,11 +1,11 @@
 import { Helmet } from 'react-helmet-async';
 import { PageShell } from '@/components/layout/PageShell';
 import { Hero } from '@/components/sections/Hero';
-import { Philosophy } from '@/components/Philosophy';
+import { Philosophy } from '@/components/Studio';
 import { WhatWeCreate } from '@/components/WhatWeCreate';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyTeaser';
 import { EmergingSystems } from '@/components/EmergingSystems';
-import { ClosingSection } from '@/components/ClosingSection';
+import { ClosingSection } from '@/components/sections/ClosingSection';
 
 export function Home() {
   return (
