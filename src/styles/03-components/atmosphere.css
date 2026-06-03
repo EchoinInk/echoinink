@@ -34,26 +34,24 @@
 
   .ei-focus-glow:focus-visible {
     outline: none;
-    box-shadow:
-      0 0 0 1.5px rgb(var(--ei-aurora-blue-rgb) / 0.55),
+    box-shadow: 0 0 0 1.5px rgb(var(--ei-aurora-blue-rgb) / 0.55),
       0 0 24px -4px rgb(var(--ei-aurora-blue-rgb) / 0.32);
     outline-offset: 0;
   }
 
   .ei-button-glow {
-  position: relative;
-  isolation: isolate;
-}
+    position: relative;
+    isolation: isolate;
+  }
 
-.ei-btn-primary-cinematic::before {
-  content: '';
-  position: absolute;
-  inset: -34px;
+  .ei-btn-primary-cinematic::before {
+    content: "";
+    position: absolute;
+    inset: -34px;
 
-  border-radius: 999px;
+    border-radius: 999px;
 
-  background:
-    radial-gradient(
+    background: radial-gradient(
       circle,
       rgb(var(--ei-aurora-blue-rgb) / 0.28) 0%,
       rgb(var(--ei-aurora-blue-rgb) / 0.16) 34%,
@@ -61,22 +59,21 @@
       transparent 76%
     );
 
-  filter: blur(30px);
+    filter: blur(30px);
 
-  opacity: 0.95;
+    opacity: 0.95;
 
-  pointer-events: none;
-  z-index: -1;
+    pointer-events: none;
+    z-index: -1;
 
-  transition:
-    opacity 700ms cubic-bezier(0.22,1,0.36,1),
-    transform 700ms cubic-bezier(0.22,1,0.36,1);
-}
+    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+      transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
 
-.ei-btn-primary-cinematic:hover::before {
-  opacity: 1;
-  transform: scale(1.03);
-}
+  .ei-btn-primary-cinematic:hover::before {
+    opacity: 1;
+    transform: scale(1.03);
+  }
 
   .ei-focus-block:focus-visible {
     outline: 1.5px solid rgb(var(--ei-aurora-blue-rgb) / 0.42);
@@ -92,7 +89,7 @@
   }
 
   .ei-link-distinguished::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     right: 0;
@@ -133,7 +130,7 @@
     color: var(--ei-ice-white);
     border: 1px solid rgb(var(--ei-aurora-blue-rgb) / 0.35);
     border-radius: 6px;
-    font-family: 'Neue Montreal', sans-serif;
+    font-family: "Neue Montreal", sans-serif;
     font-size: 12px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -144,5 +141,215 @@
     white-space: nowrap;
     outline: 2px solid rgb(var(--ei-aurora-blue-rgb) / 0.55);
     outline-offset: 2px;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Atmospheric utility classes — reusable aurora, haze, and
+   glow primitives for decorative background layers.
+   ───────────────────────────────────────────────────────── */
+
+.ei-luxe-violet-glow {
+  background: radial-gradient(
+    ellipse 68% 60% at 35% 48%,
+    rgb(var(--ei-luxe-violet-rgb) / 0.07) 0%,
+    rgb(var(--ei-deep-indigo-rgb) / 0.04) 50%,
+    transparent 80%
+  );
+  filter: blur(72px);
+  mix-blend-mode: screen;
+}
+
+.ei-aurora-cyan-glow {
+  background: radial-gradient(
+    ellipse 60% 66% at 58% 46%,
+    rgb(var(--ei-aurora-blue-rgb) / 0.07) 0%,
+    rgb(var(--ei-deep-indigo-rgb) / 0.035) 54%,
+    transparent 82%
+  );
+  filter: blur(60px);
+  mix-blend-mode: screen;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Unified Atmospheric System
+   Consistent glows, depth, and cinematic ambience
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer components {
+  /* ── Core Glow Primitives ──────────────────────────────────── */
+
+  /* Ambient violet glow — primary brand atmosphere */
+  .ei-glow-violet {
+    background: radial-gradient(
+      ellipse 55% 50% at 50% 55%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.045) 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.022) 50%,
+      transparent 70%
+    );
+    filter: blur(100px);
+    pointer-events: none;
+  }
+
+  /* Ambient indigo glow — secondary depth */
+  .ei-glow-indigo {
+    background: radial-gradient(
+      ellipse 60% 55% at 45% 50%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.038) 0%,
+      rgb(var(--ei-aurora-blue-rgb) / 0.015) 55%,
+      transparent 75%
+    );
+    filter: blur(110px);
+    pointer-events: none;
+  }
+
+  /* Soft aqua accent — sparingly used */
+  .ei-glow-aqua {
+    background: radial-gradient(
+      ellipse 50% 45% at 55% 48%,
+      rgb(var(--ei-aurora-blue-rgb) / 0.03) 0%,
+      rgb(var(--ei-aurora-blue-rgb) / 0.015) 50%,
+      transparent 70%
+    );
+    filter: blur(90px);
+    pointer-events: none;
+  }
+
+  /* ── Depth Layers ─────────────────────────────────────────── */
+
+  /* Deep background vignette */
+  .ei-vignette-deep {
+    background: radial-gradient(
+      circle at center,
+      transparent 30%,
+      rgb(var(--ei-void-black-rgb) / 0.4) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Soft edge vignette for sections */
+  .ei-vignette-soft {
+    background: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      transparent 50%,
+      rgb(var(--ei-deep-indigo-rgb) / 0.25) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* ── Section Transitions ─────────────────────────────────── */
+
+  /* Gradient fade to next section */
+  .ei-fade-to-ink {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--ei-void-black-rgb) / 0.5) 60%,
+      rgb(var(--ei-void-black-rgb) / 0.95) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Subtle top gradient for sections following hero */
+  .ei-bleed-top {
+    background: linear-gradient(
+      to top,
+      transparent 0%,
+      rgb(var(--ei-void-black-rgb) / 0.15) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* ── Noise & Texture ──────────────────────────────────────── */
+
+  /* Film grain overlay */
+  .ei-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    mix-blend-mode: overlay;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  /* ── Card & Component Atmospheres ─────────────────────────── */
+
+  /* Card background base */
+  .ei-card-bg {
+    background: rgb(var(--ei-ice-white-rgb) / 0.018);
+    border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.05);
+    backdrop-filter: blur(16px);
+  }
+
+  /* Hover glow for cards */
+  .ei-card-glow {
+    box-shadow: 0 0 0 1px rgb(var(--ei-ice-white-rgb) / 0.04),
+      0 20px 50px -20px rgb(var(--ei-void-black-rgb) / 0.4),
+      0 0 60px -30px rgb(var(--ei-luxe-violet-rgb) / 0.1);
+  }
+
+  /* ── Breathing Space Atmosphere ──────────────────────────── */
+
+  /* Minimal atmospheric pause section */
+  .ei-breathing-space {
+    background: radial-gradient(
+      ellipse 35% 25% at 50% 50%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.015) 0%,
+      transparent 55%
+    );
+    position: relative;
+  }
+
+  /* ── Monogram Framing ─────────────────────────────────────── */
+
+  /* Sacred space around the EI monogram */
+  .ei-monogram-frame {
+    position: relative;
+  }
+
+  .ei-monogram-frame::before {
+    content: "";
+    position: absolute;
+    inset: -15%;
+    background: radial-gradient(
+      ellipse 45% 40% at 50% 50%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.022) 0%,
+      transparent 65%
+    );
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+/* ── Animation Keyframes ──────────────────────────────────── */
+@keyframes ei-glow-pulse {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes ei-grain-shift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-1%, -1%);
+  }
+}
+
+@keyframes ei-luminance-drift {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.02);
   }
 }
