@@ -294,8 +294,8 @@
   }
 
   .ei-card-system[data-status="available"] {
-    --ei-system-status-color: rgba(73, 133, 253, 0.55);
-    --ei-system-card-accent: rgba(73, 133, 253, 0.06);
+    --ei-system-status-color: rgba(var(--ei-halo-blue-rgb) / 0.55);
+    --ei-system-card-accent: rgba(var(--ei-halo-blue-rgb) / 0.06);
   }
 
   .ei-card-system[data-status="soon"] {
