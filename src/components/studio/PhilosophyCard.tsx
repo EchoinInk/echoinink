@@ -43,7 +43,7 @@ export function PhilosophyCard({
       }
       className={`group relative flex h-full flex-col items-center overflow-hidden rounded-[var(--radius-card)] border text-center transition-[border-color,background,box-shadow,transform] duration-500 hover:border-[var(--ei-card-border-hover)] ${
         isValue
-          ? 'min-h-[250px] p-7 md:p-4'
+          ? 'min-h-[250px] p-7 md:p-6'
           : 'min-h-[360px] p-8 md:p-10'
       } hover:bg-[var(--ei-card-bg-hover)]`}
       style={{
