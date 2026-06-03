@@ -134,7 +134,7 @@ export function Studio() {
                     <p
                       key={paragraph.slice(0, 32)}
                       className="
-                        max-w-[46ch] font-structural text-[15px]
+                        max-w-[55ch] font-structural text-[15px]
                         leading-[1.78] md:text-[16px]
                       "
                       style={{ color: 'var(--ei-text-secondary)' }}
