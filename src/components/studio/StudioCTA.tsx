@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/Button';
-import { EyebrowLabel } from '@/components/editorial/EyebrowLabel';
+import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
 import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
 
 interface StudioCTAProps {

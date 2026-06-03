@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { NumberedSectionLabel } from '@/components/editorial/NumberedSectionLabel';
+import { NumberedSectionLabel } from '@/components/ui/NumberedSectionLabel';
 import { PhilosophyCard } from '@/components/cards/PhilosophyCard';
 import { philosophyItems } from '@/data/studioContent';
 import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';

@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Container } from '@/components/layout/Container';
-import { EyebrowLabel } from '@/components/editorial/EyebrowLabel';
+import { EyebrowLabel } from '@/components/ui/EyebrowLabel';
 import {
   blurEmergence,
   driftUp,
