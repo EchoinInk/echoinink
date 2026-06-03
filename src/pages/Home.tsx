@@ -9,7 +9,7 @@ import { ClosingSection } from '@/components/ClosingSection';
 
 export function Home() {
   return (
-    < id="main-content" atmosphere="default" withTopSpacing={false}>
+    <PageShell id="main-content" atmosphere="default" withTopSpacing={false}>
       <Helmet>
         <title>Echo in Ink — We design worlds</title>
         <meta
@@ -38,6 +38,6 @@ export function Home() {
 
       {/* ── REMOVED FOOTER AS IN  — 4-column atmospheric epilogue ───────────── */}
       
-    </>
+    </PageShell>
   );
 }
