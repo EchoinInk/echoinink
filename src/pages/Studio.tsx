@@ -168,7 +168,7 @@ export function Studio() {
             "
           >
  
-              <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
                 {philosophyItems.map((item, index) => (
                   <PhilosophyCard
                     key={item.title}
