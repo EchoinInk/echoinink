@@ -84,7 +84,7 @@ export function QuoteCard({ lines }: QuoteCardProps) {
         "
         style={{
           color: 'rgb(var(--ei-soft-lavender-rgb) / 0.88)',
-          textShadow: '0 0 18px rgb(var(--ei-luxe-violet-rgb) / 0.10)',
+          textShadow: '0 0 18px rgb(var(--ei-orchid-pink-rgb) / 0.80)',
         }}
       >
         &ldquo;{lines.join('\n')}&rdquo;
