@@ -63,7 +63,17 @@ export function PhilosophyCard({
         className={`relative z-10 flex items-center justify-center rounded-full border 
           ${isValue ? 'mb-6 h-11 w-11' : 'mb-8 h-13 w-13'}
         }`}
-      
+        style={{
+          width: '3.25rem',
+          height: '3.25rem',
+          borderColor: isValue
+            ? 'rgb(var(--ei-luxe-violet-rgb) / 0.24)'
+            : 'rgb(var(--ei-soft-lavender-rgb) / 0.14)',
+          background:
+            'radial-gradient(circle at 50% 38%, rgb(var(--ei-aurora-blue-rgb) / 0.16), rgb(var(--ei-deep-indigo-rgb) / 0.24) 64%, rgb(var(--ei-void-black-rgb) / 0.22) 100%)',
+          boxShadow:
+            '0 0 22px rgb(var(--ei-luxe-violet-rgb) / 0.08), inset 0 0 18px rgb(var(--ei-ice-white-rgb) / 0.025)',
+        }}
         aria-hidden="true"
       >
         <OrbitalVisual variant={icon} size={50} />
