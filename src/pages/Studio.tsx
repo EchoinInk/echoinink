@@ -119,7 +119,7 @@ export function Studio() {
                 lg:gap-14
               "
             >
-              <div">
+              <div>
                 <motion.h2
                   id="origin-heading"
                   variants={driftUp}
@@ -172,7 +172,7 @@ export function Studio() {
               mx-auto max-w-[1180px] pt-12 md:pt-16
             "
           >
-            <div className="pt-8 md:pt-12">
+            <div>
               <motion.div variants={driftUp}>
                 <h2
                   id="philosophy-heading"
@@ -226,7 +226,7 @@ export function Studio() {
               mx-auto max-w-[1180px] pt-12 md:pt-16
             "
           >
-            <div className="pt-8 md:pt-12">
+            <div>
               <motion.div variants={driftUp}>
                 <h2
                   id="values-heading"
