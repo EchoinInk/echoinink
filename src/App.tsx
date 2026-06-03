@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 import { Layout } from '@/components/Layout';
-import { PageTransition } from '@/components/PageTransition';
+import { PageTransition } from '@/components/system/PageTransition';
 import { Home } from '@/pages/Home';
 import Identity from '@/pages/Identity';
 import SessionsPage from '@/pages/SessionsPage';
