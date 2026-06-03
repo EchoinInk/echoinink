@@ -66,7 +66,7 @@ export function Header() {
             to="/contact"
             className="ei-focus-rounded px-4 py-2 rounded-full border border-white/[0.1] bg-white/[0.03] text-[10px] tracking-[0.18em] uppercase font-medium text-white/76 hover:text-white/92 hover:bg-white/[0.06] hover:border-white/[0.14] transition-all duration-700"
           >
-            Start a Project
+            Start a Conversation
           </Link>
         </div>
 

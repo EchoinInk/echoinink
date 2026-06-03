@@ -55,7 +55,10 @@ const contactBlocks = [
   {
     title: 'Good To Know',
     icon: 'spark',
-    lines: ['The more context you share, the better I can understand how to help.'],
+    lines: [
+      'You do not need a perfect brief. Share what is forming, unclear, or alive.',
+      'The more context you share, the better I can understand how to help.',
+    ],
   },
 ] satisfies Array<{ title: string; icon: IconName; lines: ReactNode[] }>;
 

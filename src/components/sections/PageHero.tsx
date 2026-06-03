@@ -158,7 +158,7 @@ export function EditorialHero({
     lg:text-[4.15rem]
               "
               style={{
-                textShadow: '0 0 90px rgb(113, 7, 234 / 0.08)',
+                textShadow: '0 0 48px rgb(var(--ei-violet-rgb) / 0.04)',
               }}
             >
               {italicWord

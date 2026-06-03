@@ -33,28 +33,28 @@ const ctaConfigs: Record<PageType, CTAConfig> = {
     exploration: { label: 'Explore the Works', to: '/works' },
   },
   sessions: {
-    primary: { label: 'Book a Signal Session', to: '/contact' },
-    secondary: { label: 'Explore Identity Translation', to: '/identity' },
+    primary: { label: 'Book an Echo Session', to: '/contact' },
+    secondary: { label: 'Explore Identity Direction', to: '/identity' },
     exploration: { label: 'Explore the Works', to: '/works' },
   },
   identity: {
-    primary: { label: 'Begin Identity Translation', to: '/contact' },
-    secondary: { label: 'Book a Signal Session', to: '/sessions' },
-    exploration: { label: 'Explore Studio Systems', to: '/worlds' },
+    primary: { label: 'Begin an Identity Kit', to: '/contact' },
+    secondary: { label: 'Book an Echo Session', to: '/sessions' },
+    exploration: { label: 'Explore World Architecture', to: '/worlds' },
   },
   worlds: {
     primary: { label: 'Begin a Collaboration', to: '/contact' },
-    secondary: { label: 'Explore Identity Translation', to: '/identity' },
+    secondary: { label: 'Explore Identity Direction', to: '/identity' },
     exploration: { label: 'Explore the Works', to: '/works' },
   },
   works: {
     primary: { label: 'Work With the Studio', to: '/contact' },
     secondary: { label: 'Book a Session', to: '/sessions' },
-    exploration: { label: 'Begin Identity Translation', to: '/identity' },
+    exploration: { label: 'Begin an Identity Kit', to: '/identity' },
   },
   studio: {
     primary: { label: 'Work With the Studio', to: '/contact' },
-    secondary: { label: 'Book a Signal Session', to: '/sessions' },
+    secondary: { label: 'Book an Echo Session', to: '/sessions' },
     exploration: { label: 'Explore the Works', to: '/works' },
   },
 };

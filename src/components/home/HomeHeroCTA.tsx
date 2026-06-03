@@ -8,7 +8,7 @@ export function HeroCTA() {
           Stronger contrast, confident border, clearer hover response
           ═══════════════════════════════════════════════════════════════ */}
       <Button to="/contact" variant="primary">
-        Start a Project
+        Start a Conversation
       </Button>
 
       {/* ═══════════════════════════════════════════════════════════════
@@ -16,7 +16,7 @@ export function HeroCTA() {
           Softer presence, editorial invitation
           ═══════════════════════════════════════════════════════════════ */}
       <Button to="/works" variant="secondary">
-        View Our Work
+        View the Work
       </Button>
     </div>
   );

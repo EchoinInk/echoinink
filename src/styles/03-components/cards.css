@@ -748,6 +748,103 @@
   }
 
   /* ─────────────────────────────────────────────────────────
+     Deliverable Card — identity kit fragments
+     ───────────────────────────────────────────────────────── */
+
+  .ei-card-deliverable {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    min-height: 220px;
+    padding: var(--ei-card-padding-md);
+    border-radius: var(--ei-card-radius-md);
+  }
+
+  .ei-deliverable-motif {
+    position: relative;
+    min-height: 72px;
+    border-radius: 14px;
+    border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.08);
+    background: rgb(var(--ei-midnight-rgb) / 0.35);
+    overflow: hidden;
+  }
+
+  .ei-deliverable-motif-light {
+    background: radial-gradient(
+      ellipse 80% 70% at 30% 20%,
+      rgb(var(--ei-halo-blue-rgb) / 0.08) 0%,
+      transparent 55%
+    );
+  }
+
+  .ei-deliverable-motif-palette {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding: 1rem 1.1rem;
+  }
+
+  .ei-deliverable-motif-palette span {
+    height: 2.25rem;
+    flex: 1;
+    border-radius: 999px;
+    border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.12);
+  }
+
+  .ei-deliverable-motif-palette span:nth-child(1) {
+    background: var(--ei-void);
+  }
+
+  .ei-deliverable-motif-palette span:nth-child(2) {
+    background: var(--ei-midnight);
+  }
+
+  .ei-deliverable-motif-palette span:nth-child(3) {
+    background: rgb(var(--ei-halo-blue-rgb) / 0.35);
+  }
+
+  .ei-deliverable-motif-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.85rem 1.1rem;
+    gap: 0.25rem;
+  }
+
+  .ei-deliverable-type-display {
+    font-family: var(--ei-font-editorial);
+    font-size: 1.75rem;
+    line-height: 1;
+    color: rgb(var(--ei-ice-white-rgb) / 0.82);
+  }
+
+  .ei-deliverable-type-caption {
+    font-family: var(--ei-font-structural);
+    font-size: 0.5625rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ei-color-text-muted);
+  }
+
+  .ei-deliverable-motif-moodboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+    padding: 0.65rem;
+  }
+
+  .ei-deliverable-motif-moodboard span {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.1);
+    background: linear-gradient(
+      145deg,
+      rgb(var(--ei-midnight-rgb) / 0.8),
+      rgb(var(--ei-violet-rgb) / 0.12)
+    );
+  }
+
+  /* ─────────────────────────────────────────────────────────
      Mobile Refinements
      ───────────────────────────────────────────────────────── */
 
