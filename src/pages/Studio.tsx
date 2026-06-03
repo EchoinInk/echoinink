@@ -123,7 +123,7 @@ export function Studio() {
                 <motion.h2
                   id="origin-heading"
                   variants={driftUp}
-                  className="ei-section-title whitespace-pre-line mb-5"
+                  className="ei-section-title whitespace-pre-line px-8 mb-5"
                   style={{ color: 'var(--ei-text-primary)' }}
                 >
                   {originCopy.heading}
@@ -134,7 +134,7 @@ export function Studio() {
                     <p
                       key={paragraph.slice(0, 32)}
                       className="
-                        max-w-[59ch] ei-body-large whitespace-pre-line
+                        max-w-[59ch] px-8 ei-body-large whitespace-pre-line
                       "
                       style={{ color: 'var(--ei-text-secondary)' }}
                     >
@@ -157,7 +157,7 @@ export function Studio() {
         whileInView="visible"
         viewport={VIEWPORT.loose}
         aria-labelledby="philosophy-heading"
-        className="relative py-12 px-6 md:py-16 md:px-10"
+        className="relative py-12 md:py-16 md:px-10"
       >
         <StudioSectionRail number="02" label="Philosophy" />
 
