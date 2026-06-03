@@ -6,7 +6,7 @@
 @layer components {
   /* ── Form Labels ─────────────────────────────────────────── */
   .ei-form-label {
-    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-family: var(--ei-font-structural);
     font-size: 0.625rem;
     font-weight: 500;
     letter-spacing: 0.22em;
@@ -20,7 +20,7 @@
   .ei-form-input,
   .ei-form-textarea,
   .ei-form-select {
-    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-family: var(--ei-font-structural);
     font-size: 0.9375rem;
     font-weight: 400;
     letter-spacing: 0.01em;
@@ -67,12 +67,12 @@
   .ei-form-input:focus,
   .ei-form-textarea:focus,
   .ei-form-select:focus {
-    border-color: rgb(var(--ei-aurora-blue-rgb) / 0.54);
+    border-color: rgb(var(--ei-halo-blue-rgb) / 0.54);
     color: rgb(var(--ei-ice-white-rgb) / 0.92);
     background: rgb(var(--ei-void-rgb) / 0.32);
     box-shadow:
-      0 0 0 1px rgb(var(--ei-aurora-blue-rgb) / 0.12),
-      0 0 28px rgb(var(--ei-aurora-blue-rgb) / 0.07);
+      0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.12),
+      0 0 28px rgb(var(--ei-halo-blue-rgb) / 0.07);
   }
 
   /* Focus placeholder fade */
@@ -117,7 +117,7 @@
 
   /* ── Submit Button ───────────────────────────────────────── */
   .ei-form-submit {
-    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-family: var(--ei-font-structural);
     font-size: 0.6875rem;
     font-weight: 500;
     letter-spacing: 0.22em;
