@@ -11,7 +11,7 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgb(var(--ei-ice-white-rgb) / 0.60);
+    color: rgb(var(--ei-ice-white-rgb) / 0.6);
     display: block;
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -26,21 +26,20 @@
     letter-spacing: 0.01em;
     line-height: 1.6;
     color: rgb(var(--ei-ice-white-rgb) / 0.86);
-    
+
     /* Minimal, tonal styling */
     width: 100%;
     padding: 0.95rem 1rem;
     background: rgb(var(--ei-void-rgb) / 0.22);
     border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.12);
     border-radius: 8px;
-    
+
     /* Transition for interaction */
-    transition: 
-      border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transition: border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
       color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
       background 0.5s cubic-bezier(0.22, 1, 0.36, 1),
       box-shadow 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-    
+
     /* Remove default browser styling */
     -webkit-appearance: none;
     appearance: none;
@@ -70,15 +69,14 @@
     border-color: rgb(var(--ei-halo-blue-rgb) / 0.54);
     color: rgb(var(--ei-ice-white-rgb) / 0.92);
     background: rgb(var(--ei-void-rgb) / 0.32);
-    box-shadow:
-      0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.12),
+    box-shadow: 0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.12),
       0 0 28px rgb(var(--ei-halo-blue-rgb) / 0.07);
   }
 
   /* Focus placeholder fade */
   .ei-form-input:focus::placeholder,
   .ei-form-textarea:focus::placeholder {
-    color: rgb(var(--ei-ice-white-rgb) / 0.10);
+    color: rgb(var(--ei-ice-white-rgb) / 0.1);
   }
 
   /* Focus label enhancement */
@@ -89,13 +87,22 @@
   :has(> .ei-form-input:focus) .ei-form-label,
   :has(> .ei-form-textarea:focus) .ei-form-label,
   :has(> .ei-form-select:focus) .ei-form-label {
-    color: rgb(var(--ei-ice-white-rgb) / 0.60);
+    color: rgb(var(--ei-ice-white-rgb) / 0.6);
   }
 
   /* ── Select Specific ─────────────────────────────────────── */
   .ei-form-select {
     cursor: pointer;
-    background-image: linear-gradient(45deg, transparent 50%, rgb(var(--ei-ice-white-rgb) / 0.62) 50%), linear-gradient(135deg, rgb(var(--ei-ice-white-rgb) / 0.62) 50%, transparent 50%);
+    background-image: linear-gradient(
+        45deg,
+        transparent 50%,
+        rgb(var(--ei-ice-white-rgb) / 0.62) 50%
+      ),
+      linear-gradient(
+        135deg,
+        rgb(var(--ei-ice-white-rgb) / 0.62) 50%,
+        transparent 50%
+      );
     background-repeat: no-repeat;
     background-position: calc(100% - 18px) 50%, calc(100% - 13px) 50%;
     background-size: 5px 5px, 5px 5px;
@@ -104,7 +111,7 @@
 
   .ei-form-select option {
     background: var(--ei-void);
-    color: rgb(var(--ei-ice-white-rgb) / 0.70);
+    color: rgb(var(--ei-ice-white-rgb) / 0.7);
     padding: 0.5rem;
   }
 
@@ -123,17 +130,16 @@
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: rgb(var(--ei-ice-white-rgb) / 0.85);
-    
+
     /* Refined button styling */
     padding: 1.25rem 3rem;
     background: rgb(var(--ei-ice-white-rgb) / 0.03);
-    border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.10);
+    border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.1);
     border-radius: 0;
     cursor: pointer;
-    
+
     /* Calm, confident transitions */
-    transition: 
-      background 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    transition: background 0.5s cubic-bezier(0.22, 1, 0.36, 1),
       border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
       color 0.4s cubic-bezier(0.22, 1, 0.36, 1),
       transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
@@ -157,7 +163,7 @@
   /* ── Validation States ───────────────────────────────────── */
   .ei-form-input:invalid:not(:placeholder-shown),
   .ei-form-textarea:invalid:not(:placeholder-shown) {
-    border-color: rgb(var(--ei-echo-magenta-rgb) / 0.20);
+    border-color: rgb(var(--ei-echo-magenta-rgb) / 0.2);
   }
 
   .ei-form-input:valid:not(:placeholder-shown),
