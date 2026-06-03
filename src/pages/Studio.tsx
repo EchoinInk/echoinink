@@ -123,11 +123,7 @@ export function Studio() {
                 <motion.h2
                   id="origin-heading"
                   variants={driftUp}
-                  className="
-                    max-w-[24ch] whitespace-pre-line
-                    font-editorial text-[clamp(2rem,3.4vw,3rem)]
-                    leading-[1.16] tracking-tight
-                  "
+                  className="ei-section-title whitespace-pre-line mb-5"
                   style={{ color: 'var(--ei-text-primary)' }}
                 >
                   {originCopy.heading}
