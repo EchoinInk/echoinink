@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
-import { ProjectCard } from '@/components/works/ProjectCard';
+import { ProjectCard } from '@/components/cards/ProjectCard';
 import {
   worksProjects,
   type WorkFilter,

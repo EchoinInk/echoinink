@@ -4,8 +4,8 @@ import { motion } from 'framer-motion';
 import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
 import { EditorialHero } from '@/components/hero/EditorialHero';
-import { QuoteCard } from '@/components/studio/QuoteCard';
-import { PhilosophyCard } from '@/components/studio/PhilosophyCard';
+import { QuoteCard } from '@/components/cards/QuoteCard';
+import { PhilosophyCard } from '@/components/cards/PhilosophyCard';
 import { ValuesGrid } from '@/components/studio/ValuesGrid';
 import { ProjectCTA } from '@/components/works/ProjectCTA';
 
