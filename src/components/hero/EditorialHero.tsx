@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/Button';
 import {
@@ -54,8 +55,8 @@ export function EditorialHero({
         pt-16 sm:pt-20 md:pt-20
         ${
           isStudio
-  ? 'min-h-[620px] md:min-h-[76vh] lg:min-h-[820px]'
-  : 'min-h-[620PX] md:min-h-[76vh] lg:min-h-[820PX]'
+            ? 'min-h-[620px] md:min-h-[76vh] lg:min-h-[820px]'
+            : 'min-h-[48vh] md:min-h-[78vh] lg:min-h-[82vh]'
         }
       `}
       aria-labelledby="editorial-hero-heading"
@@ -145,16 +146,17 @@ export function EditorialHero({
             `}
           >
             <div
-              className={`mb-3 flex items-center gap-4 md:mb-5 ${
-                isLeft ? '' : 'justify-center'
-              }`}
+              className={`
+                mb-3 flex items-center gap-4 md:mb-5
+                ${isLeft ? '' : 'justify-center'}
+              `}
             >
               <span
-                className="font-structural text-[11px] uppercase tracking-[0.2em]"
-                style={{ color: 'var(--ei-text-tertiary)' }}
+                className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60"
               >
                 {eyebrow}
               </span>
+
               <div
                 className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
                 style={{
@@ -169,13 +171,12 @@ export function EditorialHero({
               id="editorial-hero-heading"
               className="
                 max-w-[680px] pt-8 font-editorial
-                text-[2.25rem] leading-[1.06] tracking-tight
+                text-[2.25rem] leading-[1.06] tracking-tight text-white/92
                 max-md:leading-[1.12]
                 md:pt-12 md:text-[3.1rem]
                 lg:text-[3.7rem]
               "
               style={{
-                color: 'var(--ei-text-primary)',
                 textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.08)',
               }}
             >
@@ -184,8 +185,7 @@ export function EditorialHero({
                     part.toLowerCase() === italicWord.toLowerCase() ? (
                       <em
                         key={i}
-                        className="font-normal italic"
-                        style={{ color: 'var(--ei-text-soft)' }}
+                        className="font-normal italic text-[rgb(var(--ei-soft-lavender-rgb)/0.9)]"
                       >
                         {part}
                       </em>
@@ -197,17 +197,21 @@ export function EditorialHero({
             </h1>
 
             <p
-              className="mt-5 max-w-[42ch] font-structural text-[14px] leading-[1.65] md:mt-6 md:max-w-[46ch] md:text-[15px]"
-              style={{
-                color: 'var(--ei-text-secondary)',
-                letterSpacing: '0.005em',
-              }}
+              className="
+                mt-5 max-w-[42ch] font-structural
+                text-[14px] leading-[1.65] text-white/84
+                md:mt-6 md:max-w-[46ch] md:text-[15px]
+              "
+              style={{ letterSpacing: '0.005em' }}
             >
               {description}
             </p>
 
             {ctaLabel && ctaHref && (
-              <motion.div variants={fadeSoft} className="mt-8 md:mt-10">
+              <motion.div
+                variants={fadeSoft}
+                className={`mt-8 md:mt-10 ${isLeft ? '' : 'flex justify-center'}`}
+              >
                 <Button to={ctaHref} variant="primary" className="self-start">
                   {ctaLabel}
                 </Button>
