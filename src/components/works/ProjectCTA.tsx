@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import { Button } from '@/components/Button';
+import { Button } from '@/components/sections/Button';
 import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
 
 type ProjectCTAProps = {

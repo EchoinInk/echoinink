@@ -5,7 +5,7 @@ import { EchoSelect } from '@/components/ui/EchoSelect';
 import { motion } from 'framer-motion';
 import { PageShell } from '@/components/layout/PageShell';
 import { Container } from '@/components/layout/Container';
-import { Button } from '@/components/Button';
+import { Button } from '@/components/sections/Button';
 import nebulaDesktop from '@/assets/imagery/hero/contact-hero.png';
 import nebulaMobile from '@/assets/imagery/hero/contact-hero-mobile.png';
 import digitalNebulaBookSession from '@/assets/imagery/sections/book-session-bg.png';

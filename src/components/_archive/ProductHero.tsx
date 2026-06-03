@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Button } from '@/components/Button';
+import { Button } from '@/components/sections/Button';
 import {
   blurEmergence,
   driftUp,

@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 
 import { Container } from '@/components/layout/Container';
-import { Button } from '@/components/Button';
+import { Button } from '@/components/sections/Button';
 import {
   driftUp,
   fadeSoft,
