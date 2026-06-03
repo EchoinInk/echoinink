@@ -179,7 +179,7 @@ export function Studio() {
 
                 <p
                   className="
-                    max-w-[38ch] ei-body-large                  "
+                    max-w-[59ch] ei-body-large                  "
                   style={{ color: 'var(--ei-text-secondary)' }}
                 >
                   A studio philosophy built around clarity, emotional truth, and
