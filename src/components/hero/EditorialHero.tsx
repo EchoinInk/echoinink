@@ -20,7 +20,7 @@ interface EditorialHeroProps {
   mobileImage: string;
   imageAlt: string;
   align?: 'left' | 'center';
-  variant?: 'default' | 'studio';
+  variant?: 'default'
 }
 
 export function EditorialHero({
@@ -41,7 +41,6 @@ export function EditorialHero({
     : [title];
 
   const isLeft = align === 'left';
-  const isStudio = variant === 'studio';
 
   return (
     <motion.section
@@ -52,11 +51,7 @@ export function EditorialHero({
       className={`
         relative flex items-center overflow-hidden bg-[var(--ei-void-black)]
         pt-16 sm:pt-20 md:pt-20
-        ${
-          isStudio
-            ? 'min-h-[620px] md:min-h-[76vh] lg:min-h-[820px]'
-            : 'min-h-[52vh] md:min-h-[78vh] lg:min-h-[82vh]'
-        }
+        min-h-[52vh] md:min-h-[78vh] lg:min-h-[82vh]
       `}
       aria-labelledby="editorial-hero-heading"
     >
@@ -67,11 +62,7 @@ export function EditorialHero({
           alt=""
           className={`
             h-full w-full object-cover
-            ${
-              isStudio
-                ? 'object-[68%_42%] opacity-[0.92] saturate-[0.9] brightness-[0.95] contrast-[1.02]'
-                : 'object-center saturate-[0.84] md:object-[72%_50%]'
-            }
+            object-center saturate-[0.84] md:object-[72%_50%]
           `}
           fetchPriority="high"
         />
