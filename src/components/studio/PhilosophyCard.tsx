@@ -35,13 +35,16 @@ export function PhilosophyCard({
           ? undefined
           : {
               y: -3,
-              transition: { duration: DURATION.instant, ease: EASE_CINEMATIC },
+              transition: {
+                duration: DURATION.instant,
+                ease: EASE_CINEMATIC,
+              },
             }
       }
-      className={`group relative flex h-full flex-col overflow-hidden rounded-[var(--radius-card)] border transition-[border-color,background,box-shadow,transform] duration-500 hover:border-[var(--ei-card-border-hover)] ${
+      className={`group relative flex h-full flex-col items-center overflow-hidden rounded-[var(--radius-card)] border text-center transition-[border-color,background,box-shadow,transform] duration-500 hover:border-[var(--ei-card-border-hover)] ${
         isValue
-  ? 'min-h-[250px] p-7 md:p-8'
-  : 'min-h-[360px] p-8 md:p-10'
+          ? 'min-h-[250px] p-7 md:p-8'
+          : 'min-h-[360px] p-8 md:p-10'
       } hover:bg-[var(--ei-card-bg-hover)]`}
       style={{
         background:
@@ -60,38 +63,41 @@ export function PhilosophyCard({
       />
 
       <div
-  className={`relative z-10 ${isValue ? 'mb-6' : 'mb-8'}`}
-  style={{
-    filter: 'drop-shadow(0 0 18px rgb(var(--ei-aurora-blue-rgb) / 0.18))',
-  }}
-  aria-hidden="true"
->
-  <OrbitalVisual variant={icon} size={isValue ? 44 : 65} />
-</div>
+        className={`relative z-10 mx-auto flex justify-center ${
+          isValue ? 'mb-6' : 'mb-8'
+        }`}
+        style={{
+          filter:
+            'drop-shadow(0 0 18px rgb(var(--ei-aurora-blue-rgb) / 0.18))',
+        }}
+        aria-hidden="true"
+      >
+        <OrbitalVisual variant={icon} size={isValue ? 44 : 65} />
+      </div>
 
       <div
-  className={`relative z-10 flex items-start ${
-    isValue ? 'min-h-[2.6rem]' : 'min-h-[3.8rem]'
-  }`}
->
-  <h3
-    className={`font-editorial leading-[1.14] tracking-tight ${
-      isValue ? 'text-[1.08rem]' : 'text-[1.42rem] md:text-[1.58rem]'
-    }`}
-    style={{ color: 'var(--ei-text-primary)' }}
-  >
-    {title}
-  </h3>
-</div>
+        className={`relative z-10 flex w-full items-center justify-center ${
+          isValue ? 'min-h-[2.6rem]' : 'min-h-[3.8rem]'
+        }`}
+      >
+        <h3
+          className={`font-editorial leading-[1.14] tracking-tight ${
+            isValue ? 'text-[1.08rem]' : 'text-[1.42rem] md:text-[1.58rem]'
+          }`}
+          style={{ color: 'var(--ei-text-primary)' }}
+        >
+          {title}
+        </h3>
+      </div>
 
-<p
-  className={`relative z-10 mt-4 font-structural leading-[1.72] ${
-    isValue ? 'text-[13.5px]' : 'text-[14.5px] md:text-[15.5px]'
-  }`}
-  style={{ color: 'var(--ei-text-secondary)' }}
->
-  {description}
-</p>
+      <p
+        className={`relative z-10 mx-auto mt-4 max-w-[18rem] font-structural leading-[1.72] ${
+          isValue ? 'text-[13.5px]' : 'text-[14.5px] md:text-[15.5px]'
+        }`}
+        style={{ color: 'var(--ei-text-secondary)' }}
+      >
+        {description}
+      </p>
     </motion.article>
   );
 }
