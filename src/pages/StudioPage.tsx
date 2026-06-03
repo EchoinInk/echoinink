@@ -7,7 +7,7 @@ import { EditorialHero } from '@/components/sections/EditorialHero';
 import { QuoteCard } from '@/components/cards/QuoteCard';
 import { PhilosophyCard } from '@/components/cards/PhilosophyCard';
 import { ValuesGrid } from '@/components/studio/StudioValuesGrid';
-import { ProjectCTA } from '@/components/works/ProjectCTA';
+import { ProjectCTA } from '@/components/sections/ProjectCTA';
 
 import studioHeroDesktop from '@/assets/imagery/hero/studio-hero.png';
 import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.png';

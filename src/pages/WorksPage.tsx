@@ -6,7 +6,7 @@ import { Container } from '@/components/layout/Container';
 import { EditorialHero } from '@/components/sections/EditorialHero';
 import { WorkFilterBar } from '@/components/works/WorkFilterBar';
 import { WorksGrid } from '@/components/works/WorksGrid';
-import { ProjectCTA } from '@/components/works/ProjectCTA';
+import { ProjectCTA } from '@/components/sections/ProjectCTA';
 import worksHeroDesktop from '@/assets/imagery/hero/works-hero.png';
 import worksHeroMobile from '@/assets/imagery/hero/works-hero-mobile.png';
 import cosmicRingsBg from '@/assets/imagery/backgrounds/cosmic-rings-bg.png';
