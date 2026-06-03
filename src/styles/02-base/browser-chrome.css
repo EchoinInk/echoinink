@@ -34,12 +34,12 @@
 
   /* ── Text Selection ───────────────────────────────────────── */
 ::selection {
-  background: rgb(var(--ei-aurora-blue-rgb) / 0.26);
+  background: rgb(var(--ei-halo-blue-rgb) / 0.26);
   color: rgb(var(--ei-ice-white-rgb) / 0.96);
 }
 
 ::-moz-selection {
-  background: rgb(var(--ei-aurora-blue-rgb) / 0.26);
+  background: rgb(var(--ei-halo-blue-rgb) / 0.26);
   color: rgb(var(--ei-ice-white-rgb) / 0.96);
 }
 
@@ -58,7 +58,7 @@
   outline-offset: 2px;
 
   box-shadow:
-    0 0 0 1px rgb(var(--ei-aurora-blue-rgb) / 0.18),
+    0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.18),
     0 0 18px rgb(var(--ei-aurora-blue-rgb) / 0.16);
 }
 
