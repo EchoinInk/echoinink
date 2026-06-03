@@ -7,7 +7,7 @@ import {
   VerticalBeam,
   ContourField,
   AtmosphericBloom,
-} from '../AtmosphericSystem';
+} from '../atmosphere/AtmosphericSystem';
 
 import { EASE_CINEMATIC as EASE, DURATION, VIEWPORT, STAGGER } from '@/lib/motion-cinematic';
 

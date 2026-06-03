@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import { Header } from './sections/Header';
-import { AtmosphericCursor } from './AtmosphericCursor';
+import { AtmosphericCursor } from './atmosphere/AtmosphericCursor';
 
 interface LayoutProps {
   children: ReactNode;
