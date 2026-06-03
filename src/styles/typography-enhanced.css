@@ -76,7 +76,7 @@
   /* Body Standard — general content (min 16px, 75–85% opacity per rules) */
   .ei-body {
     font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: -0.005em;
     line-height: 1.65;
