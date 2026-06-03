@@ -368,35 +368,7 @@
 }
 
 @layer utilities {
-  /* ─────────────────────────────────────────────────────────
-     Reading Measures
-     These support the typography system without replacing it.
-     ───────────────────────────────────────────────────────── */
-
-  .ei-measure-tight {
-    max-width: 36ch;
-  }
-
-  .ei-measure {
-    max-width: 52ch;
-  }
-
-  .ei-measure-wide {
-    max-width: 68ch;
-  }
-
-  .ei-measure-full {
-    max-width: none;
-  }
-
-  .ei-text-balance {
-    text-wrap: balance;
-  }
-
-  .ei-text-pretty {
-    text-wrap: pretty;
-  }
-
+  
   /* ─────────────────────────────────────────────────────────
      Alignment Utilities
      ───────────────────────────────────────────────────────── */
