@@ -1,14 +1,11 @@
 @import './tokens.css' layer(base);
-@import './typography.css' layer(base);
-@import './typography-enhanced.css' layer(base);
 @import './typography-system.css' layer(base);
 @import './layout.css' layer(base);
 @import './spacing-enhanced.css' layer(base);
-@import './atmosphere-enhanced.css' layer(components);
 @import './atmosphere.css' layer(components);
 @import './hero.css' layer(components);
-@import './mobile-refinements.css' layer(utilities);
 @import './forms-luxury.css' layer(components);
+@import './mobile-refinements.css' layer(utilities);
 @import './accessibility.css';
 @import './browser-chrome.css' layer(base);
 
@@ -21,7 +18,7 @@
   body,
   #root {
     min-height: 100%;
-    background: var(--ei-void-black);
+    background: var(--ei-void);
     color: var(--ei-ice-white);
   }
 
@@ -30,15 +27,15 @@
   }
 
   body {
-    background-color: var(--ei-void-black);
-    color: var(--ei-ice-white);
+    background-color: var(--ei-void);
+    color: var(--ei-color-text-primary);
     font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background: rgb(var(--ei-luxe-violet-rgb) / 0.25);
-    color: var(--ei-text-primary);
+    background: rgba(113, 7, 234, 0.25);
+    color: var(--ei-color-text-primary);
   }
 }

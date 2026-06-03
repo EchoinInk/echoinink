@@ -1,3 +1,10 @@
+/* ───────────────────────────────────────────────────────────────
+   DEPRECATED: This file has been consolidated into typography-system.css.
+   Font faces are now defined in typography-system.css.
+   This file is retained temporarily for migration safety.
+   Please remove this import from globals.css and use typography-system.css only.
+   ─────────────────────────────────────────────────────────────── */
+
 /* ─── Neue Montreal — Practical & structural body font ────────── */
 @font-face {
   font-family: 'Neue Montreal';
