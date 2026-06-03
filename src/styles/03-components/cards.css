@@ -36,7 +36,7 @@
     --ei-card-shadow: 0 0 60px rgba(var(--ei-violet-rgb) / 0.08);
 
     --ei-card-shadow-hover: 0 36px 140px rgba(0, 0, 0, 0.54),
-      0 0 80px rgba(221, 18, 203, 0.1);
+      0 0 80px rgba(var(--ei-echo-magenta-rgb) / 0.1);
 
     --ei-card-inner-highlight: inset 0 1px 0 rgba(var(--ei-ice-white-rgb) / 0.04);
 
@@ -304,8 +304,8 @@
   }
 
   .ei-card-system[data-status="active"] {
-    --ei-system-status-color: rgba(221, 18, 203, 0.55);
-    --ei-system-card-accent: rgba(221, 18, 203, 0.06);
+    --ei-system-status-color: rgba(var(--ei-echo-magenta-rgb) / 0.55);
+    --ei-system-card-accent: rgba(var(--ei-echo-magenta-rgb) / 0.06);
   }
 
   .ei-card-system-status[data-status="available"] {
@@ -321,9 +321,9 @@
   }
 
   .ei-card-system-status[data-status="active"] {
-    color: rgba(221, 18, 203, 0.64);
-    background: rgba(221, 18, 203, 0.1);
-    border: 1px solid rgba(221, 18, 203, 0.2);
+    color: rgba(var(--ei-echo-magenta-rgb) / 0.64);
+    background: rgba(var(--ei-echo-magenta-rgb) / 0.1);
+    border: 1px solid rgba(var(--ei-echo-magenta-rgb) / 0.2);
   }
 
   /* System Grid */
