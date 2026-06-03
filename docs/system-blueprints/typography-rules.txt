@@ -1,13 +1,13 @@
 ECHO IN INK — Typography System
 Font Roles
-Faunces
+Fraunces
 Use for emotional display moments only:
 hero headlines
 manifesto lines
 poetic section titles
 cinematic statements
 editorial emphasis
-Faunces carries the emotional gravity of the brand.
+Fraunces carries the emotional gravity of the brand.
 It should feel atmospheric, restrained, and intentional.
 Neue Montreal
 Use for everything practical:
@@ -30,7 +30,7 @@ architectural references
 Geist Mono introduces subtle system intelligence and structured rhythm.
 Desktop Typography Rules
 Hero Headline
-Font: Faunces
+Font: Fraunces
 Size: 72–96px
 Line-height: 0.95–1.05
 Letter spacing: -0.04em
@@ -40,7 +40,7 @@ hero sections
 cinematic opening statements
 emotional positioning moments
 Large Section Statement
-Font: Faunces
+Font: Fraunces
 Size: 48–64px
 Line-height: 1.05
 Letter spacing: -0.035em
@@ -50,7 +50,7 @@ philosophy statements
 manifesto blocks
 immersive editorial sections
 Section Heading
-Font: Faunces or Neue Montreal
+Font: Fraunces or Neue Montreal
 Size: 32–44px
 Line-height: 1.1
 Letter spacing: -0.025em
@@ -114,16 +114,16 @@ interface systems
 atmospheric annotations
 Mobile Typography Rules
 Hero Headline
-Font: Faunces
+Font: Fraunces
 Size: 44–56px
 Line-height: 0.95–1.05
 Letter spacing: -0.035em
 Section Statement
-Font: Faunces
+Font: Fraunces
 Size: 34–42px
 Line-height: 1.05–1.1
 Section Heading
-Font: Faunces / Neue Montreal
+Font: Fraunces / Neue Montreal
 Size: 26–32px
 Line-height: 1.1
 Body Copy
@@ -170,7 +170,7 @@ emotionally intelligent
 calm
 spacious
 Best Pairing Structure
-Faunces = soul
+Fraunces = soul
 Emotional gravity. Editorial atmosphere. Human resonance.
 Neue Montreal = clarity
 Precision. Structure. Readability. Modern restraint.
