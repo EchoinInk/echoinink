@@ -199,22 +199,13 @@ export function Studio() {
               mx-auto max-w-[1180px] pt-12 md:pt-16
             "
           >
-            <div>
-              <motion.div variants={driftUp}>
-                <h2
-                  id="values-heading"
-                  className="ei-section-title mb-5 whitespace-pre-line"
-                  style={{ color: 'var(--ei-text-primary)' }}
-                >
-                  The principles that keep the work clear.
-                </h2>
-              </motion.div>
+        
 
-              <div className="mt-12">
+              <div>
                 <ValuesGrid showHeader={false} />
               </div>
             </div>
-          </div>
+       
         </Container>
       </motion.section>
 
