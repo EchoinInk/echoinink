@@ -45,7 +45,7 @@
 
 /* ── Tap Highlight (Mobile) ───────────────────────────────── */
 * {
-  -webkit-tap-highlight-color: rgb(var(--ei-aurora-blue-rgb) / 0.16);
+  -webkit-tap-highlight-color: rgb(var(--ei-halo-blue-rgb) / 0.16);
 }
 
 /* ── Focus Outline Treatment ──────────────────────────────── */
@@ -54,12 +54,12 @@
 }
 
 *:focus-visible {
-  outline: 1px solid rgb(var(--ei-aurora-blue-rgb) / 0.42);
+  outline: 1px solid rgb(var(--ei-halo-blue-rgb) / 0.42);
   outline-offset: 2px;
 
   box-shadow:
     0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.18),
-    0 0 18px rgb(var(--ei-aurora-blue-rgb) / 0.16);
+    0 0 18px rgb(var(--ei-halo-blue-rgb) / 0.16);
 }
 
   /* ── Overscroll Behavior ─────────────────────────────────── */
@@ -73,11 +73,11 @@
 
   /* ── Viewport + Background Flash Prevention ───────────────── */
   html {
-    background-color: var(--ei-void-black);
+    background-color: var(--ei-color-background-html);
   }
 
   body {
-    background-color: var(--ei-void-black);
+   background-color: var(--ei-color-background-html);
     min-height: 100vh;
   }
 
