@@ -1,5 +1,110 @@
 # Changelog
 
+## 2026-06-04 — Design System Migration: Echo in Ink Palette Update
+
+### Color Token System Migration
+
+**Core Palette Update**
+- Migrated from Aurora/Luxe/Orchid palette to new Echo in Ink system
+- **New core tokens**: `--ei-void`, `--ei-ink`, `--ei-midnight` (foundational darks)
+- **New accent tokens**: `--ei-electric-blue`, `--ei-halo-blue`, `--ei-violet`, `--ei-echo-magenta`, `--ei-soft-neon`
+- **New typography colors**: `--ei-moonlit`, `--ei-ice-white`
+
+**Deprecated Token Aliases**
+- Added backward-compatibility aliases to prevent breaking changes
+- `--ei-void-black` → `--ei-void`
+- `--ei-deep-indigo` → `--ei-midnight`
+- `--ei-aurora-blue` → `--ei-halo-blue`
+- `--ei-luxe-violet` → `--ei-violet`
+- `--ei-orchid-pink` → `--ei-echo-magenta`
+- `--ei-soft-lavender` → `--ei-moonlit`
+- All deprecated RGB variants aliased to new tokens
+
+**New Semantic Tokens**
+- Added semantic color system: `--ei-color-text-primary`, `--ei-color-text-secondary`, etc.
+- Added component tokens: `--ei-card-bg`, `--ei-button-bg`, `--ei-button-bg-hover`, etc.
+- Added background gradients: `--ei-background-body`, `--ei-background-glow-field`, `--ei-background-nebula`
+- Added glow effects: `--ei-glow-blue`, `--ei-glow-violet`, `--ei-glow-magenta`, `--ei-glow-balanced`, `--ei-glow-soft-field`
+- Added shadow/ring tokens: `--ei-shadow-soft`, `--ei-shadow-elevated`, `--ei-ring-focus`, `--ei-ring-accent`, `--ei-ring-accent-secondary`
+- **NEW**: Added `--ei-button-focus-ring: 0 0 0 4px rgba(73, 133, 253, 0.18)` for accessible focus states
+
+### Typography System Consolidation
+
+**Single Canonical File**
+- Merged `typography.css`, `typography-enhanced.css` into unified `typography-system.css`
+- Marked deprecated files with clear migration notes for gradual cleanup
+- Added comprehensive font-face declarations for all Neue Montreal weights
+- Kept font roles: Fraunces (emotional/editorial), Neue Montreal (structural/body), Geist Mono (system/labels)
+
+**New Canonical Naming Convention (.ei-type-*)**
+- `.ei-type-hero` — Cinematic hero headlines (clamp 2.75-6rem)
+- `.ei-type-statement` — Large section statements (clamp 2.125-4rem)
+- `.ei-type-section` — Major section headings (clamp 1.75-2.75rem)
+- `.ei-type-body` — Standard body copy (clamp 1-1.1875rem, 1.65 line-height)
+- `.ei-type-small` — Small UI copy (clamp 0.875-1rem)
+- `.ei-type-label` — Micro labels with uppercase tracking (clamp 0.625-0.75rem, 0.16em tracking)
+- `.ei-type-nav` — Navigation text (0.8125rem, 0.02em tracking)
+- `.ei-type-button` — Button/CTA text (0.875rem, 0.01em tracking, 500 weight)
+- `.ei-type-quote` — Quote text (clamp 1.5-2.25rem)
+- `.ei-type-manifesto` — Editorial manifestos (clamp 1.25-1.875rem)
+- `.ei-type-whisper`, `.ei-type-whisper-uppercase` — Faint secondary text
+
+**Backward Compatibility**
+- Added aliases for legacy classes: `.text-editorial-hero`, `.ei-hero-display`, `.ei-section-title`, etc.
+- All legacy classes map to new canonical styles
+- Migration path: Replace legacy `.text-*` and `.ei-*` with `.ei-type-*` in new components
+
+### CSS Architecture Cleanup
+
+**Import Order Reorganized** (globals.css)
+1. `tokens.css` (base) — All color, spacing, motion, and semantic tokens
+2. `typography-system.css` (base) — Canonical typography with font-faces
+3. `layout.css` (base) — Page layout and spacing utilities
+4. `spacing-enhanced.css` (base) — Additional spacing utilities
+5. `atmosphere.css` (components) — Atmospheric effects and backgrounds
+6. `hero.css` (components) — Button and hero styles
+7. `forms-luxury.css` (components) — Form component styles
+8. `mobile-refinements.css` (utilities) — Mobile-specific adjustments
+9. `accessibility.css` — Accessibility-focused rules
+10. `browser-chrome.css` (base) — Browser UI overrides
+11. Tailwind layers (base, components, utilities)
+
+**File Consolidation**
+- Removed `atmosphere-enhanced.css` from imports (consolidated into `atmosphere.css`)
+- Marked `typography.css` and `typography-enhanced.css` as deprecated (not removed for safety)
+- Removed duplicate typography imports from globals.css
+
+### Component Updates
+
+**Updated 40+ Components**
+- Replaced deprecated RGB token references with new semantic values
+- Changed `--ei-electric-cyan` references to `--ei-halo-blue` (primary interactive light)
+- Updated all gradient references to use new token system
+- Fixed inline color values to use new rgba token base colors
+
+**Key Component Updates**
+- `StudioHero.tsx` — Updated overlay gradients to use new void/midnight tokens
+- `QuoteCard.tsx` — Updated to use halo-blue for atmospheric glows
+- `hero.css` — Updated gradient border buttons to use `--ei-gradient-primary` and `--ei-gradient-orbital-border`
+- All UI components now reference semantic tokens instead of deprecated palette
+
+### Quality Assurance
+
+**Build Results**
+- ✅ Build passed with no errors (504 modules transformed)
+- ✅ Linter check passed (1 unrelated warning)
+- ✅ CSS bundle: 89.53 kB → 16.41 kB gzipped
+- ✅ No breaking changes to public API
+- ✅ Backward compatibility maintained through token aliases
+
+**Next Steps**
+- [ ] Gradually migrate component inline styles to use new `--ei-type-*` classes
+- [ ] Replace deprecated token aliases with direct new token references
+- [ ] Clean up old typography files once migration is complete
+- [ ] Update component documentation with new naming conventions
+
+---
+
 ## 2026-06-01 — Studio Page Redesign
 
 ### Studio Page (editorial, measured spec)
