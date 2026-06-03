@@ -229,9 +229,8 @@
    --ei-grid-gap-md: 1.5rem;
    --ei-grid-gap-lg: 2.5rem;
    --ei-grid-gap-xl: 4rem;
-}
 
-@layer components {
+   /*
    --ei-button-padding-xs: 0.75rem;
    --ei-button-padding-sm: 1rem;
    --ei-button-padding-md: 1.25rem;
