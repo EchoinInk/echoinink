@@ -146,11 +146,16 @@ export function EditorialHero({
             <h1
               id="editorial-hero-heading"
               className="
-                max-w-[680px] pt-8 font-editorial
-                text-[2.25rem] leading-[1.06] tracking-tight text-white/92
-                max-md:leading-[1.12]
-                md:pt-12 md:text-[3.1rem]
-                lg:text-[3.7rem]
+               font-editorial
+    max-w-[29ch]
+    whitespace-pre-line
+    text-[2.45rem]
+    leading-[1.06]
+    tracking-tight
+    text-white/[0.94]
+    md:text-[3.45rem]
+    md:leading-[1.04]
+    lg:text-[4.15rem]
               "
               style={{
                 textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.08)',
