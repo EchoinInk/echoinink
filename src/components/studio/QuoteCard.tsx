@@ -70,7 +70,7 @@ export function QuoteCard({ lines }: QuoteCardProps) {
       <div
         className="pointer-events-none absolute left-1/2 top-[58%] h-[92px] w-[62%] -translate-x-1/2 -translate-y-1/2 rounded-[999px] border opacity-35"
         style={{
-          borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.13)',
+          borderColor: 'rgb(var(--ei-aurora-blue-rgb) / 0.13)',
           transform:
             'translate(-50%, -50%) rotate(-9deg)',
         }}
@@ -83,8 +83,8 @@ export function QuoteCard({ lines }: QuoteCardProps) {
           ei-quote italic leading-[1.62] tracking-tight
         "
         style={{
-          color: 'rgb(var(--ei-luxe-violet-rgb) / 0.88)',
-          textShadow: '0 0 18px rgb(var(--ei-luxe-violet-rgb) / 0.10)',
+          color: 'rgb(var(--ei-electric-cyan-rgb) / 0.88)',
+          textShadow: '0 0 18px rgb(var(--ei-electric-cyan-rgb) / 0.10)',
         }}
       >
         &ldquo;{lines.join('\n')}&rdquo;
@@ -101,7 +101,7 @@ export function QuoteCard({ lines }: QuoteCardProps) {
             boxShadow:
               `
               0 0 10px rgb(var(--ei-ice-white-rgb) / 0.58),
-              0 0 22px rgb(var(--ei-luxe-violet-rgb) / 0.52)
+              0 0 22px rgb(var(--ei-aurora-blue-rgb) / 0.52)
               `,
           }}
         />
