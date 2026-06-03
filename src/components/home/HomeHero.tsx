@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
-import { HeroBackground } from './HeroBackground';
-import { HeroCTA } from './HeroCTA';
-import { HeroHeading } from './HeroHeading';
+import { HeroBackground } from './HomeHeroBackground';
+import { HeroCTA } from './HomeHeroCTA';
+import { HeroHeading } from './HomeHeroHeading';
 import { Container } from '../layout/Container';
 
 import {

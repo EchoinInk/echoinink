@@ -1,10 +1,10 @@
 import { Helmet } from 'react-helmet-async';
 import { PageShell } from '@/components/layout/PageShell';
-import { Hero } from '@/components/home/Hero';
+import { Hero } from '@/components/home/HomeHero';
 import { Philosophy } from '@/components/home/HomePhilosophySection';
 import { WhatWeCreate } from '@/components/home/WhatWeCreate';
-import { LumoCaseStudyTeaser } from '@/components/home/LumoCaseStudyHome';
-import { EmergingSystems } from '@/components/home/OurSystems';
+import { LumoCaseStudyTeaser } from '@/components/home/HomeFeaturedLumo';
+import { EmergingSystems } from '@/components/home/HomeOurSystems';
 import { ClosingSection } from '@/components/home/HomeClosingSection';
 
 export function Home() {
