@@ -29,7 +29,7 @@ Echo in Ink should not feel crowded, modular in a generic way, or overly centere
 ## 3. Layout Tokens
 
 These are the core layout values used across the site:
-
+```
 :root {
   --ei-page-max: 1440px;
   --ei-content-max: 1180px;
@@ -43,7 +43,7 @@ These are the core layout values used across the site:
   --ei-grid-gap-lg: 2.5rem;
   --ei-grid-gap-xl: 4rem;
 }
-
+```
 4. Container Usage
 
 Use ei-container for main page sections.
