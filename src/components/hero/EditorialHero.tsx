@@ -106,13 +106,13 @@ export function EditorialHero({
         }}
       />
 
-      <Container
+     <Container
   size="xl"
   className="
     relative z-10 w-full
-    pt-[clamp(3.5rem,9vh,5.5rem)]
-    md:pt-[clamp(4.5rem,11vh,6.5rem)]
-    lg:pt-[clamp(5rem,12vh,7rem)]
+    pt-[clamp(2.5rem,7vh,4.5rem)]
+    md:pt-[clamp(3.5rem,9vh,5.5rem)]
+    lg:pt-[clamp(4rem,10vh,6rem)]
   "
 >
         <div className={`max-w-[680px] ${isLeft ? '' : 'mx-auto text-center'}`}>
