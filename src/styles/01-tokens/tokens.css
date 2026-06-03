@@ -184,36 +184,36 @@
 
 
     /* ───────────────────────────────────────────────────────────────
-       COMPONENT SEMANTICS
-       ─────────────────────────────────────────────────────────────── */
+   COMPONENT SEMANTICS
+   ─────────────────────────────────────────────────────────────── */
 
-    --ei-card-bg: rgba(11, 13, 42, 0.64);
-    --ei-card-bg-hover: rgba(11, 13, 42, 0.88);
-    --ei-card-border: 1px solid rgba(227, 216, 253, 0.10);
-    --ei-card-border-hover: 1px solid rgba(227, 216, 253, 0.20);
-    --ei-card-shadow: var(--ei-shadow-soft);
-    --ei-card-shadow-hover: var(--ei-shadow-hover);
+--ei-card-bg: rgba(11, 13, 42, 0.64);
+--ei-card-bg-hover: rgba(11, 13, 42, 0.88);
+--ei-card-border: rgba(227, 216, 253, 0.10);
+--ei-card-border-hover: rgba(227, 216, 253, 0.20);
+--ei-card-shadow: var(--ei-shadow-soft);
+--ei-card-shadow-hover: var(--ei-shadow-hover);
 
-    --ei-button-bg: var(--ei-gradient-primary);
-    --ei-button-bg-hover: var(--ei-gradient-primary-hover);
-    --ei-button-border: 1px solid rgba(247, 245, 250, 0.18);
-    --ei-button-border-hover: 1px solid rgba(247, 245, 250, 0.34);
-    --ei-button-text: var(--ei-ice-white);
+--ei-button-bg: var(--ei-gradient-primary);
+--ei-button-bg-hover: var(--ei-gradient-primary-hover);
+--ei-button-border: 1px solid rgba(247, 245, 250, 0.18);
+--ei-button-border-hover: 1px solid rgba(247, 245, 250, 0.34);
+--ei-button-text: var(--ei-ice-white);
 
-    --ei-button-secondary-bg: rgba(227, 216, 253, 0.055);
-    --ei-button-secondary-bg-hover: rgba(227, 216, 253, 0.085);
-    --ei-button-secondary-border: 1px solid rgba(227, 216, 253, 0.14);
-    --ei-button-secondary-border-hover: 1px solid rgba(227, 216, 253, 0.24);
-    --ei-button-secondary-text: var(--ei-moonlit);
+--ei-button-secondary-bg: rgba(227, 216, 253, 0.055);
+--ei-button-secondary-bg-hover: rgba(227, 216, 253, 0.085);
+--ei-button-secondary-border: 1px solid rgba(227, 216, 253, 0.14);
+--ei-button-secondary-border-hover: 1px solid rgba(227, 216, 253, 0.24);
+--ei-button-secondary-text: var(--ei-moonlit);
 
-    --ei-filter-bg: rgba(227, 216, 253, 0.055);
-    --ei-filter-bg-hover: rgba(227, 216, 253, 0.085);
-    --ei-filter-bg-active: rgba(221, 18, 203, 0.14);
-    --ei-filter-border: 1px solid rgba(227, 216, 253, 0.12);
-    --ei-filter-border-active: 1px solid rgba(221, 18, 203, 0.36);
+--ei-filter-bg: rgba(227, 216, 253, 0.055);
+--ei-filter-bg-hover: rgba(227, 216, 253, 0.085);
+--ei-filter-bg-active: rgba(221, 18, 203, 0.14);
+--ei-filter-border: 1px solid rgba(227, 216, 253, 0.12);
+--ei-filter-border-active: 1px solid rgba(221, 18, 203, 0.36);
 
-    --ei-selection-bg: rgba(221, 18, 203, 0.34);
-    --ei-selection-color: var(--ei-ice-white);
+--ei-selection-bg: rgba(221, 18, 203, 0.34);
+--ei-selection-color: var(--ei-ice-white);
 
 
     /* ───────────────────────────────────────────────────────────────
