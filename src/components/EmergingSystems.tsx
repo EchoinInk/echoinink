@@ -50,7 +50,7 @@ export function EmergingSystems() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 55% 40% at 50% 55%, rgb(var(--ei-aurora-blue-rgb) / 0.02) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 55% 40% at 50% 55%, rgb(73, 133, 253 / 0.02) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -71,16 +71,16 @@ export function EmergingSystems() {
             <div className="flex items-center gap-3">
               <span className="ei-eyebrow">Our Systems</span>
 <div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
+          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73, 133, 253/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
+              'linear-gradient(90deg, rgb(11, 13, 42 / 0.15) 0%, rgb(73, 133, 253 / 0.95) 100%)',
           }}
         />            </div>
 
             <Link
               to="/systems"
-              className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/55 hover:text-[var(--ei-luxe-violet)] transition-colors duration-500"
+              className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/55 hover:text-[var(--ei-violet)] transition-colors duration-500"
             >
               Explore All Systems
               <span className="group-hover:translate-x-1 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">→</span>
@@ -93,7 +93,7 @@ export function EmergingSystems() {
               <motion.article key={system.title} variants={driftUp}>
                 <Link
                   to={system.href}
-                  className="group flex flex-col h-full rounded-[24px] border border-white/10 bg-[var(--ei-deep-indigo)]/70 p-7 transition-all duration-500 hover:border-[var(--ei-luxe-violet)]/30 hover:shadow-[0_0_60px_rgb(var(--ei-luxe-violet-rgb)/0.12)]"
+                  className="group flex flex-col h-full rounded-[24px] border border-white/10 bg-[var(--ei-midnight)]/70 p-7 transition-all duration-500 hover:border-[var(--ei-violet)]/30 hover:shadow-[0_0_60px_rgb(113, 7, 234/0.12)]"
                   aria-label={system.title}
                 >
                   {/* Orbital icon */}

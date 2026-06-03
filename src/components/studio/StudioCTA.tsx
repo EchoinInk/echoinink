@@ -31,7 +31,7 @@ export function StudioCTA({
       viewport={VIEWPORT.loose}
       className="relative mx-auto min-h-[400px] max-w-[1180px] overflow-hidden rounded-[var(--radius-card)] border md:min-h-[420px]"
       style={{
-        background: 'var(--ei-void-black)',
+        background: 'var(--ei-void)',
         borderColor: 'var(--border-card)',
       }}
       aria-labelledby="studio-cta-heading"
@@ -56,7 +56,7 @@ export function StudioCTA({
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 50% 58% at 18% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.16) 0%, transparent 68%)',
+            'radial-gradient(ellipse 50% 58% at 18% 50%, rgb(11, 13, 42 / 0.16) 0%, transparent 68%)',
         }}
       />
 
@@ -91,7 +91,7 @@ export function StudioCTA({
                 <Link
                   key={link.href}
                   to={link.href}
-                  className="group inline-flex items-center gap-2 font-structural text-[10px] uppercase tracking-[0.18em] transition-colors duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)]"
+                  className="group inline-flex items-center gap-2 font-structural text-[10px] uppercase tracking-[0.18em] transition-colors duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)]"
                   style={{ color: 'var(--ei-text-tertiary)' }}
                 >
                   <span className="transition-colors duration-500 group-hover:text-[var(--ei-text-primary)]">

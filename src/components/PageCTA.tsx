@@ -72,7 +72,7 @@ export function PageCTA({ page }: PageCTAProps) {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 55% 65% at 50% 52%, rgb(var(--ei-deep-indigo-rgb) / 0.03) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse 55% 65% at 50% 52%, rgb(11, 13, 42 / 0.03) 0%, transparent 70%)',
         }}
       />
 

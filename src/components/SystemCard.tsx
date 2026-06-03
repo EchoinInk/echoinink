@@ -21,9 +21,9 @@ const statusLabel: Record<string, string> = {
 };
 
 const statusColor: Record<string, string> = {
-  available: 'rgb(var(--ei-aurora-blue-rgb) / 0.55)',
-  soon: 'rgb(var(--ei-soft-lavender-rgb) / 0.45)',
-  active: 'rgb(var(--ei-orchid-pink-rgb) / 0.55)',
+  available: 'rgb(73, 133, 253 / 0.55)',
+  soon: 'rgb(227, 216, 253 / 0.45)',
+  active: 'rgb(221, 18, 203 / 0.55)',
 };
 
 export function SystemCard({
@@ -31,7 +31,7 @@ export function SystemCard({
   description,
   category,
   status = 'available',
-  accent = 'rgb(var(--ei-luxe-violet-rgb) / 0.06)',
+  accent = 'rgb(113, 7, 234 / 0.06)',
 }: SystemCardProps) {
   return (
     <motion.div

@@ -48,8 +48,8 @@ export function PhilosophyCard({
       } hover:bg-[var(--ei-card-bg-hover)]`}
       style={{
         background:
-          'linear-gradient(180deg, rgb(var(--ei-deep-indigo-rgb) / 0.28) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.14) 52%, rgb(var(--ei-void-black-rgb) / 0.22) 100%)',
-        borderColor: 'rgb(var(--ei-soft-lavender-rgb) / 0.12)',
+          'linear-gradient(180deg, rgb(11, 13, 42 / 0.28) 0%, rgb(11, 13, 42 / 0.14) 52%, rgb(5, 3, 11 / 0.22) 100%)',
+        borderColor: 'rgb(227, 216, 253 / 0.12)',
         boxShadow: 'inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.04)',
       }}
     >
@@ -57,7 +57,7 @@ export function PhilosophyCard({
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
         style={{
           background:
-            'radial-gradient(circle at 20% 12%, rgb(var(--ei-aurora-blue-rgb) / 0.13), transparent 34%), radial-gradient(circle at 84% 88%, rgb(var(--ei-luxe-violet-rgb) / 0.12), transparent 38%)',
+            'radial-gradient(circle at 20% 12%, rgb(73, 133, 253 / 0.13), transparent 34%), radial-gradient(circle at 84% 88%, rgb(113, 7, 234 / 0.12), transparent 38%)',
         }}
         aria-hidden="true"
       />
@@ -68,7 +68,7 @@ export function PhilosophyCard({
         }`}
         style={{
           filter:
-            'drop-shadow(0 0 18px rgb(var(--ei-aurora-blue-rgb) / 0.18))',
+            'drop-shadow(0 0 18px rgb(73, 133, 253 / 0.18))',
         }}
         aria-hidden="true"
       >

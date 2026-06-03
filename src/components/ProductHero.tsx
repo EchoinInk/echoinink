@@ -33,7 +33,7 @@ export function ProductHero({
   description,
   ctaLabel = 'Explore',
   ctaHref = '/contact',
-  accentColor = 'rgb(var(--ei-luxe-violet-rgb) / 0.07)',
+  accentColor = 'rgb(113, 7, 234 / 0.07)',
 }: ProductHeroProps) {
   return (
     <section className="relative min-h-[60vh] md:min-h-[75vh] flex items-center justify-start overflow-hidden py-20 md:py-32">
@@ -65,7 +65,7 @@ export function ProductHero({
         className="absolute inset-x-0 bottom-0 h-32 pointer-events-none z-10"
         style={{
           background:
-            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-indigo-rgb) / 0.6) 60%, var(--ei-void-black) 100%)',
+            'linear-gradient(to bottom, transparent 0%, rgb(11, 13, 42 / 0.6) 60%, var(--ei-void) 100%)',
         }}
       />
 

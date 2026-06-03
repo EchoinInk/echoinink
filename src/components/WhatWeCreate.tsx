@@ -39,7 +39,7 @@ export function WhatWeCreate() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 40% at 50% 30%, rgb(var(--ei-luxe-violet-rgb) / 0.025) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 60% 40% at 50% 30%, rgb(113, 7, 234 / 0.025) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -56,10 +56,10 @@ export function WhatWeCreate() {
           <motion.div variants={driftUp} className="flex items-center gap-3 mb-10 md:mb-14">
             <span className="ei-eyebrow">What We Create</span>
 <div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
+          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73, 133, 253/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
+              'linear-gradient(90deg, rgb(11, 13, 42 / 0.15) 0%, rgb(73, 133, 253 / 0.95) 100%)',
           }}
         />          </motion.div>
 
@@ -69,7 +69,7 @@ export function WhatWeCreate() {
               <motion.article key={cap.title} variants={driftUp}>
                 <Link
                   to={cap.href}
-                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[var(--ei-deep-indigo)]/80 p-6 transition-all duration-500 motion-reduce:transition-none hover:border-[var(--ei-luxe-violet)]/40 hover:shadow-[inset_0_10px_40px_rgb(var(--ei-luxe-violet-rgb)/0.04),0_18px_50px_rgb(0_0_0_/_0.36)] hover:-translate-y-[2px] motion-reduce:transform-none backdrop-blur-sm"
+                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[var(--ei-midnight)]/80 p-6 transition-all duration-500 motion-reduce:transition-none hover:border-[var(--ei-violet)]/40 hover:shadow-[inset_0_10px_40px_rgb(113, 7, 234/0.04),0_18px_50px_rgb(0_0_0_/_0.36)] hover:-translate-y-[2px] motion-reduce:transform-none backdrop-blur-sm"
                   aria-label={`Explore ${cap.title}`}
                 >
                   {/* Icon */}
@@ -88,7 +88,7 @@ export function WhatWeCreate() {
                   </p>
 
                   {/* CTA */}
-                  <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--ei-luxe-violet)/75] group-hover:text-[var(--ei-luxe-violet)] transition-colors duration-500 inline-flex items-center gap-1.5">
+                  <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--ei-violet)/75] group-hover:text-[var(--ei-violet)] transition-colors duration-500 inline-flex items-center gap-1.5">
                     Explore <span className="group-hover:translate-x-0.5 motion-reduce:transition-none transition-transform duration-500">→</span>
                   </span>
                 </Link>

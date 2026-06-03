@@ -17,7 +17,7 @@ const systems: SystemCardProps[] = [
       'A structured framework for mapping emotional and visual identity. Built for founders translating inner meaning into outer form.',
     category: 'Framework',
     status: 'available',
-    accent: 'rgb(var(--ei-soft-lavender-rgb) / 0.07)',
+    accent: 'rgb(227, 216, 253 / 0.07)',
   },
   {
     title: 'Founder Reflection Workbook',
@@ -25,7 +25,7 @@ const systems: SystemCardProps[] = [
       'A guided reflective practice for founders navigating becoming. Questions that reveal what wants to emerge.',
     category: 'Cognitive Tool',
     status: 'available',
-    accent: 'rgb(var(--ei-orchid-pink-rgb) / 0.06)',
+    accent: 'rgb(221, 18, 203 / 0.06)',
   },
   {
     title: 'Narrative Tension Map',
@@ -33,7 +33,7 @@ const systems: SystemCardProps[] = [
       'A diagnostic tool for identifying where story, identity, and audience drift out of coherence.',
     category: 'Framework',
     status: 'available',
-    accent: 'rgb(var(--ei-aurora-blue-rgb) / 0.06)',
+    accent: 'rgb(73, 133, 253 / 0.06)',
   },
   {
     title: 'Atmosphere Direction System',
@@ -41,7 +41,7 @@ const systems: SystemCardProps[] = [
       'A visual and tonal system for directing atmospheric quality across brand touchpoints and digital environments.',
     category: 'UI System',
     status: 'soon',
-    accent: 'rgb(var(--ei-deep-indigo-rgb) / 0.07)',
+    accent: 'rgb(11, 13, 42 / 0.07)',
   },
   {
     title: 'Identity GPT',
@@ -49,7 +49,7 @@ const systems: SystemCardProps[] = [
       'An intelligent companion for brand identity exploration. Trained on the Echo in Ink method for emotionally resonant work.',
     category: 'GPT System',
     status: 'soon',
-    accent: 'rgb(var(--ei-soft-lavender-rgb) / 0.06)',
+    accent: 'rgb(227, 216, 253 / 0.06)',
   },
   {
     title: 'Creative Direction GPT',
@@ -57,7 +57,7 @@ const systems: SystemCardProps[] = [
       'A generative thinking partner for creative directors and founders navigating conceptual decisions with clarity.',
     category: 'GPT System',
     status: 'soon',
-    accent: 'rgb(var(--ei-luxe-violet-rgb) / 0.07)',
+    accent: 'rgb(113, 7, 234 / 0.07)',
   },
 ];
 
@@ -69,7 +69,7 @@ export function SystemPreview() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 55% 35% at 50% 40%, rgb(var(--ei-aurora-blue-rgb) / 0.025) 0%, transparent 60%)',
+            'radial-gradient(ellipse 55% 35% at 50% 40%, rgb(73, 133, 253 / 0.025) 0%, transparent 60%)',
           filter: 'blur(70px)',
         }}
       />
@@ -101,7 +101,7 @@ export function SystemPreview() {
             className="w-full h-px mb-8 md:mb-10"
             style={{
               background:
-                'linear-gradient(90deg, transparent 0%, rgb(var(--ei-aurora-blue-rgb) / 0.12) 20%, rgb(var(--ei-luxe-violet-rgb) / 0.10) 50%, rgb(var(--ei-orchid-pink-rgb) / 0.12) 80%, transparent 100%)',
+                'linear-gradient(90deg, transparent 0%, rgb(73, 133, 253 / 0.12) 20%, rgb(113, 7, 234 / 0.10) 50%, rgb(221, 18, 203 / 0.12) 80%, transparent 100%)',
             }}
           />
 

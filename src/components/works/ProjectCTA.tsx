@@ -35,7 +35,7 @@ export function ProjectCTA({
       className="
         relative mx-auto min-h-[360px] max-w-[1180px] overflow-hidden
         rounded-[var(--radius-card)] border
-        shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)]
+        shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(5, 3, 11/0.36)]
         md:min-h-[390px]
       "
       style={{
@@ -62,16 +62,16 @@ export function ProjectCTA({
             `
             linear-gradient(
               90deg,
-              rgb(var(--ei-void-black-rgb) / 0.86) 0%,
-              rgb(var(--ei-void-black-rgb) / 0.66) 38%,
-              rgb(var(--ei-void-black-rgb) / 0.28) 68%,
-              rgb(var(--ei-void-black-rgb) / 0.08) 100%
+              rgb(5, 3, 11 / 0.86) 0%,
+              rgb(5, 3, 11 / 0.66) 38%,
+              rgb(5, 3, 11 / 0.28) 68%,
+              rgb(5, 3, 11 / 0.08) 100%
             ),
             linear-gradient(
               180deg,
-              rgb(var(--ei-void-black-rgb) / 0.16) 0%,
-              rgb(var(--ei-void-black-rgb) / 0.26) 54%,
-              rgb(var(--ei-void-black-rgb) / 0.56) 100%
+              rgb(5, 3, 11 / 0.16) 0%,
+              rgb(5, 3, 11 / 0.26) 54%,
+              rgb(5, 3, 11 / 0.56) 100%
             )
             `,
         }}
@@ -85,12 +85,12 @@ export function ProjectCTA({
             `
             radial-gradient(
               ellipse 54% 65% at 18% 48%,
-              rgb(var(--ei-deep-indigo-rgb) / 0.2) 0%,
+              rgb(11, 13, 42 / 0.2) 0%,
               transparent 70%
             ),
             radial-gradient(
               ellipse 42% 48% at 72% 45%,
-              rgb(var(--ei-luxe-violet-rgb) / 0.14) 0%,
+              rgb(113, 7, 234 / 0.14) 0%,
               transparent 68%
             )
             `,
@@ -144,7 +144,7 @@ export function ProjectCTA({
                     hover:text-[var(--ei-text-primary)]
                     focus-visible:outline-none
                     focus-visible:ring-2
-                    focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.38)]
+                    focus-visible:ring-[rgb(73, 133, 253/0.38)]
                     focus-visible:ring-offset-4
                     focus-visible:ring-offset-transparent
                   "

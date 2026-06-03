@@ -26,33 +26,33 @@ export function QuoteCard({ lines }: QuoteCardProps) {
           `
           radial-gradient(
             circle at 50% 68%,
-            rgb(var(--ei-electric-cyan-rgb) / 0.14) 0%,
-            rgb(var(--ei-aurora-blue-rgb) / 0.055) 22%,
+            rgb(73, 133, 253 / 0.14) 0%,
+            rgb(73, 133, 253 / 0.055) 22%,
             transparent 46%
           ),
           radial-gradient(
             ellipse 78% 66% at 50% 42%,
-            rgb(var(--ei-deep-indigo-rgb) / 0.34) 0%,
-            rgb(var(--ei-deep-indigo-rgb) / 0.16) 54%,
-            rgb(var(--ei-void-black-rgb) / 0.42) 100%
+            rgb(11, 13, 42 / 0.34) 0%,
+            rgb(11, 13, 42 / 0.16) 54%,
+            rgb(5, 3, 11 / 0.42) 100%
           )
           `,
-        borderColor: 'rgb(var(--ei-aurora-blue-rgb) / 0.18)',
+        borderColor: 'rgb(73, 133, 253 / 0.18)',
         boxShadow:
           `
-          inset 0 0 72px rgb(var(--ei-aurora-blue-rgb) / 0.055),
-          0 0 42px rgb(var(--ei-aurora-blue-rgb) / 0.045)
+          inset 0 0 72px rgb(73, 133, 253 / 0.055),
+          0 0 42px rgb(73, 133, 253 / 0.045)
           `,
       }}
       whileHover={
         prefersReducedMotion
           ? undefined
           : {
-              borderColor: 'rgb(var(--ei-electric-cyan-rgb) / 0.28)',
+              borderColor: 'rgb(73, 133, 253 / 0.28)',
               boxShadow:
                 `
-                inset 0 0 82px rgb(var(--ei-aurora-blue-rgb) / 0.075),
-                0 0 54px rgb(var(--ei-aurora-blue-rgb) / 0.07)
+                inset 0 0 82px rgb(73, 133, 253 / 0.075),
+                0 0 54px rgb(73, 133, 253 / 0.07)
                 `,
             }
       }
@@ -60,7 +60,7 @@ export function QuoteCard({ lines }: QuoteCardProps) {
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 h-[150px] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-[999px] border opacity-45"
         style={{
-          borderColor: 'rgb(var(--ei-aurora-blue-rgb) / 0.09)',
+          borderColor: 'rgb(73, 133, 253 / 0.09)',
           transform:
             'translate(-50%, -50%) rotate(-7deg)',
         }}
@@ -70,7 +70,7 @@ export function QuoteCard({ lines }: QuoteCardProps) {
       <div
         className="pointer-events-none absolute left-1/2 top-[58%] h-[92px] w-[62%] -translate-x-1/2 -translate-y-1/2 rounded-[999px] border opacity-35"
         style={{
-          borderColor: 'rgb(var(--ei-aurora-blue-rgb) / 0.13)',
+          borderColor: 'rgb(73, 133, 253 / 0.13)',
           transform:
             'translate(-50%, -50%) rotate(-9deg)',
         }}
@@ -83,8 +83,8 @@ export function QuoteCard({ lines }: QuoteCardProps) {
           ei-quote italic leading-[1.62] tracking-tight
         "
         style={{
-          color: 'rgb(var(--ei-electric-cyan-rgb) / 0.88)',
-          textShadow: '0 0 18px rgb(var(--ei-electric-cyan-rgb) / 0.10)',
+          color: 'rgb(73, 133, 253 / 0.88)',
+          textShadow: '0 0 18px rgb(73, 133, 253 / 0.10)',
         }}
       >
         &ldquo;{lines.join('\n')}&rdquo;
@@ -97,11 +97,11 @@ export function QuoteCard({ lines }: QuoteCardProps) {
         <span
           className="block h-1.5 w-1.5 rounded-full"
           style={{
-            background: 'var(--ei-electric-cyan)',
+            background: 'var(--ei-halo-blue)',
             boxShadow:
               `
-              0 0 10px rgb(var(--ei-electric-cyan-rgb) / 0.58),
-              0 0 22px rgb(var(--ei-aurora-blue-rgb) / 0.52)
+              0 0 10px rgb(73, 133, 253 / 0.58),
+              0 0 22px rgb(73, 133, 253 / 0.52)
               `,
           }}
         />

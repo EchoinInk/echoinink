@@ -7,10 +7,10 @@ export function EyebrowLabel({ children }: EyebrowLabelProps) {
     <div className="flex items-center gap-4">
       <span className="ei-eyebrow">{children}</span>
       <div
-        className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
+        className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73, 133, 253/0.45)]"
         style={{
           background:
-            'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
+            'linear-gradient(90deg, rgb(11, 13, 42 / 0.15) 0%, rgb(73, 133, 253 / 0.95) 100%)',
         }}
         aria-hidden="true"
       />

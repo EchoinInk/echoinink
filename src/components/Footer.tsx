@@ -42,7 +42,7 @@ export default function Footer() {
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-[50%] pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 50% 50% at 50% 0%, rgb(var(--ei-luxe-violet-rgb) / 0.035) 0%, transparent 70%)",
+            "radial-gradient(ellipse 50% 50% at 50% 0%, rgb(113, 7, 234 / 0.035) 0%, transparent 70%)",
           filter: "blur(80px)",
         }}
       />
@@ -139,7 +139,7 @@ export default function Footer() {
 
   <Link
     to="/systems"
-    className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-luxe-violet)]/70 hover:text-[var(--ei-luxe-violet)] transition-colors duration-400"
+    className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-violet)]/70 hover:text-[var(--ei-violet)] transition-colors duration-400"
   >
     Learn more about our future systems
     <span className="group-hover:translate-x-0.5 transition-transform duration-400">

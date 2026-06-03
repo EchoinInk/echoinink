@@ -24,7 +24,7 @@ function ProjectTags({ tags }: { tags: string[] }) {
           style={{
             color: 'var(--ei-text-tertiary)',
             borderColor: 'var(--border-soft)',
-            background: 'rgb(var(--ei-deep-indigo-rgb) / 0.22)',
+            background: 'rgb(11, 13, 42 / 0.22)',
           }}
         >
           {tag}
@@ -95,7 +95,7 @@ export function ProjectCard({
       >
         <Link
           to={href}
-          className="grid min-h-[420px] grid-cols-1 md:min-h-[360px] xl:grid-cols-[1fr_1.1fr] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)]"
+          className="grid min-h-[420px] grid-cols-1 md:min-h-[360px] xl:grid-cols-[1fr_1.1fr] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)]"
           aria-label={`${title} — ${category}. ${description}`}
         >
           <div className="flex flex-col justify-between gap-8 p-7 md:p-10 lg:p-12">
@@ -174,7 +174,7 @@ export function ProjectCard({
       >
         <Link
           to={href}
-          className="relative block min-h-[480px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)] md:min-h-[520px]"
+          className="relative block min-h-[480px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)] md:min-h-[520px]"
           aria-label={`${title} — ${category}. ${description}`}
         >
           <img
@@ -195,7 +195,7 @@ export function ProjectCard({
             className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             style={{
               background:
-                'radial-gradient(ellipse 60% 50% at 50% 80%, rgb(var(--ei-aurora-blue-rgb) / 0.08) 0%, transparent 70%)',
+                'radial-gradient(ellipse 60% 50% at 50% 80%, rgb(73, 133, 253 / 0.08) 0%, transparent 70%)',
             }}
           />
 
@@ -240,7 +240,7 @@ export function ProjectCard({
     >
       <Link
         to={href}
-        className="flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)]"
+        className="flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)]"
         aria-label={`${title} — ${category}. ${description}`}
       >
         <div className="relative aspect-[16/10] overflow-hidden">
@@ -255,7 +255,7 @@ export function ProjectCard({
             className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             style={{
               background:
-                'radial-gradient(ellipse 70% 60% at 50% 100%, rgb(var(--ei-luxe-violet-rgb) / 0.1) 0%, transparent 70%)',
+                'radial-gradient(ellipse 70% 60% at 50% 100%, rgb(113, 7, 234 / 0.1) 0%, transparent 70%)',
             }}
           />
         </div>

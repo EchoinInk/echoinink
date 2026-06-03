@@ -51,20 +51,20 @@ export function OrbitalVisual({
 const photonSoft = 'rgb(var(--ei-ice-white-rgb) / 0.48)';
 const photonDim = 'rgb(var(--ei-ice-white-rgb) / 0.52)';
 
-const cobalt = 'rgb(var(--ei-aurora-blue-rgb) / 0.92)';
-const cobaltSoft = 'rgb(var(--ei-electric-cyan-rgb) / 0.52)';
-const cobaltDim = 'rgb(var(--ei-aurora-blue-rgb) / 0.48)';
+const cobalt = 'rgb(73, 133, 253 / 0.92)';
+const cobaltSoft = 'rgb(73, 133, 253 / 0.52)';
+const cobaltDim = 'rgb(73, 133, 253 / 0.48)';
 
-const orbitBlue = 'rgb(var(--ei-deep-indigo-rgb) / 0.72)';
-const orbitBlueSoft = 'rgb(var(--ei-deep-indigo-rgb) / 0.42)';
+const orbitBlue = 'rgb(11, 13, 42 / 0.72)';
+const orbitBlueSoft = 'rgb(11, 13, 42 / 0.42)';
 
-const violet = 'rgb(var(--ei-luxe-violet-rgb) / 0.82)';
-const violetSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.78)';
-const violetDim = 'rgb(var(--ei-luxe-violet-rgb) / 0.54)';
+const violet = 'rgb(113, 7, 234 / 0.82)';
+const violetSoft = 'rgb(221, 18, 203 / 0.78)';
+const violetDim = 'rgb(113, 7, 234 / 0.54)';
 
-const magenta = 'rgb(var(--ei-orchid-pink-rgb) / 0.78)';
-const magentaSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.92)';
-const orchid = 'rgb(var(--ei-orchid-pink-rgb) / 0.72)';
+const magenta = 'rgb(221, 18, 203 / 0.78)';
+const magentaSoft = 'rgb(221, 18, 203 / 0.92)';
+const orchid = 'rgb(221, 18, 203 / 0.72)';
 
  const icons: Record<OrbitalVariant, React.ReactElement> = {
 
@@ -280,11 +280,11 @@ const orchid = 'rgb(var(--ei-orchid-pink-rgb) / 0.72)';
 
           strokeWidth="0.6"
 
-          fill="rgb(var(--ei-luxe-violet-rgb) / 0.09)"
+          fill="rgb(113, 7, 234 / 0.09)"
 
         />
 
-        <circle cx={c} cy={c} r={5} fill="rgb(var(--ei-aurora-blue-rgb) / 0.18)" />
+        <circle cx={c} cy={c} r={5} fill="rgb(73, 133, 253 / 0.18)" />
 
         <circle cx={c} cy={c} r={2.5} fill={photon} />
 
@@ -907,7 +907,7 @@ ember: (
       d={`M${c} 10 C${size - 8} 24, ${size - 18} ${size - 8}, ${c} ${size - 10} C14 ${size - 18}, 10 28, ${c} 10 Z`}
       stroke={magentaSoft}
       strokeWidth="0.7"
-      fill="rgb(var(--ei-orchid-pink-rgb) / 0.035)"
+      fill="rgb(221, 18, 203 / 0.035)"
     />
     <path
       d={`M${c} 18 C${size - 16} 28, ${size - 24} ${size - 18}, ${c} ${size - 16} C22 ${size - 22}, 20 32, ${c} 18 Z`}
@@ -938,7 +938,7 @@ ember: (
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle, rgb(var(--ei-aurora-blue-rgb) / 0.13) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.09) 42%, rgb(var(--ei-orchid-pink-rgb) / 0.05) 62%, transparent 72%)',
+            'radial-gradient(circle, rgb(73, 133, 253 / 0.13) 0%, rgb(113, 7, 234 / 0.09) 42%, rgb(221, 18, 203 / 0.05) 62%, transparent 72%)',
           filter: 'blur(7px)',
           borderRadius: '50%',
         }}

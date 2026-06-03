@@ -20,20 +20,20 @@ interface AtmosphericContinuityProps {
 
 const colorMap = {
   indigo: {
-    main: 'rgb(var(--ei-deep-indigo-rgb) / 0.03)',
-    secondary: 'rgb(var(--ei-deep-indigo-rgb) / 0.015)',
+    main: 'rgb(11, 13, 42 / 0.03)',
+    secondary: 'rgb(11, 13, 42 / 0.015)',
   },
   violet: {
-    main: 'rgb(var(--ei-luxe-violet-rgb) / 0.03)',
-    secondary: 'rgb(var(--ei-luxe-violet-rgb) / 0.015)',
+    main: 'rgb(113, 7, 234 / 0.03)',
+    secondary: 'rgb(113, 7, 234 / 0.015)',
   },
   pink: {
-    main: 'rgb(var(--ei-orchid-pink-rgb) / 0.03)',
-    secondary: 'rgb(var(--ei-orchid-pink-rgb) / 0.015)',
+    main: 'rgb(221, 18, 203 / 0.03)',
+    secondary: 'rgb(221, 18, 203 / 0.015)',
   },
   aqua: {
-    main: 'rgb(var(--ei-aurora-blue-rgb) / 0.03)',
-    secondary: 'rgb(var(--ei-aurora-blue-rgb) / 0.015)',
+    main: 'rgb(73, 133, 253 / 0.03)',
+    secondary: 'rgb(73, 133, 253 / 0.015)',
   },
 };
 
@@ -106,8 +106,8 @@ export function AtmosphericContinuity({
         className="absolute inset-0"
         style={{
           background: `
-            radial-gradient(ellipse 80% 50% at 50% 100%, rgb(var(--ei-deep-indigo-rgb) / 0.4) 0%, transparent 60%),
-            radial-gradient(ellipse 60% 40% at 50% 0%, rgb(var(--ei-deep-indigo-rgb) / 0.3) 0%, transparent 50%)
+            radial-gradient(ellipse 80% 50% at 50% 100%, rgb(11, 13, 42 / 0.4) 0%, transparent 60%),
+            radial-gradient(ellipse 60% 40% at 50% 0%, rgb(11, 13, 42 / 0.3) 0%, transparent 50%)
           `,
           opacity: 0.6,
         }}
@@ -145,14 +145,14 @@ export function AtmosphericBridge({
   const getGradient = () => {
     switch (fadeDirection) {
       case 'up':
-        return `linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / ${start}) 0%, rgb(var(--ei-deep-indigo-rgb) / ${end}) 50%, transparent 100%)`;
+        return `linear-gradient(to top, rgb(11, 13, 42 / ${start}) 0%, rgb(11, 13, 42 / ${end}) 50%, transparent 100%)`;
       case 'down':
-        return `linear-gradient(to bottom, rgb(var(--ei-deep-indigo-rgb) / ${start}) 0%, rgb(var(--ei-deep-indigo-rgb) / ${end}) 50%, transparent 100%)`;
+        return `linear-gradient(to bottom, rgb(11, 13, 42 / ${start}) 0%, rgb(11, 13, 42 / ${end}) 50%, transparent 100%)`;
       case 'both':
       default:
         return `
-          linear-gradient(to bottom, rgb(var(--ei-deep-indigo-rgb) / ${start}) 0%, transparent 50%),
-          linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / ${start}) 0%, transparent 50%)
+          linear-gradient(to bottom, rgb(11, 13, 42 / ${start}) 0%, transparent 50%),
+          linear-gradient(to top, rgb(11, 13, 42 / ${start}) 0%, transparent 50%)
         `;
     }
   };
@@ -194,7 +194,7 @@ export function AtmosphericVeil({
   className = '',
 }: AtmosphericVeilProps) {
   const getBackground = () => {
-    const baseColor = `rgb(var(--ei-deep-indigo-rgb) / ${opacity})`;
+    const baseColor = `rgb(11, 13, 42 / ${opacity})`;
 
     switch (position) {
       case 'top':
