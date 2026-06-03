@@ -1,0 +1,501 @@
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Layout System
+   Cinematic spacing, containers, grids, reading measures,
+   section rhythm, and responsive layout utilities.
+
+   Use this as:
+   src/styles/02-base/layout.css
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer base {
+  :root {
+    /* ─────────────────────────────────────────────────────────
+       Page Widths
+       ───────────────────────────────────────────────────────── */
+
+    --ei-page-max: 1440px;
+    --ei-content-max: 1180px;
+    --ei-reading-max: 680px;
+    --ei-narrow-max: 520px;
+
+    /* Legacy-compatible aliases */
+    --ei-page-max-width: var(--ei-page-max);
+
+    /* ─────────────────────────────────────────────────────────
+       Gutters
+       ───────────────────────────────────────────────────────── */
+
+    --ei-gutter-mobile: 1.25rem;
+    --ei-gutter-tablet: 3rem;
+    --ei-gutter-desktop: clamp(4rem, 6vw, 6rem);
+
+    --ei-page-gutter: clamp(1.5rem, 4vw, 4rem);
+
+    /* ─────────────────────────────────────────────────────────
+       Spacing Scale
+       Named scale for new system.
+       Numeric aliases kept for compatibility with old files.
+       ───────────────────────────────────────────────────────── */
+
+    --ei-space-1: 0.25rem;
+    --ei-space-2: 0.5rem;
+    --ei-space-3: 0.75rem;
+    --ei-space-4: 1rem;
+    --ei-space-5: 1.5rem;
+    --ei-space-6: 2rem;
+    --ei-space-7: 3rem;
+    --ei-space-8: 4rem;
+    --ei-space-9: 6rem;
+    --ei-space-10: 8rem;
+    --ei-space-11: 12rem;
+    --ei-space-12: 16rem;
+
+    /* Legacy numeric spacing aliases */
+    --ei-space-8px: 0.5rem;
+    --ei-space-12px: 0.75rem;
+    --ei-space-16: 1rem;
+    --ei-space-24: 1.5rem;
+    --ei-space-32: 2rem;
+    --ei-space-48: 3rem;
+    --ei-space-64: 4rem;
+    --ei-space-96: 6rem;
+    --ei-space-128: 8rem;
+
+    /* ─────────────────────────────────────────────────────────
+       Grid Gaps
+       ───────────────────────────────────────────────────────── */
+
+    --ei-grid-gap-sm: 1rem;
+    --ei-grid-gap-md: 1.5rem;
+    --ei-grid-gap-lg: 2.5rem;
+    --ei-grid-gap-xl: 4rem;
+
+    /* ─────────────────────────────────────────────────────────
+       Section Rhythm
+       ───────────────────────────────────────────────────────── */
+
+    --ei-section-padding-y: clamp(5rem, 10vw, 9rem);
+    --ei-section-padding-y-sm: clamp(3rem, 7vw, 6rem);
+
+    --ei-section-intimate-top: clamp(4rem, 10vh, 7rem);
+    --ei-section-intimate-bottom: clamp(2.5rem, 6vh, 5rem);
+
+    --ei-section-standard-top: clamp(4.5rem, 10vh, 8rem);
+    --ei-section-standard-bottom: clamp(3.5rem, 8vh, 6.5rem);
+
+    --ei-section-expansive-y: clamp(5.5rem, 12vh, 10rem);
+
+    --ei-section-pause-top: clamp(7rem, 20vh, 13rem);
+    --ei-section-pause-bottom: clamp(4.5rem, 10vh, 7rem);
+
+    --ei-section-closing-top: clamp(3.5rem, 8vh, 6rem);
+    --ei-section-closing-bottom: clamp(7rem, 20vh, 12rem);
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Core Containers
+     ───────────────────────────────────────────────────────── */
+
+  .ei-container {
+    width: 100%;
+    max-width: var(--ei-page-max);
+    margin-inline: auto;
+    padding-inline: var(--ei-gutter-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .ei-container {
+      padding-inline: var(--ei-gutter-tablet);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .ei-container {
+      padding-inline: var(--ei-gutter-desktop);
+    }
+  }
+
+  .ei-container-content {
+    width: 100%;
+    max-width: var(--ei-content-max);
+    margin-inline: auto;
+    padding-inline: var(--ei-gutter-mobile);
+  }
+
+  @media (min-width: 768px) {
+    .ei-container-content {
+      padding-inline: var(--ei-gutter-tablet);
+    }
+  }
+
+  .ei-container-reading {
+    width: 100%;
+    max-width: var(--ei-reading-max);
+    margin-inline: auto;
+    padding-inline: var(--ei-gutter-mobile);
+  }
+
+  .ei-container-narrow {
+    width: 100%;
+    max-width: var(--ei-narrow-max);
+    margin-inline: auto;
+    padding-inline: var(--ei-gutter-mobile);
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Section Foundation
+     ───────────────────────────────────────────────────────── */
+
+  .ei-section {
+    position: relative;
+    width: 100%;
+  }
+
+  .ei-section-hero {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-block: 0;
+  }
+
+  .ei-section-intimate {
+    padding-top: var(--ei-section-intimate-top);
+    padding-bottom: var(--ei-section-intimate-bottom);
+  }
+
+  .ei-section-standard {
+    padding-top: var(--ei-section-standard-top);
+    padding-bottom: var(--ei-section-standard-bottom);
+  }
+
+  .ei-section-expansive {
+    padding-block: var(--ei-section-expansive-y);
+  }
+
+  .ei-section-pause {
+    padding-top: var(--ei-section-pause-top);
+    padding-bottom: var(--ei-section-pause-bottom);
+  }
+
+  .ei-section-closing {
+    padding-top: var(--ei-section-closing-top);
+    padding-bottom: var(--ei-section-closing-bottom);
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Content Grouping
+     ───────────────────────────────────────────────────────── */
+
+  .ei-content-tight {
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .ei-content-standard {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .ei-content-loose {
+    display: grid;
+    gap: 2.5rem;
+  }
+
+  .ei-content-expansive {
+    display: grid;
+    gap: 4rem;
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Text Block Rhythm
+     ───────────────────────────────────────────────────────── */
+
+  .ei-text-block p + p {
+    margin-top: 1.25em;
+  }
+
+  .ei-text-block h2 + p,
+  .ei-text-block h3 + p {
+    margin-top: 1.5em;
+  }
+
+  .ei-text-block .ei-eyebrow + .ei-section-title,
+  .ei-text-block .ei-type-label + .ei-type-section,
+  .ei-text-block .ei-type-label + .ei-type-statement {
+    margin-top: 1.25rem;
+  }
+
+  .ei-text-space-sm {
+    margin-bottom: 0.75rem;
+  }
+
+  .ei-text-space-md {
+    margin-bottom: 1.25rem;
+  }
+
+  .ei-text-space-lg {
+    margin-bottom: 2rem;
+  }
+
+  .ei-text-space-xl {
+    margin-bottom: 3rem;
+  }
+}
+
+@layer components {
+  /* ─────────────────────────────────────────────────────────
+     Layout Grids
+     ───────────────────────────────────────────────────────── */
+
+  .ei-grid {
+    display: grid;
+    gap: var(--ei-grid-gap-md);
+  }
+
+  .ei-grid-2 {
+    display: grid;
+    gap: var(--ei-grid-gap-lg);
+  }
+
+  @media (min-width: 768px) {
+    .ei-grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  .ei-grid-3 {
+    display: grid;
+    gap: var(--ei-grid-gap-md);
+  }
+
+  @media (min-width: 768px) {
+    .ei-grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .ei-grid-4 {
+    display: grid;
+    gap: var(--ei-grid-gap-md);
+  }
+
+  @media (min-width: 768px) {
+    .ei-grid-4 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (min-width: 1180px) {
+    .ei-grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+
+  /* Editorial split: copy + atmosphere/image */
+  .ei-layout-split {
+    display: grid;
+    gap: var(--ei-grid-gap-xl);
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .ei-layout-split {
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    }
+  }
+
+  /* Reverse editorial split: atmosphere/image + copy */
+  .ei-layout-split-reverse {
+    display: grid;
+    gap: var(--ei-grid-gap-xl);
+    align-items: center;
+  }
+
+  @media (min-width: 900px) {
+    .ei-layout-split-reverse {
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    }
+  }
+
+  /* Feature layout: narrow text + wide visual */
+  .ei-layout-feature {
+    display: grid;
+    gap: var(--ei-grid-gap-lg);
+  }
+
+  @media (min-width: 1024px) {
+    .ei-layout-feature {
+      grid-template-columns: minmax(320px, 0.8fr) minmax(0, 1.4fr);
+      align-items: stretch;
+    }
+  }
+
+  /* Offer layout: main content + side panel */
+  .ei-layout-offer {
+    display: grid;
+    gap: var(--ei-grid-gap-lg);
+  }
+
+  @media (min-width: 1024px) {
+    .ei-layout-offer {
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.42fr);
+      align-items: start;
+    }
+  }
+
+  /* Archive layout: article list + sidebar */
+  .ei-layout-archive {
+    display: grid;
+    gap: var(--ei-grid-gap-xl);
+  }
+
+  @media (min-width: 1024px) {
+    .ei-layout-archive {
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+      align-items: start;
+    }
+  }
+}
+
+@layer utilities {
+  /* ─────────────────────────────────────────────────────────
+     Reading Measures
+     These support the typography system without replacing it.
+     ───────────────────────────────────────────────────────── */
+
+  .ei-measure-tight {
+    max-width: 36ch;
+  }
+
+  .ei-measure {
+    max-width: 52ch;
+  }
+
+  .ei-measure-wide {
+    max-width: 68ch;
+  }
+
+  .ei-measure-full {
+    max-width: none;
+  }
+
+  .ei-text-balance {
+    text-wrap: balance;
+  }
+
+  .ei-text-pretty {
+    text-wrap: pretty;
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Alignment Utilities
+     ───────────────────────────────────────────────────────── */
+
+  .ei-center {
+    margin-inline: auto;
+  }
+
+  .ei-stack-center {
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+
+  .ei-align-start {
+    align-items: start;
+  }
+
+  .ei-align-center {
+    align-items: center;
+  }
+
+  .ei-justify-between {
+    justify-content: space-between;
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Aspect Ratio Helpers
+     ───────────────────────────────────────────────────────── */
+
+  .ei-ratio-golden {
+    aspect-ratio: 1.618 / 1;
+  }
+
+  .ei-ratio-cinematic {
+    aspect-ratio: 21 / 9;
+  }
+
+  .ei-ratio-video {
+    aspect-ratio: 16 / 9;
+  }
+
+  .ei-ratio-square {
+    aspect-ratio: 1 / 1;
+  }
+
+  .ei-ratio-portrait {
+    aspect-ratio: 3 / 4;
+  }
+
+  .ei-ratio-card {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Mobile Refinements
+     ───────────────────────────────────────────────────────── */
+
+  @media (max-width: 768px) {
+    .ei-container,
+    .ei-container-content,
+    .ei-container-reading,
+    .ei-container-narrow {
+      padding-inline: var(--ei-gutter-mobile);
+    }
+
+    .ei-section-standard {
+      padding-top: clamp(2.5rem, 8vh, 4rem);
+      padding-bottom: clamp(2rem, 6vh, 3.5rem);
+    }
+
+    .ei-section-intimate {
+      padding-top: clamp(2.5rem, 8vh, 4.5rem);
+      padding-bottom: clamp(1.5rem, 4vh, 3rem);
+    }
+
+    .ei-section-expansive {
+      padding-top: clamp(3.5rem, 10vh, 6rem);
+      padding-bottom: clamp(3.5rem, 10vh, 6rem);
+    }
+
+    .ei-section-pause {
+      padding-top: clamp(4rem, 14vh, 7rem);
+      padding-bottom: clamp(3rem, 8vh, 5rem);
+    }
+
+    .ei-section-closing {
+      padding-top: clamp(2.5rem, 6vh, 4rem);
+      padding-bottom: clamp(4rem, 12vh, 7rem);
+    }
+
+    .ei-text-space-xl {
+      margin-bottom: 2rem;
+    }
+
+    .ei-text-space-lg {
+      margin-bottom: 1.25rem;
+    }
+
+    .ei-text-space-md {
+      margin-bottom: 1rem;
+    }
+
+    .ei-content-loose {
+      gap: 1.75rem;
+    }
+
+    .ei-content-expansive {
+      gap: 2.5rem;
+    }
+  }
+}
