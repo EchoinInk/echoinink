@@ -1,4 +1,10 @@
 /* ═══════════════════════════════════════════════════════════════
+   DEPRECATED: This file has been consolidated into typography-system.css.
+   All typography classes have been migrated with backward compatibility.
+   This file is retained temporarily for migration safety.
+   Please remove this import from globals.css and use typography-system.css only.
+   ═══════════════════════════════════════════════════════════════
+
    Echo in Ink — Cinematic Typography System
    Unified editorial scale with consistent rhythm and hierarchy
    ═══════════════════════════════════════════════════════════════ */
