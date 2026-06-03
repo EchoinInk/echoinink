@@ -27,7 +27,7 @@ export function QuoteCard({ lines }: QuoteCardProps) {
           radial-gradient(
             circle at 50% 68%,
             rgb(var(--ei-electric-cyan-rgb) / 0.14) 0%,
-            rgb(var(--ei-luxe-violet-rgb) / 0.055) 22%,
+            rgb(var(--ei-aurora-blue-rgb) / 0.055) 22%,
             transparent 46%
           ),
           radial-gradient(
@@ -37,11 +37,11 @@ export function QuoteCard({ lines }: QuoteCardProps) {
             rgb(var(--ei-void-black-rgb) / 0.42) 100%
           )
           `,
-        borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.18)',
+        borderColor: 'rgb(var(--ei-aurora-blue-rgb) / 0.18)',
         boxShadow:
           `
-          inset 0 0 72px rgb(var(--ei-luxe-violet-rgb) / 0.055),
-          0 0 42px rgb(var(--ei-luxe-violet-rgb) / 0.045)
+          inset 0 0 72px rgb(var(--ei-aurora-blue-rgb) / 0.055),
+          0 0 42px rgb(var(--ei-aurora-blue-rgb) / 0.045)
           `,
       }}
       whileHover={
@@ -97,10 +97,10 @@ export function QuoteCard({ lines }: QuoteCardProps) {
         <span
           className="block h-1.5 w-1.5 rounded-full"
           style={{
-            background: 'var(--ei-ice-white)',
+            background: 'var(--ei-luxe-violet)',
             boxShadow:
               `
-              0 0 10px rgb(var(--ei-ice-white-rgb) / 0.58),
+              0 0 10px rgb(var(--ei-luxe-white-rgb) / 0.58),
               0 0 22px rgb(var(--ei-aurora-blue-rgb) / 0.52)
               `,
           }}
