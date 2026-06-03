@@ -38,9 +38,12 @@ function StudioSectionRail({
     <motion.div
       variants={driftUp}
       className="
-        grid grid-cols-[44px_72px_minmax(0,1fr)] items-center gap-x-5
-        md:grid-cols-[52px_88px_minmax(0,1fr)] md:gap-x-6
+        pointer-events-none absolute top-12 z-10 hidden items-center gap-5
+        md:top-16 md:flex
       "
+      style={{
+        left: 'max(2rem, calc((100vw - 1180px) / 2 - 7.5rem))',
+      }}
     >
       <span
         className="font-structural text-[11px] uppercase tracking-[0.22em]"
@@ -50,7 +53,7 @@ function StudioSectionRail({
       </span>
 
       <span
-        className="block h-px w-full"
+        className="block h-px w-16"
         style={{
           background:
             'linear-gradient(90deg, rgb(var(--ei-soft-lavender-rgb) / 0.18), rgb(var(--ei-aurora-blue-rgb) / 0.36))',
@@ -90,24 +93,24 @@ export function Studio() {
       />
 
       {/* ORIGIN */}
-      <Container size="xl" className="relative z-10">
-        <motion.section
-          variants={staggerContainer(STAGGER.loose, 0)}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT.loose}
-          aria-labelledby="origin-heading"
-          className="mx-auto max-w-[1180px] py-12 md:py-16"
-        >
-          <StudioSectionRail
-            number={originCopy.number}
-            label={originCopy.label}
-          />
+      <motion.section
+        variants={staggerContainer(STAGGER.loose, 0)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={VIEWPORT.loose}
+        aria-labelledby="origin-heading"
+        className="relative py-12 md:py-16"
+      >
+        <StudioSectionRail
+          number={originCopy.number}
+          label={originCopy.label}
+        />
 
+        <Container size="xl" className="relative z-10">
           <div
             className="
-              mt-10 md:mt-14
-              md:pl-[calc(52px+88px+3rem)]
+              mx-auto max-w-[1180px]
+              md:pl-[clamp(13rem,20vw,18rem)]
             "
           >
             <div
@@ -117,7 +120,7 @@ export function Studio() {
                 lg:gap-14
               "
             >
-              <div>
+              <div className="pt-8 md:pt-12">
                 <motion.h2
                   id="origin-heading"
                   variants={driftUp}
@@ -150,96 +153,100 @@ export function Studio() {
               <QuoteCard lines={studioQuoteLines} />
             </div>
           </div>
-        </motion.section>
-      </Container>
+        </Container>
+      </motion.section>
 
       {/* PHILOSOPHY */}
-      <Container size="xl" className="relative z-10">
-        <motion.section
-          variants={fadeSoft}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT.loose}
-          aria-labelledby="philosophy-heading"
-          className="mx-auto max-w-[1180px] py-12 md:py-16"
-        >
-          <StudioSectionRail number="02" label="Philosophy" />
+      <motion.section
+        variants={fadeSoft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={VIEWPORT.loose}
+        aria-labelledby="philosophy-heading"
+        className="relative py-12 md:py-16"
+      >
+        <StudioSectionRail number="02" label="Philosophy" />
 
+        <Container size="xl" className="relative z-10">
           <div
             className="
-              mt-10 md:mt-14
-              md:pl-[calc(52px+88px+3rem)]
+              mx-auto max-w-[1180px]
+              md:pl-[clamp(13rem,20vw,18rem)]
             "
           >
-            <motion.div variants={driftUp}>
-              <h2
-                id="philosophy-heading"
-                className="ei-section-title mb-5 whitespace-pre-line"
-                style={{ color: 'var(--ei-text-primary)' }}
-              >
-                Three beliefs shape the work.
-              </h2>
+            <div className="pt-8 md:pt-12">
+              <motion.div variants={driftUp}>
+                <h2
+                  id="philosophy-heading"
+                  className="ei-section-title mb-5 whitespace-pre-line"
+                  style={{ color: 'var(--ei-text-primary)' }}
+                >
+                  Three beliefs shape the work.
+                </h2>
 
-              <p
-                className="
-                  max-w-[38ch] font-structural text-[14px]
-                  leading-[1.75] md:text-[15px]
-                "
-                style={{ color: 'var(--ei-text-secondary)' }}
-              >
-                A studio philosophy built around clarity, emotional truth, and
-                meaningful expression.
-              </p>
-            </motion.div>
+                <p
+                  className="
+                    max-w-[38ch] font-structural text-[14px]
+                    leading-[1.75] md:text-[15px]
+                  "
+                  style={{ color: 'var(--ei-text-secondary)' }}
+                >
+                  A studio philosophy built around clarity, emotional truth, and
+                  meaningful expression.
+                </p>
+              </motion.div>
 
-            <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
-              {philosophyItems.map((item, index) => (
-                <PhilosophyCard
-                  key={item.title}
-                  {...item}
-                  index={index}
-                  variant="philosophy"
-                />
-              ))}
+              <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
+                {philosophyItems.map((item, index) => (
+                  <PhilosophyCard
+                    key={item.title}
+                    {...item}
+                    index={index}
+                    variant="philosophy"
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </motion.section>
-      </Container>
+        </Container>
+      </motion.section>
 
       {/* VALUES */}
-      <Container size="xl" className="relative z-10">
-        <motion.section
-          variants={fadeSoft}
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT.loose}
-          aria-labelledby="values-heading"
-          className="mx-auto max-w-[1180px] py-12 md:py-16"
-        >
-          <StudioSectionRail number="03" label="Values" />
+      <motion.section
+        variants={fadeSoft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={VIEWPORT.loose}
+        aria-labelledby="values-heading"
+        className="relative py-12 md:py-16"
+      >
+        <StudioSectionRail number="03" label="Values" />
 
+        <Container size="xl" className="relative z-10">
           <div
             className="
-              mt-10 md:mt-14
-              md:pl-[calc(52px+88px+3rem)]
+              mx-auto max-w-[1180px]
+              md:pl-[clamp(13rem,20vw,18rem)]
             "
           >
-            <motion.div variants={driftUp}>
-              <h2
-                id="values-heading"
-                className="ei-section-title mb-5 whitespace-pre-line"
-                style={{ color: 'var(--ei-text-primary)' }}
-              >
-                The principles that keep the work clear.
-              </h2>
-            </motion.div>
+            <div className="pt-8 md:pt-12">
+              <motion.div variants={driftUp}>
+                <h2
+                  id="values-heading"
+                  className="ei-section-title mb-5 whitespace-pre-line"
+                  style={{ color: 'var(--ei-text-primary)' }}
+                >
+                  The principles that keep the work clear.
+                </h2>
+              </motion.div>
 
-            <div className="mt-12">
-              <ValuesGrid showHeader={false} />
+              <div className="mt-12">
+                <ValuesGrid showHeader={false} />
+              </div>
             </div>
           </div>
-        </motion.section>
-      </Container>
+        </Container>
+      </motion.section>
 
       {/* CTA */}
       <Container size="xl" className="relative z-10">
