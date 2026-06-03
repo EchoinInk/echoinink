@@ -1,14 +1,3 @@
-Yes — this should become your Atmosphere Guidelines document, and then separately you should have one clean implementation file:
-
-docs/design-system/atmosphere-guidelines.md
-src/styles/03-components/atmosphere.css
-
-Right now your atmosphere system is doing too much in too many places. You have old token names, duplicated glow classes, duplicated bridge components, mobile typography mixed into atmosphere, and React components mixed into what should be CSS/system logic.
-
-Here is the cleaned guideline version.
-
-⸻
-
 Echo in Ink — Atmosphere Guidelines
 
 1. Atmosphere Philosophy
