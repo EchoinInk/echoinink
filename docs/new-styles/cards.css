@@ -140,7 +140,7 @@
     min-height: 180px;
     padding: var(--ei-card-padding-md);
     border-radius: var(--ei-card-radius-md);
-    background:{}
+    background:
       radial-gradient(
         ellipse 80% 80% at 50% 0%,
         rgba(113, 7, 234, 0.06),
@@ -148,7 +148,7 @@
       ),
       rgba(247, 245, 250, 0.02);
     border: 1px solid rgba(247, 245, 250, 0.07);
-  }
+  }   
 
   .ei-card-system::before {
     content: "";
