@@ -81,7 +81,7 @@ export function Studio() {
         />
       </Helmet>
 
-      <EditorialHero
+      <SHero
         variant="studio"
         eyebrow="Studio"
         title="The philosophy behind the worlds."
