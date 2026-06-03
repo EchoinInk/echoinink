@@ -266,6 +266,13 @@
        DEPRECATED ALIASES — Retained temporarily for migration safety.
        Replace component usage with semantic/component tokens.
        ─────────────────────────────────────────────────────────────── */
+/* Legacy RGB aliases */
+--ei-void-black-rgb: var(--ei-void-rgb);
+--ei-deep-indigo-rgb: var(--ei-midnight-rgb);
+--ei-aurora-blue-rgb: var(--ei-halo-blue-rgb);
+--ei-luxe-violet-rgb: var(--ei-violet-rgb);
+--ei-orchid-pink-rgb: var(--ei-echo-magenta-rgb);
+--ei-soft-lavender-rgb: var(--ei-moonlit-rgb);
 
     --ei-void-black: var(--ei-void);
     --ei-deep-indigo: var(--ei-midnight);
