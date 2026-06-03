@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 import viteImagemin from "@vheemstra/vite-plugin-imagemin";
 import imageminPngquant from "imagemin-pngquant";
 import imageminWebp from "imagemin-webp";
-import imageminAvif from "@vheemstra/imagemin-avifenc";
+
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
@@ -24,10 +24,6 @@ export default defineConfig(({ mode }) => ({
         png: imageminPngquant(),
       },
       onlyAssets: true,
-      makeAvif: {
-        plugins: {
-          png: imageminAvif(),
-        },
       },
       makeWebp: {
         plugins: {
