@@ -51,7 +51,7 @@ export function OfferSection({
             <motion.div variants={fadeSoft} className={centered ? 'mx-auto max-w-3xl' : 'max-w-3xl'}>
               <SectionHeading
                 eyebrow={eyebrow}
-                title={title ?? ''}
+                title={title}
                 description={description}
                 centered={centered}
               />

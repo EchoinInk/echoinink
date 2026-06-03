@@ -32,7 +32,7 @@ export function WorksPage() {
         title="Worlds we've designed and built."
         italicWord="built"
         description="Selected projects that explore identity, emotion, and technology — crafted to leave a lasting impact."
-        ctaLabel="Start a Project →"
+        ctaLabel="Start a Conversation →"
         ctaHref="/contact"
         image={worksHeroDesktop}
         mobileImage={worksHeroMobile}
@@ -65,7 +65,7 @@ export function WorksPage() {
             eyebrow="Have a project in mind?"
             heading="Let's build something meaningful."
             body="We partner with founders, creators, and teams to design and build experiences that resonate."
-            buttonLabel="Start a Project"
+            buttonLabel="Start a Conversation"
             buttonHref="/contact"
             backgroundImage={cosmicRingsBg}
           />

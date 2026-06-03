@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils';
 
 interface SectionHeadingProps {
   eyebrow?: string;
-  title: string;
+  title?: string;
   description?: string;
   className?: string;
   centered?: boolean;
@@ -19,15 +19,17 @@ export function SectionHeading({ eyebrow, title, description, className, centere
           {eyebrow}
         </span>
       )}
-      <h2
-  className={cn(
-    'font-editorial text-[2.1rem] text-[var(--ei-soft-lavender)]/90 leading-[1.24] whitespace-pre-line',
-    centered && 'mx-auto'
-  )}
-  style={{ letterSpacing: '-0.012em' }}
->
-  {title}
-</h2>
+      {title && (
+        <h2
+          className={cn(
+            'font-editorial text-[2.1rem] text-[var(--ei-soft-lavender)]/90 leading-[1.24] whitespace-pre-line',
+            centered && 'mx-auto'
+          )}
+          style={{ letterSpacing: '-0.012em' }}
+        >
+          {title}
+        </h2>
+      )}
 
       {description && (
   <p

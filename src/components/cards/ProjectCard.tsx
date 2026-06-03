@@ -11,6 +11,7 @@ interface ProjectCardProps {
   tags?: string[];
   variant: 'large' | 'small';
   featured?: boolean;
+  status?: string;
   index?: number;
 }
 
@@ -62,6 +63,7 @@ export function ProjectCard({
   tags = [],
   variant,
   featured = false,
+  status,
   index = 0,
 }: ProjectCardProps) {
   const prefersReducedMotion = useReducedMotion();
@@ -119,7 +121,7 @@ export function ProjectCard({
                 className="mt-3 font-structural text-[12px] uppercase tracking-[0.16em]"
                 style={{ color: 'var(--ei-text-tertiary)' }}
               >
-                {category}
+                {status ? `${status} · ${category}` : category}
               </p>
 
               <p
@@ -204,7 +206,7 @@ export function ProjectCard({
               className="font-structural text-[10px] uppercase tracking-[0.2em]"
               style={{ color: 'var(--ei-text-tertiary)' }}
             >
-              {category}
+              {status ? `${status} · ${category}` : category}
             </p>
             <h2
               className="mt-2 font-editorial text-[1.75rem] leading-[1.1] tracking-tight md:text-[2rem]"
@@ -266,7 +268,7 @@ export function ProjectCard({
               className="font-structural text-[9px] uppercase tracking-[0.2em]"
               style={{ color: 'var(--ei-text-tertiary)' }}
             >
-              {category}
+              {status ? `${status} · ${category}` : category}
             </p>
             <h2
               className="mt-2 font-editorial text-[1.35rem] leading-[1.14] tracking-tight md:text-[1.5rem]"

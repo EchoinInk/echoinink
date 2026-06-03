@@ -93,7 +93,7 @@ export function EmergingSystems() {
               <motion.article key={system.title} variants={driftUp}>
                 <Link
                   to={system.href}
-                  className="group flex flex-col h-full rounded-[24px] border border-white/10 bg-[var(--ei-midnight)]/70 p-7 transition-all duration-500 hover:border-[var(--ei-violet)]/30 hover:shadow-[0_0_60px_rgb(113, 7, 234/0.12)]"
+                  className="ei-card ei-card-soft ei-card-interactive group flex h-full flex-col p-7"
                   aria-label={system.title}
                 >
                   {/* Orbital icon */}

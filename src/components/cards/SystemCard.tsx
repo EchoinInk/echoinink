@@ -37,6 +37,7 @@ export function SystemCard({
     <motion.article
   variants={driftUp}
   className="ei-card ei-card-system"
+  data-status={status}
 >
   <div className="ei-card-content">
     <div className="ei-card-system-header">

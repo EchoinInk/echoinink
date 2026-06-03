@@ -12,6 +12,12 @@ export type ProjectTag =
   | 'Narrative Worlds'
   | 'UI Systems';
 
+export type ProjectStatus =
+  | 'Case Study'
+  | 'Identity Concept'
+  | 'Concept Prototype'
+  | 'System Prototype';
+
 export interface WorkProject {
   title: string;
   category: string;
@@ -21,6 +27,7 @@ export interface WorkProject {
   tags: ProjectTag[];
   variant: ProjectVariant;
   featured?: boolean;
+  status?: ProjectStatus;
 }
 
 export const worksProjects: WorkProject[] = [
@@ -34,6 +41,7 @@ export const worksProjects: WorkProject[] = [
     tags: ['Identity Systems', 'Digital Experiences'],
     variant: 'large',
     featured: true,
+    status: 'Case Study',
   },
   {
     title: 'Aurora Payments',
@@ -44,6 +52,7 @@ export const worksProjects: WorkProject[] = [
     href: '/works/aurora',
     tags: ['Identity Systems'],
     variant: 'large',
+    status: 'Identity Concept',
   },
   {
     title: 'Obsidian',
@@ -54,6 +63,7 @@ export const worksProjects: WorkProject[] = [
     href: '/works/obsidian',
     tags: ['Digital Experiences'],
     variant: 'small',
+    status: 'Concept Prototype',
   },
   {
     title: 'Verde',
@@ -64,6 +74,7 @@ export const worksProjects: WorkProject[] = [
     href: '/works/verde',
     tags: ['Identity Systems'],
     variant: 'small',
+    status: 'Concept Prototype',
   },
   {
     title: 'Nexus Design System',
@@ -74,6 +85,7 @@ export const worksProjects: WorkProject[] = [
     href: '/works/nexus',
     tags: ['UI Systems'],
     variant: 'small',
+    status: 'System Prototype',
   },
 ];
 
