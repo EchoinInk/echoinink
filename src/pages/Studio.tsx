@@ -164,11 +164,11 @@ export function Studio() {
         <Container size="xl" className="relative z-10">
           <div
             className="
-              mx-auto max-w-[1180px] pt-12 md:pt-16
+              mx-auto max-w-[1180px]
             "
           >
  
-<div className="mx-auto mt-12 grid px-8 max-w-[1180px] grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">                {philosophyItems.map((item, index) => (
+<div className="mx-auto mt-12 grid max-w-[1180px] grid-cols-1 gap-7 px-8 md:grid-cols-2 md:gap-8 lg:grid-cols-3">               {philosophyItems.map((item, index) => (
                   <PhilosophyCard
                     key={item.title}
                     {...item}
