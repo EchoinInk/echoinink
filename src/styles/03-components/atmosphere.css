@@ -1,34 +1,3 @@
- .ei-focus-block:focus-visible {
-    outline: 1.5px solid rgb(var(--ei-halo-blue-rgb) / 0.42);
-    outline-offset: 3px;
-    border-radius: 8px;
-  }
-
-@layer base {
-  .sr-only:focus {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    z-index: 9999;
-    padding: 0.75rem 1.25rem;
-    background: var(--ei-void);
-    color: var(--ei-ice-white);
-    border: 1px solid rgb(var(--ei-halo-blue-rgb) / 0.35);
-    border-radius: 6px;
-    font-family: "Neue Montreal", sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    clip: auto;
-    width: auto;
-    height: auto;
-    overflow: visible;
-    white-space: nowrap;
-    outline: 2px solid rgb(var(--ei-halo-blue-rgb) / 0.55);
-    outline-offset: 2px;
-  }
-}
-
 /* ─────────────────────────────────────────────────────────
    Atmospheric utility classes — reusable aurora, haze, and
    glow primitives for decorative background layers.
