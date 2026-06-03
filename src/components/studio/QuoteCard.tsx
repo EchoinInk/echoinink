@@ -26,7 +26,7 @@ export function QuoteCard({ lines }: QuoteCardProps) {
           `
           radial-gradient(
             circle at 50% 68%,
-            rgb(var(--ei-luxe-violet-rgb) / 0.14) 0%,
+            rgb(var(--ei-electric-cyan-rgb) / 0.14) 0%,
             rgb(var(--ei-luxe-violet-rgb) / 0.055) 22%,
             transparent 46%
           ),
@@ -48,11 +48,11 @@ export function QuoteCard({ lines }: QuoteCardProps) {
         prefersReducedMotion
           ? undefined
           : {
-              borderColor: 'rgb(var(--ei-luxe-violet-rgb) / 0.28)',
+              borderColor: 'rgb(var(--ei-electric-cyan-rgb) / 0.28)',
               boxShadow:
                 `
-                inset 0 0 82px rgb(var(--ei-luxe-violet-rgb) / 0.075),
-                0 0 54px rgb(var(--ei-luxe-violet-rgb) / 0.07)
+                inset 0 0 82px rgb(var(--ei-aurora-blue-rgb) / 0.075),
+                0 0 54px rgb(var(--ei-aurora-blue-rgb) / 0.07)
                 `,
             }
       }
@@ -60,7 +60,7 @@ export function QuoteCard({ lines }: QuoteCardProps) {
       <div
         className="pointer-events-none absolute left-1/2 top-1/2 h-[150px] w-[78%] -translate-x-1/2 -translate-y-1/2 rounded-[999px] border opacity-45"
         style={{
-          borderColor: 'rgb(var(--ei-soft-lavender-rgb) / 0.09)',
+          borderColor: 'rgb(var(--ei-aurora-blue-rgb) / 0.09)',
           transform:
             'translate(-50%, -50%) rotate(-7deg)',
         }}
