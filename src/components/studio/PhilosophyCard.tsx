@@ -72,7 +72,7 @@ export function PhilosophyCard({
         }}
         aria-hidden="true"
       >
-        <OrbitalVisual variant={icon} size={isValue ? 44 : 65} />
+        <OrbitalVisual variant={icon} size={isValue ? 50 : 70} />
       </div>
 
       <div
