@@ -192,8 +192,8 @@
     background: linear-gradient(
       90deg,
       transparent 0%,
-      var(--ei-system-status-color, rgba(73, 133, 253, 0.55)) 30%,
-      var(--ei-system-status-color, rgba(73, 133, 253, 0.55)) 70%,
+      var(--ei-system-status-color, rgba(var(--ei-halo-blue-rgb) / 0.55)) 30%,
+      var(--ei-system-status-color, rgba(var(--ei-halo-blue-rgb) / 0.55)) 70%,
       transparent 100%
     );
     transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -309,9 +309,9 @@
   }
 
   .ei-card-system-status[data-status="available"] {
-    color: rgba(73, 133, 253, 0.62);
-    background: rgba(73, 133, 253, 0.1);
-    border: 1px solid rgba(73, 133, 253, 0.2);
+    color: rgba(var(--ei-halo-blue-rgb) / 0.62);
+    background: rgba(var(--ei-halo-blue-rgb) / 0.1);
+    border: 1px solid rgba(var(--ei-halo-blue-rgb) / 0.2);
   }
 
   .ei-card-system-status[data-status="soon"] {
