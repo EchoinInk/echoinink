@@ -14,7 +14,7 @@
 
     --ei-card-bg: linear-gradient(
       180deg,
-      rgba(11, 13, 42, 0.72),
+      rgba(var(--ei-electric-blue-rgb) / 0.72),
       rgba(5, 3, 11, 0.92)
     );
 
