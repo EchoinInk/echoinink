@@ -1,0 +1,39 @@
+@layer base {
+  :root {
+    --ei-card-radius-sm: 20px;
+    --ei-card-radius-md: 24px;
+    --ei-card-radius-lg: 28px;
+    --ei-card-radius-xl: 32px;
+    --ei-card-bg:
+      linear-gradient(
+        180deg,
+        rgba(11, 13, 42, 0.72),
+        rgba(5, 3, 11, 0.92)
+      );
+    --ei-card-bg-soft:
+      linear-gradient(
+        180deg,
+        rgba(11, 13, 42, 0.48),
+        rgba(5, 3, 11, 0.72)
+      );
+    --ei-card-bg-hover:
+      linear-gradient(
+        180deg,
+        rgba(11, 13, 42, 0.86),
+        rgba(5, 3, 11, 0.96)
+      );
+    --ei-card-border: rgba(227, 216, 253, 0.10);
+    --ei-card-border-hover: rgba(227, 216, 253, 0.20);
+    --ei-card-shadow:
+      0 0 60px rgba(113, 7, 234, 0.08);
+    --ei-card-shadow-hover:
+      0 36px 140px rgba(0, 0, 0, 0.54),
+      0 0 80px rgba(221, 18, 203, 0.10);
+    --ei-card-inner-highlight:
+      inset 0 1px 0 rgba(247, 245, 250, 0.04);
+    --ei-card-padding-sm: 1.5rem;
+    --ei-card-padding-md: 1.75rem;
+    --ei-card-padding-lg: 2.5rem;
+    --ei-card-padding-xl: 3rem;
+  }
+}
