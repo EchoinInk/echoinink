@@ -106,29 +106,22 @@ export default function GlowCard({
 
   return (
     <motion.article
-      whileHover={{ y: effectiveHoverLift, scale: effectiveHoverScale }}
-      transition={{
-        duration: effectiveTransitionDuration,
-        delay: effectiveTransitionDelay,
-        ease: [0.22, 1, 0.36, 1]
-      }}
-      className={cn(
-        "ei-focus-block group relative overflow-hidden",
-        featured ? "rounded-[32px]" : "rounded-[28px]",
-        effectiveBorderOpacity,
-        horizontal
-          ? featured ? "min-h-[240px] md:min-h-[280px]" : "min-h-[220px] md:min-h-[260px]"
-          : featured ? "min-h-[420px] md:min-h-[560px]" : "min-h-[380px] md:min-h-[520px]",
-        featured ? "shadow-[0_0_60px_-20px_rgb(11, 13, 42/0.15)]" : "",
-        config.shadowDepth,
-        "bg-[var(--ei-void)]",
-        /* Mobile differentiation — subtle left accent per archetype */
-        archetype === 'sessions' && 'max-md:border-l-2 max-md:border-cyan-500/20',
-        archetype === 'identity' && 'max-md:border-l-2 max-md:border-fuchsia-500/20',
-        archetype === 'worlds' && 'max-md:border-l-2 max-md:border-indigo-500/20',
-        className
-      )}
-    >
+  whileHover={
+    prefersReducedMotion
+      ? undefined
+      : { y: featured ? -3 : -2 }
+  }
+  className={cn(
+    'ei-card',
+    'ei-card-interactive',
+    'ei-card-glow',
+    featured && 'ei-card-large',
+    horizontal && 'ei-card-glow-horizontal',
+    className
+  )}
+  data-archetype={archetype}
+  data-featured={featured ? 'true' : 'false'}
+>
       {horizontal ? (
         <>
           {/* HORIZONTAL LAYOUT - full bleed with overlay */}
