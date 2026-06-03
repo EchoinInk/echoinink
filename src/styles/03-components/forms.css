@@ -30,7 +30,7 @@
     /* Minimal, tonal styling */
     width: 100%;
     padding: 0.95rem 1rem;
-    background: rgb(var(--ei-void-black-rgb) / 0.22);
+    background: rgb(var(--ei-void-rgb) / 0.22);
     border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.12);
     border-radius: 8px;
     
@@ -69,7 +69,7 @@
   .ei-form-select:focus {
     border-color: rgb(var(--ei-aurora-blue-rgb) / 0.54);
     color: rgb(var(--ei-ice-white-rgb) / 0.92);
-    background: rgb(var(--ei-void-black-rgb) / 0.32);
+    background: rgb(var(--ei-void-rgb) / 0.32);
     box-shadow:
       0 0 0 1px rgb(var(--ei-aurora-blue-rgb) / 0.12),
       0 0 28px rgb(var(--ei-aurora-blue-rgb) / 0.07);
@@ -103,7 +103,7 @@
   }
 
   .ei-form-select option {
-    background: var(--ei-void-black);
+    background: var(--ei-void);
     color: rgb(var(--ei-ice-white-rgb) / 0.70);
     padding: 0.5rem;
   }
@@ -157,12 +157,12 @@
   /* ── Validation States ───────────────────────────────────── */
   .ei-form-input:invalid:not(:placeholder-shown),
   .ei-form-textarea:invalid:not(:placeholder-shown) {
-    border-color: rgb(var(--ei-orchid-pink-rgb) / 0.20);
+    border-color: rgb(var(--ei-echo-magenta-rgb) / 0.20);
   }
 
   .ei-form-input:valid:not(:placeholder-shown),
   .ei-form-textarea:valid:not(:placeholder-shown) {
-    border-color: rgb(var(--ei-luxe-violet-rgb) / 0.15);
+    border-color: rgb(var(--ei-violet-rgb) / 0.15);
   }
 
   /* ── Autofill Styling ────────────────────────────────────── */
@@ -170,7 +170,7 @@
   .ei-form-input:-webkit-autofill:hover,
   .ei-form-input:-webkit-autofill:focus {
     -webkit-text-fill-color: rgb(var(--ei-ice-white-rgb) / 0.75);
-    -webkit-box-shadow: 0 0 0px 1000px var(--ei-void-black) inset;
+    -webkit-box-shadow: 0 0 0px 1000px var(--ei-void) inset;
     transition: background-color 5000s ease-in-out 0s;
   }
 }
