@@ -38,12 +38,12 @@ function StudioSectionRail({
     <motion.div
       variants={driftUp}
       className="
-        grid grid-cols-[52px_72px_minmax(0,1fr)] items-center gap-x-5
-        md:grid-cols-[64px_88px_minmax(0,1fr)] md:gap-x-6
+        grid grid-cols-[44px_72px_minmax(0,1fr)] items-center gap-x-5
+        md:grid-cols-[52px_88px_minmax(0,1fr)] md:gap-x-6
       "
     >
       <span
-        className="font-structural text-[11px] uppercase tracking-[0.2em]"
+        className="font-structural text-[11px] uppercase tracking-[0.22em]"
         style={{ color: 'var(--ei-text-tertiary)' }}
       >
         {number}
@@ -53,12 +53,12 @@ function StudioSectionRail({
         className="block h-px w-full"
         style={{
           background:
-            'linear-gradient(90deg, rgb(var(--ei-soft-lavender-rgb) / 0.16), rgb(var(--ei-aurora-blue-rgb) / 0.36))',
+            'linear-gradient(90deg, rgb(var(--ei-soft-lavender-rgb) / 0.18), rgb(var(--ei-aurora-blue-rgb) / 0.36))',
         }}
       />
 
       <span
-        className="font-structural text-[11px] uppercase tracking-[0.28em]"
+        className="font-structural text-[11px] uppercase tracking-[0.32em]"
         style={{ color: 'var(--ei-text-tertiary)' }}
       >
         {label}
@@ -79,6 +79,7 @@ export function Studio() {
       </Helmet>
 
       <EditorialHero
+        variant="studio"
         eyebrow="Studio"
         title="The philosophy behind the worlds."
         italicWord="worlds."
@@ -105,43 +106,49 @@ export function Studio() {
 
           <div
             className="
-              mt-10 grid gap-12 pl-[calc(52px+72px+2.5rem)]
-              md:mt-14 md:pl-[calc(64px+88px+3rem)]
-              lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)]
-              lg:gap-14
+              mt-10 md:mt-14
+              md:pl-[calc(52px+88px+3rem)]
             "
           >
-            <div>
-              <motion.h2
-                id="origin-heading"
-                variants={driftUp}
-                className="
-                  max-w-[24ch] whitespace-pre-line
-                  font-editorial text-[clamp(2rem,3.4vw,3rem)]
-                  leading-[1.16] tracking-tight
-                "
-                style={{ color: 'var(--ei-text-primary)' }}
-              >
-                {originCopy.heading}
-              </motion.h2>
+            <div
+              className="
+                grid items-center gap-12
+                lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)]
+                lg:gap-14
+              "
+            >
+              <div>
+                <motion.h2
+                  id="origin-heading"
+                  variants={driftUp}
+                  className="
+                    max-w-[24ch] whitespace-pre-line
+                    font-editorial text-[clamp(2rem,3.4vw,3rem)]
+                    leading-[1.16] tracking-tight
+                  "
+                  style={{ color: 'var(--ei-text-primary)' }}
+                >
+                  {originCopy.heading}
+                </motion.h2>
 
-              <motion.div variants={fadeSoft} className="mt-8 space-y-5">
-                {originCopy.paragraphs.map((paragraph) => (
-                  <p
-                    key={paragraph.slice(0, 32)}
-                    className="
-                      max-w-[46ch] font-structural text-[15px]
-                      leading-[1.78] md:text-[16px]
-                    "
-                    style={{ color: 'var(--ei-text-secondary)' }}
-                  >
-                    {paragraph}
-                  </p>
-                ))}
-              </motion.div>
+                <motion.div variants={fadeSoft} className="mt-8 space-y-5">
+                  {originCopy.paragraphs.map((paragraph) => (
+                    <p
+                      key={paragraph.slice(0, 32)}
+                      className="
+                        max-w-[46ch] font-structural text-[15px]
+                        leading-[1.78] md:text-[16px]
+                      "
+                      style={{ color: 'var(--ei-text-secondary)' }}
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </motion.div>
+              </div>
+
+              <QuoteCard lines={studioQuoteLines} />
             </div>
-
-            <QuoteCard lines={studioQuoteLines} />
           </div>
         </motion.section>
       </Container>
@@ -158,7 +165,12 @@ export function Studio() {
         >
           <StudioSectionRail number="02" label="Philosophy" />
 
-          <div className="mt-10 pl-[calc(52px+72px+2.5rem)] md:mt-14 md:pl-[calc(64px+88px+3rem)]">
+          <div
+            className="
+              mt-10 md:mt-14
+              md:pl-[calc(52px+88px+3rem)]
+            "
+          >
             <motion.div variants={driftUp}>
               <h2
                 id="philosophy-heading"
@@ -169,7 +181,10 @@ export function Studio() {
               </h2>
 
               <p
-                className="max-w-[38ch] font-structural text-[14px] leading-[1.75] md:text-[15px]"
+                className="
+                  max-w-[38ch] font-structural text-[14px]
+                  leading-[1.75] md:text-[15px]
+                "
                 style={{ color: 'var(--ei-text-secondary)' }}
               >
                 A studio philosophy built around clarity, emotional truth, and
@@ -203,7 +218,12 @@ export function Studio() {
         >
           <StudioSectionRail number="03" label="Values" />
 
-          <div className="mt-10 pl-[calc(52px+72px+2.5rem)] md:mt-14 md:pl-[calc(64px+88px+3rem)]">
+          <div
+            className="
+              mt-10 md:mt-14
+              md:pl-[calc(52px+88px+3rem)]
+            "
+          >
             <motion.div variants={driftUp}>
               <h2
                 id="values-heading"
