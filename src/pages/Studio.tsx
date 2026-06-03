@@ -99,24 +99,7 @@ export function Studio() {
           aria-labelledby="origin-heading"
           className="mx-auto max-w-[1180px] py-12 md:py-16"
         >
-          <StudioSectionRail
-            number={originCopy.number}
-            label={originCopy.label}
-          />
-
-          <div
-            className="
-              mt-10 md:mt-14
-              md:pl-[calc(52px+88px+3rem)]
-            "
-          >
-            <div
-              className="
-                grid items-center gap-12
-                lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)]
-                lg:gap-14
-              "
-            >
+         
               <div>
                 <motion.h2
                   id="origin-heading"
@@ -148,8 +131,7 @@ export function Studio() {
               </div>
 
               <QuoteCard lines={studioQuoteLines} />
-            </div>
-          </div>
+         
         </motion.section>
       </Container>
 
