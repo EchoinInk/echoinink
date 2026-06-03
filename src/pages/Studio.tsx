@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { PageShell } from '@/components/system';
 import { Container } from '@/components/layout/Container';
-import { StudioHero } from '@/components/studio/StudioHero';
+import { EditorialHero } from '@/components/studio/StudioHero';
 import { QuoteCard } from '@/components/studio/QuoteCard';
 import { PhilosophyCard } from '@/components/studio/PhilosophyCard';
 import { ValuesGrid } from '@/components/studio/ValuesGrid';
@@ -26,6 +26,7 @@ import {
   STAGGER,
   VIEWPORT,
 } from '@/lib/motion-cinematic';
+import { EditorialHero } from '@/components/hero/EditorialHero';
 
 function StudioSectionRail({
   number,
@@ -81,7 +82,7 @@ export function Studio() {
         />
       </Helmet>
 
-      <StudioHero
+      <EditorialHero
         eyebrow="Studio"
         title="The philosophy behind the worlds."
         italicWord="worlds."
@@ -89,6 +90,7 @@ export function Studio() {
         image={studioHeroDesktop}
         mobileImage={studioHeroMobile}
         imageAlt="Cinematic cosmic void surrounded by violet and blue nebula energy"
+        align="left"
       />
 
       {/* ORIGIN */}
