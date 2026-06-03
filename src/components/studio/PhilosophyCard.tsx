@@ -64,7 +64,7 @@ export function PhilosophyCard({
 
       <div
         className={`relative z-10 mx-auto flex justify-center ${
-          isValue ? 'mb-6' : 'mb-8'
+          isValue ? 'mb-4' : 'mb-8'
         }`}
         style={{
           filter:
