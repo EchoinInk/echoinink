@@ -83,8 +83,8 @@ export function QuoteCard({ lines }: QuoteCardProps) {
           ei-quote italic leading-[1.62] tracking-tight
         "
         style={{
-          color: 'rgb(var(--ei-soft-lavender-rgb) / 0.88)',
-          textShadow: '0 0 18px rgb(var(--ei-orchid-pink-rgb) / 0.80)',
+          color: 'rgb(var(--ei-luxe-violet-rgb) / 0.88)',
+          textShadow: '0 0 18px rgb(var(--ei-luxe-violet-rgb) / 0.10)',
         }}
       >
         &ldquo;{lines.join('\n')}&rdquo;
