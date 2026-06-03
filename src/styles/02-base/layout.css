@@ -6,9 +6,15 @@
    ═══════════════════════════════════════════════════════════════ */
 
 @layer base {
-  :root {
+  /* ── Box Sizing Reset ─────────────────────────────────────────── */
 
-    
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
     /* ─────────────────────────────────────────────────────────
        Page Widths
        ───────────────────────────────────────────────────────── */
@@ -18,7 +24,6 @@
     --ei-reading-max: 680px;
     --ei-narrow-max: 520px;
 
-    
     /* Legacy-compatible aliases */
     --ei-page-max-width: var(--ei-page-max);
 
