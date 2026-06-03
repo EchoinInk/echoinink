@@ -5,7 +5,7 @@ import { Philosophy } from '@/components/home/HomePhilosophySection';
 import { WhatWeCreate } from '@/components/home/WhatWeCreate';
 import { LumoCaseStudyTeaser } from '@/components/home/LumoCaseStudyHome';
 import { EmergingSystems } from '@/components/home/OurSystems';
-import { ClosingSection } from '@/components/sections/ClosingSection';
+import { ClosingSection } from '@/components/home/ClosingSection';
 
 export function Home() {
   return (
