@@ -8,7 +8,7 @@ import {
   STAGGER,
   VIEWPORT
 } from '@/lib/motion-cinematic';
-import { PageCTA } from '@/components/PageCTA';
+import { PageCTA } from '@/components/sections/PageCTA';
 
 export default function WorldsPage() {
   const includes = [

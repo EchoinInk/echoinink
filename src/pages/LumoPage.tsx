@@ -9,7 +9,7 @@ import {
   VIEWPORT
 } from '@/lib/motion-cinematic';
 import { SignatureCaseStudy } from '@/components/lumo/SignatureCaseStudy';
-import { PageCTA } from '@/components/PageCTA';
+import { PageCTA } from '@/components/sections/PageCTA';
 
 export function LumoPage() {
   return (
