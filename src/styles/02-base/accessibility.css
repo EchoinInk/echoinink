@@ -9,3 +9,17 @@ x*:focus {
     0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.18),
     0 0 18px rgb(var(--ei-halo-blue-rgb) / 0.16);
 }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
