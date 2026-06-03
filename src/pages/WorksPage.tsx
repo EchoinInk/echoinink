@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { PageShell } from '@/components/system';
+import { PageShell } from '@/components/layout/PageShell';
 import { Container } from '@/components/layout/Container';
 import { EditorialHero } from '@/components/hero/EditorialHero';
 import { WorkFilterBar } from '@/components/works/WorkFilterBar';
