@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { PageShell } from '@/components/layout/PageShell';
-import { Hero } from '@/components/sections/Hero';
+import { Hero } from '@/components/home/Hero';
 import { Philosophy } from '@/components/home/HomePhilosophySection';
 import { WhatWeCreate } from '@/components/home/WhatWeCreate';
 import { LumoCaseStudyTeaser } from '@/components/home/LumoCaseStudyHome';
