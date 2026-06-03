@@ -3,7 +3,7 @@ import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { SystemGrid } from './SystemGrid';
 import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
-import type { SystemCardProps } from './cards/SystemCard';
+import type { SystemCardProps } from '../cards/SystemCard';
 
 // ═══════════════════════════════════════════════════════════════
 // SYSTEM PREVIEW — The Echo in Ink Systems grid section

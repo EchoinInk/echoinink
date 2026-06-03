@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { SystemCard, type SystemCardProps } from './cards/SystemCard';
+import { SystemCard, type SystemCardProps } from '../cards/SystemCard';
 import { staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
 
 // ═══════════════════════════════════════════════════════════════
