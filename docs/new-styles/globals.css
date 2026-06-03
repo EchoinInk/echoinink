@@ -20,18 +20,15 @@
   body,
   #root {
     min-height: 100%;
-   background: var(--ei-color-background-body);
-color: var(--ei-color-text-primary);
-  }
-
-  html {
-    scroll-behavior: smooth;
+    background: var(--ei-color-background-body);
+    color: var(--ei-color-text-primary);
   }
 
   body {
-    background-color: var(--ei-void);
+    background-color: var(--ei-color-background-body);
     color: var(--ei-color-text-primary);
-    font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--ei-font-structural);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+}
