@@ -4,14 +4,14 @@ import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 import { Layout } from '@/components/Layout';
 import { PageTransition } from '@/components/system/PageTransition';
-import { Home } from '@/pages/Home';
-import Identity from '@/pages/Identity';
+import { Home } from '@/pages/HomePage';
+import Identity from '@/pages/IdentityPage';
 import SessionsPage from '@/pages/SessionsPage';
 import WorldsPage from '@/pages/WorldsPage';
 import { WorksPage } from '@/pages/WorksPage';
 import { LumoPage } from '@/pages/LumoPage';
-import { Studio } from '@/pages/Studio';
-import { Contact } from '@/pages/Contact';
+import { Studio } from '@/pages/StudioPage';
+import { Contact } from '@/pages/ContactPage';
 
 function AppRoutes() {
   const location = useLocation();
