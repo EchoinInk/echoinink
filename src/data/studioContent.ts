@@ -62,17 +62,17 @@ export const valueItems: ValueItem[] = [
   },
   {
     title: 'Meaning over performance',
-    description: 'Every visual choice should carry intention.',
+    description: 'We create from inner alignment, not external metrics.',
     icon: 'lattice',
   },
   {
     title: 'Restraint over excess',
-    description: 'Silence and space are part of the design.',
+    description: 'We remove more \nthan we add to reach clarity.',
     icon: 'veil',
   },
   {
     title: 'Truth over optimisation',
-    description: 'What is real will always read better than what is clever.',
+    description: 'We protect integrity over trends, algorithms, and easy wins.',
     icon: 'ember',
   },
 ];
