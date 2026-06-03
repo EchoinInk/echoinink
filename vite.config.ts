@@ -6,7 +6,6 @@ import viteImagemin from "@vheemstra/vite-plugin-imagemin";
 import imageminPngquant from "imagemin-pngquant";
 import imageminWebp from "imagemin-webp";
 
-
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
@@ -16,15 +15,19 @@ export default defineConfig(({ mode }) => ({
       overlay: false,
     },
   },
+
   plugins: [
     react(),
+
     mode === "development" && componentTagger(),
+
     viteImagemin({
       plugins: {
         png: imageminPngquant(),
       },
+
       onlyAssets: true,
-      },
+
       makeWebp: {
         plugins: {
           png: imageminWebp(),
@@ -32,6 +35,7 @@ export default defineConfig(({ mode }) => ({
       },
     }),
   ].filter(Boolean),
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
