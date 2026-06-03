@@ -114,9 +114,9 @@ export function Studio() {
           >
             <div
               className="
-                grid items-center gap-12
+                grid items-center gap-8
                 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)]
-                lg:gap-12 
+                lg:gap-16 
               "
             >
               <div>
