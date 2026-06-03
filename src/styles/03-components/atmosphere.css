@@ -10,6 +10,27 @@
 
 @layer components {
   /* ── Core Glow Primitives ──────────────────────────────────── */
+.ei-glow-violet-soft {
+  background: radial-gradient(
+    ellipse 68% 60% at 35% 48%,
+    rgb(var(--ei-violet-rgb) / 0.07) 0%,
+    rgb(var(--ei-midnight-rgb) / 0.04) 50%,
+    transparent 80%
+  );
+  filter: blur(72px);
+  mix-blend-mode: screen;
+}
+
+.ei-aurora-cyan-glow {
+  background: radial-gradient(
+    ellipse 60% 66% at 58% 46%,
+    rgb(var(--ei-halo-blue-rgb) / 0.07) 0%,
+    rgb(var(--ei-midnight-rgb) / 0.035) 54%,
+    transparent 82%
+  );
+  filter: blur(60px);
+  mix-blend-mode: screen;
+}
 
   /* Ambient violet glow — primary brand atmosphere */
   .ei-glow-violet {
