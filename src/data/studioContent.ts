@@ -17,8 +17,7 @@ export const originCopy = {
   label: 'Origin',
   heading: 'Echo in Ink began quietly —\nnot as a plan, but as a response.',
   paragraphs: [
-    'There was a fatigue with work that looked polished but felt hollow. With brands performing coherence instead of embodying it. With design reduced to aesthetics instead of the emotional structure that gives identity its depth.
-    /nEcho in Ink began as a response to that gap — to the sense that something essential was being lost beneath the surface.',
+    'There was a fatigue with work that looked polished but felt hollow. With brands performing coherence instead of embodying it. With design reduced to aesthetics instead of the emotional structure that gives identity its depth.\nEcho in Ink began as a response to that gap — to the sense that something essential was being lost beneath the surface.',
     'The studio formed as a counter-space. A place where identity is approached with care, where atmosphere carries meaning, and where clarity never requires self-erasure. The work here exists to protect what is true, to translate what already lives within a brand, and to create worlds that feel grounded rather than performed.',
   ],
 };
