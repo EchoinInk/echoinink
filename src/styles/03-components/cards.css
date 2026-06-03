@@ -682,7 +682,7 @@
         ellipse 78% 66% at 50% 42%,
         rgba(var(--ei-midnight-blue-rgb) / 0.34) 0%,
         rgba(var(--ei-midnight-blue-rgb) / 0.16) 54%,
-        rgba(5, 3, 11, 0.42) 100%
+        rgba(var(--ei-void-rgb) / 0.42) 100%
       );
     border: 1px solid rgba(var(--ei-halo-blue-rgb) / 0.18);
     box-shadow: inset 0 0 72px rgba(var(--ei-halo-blue-rgb) / 0.055),
