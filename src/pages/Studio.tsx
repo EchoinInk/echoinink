@@ -157,7 +157,7 @@ export function Studio() {
         whileInView="visible"
         viewport={VIEWPORT.loose}
         aria-labelledby="philosophy-heading"
-        className="relative py-12 md:py-16"
+        className="relative py-12 px-6 md:py-16 md:px-10"
       >
         <StudioSectionRail number="02" label="Philosophy" />
 
