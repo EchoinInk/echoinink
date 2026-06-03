@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { PageShell } from '@/components/layout/PageShell';
 import { Container } from '@/components/layout/Container';
-import { EditorialHero } from '@/components/sections/EditorialHero';
+import { EditorialHero } from '@/components/sections/PageHero';
 import { QuoteCard } from '@/components/cards/QuoteCard';
 import { PhilosophyCard } from '@/components/cards/PhilosophyCard';
 import { ValuesGrid } from '@/components/studio/StudioValuesGrid';

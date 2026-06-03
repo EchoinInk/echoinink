@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { PageShell } from '@/components/layout/PageShell';
 import { Container } from '@/components/layout/Container';
-import { EditorialHero } from '@/components/sections/EditorialHero';
+import { EditorialHero } from '@/components/sections/PageHero';
 import { WorkFilterBar } from '@/components/works/WorkFilterBar';
 import { WorksGrid } from '@/components/works/WorksGrid';
 import { ProjectCTA } from '@/components/sections/ProjectCTA';
