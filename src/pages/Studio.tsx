@@ -79,7 +79,6 @@ export function Studio() {
       </Helmet>
 
       <EditorialHero
-        variant="studio"
         eyebrow="Studio"
         title="The philosophy behind the worlds."
         italicWord="worlds."
