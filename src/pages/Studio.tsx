@@ -134,7 +134,7 @@ export function Studio() {
                     <p
                       key={paragraph.slice(0, 32)}
                       className="
-                        max-w-[59ch] px-8 ei-body-large whitespace-pre-line
+                        max-w-[60ch] px-8 ei-body-large whitespace-pre-line
                       "
                       style={{ color: 'var(--ei-text-secondary)' }}
                     >
