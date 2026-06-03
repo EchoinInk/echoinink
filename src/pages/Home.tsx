@@ -4,7 +4,7 @@ import { Hero } from '@/components/sections/Hero';
 import { Philosophy } from '@/components/HomePhilosophySection';
 import { WhatWeCreate } from '@/components/WhatWeCreate';
 import { LumoCaseStudyTeaser } from '@/components/LumoCaseStudyHome';
-import { EmergingSystems } from '@/components/EmergingSystems';
+import { EmergingSystems } from '@/components/OurSystems';
 import { ClosingSection } from '@/components/sections/ClosingSection';
 
 export function Home() {
