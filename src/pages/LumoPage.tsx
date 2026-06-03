@@ -8,7 +8,7 @@ import {
   STAGGER,
   VIEWPORT
 } from '@/lib/motion-cinematic';
-import { SignatureCaseStudy } from '@/components/lumo/SignatureCaseStudy';
+import { SignatureCaseStudy } from '@/components/lumo/LumoSignatureCaseStudy';
 import { PageCTA } from '@/components/sections/PageCTA';
 
 export function LumoPage() {
