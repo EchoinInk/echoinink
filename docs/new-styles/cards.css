@@ -1,36 +1,51 @@
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Card System
+   Atmospheric card primitives for transformation, systems,
+   featured worlds, projects, and reflective quote cards.
+   Location: src/styles/03-components/cards.css
+   ═══════════════════════════════════════════════════════════════ */
+
 @layer base {
   :root {
     --ei-card-radius-sm: 20px;
     --ei-card-radius-md: 24px;
     --ei-card-radius-lg: 28px;
     --ei-card-radius-xl: 32px;
+
     --ei-card-bg:
       linear-gradient(
         180deg,
         rgba(11, 13, 42, 0.72),
         rgba(5, 3, 11, 0.92)
       );
+
     --ei-card-bg-soft:
       linear-gradient(
         180deg,
         rgba(11, 13, 42, 0.48),
         rgba(5, 3, 11, 0.72)
       );
+
     --ei-card-bg-hover:
       linear-gradient(
         180deg,
         rgba(11, 13, 42, 0.86),
         rgba(5, 3, 11, 0.96)
       );
-    --ei-card-border: rgba(227, 216, 253, 0.10);
-    --ei-card-border-hover: rgba(227, 216, 253, 0.20);
+
+    --ei-card-border: rgba(227, 216, 253, 0.1);
+    --ei-card-border-hover: rgba(227, 216, 253, 0.2);
+
     --ei-card-shadow:
       0 0 60px rgba(113, 7, 234, 0.08);
+
     --ei-card-shadow-hover:
       0 36px 140px rgba(0, 0, 0, 0.54),
-      0 0 80px rgba(221, 18, 203, 0.10);
+      0 0 80px rgba(221, 18, 203, 0.1);
+
     --ei-card-inner-highlight:
       inset 0 1px 0 rgba(247, 245, 250, 0.04);
+
     --ei-card-padding-sm: 1.5rem;
     --ei-card-padding-md: 1.75rem;
     --ei-card-padding-lg: 2.5rem;
@@ -39,6 +54,10 @@
 }
 
 @layer components {
+  /* ─────────────────────────────────────────────────────────
+     Base Card
+     ───────────────────────────────────────────────────────── */
+
   .ei-card {
     position: relative;
     overflow: hidden;
@@ -54,6 +73,7 @@
       box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1),
       transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
   }
+
   .ei-card:hover {
     background: var(--ei-card-bg-hover);
     border-color: var(--ei-card-border-hover);
@@ -61,25 +81,32 @@
       var(--ei-card-inner-highlight),
       var(--ei-card-shadow-hover);
   }
+
   .ei-card-interactive {
     cursor: pointer;
   }
+
   .ei-card-interactive:hover {
     transform: translateY(-2px);
   }
+
   .ei-card-soft {
     background: var(--ei-card-bg-soft);
   }
+
   .ei-card-small {
     border-radius: var(--ei-card-radius-md);
   }
+
   .ei-card-large {
     border-radius: var(--ei-card-radius-xl);
   }
+
   .ei-card-content {
     position: relative;
     z-index: 10;
   }
+
   .ei-card-atmosphere {
     pointer-events: none;
     position: absolute;
@@ -87,19 +114,28 @@
     opacity: 0;
     transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1);
   }
+
   .ei-card:hover .ei-card-atmosphere {
     opacity: 1;
   }
-}
 
-/* Transformation Card */
+  /* ─────────────────────────────────────────────────────────
+     Transformation Card
+     Use for philosophy, identity, values, creative direction,
+     studio principles, and emotional outcomes.
+     ───────────────────────────────────────────────────────── */
 
-@layer components {
   .ei-card-transformation {
     min-height: 320px;
     padding: var(--ei-card-padding-lg);
     text-align: center;
   }
+
+  .ei-card-transformation-compact {
+    min-height: 250px;
+    padding: var(--ei-card-padding-md);
+  }
+
   .ei-card-transformation .ei-card-atmosphere {
     background:
       radial-gradient(
@@ -113,6 +149,7 @@
         transparent 38%
       );
   }
+
   .ei-card-transformation-icon {
     margin-inline: auto;
     margin-bottom: 2rem;
@@ -120,36 +157,42 @@
     justify-content: center;
     filter: drop-shadow(0 0 18px rgba(73, 133, 253, 0.18));
   }
+
+  .ei-card-transformation-compact .ei-card-transformation-icon {
+    margin-bottom: 1rem;
+  }
+
   .ei-card-transformation-title {
     color: var(--ei-color-text-primary);
   }
+
   .ei-card-transformation-copy {
     margin-inline: auto;
     margin-top: 1rem;
     max-width: 18rem;
     color: var(--ei-color-text-secondary);
   }
-}
 
-⸻
+  /* ─────────────────────────────────────────────────────────
+     Systems Card
+     Use for tools, frameworks, GPT systems, UI kits,
+     digital products, and structured resources.
+     ───────────────────────────────────────────────────────── */
 
-/* Systems Card */
-
-@layer components {
   .ei-card-system {
+    position: relative;
     min-height: 180px;
     padding: var(--ei-card-padding-md);
     border-radius: var(--ei-card-radius-md);
     background:
       radial-gradient(
         ellipse 80% 80% at 50% 0%,
-        rgba(113, 7, 234, 0.06),
+        var(--ei-system-card-accent, rgba(113, 7, 234, 0.06)) 0%,
         transparent 60%
       ),
       rgba(247, 245, 250, 0.02);
     border: 1px solid rgba(247, 245, 250, 0.07);
   }
-}
 
   .ei-card-system::before {
     content: "";
@@ -162,67 +205,191 @@
     background:
       linear-gradient(
         90deg,
-        transparent,
-        rgba(73, 133, 253, 0.55),
-        transparent
+        transparent 0%,
+        var(--ei-system-status-color, rgba(73, 133, 253, 0.55)) 30%,
+        var(--ei-system-status-color, rgba(73, 133, 253, 0.55)) 70%,
+        transparent 100%
       );
     transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1);
   }
+
   .ei-card-system:hover::before {
     opacity: 0.72;
   }
+
+  .ei-card-system-glow {
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background:
+      radial-gradient(
+        ellipse 70% 60% at 50% 0%,
+        var(--ei-system-card-accent, rgba(113, 7, 234, 0.06)) 0%,
+        transparent 55%
+      );
+    transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .ei-card-system:hover .ei-card-system-glow {
+    opacity: 1;
+  }
+
+  .ei-card-system-inner {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    min-height: 180px;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
   .ei-card-system-header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
     gap: 0.75rem;
   }
+
+  .ei-card-system-main {
+    min-width: 0;
+    flex: 1;
+  }
+
   .ei-card-system-category {
     display: block;
     margin-bottom: 0.375rem;
     font-family: var(--ei-font-system);
     font-size: 0.5625rem;
+    line-height: 1.4;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--ei-color-text-muted);
   }
+
   .ei-card-system-title {
-    color: var(--ei-color-text-primary);
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1rem, 1.4vw, 1.1rem);
+    line-height: 1.3;
+    letter-spacing: -0.012em;
+    font-weight: 400;
+    color: rgba(247, 245, 250, 0.86);
+    transition: color 500ms cubic-bezier(0.22, 1, 0.36, 1);
   }
+
+  .ei-card-system:hover .ei-card-system-title {
+    color: rgba(247, 245, 250, 0.96);
+  }
+
   .ei-card-system-copy {
     margin-top: 0.75rem;
-    color: var(--ei-color-text-tertiary);
+    flex: 1;
+    font-family: var(--ei-font-structural);
+    font-size: clamp(0.75rem, 1vw, 0.8125rem);
+    line-height: 1.7;
+    letter-spacing: -0.003em;
+    color: rgba(227, 216, 253, 0.5);
+    transition: color 500ms cubic-bezier(0.22, 1, 0.36, 1);
   }
+
+  .ei-card-system:hover .ei-card-system-copy {
+    color: rgba(227, 216, 253, 0.65);
+  }
+
   .ei-card-system-status {
+    margin-top: 0.125rem;
     flex-shrink: 0;
     border-radius: 999px;
     padding: 0.25rem 0.5rem;
     font-family: var(--ei-font-system);
     font-size: 0.5rem;
+    line-height: 1.2;
     letter-spacing: 0.16em;
     text-transform: uppercase;
   }
-}
-⸻
 
-/* Featured World Card */
+  .ei-card-system[data-status="available"] {
+    --ei-system-status-color: rgba(73, 133, 253, 0.55);
+    --ei-system-card-accent: rgba(73, 133, 253, 0.06);
+  }
 
-@layer components {
+  .ei-card-system[data-status="soon"] {
+    --ei-system-status-color: rgba(227, 216, 253, 0.45);
+    --ei-system-card-accent: rgba(227, 216, 253, 0.04);
+  }
+
+  .ei-card-system[data-status="active"] {
+    --ei-system-status-color: rgba(221, 18, 203, 0.55);
+    --ei-system-card-accent: rgba(221, 18, 203, 0.06);
+  }
+
+  .ei-card-system-status[data-status="available"] {
+    color: rgba(73, 133, 253, 0.62);
+    background: rgba(73, 133, 253, 0.1);
+    border: 1px solid rgba(73, 133, 253, 0.2);
+  }
+
+  .ei-card-system-status[data-status="soon"] {
+    color: rgba(227, 216, 253, 0.54);
+    background: rgba(227, 216, 253, 0.08);
+    border: 1px solid rgba(227, 216, 253, 0.16);
+  }
+
+  .ei-card-system-status[data-status="active"] {
+    color: rgba(221, 18, 203, 0.64);
+    background: rgba(221, 18, 203, 0.1);
+    border: 1px solid rgba(221, 18, 203, 0.2);
+  }
+
+  /* System Grid */
+
+  .ei-system-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .ei-system-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .ei-system-grid[data-columns="3"] {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  .ei-system-grid[data-columns="2"] {
+    max-width: 860px;
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Featured World Card
+     Use for Lumo, major case studies, flagship projects,
+     and immersive proof modules.
+     ───────────────────────────────────────────────────────── */
+
   .ei-card-world {
     min-height: 420px;
     border-radius: var(--ei-card-radius-xl);
   }
+
   .ei-card-world-link {
     display: grid;
     min-height: inherit;
     color: inherit;
     text-decoration: none;
   }
+
   @media (min-width: 1024px) {
     .ei-card-world-link {
       grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     }
   }
+
   .ei-card-world-copy {
     position: relative;
     z-index: 10;
@@ -232,11 +399,13 @@
     gap: 2rem;
     padding: clamp(1.75rem, 4vw, 3rem);
   }
+
   .ei-card-world-media {
     position: relative;
     min-height: 240px;
     overflow: hidden;
   }
+
   .ei-card-world-media img {
     position: absolute;
     inset: 0;
@@ -245,30 +414,39 @@
     object-fit: cover;
     transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
   }
+
   .ei-card-world:hover .ei-card-world-media img {
     transform: scale(1.02);
   }
+
   .ei-card-world-overlay {
     position: absolute;
     inset: 0;
     background: var(--ei-gradient-image-overlay-soft);
   }
+
   .ei-card-world-title {
     color: var(--ei-color-text-primary);
   }
+
   .ei-card-world-category,
   .ei-card-world-meta {
     color: var(--ei-color-text-tertiary);
   }
+
   .ei-card-world-copy-text {
     max-width: 38ch;
     color: var(--ei-color-text-secondary);
   }
-}
 
-/* Quote Card */
-@layer components {
+  /* ─────────────────────────────────────────────────────────
+     Quote Card
+     Use for manifesto fragments, reflective statements,
+     emotional pauses, and studio philosophy moments.
+     ───────────────────────────────────────────────────────── */
+
   .ei-card-quote {
+    position: relative;
     min-height: 260px;
     max-width: 420px;
     margin-inline: auto;
@@ -295,13 +473,18 @@
     box-shadow:
       inset 0 0 72px rgba(73, 133, 253, 0.055),
       0 0 42px rgba(73, 133, 253, 0.045);
+    transition:
+      border-color 500ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1);
   }
+
   .ei-card-quote:hover {
     border-color: rgba(73, 133, 253, 0.28);
     box-shadow:
       inset 0 0 82px rgba(73, 133, 253, 0.075),
       0 0 54px rgba(73, 133, 253, 0.07);
   }
+
   .ei-card-quote-orbit {
     pointer-events: none;
     position: absolute;
@@ -314,12 +497,79 @@
     opacity: 0.45;
     transform: translate(-50%, -50%) rotate(-7deg);
   }
+
+  .ei-card-quote-orbit-secondary {
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    height: 92px;
+    width: 62%;
+    border-radius: 999px;
+    border: 1px solid rgba(73, 133, 253, 0.13);
+    opacity: 0.35;
+    transform: translate(-50%, -50%) rotate(-9deg);
+  }
+
   .ei-card-quote-text {
     position: relative;
     z-index: 10;
     max-width: 24ch;
     white-space: pre-line;
     color: rgba(73, 133, 253, 0.88);
-    text-shadow: 0 0 18px rgba(73, 133, 253, 0.10);
+    text-shadow: 0 0 18px rgba(73, 133, 253, 0.1);
+  }
+
+  .ei-card-quote-node {
+    position: absolute;
+    bottom: 2.25rem;
+    left: 50%;
+    z-index: 10;
+    height: 0.375rem;
+    width: 0.375rem;
+    border-radius: 999px;
+    transform: translateX(-50%);
+    background: var(--ei-halo-blue);
+    box-shadow:
+      0 0 10px rgba(73, 133, 253, 0.58),
+      0 0 22px rgba(73, 133, 253, 0.52);
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Mobile Refinements
+     ───────────────────────────────────────────────────────── */
+
+  @media (max-width: 768px) {
+    .ei-card-transformation {
+      min-height: 280px;
+      padding: var(--ei-card-padding-md);
+    }
+
+    .ei-card-world {
+      min-height: 360px;
+    }
+
+    .ei-card-world-copy {
+      padding: 1.75rem;
+    }
+
+    .ei-card-quote {
+      min-height: 240px;
+      padding: 2rem 1.5rem;
+    }
+
+    .ei-card-interactive:hover {
+      transform: none;
+    }
+  }
+
+  @media (hover: none) {
+    .ei-card-interactive:hover {
+      transform: none;
+    }
+
+    .ei-card-world:hover .ei-card-world-media img {
+      transform: none;
+    }
   }
 }
