@@ -14,19 +14,19 @@
 
     --ei-card-bg: linear-gradient(
       180deg,
-      rgba(var(--ei-midnight-blue-rgb) / 0.72),
+      rgba(var(--ei-midnight-rgb) / 0.72),
       rgba(var(--ei-void-rgb) / 0.92)
     );
 
     --ei-card-bg-soft: linear-gradient(
       180deg,
-      rgba(var(--ei-midnight-blue-rgb) / 0.48),
+      rgba(var(--ei-midnight-rgb) / 0.48),
       rgba(var(--ei-void-rgb) / 0.72)
     );
 
     --ei-card-bg-hover: linear-gradient(
       180deg,
-      rgba(var(--ei-midnight-blue-rgb) / 0.86),
+      rgba(var(--ei-midnight-rgb) / 0.86),
       rgba(var(--ei-void-rgb) / 0.96)
     );
 
@@ -508,7 +508,7 @@
   .ei-project-card-tag {
     border-radius: 999px;
     border: 1px solid var(--border-soft, rgba(var(--ei-moonlit-rgb) / 0.12));
-    background: rgba(var(--ei-midnight-blue-rgb) / 0.22);
+    background: rgba(var(--ei-midnight-rgb) / 0.22);
     padding: 0.25rem 0.625rem;
     font-family: var(--ei-font-system);
     font-size: 0.5625rem;
@@ -680,8 +680,8 @@
       ),
       radial-gradient(
         ellipse 78% 66% at 50% 42%,
-        rgba(var(--ei-midnight-blue-rgb) / 0.34) 0%,
-        rgba(var(--ei-midnight-blue-rgb) / 0.16) 54%,
+        rgba(var(--ei-midnight-rgb) / 0.34) 0%,
+        rgba(var(--ei-midnight-rgb) / 0.16) 54%,
         rgba(var(--ei-void-rgb) / 0.42) 100%
       );
     border: 1px solid rgba(var(--ei-halo-blue-rgb) / 0.18);
