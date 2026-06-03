@@ -129,7 +129,7 @@ Echo in Ink should feel slower than a conventional agency site. Sections need en
 ```
 ⸻
 
-8. Section Spacing
+## 8. Section Spacing
 
 Use these section classes consistently:
 
@@ -140,7 +140,7 @@ Use these section classes consistently:
 .ei-section-pause
 .ei-section-closing
 
-Hero
+### Hero
 
 Use for page openings.
 
@@ -150,7 +150,7 @@ Offer page hero
 Lumo intro
 Worlds intro
 
-Intimate
+### Intimate
 
 Use for quiet, reflective sections.
 
@@ -160,7 +160,7 @@ Contact form sections
 Archive text
 Small explanatory sections
 
-Standard
+### Standard
 
 Use for normal content modules.
 
@@ -170,7 +170,7 @@ Card grids
 Process sections
 Works content
 
-Expansive
+### Expansive
 
 Use for cinematic transitions and immersive sections.
 
@@ -179,7 +179,7 @@ Worldbuilding sections
 Lumo-style moments
 Major atmospheric breaks
 
-Pause
+### Pause
 
 Use for emotional emphasis.
 
@@ -188,7 +188,7 @@ Quotes
 Emotional thesis sections
 Monogram moments
 
-Closing
+### Closing
 
 Use for final invitations.
 
@@ -198,7 +198,7 @@ End-of-page atmospheric sections
 
 ⸻
 
-9. Do
+## 9. Do
 
 Use wide cinematic sections.
 Use narrow reading columns for philosophical copy.
@@ -210,7 +210,7 @@ Use section spacing to control emotion, not just layout.
 
 ⸻
 
-10. Don’t
+## 10. Don’t
 
 Do not center every section.
 Do not overuse symmetrical grids.
@@ -222,7 +222,7 @@ Do not make mobile feel like a squeezed desktop layout.
 
 ⸻
 
-11. Mobile Layout Rules
+## 11. Mobile Layout Rules
 
 On mobile, the layout should feel more intimate, not simply smaller.
 
@@ -242,7 +242,7 @@ Decoration last.
 
 ⸻
 
-12. Implementation Pairing
+## 12. Implementation Pairing
 
 Use this guideline document with:
 
@@ -258,5 +258,3 @@ Grid utilities
 Reading measure utilities
 Aspect ratio helpers
 Mobile spacing reductions
-
-So yes — what you pasted is the guideline. I’d just clean it into the format above and keep the actual CSS implementation separate.
