@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { PageShell } from '@/components/system';
+import { PageShell } from '@/components/layou1';
 import {
   fadeSoft,
   driftUp,
