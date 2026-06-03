@@ -167,26 +167,7 @@ export function Studio() {
               mx-auto max-w-[1180px] pt-12 md:pt-16
             "
           >
-            <div>
-              <motion.div variants={driftUp}>
-                <h2
-                  id="philosophy-heading"
-                  className="ei-section-title mb-5 whitespace-pre-line"
-                  style={{ color: 'var(--ei-text-primary)' }}
-                >
-                  Three beliefs shape the work.
-                </h2>
-
-                <p
-                  className="
-                    max-w-[59ch] ei-body-large                  "
-                  style={{ color: 'var(--ei-text-secondary)' }}
-                >
-                  A studio philosophy built around clarity, emotional truth, and
-                  meaningful expression.
-                </p>
-              </motion.div>
-
+ 
               <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7 lg:grid-cols-3">
                 {philosophyItems.map((item, index) => (
                   <PhilosophyCard
@@ -198,7 +179,7 @@ export function Studio() {
                 ))}
               </div>
             </div>
-          </div>
+        
         </Container>
       </motion.section>
 
