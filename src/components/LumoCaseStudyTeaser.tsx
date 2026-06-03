@@ -177,7 +177,7 @@ export function LumoCaseStudyTeaser() {
                         absolute -bottom-px left-0 h-px w-0
                         bg-[var(--ei-violet)]/70
                         transition-all duration-500
-                        ease-[cubic-bezier(0.22,1,0.36,1)]
+                        ease-out
                         group-hover:w-full
                       "
                     />
@@ -186,7 +186,7 @@ export function LumoCaseStudyTeaser() {
                   <span
                     className="
                       transition-transform duration-500
-                      ease-[cubic-bezier(0.22,1,0.36,1)]
+                      ease-out
                       group-hover:translate-x-1
                     "
                   >

@@ -83,7 +83,7 @@ export function EmergingSystems() {
               className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/55 hover:text-[var(--ei-violet)] transition-colors duration-500"
             >
               Explore All Systems
-              <span className="group-hover:translate-x-1 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">→</span>
+              <span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">→</span>
             </Link>
           </motion.div>
 

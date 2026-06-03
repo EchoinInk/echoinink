@@ -36,7 +36,7 @@ export function Button({
     inline-flex items-center justify-center
     font-structural uppercase
     transition-all duration-700
-    ease-[cubic-bezier(0.22,1,0.36,1)]
+    ease-out
     focus-visible:outline-none
     focus-visible:ring-2
     focus-visible:ring-white/45
@@ -94,7 +94,7 @@ before:bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_
 
   transition-all
   duration-500
-  ease-[cubic-bezier(.22,1,.36,1)]
+  ease-out
 `,
 
     secondary: `
@@ -131,7 +131,7 @@ before:bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_
       <span className="relative z-10">{children}</span>
 
       {variant === 'tertiary' && (
-        <span className="absolute bottom-0 left-0 h-px w-0 bg-white/35 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:w-full" />
+        <span className="absolute bottom-0 left-0 h-px w-0 bg-white/35 transition-all duration-500 ease-out group-hover:w-full" />
       )}
     </>
   );
