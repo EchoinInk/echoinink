@@ -18,7 +18,7 @@
     right: 0;
     bottom: -2px;
     height: 1px;
-    background: rgb(var(--ei-aurora-blue-rgb) / 0.45);
+    background: rgb(var(--ei-halo-blue-rgb) / 0.45);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -31,14 +31,14 @@
 
   .ei-link-underline {
     text-decoration: underline;
-    text-decoration-color: rgb(var(--ei-aurora-blue-rgb) / 0.32);
+    text-decoration-color: rgb(var(--ei-halo-blue-rgb) / 0.32);
     text-underline-offset: 3px;
     transition: text-decoration-color 0.4s ease;
   }
 
   .ei-link-underline:hover,
   .ei-link-underline:focus-visible {
-    text-decoration-color: rgb(var(--ei-aurora-blue-rgb) / 0.58);
+    text-decoration-color: rgb(var(--ei-halo-blue-rgb) / 0.58);
   }
 }
 
@@ -51,7 +51,7 @@
     padding: 0.75rem 1.25rem;
     background: var(--ei-void-black);
     color: var(--ei-ice-white);
-    border: 1px solid rgb(var(--ei-aurora-blue-rgb) / 0.35);
+    border: 1px solid rgb(var(--ei-halo-blue-rgb) / 0.35);
     border-radius: 6px;
     font-family: "Neue Montreal", sans-serif;
     font-size: 12px;
@@ -62,7 +62,7 @@
     height: auto;
     overflow: visible;
     white-space: nowrap;
-    outline: 2px solid rgb(var(--ei-aurora-blue-rgb) / 0.55);
+    outline: 2px solid rgb(var(--ei-halo-blue-rgb) / 0.55);
     outline-offset: 2px;
   }
 }
@@ -86,7 +86,7 @@
 .ei-aurora-cyan-glow {
   background: radial-gradient(
     ellipse 60% 66% at 58% 46%,
-    rgb(var(--ei-aurora-blue-rgb) / 0.07) 0%,
+    rgb(var(--ei-halo-blue-rgb) / 0.07) 0%,
     rgb(var(--ei-deep-indigo-rgb) / 0.035) 54%,
     transparent 82%
   );
@@ -119,7 +119,7 @@
     background: radial-gradient(
       ellipse 60% 55% at 45% 50%,
       rgb(var(--ei-luxe-violet-rgb) / 0.038) 0%,
-      rgb(var(--ei-aurora-blue-rgb) / 0.015) 55%,
+      rgb(var(--ei-halo-blue-rgb) / 0.015) 55%,
       transparent 75%
     );
     filter: blur(110px);
@@ -130,8 +130,8 @@
   .ei-glow-aqua {
     background: radial-gradient(
       ellipse 50% 45% at 55% 48%,
-      rgb(var(--ei-aurora-blue-rgb) / 0.03) 0%,
-      rgb(var(--ei-aurora-blue-rgb) / 0.015) 50%,
+      rgb(var(--ei-halo-blue-rgb) / 0.03) 0%,
+      rgb(var(--ei-halo-blue-rgb) / 0.015) 50%,
       transparent 70%
     );
     filter: blur(90px);
