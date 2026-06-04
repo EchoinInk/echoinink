@@ -43,13 +43,8 @@ export function HeroHeading() {
 </h1>
 
 <p className="
-  font-structural
-  mt-5
-  text-[11px]
-  md:text-[12px]
-  tracking-[0.16em]
-  uppercase
-  letter-spacing-[0.16em]
+ei-type-section-structural mt-5
+ 
   text-ei-echo-magenta/70
 ">
   Identity Systems, Digital Experiences & Narrative Direction
