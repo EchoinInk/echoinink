@@ -40,7 +40,7 @@ export default function Identity() {
         ctaHref={identityHero.primaryCta.href}
         image={identityHeroAtmosphere}
         mobileImage={identityHeroAtmosphere}
-        imageAlt="Cinematic nebula visual representing Echo In Ink selected works"
+        imageAlt="s"
         align="left"
       />
 
