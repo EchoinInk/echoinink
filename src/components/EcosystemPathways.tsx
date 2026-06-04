@@ -56,7 +56,7 @@ export function EcosystemPathways() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 65% 40% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.03) 0%, transparent 65%)',
+            'radial-gradient(ellipse 65% 40% at 50% 50%, rgb(var(--ei-midnight-rgb) / 0.03) 0%, transparent 65%)',
           filter: 'blur(70px)',
         }}
       />

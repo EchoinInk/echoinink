@@ -89,7 +89,7 @@ export function ImageLoading() {
       transition={{ duration: 0.3 }}
       className="absolute inset-0"
       style={{
-        background: 'linear-gradient(135deg, rgb(var(--ei-deep-indigo-rgb) / 0.8) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.6) 100%)',
+        background: 'linear-gradient(135deg, rgb(var(--ei-midnight-rgb) / 0.8) 0%, rgb(var(--ei-midnight-rgb) / 0.6) 100%)',
       }}
     />
   );

@@ -55,8 +55,8 @@ const cobalt = 'rgb(var(--ei-aurora-blue-rgb) / 0.92)';
 const cobaltSoft = 'rgb(var(--ei-electric-cyan-rgb) / 0.52)';
 const cobaltDim = 'rgb(var(--ei-aurora-blue-rgb) / 0.48)';
 
-const orbitBlue = 'rgb(var(--ei-deep-indigo-rgb) / 0.72)';
-const orbitBlueSoft = 'rgb(var(--ei-deep-indigo-rgb) / 0.42)';
+const orbitBlue = 'rgb(var(--ei-midnight-rgb) / 0.72)';
+const orbitBlueSoft = 'rgb(var(--ei-midnight-rgb) / 0.42)';
 
 const violet = 'rgb(var(--ei-luxe-violet-rgb) / 0.82)';
 const violetSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.78)';

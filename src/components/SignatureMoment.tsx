@@ -229,7 +229,7 @@ export function ImmersiveEi({ className = '' }: ImmersiveEiProps) {
       <div
         className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / 0.8) 0%, transparent 100%)',
+          background: 'linear-gradient(to top, rgb(var(--ei-midnight-rgb) / 0.8) 0%, transparent 100%)',
         }}
       />
     </div>
@@ -261,7 +261,7 @@ export function InkDiffusion({ children, className = '' }: InkDiffusionProps) {
           animate={isInView ? { opacity: 0 } : { opacity: 0.4 }}
           transition={{ duration: DURATION.slower * 2, ease: EASE_LUXURY, delay: 0.2 }}
           style={{
-            background: 'radial-gradient(ellipse 80% 80% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.95) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.7) 40%, transparent 70%)',
+            background: 'radial-gradient(ellipse 80% 80% at 50% 50%, rgb(var(--ei-midnight-rgb) / 0.95) 0%, rgb(var(--ei-midnight-rgb) / 0.7) 40%, transparent 70%)',
             filter: 'blur(40px)',
           }}
         />

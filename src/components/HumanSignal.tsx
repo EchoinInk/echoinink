@@ -70,13 +70,13 @@ export function HumanSignal() {
       <div
         className="absolute inset-x-0 top-0 h-20 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, rgb(var(--ei-deep-indigo-rgb) / 0.5) 0%, transparent 100%)',
+          background: 'linear-gradient(to bottom, rgb(var(--ei-midnight-rgb) / 0.5) 0%, transparent 100%)',
         }}
       />
       <div
         className="absolute inset-x-0 bottom-0 h-20 pointer-events-none"
         style={{
-          background: 'linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / 0.5) 0%, transparent 100%)',
+          background: 'linear-gradient(to top, rgb(var(--ei-midnight-rgb) / 0.5) 0%, transparent 100%)',
         }}
       />
     </section>

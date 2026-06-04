@@ -28,7 +28,7 @@ export function TrustSignal() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 30% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.02) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 60% 30% at 50% 50%, rgb(var(--ei-midnight-rgb) / 0.02) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -74,7 +74,7 @@ export function TrustSignal() {
             variants={blurEmergence}
             className="mt-8 md:mt-12 w-full h-px"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-luxe-violet-rgb) / 0.05) 30%, rgb(var(--ei-deep-indigo-rgb) / 0.05) 70%, transparent 100%)',
+              background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-luxe-violet-rgb) / 0.05) 30%, rgb(var(--ei-midnight-rgb) / 0.05) 70%, transparent 100%)',
             }}
           />
         </motion.div>

@@ -59,7 +59,7 @@
     background: radial-gradient(
       ellipse 80% 80% at 50% 50%,
       transparent 50%,
-      rgb(var(--ei-deep-indigo-rgb) / 0.25) 100%
+      rgb(var(--ei-midnight-rgb) / 0.25) 100%
     );
     pointer-events: none;
   }

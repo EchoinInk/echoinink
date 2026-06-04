@@ -5,22 +5,22 @@ const repoRoot = path.resolve(__dirname, '..');
 const exts = new Set(['.ts', '.tsx', '.js', '.jsx', '.css', '.mjs']);
 
 const replacements = [
-  ['--ei-orbit-blue-rgb', '--ei-deep-indigo-rgb'],
-  ['--ei-deep-nebula-rgb', '--ei-deep-indigo-rgb'],
+  ['--ei-orbit-blue-rgb', '--ei-midnight-rgb'],
+  ['--ei-deep-nebula-rgb', '--ei-midnight-rgb'],
   ['--ei-electric-cobalt-rgb', '--ei-aurora-blue-rgb'],
   ['--ei-ion-violet-rgb', '--ei-luxe-violet-rgb'],
   ['--ei-neon-magenta-rgb', '--ei-orchid-pink-rgb'],
   ['--ei-stellar-lilac-rgb', '--ei-soft-lavender-rgb'],
-  ['--ei-void-plum-rgb', '--ei-deep-indigo-rgb'],
+  ['--ei-void-plum-rgb', '--ei-midnight-rgb'],
   ['--ei-cosmic-black-rgb', '--ei-void-rgb'],
   ['--ei-photon-white-rgb', '--ei-ice-white-rgb'],
-  ['--ei-orbit-blue', '--ei-deep-indigo'],
-  ['--ei-deep-nebula', '--ei-deep-indigo'],
+  ['--ei-orbit-blue', '--ei-midnight'],
+  ['--ei-deep-nebula', '--ei-midnight'],
   ['--ei-electric-cobalt', '--ei-aurora-blue'],
   ['--ei-ion-violet', '--ei-luxe-violet'],
   ['--ei-neon-magenta', '--ei-orchid-pink'],
   ['--ei-stellar-lilac', '--ei-soft-lavender'],
-  ['--ei-void-plum', '--ei-deep-indigo'],
+  ['--ei-void-plum', '--ei-midnight'],
   ['--ei-cosmic-black', '--ei-void'],
   ['--ei-photon-white', '--ei-ice-white'],
 ];

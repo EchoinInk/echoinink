@@ -59,7 +59,7 @@ const TINTS = {
   violet:  'radial-gradient(ellipse 58% 55% at 36% 46%, rgb(var(--ei-luxe-violet-rgb) / 0.20) 0%, transparent 68%)',
   aqua:    'radial-gradient(ellipse 55% 50% at 63% 37%, rgb(var(--ei-aurora-blue-rgb) / 0.16) 0%, transparent 65%)',
   pink:    'radial-gradient(ellipse 50% 55% at 44% 52%, rgb(var(--ei-orchid-pink-rgb) / 0.17) 0%, transparent 66%)',
-  indigo:  'radial-gradient(ellipse 58% 52% at 52% 42%, rgb(var(--ei-deep-indigo-rgb) / 0.18) 0%, transparent 70%)',
+  indigo:  'radial-gradient(ellipse 58% 52% at 52% 42%, rgb(var(--ei-midnight-rgb) / 0.18) 0%, transparent 70%)',
   neutral: 'radial-gradient(ellipse 50% 50% at 50% 45%, rgb(var(--ei-soft-lavender-rgb) / 0.07) 0%, transparent 70%)',
 } as const;
 
@@ -85,12 +85,12 @@ function ImagePlaceholder({
         className="pointer-events-none"
         style={{ position: 'absolute', top: '-5%', left: '-3%', right: '-3%', bottom: '-5%', y }}
       >
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 85% 75% at 50% 58%, var(--ei-deep-indigo) 0%, var(--ei-void) 55%, var(--ei-void) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 85% 75% at 50% 58%, var(--ei-midnight) 0%, var(--ei-void) 55%, var(--ei-void) 100%)' }} />
         <div className="absolute inset-0" style={{ background: TINTS[tint] }} />
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 30% 34% at 82% 16%, rgb(var(--ei-ice-white-rgb) / 0.03) 0%, transparent 62%)' }} />
         <div className="absolute inset-0" style={{ backgroundImage: GRAIN, backgroundRepeat: 'repeat', backgroundSize: '200px 200px', opacity: 0.055, mixBlendMode: 'overlay' }} />
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 86% 82% at 50% 50%, transparent 30%, rgb(var(--ei-void-rgb) / 0.80) 100%)' }} />
-        <div className="absolute bottom-0 left-0 right-0 h-2/5" style={{ background: 'linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / 0.55), transparent)' }} />
+        <div className="absolute bottom-0 left-0 right-0 h-2/5" style={{ background: 'linear-gradient(to top, rgb(var(--ei-midnight-rgb) / 0.55), transparent)' }} />
       </motion.div>
       {/* Label — fixed, outside parallax */}
       {label && (
@@ -105,17 +105,17 @@ function ImagePlaceholder({
 function OriginPulseAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(155deg, rgb(var(--ei-deep-indigo-rgb) / 0.45) 0%, rgb(var(--ei-void-rgb) / 0.22) 48%, transparent 80%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(155deg, rgb(var(--ei-midnight-rgb) / 0.45) 0%, rgb(var(--ei-void-rgb) / 0.22) 48%, transparent 80%)' }} />
       <GlowField
         style={{ top: '-8%', left: '-12%', width: 'clamp(560px, 74vw, 980px)', height: 'clamp(560px, 74vw, 980px)', transformOrigin: '40% 44%' }}
-        gradient="radial-gradient(ellipse 50% 47% at 40% 44%, rgb(var(--ei-deep-indigo-rgb) / 0.14) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.055) 44%, transparent 70%)"
+        gradient="radial-gradient(ellipse 50% 47% at 40% 44%, rgb(var(--ei-midnight-rgb) / 0.14) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.055) 44%, transparent 70%)"
         blur={65}
         anim={{ opacity: [0.68, 1, 0.68], scale: [1, 1.038, 1] }}
         duration={24}
       />
       <GlowField
         style={{ top: '-20%', left: '-20%', width: 'clamp(700px, 96vw, 1280px)', height: 'clamp(700px, 96vw, 1280px)', transformOrigin: '42% 44%' }}
-        gradient="radial-gradient(ellipse 46% 44% at 42% 44%, transparent 40%, rgb(var(--ei-deep-indigo-rgb) / 0.065) 57%, transparent 72%)"
+        gradient="radial-gradient(ellipse 46% 44% at 42% 44%, transparent 40%, rgb(var(--ei-midnight-rgb) / 0.065) 57%, transparent 72%)"
         blur={55}
         anim={{ opacity: [0.45, 0.85, 0.45], scale: [0.97, 1.025, 0.97] }}
         duration={32} delay={6}
@@ -133,7 +133,7 @@ function OriginPulseAtmosphere() {
 function CognitiveLandscapeAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(138deg, rgb(var(--ei-deep-indigo-rgb) / 0.42) 0%, rgb(var(--ei-void-rgb) / 0.16) 52%, rgb(var(--ei-deep-indigo-rgb) / 0.10) 100%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(138deg, rgb(var(--ei-midnight-rgb) / 0.42) 0%, rgb(var(--ei-void-rgb) / 0.16) 52%, rgb(var(--ei-midnight-rgb) / 0.10) 100%)' }} />
       <GlowField
         style={{ inset: 0 }}
         gradient="radial-gradient(ellipse 52% 58% at 78% 54%, rgb(var(--ei-luxe-violet-rgb) / 0.065) 0%, transparent 68%)"
@@ -149,14 +149,14 @@ function CognitiveLandscapeAtmosphere() {
       />
       <GlowField
         style={{ top: '20%', right: '8%', width: 'clamp(200px, 26vw, 360px)', height: 'clamp(200px, 26vw, 360px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.075) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.03) 55%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.075) 0%, rgb(var(--ei-midnight-rgb) / 0.03) 55%, transparent 72%)"
         blur={44}
         anim={{ opacity: [0.65, 1, 0.65] }}
         duration={28}
       />
       <GlowField
         style={{ top: '48%', left: '15%', width: 'clamp(160px, 20vw, 280px)', height: 'clamp(160px, 20vw, 280px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.058) 0%, transparent 70%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-midnight-rgb) / 0.058) 0%, transparent 70%)"
         blur={38}
         anim={{ opacity: [0.45, 0.82, 0.45] }}
         duration={36} delay={9}
@@ -182,7 +182,7 @@ function BreathingIdentityAtmosphere() {
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
       <GlowField
         style={{ top: '-5%', right: '-14%', width: 'clamp(420px, 58vw, 800px)', height: 'clamp(420px, 58vw, 800px)', transformOrigin: '60% 44%' }}
-        gradient="radial-gradient(ellipse 54% 52% at 60% 44%, rgb(var(--ei-luxe-violet-rgb) / 0.13) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.07) 35%, rgb(var(--ei-deep-indigo-rgb) / 0.03) 60%, transparent 75%)"
+        gradient="radial-gradient(ellipse 54% 52% at 60% 44%, rgb(var(--ei-luxe-violet-rgb) / 0.13) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.07) 35%, rgb(var(--ei-midnight-rgb) / 0.03) 60%, transparent 75%)"
         blur={55}
         anim={{ opacity: [0.72, 1, 0.72], scale: [1, 1.022, 1] }}
         duration={26}
@@ -210,24 +210,24 @@ function BreathingIdentityAtmosphere() {
 function HumaneFrameworkAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(145deg, rgb(var(--ei-deep-indigo-rgb) / 0.38) 0%, rgb(var(--ei-void-rgb) / 0.16) 55%, transparent 85%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(145deg, rgb(var(--ei-midnight-rgb) / 0.38) 0%, rgb(var(--ei-void-rgb) / 0.16) 55%, transparent 85%)' }} />
       <GlowField
         style={{ top: '5%', left: '-4%', width: 'clamp(200px, 28vw, 380px)', height: 'clamp(200px, 28vw, 380px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.078) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.030) 55%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-midnight-rgb) / 0.078) 0%, rgb(var(--ei-midnight-rgb) / 0.030) 55%, transparent 72%)"
         blur={48}
         anim={{ opacity: [0.60, 1, 0.60] }}
         duration={24}
       />
       <GlowField
         style={{ top: '8%', right: '-2%', width: 'clamp(200px, 26vw, 360px)', height: 'clamp(200px, 26vw, 360px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.070) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.026) 55%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-midnight-rgb) / 0.070) 0%, rgb(var(--ei-midnight-rgb) / 0.026) 55%, transparent 72%)"
         blur={44}
         anim={{ opacity: [0.45, 0.88, 0.45] }}
         duration={31} delay={6}
       />
       <GlowField
         style={{ bottom: '8%', right: '4%', width: 'clamp(180px, 24vw, 340px)', height: 'clamp(180px, 24vw, 340px)' }}
-        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.072) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.026) 55%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-midnight-rgb) / 0.072) 0%, rgb(var(--ei-midnight-rgb) / 0.026) 55%, transparent 72%)"
         blur={46}
         anim={{ opacity: [0.55, 0.90, 0.55] }}
         duration={28} delay={16}
@@ -251,14 +251,14 @@ function FragmentsAtmosphere() {
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
       <GlowField
         style={{ top: '-5%', left: '-10%', width: 'clamp(500px, 68vw, 900px)', height: 'clamp(500px, 68vw, 900px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 40% 46%, rgb(var(--ei-luxe-violet-rgb) / 0.080) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.033) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 40% 46%, rgb(var(--ei-luxe-violet-rgb) / 0.080) 0%, rgb(var(--ei-midnight-rgb) / 0.033) 52%, transparent 72%)"
         blur={68}
         anim={{ opacity: [0.60, 0.94, 0.60] }}
         duration={32}
       />
       <GlowField
         style={{ bottom: '15%', right: '-6%', width: 'clamp(280px, 38vw, 560px)', height: 'clamp(280px, 38vw, 560px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.068) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.028) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 50% 50%, rgb(var(--ei-midnight-rgb) / 0.068) 0%, rgb(var(--ei-midnight-rgb) / 0.028) 52%, transparent 72%)"
         blur={62}
         anim={{ opacity: [0.48, 0.80, 0.48] }}
         duration={38} delay={10}
@@ -276,14 +276,14 @@ function BecomingAtmosphere() {
       <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 28%, rgb(var(--ei-void-rgb) / 0.10) 100%)' }} />
       <AtmosphericBloom
         size="clamp(640px, 92vw, 1240px)"
-        gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.092) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.036) 48%, transparent 72%)"
+        gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.092) 0%, rgb(var(--ei-midnight-rgb) / 0.036) 48%, transparent 72%)"
         blur={70}
         anim={{ opacity: [0.60, 1, 0.60], scale: [1, 1.024, 1] }}
         duration={30}
       />
       <GlowField
         style={{ bottom: '-8%', left: '-15%', right: '-15%', height: 'clamp(320px, 44vw, 640px)' }}
-        gradient="radial-gradient(ellipse 88% 48% at 50% 82%, rgb(var(--ei-luxe-violet-rgb) / 0.075) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.030) 50%, transparent 74%)"
+        gradient="radial-gradient(ellipse 88% 48% at 50% 82%, rgb(var(--ei-luxe-violet-rgb) / 0.075) 0%, rgb(var(--ei-midnight-rgb) / 0.030) 50%, transparent 74%)"
         blur={68}
         anim={{ opacity: [0.50, 0.82, 0.50] }}
         duration={38} delay={8}
@@ -307,17 +307,17 @@ function BecomingAtmosphere() {
 function HeldAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgb(var(--ei-deep-indigo-rgb) / 0.28) 0%, transparent 62%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgb(var(--ei-midnight-rgb) / 0.28) 0%, transparent 62%)' }} />
       <GlowField
         style={{ top: '-2%', left: '-8%', width: 'clamp(500px, 65vw, 880px)', height: 'clamp(500px, 65vw, 880px)' }}
-        gradient="radial-gradient(ellipse 52% 50% at 44% 46%, rgb(var(--ei-luxe-violet-rgb) / 0.068) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.028) 50%, transparent 72%)"
+        gradient="radial-gradient(ellipse 52% 50% at 44% 46%, rgb(var(--ei-luxe-violet-rgb) / 0.068) 0%, rgb(var(--ei-midnight-rgb) / 0.028) 50%, transparent 72%)"
         blur={75}
         anim={{ opacity: [0.65, 1, 0.65] }}
         duration={38}
       />
       <GlowField
         style={{ top: '20%', left: '5%', width: 'clamp(380px, 52vw, 720px)', height: 'clamp(380px, 52vw, 720px)' }}
-        gradient="radial-gradient(ellipse 55% 52% at 48% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.048) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.018) 52%, transparent 72%)"
+        gradient="radial-gradient(ellipse 55% 52% at 48% 50%, rgb(var(--ei-midnight-rgb) / 0.048) 0%, rgb(var(--ei-midnight-rgb) / 0.018) 52%, transparent 72%)"
         blur={62}
         anim={{ opacity: [0.55, 0.85, 0.55] }}
         duration={40} delay={12}
@@ -340,7 +340,7 @@ function ExhaleAtmosphere() {
       <div style={{ position: 'absolute', top: '50%', left: '50%', width: 'clamp(480px, 65vw, 860px)', height: 'clamp(480px, 65vw, 860px)', transform: 'translate(-50%, -55%)' }}>
         <GlowField
           style={{ inset: 0 }}
-          gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.075) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.030) 48%, transparent 72%)"
+          gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.075) 0%, rgb(var(--ei-midnight-rgb) / 0.030) 48%, transparent 72%)"
           blur={90}
           anim={{ opacity: [0.58, 0.92, 0.58] }}
           duration={40}
@@ -765,7 +765,7 @@ export function SignatureCaseStudy() {
       {/* ── 06 — THE TRANSFORMATION ─────────────────────────────────── */}
       <section
         className="relative overflow-hidden py-24 md:py-48"
-        style={{ background: 'linear-gradient(180deg, var(--ei-void) 0%, var(--ei-deep-indigo) 50%, var(--ei-void) 100%)' }}
+        style={{ background: 'linear-gradient(180deg, var(--ei-void) 0%, var(--ei-midnight) 50%, var(--ei-void) 100%)' }}
       >
         <BecomingAtmosphere />
         <div className="ei-container">
@@ -861,7 +861,7 @@ export function SignatureCaseStudy() {
       {/* ── 08 — THE ECHO IN INK SIGNATURE ──────────────────────────── */}
       <section
         className="relative py-24 md:py-40 text-center overflow-hidden"
-        style={{ background: 'linear-gradient(180deg, var(--ei-void) 0%, var(--ei-deep-indigo) 45%, var(--ei-void) 100%)' }}
+        style={{ background: 'linear-gradient(180deg, var(--ei-void) 0%, var(--ei-midnight) 45%, var(--ei-void) 100%)' }}
       >
         <ExhaleAtmosphere />
         <div className="ei-container max-w-xl mx-auto">

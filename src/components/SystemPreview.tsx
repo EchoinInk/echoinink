@@ -41,7 +41,7 @@ const systems: SystemCardProps[] = [
       'A visual and tonal system for directing atmospheric quality across brand touchpoints and digital environments.',
     category: 'UI System',
     status: 'soon',
-    accent: 'rgb(var(--ei-deep-indigo-rgb) / 0.07)',
+    accent: 'rgb(var(--ei-midnight-rgb) / 0.07)',
   },
   {
     title: 'Identity GPT',

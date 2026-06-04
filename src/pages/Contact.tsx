@@ -135,16 +135,16 @@ export function Contact() {
           className="absolute inset-0 opacity-70"
           style={{
             background:
-              'radial-gradient(ellipse 42% 34% at 28% 18%, rgb(var(--ei-deep-indigo-rgb) / 0.22) 0%, transparent 68%), radial-gradient(ellipse 34% 28% at 77% 16%, rgb(var(--ei-luxe-violet-rgb) / 0.07) 0%, transparent 72%), radial-gradient(ellipse 52% 38% at 50% 58%, rgb(var(--ei-aurora-blue-rgb) / 0.035) 0%, transparent 70%)',
+              'radial-gradient(ellipse 42% 34% at 28% 18%, rgb(var(--ei-midnight-rgb) / 0.22) 0%, transparent 68%), radial-gradient(ellipse 34% 28% at 77% 16%, rgb(var(--ei-luxe-violet-rgb) / 0.07) 0%, transparent 72%), radial-gradient(ellipse 52% 38% at 50% 58%, rgb(var(--ei-aurora-blue-rgb) / 0.035) 0%, transparent 70%)',
           }}
         />
         <div
           className="absolute inset-y-0 left-[14%] w-px opacity-40"
-          style={{ background: 'linear-gradient(to bottom, transparent, rgb(var(--ei-deep-indigo-rgb) / 0.22), transparent)' }}
+          style={{ background: 'linear-gradient(to bottom, transparent, rgb(var(--ei-midnight-rgb) / 0.22), transparent)' }}
         />
         <div
           className="absolute inset-y-0 right-[22%] w-[18vw] opacity-25"
-          style={{ background: 'linear-gradient(90deg, transparent, rgb(var(--ei-deep-indigo-rgb) / 0.18), transparent)' }}
+          style={{ background: 'linear-gradient(90deg, transparent, rgb(var(--ei-midnight-rgb) / 0.18), transparent)' }}
         />
       </div>
 
@@ -213,7 +213,7 @@ export function Contact() {
                     className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
                     style={{
                       background:
-                        'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
+                        'linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
                     }}
                   />
                 </div>
@@ -357,7 +357,7 @@ export function Contact() {
                     type="submit"
                     variant="primary"
                     disabled={formState === 'submitting'}
-                    className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.36)] hover:shadow-[0_10px_40px_rgb(var(--ei-aurora-blue-rgb)/0.08)] disabled:opacity-80"
+                    className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.36)] hover:shadow-[0_10px_40px_rgb(var(--ei-aurora-blue-rgb)/0.08)] disabled:opacity-80"
                   >
                     {formState === 'submitting' ? 'Sending...' : 'Send Message'}
                   </Button>
@@ -397,7 +397,7 @@ export function Contact() {
     className="absolute inset-0"
     style={{
       background:
-        'radial-gradient(ellipse 54% 65% at 20% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.18) 0%, transparent 70%), radial-gradient(ellipse 42% 48% at 72% 45%, rgb(var(--ei-luxe-violet-rgb) / 0.12) 0%, transparent 68%)',
+        'radial-gradient(ellipse 54% 65% at 20% 50%, rgb(var(--ei-midnight-rgb) / 0.18) 0%, transparent 70%), radial-gradient(ellipse 42% 48% at 72% 45%, rgb(var(--ei-luxe-violet-rgb) / 0.12) 0%, transparent 68%)',
     }}
   />
 

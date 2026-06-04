@@ -6,22 +6,22 @@ const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..'
 const exts = new Set(['.ts', '.tsx', '.js', '.jsx', '.css', '.mjs']);
 
 const replacements = [
-  ['--ei-deep-indigo-rgb', '--ei-deep-indigo-rgb'],
-  ['--ei-deep-indigo-rgb', '--ei-deep-indigo-rgb'],
+  ['--ei-midnight-rgb', '--ei-midnight-rgb'],
+  ['--ei-midnight-rgb', '--ei-midnight-rgb'],
   ['--ei-aurora-blue-rgb', '--ei-aurora-blue-rgb'],
   ['--ei-luxe-violet-rgb', '--ei-luxe-violet-rgb'],
   ['--ei-orchid-pink-rgb', '--ei-orchid-pink-rgb'],
   ['--ei-soft-lavender-rgb', '--ei-soft-lavender-rgb'],
-  ['--ei-deep-indigo-rgb', '--ei-deep-indigo-rgb'],
+  ['--ei-midnight-rgb', '--ei-midnight-rgb'],
   ['--ei-void-rgb', '--ei-void-rgb'],
   ['--ei-ice-white-rgb', '--ei-ice-white-rgb'],
-  ['--ei-deep-indigo', '--ei-deep-indigo'],
-  ['--ei-deep-indigo', '--ei-deep-indigo'],
+  ['--ei-midnight', '--ei-midnight'],
+  ['--ei-midnight', '--ei-midnight'],
   ['--ei-aurora-blue', '--ei-aurora-blue'],
   ['--ei-luxe-violet', '--ei-luxe-violet'],
   ['--ei-orchid-pink', '--ei-orchid-pink'],
   ['--ei-soft-lavender', '--ei-soft-lavender'],
-  ['--ei-deep-indigo', '--ei-deep-indigo'],
+  ['--ei-midnight', '--ei-midnight'],
   ['--ei-void', '--ei-void'],
   ['--ei-ice-white', '--ei-ice-white'],
 ];

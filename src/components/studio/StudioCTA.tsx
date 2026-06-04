@@ -56,7 +56,7 @@ export function StudioCTA({
         className="absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 50% 58% at 18% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.16) 0%, transparent 68%)',
+            'radial-gradient(ellipse 50% 58% at 18% 50%, rgb(var(--ei-midnight-rgb) / 0.16) 0%, transparent 68%)',
         }}
       />
 

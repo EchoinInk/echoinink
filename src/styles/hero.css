@@ -181,7 +181,7 @@
   .ei-gradient-border-btn {
     position: relative;
     z-index: 1;
-    background: rgb(var(--ei-deep-indigo-rgb) / 0.6);
+    background: rgb(var(--ei-midnight-rgb) / 0.6);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border-radius: 9999px;

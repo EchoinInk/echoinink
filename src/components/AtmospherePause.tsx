@@ -27,7 +27,7 @@ export function AtmospherePause() {
           duration: AMBIENT.luminance.duration * 1.2,
         }}
         style={{
-            background: 'radial-gradient(ellipse 30% 22% at 50% 48%, rgb(var(--ei-deep-indigo-rgb) / 0.025) 0%, transparent 65%)',
+            background: 'radial-gradient(ellipse 30% 22% at 50% 48%, rgb(var(--ei-midnight-rgb) / 0.025) 0%, transparent 65%)',
           filter: 'blur(60px)',
         }}
       />
@@ -82,7 +82,7 @@ export function AtmospherePause() {
       <div 
         className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
         style={{
-            background: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-indigo-rgb) / 0.3) 50%, rgb(var(--ei-deep-indigo-rgb) / 0.7) 100%)',
+            background: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-midnight-rgb) / 0.3) 50%, rgb(var(--ei-midnight-rgb) / 0.7) 100%)',
         }}
       />
     </section>

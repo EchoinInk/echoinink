@@ -65,7 +65,7 @@ export function ProductHero({
         className="absolute inset-x-0 bottom-0 h-32 pointer-events-none z-10"
         style={{
           background:
-            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-indigo-rgb) / 0.6) 60%, var(--ei-void) 100%)',
+            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-midnight-rgb) / 0.6) 60%, var(--ei-void) 100%)',
         }}
       />
 

@@ -24,7 +24,7 @@ function ProjectTags({ tags }: { tags: string[] }) {
           style={{
             color: 'var(--ei-text-tertiary)',
             borderColor: 'var(--border-soft)',
-            background: 'rgb(var(--ei-deep-indigo-rgb) / 0.22)',
+            background: 'rgb(var(--ei-midnight-rgb) / 0.22)',
           }}
         >
           {tag}

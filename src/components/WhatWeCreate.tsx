@@ -59,7 +59,7 @@ export function WhatWeCreate() {
           className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
+              'linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
           }}
         />          </motion.div>
 
@@ -69,7 +69,7 @@ export function WhatWeCreate() {
               <motion.article key={cap.title} variants={driftUp}>
                 <Link
                   to={cap.href}
-                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[var(--ei-deep-indigo)]/80 p-6 transition-all duration-500 motion-reduce:transition-none hover:border-[var(--ei-luxe-violet)]/40 hover:shadow-[inset_0_10px_40px_rgb(var(--ei-luxe-violet-rgb)/0.04),0_18px_50px_rgb(0_0_0_/_0.36)] hover:-translate-y-[2px] motion-reduce:transform-none backdrop-blur-sm"
+                  className="group flex flex-col h-full rounded-[var(--radius-card)] border border-white/10 bg-gradient-to-b from-white/[0.04] to-[var(--ei-midnight)]/80 p-6 transition-all duration-500 motion-reduce:transition-none hover:border-[var(--ei-luxe-violet)]/40 hover:shadow-[inset_0_10px_40px_rgb(var(--ei-luxe-violet-rgb)/0.04),0_18px_50px_rgb(0_0_0_/_0.36)] hover:-translate-y-[2px] motion-reduce:transform-none backdrop-blur-sm"
                   aria-label={`Explore ${cap.title}`}
                 >
                   {/* Icon */}

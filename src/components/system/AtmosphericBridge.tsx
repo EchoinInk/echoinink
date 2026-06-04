@@ -16,9 +16,9 @@ const heightClasses = {
 };
 
 const gradientStyles = {
-  ink: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-indigo-rgb) / 0.6) 50%, rgb(var(--ei-deep-indigo-rgb) / 0.95) 100%)',
-  violet: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-indigo-rgb) / 0.04) 50%, rgb(var(--ei-deep-indigo-rgb) / 0.8) 100%)',
-  aqua: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-aurora-blue-rgb) / 0.03) 50%, rgb(var(--ei-deep-indigo-rgb) / 0.8) 100%)',
+  ink: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-midnight-rgb) / 0.6) 50%, rgb(var(--ei-midnight-rgb) / 0.95) 100%)',
+  violet: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-midnight-rgb) / 0.04) 50%, rgb(var(--ei-midnight-rgb) / 0.8) 100%)',
+  aqua: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-aurora-blue-rgb) / 0.03) 50%, rgb(var(--ei-midnight-rgb) / 0.8) 100%)',
   transparent: 'transparent',
 };
 

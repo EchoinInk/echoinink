@@ -86,7 +86,7 @@ export function CinematicStatement() {
       <div
         className="absolute inset-x-0 bottom-0 h-32 pointer-events-none"
         style={{
-          background: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-deep-indigo-rgb) / 0.5) 50%, rgb(var(--ei-void-rgb) / 0.9) 100%)',
+          background: 'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-midnight-rgb) / 0.5) 50%, rgb(var(--ei-void-rgb) / 0.9) 100%)',
         }}
       />
     </section>

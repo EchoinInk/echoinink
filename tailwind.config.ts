@@ -66,7 +66,7 @@ export default {
         // Echo in Ink: EI Aurora Luxe (refer to CSS variables in tokens.css)
         ei: {
           void: 'var(--ei-void)',
-          indigo: 'var(--ei-deep-indigo)',
+          indigo: 'var(--ei-midnight)',
           aurora: 'var(--ei-aurora-blue)',
           cyan: 'var(--ei-electric-cyan)',
           orchid: 'var(--ei-orchid-pink)',
@@ -81,8 +81,8 @@ export default {
           'text-accent': 'var(--ei-aurora-blue)',
           'text-accent-secondary': 'var(--ei-orchid-pink)',
           'surface-deep': 'var(--ei-void)',
-          'surface-panel': 'rgb(var(--ei-deep-indigo-rgb) / 0.35)',
-          'surface-card': 'rgb(var(--ei-deep-indigo-rgb) / 0.25)',
+          'surface-panel': 'rgb(var(--ei-midnight-rgb) / 0.35)',
+          'surface-card': 'rgb(var(--ei-midnight-rgb) / 0.25)',
           'surface-elevated': 'rgb(var(--ei-aurora-blue-rgb) / 0.15)',
         },
       },

@@ -9,10 +9,10 @@
   /* ── Tonal Black Surfaces ─────────────────────────────────── */
   :root {
     --ei-surface-void: var(--ei-void);
-    --ei-surface-deep: var(--ei-deep-indigo);
-    --ei-surface-mid: rgb(var(--ei-deep-indigo-rgb) / 0.8);
-    --ei-surface-base: rgb(var(--ei-deep-indigo-rgb) / 0.6);
-    --ei-surface-raised: rgb(var(--ei-deep-indigo-rgb) / 0.5);
+    --ei-surface-deep: var(--ei-midnight);
+    --ei-surface-mid: rgb(var(--ei-midnight-rgb) / 0.8);
+    --ei-surface-base: rgb(var(--ei-midnight-rgb) / 0.6);
+    --ei-surface-raised: rgb(var(--ei-midnight-rgb) / 0.5);
     --ei-surface-elevated: rgb(var(--ei-aurora-blue-rgb) / 0.4);
   }
 
@@ -152,7 +152,7 @@
     background: radial-gradient(
       ellipse 80% 80% at 50% 50%,
       transparent 50%,
-      rgb(var(--ei-deep-indigo-rgb) / 0.25) 100%
+      rgb(var(--ei-midnight-rgb) / 0.25) 100%
     );
     pointer-events: none;
   }
@@ -453,7 +453,7 @@
     background: radial-gradient(
       ellipse 100% 50% at 50% 0%,
       rgb(var(--ei-luxe-violet-rgb) / 0.035) 0%,
-      rgb(var(--ei-deep-indigo-rgb) / 0.025) 40%,
+      rgb(var(--ei-midnight-rgb) / 0.025) 40%,
       transparent 60%
     );
     filter: blur(90px);

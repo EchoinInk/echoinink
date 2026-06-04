@@ -74,7 +74,7 @@ export function EmergingSystems() {
           className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgb(var(--ei-deep-indigo-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
+              'linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
           }}
         />            </div>
 
@@ -93,7 +93,7 @@ export function EmergingSystems() {
               <motion.article key={system.title} variants={driftUp}>
                 <Link
                   to={system.href}
-                  className="group flex flex-col h-full rounded-[24px] border border-white/10 bg-[var(--ei-deep-indigo)]/70 p-7 transition-all duration-500 hover:border-[var(--ei-luxe-violet)]/30 hover:shadow-[0_0_60px_rgb(var(--ei-luxe-violet-rgb)/0.12)]"
+                  className="group flex flex-col h-full rounded-[24px] border border-white/10 bg-[var(--ei-midnight)]/70 p-7 transition-all duration-500 hover:border-[var(--ei-luxe-violet)]/30 hover:shadow-[0_0_60px_rgb(var(--ei-luxe-violet-rgb)/0.12)]"
                   aria-label={system.title}
                 >
                   {/* Orbital icon */}
