@@ -306,8 +306,8 @@
   .ei-type-whisper-uppercase {
     font-family: var(--ei-font-structural);
     font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
     line-height: 1.4;
     text-transform: uppercase;
     color: var(--ei-type-color-muted);
