@@ -1,166 +1,85 @@
 /* ═══════════════════════════════════════════════════════════════
    Echo in Ink — Identity page atmosphere
-   Restrained hero "direction board" visual.
+   Right-side hero atmospheric field (luminous asset, integrated with
+   restraint: dark veil, edge fades, feathered mask — no extra glow).
    Location: src/styles/03-components/identity.css
    ═══════════════════════════════════════════════════════════════ */
 
 @layer components {
-  .ei-identity-visual {
+  .ei-identity-hero-media {
     position: relative;
-    aspect-ratio: 4 / 3.3;
     width: 100%;
+    aspect-ratio: 4 / 4.4;
     overflow: hidden;
     border-radius: var(--ei-card-radius-lg);
-    border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.1);
-    background: linear-gradient(
-      180deg,
-      rgb(var(--ei-midnight-rgb) / 0.42),
-      rgb(var(--ei-void-rgb) / 0.78)
-    );
-    box-shadow: var(--ei-card-inner-highlight), var(--ei-card-shadow);
+    -webkit-mask-image: radial-gradient(ellipse 96% 92% at 56% 42%, #000 50%, transparent 100%);
+    mask-image: radial-gradient(ellipse 96% 92% at 56% 42%, #000 50%, transparent 100%);
   }
 
-  .ei-identity-visual-field {
+  .ei-identity-hero-img {
     position: absolute;
     inset: 0;
-    background:
-      radial-gradient(
-        ellipse 58% 50% at 72% 28%,
-        rgb(var(--ei-violet-rgb) / 0.16) 0%,
-        transparent 66%
-      ),
-      radial-gradient(
-        ellipse 55% 46% at 22% 80%,
-        rgb(var(--ei-halo-blue-rgb) / 0.1) 0%,
-        transparent 72%
-      );
-  }
-
-  .ei-identity-visual-grid {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(to right, rgb(var(--ei-moonlit-rgb) / 0.045) 1px, transparent 1px),
-      linear-gradient(to bottom, rgb(var(--ei-moonlit-rgb) / 0.045) 1px, transparent 1px);
-    background-size: 40px 40px;
-    -webkit-mask-image: radial-gradient(ellipse 82% 82% at 48% 40%, black 28%, transparent 82%);
-    mask-image: radial-gradient(ellipse 82% 82% at 48% 40%, black 28%, transparent 82%);
-  }
-
-  .ei-identity-board {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-    justify-content: center;
-    gap: clamp(1rem, 2.4vw, 1.5rem);
-    padding: clamp(1.5rem, 3vw, 2.4rem);
-    padding-right: clamp(4.5rem, 9vw, 6.5rem);
-  }
-
-  .ei-identity-board-head {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .ei-identity-specimen {
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(2.1rem, 4.6vw, 2.9rem);
-    line-height: 1;
-    color: rgb(var(--ei-ice-white-rgb) / 0.9);
-  }
-
-  .ei-identity-typelines {
-    display: grid;
-    flex: 1;
-    gap: 0.5rem;
-  }
-
-  .ei-identity-typelines span {
-    height: 6px;
-    border-radius: 999px;
-    background: rgb(var(--ei-moonlit-rgb) / 0.16);
-  }
-
-  .ei-identity-typelines span:nth-child(1) { width: 92%; }
-  .ei-identity-typelines span:nth-child(2) { width: 68%; }
-  .ei-identity-typelines span:nth-child(3) { width: 46%; }
-
-  .ei-identity-palette {
-    display: flex;
-    gap: 0.6rem;
-  }
-
-  .ei-identity-palette span {
-    width: clamp(1.9rem, 3.8vw, 2.5rem);
-    height: clamp(2.5rem, 4.8vw, 3.3rem);
-    border-radius: 10px;
-    border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.12);
-    opacity: 0.85;
-  }
-
-  .ei-identity-mood {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.6rem;
-  }
-
-  .ei-identity-mood span {
-    aspect-ratio: 16 / 10;
-    border-radius: 10px;
-    border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.1);
-  }
-
-  .ei-identity-mood span:nth-child(1) {
-    background: linear-gradient(145deg, rgb(var(--ei-midnight-rgb) / 0.85), rgb(var(--ei-violet-rgb) / 0.22));
-  }
-
-  .ei-identity-mood span:nth-child(2) {
-    background: linear-gradient(145deg, rgb(var(--ei-midnight-rgb) / 0.85), rgb(var(--ei-halo-blue-rgb) / 0.2));
-  }
-
-  .ei-identity-mood span:nth-child(3) {
-    background: linear-gradient(145deg, rgb(var(--ei-midnight-rgb) / 0.85), rgb(var(--ei-echo-magenta-rgb) / 0.18));
-  }
-
-  .ei-identity-wave {
     width: 100%;
-    height: clamp(20px, 4vw, 28px);
-    color: rgb(var(--ei-halo-blue-rgb) / 0.5);
+    height: 100%;
+    object-fit: cover;
+    object-position: 56% 40%;
+    opacity: 0.95;
+    filter: brightness(0.9) saturate(0.92);
+    user-select: none;
+    pointer-events: none;
   }
 
-  .ei-identity-rail {
+  /* Tame the luminance so the asset supports the page rather than dominating it. */
+  .ei-identity-hero-veil {
     position: absolute;
-    top: 50%;
-    right: clamp(1rem, 2.2vw, 1.5rem);
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    gap: clamp(0.7rem, 1.6vw, 1rem);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    transform: translateY(-50%);
+    inset: 0;
+    background: rgb(var(--ei-void-rgb) / 0.22);
   }
 
-  .ei-identity-rail li {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 0.55rem;
-    font-family: var(--ei-font-structural);
-    font-size: 10px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: rgb(var(--ei-moonlit-rgb) / 0.5);
+  /* Dissolve the left edge into the copy column. */
+  .ei-identity-hero-fade-left {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      90deg,
+      rgb(var(--ei-void-rgb) / 0.95) 0%,
+      rgb(var(--ei-void-rgb) / 0.6) 22%,
+      rgb(var(--ei-void-rgb) / 0.14) 46%,
+      transparent 64%
+    );
   }
 
-  .ei-identity-rail-dot {
-    width: 5px;
-    height: 5px;
-    border-radius: 999px;
-    background: rgb(var(--ei-halo-blue-rgb) / 0.7);
+  /* Sink the bright horizon into the void. */
+  .ei-identity-hero-fade-bottom {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 40%,
+      rgb(var(--ei-void-rgb) / 0.5) 74%,
+      rgb(var(--ei-void-rgb) / 0.92) 100%
+    );
+  }
+
+  /* Mobile: a shallow atmospheric panel below the copy with a stronger dark veil. */
+  @media (max-width: 640px) {
+    .ei-identity-hero-media {
+      aspect-ratio: 16 / 9;
+      -webkit-mask-image: radial-gradient(ellipse 110% 100% at 50% 38%, #000 56%, transparent 100%);
+      mask-image: radial-gradient(ellipse 110% 100% at 50% 38%, #000 56%, transparent 100%);
+    }
+
+    .ei-identity-hero-veil {
+      background: rgb(var(--ei-void-rgb) / 0.42);
+    }
+
+    .ei-identity-hero-fade-left {
+      background: linear-gradient(
+        90deg,
+        rgb(var(--ei-void-rgb) / 0.6) 0%,
+        rgb(var(--ei-void-rgb) / 0.12) 40%,
+        transparent 70%
+      );
+    }
   }
 }

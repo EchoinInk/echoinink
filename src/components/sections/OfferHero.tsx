@@ -158,7 +158,7 @@ export function OfferHero({
           {media && (
             <motion.div
               variants={fadeSoft}
-              className="relative hidden sm:block"
+              className="relative"
               aria-hidden="true"
             >
               {media}
