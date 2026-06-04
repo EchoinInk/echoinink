@@ -36,7 +36,7 @@ export function Philosophy() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 50% 30% at 30% 40%, rgb(113, 7, 234 / 0.018) 0%, transparent 60%)',
+            'radial-gradient(ellipse 50% 30% at 30% 40%, rgb(113 7 234 / 0.018) 0%, transparent 60%)',
           filter: 'blur(50px)',
         }}
       />
@@ -55,10 +55,10 @@ export function Philosophy() {
             <span className="ei-type-label">Our Philosophy</span>
 
             <div
-              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73, 133, 253/0.75)]"
+              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73_133_253_/0.75)]"
               style={{
                 background:
-                  'linear-gradient(90deg, rgb(11, 13, 42 / 0.15) 0%, rgb(73, 133, 253 / 0.95) 100%)',
+                  'linear-gradient(90deg, rgb(11 13 42 / 0.15) 0%, rgb(73 133 253 / 0.95) 100%)',
               }}
             />
           </motion.div>
@@ -114,7 +114,7 @@ export function Philosophy() {
                         style={{
                           background: fragment.accent
                             ? 'var(--ei-halo-blue)'
-                            : 'rgb(113, 7, 234 / 0.45)',
+                            : 'rgb(113 7 234 / 0.45)',
                         }}
                       />
 
@@ -122,7 +122,7 @@ export function Philosophy() {
                         className="absolute inset-0 rounded-full blur-sm"
                         style={{
                           background: fragment.accent
-                            ? 'rgb(73, 133, 253 / 0.3)'
+                            ? 'rgb(73 133 253 / 0.3)'
                             : 'rgb(var(--ei-ice-white-rgb) / 0.2)',
                         }}
                       />

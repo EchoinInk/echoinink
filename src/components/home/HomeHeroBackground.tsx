@@ -43,10 +43,10 @@ export function HeroBackground() {
         style={{
           background: `linear-gradient(
             90deg,
-            rgb(5, 3, 11 / 1) 0%,
-            rgb(5, 3, 11 / 0.96) 18%,
-            rgb(5, 3, 11 / 0.74) 34%,
-            rgb(5, 3, 11 / 0.26) 48%,
+            rgb(5 3 11 / 1) 0%,
+            rgb(5 3 11 / 0.96) 18%,
+            rgb(5 3 11 / 0.74) 34%,
+            rgb(5 3 11 / 0.26) 48%,
             transparent 60%
           )`,
         }}
@@ -59,9 +59,9 @@ export function HeroBackground() {
         style={{
           background: `linear-gradient(
             180deg,
-            rgb(5, 3, 11 / 0.78) 0%,
-            rgb(5, 3, 11 / 0.42) 55%,
-            rgb(5, 3, 11 / 0) 100%
+            rgb(5 3 11 / 0.78) 0%,
+            rgb(5 3 11 / 0.42) 55%,
+            rgb(5 3 11 / 0) 100%
           )`,
         }}
       />
@@ -81,15 +81,16 @@ export function HeroBackground() {
         }}
       />
 
-      {/* BOTTOM FADE */}
+      {/* BOTTOM FADE — sink the bright horizon into the void for a restrained, premium base */}
       <div
         aria-hidden="true"
-        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[5] h-[22vh]"
+        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[5] h-[42vh]"
         style={{
           background: `linear-gradient(
             to bottom,
             transparent 0%,
-            rgb(5, 3, 11 / 0.36) 68%,
+            rgb(5 3 11 / 0.55) 52%,
+            rgb(5 3 11 / 0.9) 80%,
             var(--ei-void) 100%
           )`,
         }}

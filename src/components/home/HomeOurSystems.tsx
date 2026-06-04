@@ -50,7 +50,7 @@ export function EmergingSystems() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 55% 40% at 50% 55%, rgb(73, 133, 253 / 0.02) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 55% 40% at 50% 55%, rgb(73 133 253 / 0.02) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -71,10 +71,10 @@ export function EmergingSystems() {
             <div className="flex items-center gap-3">
               <span className="ei-type-label">Our Systems</span>
 <div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73, 133, 253/0.45)]"
+          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73_133_253_/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgb(11, 13, 42 / 0.15) 0%, rgb(73, 133, 253 / 0.95) 100%)',
+              'linear-gradient(90deg, rgb(11 13 42 / 0.15) 0%, rgb(73 133 253 / 0.95) 100%)',
           }}
         />            </div>
 
