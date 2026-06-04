@@ -24,7 +24,7 @@ export function HeroHeading() {
     <h1
   id="hero-heading"
   className="
-    ei-type-display
+    ei-type-hero
     max-w-[29ch]
     whitespace-pre-line
     text-[2.45rem]
