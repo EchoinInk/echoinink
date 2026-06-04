@@ -11,7 +11,7 @@ export function IdentityHeroVisual() {
     <div className="ei-identity-hero-media">
       <img
         src={heroAtmosphere}
-        alt=""
+        alt="Echo in Ink - Identity"
         aria-hidden="true"
         className="ei-identity-hero-img"
       />

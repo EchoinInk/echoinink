@@ -1,9 +1,8 @@
 export const identityHero = {
-  atmosphereLine: 'Every world begins with a feeling.',
-  eyebrow: 'Atmospheric Identity Direction',
+  eyebrow: 'IDENTITY',
   titleLines: [
-    'Identity begins as a feeling.',
-    'Before it becomes form, it becomes atmosphere.',
+    'Feeling is the inner resonance.',
+    'Identity is the echo made visible.',
   ],
   body: [
     'Before a brand becomes visual, it has a temperature, a rhythm, a voice, and a world it belongs to.',
