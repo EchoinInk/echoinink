@@ -148,7 +148,7 @@
     );
     --ei-type-color-secondary: var(
       --ei-color-text-secondary,
-      rgb(227 216 253 / 0.78)
+      rgb(227 216 253 / 0.97)
     );
     --ei-type-color-tertiary: var(
       --ei-color-text-tertiary,
