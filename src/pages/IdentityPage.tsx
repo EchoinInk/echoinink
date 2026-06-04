@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { PageShell } from '@/components/layout/PageShell';
-import { OfferHero } from '@/components/sections/OfferHero';
+import { PageHero } from '@/components/sections/PageHero';
 import { OfferSection } from '@/components/sections/OfferSection';
 import { DeliverableCard } from '@/components/cards/DeliverableCard';
 import { ProcessSteps } from '@/components/sections/ProcessSteps';
@@ -29,15 +29,19 @@ export default function Identity() {
         />
       </Helmet>
 
-      <OfferHero
-        variant="intimate"
-        eyebrow={identityHero.eyebrow}
-        title={identityHero.titleLines[0]}
-        titleLines={identityHero.titleLines}
-        body={identityHero.body}
-        primaryCta={identityHero.primaryCta}
-        secondaryCta={identityHero.secondaryCta}
-      />
+      <PageHero
+  variant="intimate"
+  label="Identity"
+  title={
+    <>
+      Feeling is the inner resonance.
+      <br />
+      Identity is the echo made visible.
+    </>
+  }
+  kicker="Atmospheric Identity Direction"
+  intro="A quieter, more precise direction system for shaping the emotional atmosphere of your work."
+/>
 
       <OfferSection eyebrow="Who it is for" title={identityAudience.eyebrow}>
         <div className="max-w-3xl space-y-5">

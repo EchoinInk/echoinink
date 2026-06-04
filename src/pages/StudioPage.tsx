@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { PageShell } from '@/components/layout/PageShell';
 import { Container } from '@/components/layout/Container';
-import { EditorialHero } from '@/components/sections/EditorialImageHero';
+import { PageHero } from '@/components/sections/PageHero';
 import { QuoteCard } from '@/components/cards/QuoteCard';
 import { PhilosophyCard } from '@/components/cards/PhilosophyCard';
 import { ValuesGrid } from '@/components/studio/StudioValuesGrid';
@@ -81,8 +81,8 @@ export function Studio() {
         />
       </Helmet>
 
-      <EditorialHero
-        eyebrow="Studio"
+      <PageHero
+        label="Studio"
         title="The philosophy behind the worlds."
         italicWord="worlds."
         description="Translating inner worlds into coherent external form."

@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { PageShell } from '@/components/layout/PageShell';
 import { Container } from '@/components/layout/Container';
-import { EditorialHero } from '@/components/sections/EditorialImageHero';
+import { EditorialImageHero } from '@/components/sections/EditorialImageHero';
 import { WorkFilterBar } from '@/components/works/WorkFilterBar';
 import { WorksGrid } from '@/components/works/WorksGrid';
 import { ProjectCTA } from '@/components/sections/ProjectCTA';
@@ -27,7 +27,7 @@ export function WorksPage() {
         />
       </Helmet>
 
-      <EditorialHero
+      <EditorialImageHero
         eyebrow="Our Works"
         title="Worlds we've designed and built."
         italicWord="built"
