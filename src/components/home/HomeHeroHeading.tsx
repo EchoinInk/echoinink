@@ -43,17 +43,14 @@ export function HeroHeading() {
 </h1>
 
 <p className="
-ei-type-section-structural mt-5
- 
-  text-ei-echo-magenta/70
-">
+ei-type-section mt-5">
   Identity Systems, Digital Experiences & Narrative Direction
 </p>
 
 <motion.p
   variants={heroReveal}
   className="
-    font-structural
+    ei-type-body
     mt-6
     max-w-[46ch]
     text-[16px]
