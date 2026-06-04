@@ -50,7 +50,7 @@ export function HeroHeading() {
   tracking-[0.16em]
   uppercase
   letter-spacing-[0.16em]
-  text-ei-echo/70
+  ei-echo-magenta/70
 ">
   Identity Systems, Digital Experiences & Narrative Direction
 </p>
