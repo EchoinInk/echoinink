@@ -43,7 +43,7 @@ export function HeroHeading() {
 </h1>
 
 <p className="
-ei-type-manifesto mt-5">
+ei-type-whisper-uppercase mt-5">
   Identity Systems, Digital Experiences & Narrative Direction
 </p>
 
