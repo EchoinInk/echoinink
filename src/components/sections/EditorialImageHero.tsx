@@ -124,7 +124,7 @@ const isIntimate = variant === 'intimate';
                   <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
                     Editorial
                   </span>
-                </div></
+                </div></motion.div>
      <Container
   size="xl"
   className="
