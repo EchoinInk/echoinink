@@ -18,8 +18,8 @@
     --ei-echo-magenta: #C978B8;
     --ei-echo-magenta-rgb: 201 120 184;
 
-    --ei-soft-lavender: #D9D7EA;
-    --ei-soft-lavender-rgb: 217 215 234;
+    --ei-moonlit: #D9D7EA;
+    --ei-moonlit-rgb: 217 215 234;
 
     --ei-ice-white: #F7F5FA;
     --ei-ice-white-rgb: 247 245 250;
@@ -28,8 +28,8 @@
     --ei-text-primary: var(--ei-ice-white);
     --ei-text-secondary: rgb(var(--ei-ice-white-rgb) / 0.72);
     --ei-text-tertiary: rgb(var(--ei-ice-white-rgb) / 0.58);
-    --ei-text-muted: rgb(var(--ei-soft-lavender-rgb) / 0.48);
-    --ei-text-soft: rgb(var(--ei-soft-lavender-rgb) / 0.85);
+    --ei-text-muted: rgb(var(--ei-moonlit-rgb) / 0.48);
+    --ei-text-soft: rgb(var(--ei-moonlit-rgb) / 0.85);
     --ei-text-accent: var(--ei-electric-blue);
     --ei-text-accent-secondary: var(--ei-soft-neon);
 
@@ -42,7 +42,7 @@
     /* ── Border System ───────────────────────────────────────────────────────────── */
     --border-soft: rgb(var(--ei-ice-white-rgb) / 0.10);
     --border-glow: rgb(var(--ei-echo-magenta-rgb) / 0.32);
-    --border-card: rgb(var(--ei-soft-lavender-rgb) / 0.12);
+    --border-card: rgb(var(--ei-moonlit-rgb) / 0.12);
     --border-cobalt: rgb(var(--ei-electric-blue-rgb) / 0.28);
     --border-magenta: rgb(var(--ei-soft-neon-rgb) / 0.25);
 
@@ -50,7 +50,7 @@
     --glow-cobalt: rgb(var(--ei-electric-blue-rgb) / 0.35);
     --glow-violet: rgb(var(--ei-echo-magenta-rgb) / 0.32);
     --glow-magenta: rgb(var(--ei-soft-neon-rgb) / 0.28);
-    --glow-lilac: rgb(var(--ei-soft-lavender-rgb) / 0.22);
+    --glow-lilac: rgb(var(--ei-moonlit-rgb) / 0.22);
     --glow-nebula: rgb(var(--ei-midnight-rgb) / 0.40);
 
     /* ── Gradient System ─────────────────────────────────────────────────────────── */
@@ -108,7 +108,7 @@
 
     --ei-card-bg: rgb(var(--ei-midnight-rgb) / 0.18);
     --ei-card-bg-hover: rgb(var(--ei-midnight-rgb) / 0.28);
-    --ei-card-border: rgb(var(--ei-soft-lavender-rgb) / 0.12);
+    --ei-card-border: rgb(var(--ei-moonlit-rgb) / 0.12);
     --ei-card-border-hover: rgb(var(--ei-electric-blue-rgb) / 0.34);
 
     --ei-card-shadow-hover:
@@ -117,7 +117,7 @@
 
       --ei-button-bg: rgb(var(--ei-midnight-rgb) / 0.42);
       --ei-button-bg-hover: rgb(var(--ei-electric-blue-rgb) / 0.18);
-      --ei-button-border: rgb(var(--ei-soft-lavender-rgb) / 0.16);
+      --ei-button-border: rgb(var(--ei-moonlit-rgb) / 0.16);
       --ei-button-border-hover: rgb(var(--ei-electric-blue-rgb) / 0.42);
 
       --ei-filter-bg: rgb(var(--ei-midnight-rgb) / 0.18);

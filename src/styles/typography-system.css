@@ -43,7 +43,7 @@
     font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.5;
-    color: rgb(var(--ei-soft-lavender-rgb) / 0.75);
+    color: rgb(var(--ei-moonlit-rgb) / 0.75);
   }
 
   /* ── Atmospheric Body Copy ───────────────────────────────── */
@@ -132,7 +132,7 @@
     font-weight: 300;
     letter-spacing: -0.012em;
     line-height: 1.18;
-    color: rgb(var(--ei-soft-lavender-rgb) / 0.92);
+    color: rgb(var(--ei-moonlit-rgb) / 0.92);
   }
 
   .text-cinematic-heading-large {
@@ -141,7 +141,7 @@
     font-weight: 300;
     letter-spacing: -0.015em;
     line-height: 1.05;
-    color: rgb(var(--ei-soft-lavender-rgb) / 0.90);
+    color: rgb(var(--ei-moonlit-rgb) / 0.90);
   }
 
   /* ── Card Typography ─────────────────────────────────────── */
@@ -151,7 +151,7 @@
     font-weight: 300;
     letter-spacing: -0.008em;
     line-height: 1.24;
-    color: rgb(var(--ei-soft-lavender-rgb) / 0.88);
+    color: rgb(var(--ei-moonlit-rgb) / 0.88);
   }
 
   .text-card-body {
@@ -170,7 +170,7 @@
     font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.5;
-    color: rgb(var(--ei-soft-lavender-rgb) / 0.75);
+    color: rgb(var(--ei-moonlit-rgb) / 0.75);
   }
 }
 
@@ -251,7 +251,7 @@
     font-weight: 300;
     letter-spacing: -0.012em;
     line-height: 1.18;
-    color: rgb(var(--ei-soft-lavender-rgb) / 0.92);
+    color: rgb(var(--ei-moonlit-rgb) / 0.92);
   }
 
   .ei-section-description {
@@ -306,7 +306,7 @@
     font-weight: 300;
     letter-spacing: -0.008em;
     line-height: 1.24;
-    color: rgb(var(--ei-soft-lavender-rgb) / 0.88);
+    color: rgb(var(--ei-moonlit-rgb) / 0.88);
   }
 
   .ei-card-description {
@@ -334,7 +334,7 @@
     font-weight: 300;
     letter-spacing: -0.015em;
     line-height: 1.05;
-    color: rgb(var(--ei-soft-lavender-rgb) / 0.90);
+    color: rgb(var(--ei-moonlit-rgb) / 0.90);
   }
 
   .ei-atmosphere-text {
@@ -353,6 +353,6 @@
     font-weight: 300;
     letter-spacing: -0.01em;
     line-height: 1.5;
-    color: rgb(var(--ei-soft-lavender-rgb) / 0.75);
+    color: rgb(var(--ei-moonlit-rgb) / 0.75);
   }
 }

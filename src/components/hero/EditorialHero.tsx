@@ -166,7 +166,7 @@ export function EditorialHero({
                     part.toLowerCase() === italicWord.toLowerCase() ? (
                       <em
                         key={i}
-                        className="font-normal italic text-[rgb(var(--ei-soft-lavender-rgb)/0.9)]"
+                        className="font-normal italic text-[rgb(var(--ei-moonlit-rgb)/0.9)]"
                       >
                         {part}
                       </em>

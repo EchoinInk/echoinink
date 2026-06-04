@@ -60,7 +60,7 @@ const TINTS = {
   aqua:    'radial-gradient(ellipse 55% 50% at 63% 37%, rgb(var(--ei-electric-blue-rgb) / 0.16) 0%, transparent 65%)',
   pink:    'radial-gradient(ellipse 50% 55% at 44% 52%, rgb(var(--ei-soft-neon-rgb) / 0.17) 0%, transparent 66%)',
   indigo:  'radial-gradient(ellipse 58% 52% at 52% 42%, rgb(var(--ei-midnight-rgb) / 0.18) 0%, transparent 70%)',
-  neutral: 'radial-gradient(ellipse 50% 50% at 50% 45%, rgb(var(--ei-soft-lavender-rgb) / 0.07) 0%, transparent 70%)',
+  neutral: 'radial-gradient(ellipse 50% 50% at 50% 45%, rgb(var(--ei-moonlit-rgb) / 0.07) 0%, transparent 70%)',
 } as const;
 
 function ImagePlaceholder({
@@ -142,9 +142,9 @@ function CognitiveLandscapeAtmosphere() {
       <ContourField
         viewBox="0 0 1000 600"
         paths={[
-          { d: 'M -40 228 Q 240 196 490 238 T 1040 212', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.052)', sw: 1 },
-          { d: 'M -40 332 Q 300 290 558 334 T 1040 314', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.042)', sw: 0.7 },
-          { d: 'M -40 418 Q 185 388 448 430 T 1040 408', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.6 },
+          { d: 'M -40 228 Q 240 196 490 238 T 1040 212', stroke: 'rgb(var(--ei-moonlit-rgb) / 0.052)', sw: 1 },
+          { d: 'M -40 332 Q 300 290 558 334 T 1040 314', stroke: 'rgb(var(--ei-moonlit-rgb) / 0.042)', sw: 0.7 },
+          { d: 'M -40 418 Q 185 388 448 430 T 1040 408', stroke: 'rgb(var(--ei-moonlit-rgb) / 0.040)', sw: 0.6 },
         ]}
       />
       <GlowField
@@ -165,9 +165,9 @@ function CognitiveLandscapeAtmosphere() {
         style={{ top: '10%', right: '4%', width: 'clamp(260px, 34vw, 500px)', height: 'clamp(220px, 28vw, 420px)', transformOrigin: '50% 50%' }}
         viewBox="0 0 400 320"
         rings={[
-          { cx: 200, cy: 160, rx: 185, ry: 145, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.042)', sw: 0.8 },
-          { cx: 200, cy: 160, rx: 145, ry: 112, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.032)', sw: 0.6 },
-          { cx: 200, cy: 160, rx: 105, ry: 80,  stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.024)', sw: 0.5 },
+          { cx: 200, cy: 160, rx: 185, ry: 145, stroke: 'rgb(var(--ei-moonlit-rgb) / 0.042)', sw: 0.8 },
+          { cx: 200, cy: 160, rx: 145, ry: 112, stroke: 'rgb(var(--ei-moonlit-rgb) / 0.032)', sw: 0.6 },
+          { cx: 200, cy: 160, rx: 105, ry: 80,  stroke: 'rgb(var(--ei-moonlit-rgb) / 0.024)', sw: 0.5 },
         ]}
         anim={{ opacity: [0.55, 0.95, 0.55], scale: [0.975, 1.028, 0.975] }}
         duration={34} delay={5}
@@ -190,7 +190,7 @@ function BreathingIdentityAtmosphere() {
       <EchoRing
         style={{ top: '-12%', right: '-22%', width: 'clamp(580px, 78vw, 1060px)', height: 'clamp(580px, 78vw, 1060px)', transformOrigin: '60% 44%' }}
         viewBox="0 0 600 600"
-        rings={[{ cx: 300, cy: 300, rx: 270, ry: 252, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.042)', sw: 0.8 }]}
+        rings={[{ cx: 300, cy: 300, rx: 270, ry: 252, stroke: 'rgb(var(--ei-moonlit-rgb) / 0.042)', sw: 0.8 }]}
         anim={{ opacity: [0.45, 0.82, 0.45], scale: [0.98, 1.018, 0.98] }}
         duration={38} delay={7}
       />
@@ -198,9 +198,9 @@ function BreathingIdentityAtmosphere() {
         viewBox="0 0 1000 700"
         blur={0.8}
         paths={[
-          { d: 'M 720 48 Q 850 42 930 118',  stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.048)', sw: 0.7, cap: 'round' },
-          { d: 'M 958 210 Q 985 310 920 408', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.6, cap: 'round' },
-          { d: 'M 640 30 Q 679 16 718 28',   stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.5, cap: 'round' },
+          { d: 'M 720 48 Q 850 42 930 118',  stroke: 'rgb(var(--ei-moonlit-rgb) / 0.048)', sw: 0.7, cap: 'round' },
+          { d: 'M 958 210 Q 985 310 920 408', stroke: 'rgb(var(--ei-moonlit-rgb) / 0.040)', sw: 0.6, cap: 'round' },
+          { d: 'M 640 30 Q 679 16 718 28',   stroke: 'rgb(var(--ei-moonlit-rgb) / 0.040)', sw: 0.5, cap: 'round' },
         ]}
       />
     </div>
@@ -236,10 +236,10 @@ function HumaneFrameworkAtmosphere() {
         viewBox="0 0 1000 700"
         blur={1.2}
         paths={[
-          { d: 'M 220 195 Q 500 140 760 178', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.048)', sw: 0.8, cap: 'round' },
-          { d: 'M 214 248 Q 148 420 218 568', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.7, cap: 'round' },
-          { d: 'M 768 228 Q 840 390 752 548', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.7, cap: 'round' },
-          { d: 'M 268 572 Q 500 620 748 554', stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.044)', sw: 0.6, cap: 'round' },
+          { d: 'M 220 195 Q 500 140 760 178', stroke: 'rgb(var(--ei-moonlit-rgb) / 0.048)', sw: 0.8, cap: 'round' },
+          { d: 'M 214 248 Q 148 420 218 568', stroke: 'rgb(var(--ei-moonlit-rgb) / 0.040)', sw: 0.7, cap: 'round' },
+          { d: 'M 768 228 Q 840 390 752 548', stroke: 'rgb(var(--ei-moonlit-rgb) / 0.040)', sw: 0.7, cap: 'round' },
+          { d: 'M 268 572 Q 500 620 748 554', stroke: 'rgb(var(--ei-moonlit-rgb) / 0.044)', sw: 0.6, cap: 'round' },
         ]}
       />
     </div>
@@ -292,9 +292,9 @@ function BecomingAtmosphere() {
         style={{ top: '50%', left: '50%', width: 'clamp(380px, 54vw, 760px)', height: 'clamp(380px, 54vw, 760px)', transform: 'translate(-50%, -50%)', transformOrigin: 'center center' }}
         viewBox="0 0 600 600"
         rings={[
-          { cx: 300, cy: 300, rx: 268, ry: 268, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.042)', sw: 0.8 },
-          { cx: 300, cy: 300, rx: 210, ry: 210, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.032)', sw: 0.6 },
-          { cx: 300, cy: 300, rx: 152, ry: 152, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.024)', sw: 0.5 },
+          { cx: 300, cy: 300, rx: 268, ry: 268, stroke: 'rgb(var(--ei-moonlit-rgb) / 0.042)', sw: 0.8 },
+          { cx: 300, cy: 300, rx: 210, ry: 210, stroke: 'rgb(var(--ei-moonlit-rgb) / 0.032)', sw: 0.6 },
+          { cx: 300, cy: 300, rx: 152, ry: 152, stroke: 'rgb(var(--ei-moonlit-rgb) / 0.024)', sw: 0.5 },
         ]}
         anim={{ opacity: [0.48, 0.88, 0.48], scale: [0.974, 1.022, 0.974] }}
         duration={36} delay={5}
@@ -325,7 +325,7 @@ function HeldAtmosphere() {
       <EchoRing
         style={{ inset: 0 }}
         viewBox="0 0 1000 800"
-        rings={[{ cx: 360, cy: 360, rx: 310, ry: 288, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.7 }]}
+        rings={[{ cx: 360, cy: 360, rx: 310, ry: 288, stroke: 'rgb(var(--ei-moonlit-rgb) / 0.040)', sw: 0.7 }]}
         blur={2}
         preserveAspect
       />
@@ -355,7 +355,7 @@ function ExhaleAtmosphere() {
       <EchoRing
         style={{ inset: 0 }}
         viewBox="0 0 1000 600"
-        rings={[{ cx: 500, cy: 288, rx: 300, ry: 220, stroke: 'rgb(var(--ei-soft-lavender-rgb) / 0.040)', sw: 0.6 }]}
+        rings={[{ cx: 500, cy: 288, rx: 300, ry: 220, stroke: 'rgb(var(--ei-moonlit-rgb) / 0.040)', sw: 0.6 }]}
         blur={1}
         preserveAspect
       />
@@ -438,7 +438,7 @@ export function SignatureCaseStudy() {
           </motion.span>
           <motion.h2
             {...headFade(0.15)}
-            className="font-editorial text-[2rem] md:text-[3rem] lg:text-[3.8rem] text-[var(--ei-soft-lavender)]/85 leading-[1.18] mb-6"
+            className="font-editorial text-[2rem] md:text-[3rem] lg:text-[3.8rem] text-[var(--ei-moonlit)]/85 leading-[1.18] mb-6"
             style={{ letterSpacing: '-0.015em' }}
           >
             LUMO — A World Built
@@ -471,7 +471,7 @@ export function SignatureCaseStudy() {
             </motion.span>
             <motion.p
               {...headFade(0.12)}
-              className="font-editorial text-[1.35rem] md:text-[1.75rem] text-[var(--ei-soft-lavender)]/80 leading-[1.4] mb-8"
+              className="font-editorial text-[1.35rem] md:text-[1.75rem] text-[var(--ei-moonlit)]/80 leading-[1.4] mb-8"
               style={{ letterSpacing: '-0.01em' }}
             >
               LUMO began not with a brief but with a feeling — something between
@@ -515,7 +515,7 @@ export function SignatureCaseStudy() {
           <div>
             <motion.p
               {...fade(0.08)}
-              className="font-editorial text-[1.2rem] md:text-[1.45rem] text-[var(--ei-soft-lavender)]/70 leading-[1.52] mb-6"
+              className="font-editorial text-[1.2rem] md:text-[1.45rem] text-[var(--ei-moonlit)]/70 leading-[1.52] mb-6"
               style={{ letterSpacing: '-0.006em' }}
             >
               In the early discovery phase, we found a user base that wasn't looking
@@ -608,7 +608,7 @@ export function SignatureCaseStudy() {
             {/* Pull-quote — cinematic isolation */}
             <motion.blockquote
               {...headFade(0.1)}
-              className="text-center font-editorial text-[1.55rem] md:text-[2.1rem] lg:text-[2.5rem] text-[var(--ei-soft-lavender)]/65 leading-[1.38] mt-16 md:mt-24 pt-12 md:pt-16"
+              className="text-center font-editorial text-[1.55rem] md:text-[2.1rem] lg:text-[2.5rem] text-[var(--ei-moonlit)]/65 leading-[1.38] mt-16 md:mt-24 pt-12 md:pt-16"
               style={{
                 letterSpacing: '-0.012em',
                 fontStyle: 'italic',
@@ -648,7 +648,7 @@ export function SignatureCaseStudy() {
                 0{i + 1}
               </span>
               <h3
-                className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-soft-lavender)]/75 leading-[1.24] mb-6"
+                className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-moonlit)]/75 leading-[1.24] mb-6"
                 style={{ letterSpacing: '-0.006em' }}
               >
                 {card.title}
@@ -669,7 +669,7 @@ export function SignatureCaseStudy() {
 
         <motion.p
           {...envFade(0.2)}
-          className="font-editorial text-[1.15rem] md:text-[1.35rem] text-[var(--ei-soft-lavender)]/55 leading-[1.5] pt-14 md:pt-20"
+          className="font-editorial text-[1.15rem] md:text-[1.35rem] text-[var(--ei-moonlit)]/55 leading-[1.5] pt-14 md:pt-20"
           style={{
             letterSpacing: '-0.005em',
             fontStyle: 'italic',
@@ -703,7 +703,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[0].title} tint="violet" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-soft-lavender)]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-moonlit)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[0].title}
@@ -717,7 +717,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[2/3]" label={snapshots[1].title} tint="aqua" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-soft-lavender)]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-moonlit)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[1].title}
@@ -734,7 +734,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[3/4]" label={snapshots[2].title} tint="pink" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-soft-lavender)]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-moonlit)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[2].title}
@@ -748,7 +748,7 @@ export function SignatureCaseStudy() {
               <ImagePlaceholder aspect="aspect-[3/2]" label={snapshots[3].title} tint="neutral" />
               <div className="pt-5 pb-2">
                 <h3
-                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-soft-lavender)]/75 leading-[1.2] mb-2"
+                  className="font-editorial text-[1.1rem] md:text-[1.3rem] text-[var(--ei-moonlit)]/75 leading-[1.2] mb-2"
                   style={{ letterSpacing: '-0.006em' }}
                 >
                   {snapshots[3].title}
@@ -793,7 +793,7 @@ export function SignatureCaseStudy() {
               <motion.li
                 key={item}
                 variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { duration: 2.2, ease: EASE } } }}
-                className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[var(--ei-soft-lavender)]/60 leading-[1.35]"
+                className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[var(--ei-moonlit)]/60 leading-[1.35]"
                 style={{ letterSpacing: '-0.008em' }}
               >
                 {item}
@@ -845,7 +845,7 @@ export function SignatureCaseStudy() {
 
           <motion.p
             {...envFade(0.2)}
-            className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[var(--ei-soft-lavender)]/75 leading-[1.38] pt-14 md:pt-20"
+            className="font-editorial text-[1.2rem] md:text-[1.6rem] text-[var(--ei-moonlit)]/75 leading-[1.38] pt-14 md:pt-20"
             style={{
               letterSpacing: '-0.008em',
               fontStyle: 'italic',
@@ -874,7 +874,7 @@ export function SignatureCaseStudy() {
 
           <motion.p
             {...headFade(0.2)}
-            className="font-editorial text-[1.3rem] md:text-[1.7rem] text-[var(--ei-soft-lavender)]/70 leading-[1.52] mb-7"
+            className="font-editorial text-[1.3rem] md:text-[1.7rem] text-[var(--ei-moonlit)]/70 leading-[1.52] mb-7"
             style={{ letterSpacing: '-0.01em' }}
           >
             LUMO was not a design project. It was an act of care.

@@ -224,7 +224,7 @@ export function Contact() {
                     textShadow: '0 0 90px rgb(var(--ei-echo-magenta-rgb) / 0.08)',
                   }}
                 >
-                  Let's build <span className="inline-flex flex-wrap items-baseline gap-x-[0.14em] md:flex-nowrap md:whitespace-nowrap">something <em className="font-normal italic text-[rgb(var(--ei-soft-lavender-rgb)/0.9)]">meaningful.</em></span>
+                  Let's build <span className="inline-flex flex-wrap items-baseline gap-x-[0.14em] md:flex-nowrap md:whitespace-nowrap">something <em className="font-normal italic text-[rgb(var(--ei-moonlit-rgb)/0.9)]">meaningful.</em></span>
                 </h1>
 
                 <p
@@ -253,7 +253,7 @@ export function Contact() {
                   key={block.title}
                   className="grid grid-cols-[56px_1fr] gap-5 border-white/[0.08] pb-9 md:border-b md:pt-9 first:md:pt-2 last:md:border-b-0"
                 >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[rgb(var(--ei-soft-lavender-rgb)/0.18)] text-[rgb(var(--ei-soft-lavender-rgb)/0.82)] shadow-[inset_0_0_24px_rgb(var(--ei-electric-blue-rgb)/0.035)] transition-colors duration-500 hover:border-white/25 hover:text-white">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[rgb(var(--ei-moonlit-rgb)/0.18)] text-[rgb(var(--ei-moonlit-rgb)/0.82)] shadow-[inset_0_0_24px_rgb(var(--ei-electric-blue-rgb)/0.035)] transition-colors duration-500 hover:border-white/25 hover:text-white">
                     <ContactIcon name={block.icon} />
                   </span>
                   <div>

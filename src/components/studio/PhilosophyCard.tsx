@@ -49,7 +49,7 @@ export function PhilosophyCard({
       style={{
         background:
           'linear-gradient(180deg, rgb(var(--ei-midnight-rgb) / 0.28) 0%, rgb(var(--ei-midnight-rgb) / 0.14) 52%, rgb(var(--ei-void-rgb) / 0.22) 100%)',
-        borderColor: 'rgb(var(--ei-soft-lavender-rgb) / 0.12)',
+        borderColor: 'rgb(var(--ei-moonlit-rgb) / 0.12)',
         boxShadow: 'inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.04)',
       }}
     >

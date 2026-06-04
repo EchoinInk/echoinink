@@ -17,7 +17,7 @@ const systems: SystemCardProps[] = [
       'A structured framework for mapping emotional and visual identity. Built for founders translating inner meaning into outer form.',
     category: 'Framework',
     status: 'available',
-    accent: 'rgb(var(--ei-soft-lavender-rgb) / 0.07)',
+    accent: 'rgb(var(--ei-moonlit-rgb) / 0.07)',
   },
   {
     title: 'Founder Reflection Workbook',
@@ -49,7 +49,7 @@ const systems: SystemCardProps[] = [
       'An intelligent companion for brand identity exploration. Trained on the Echo in Ink method for emotionally resonant work.',
     category: 'GPT System',
     status: 'soon',
-    accent: 'rgb(var(--ei-soft-lavender-rgb) / 0.06)',
+    accent: 'rgb(var(--ei-moonlit-rgb) / 0.06)',
   },
   {
     title: 'Creative Direction GPT',

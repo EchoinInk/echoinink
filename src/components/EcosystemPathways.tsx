@@ -22,8 +22,8 @@ const layers = [
     headline: 'Identity systems, immersive worlds, creative direction.',
     description:
       'The studio arm. Bespoke creative work for founders and artists building something real.',
-    accent: 'rgb(var(--ei-soft-lavender-rgb) / 0.08)',
-    accentLine: 'rgb(var(--ei-soft-lavender-rgb) / 0.4)',
+    accent: 'rgb(var(--ei-moonlit-rgb) / 0.08)',
+    accentLine: 'rgb(var(--ei-moonlit-rgb) / 0.4)',
     tag: '01',
   },
   {

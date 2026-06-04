@@ -78,7 +78,7 @@ export function StudioHero({
                         style={{
                           color: 'transparent',
                           backgroundImage:
-                            'linear-gradient(135deg, rgb(var(--ei-soft-lavender-rgb) / 0.92) 0%, var(--ei-echo-magenta) 50%, var(--ei-soft-neon) 100%)',
+                            'linear-gradient(135deg, rgb(var(--ei-moonlit-rgb) / 0.92) 0%, var(--ei-echo-magenta) 50%, var(--ei-soft-neon) 100%)',
                           backgroundClip: 'text',
                           WebkitBackgroundClip: 'text',
                         }}

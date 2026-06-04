@@ -13,7 +13,7 @@ const works = [
       'radial-gradient(ellipse 70% 65% at 38% 55%, rgb(var(--ei-soft-neon-rgb) / 0.28) 0%, rgb(var(--ei-echo-magenta-rgb) / 0.16) 32%, rgb(var(--ei-midnight-rgb) / 0.07) 62%, transparent 82%), radial-gradient(ellipse 40% 50% at 75% 30%, rgb(var(--ei-electric-blue-rgb) / 0.10) 0%, transparent 65%)',
     bg: 'var(--ei-void)',
     scene:
-      'radial-gradient(ellipse 22% 50% at 68% 30%, rgb(var(--ei-ice-white-rgb) / 0.07) 0%, transparent 65%), radial-gradient(ellipse 30% 25% at 18% 82%, rgb(var(--ei-soft-lavender-rgb) / 0.07) 0%, transparent 60%)',
+      'radial-gradient(ellipse 22% 50% at 68% 30%, rgb(var(--ei-ice-white-rgb) / 0.07) 0%, transparent 65%), radial-gradient(ellipse 30% 25% at 18% 82%, rgb(var(--ei-moonlit-rgb) / 0.07) 0%, transparent 60%)',
   },
   {
     index: '02',
@@ -25,7 +25,7 @@ const works = [
       'radial-gradient(ellipse 65% 72% at 58% 42%, rgb(var(--ei-electric-blue-rgb) / 0.22) 0%, rgb(var(--ei-midnight-rgb) / 0.12) 42%, transparent 72%)',
     bg: 'var(--ei-void)',
     scene:
-      'linear-gradient(172deg, rgb(var(--ei-electric-blue-rgb) / 0.08) 0%, transparent 38%), radial-gradient(ellipse 16% 62% at 56% 8%, rgb(var(--ei-soft-lavender-rgb) / 0.07) 0%, transparent 70%)',
+      'linear-gradient(172deg, rgb(var(--ei-electric-blue-rgb) / 0.08) 0%, transparent 38%), radial-gradient(ellipse 16% 62% at 56% 8%, rgb(var(--ei-moonlit-rgb) / 0.07) 0%, transparent 70%)',
   },
   {
     index: '03',
@@ -37,7 +37,7 @@ const works = [
       'radial-gradient(ellipse 68% 60% at 42% 60%, rgb(var(--ei-echo-magenta-rgb) / 0.24) 0%, rgb(var(--ei-midnight-rgb) / 0.12) 45%, transparent 88%)',
     bg: 'var(--ei-void)',
     scene:
-      'radial-gradient(circle at 22% 28%, rgb(var(--ei-soft-lavender-rgb) / 0.06) 0%, transparent 28%), radial-gradient(circle at 74% 62%, rgb(var(--ei-soft-lavender-rgb) / 0.05) 0%, transparent 24%), radial-gradient(circle at 85% 20%, rgb(var(--ei-soft-lavender-rgb) / 0.04) 0%, transparent 18%)',
+      'radial-gradient(circle at 22% 28%, rgb(var(--ei-moonlit-rgb) / 0.06) 0%, transparent 28%), radial-gradient(circle at 74% 62%, rgb(var(--ei-moonlit-rgb) / 0.05) 0%, transparent 24%), radial-gradient(circle at 85% 20%, rgb(var(--ei-moonlit-rgb) / 0.04) 0%, transparent 18%)',
   },
   {
     index: '04',
@@ -61,7 +61,7 @@ const works = [
         'radial-gradient(ellipse 72% 65% at 44% 52%, rgb(var(--ei-soft-neon-rgb) / 0.20) 0%, rgb(var(--ei-echo-magenta-rgb) / 0.11) 42%, transparent 86%)',
       bg: 'var(--ei-void)',
       scene:
-        'radial-gradient(ellipse 38% 28% at 22% 72%, rgb(var(--ei-soft-lavender-rgb) / 0.08) 0%, transparent 60%), radial-gradient(ellipse 25% 35% at 82% 22%, rgb(var(--ei-soft-lavender-rgb) / 0.07) 0%, transparent 55%)',
+        'radial-gradient(ellipse 38% 28% at 22% 72%, rgb(var(--ei-moonlit-rgb) / 0.08) 0%, transparent 60%), radial-gradient(ellipse 25% 35% at 82% 22%, rgb(var(--ei-moonlit-rgb) / 0.07) 0%, transparent 55%)',
   },
   {
     index: '06',
@@ -70,10 +70,10 @@ const works = [
     description:
       'Short-form motion pieces examining light as an emotional and narrative tool.',
       gradient:
-        'radial-gradient(ellipse 58% 74% at 52% 44%, rgb(var(--ei-ice-white-rgb) / 0.07) 0%, rgb(var(--ei-soft-lavender-rgb) / 0.14) 25%, rgb(var(--ei-echo-magenta-rgb) / 0.18) 50%, rgb(var(--ei-midnight-rgb) / 0.08) 72%, transparent 88%)',
+        'radial-gradient(ellipse 58% 74% at 52% 44%, rgb(var(--ei-ice-white-rgb) / 0.07) 0%, rgb(var(--ei-moonlit-rgb) / 0.14) 25%, rgb(var(--ei-echo-magenta-rgb) / 0.18) 50%, rgb(var(--ei-midnight-rgb) / 0.08) 72%, transparent 88%)',
       bg: 'var(--ei-void)',
       scene:
-        'linear-gradient(78deg, transparent 18%, rgb(var(--ei-soft-lavender-rgb) / 0.06) 36%, rgb(var(--ei-echo-magenta-rgb) / 0.04) 52%, transparent 68%), linear-gradient(78deg, transparent 42%, rgb(var(--ei-soft-lavender-rgb) / 0.04) 58%, transparent 74%)',
+        'linear-gradient(78deg, transparent 18%, rgb(var(--ei-moonlit-rgb) / 0.06) 36%, rgb(var(--ei-echo-magenta-rgb) / 0.04) 52%, transparent 68%), linear-gradient(78deg, transparent 42%, rgb(var(--ei-moonlit-rgb) / 0.04) 58%, transparent 74%)',
   },
 ] as const;
 
@@ -100,13 +100,13 @@ function WorkPanel({
 
   const titleClass = {
     featured:
-      'font-editorial text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] text-[var(--ei-soft-lavender)]/90 leading-[1.14] mb-1.5',
+      'font-editorial text-[1.5rem] md:text-[2rem] lg:text-[2.5rem] text-[var(--ei-moonlit)]/90 leading-[1.14] mb-1.5',
     standard:
-      'font-editorial text-[1.3rem] md:text-[1.7rem] text-[var(--ei-soft-lavender)]/85 leading-[1.16] mb-1.5',
+      'font-editorial text-[1.3rem] md:text-[1.7rem] text-[var(--ei-moonlit)]/85 leading-[1.16] mb-1.5',
     landscape:
-      'font-editorial text-[1.1rem] md:text-[1.35rem] text-[var(--ei-soft-lavender)]/80 leading-[1.16] mb-1.5',
+      'font-editorial text-[1.1rem] md:text-[1.35rem] text-[var(--ei-moonlit)]/80 leading-[1.16] mb-1.5',
     square:
-      'font-editorial text-[1.05rem] md:text-[1.25rem] text-[var(--ei-soft-lavender)]/75 leading-[1.18] mb-1.5',
+      'font-editorial text-[1.05rem] md:text-[1.25rem] text-[var(--ei-moonlit)]/75 leading-[1.18] mb-1.5',
   }[variant];
 
   const padClass = {
