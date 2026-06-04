@@ -117,8 +117,7 @@ const isIntimate = variant === 'intimate';
             'linear-gradient(to bottom, transparent 0%, rgb(5, 3, 11 / 0.34) 70%, var(--ei-void) 100%)',
         }}
       />
- <Container size="xl" className="relative z-10">
-            <div className="max-w-[680px]">
+ 
               <motion.div variants={driftUp} className="max-w-[680px] text-left md:pl-10 md:-translate-y-[2vh] lg:pl-14">
                 <div className="mb-3 flex items-center gap-4 md:mb-5">
                   <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
