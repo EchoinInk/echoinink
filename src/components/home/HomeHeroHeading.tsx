@@ -48,7 +48,8 @@ export function HeroHeading() {
   text-[11px]
   md:text-[12px]
   tracking-[0.16em]
-  uppercase letter
+  uppercase
+  letter-spacing-[0.16em]
   text-ei-orchid/70
 ">
   Identity Systems, Digital Experiences & Narrative Direction
