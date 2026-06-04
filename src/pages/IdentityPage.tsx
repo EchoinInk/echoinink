@@ -33,11 +33,9 @@ export default function Identity() {
       <EditorialImageHero
         variant="intimate"
         eyebrow="Identity"
-        title={ <>
-      Feeling is the inner resonance.
+        title="Feeling is the inner resonance.
       <br />
-      Identity is the echo made visible.
-    </>}
+      Identity is the echo made visible."
         italicWord="built"
         description="Selected projects that explore identity, emotion, and technology — crafted to leave a lasting impact."
         ctaLabel="Start a Conversation →"
