@@ -36,7 +36,7 @@ export function AtmospherePause() {
       <div 
         className="absolute inset-0 pointer-events-none"
         style={{
-            background: 'radial-gradient(ellipse 60% 50% at 40% 60%, rgb(var(--ei-void-black-rgb) / 0.3) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse 60% 50% at 40% 60%, rgb(var(--ei-void-rgb) / 0.3) 0%, transparent 70%)',
           filter: 'blur(80px)',
         }}
       />

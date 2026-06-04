@@ -73,11 +73,11 @@
 
   /* ── Viewport + Background Flash Prevention ───────────────── */
   html {
-    background-color: var(--ei-void-black);
+    background-color: var(--ei-void);
   }
 
   body {
-    background-color: var(--ei-void-black);
+    background-color: var(--ei-void);
     min-height: 100vh;
   }
 

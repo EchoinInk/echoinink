@@ -48,7 +48,7 @@ export function PhilosophyCard({
       } hover:bg-[var(--ei-card-bg-hover)]`}
       style={{
         background:
-          'linear-gradient(180deg, rgb(var(--ei-deep-indigo-rgb) / 0.28) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.14) 52%, rgb(var(--ei-void-black-rgb) / 0.22) 100%)',
+          'linear-gradient(180deg, rgb(var(--ei-deep-indigo-rgb) / 0.28) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.14) 52%, rgb(var(--ei-void-rgb) / 0.22) 100%)',
         borderColor: 'rgb(var(--ei-soft-lavender-rgb) / 0.12)',
         boxShadow: 'inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.04)',
       }}

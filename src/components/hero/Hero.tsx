@@ -10,7 +10,7 @@ import {
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[720px] md:min-h-[760px] flex items-center overflow-hidden bg-[var(--ei-void-black)] ei-section-hero">
+    <section className="relative w-full min-h-[720px] md:min-h-[760px] flex items-center overflow-hidden bg-[var(--ei-void)] ei-section-hero">
       <HeroBackground />
 
       <Container size="xl" className="relative z-10">

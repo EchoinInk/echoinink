@@ -40,9 +40,9 @@ export default function GlowCard({
   const archetypeConfig = {
     sessions: {
       // PRECISE, DIAGNOSTIC, GEOMETRIC, QUIETER
-      vignette: 'bg-[radial-gradient(circle_at_center,transparent_35%,rgb(var(--ei-void-black-rgb)/0.60)_100%)]',
+      vignette: 'bg-[radial-gradient(circle_at_center,transparent_35%,rgb(var(--ei-void-rgb)/0.60)_100%)]',
       edgeGlow: 'from-cyan-500/[0.07] via-blue-500/[0.04] to-transparent',
-      shadowDepth: 'shadow-[inset_0_1px_30px_-8px_rgb(var(--ei-void-black-rgb)/0.45)]',
+      shadowDepth: 'shadow-[inset_0_1px_30px_-8px_rgb(var(--ei-void-rgb)/0.45)]',
       overlayIntensity: 'via-[var(--ei-deep-indigo)]/55',
       // Precise, minimal motion — clinical restraint
       hoverLift: -1.5,
@@ -58,9 +58,9 @@ export default function GlowCard({
     },
     identity: {
       // EMOTIONAL, FLUID, EXPRESSIVE, SOFTER
-      vignette: 'bg-[radial-gradient(circle_at_center,transparent_50%,rgb(var(--ei-void-black-rgb)/0.40)_100%)]',
+      vignette: 'bg-[radial-gradient(circle_at_center,transparent_50%,rgb(var(--ei-void-rgb)/0.40)_100%)]',
       edgeGlow: 'from-fuchsia-500/[0.12] via-violet-500/[0.07] to-transparent',
-      shadowDepth: 'shadow-[inset_0_3px_50px_-12px_rgb(var(--ei-void-black-rgb)/0.25)]',
+      shadowDepth: 'shadow-[inset_0_3px_50px_-12px_rgb(var(--ei-void-rgb)/0.25)]',
       overlayIntensity: 'via-[var(--ei-deep-indigo)]/30',
       // Fluid, expressive motion — emotional breathing
       hoverLift: -3,
@@ -76,9 +76,9 @@ export default function GlowCard({
     },
     worlds: {
       // DIMENSIONAL, SPATIAL, IMMERSIVE, DEEPER
-      vignette: 'bg-[radial-gradient(ellipse_85%_65%_at_50%_75%,transparent_15%,rgb(var(--ei-void-black-rgb)/0.70)_100%)]',
+      vignette: 'bg-[radial-gradient(ellipse_85%_65%_at_50%_75%,transparent_15%,rgb(var(--ei-void-rgb)/0.70)_100%)]',
       edgeGlow: 'from-indigo-500/[0.11] via-purple-500/[0.06] to-transparent',
-      shadowDepth: 'shadow-[inset_0_-3px_70px_-8px_rgb(var(--ei-void-black-rgb)/0.55)]',
+      shadowDepth: 'shadow-[inset_0_-3px_70px_-8px_rgb(var(--ei-void-rgb)/0.55)]',
       overlayIntensity: 'via-[var(--ei-deep-indigo)]/60',
       // Dimensional, immersive motion — spatial depth
       hoverLift: -2.5,
@@ -121,7 +121,7 @@ export default function GlowCard({
           : featured ? "min-h-[420px] md:min-h-[560px]" : "min-h-[380px] md:min-h-[520px]",
         featured ? "shadow-[0_0_60px_-20px_rgb(var(--ei-deep-indigo-rgb)/0.15)]" : "",
         config.shadowDepth,
-        "bg-[var(--ei-void-black)]",
+        "bg-[var(--ei-void)]",
         /* Mobile differentiation — subtle left accent per archetype */
         archetype === 'sessions' && 'max-md:border-l-2 max-md:border-cyan-500/20',
         archetype === 'identity' && 'max-md:border-l-2 max-md:border-fuchsia-500/20',
@@ -148,7 +148,7 @@ export default function GlowCard({
           )}
 
           {/* VIGNETTE */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,transparent_40%,rgb(var(--ei-void-black-rgb)/0.6)_100%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,transparent_40%,rgb(var(--ei-void-rgb)/0.6)_100%)]" />
 
           {/* CONTENT - anchored bottom-left */}
           <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 md:p-10">

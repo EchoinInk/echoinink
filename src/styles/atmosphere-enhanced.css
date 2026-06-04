@@ -49,7 +49,7 @@
     background: radial-gradient(
       circle at center,
       transparent 30%,
-      rgb(var(--ei-void-black-rgb) / 0.4) 100%
+      rgb(var(--ei-void-rgb) / 0.4) 100%
     );
     pointer-events: none;
   }
@@ -71,8 +71,8 @@
     background: linear-gradient(
       to bottom,
       transparent 0%,
-      rgb(var(--ei-void-black-rgb) / 0.5) 60%,
-      rgb(var(--ei-void-black-rgb) / 0.95) 100%
+      rgb(var(--ei-void-rgb) / 0.5) 60%,
+      rgb(var(--ei-void-rgb) / 0.95) 100%
     );
     pointer-events: none;
   }
@@ -82,7 +82,7 @@
     background: linear-gradient(
       to top,
       transparent 0%,
-      rgb(var(--ei-void-black-rgb) / 0.15) 100%
+      rgb(var(--ei-void-rgb) / 0.15) 100%
     );
     pointer-events: none;
   }
@@ -111,7 +111,7 @@
   .ei-card-glow {
     box-shadow: 
       0 0 0 1px rgb(var(--ei-ice-white-rgb) / 0.04),
-      0 20px 50px -20px rgb(var(--ei-void-black-rgb) / 0.4),
+      0 20px 50px -20px rgb(var(--ei-void-rgb) / 0.4),
       0 0 60px -30px rgb(var(--ei-luxe-violet-rgb) / 0.1);
   }
 

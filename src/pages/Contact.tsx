@@ -180,7 +180,7 @@ export function Contact() {
             className="absolute inset-0 z-[1] pointer-events-none"
             style={{
               background:
-                'linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-void-black-rgb) / 0.16) 100%)',
+                'linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-void-rgb) / 0.16) 100%)',
             }}
           />
 
@@ -189,7 +189,7 @@ export function Contact() {
             className="absolute inset-0 z-[2] pointer-events-none"
             style={{
               background:
-                'radial-gradient(ellipse 54% 62% at 20% 48%, rgb(var(--ei-void-black-rgb) / 0.54) 0%, rgb(var(--ei-void-black-rgb) / 0.34) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.32) 0%, transparent 54%)',
+                'radial-gradient(ellipse 54% 62% at 20% 48%, rgb(var(--ei-void-rgb) / 0.54) 0%, rgb(var(--ei-void-rgb) / 0.34) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.32) 0%, transparent 54%)',
             }}
           />
 
@@ -198,7 +198,7 @@ export function Contact() {
             className="absolute bottom-0 left-0 right-0 z-[3] h-[20vh] pointer-events-none"
             style={{
               background:
-                'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-black-rgb) / 0.34) 70%, var(--ei-void-black) 100%)',
+                'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-rgb) / 0.34) 70%, var(--ei-void) 100%)',
             }}
           />
 
@@ -357,7 +357,7 @@ export function Contact() {
                     type="submit"
                     variant="primary"
                     disabled={formState === 'submitting'}
-                    className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.9),rgb(var(--ei-void-black-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.92),rgb(var(--ei-void-black-rgb)/0.96))] focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.36)] hover:shadow-[0_10px_40px_rgb(var(--ei-aurora-blue-rgb)/0.08)] disabled:opacity-80"
+                    className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.36)] hover:shadow-[0_10px_40px_rgb(var(--ei-aurora-blue-rgb)/0.08)] disabled:opacity-80"
                   >
                     {formState === 'submitting' ? 'Sending...' : 'Send Message'}
                   </Button>
@@ -378,7 +378,7 @@ export function Contact() {
   initial="hidden"
   whileInView="visible"
   viewport={VIEWPORT.loose}
-  className="relative mx-auto mt-12 min-h-[360px] max-w-[1180px] overflow-hidden rounded-[10px] border border-white/[0.08] bg-cover bg-center bg-no-repeat shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)] md:mt-14 md:min-h-[390px]"
+  className="relative mx-auto mt-12 min-h-[360px] max-w-[1180px] overflow-hidden rounded-[10px] border border-white/[0.08] bg-cover bg-center bg-no-repeat shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-rgb)/0.36)] md:mt-14 md:min-h-[390px]"
   style={{
     backgroundImage: `url(${digitalNebulaBookSession})`,
   }}

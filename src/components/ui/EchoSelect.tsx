@@ -120,13 +120,13 @@ export function EchoSelect({
         className="
           group relative min-h-[58px] w-full overflow-hidden rounded-[14px]
           border border-white/[0.12]
-          bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.24),rgb(var(--ei-void-black-rgb)/0.80))]
+          bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.24),rgb(var(--ei-void-rgb)/0.80))]
           px-5 py-4 pr-12 text-left
           font-mono text-[13px]
           shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
           outline-none transition-all duration-500
           hover:border-white/[0.18]
-          hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.32),rgb(var(--ei-void-black-rgb)/0.86))]
+          hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.32),rgb(var(--ei-void-rgb)/0.86))]
           focus-visible:border-[rgb(var(--ei-aurora-blue-rgb)/0.54)]
           focus-visible:ring-2
           focus-visible:ring-white/35
@@ -166,9 +166,9 @@ export function EchoSelect({
           className="
             absolute z-50 mt-3 max-h-72 w-full overflow-auto rounded-[16px]
             border border-white/[0.10]
-            bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.96),rgb(var(--ei-void-black-rgb)/0.98))]
+            bg-[linear-gradient(to_bottom,rgb(var(--ei-deep-indigo-rgb)/0.96),rgb(var(--ei-void-rgb)/0.98))]
             p-2
-            shadow-[0_24px_70px_rgb(var(--ei-void-black-rgb)/0.72),inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
+            shadow-[0_24px_70px_rgb(var(--ei-void-rgb)/0.72),inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
             backdrop-blur-xl
           "
         >

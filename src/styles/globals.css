@@ -21,7 +21,7 @@
   body,
   #root {
     min-height: 100%;
-    background: var(--ei-void-black);
+    background: var(--ei-void);
     color: var(--ei-ice-white);
   }
 
@@ -30,7 +30,7 @@
   }
 
   body {
-    background-color: var(--ei-void-black);
+    background-color: var(--ei-void);
     color: var(--ei-ice-white);
     font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;

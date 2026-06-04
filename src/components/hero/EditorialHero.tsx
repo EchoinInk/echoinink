@@ -50,7 +50,7 @@ export function EditorialHero({
       viewport={VIEWPORT.loose}
       className="
         relative flex min-h-[48vh] items-start overflow-hidden
-        bg-[var(--ei-void-black)]
+        bg-[var(--ei-void)]
         pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]
       "
       aria-labelledby="editorial-hero-heading"
@@ -82,8 +82,8 @@ export function EditorialHero({
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background: isLeft
-            ? 'linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-void-black-rgb) / 0.16) 100%)'
-            : 'linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.16) 0%, transparent 56%, transparent 100%)',
+            ? 'linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-void-rgb) / 0.16) 100%)'
+            : 'linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.16) 0%, transparent 56%, transparent 100%)',
         }}
       />
 
@@ -92,8 +92,8 @@ export function EditorialHero({
         className="pointer-events-none absolute inset-0 z-[2]"
         style={{
           background: isLeft
-            ? 'radial-gradient(ellipse 54% 62% at 20% 48%, rgb(var(--ei-void-black-rgb) / 0.54) 0%, rgb(var(--ei-void-black-rgb) / 0.34) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-void-black-rgb) / 0.32) 0%, transparent 54%)'
-            : 'radial-gradient(ellipse 54% 62% at 80% 48%, rgb(var(--ei-void-black-rgb) / 0.54) 0%, rgb(var(--ei-void-black-rgb) / 0.34) 42%, transparent 72%), linear-gradient(270deg, rgb(var(--ei-void-black-rgb) / 0.32) 0%, transparent 54%)',
+            ? 'radial-gradient(ellipse 54% 62% at 20% 48%, rgb(var(--ei-void-rgb) / 0.54) 0%, rgb(var(--ei-void-rgb) / 0.34) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.32) 0%, transparent 54%)'
+            : 'radial-gradient(ellipse 54% 62% at 80% 48%, rgb(var(--ei-void-rgb) / 0.54) 0%, rgb(var(--ei-void-rgb) / 0.34) 42%, transparent 72%), linear-gradient(270deg, rgb(var(--ei-void-rgb) / 0.32) 0%, transparent 54%)',
         }}
       />
 
@@ -102,7 +102,7 @@ export function EditorialHero({
         className="pointer-events-none absolute bottom-0 left-0 right-0 z-[3] h-[20vh]"
         style={{
           background:
-            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-black-rgb) / 0.34) 70%, var(--ei-void-black) 100%)',
+            'linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-rgb) / 0.34) 70%, var(--ei-void) 100%)',
         }}
       />
 

@@ -95,7 +95,7 @@ export function ProjectCard({
       >
         <Link
           to={href}
-          className="grid min-h-[420px] grid-cols-1 md:min-h-[360px] xl:grid-cols-[1fr_1.1fr] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)]"
+          className="grid min-h-[420px] grid-cols-1 md:min-h-[360px] xl:grid-cols-[1fr_1.1fr] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)]"
           aria-label={`${title} — ${category}. ${description}`}
         >
           <div className="flex flex-col justify-between gap-8 p-7 md:p-10 lg:p-12">
@@ -174,7 +174,7 @@ export function ProjectCard({
       >
         <Link
           to={href}
-          className="relative block min-h-[480px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)] md:min-h-[520px]"
+          className="relative block min-h-[480px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)] md:min-h-[520px]"
           aria-label={`${title} — ${category}. ${description}`}
         >
           <img
@@ -240,7 +240,7 @@ export function ProjectCard({
     >
       <Link
         to={href}
-        className="flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)]"
+        className="flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)]"
         aria-label={`${title} — ${category}. ${description}`}
       >
         <div className="relative aspect-[16/10] overflow-hidden">

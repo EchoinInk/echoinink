@@ -33,7 +33,7 @@ export function WorkFilterBar({
               type="button"
               aria-pressed={isActive}
               onClick={() => onFilterChange(filter)}
-              className="relative shrink-0 rounded-full border px-4 py-2.5 font-structural text-[10px] uppercase tracking-[0.18em] transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void-black)]"
+              className="relative shrink-0 rounded-full border px-4 py-2.5 font-structural text-[10px] uppercase tracking-[0.18em] transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)]"
               style={{
                 color: isActive ? 'var(--ei-text-primary)' : 'var(--ei-text-tertiary)',
                 background: isActive ? 'var(--ei-filter-bg-active)' : 'transparent',

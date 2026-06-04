@@ -49,7 +49,7 @@ export function PageTransition({ children }: PageTransitionProps) {
         }}
         className="fixed inset-0 z-[100] pointer-events-none"
         style={{ 
-          background: 'var(--ei-void-black)',
+          background: 'var(--ei-void)',
           willChange: 'opacity',
         }}
       />

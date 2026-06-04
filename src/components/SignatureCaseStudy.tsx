@@ -79,17 +79,17 @@ function ImagePlaceholder({
   const y = useSpring(rawY, { stiffness: 30, damping: 42, restDelta: 0.001 });
 
   return (
-    <div ref={ref} className={`relative w-full ${aspect} overflow-hidden`} style={{ backgroundColor: 'var(--ei-void-black)' }}>
+    <div ref={ref} className={`relative w-full ${aspect} overflow-hidden`} style={{ backgroundColor: 'var(--ei-void)' }}>
       {/* Parallax atmospheric layers */}
       <motion.div
         className="pointer-events-none"
         style={{ position: 'absolute', top: '-5%', left: '-3%', right: '-3%', bottom: '-5%', y }}
       >
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 85% 75% at 50% 58%, var(--ei-deep-indigo) 0%, var(--ei-void-black) 55%, var(--ei-void-black) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 85% 75% at 50% 58%, var(--ei-deep-indigo) 0%, var(--ei-void) 55%, var(--ei-void) 100%)' }} />
         <div className="absolute inset-0" style={{ background: TINTS[tint] }} />
         <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 30% 34% at 82% 16%, rgb(var(--ei-ice-white-rgb) / 0.03) 0%, transparent 62%)' }} />
         <div className="absolute inset-0" style={{ backgroundImage: GRAIN, backgroundRepeat: 'repeat', backgroundSize: '200px 200px', opacity: 0.055, mixBlendMode: 'overlay' }} />
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 86% 82% at 50% 50%, transparent 30%, rgb(var(--ei-void-black-rgb) / 0.80) 100%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 86% 82% at 50% 50%, transparent 30%, rgb(var(--ei-void-rgb) / 0.80) 100%)' }} />
         <div className="absolute bottom-0 left-0 right-0 h-2/5" style={{ background: 'linear-gradient(to top, rgb(var(--ei-deep-indigo-rgb) / 0.55), transparent)' }} />
       </motion.div>
       {/* Label — fixed, outside parallax */}
@@ -105,7 +105,7 @@ function ImagePlaceholder({
 function OriginPulseAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(155deg, rgb(var(--ei-deep-indigo-rgb) / 0.45) 0%, rgb(var(--ei-void-black-rgb) / 0.22) 48%, transparent 80%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(155deg, rgb(var(--ei-deep-indigo-rgb) / 0.45) 0%, rgb(var(--ei-void-rgb) / 0.22) 48%, transparent 80%)' }} />
       <GlowField
         style={{ top: '-8%', left: '-12%', width: 'clamp(560px, 74vw, 980px)', height: 'clamp(560px, 74vw, 980px)', transformOrigin: '40% 44%' }}
         gradient="radial-gradient(ellipse 50% 47% at 40% 44%, rgb(var(--ei-deep-indigo-rgb) / 0.14) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.055) 44%, transparent 70%)"
@@ -133,7 +133,7 @@ function OriginPulseAtmosphere() {
 function CognitiveLandscapeAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(138deg, rgb(var(--ei-deep-indigo-rgb) / 0.42) 0%, rgb(var(--ei-void-black-rgb) / 0.16) 52%, rgb(var(--ei-deep-indigo-rgb) / 0.10) 100%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(138deg, rgb(var(--ei-deep-indigo-rgb) / 0.42) 0%, rgb(var(--ei-void-rgb) / 0.16) 52%, rgb(var(--ei-deep-indigo-rgb) / 0.10) 100%)' }} />
       <GlowField
         style={{ inset: 0 }}
         gradient="radial-gradient(ellipse 52% 58% at 78% 54%, rgb(var(--ei-luxe-violet-rgb) / 0.065) 0%, transparent 68%)"
@@ -210,7 +210,7 @@ function BreathingIdentityAtmosphere() {
 function HumaneFrameworkAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(145deg, rgb(var(--ei-deep-indigo-rgb) / 0.38) 0%, rgb(var(--ei-void-black-rgb) / 0.16) 55%, transparent 85%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(145deg, rgb(var(--ei-deep-indigo-rgb) / 0.38) 0%, rgb(var(--ei-void-rgb) / 0.16) 55%, transparent 85%)' }} />
       <GlowField
         style={{ top: '5%', left: '-4%', width: 'clamp(200px, 28vw, 380px)', height: 'clamp(200px, 28vw, 380px)' }}
         gradient="radial-gradient(ellipse 55% 55% at 50% 50%, rgb(var(--ei-deep-indigo-rgb) / 0.078) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.030) 55%, transparent 72%)"
@@ -263,8 +263,8 @@ function FragmentsAtmosphere() {
         anim={{ opacity: [0.48, 0.80, 0.48] }}
         duration={38} delay={10}
       />
-      <div style={{ position: 'absolute', top: '46%', left: 0, right: 0, height: '12%', background: 'linear-gradient(180deg, transparent 0%, rgb(var(--ei-void-black-rgb) / 0.10) 50%, transparent 100%)', filter: 'blur(18px)' }} />
-      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 72% at 50% 48%, transparent 40%, rgb(var(--ei-void-black-rgb) / 0.10) 72%, rgb(var(--ei-void-black-rgb) / 0.15) 100%)' }} />
+      <div style={{ position: 'absolute', top: '46%', left: 0, right: 0, height: '12%', background: 'linear-gradient(180deg, transparent 0%, rgb(var(--ei-void-rgb) / 0.10) 50%, transparent 100%)', filter: 'blur(18px)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(ellipse 80% 72% at 50% 48%, transparent 40%, rgb(var(--ei-void-rgb) / 0.10) 72%, rgb(var(--ei-void-rgb) / 0.15) 100%)' }} />
       <GrainOverlay range={[0.016, 0.040]} duration={28} delay={5} size={180} />
     </div>
   );
@@ -273,7 +273,7 @@ function FragmentsAtmosphere() {
 function BecomingAtmosphere() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
-      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 28%, rgb(var(--ei-void-black-rgb) / 0.10) 100%)' }} />
+      <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(180deg, transparent 28%, rgb(var(--ei-void-rgb) / 0.10) 100%)' }} />
       <AtmosphericBloom
         size="clamp(640px, 92vw, 1240px)"
         gradient="radial-gradient(ellipse 54% 50% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.092) 0%, rgb(var(--ei-deep-indigo-rgb) / 0.036) 48%, transparent 72%)"
@@ -765,7 +765,7 @@ export function SignatureCaseStudy() {
       {/* ── 06 — THE TRANSFORMATION ─────────────────────────────────── */}
       <section
         className="relative overflow-hidden py-24 md:py-48"
-        style={{ background: 'linear-gradient(180deg, var(--ei-void-black) 0%, var(--ei-deep-indigo) 50%, var(--ei-void-black) 100%)' }}
+        style={{ background: 'linear-gradient(180deg, var(--ei-void) 0%, var(--ei-deep-indigo) 50%, var(--ei-void) 100%)' }}
       >
         <BecomingAtmosphere />
         <div className="ei-container">
@@ -861,7 +861,7 @@ export function SignatureCaseStudy() {
       {/* ── 08 — THE ECHO IN INK SIGNATURE ──────────────────────────── */}
       <section
         className="relative py-24 md:py-40 text-center overflow-hidden"
-        style={{ background: 'linear-gradient(180deg, var(--ei-void-black) 0%, var(--ei-deep-indigo) 45%, var(--ei-void-black) 100%)' }}
+        style={{ background: 'linear-gradient(180deg, var(--ei-void) 0%, var(--ei-deep-indigo) 45%, var(--ei-void) 100%)' }}
       >
         <ExhaleAtmosphere />
         <div className="ei-container max-w-xl mx-auto">

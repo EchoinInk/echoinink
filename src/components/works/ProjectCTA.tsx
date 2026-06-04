@@ -35,7 +35,7 @@ export function ProjectCTA({
       className="
         relative mx-auto min-h-[360px] max-w-[1180px] overflow-hidden
         rounded-[var(--radius-card)] border
-        shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-black-rgb)/0.36)]
+        shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05),0_24px_90px_rgb(var(--ei-void-rgb)/0.36)]
         md:min-h-[390px]
       "
       style={{
@@ -62,16 +62,16 @@ export function ProjectCTA({
             `
             linear-gradient(
               90deg,
-              rgb(var(--ei-void-black-rgb) / 0.86) 0%,
-              rgb(var(--ei-void-black-rgb) / 0.66) 38%,
-              rgb(var(--ei-void-black-rgb) / 0.28) 68%,
-              rgb(var(--ei-void-black-rgb) / 0.08) 100%
+              rgb(var(--ei-void-rgb) / 0.86) 0%,
+              rgb(var(--ei-void-rgb) / 0.66) 38%,
+              rgb(var(--ei-void-rgb) / 0.28) 68%,
+              rgb(var(--ei-void-rgb) / 0.08) 100%
             ),
             linear-gradient(
               180deg,
-              rgb(var(--ei-void-black-rgb) / 0.16) 0%,
-              rgb(var(--ei-void-black-rgb) / 0.26) 54%,
-              rgb(var(--ei-void-black-rgb) / 0.56) 100%
+              rgb(var(--ei-void-rgb) / 0.16) 0%,
+              rgb(var(--ei-void-rgb) / 0.26) 54%,
+              rgb(var(--ei-void-rgb) / 0.56) 100%
             )
             `,
         }}

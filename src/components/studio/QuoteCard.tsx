@@ -34,7 +34,7 @@ export function QuoteCard({ lines }: QuoteCardProps) {
             ellipse 78% 66% at 50% 42%,
             rgb(var(--ei-deep-indigo-rgb) / 0.34) 0%,
             rgb(var(--ei-deep-indigo-rgb) / 0.16) 54%,
-            rgb(var(--ei-void-black-rgb) / 0.42) 100%
+            rgb(var(--ei-void-rgb) / 0.42) 100%
           )
           `,
         borderColor: 'rgb(var(--ei-aurora-blue-rgb) / 0.18)',

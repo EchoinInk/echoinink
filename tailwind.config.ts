@@ -65,7 +65,7 @@ export default {
         },
         // Echo in Ink: EI Aurora Luxe (refer to CSS variables in tokens.css)
         ei: {
-          void: 'var(--ei-void-black)',
+          void: 'var(--ei-void)',
           indigo: 'var(--ei-deep-indigo)',
           aurora: 'var(--ei-aurora-blue)',
           cyan: 'var(--ei-electric-cyan)',
@@ -80,7 +80,7 @@ export default {
           'text-soft': 'rgb(var(--ei-soft-lavender-rgb) / 0.85)',
           'text-accent': 'var(--ei-aurora-blue)',
           'text-accent-secondary': 'var(--ei-orchid-pink)',
-          'surface-deep': 'var(--ei-void-black)',
+          'surface-deep': 'var(--ei-void)',
           'surface-panel': 'rgb(var(--ei-deep-indigo-rgb) / 0.35)',
           'surface-card': 'rgb(var(--ei-deep-indigo-rgb) / 0.25)',
           'surface-elevated': 'rgb(var(--ei-aurora-blue-rgb) / 0.15)',
@@ -91,7 +91,7 @@ export default {
   'ei-cyan': '0 0 28px rgb(var(--ei-electric-cyan-rgb) / 0.2)',
   'ei-orchid': '0 0 30px rgb(var(--ei-orchid-pink-rgb) / 0.18)',
   'ei-luxe':
-    '0 18px 70px rgb(var(--ei-void-black-rgb) / 0.55), 0 0 48px rgb(var(--ei-aurora-blue-rgb) / 0.14)',
+    '0 18px 70px rgb(var(--ei-void-rgb) / 0.55), 0 0 48px rgb(var(--ei-aurora-blue-rgb) / 0.14)',
 },
       backgroundImage: {
         'ei-gradient-primary':

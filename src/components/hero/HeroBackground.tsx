@@ -6,7 +6,7 @@ export function HeroBackground() {
       {/* Base */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[var(--ei-void-black)]"
+        className="absolute inset-0 bg-[var(--ei-void)]"
       />
 
       {/* MONOGRAM — one responsive image, no breakpoint swapping */}
@@ -43,10 +43,10 @@ export function HeroBackground() {
         style={{
           background: `linear-gradient(
             90deg,
-            rgb(var(--ei-void-black-rgb) / 1) 0%,
-            rgb(var(--ei-void-black-rgb) / 0.96) 18%,
-            rgb(var(--ei-void-black-rgb) / 0.74) 34%,
-            rgb(var(--ei-void-black-rgb) / 0.26) 48%,
+            rgb(var(--ei-void-rgb) / 1) 0%,
+            rgb(var(--ei-void-rgb) / 0.96) 18%,
+            rgb(var(--ei-void-rgb) / 0.74) 34%,
+            rgb(var(--ei-void-rgb) / 0.26) 48%,
             transparent 60%
           )`,
         }}
@@ -59,9 +59,9 @@ export function HeroBackground() {
         style={{
           background: `linear-gradient(
             180deg,
-            rgb(var(--ei-void-black-rgb) / 0.78) 0%,
-            rgb(var(--ei-void-black-rgb) / 0.42) 55%,
-            rgb(var(--ei-void-black-rgb) / 0) 100%
+            rgb(var(--ei-void-rgb) / 0.78) 0%,
+            rgb(var(--ei-void-rgb) / 0.42) 55%,
+            rgb(var(--ei-void-rgb) / 0) 100%
           )`,
         }}
       />
@@ -89,8 +89,8 @@ export function HeroBackground() {
           background: `linear-gradient(
             to bottom,
             transparent 0%,
-            rgb(var(--ei-void-black-rgb) / 0.36) 68%,
-            var(--ei-void-black) 100%
+            rgb(var(--ei-void-rgb) / 0.36) 68%,
+            var(--ei-void) 100%
           )`,
         }}
       />

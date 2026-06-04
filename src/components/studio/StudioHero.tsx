@@ -112,7 +112,7 @@ export function StudioHero({
                 className="absolute inset-0"
                 style={{
                   background:
-                    'linear-gradient(to right, var(--ei-void-black) 0%, transparent 38%, rgba(5, 7, 13, 0.18) 100%)',
+                    'linear-gradient(to right, var(--ei-void) 0%, transparent 38%, rgba(5, 7, 13, 0.18) 100%)',
                 }}
               />
               <div
@@ -120,7 +120,7 @@ export function StudioHero({
                 className="absolute inset-0"
                 style={{
                   background:
-                    'radial-gradient(ellipse 70% 65% at 58% 48%, transparent 40%, rgb(var(--ei-void-black-rgb) / 0.28) 100%)',
+                    'radial-gradient(ellipse 70% 65% at 58% 48%, transparent 40%, rgb(var(--ei-void-rgb) / 0.28) 100%)',
                 }}
               />
             </div>
@@ -136,7 +136,7 @@ export function StudioHero({
                 className="absolute inset-0"
                 style={{
                   background:
-                    'linear-gradient(to top, var(--ei-void-black) 0%, transparent 32%), linear-gradient(to right, var(--ei-void-black) 0%, transparent 28%)',
+                    'linear-gradient(to top, var(--ei-void) 0%, transparent 32%), linear-gradient(to right, var(--ei-void) 0%, transparent 28%)',
                 }}
               />
             </div>

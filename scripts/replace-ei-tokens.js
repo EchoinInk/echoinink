@@ -13,7 +13,7 @@ const replacements = [
   ['--ei-orchid-pink-rgb', '--ei-orchid-pink-rgb'],
   ['--ei-soft-lavender-rgb', '--ei-soft-lavender-rgb'],
   ['--ei-deep-indigo-rgb', '--ei-deep-indigo-rgb'],
-  ['--ei-void-black-rgb', '--ei-void-black-rgb'],
+  ['--ei-void-rgb', '--ei-void-rgb'],
   ['--ei-ice-white-rgb', '--ei-ice-white-rgb'],
   ['--ei-deep-indigo', '--ei-deep-indigo'],
   ['--ei-deep-indigo', '--ei-deep-indigo'],
@@ -22,7 +22,7 @@ const replacements = [
   ['--ei-orchid-pink', '--ei-orchid-pink'],
   ['--ei-soft-lavender', '--ei-soft-lavender'],
   ['--ei-deep-indigo', '--ei-deep-indigo'],
-  ['--ei-void-black', '--ei-void-black'],
+  ['--ei-void', '--ei-void'],
   ['--ei-ice-white', '--ei-ice-white'],
 ];
 
