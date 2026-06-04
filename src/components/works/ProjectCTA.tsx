@@ -90,7 +90,7 @@ export function ProjectCTA({
             ),
             radial-gradient(
               ellipse 42% 48% at 72% 45%,
-              rgb(var(--ei-luxe-violet-rgb) / 0.14) 0%,
+              rgb(var(--ei-echo-magenta-rgb) / 0.14) 0%,
               transparent 68%
             )
             `,

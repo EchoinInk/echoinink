@@ -135,7 +135,7 @@ export function Contact() {
           className="absolute inset-0 opacity-70"
           style={{
             background:
-              'radial-gradient(ellipse 42% 34% at 28% 18%, rgb(var(--ei-midnight-rgb) / 0.22) 0%, transparent 68%), radial-gradient(ellipse 34% 28% at 77% 16%, rgb(var(--ei-luxe-violet-rgb) / 0.07) 0%, transparent 72%), radial-gradient(ellipse 52% 38% at 50% 58%, rgb(var(--ei-electric-blue-rgb) / 0.035) 0%, transparent 70%)',
+              'radial-gradient(ellipse 42% 34% at 28% 18%, rgb(var(--ei-midnight-rgb) / 0.22) 0%, transparent 68%), radial-gradient(ellipse 34% 28% at 77% 16%, rgb(var(--ei-echo-magenta-rgb) / 0.07) 0%, transparent 72%), radial-gradient(ellipse 52% 38% at 50% 58%, rgb(var(--ei-electric-blue-rgb) / 0.035) 0%, transparent 70%)',
           }}
         />
         <div
@@ -221,7 +221,7 @@ export function Contact() {
                 <h1
                   className="font-editorial max-w-[680px] pt-8 text-[2.25rem] leading-[1.06] tracking-tight text-white/92 max--md:leading-[1.12] md:pt-12 md:text-[3.1rem] lg:text-[3.7rem]"
                   style={{
-                    textShadow: '0 0 90px rgb(var(--ei-luxe-violet-rgb) / 0.08)',
+                    textShadow: '0 0 90px rgb(var(--ei-echo-magenta-rgb) / 0.08)',
                   }}
                 >
                   Let's build <span className="inline-flex flex-wrap items-baseline gap-x-[0.14em] md:flex-nowrap md:whitespace-nowrap">something <em className="font-normal italic text-[rgb(var(--ei-soft-lavender-rgb)/0.9)]">meaningful.</em></span>
@@ -397,7 +397,7 @@ export function Contact() {
     className="absolute inset-0"
     style={{
       background:
-        'radial-gradient(ellipse 54% 65% at 20% 50%, rgb(var(--ei-midnight-rgb) / 0.18) 0%, transparent 70%), radial-gradient(ellipse 42% 48% at 72% 45%, rgb(var(--ei-luxe-violet-rgb) / 0.12) 0%, transparent 68%)',
+        'radial-gradient(ellipse 54% 65% at 20% 50%, rgb(var(--ei-midnight-rgb) / 0.18) 0%, transparent 70%), radial-gradient(ellipse 42% 48% at 72% 45%, rgb(var(--ei-echo-magenta-rgb) / 0.12) 0%, transparent 68%)',
     }}
   />
 

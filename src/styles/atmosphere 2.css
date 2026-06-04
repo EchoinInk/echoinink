@@ -6,7 +6,7 @@
 .ei-luxe-violet-glow {
   background: radial-gradient(
     ellipse 68% 60% at 35% 48%,
-    rgb(var(--ei-luxe-violet-rgb) / 0.07) 0%,
+    rgb(var(--ei-echo-magenta-rgb) / 0.07) 0%,
     rgb(var(--ei-midnight-rgb) / 0.04) 50%,
     transparent 80%
   );

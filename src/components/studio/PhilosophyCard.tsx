@@ -57,7 +57,7 @@ export function PhilosophyCard({
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
         style={{
           background:
-            'radial-gradient(circle at 20% 12%, rgb(var(--ei-electric-blue-rgb) / 0.13), transparent 34%), radial-gradient(circle at 84% 88%, rgb(var(--ei-luxe-violet-rgb) / 0.12), transparent 38%)',
+            'radial-gradient(circle at 20% 12%, rgb(var(--ei-electric-blue-rgb) / 0.13), transparent 34%), radial-gradient(circle at 84% 88%, rgb(var(--ei-echo-magenta-rgb) / 0.12), transparent 38%)',
         }}
         aria-hidden="true"
       />

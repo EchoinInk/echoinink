@@ -157,12 +157,12 @@
   /* ── Validation States ───────────────────────────────────── */
   .ei-form-input:invalid:not(:placeholder-shown),
   .ei-form-textarea:invalid:not(:placeholder-shown) {
-    border-color: rgb(var(--ei-orchid-pink-rgb) / 0.20);
+    border-color: rgb(var(--ei-soft-neon-rgb) / 0.20);
   }
 
   .ei-form-input:valid:not(:placeholder-shown),
   .ei-form-textarea:valid:not(:placeholder-shown) {
-    border-color: rgb(var(--ei-luxe-violet-rgb) / 0.15);
+    border-color: rgb(var(--ei-echo-magenta-rgb) / 0.15);
   }
 
   /* ── Autofill Styling ────────────────────────────────────── */

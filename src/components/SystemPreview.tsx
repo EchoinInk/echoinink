@@ -25,7 +25,7 @@ const systems: SystemCardProps[] = [
       'A guided reflective practice for founders navigating becoming. Questions that reveal what wants to emerge.',
     category: 'Cognitive Tool',
     status: 'available',
-    accent: 'rgb(var(--ei-orchid-pink-rgb) / 0.06)',
+    accent: 'rgb(var(--ei-soft-neon-rgb) / 0.06)',
   },
   {
     title: 'Narrative Tension Map',
@@ -57,7 +57,7 @@ const systems: SystemCardProps[] = [
       'A generative thinking partner for creative directors and founders navigating conceptual decisions with clarity.',
     category: 'GPT System',
     status: 'soon',
-    accent: 'rgb(var(--ei-luxe-violet-rgb) / 0.07)',
+    accent: 'rgb(var(--ei-echo-magenta-rgb) / 0.07)',
   },
 ];
 
@@ -101,7 +101,7 @@ export function SystemPreview() {
             className="w-full h-px mb-8 md:mb-10"
             style={{
               background:
-                'linear-gradient(90deg, transparent 0%, rgb(var(--ei-electric-blue-rgb) / 0.12) 20%, rgb(var(--ei-luxe-violet-rgb) / 0.10) 50%, rgb(var(--ei-orchid-pink-rgb) / 0.12) 80%, transparent 100%)',
+                'linear-gradient(90deg, transparent 0%, rgb(var(--ei-electric-blue-rgb) / 0.12) 20%, rgb(var(--ei-echo-magenta-rgb) / 0.10) 50%, rgb(var(--ei-soft-neon-rgb) / 0.12) 80%, transparent 100%)',
             }}
           />
 

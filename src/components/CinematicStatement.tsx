@@ -26,8 +26,8 @@ export function CinematicStatement() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background: `
-            radial-gradient(ellipse 80% 60% at 50% 40%, rgb(var(--ei-luxe-violet-rgb) / 0.06) 0%, transparent 60%),
-            radial-gradient(ellipse 60% 50% at 30% 60%, rgb(var(--ei-luxe-violet-rgb) / 0.04) 0%, transparent 50%)
+            radial-gradient(ellipse 80% 60% at 50% 40%, rgb(var(--ei-echo-magenta-rgb) / 0.06) 0%, transparent 60%),
+            radial-gradient(ellipse 60% 50% at 30% 60%, rgb(var(--ei-echo-magenta-rgb) / 0.04) 0%, transparent 50%)
           `,
           filter: 'blur(100px)',
         }}
@@ -41,7 +41,7 @@ export function CinematicStatement() {
         viewport={VIEWPORT.normal}
         transition={{ duration: DURATION.slower, ease: EASE_LUXURY }}
         style={{
-          background: 'radial-gradient(ellipse 50% 40% at 50% 45%, rgb(var(--ei-orchid-pink-rgb) / 0.03) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 50% 40% at 50% 45%, rgb(var(--ei-soft-neon-rgb) / 0.03) 0%, transparent 60%)',
           filter: 'blur(80px)',
         }}
       />

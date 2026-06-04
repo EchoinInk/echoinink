@@ -78,8 +78,8 @@
   .ei-glow-violet-core {
     background: radial-gradient(
       ellipse 55% 50% at 50% 55%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.045) 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.022) 50%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.045) 0%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.022) 50%,
       transparent 70%
     );
     filter: blur(100px);
@@ -90,7 +90,7 @@
   .ei-glow-indigo-core {
     background: radial-gradient(
       ellipse 60% 55% at 45% 50%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.038) 0%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.038) 0%,
       rgb(var(--ei-electric-blue-rgb) / 0.015) 55%,
       transparent 75%
     );
@@ -114,8 +114,8 @@
   .ei-glow-pink-core {
     background: radial-gradient(
       ellipse 50% 45% at 50% 50%,
-      rgb(var(--ei-orchid-pink-rgb) / 0.025) 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.012) 50%,
+      rgb(var(--ei-soft-neon-rgb) / 0.025) 0%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.012) 50%,
       transparent 70%
     );
     filter: blur(100px);
@@ -128,7 +128,7 @@
     inset: 0;
     background: radial-gradient(
       ellipse 100% 50% at 50% 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.035) 0%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.035) 0%,
       transparent 50%
     );
     filter: blur(80px);
@@ -240,7 +240,7 @@
     inset: 0;
     background: radial-gradient(
       ellipse 50% 40% at 50% 45%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.04) 0%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.04) 0%,
       transparent 60%
     );
     filter: blur(80px);
@@ -252,8 +252,8 @@
   .ei-light-field-warm {
     background: radial-gradient(
       ellipse 50% 40% at 50% 45%,
-      rgb(var(--ei-orchid-pink-rgb) / 0.03) 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.02) 50%,
+      rgb(var(--ei-soft-neon-rgb) / 0.03) 0%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.02) 50%,
       transparent 60%
     );
   }
@@ -263,7 +263,7 @@
     background: radial-gradient(
       ellipse 50% 40% at 50% 45%,
       rgb(var(--ei-electric-blue-rgb) / 0.03) 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.02) 50%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.02) 50%,
       transparent 60%
     );
   }
@@ -277,9 +277,9 @@
     background: linear-gradient(
       90deg,
       transparent 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.1) 20%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.08) 50%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.1) 80%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.1) 20%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.08) 50%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.1) 80%,
       transparent 100%
     );
   }
@@ -304,8 +304,8 @@
     background: linear-gradient(
       90deg,
       transparent 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.06) 30%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.06) 70%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.06) 30%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.06) 70%,
       transparent 100%
     );
   }
@@ -326,7 +326,7 @@
     box-shadow:
       0 0 0 1px rgb(var(--ei-ice-white-rgb) / 0.04),
       0 20px 50px -20px rgb(var(--ei-void-rgb) / 0.4),
-      0 0 60px -30px rgb(var(--ei-luxe-violet-rgb) / 0.1);
+      0 0 60px -30px rgb(var(--ei-echo-magenta-rgb) / 0.1);
   }
 
   /* ── Breathing Space Atmosphere ─────────────────────────── */
@@ -335,7 +335,7 @@
     background:
       radial-gradient(
         ellipse 35% 25% at 50% 50%,
-        rgb(var(--ei-luxe-violet-rgb) / 0.015) 0%,
+        rgb(var(--ei-echo-magenta-rgb) / 0.015) 0%,
         transparent 55%
       );
     position: relative;
@@ -353,7 +353,7 @@
     inset: -15%;
     background: radial-gradient(
       ellipse 45% 40% at 50% 50%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.022) 0%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.022) 0%,
       transparent 65%
     );
     filter: blur(60px);
@@ -396,7 +396,7 @@
     inset: 0;
     background: radial-gradient(
       ellipse 100% 50% at 50% 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.035) 0%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.035) 0%,
       transparent 50%
     );
     filter: blur(80px);
@@ -414,8 +414,8 @@
     inset: 0;
     background: radial-gradient(
       ellipse 100% 50% at 50% 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.03) 0%,
-      rgb(var(--ei-orchid-pink-rgb) / 0.02) 30%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.03) 0%,
+      rgb(var(--ei-soft-neon-rgb) / 0.02) 30%,
       transparent 60%
     );
     filter: blur(80px);
@@ -434,7 +434,7 @@
     background: radial-gradient(
       ellipse 100% 50% at 50% 0%,
       rgb(var(--ei-electric-blue-rgb) / 0.025) 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.02) 40%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.02) 40%,
       transparent 60%
     );
     filter: blur(80px);
@@ -452,7 +452,7 @@
     inset: 0;
     background: radial-gradient(
       ellipse 100% 50% at 50% 0%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.035) 0%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.035) 0%,
       rgb(var(--ei-midnight-rgb) / 0.025) 40%,
       transparent 60%
     );
@@ -471,7 +471,7 @@
     inset: 0;
     background: radial-gradient(
       ellipse 80% 40% at 80% 10%,
-      rgb(var(--ei-luxe-violet-rgb) / 0.025) 0%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.025) 0%,
       transparent 50%
     );
     filter: blur(70px);

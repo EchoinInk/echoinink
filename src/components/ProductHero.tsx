@@ -33,7 +33,7 @@ export function ProductHero({
   description,
   ctaLabel = 'Explore',
   ctaHref = '/contact',
-  accentColor = 'rgb(var(--ei-luxe-violet-rgb) / 0.07)',
+  accentColor = 'rgb(var(--ei-echo-magenta-rgb) / 0.07)',
 }: ProductHeroProps) {
   return (
     <section className="relative min-h-[60vh] md:min-h-[75vh] flex items-center justify-start overflow-hidden py-20 md:py-32">

@@ -80,7 +80,7 @@ export function EmergingSystems() {
 
             <Link
               to="/systems"
-              className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/55 hover:text-[var(--ei-luxe-violet)] transition-colors duration-500"
+              className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/55 hover:text-[var(--ei-echo-magenta)] transition-colors duration-500"
             >
               Explore All Systems
               <span className="group-hover:translate-x-1 transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">→</span>
@@ -93,7 +93,7 @@ export function EmergingSystems() {
               <motion.article key={system.title} variants={driftUp}>
                 <Link
                   to={system.href}
-                  className="group flex flex-col h-full rounded-[24px] border border-white/10 bg-[var(--ei-midnight)]/70 p-7 transition-all duration-500 hover:border-[var(--ei-luxe-violet)]/30 hover:shadow-[0_0_60px_rgb(var(--ei-luxe-violet-rgb)/0.12)]"
+                  className="group flex flex-col h-full rounded-[24px] border border-white/10 bg-[var(--ei-midnight)]/70 p-7 transition-all duration-500 hover:border-[var(--ei-echo-magenta)]/30 hover:shadow-[0_0_60px_rgb(var(--ei-echo-magenta-rgb)/0.12)]"
                   aria-label={system.title}
                 >
                   {/* Orbital icon */}

@@ -38,7 +38,7 @@
   }
 
   ::selection {
-    background: rgb(var(--ei-luxe-violet-rgb) / 0.25);
+    background: rgb(var(--ei-echo-magenta-rgb) / 0.25);
     color: var(--ei-text-primary);
   }
 }

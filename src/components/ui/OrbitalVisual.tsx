@@ -58,13 +58,13 @@ const cobaltDim = 'rgb(var(--ei-electric-blue-rgb) / 0.48)';
 const orbitBlue = 'rgb(var(--ei-midnight-rgb) / 0.72)';
 const orbitBlueSoft = 'rgb(var(--ei-midnight-rgb) / 0.42)';
 
-const violet = 'rgb(var(--ei-luxe-violet-rgb) / 0.82)';
-const violetSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.78)';
-const violetDim = 'rgb(var(--ei-luxe-violet-rgb) / 0.54)';
+const violet = 'rgb(var(--ei-echo-magenta-rgb) / 0.82)';
+const violetSoft = 'rgb(var(--ei-soft-neon-rgb) / 0.78)';
+const violetDim = 'rgb(var(--ei-echo-magenta-rgb) / 0.54)';
 
-const magenta = 'rgb(var(--ei-orchid-pink-rgb) / 0.78)';
-const magentaSoft = 'rgb(var(--ei-orchid-pink-rgb) / 0.92)';
-const orchid = 'rgb(var(--ei-orchid-pink-rgb) / 0.72)';
+const magenta = 'rgb(var(--ei-soft-neon-rgb) / 0.78)';
+const magentaSoft = 'rgb(var(--ei-soft-neon-rgb) / 0.92)';
+const orchid = 'rgb(var(--ei-soft-neon-rgb) / 0.72)';
 
  const icons: Record<OrbitalVariant, React.ReactElement> = {
 
@@ -280,7 +280,7 @@ const orchid = 'rgb(var(--ei-orchid-pink-rgb) / 0.72)';
 
           strokeWidth="0.6"
 
-          fill="rgb(var(--ei-luxe-violet-rgb) / 0.09)"
+          fill="rgb(var(--ei-echo-magenta-rgb) / 0.09)"
 
         />
 
@@ -907,7 +907,7 @@ ember: (
       d={`M${c} 10 C${size - 8} 24, ${size - 18} ${size - 8}, ${c} ${size - 10} C14 ${size - 18}, 10 28, ${c} 10 Z`}
       stroke={magentaSoft}
       strokeWidth="0.7"
-      fill="rgb(var(--ei-orchid-pink-rgb) / 0.035)"
+      fill="rgb(var(--ei-soft-neon-rgb) / 0.035)"
     />
     <path
       d={`M${c} 18 C${size - 16} 28, ${size - 24} ${size - 18}, ${c} ${size - 16} C22 ${size - 22}, 20 32, ${c} 18 Z`}
@@ -938,7 +938,7 @@ ember: (
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle, rgb(var(--ei-electric-blue-rgb) / 0.13) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.09) 42%, rgb(var(--ei-orchid-pink-rgb) / 0.05) 62%, transparent 72%)',
+            'radial-gradient(circle, rgb(var(--ei-electric-blue-rgb) / 0.13) 0%, rgb(var(--ei-echo-magenta-rgb) / 0.09) 42%, rgb(var(--ei-soft-neon-rgb) / 0.05) 62%, transparent 72%)',
           filter: 'blur(7px)',
           borderRadius: '50%',
         }}

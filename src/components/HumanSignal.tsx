@@ -20,7 +20,7 @@ export function HumanSignal() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 55% 45% at 50% 50%, rgb(var(--ei-orchid-pink-rgb) / 0.03) 0%, rgb(var(--ei-soft-lavender-rgb) / 0.02) 40%, transparent 70%)',
+            'radial-gradient(ellipse 55% 45% at 50% 50%, rgb(var(--ei-soft-neon-rgb) / 0.03) 0%, rgb(var(--ei-soft-lavender-rgb) / 0.02) 40%, transparent 70%)',
           filter: 'blur(80px)',
         }}
       />

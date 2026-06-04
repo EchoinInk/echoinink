@@ -42,8 +42,8 @@ const layers = [
     headline: 'Reflective technology for identity, narrative, and emotional clarity.',
     description:
       'An intelligent companion for people navigating creative becoming. Built on reflection, not noise.',
-    accent: 'rgb(var(--ei-orchid-pink-rgb) / 0.08)',
-    accentLine: 'rgb(var(--ei-orchid-pink-rgb) / 0.4)',
+    accent: 'rgb(var(--ei-soft-neon-rgb) / 0.08)',
+    accentLine: 'rgb(var(--ei-soft-neon-rgb) / 0.4)',
     tag: '03',
   },
 ];

@@ -151,8 +151,8 @@ export function ImmersiveEi({ className = '' }: ImmersiveEiProps) {
         transition={{ duration: DURATION.slower * 2, ease: EASE_LUXURY }}
         style={{
           background: `
-            radial-gradient(ellipse 60% 50% at 50% 50%, rgb(var(--ei-luxe-violet-rgb) / 0.04) 0%, transparent 60%),
-            radial-gradient(ellipse 40% 40% at 50% 50%, rgb(var(--ei-orchid-pink-rgb) / 0.03) 0%, transparent 50%)
+            radial-gradient(ellipse 60% 50% at 50% 50%, rgb(var(--ei-echo-magenta-rgb) / 0.04) 0%, transparent 60%),
+            radial-gradient(ellipse 40% 40% at 50% 50%, rgb(var(--ei-soft-neon-rgb) / 0.03) 0%, transparent 50%)
           `,
           filter: 'blur(60px)',
         }}
@@ -182,8 +182,8 @@ export function ImmersiveEi({ className = '' }: ImmersiveEiProps) {
           <defs>
             <linearGradient id="eiGradient" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="rgb(var(--ei-ice-white-rgb) / 0.5)" />
-              <stop offset="50%" stopColor="rgb(var(--ei-orchid-pink-rgb) / 0.4)" />
-              <stop offset="100%" stopColor="rgb(var(--ei-luxe-violet-rgb) / 0.3)" />
+              <stop offset="50%" stopColor="rgb(var(--ei-soft-neon-rgb) / 0.4)" />
+              <stop offset="100%" stopColor="rgb(var(--ei-echo-magenta-rgb) / 0.3)" />
             </linearGradient>
           </defs>
           {/* Ei letterform — stylized monogram */}
@@ -219,7 +219,7 @@ export function ImmersiveEi({ className = '' }: ImmersiveEiProps) {
             repeatType: 'mirror',
           }}
           style={{
-            background: 'radial-gradient(ellipse 50% 50% at 50% 50%, rgb(var(--ei-orchid-pink-rgb) / 0.15) 0%, transparent 70%)',
+            background: 'radial-gradient(ellipse 50% 50% at 50% 50%, rgb(var(--ei-soft-neon-rgb) / 0.15) 0%, transparent 70%)',
             filter: 'blur(30px)',
           }}
         />

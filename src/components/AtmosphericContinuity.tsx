@@ -24,12 +24,12 @@ const colorMap = {
     secondary: 'rgb(var(--ei-midnight-rgb) / 0.015)',
   },
   violet: {
-    main: 'rgb(var(--ei-luxe-violet-rgb) / 0.03)',
-    secondary: 'rgb(var(--ei-luxe-violet-rgb) / 0.015)',
+    main: 'rgb(var(--ei-echo-magenta-rgb) / 0.03)',
+    secondary: 'rgb(var(--ei-echo-magenta-rgb) / 0.015)',
   },
   pink: {
-    main: 'rgb(var(--ei-orchid-pink-rgb) / 0.03)',
-    secondary: 'rgb(var(--ei-orchid-pink-rgb) / 0.015)',
+    main: 'rgb(var(--ei-soft-neon-rgb) / 0.03)',
+    secondary: 'rgb(var(--ei-soft-neon-rgb) / 0.015)',
   },
   aqua: {
     main: 'rgb(var(--ei-electric-blue-rgb) / 0.03)',

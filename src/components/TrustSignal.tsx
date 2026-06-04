@@ -74,7 +74,7 @@ export function TrustSignal() {
             variants={blurEmergence}
             className="mt-8 md:mt-12 w-full h-px"
             style={{
-              background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-luxe-violet-rgb) / 0.05) 30%, rgb(var(--ei-midnight-rgb) / 0.05) 70%, transparent 100%)',
+              background: 'linear-gradient(90deg, transparent 0%, rgb(var(--ei-echo-magenta-rgb) / 0.05) 30%, rgb(var(--ei-midnight-rgb) / 0.05) 70%, transparent 100%)',
             }}
           />
         </motion.div>

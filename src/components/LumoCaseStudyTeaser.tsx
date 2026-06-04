@@ -50,7 +50,7 @@ export function LumoCaseStudyTeaser() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 45% 28% at 66% 48%, rgb(var(--ei-luxe-violet-rgb) / 0.045) 0%, transparent 68%)',
+            'radial-gradient(ellipse 45% 28% at 66% 48%, rgb(var(--ei-echo-magenta-rgb) / 0.045) 0%, transparent 68%)',
           filter: 'blur(70px)',
         }}
       />
@@ -167,7 +167,7 @@ export function LumoCaseStudyTeaser() {
                     group inline-flex items-center gap-2.5
                     font-mono text-[10px] uppercase tracking-[0.22em]
                     text-white/76 transition-colors duration-500
-                    hover:text-[var(--ei-luxe-violet)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--ei-electric-blue-rgb)/0.32)]
+                    hover:text-[var(--ei-echo-magenta)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--ei-electric-blue-rgb)/0.32)]
                   "
                 >
                   <span className="relative">
@@ -175,7 +175,7 @@ export function LumoCaseStudyTeaser() {
                     <span
                       className="
                         absolute -bottom-px left-0 h-px w-0
-                        bg-[var(--ei-luxe-violet)]/70
+                        bg-[var(--ei-echo-magenta)]/70
                         transition-all duration-500
                         ease-[cubic-bezier(0.22,1,0.36,1)]
                         group-hover:w-full
