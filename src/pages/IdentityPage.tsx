@@ -40,7 +40,7 @@ export default function Identity() {
         ctaHref={identityHero.primaryCta.href}
         image={identityHeroAtmosphere}
         mobileImage={identityHeroAtmosphere}
-        imageAlt="s"
+        imageAlt="Luminous echo emerging from deep ink-black space."
         align="left"
       />
 
