@@ -157,7 +157,17 @@ const isIntimate = variant === 'intimate';
 
             <h2
               id="editorial-hero-heading"
-              className="ei-type-section whitespace-pre-line px-6 mb-5
+              className="
+               font-editorial
+    max-w-[29ch]
+    whitespace-pre-line
+    text-[2.45rem]
+    leading-[1.06]
+    tracking-tight
+    text-white/[0.94]
+    md:text-[3.45rem]
+    md:leading-[1.04]
+    lg:text-[4.15rem]
               "
               style={{
                 textShadow: '0 0 48px rgb(var(--ei-violet-rgb) / 0.04)',
