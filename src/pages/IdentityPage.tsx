@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { PageShell } from '@/components/layout/PageShell';
 import { EditorialImageHero } from '@/components/sections/EditorialImageHero';
-import identityHero from '@/assets/imagery/hero/identity-hero-atmosphere.png';
+import identityHeroAtmosphere from '@/assets/imagery/hero/identity-hero-atmosphere.png';
 import { OfferSection } from '@/components/sections/OfferSection';
 import { DeliverableCard } from '@/components/cards/DeliverableCard';
 import { ProcessSteps } from '@/components/sections/ProcessSteps';
@@ -40,24 +40,11 @@ export default function Identity() {
         description="Selected projects that explore identity, emotion, and technology — crafted to leave a lasting impact."
         ctaLabel="Start a Conversation →"
         ctaHref="/contact"
-        image={identityHero}
-        mobileImage={worksHeroMobile}
+        image={identityHeroAtmosphere}
+        mobileImage={identityHeroAtmosphere}
         imageAlt="Cinematic nebula visual representing Echo In Ink selected works"
         align="left"
       />
-<PageHero
-  variant="intimate"
-  label="Identity"
-  title={
-    <>
-      Feeling is the inner resonance.
-      <br />
-      Identity is the echo made visible.
-    </>
-  }
-  kicker="Atmospheric Identity Direction"
-  intro="A quieter, more precise direction system for shaping the emotional atmosphere of your work."
-/>
 
       <OfferSection eyebrow="Who it is for" title={identityAudience.eyebrow}>
         <div className="max-w-3xl space-y-5">
