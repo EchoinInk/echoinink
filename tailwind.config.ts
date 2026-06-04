@@ -68,7 +68,7 @@ export default {
           void: 'var(--ei-void)',
           indigo: 'var(--ei-midnight)',
           aurora: 'var(--ei-electric-blue)',
-          cyan: 'var(--ei-electric-cyan)',
+          cyan: 'var(--ei-halo-blue)',
           orchid: 'var(--ei-orchid-pink)',
           violet: 'var(--ei-luxe-violet)',
           lavender: 'var(--ei-soft-lavender)',
@@ -88,7 +88,7 @@ export default {
       },
       bboxShadow: {
   'ei-aurora': '0 0 32px rgb(var(--ei-electric-blue-rgb) / 0.22)',
-  'ei-cyan': '0 0 28px rgb(var(--ei-electric-cyan-rgb) / 0.2)',
+  'ei-cyan': '0 0 28px rgb(var(--ei-halo-blue-rgb) / 0.2)',
   'ei-orchid': '0 0 30px rgb(var(--ei-orchid-pink-rgb) / 0.18)',
   'ei-luxe':
     '0 18px 70px rgb(var(--ei-void-rgb) / 0.55), 0 0 48px rgb(var(--ei-electric-blue-rgb) / 0.14)',
