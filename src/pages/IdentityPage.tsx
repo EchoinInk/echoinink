@@ -1,13 +1,13 @@
-import { Helmet } from 'react-helmet-async';
-import { PageShell } from '@/components/layout/PageShell';
-import { EditorialImageHero } from '@/components/sections/EditorialImageHero';
-import identityHeroAtmosphere from '@/assets/imagery/hero/identity-hero-atmosphere.png';
-import { OfferSection } from '@/components/sections/OfferSection';
-import { DeliverableCard } from '@/components/cards/DeliverableCard';
-import { ProcessSteps } from '@/components/sections/ProcessSteps';
-import { PricingTiers } from '@/components/sections/PricingTiers';
-import { UseCasesList } from '@/components/sections/UseCasesList';
-import { OfferClosingCTA } from '@/components/sections/OfferClosingCTA';
+import { Helmet } from "react-helmet-async";
+import { PageShell } from "@/components/layout/PageShell";
+import { EditorialImageHero } from "@/components/sections/EditorialImageHero";
+import identityHeroAtmosphere from "@/assets/imagery/hero/identity-hero-atmosphere.png";
+import { OfferSection } from "@/components/sections/OfferSection";
+import { DeliverableCard } from "@/components/cards/DeliverableCard";
+import { ProcessSteps } from "@/components/sections/ProcessSteps";
+import { PricingTiers } from "@/components/sections/PricingTiers";
+import { UseCasesList } from "@/components/sections/UseCasesList";
+import { OfferClosingCTA } from "@/components/sections/OfferClosingCTA";
 import {
   identityAudience,
   identityClosing,
@@ -16,8 +16,8 @@ import {
   identityPricing,
   identityProcess,
   identityTransformation,
-  identityUseCases,
-} from '@/data/identityContent';
+  identityUseCases
+} from "@/data/identityContent";
 
 export default function Identity() {
   return (
@@ -33,7 +33,7 @@ export default function Identity() {
       <EditorialImageHero
         variant="intimate"
         eyebrow="Identity"
-        title={identityAudience.eyebrow}
+        title={identityHero.titleLines.join("\n")}
         italicWord="Identity"
         description="Selected projects that explore identity, emotion, and technology — crafted to leave a lasting impact."
         ctaLabel="Start a Conversation →"
