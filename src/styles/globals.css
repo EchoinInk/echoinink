@@ -1,3 +1,5 @@
+@import './easy-page.css' layer(styles);
+
 @import './01-tokens/tokens.css' layer(tokens);
 
 @import './02-base/typography-system.css' layer(base);

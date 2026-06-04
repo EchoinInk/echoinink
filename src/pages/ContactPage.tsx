@@ -163,7 +163,7 @@ export function Contact() {
             <source media="(min-width: 768px)" srcSet={nebulaDesktop} />
             <img
               src={nebulaMobile}
-              alt=""
+              alt="Contact Nebula"
               className="h-full w-full object-cover object-center saturate-[0.84] md:object-[72%_50%]"
               fetchPriority="high"
             />
