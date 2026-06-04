@@ -232,7 +232,7 @@
 
   .ei-type-body-large {
     font-family: var(--ei-font-structural);
-    font-size: clamp(1.0625rem, 1.35vw, 1.25rem);
+    font-size: clamp(1.0625rem, 1.4vw, 1.3125rem);
     line-height: 1.68;
     letter-spacing: -0.006em;
     font-weight: 400;
