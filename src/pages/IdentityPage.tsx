@@ -17,6 +17,7 @@ import {
   identityTransformation,
   identityUseCases,
 } from '@/data/identityContent';
+import { EditorialImageHero } from '@/components/sections/EditorialImageHero';
 
 export default function Identity() {
   return (
@@ -29,7 +30,20 @@ export default function Identity() {
         />
       </Helmet>
 
-      <PageHero
+      <EditorialImageHero
+       varient="intimate"
+        eyebrow="Our Works"
+        title="Worlds we've designed and built."
+        italicWord="built"
+        description="Selected projects that explore identity, emotion, and technology — crafted to leave a lasting impact."
+        ctaLabel="Start a Conversation →"
+        ctaHref="/contact"
+        image={worksHeroDesktop}
+        mobileImage={worksHeroMobile}
+        imageAlt="Cinematic nebula visual representing Echo In Ink selected works"
+        align="left"
+      />
+<PageHero
   variant="intimate"
   label="Identity"
   title={
