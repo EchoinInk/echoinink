@@ -36,8 +36,8 @@ export default function Identity() {
         title={identityHero.titleLines.join("\n")}
         italicWord="Identity"
         description={identityHero.body.join("\n")}
-        ctaLabel="Start a Conversation →"
-        ctaHref="/contact"
+        ctaLabel={identityHero.primaryCta.label}
+        ctaHref={identityHero.primaryCta.href}
         image={identityHeroAtmosphere}
         mobileImage={identityHeroAtmosphere}
         imageAlt="Cinematic nebula visual representing Echo In Ink selected works"
