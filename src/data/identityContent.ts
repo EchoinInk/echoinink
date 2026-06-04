@@ -1,7 +1,7 @@
 export const identityHero = {
   eyebrow: 'IDENTITY',
   titleLines: [
-    'Feeling is the',
+    'Identity is the inner resonance made visible. is the',
     'inner resonance.',
     'Identity is the echo made visible.',
   ],
