@@ -35,7 +35,7 @@ export default function Identity() {
         eyebrow="Identity"
         title={identityHero.titleLines.join("\n")}
         italicWord="Identity"
-        description="Selected projects that explore identity, emotion, and technology — crafted to leave a lasting impact."
+        description={identityHero.body.join("\n")}
         ctaLabel="Start a Conversation →"
         ctaHref="/contact"
         image={identityHeroAtmosphere}
