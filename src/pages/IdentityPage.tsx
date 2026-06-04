@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { PageShell } from '@/components/layout/PageShell';
-import { PageHero } from '@/components/sections/PageHero';
+import { EditorialImageHero } from '@/components/sections/EditorialImageHero';
 import { OfferSection } from '@/components/sections/OfferSection';
 import { DeliverableCard } from '@/components/cards/DeliverableCard';
 import { ProcessSteps } from '@/components/sections/ProcessSteps';
@@ -17,7 +17,6 @@ import {
   identityTransformation,
   identityUseCases,
 } from '@/data/identityContent';
-import { EditorialImageHero } from '@/components/sections/EditorialImageHero';
 
 export default function Identity() {
   return (
@@ -36,7 +35,7 @@ export default function Identity() {
         title="Feeling is the inner resonance.
       <br />
       Identity is the echo made visible."
-        italicWord="built"
+        italicWord="Identity"
         description="Selected projects that explore identity, emotion, and technology — crafted to leave a lasting impact."
         ctaLabel="Start a Conversation →"
         ctaHref="/contact"
