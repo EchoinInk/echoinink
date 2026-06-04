@@ -51,9 +51,9 @@ export function OrbitalVisual({
 const photonSoft = 'rgb(var(--ei-ice-white-rgb) / 0.48)';
 const photonDim = 'rgb(var(--ei-ice-white-rgb) / 0.52)';
 
-const cobalt = 'rgb(var(--ei-aurora-blue-rgb) / 0.92)';
+const cobalt = 'rgb(var(--ei-electric-blue-rgb) / 0.92)';
 const cobaltSoft = 'rgb(var(--ei-electric-cyan-rgb) / 0.52)';
-const cobaltDim = 'rgb(var(--ei-aurora-blue-rgb) / 0.48)';
+const cobaltDim = 'rgb(var(--ei-electric-blue-rgb) / 0.48)';
 
 const orbitBlue = 'rgb(var(--ei-midnight-rgb) / 0.72)';
 const orbitBlueSoft = 'rgb(var(--ei-midnight-rgb) / 0.42)';
@@ -284,7 +284,7 @@ const orchid = 'rgb(var(--ei-orchid-pink-rgb) / 0.72)';
 
         />
 
-        <circle cx={c} cy={c} r={5} fill="rgb(var(--ei-aurora-blue-rgb) / 0.18)" />
+        <circle cx={c} cy={c} r={5} fill="rgb(var(--ei-electric-blue-rgb) / 0.18)" />
 
         <circle cx={c} cy={c} r={2.5} fill={photon} />
 
@@ -938,7 +938,7 @@ ember: (
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(circle, rgb(var(--ei-aurora-blue-rgb) / 0.13) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.09) 42%, rgb(var(--ei-orchid-pink-rgb) / 0.05) 62%, transparent 72%)',
+            'radial-gradient(circle, rgb(var(--ei-electric-blue-rgb) / 0.13) 0%, rgb(var(--ei-luxe-violet-rgb) / 0.09) 42%, rgb(var(--ei-orchid-pink-rgb) / 0.05) 62%, transparent 72%)',
           filter: 'blur(7px)',
           borderRadius: '50%',
         }}

@@ -50,7 +50,7 @@ export function EmergingSystems() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 55% 40% at 50% 55%, rgb(var(--ei-aurora-blue-rgb) / 0.02) 0%, transparent 60%)',
+          background: 'radial-gradient(ellipse 55% 40% at 50% 55%, rgb(var(--ei-electric-blue-rgb) / 0.02) 0%, transparent 60%)',
           filter: 'blur(60px)',
         }}
       />
@@ -71,10 +71,10 @@ export function EmergingSystems() {
             <div className="flex items-center gap-3">
               <span className="ei-eyebrow">Our Systems</span>
 <div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
+          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-electric-blue-rgb)/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
+              'linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-electric-blue-rgb) / 0.95) 100%)',
           }}
         />            </div>
 

@@ -195,7 +195,7 @@ export function ProjectCard({
             className="absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
             style={{
               background:
-                'radial-gradient(ellipse 60% 50% at 50% 80%, rgb(var(--ei-aurora-blue-rgb) / 0.08) 0%, transparent 70%)',
+                'radial-gradient(ellipse 60% 50% at 50% 80%, rgb(var(--ei-electric-blue-rgb) / 0.08) 0%, transparent 70%)',
             }}
           />
 

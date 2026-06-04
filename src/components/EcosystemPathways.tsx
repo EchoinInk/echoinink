@@ -32,8 +32,8 @@ const layers = [
     headline: 'Frameworks, cognitive tools, identity maps, atmospheric UI systems.',
     description:
       'Structured tools for building identity, narrative, and digital worlds with cinematic clarity.',
-    accent: 'rgb(var(--ei-aurora-blue-rgb) / 0.07)',
-    accentLine: 'rgb(var(--ei-aurora-blue-rgb) / 0.35)',
+    accent: 'rgb(var(--ei-electric-blue-rgb) / 0.07)',
+    accentLine: 'rgb(var(--ei-electric-blue-rgb) / 0.35)',
     tag: '02',
   },
   {

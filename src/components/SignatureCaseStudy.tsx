@@ -57,7 +57,7 @@ const GRAIN = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'
 
 const TINTS = {
   violet:  'radial-gradient(ellipse 58% 55% at 36% 46%, rgb(var(--ei-luxe-violet-rgb) / 0.20) 0%, transparent 68%)',
-  aqua:    'radial-gradient(ellipse 55% 50% at 63% 37%, rgb(var(--ei-aurora-blue-rgb) / 0.16) 0%, transparent 65%)',
+  aqua:    'radial-gradient(ellipse 55% 50% at 63% 37%, rgb(var(--ei-electric-blue-rgb) / 0.16) 0%, transparent 65%)',
   pink:    'radial-gradient(ellipse 50% 55% at 44% 52%, rgb(var(--ei-orchid-pink-rgb) / 0.17) 0%, transparent 66%)',
   indigo:  'radial-gradient(ellipse 58% 52% at 52% 42%, rgb(var(--ei-midnight-rgb) / 0.18) 0%, transparent 70%)',
   neutral: 'radial-gradient(ellipse 50% 50% at 50% 45%, rgb(var(--ei-soft-lavender-rgb) / 0.07) 0%, transparent 70%)',

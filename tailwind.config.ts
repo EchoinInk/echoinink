@@ -67,7 +67,7 @@ export default {
         ei: {
           void: 'var(--ei-void)',
           indigo: 'var(--ei-midnight)',
-          aurora: 'var(--ei-aurora-blue)',
+          aurora: 'var(--ei-electric-blue)',
           cyan: 'var(--ei-electric-cyan)',
           orchid: 'var(--ei-orchid-pink)',
           violet: 'var(--ei-luxe-violet)',
@@ -78,36 +78,36 @@ export default {
           'text-tertiary': 'rgb(var(--ei-ice-white-rgb) / 0.58)',
           'text-muted': 'rgb(var(--ei-soft-lavender-rgb) / 0.48)',
           'text-soft': 'rgb(var(--ei-soft-lavender-rgb) / 0.85)',
-          'text-accent': 'var(--ei-aurora-blue)',
+          'text-accent': 'var(--ei-electric-blue)',
           'text-accent-secondary': 'var(--ei-orchid-pink)',
           'surface-deep': 'var(--ei-void)',
           'surface-panel': 'rgb(var(--ei-midnight-rgb) / 0.35)',
           'surface-card': 'rgb(var(--ei-midnight-rgb) / 0.25)',
-          'surface-elevated': 'rgb(var(--ei-aurora-blue-rgb) / 0.15)',
+          'surface-elevated': 'rgb(var(--ei-electric-blue-rgb) / 0.15)',
         },
       },
       bboxShadow: {
-  'ei-aurora': '0 0 32px rgb(var(--ei-aurora-blue-rgb) / 0.22)',
+  'ei-aurora': '0 0 32px rgb(var(--ei-electric-blue-rgb) / 0.22)',
   'ei-cyan': '0 0 28px rgb(var(--ei-electric-cyan-rgb) / 0.2)',
   'ei-orchid': '0 0 30px rgb(var(--ei-orchid-pink-rgb) / 0.18)',
   'ei-luxe':
-    '0 18px 70px rgb(var(--ei-void-rgb) / 0.55), 0 0 48px rgb(var(--ei-aurora-blue-rgb) / 0.14)',
+    '0 18px 70px rgb(var(--ei-void-rgb) / 0.55), 0 0 48px rgb(var(--ei-electric-blue-rgb) / 0.14)',
 },
       backgroundImage: {
         'ei-gradient-primary':
-          'linear-gradient(135deg, var(--ei-aurora-blue) 0%, var(--ei-luxe-violet) 48%, var(--ei-orchid-pink) 100%)',
+          'linear-gradient(135deg, var(--ei-electric-blue) 0%, var(--ei-luxe-violet) 48%, var(--ei-orchid-pink) 100%)',
         'ei-gradient-glow':
-          'radial-gradient(circle, rgb(var(--ei-aurora-blue-rgb) / 0.45), rgb(var(--ei-orchid-pink-rgb) / 0.18), transparent 70%)',
+          'radial-gradient(circle, rgb(var(--ei-electric-blue-rgb) / 0.45), rgb(var(--ei-orchid-pink-rgb) / 0.18), transparent 70%)',
       },
       borderColor: {
         soft: 'rgb(var(--ei-ice-white-rgb) / 0.10)',
         glow: 'rgb(var(--ei-luxe-violet-rgb) / 0.32)',
         card: 'rgb(var(--ei-soft-lavender-rgb) / 0.12)',
-        cobalt: 'rgb(var(--ei-aurora-blue-rgb) / 0.28)',
+        cobalt: 'rgb(var(--ei-electric-blue-rgb) / 0.28)',
         magenta: 'rgb(var(--ei-orchid-pink-rgb) / 0.25)',
       },
       ringColor: {
-        cobalt: 'rgb(var(--ei-aurora-blue-rgb) / 0.5)',
+        cobalt: 'rgb(var(--ei-electric-blue-rgb) / 0.5)',
         violet: 'rgb(var(--ei-luxe-violet-rgb) / 0.5)',
         magenta: 'rgb(var(--ei-orchid-pink-rgb) / 0.5)',
       },

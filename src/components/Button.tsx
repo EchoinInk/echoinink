@@ -72,21 +72,21 @@ before:bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_
   text-white/[0.94]
   hover:text-white
 
-  border border-[rgb(var(--ei-aurora-blue-rgb)/0.30)]
-  hover:border-[rgb(var(--ei-aurora-blue-rgb)/0.45)]
+  border border-[rgb(var(--ei-electric-blue-rgb)/0.30)]
+  hover:border-[rgb(var(--ei-electric-blue-rgb)/0.45)]
 
   bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.85),rgb(var(--ei-void-rgb)/0.94))]
 
   shadow-[
     inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.14),
-    0_0_30px_rgb(var(--ei-aurora-blue-rgb)/0.10),
-    0_0_90px_rgb(var(--ei-aurora-blue-rgb)/0.035)
+    0_0_30px_rgb(var(--ei-electric-blue-rgb)/0.10),
+    0_0_90px_rgb(var(--ei-electric-blue-rgb)/0.035)
   ]
 
   hover:shadow-[
   inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.16),
-  0_0_32px_rgb(var(--ei-aurora-blue-rgb)/0.12),
-  0_0_80px_rgb(var(--ei-aurora-blue-rgb)/0.04)
+  0_0_32px_rgb(var(--ei-electric-blue-rgb)/0.12),
+  0_0_80px_rgb(var(--ei-electric-blue-rgb)/0.04)
   ]
 
   hover:-translate-y-[2px]

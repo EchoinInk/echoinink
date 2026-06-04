@@ -34,18 +34,18 @@
 
   /* ── Text Selection ───────────────────────────────────────── */
 ::selection {
-  background: rgb(var(--ei-aurora-blue-rgb) / 0.26);
+  background: rgb(var(--ei-electric-blue-rgb) / 0.26);
   color: rgb(var(--ei-ice-white-rgb) / 0.96);
 }
 
 ::-moz-selection {
-  background: rgb(var(--ei-aurora-blue-rgb) / 0.26);
+  background: rgb(var(--ei-electric-blue-rgb) / 0.26);
   color: rgb(var(--ei-ice-white-rgb) / 0.96);
 }
 
 /* ── Tap Highlight (Mobile) ───────────────────────────────── */
 * {
-  -webkit-tap-highlight-color: rgb(var(--ei-aurora-blue-rgb) / 0.16);
+  -webkit-tap-highlight-color: rgb(var(--ei-electric-blue-rgb) / 0.16);
 }
 
 /* ── Focus Outline Treatment ──────────────────────────────── */
@@ -54,12 +54,12 @@
 }
 
 *:focus-visible {
-  outline: 1px solid rgb(var(--ei-aurora-blue-rgb) / 0.42);
+  outline: 1px solid rgb(var(--ei-electric-blue-rgb) / 0.42);
   outline-offset: 2px;
 
   box-shadow:
-    0 0 0 1px rgb(var(--ei-aurora-blue-rgb) / 0.18),
-    0 0 18px rgb(var(--ei-aurora-blue-rgb) / 0.16);
+    0 0 0 1px rgb(var(--ei-electric-blue-rgb) / 0.18),
+    0 0 18px rgb(var(--ei-electric-blue-rgb) / 0.16);
 }
 
   /* ── Overscroll Behavior ─────────────────────────────────── */

@@ -32,8 +32,8 @@ const colorMap = {
     secondary: 'rgb(var(--ei-orchid-pink-rgb) / 0.015)',
   },
   aqua: {
-    main: 'rgb(var(--ei-aurora-blue-rgb) / 0.03)',
-    secondary: 'rgb(var(--ei-aurora-blue-rgb) / 0.015)',
+    main: 'rgb(var(--ei-electric-blue-rgb) / 0.03)',
+    secondary: 'rgb(var(--ei-electric-blue-rgb) / 0.015)',
   },
 };
 

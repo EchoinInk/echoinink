@@ -127,12 +127,12 @@ export function EchoSelect({
           outline-none transition-all duration-500
           hover:border-white/[0.18]
           hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.32),rgb(var(--ei-void-rgb)/0.86))]
-          focus-visible:border-[rgb(var(--ei-aurora-blue-rgb)/0.54)]
+          focus-visible:border-[rgb(var(--ei-electric-blue-rgb)/0.54)]
           focus-visible:ring-2
           focus-visible:ring-white/35
           focus-visible:ring-offset-2
           focus-visible:ring-offset-[#05070D]
-          focus-visible:shadow-[0_0_0_1px_rgb(var(--ei-aurora-blue-rgb)/0.22),0_0_28px_rgb(var(--ei-aurora-blue-rgb)/0.08)]
+          focus-visible:shadow-[0_0_0_1px_rgb(var(--ei-electric-blue-rgb)/0.22),0_0_28px_rgb(var(--ei-electric-blue-rgb)/0.08)]
         "
       >
         <span className={value ? 'relative z-10 block truncate text-white/82' : 'relative z-10 block truncate text-white/55'}>
@@ -153,7 +153,7 @@ export function EchoSelect({
           className="
             pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500
             group-hover:opacity-100
-            bg-[radial-gradient(circle_at_82%_20%,rgb(var(--ei-aurora-blue-rgb)/0.10),transparent_34%)]
+            bg-[radial-gradient(circle_at_82%_20%,rgb(var(--ei-electric-blue-rgb)/0.10),transparent_34%)]
           "
         />
       </button>
@@ -201,7 +201,7 @@ export function EchoSelect({
                   font-mono text-[13px] transition-colors duration-300
                   ${
                     active
-                      ? 'bg-[rgb(var(--ei-aurora-blue-rgb)/0.10)] text-white'
+                      ? 'bg-[rgb(var(--ei-electric-blue-rgb)/0.10)] text-white'
                       : selected
                         ? 'text-white/90'
                         : 'text-white/68'
@@ -214,7 +214,7 @@ export function EchoSelect({
                   {selected && (
                     <span
                       aria-hidden="true"
-                      className="text-[rgb(var(--ei-aurora-blue-rgb)/0.92)]"
+                      className="text-[rgb(var(--ei-electric-blue-rgb)/0.92)]"
                     >
                       ✓
                     </span>

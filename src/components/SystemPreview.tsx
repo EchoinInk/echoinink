@@ -33,7 +33,7 @@ const systems: SystemCardProps[] = [
       'A diagnostic tool for identifying where story, identity, and audience drift out of coherence.',
     category: 'Framework',
     status: 'available',
-    accent: 'rgb(var(--ei-aurora-blue-rgb) / 0.06)',
+    accent: 'rgb(var(--ei-electric-blue-rgb) / 0.06)',
   },
   {
     title: 'Atmosphere Direction System',
@@ -69,7 +69,7 @@ export function SystemPreview() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 55% 35% at 50% 40%, rgb(var(--ei-aurora-blue-rgb) / 0.025) 0%, transparent 60%)',
+            'radial-gradient(ellipse 55% 35% at 50% 40%, rgb(var(--ei-electric-blue-rgb) / 0.025) 0%, transparent 60%)',
           filter: 'blur(70px)',
         }}
       />
@@ -101,7 +101,7 @@ export function SystemPreview() {
             className="w-full h-px mb-8 md:mb-10"
             style={{
               background:
-                'linear-gradient(90deg, transparent 0%, rgb(var(--ei-aurora-blue-rgb) / 0.12) 20%, rgb(var(--ei-luxe-violet-rgb) / 0.10) 50%, rgb(var(--ei-orchid-pink-rgb) / 0.12) 80%, transparent 100%)',
+                'linear-gradient(90deg, transparent 0%, rgb(var(--ei-electric-blue-rgb) / 0.12) 20%, rgb(var(--ei-luxe-violet-rgb) / 0.10) 50%, rgb(var(--ei-orchid-pink-rgb) / 0.12) 80%, transparent 100%)',
             }}
           />
 

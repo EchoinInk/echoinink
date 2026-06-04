@@ -21,7 +21,7 @@ const statusLabel: Record<string, string> = {
 };
 
 const statusColor: Record<string, string> = {
-  available: 'rgb(var(--ei-aurora-blue-rgb) / 0.55)',
+  available: 'rgb(var(--ei-electric-blue-rgb) / 0.55)',
   soon: 'rgb(var(--ei-soft-lavender-rgb) / 0.45)',
   active: 'rgb(var(--ei-orchid-pink-rgb) / 0.55)',
 };

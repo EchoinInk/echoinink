@@ -42,7 +42,7 @@ export function StudioHero({
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(circle at 72% 24%, rgb(var(--ei-luxe-violet-rgb) / 0.10) 0%, transparent 36%), radial-gradient(circle at 80% 38%, rgb(var(--ei-aurora-blue-rgb) / 0.08) 0%, transparent 32%)',
+            'radial-gradient(circle at 72% 24%, rgb(var(--ei-luxe-violet-rgb) / 0.10) 0%, transparent 36%), radial-gradient(circle at 80% 38%, rgb(var(--ei-electric-blue-rgb) / 0.08) 0%, transparent 32%)',
         }}
       />
 

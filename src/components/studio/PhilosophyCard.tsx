@@ -57,7 +57,7 @@ export function PhilosophyCard({
         className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100"
         style={{
           background:
-            'radial-gradient(circle at 20% 12%, rgb(var(--ei-aurora-blue-rgb) / 0.13), transparent 34%), radial-gradient(circle at 84% 88%, rgb(var(--ei-luxe-violet-rgb) / 0.12), transparent 38%)',
+            'radial-gradient(circle at 20% 12%, rgb(var(--ei-electric-blue-rgb) / 0.13), transparent 34%), radial-gradient(circle at 84% 88%, rgb(var(--ei-luxe-violet-rgb) / 0.12), transparent 38%)',
         }}
         aria-hidden="true"
       />
@@ -68,7 +68,7 @@ export function PhilosophyCard({
         }`}
         style={{
           filter:
-            'drop-shadow(0 0 18px rgb(var(--ei-aurora-blue-rgb) / 0.18))',
+            'drop-shadow(0 0 18px rgb(var(--ei-electric-blue-rgb) / 0.18))',
         }}
         aria-hidden="true"
       >

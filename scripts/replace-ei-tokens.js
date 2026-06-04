@@ -8,7 +8,7 @@ const exts = new Set(['.ts', '.tsx', '.js', '.jsx', '.css', '.mjs']);
 const replacements = [
   ['--ei-midnight-rgb', '--ei-midnight-rgb'],
   ['--ei-midnight-rgb', '--ei-midnight-rgb'],
-  ['--ei-aurora-blue-rgb', '--ei-aurora-blue-rgb'],
+  ['--ei-electric-blue-rgb', '--ei-electric-blue-rgb'],
   ['--ei-luxe-violet-rgb', '--ei-luxe-violet-rgb'],
   ['--ei-orchid-pink-rgb', '--ei-orchid-pink-rgb'],
   ['--ei-soft-lavender-rgb', '--ei-soft-lavender-rgb'],
@@ -17,7 +17,7 @@ const replacements = [
   ['--ei-ice-white-rgb', '--ei-ice-white-rgb'],
   ['--ei-midnight', '--ei-midnight'],
   ['--ei-midnight', '--ei-midnight'],
-  ['--ei-aurora-blue', '--ei-aurora-blue'],
+  ['--ei-electric-blue', '--ei-electric-blue'],
   ['--ei-luxe-violet', '--ei-luxe-violet'],
   ['--ei-orchid-pink', '--ei-orchid-pink'],
   ['--ei-soft-lavender', '--ei-soft-lavender'],

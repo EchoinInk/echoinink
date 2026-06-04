@@ -13,7 +13,7 @@
     --ei-surface-mid: rgb(var(--ei-midnight-rgb) / 0.8);
     --ei-surface-base: rgb(var(--ei-midnight-rgb) / 0.6);
     --ei-surface-raised: rgb(var(--ei-midnight-rgb) / 0.5);
-    --ei-surface-elevated: rgb(var(--ei-aurora-blue-rgb) / 0.4);
+    --ei-surface-elevated: rgb(var(--ei-electric-blue-rgb) / 0.4);
   }
 
   .ei-surface-void {
@@ -91,7 +91,7 @@
     background: radial-gradient(
       ellipse 60% 55% at 45% 50%,
       rgb(var(--ei-luxe-violet-rgb) / 0.038) 0%,
-      rgb(var(--ei-aurora-blue-rgb) / 0.015) 55%,
+      rgb(var(--ei-electric-blue-rgb) / 0.015) 55%,
       transparent 75%
     );
     filter: blur(110px);
@@ -102,8 +102,8 @@
   .ei-glow-aqua-core {
     background: radial-gradient(
       ellipse 50% 45% at 55% 48%,
-      rgb(var(--ei-aurora-blue-rgb) / 0.03) 0%,
-      rgb(var(--ei-aurora-blue-rgb) / 0.015) 50%,
+      rgb(var(--ei-electric-blue-rgb) / 0.03) 0%,
+      rgb(var(--ei-electric-blue-rgb) / 0.015) 50%,
       transparent 70%
     );
     filter: blur(90px);
@@ -262,7 +262,7 @@
   .ei-light-field-cool {
     background: radial-gradient(
       ellipse 50% 40% at 50% 45%,
-      rgb(var(--ei-aurora-blue-rgb) / 0.03) 0%,
+      rgb(var(--ei-electric-blue-rgb) / 0.03) 0%,
       rgb(var(--ei-luxe-violet-rgb) / 0.02) 50%,
       transparent 60%
     );
@@ -433,7 +433,7 @@
     inset: 0;
     background: radial-gradient(
       ellipse 100% 50% at 50% 0%,
-      rgb(var(--ei-aurora-blue-rgb) / 0.025) 0%,
+      rgb(var(--ei-electric-blue-rgb) / 0.025) 0%,
       rgb(var(--ei-luxe-violet-rgb) / 0.02) 40%,
       transparent 60%
     );

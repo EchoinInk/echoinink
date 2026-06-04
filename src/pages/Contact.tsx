@@ -135,7 +135,7 @@ export function Contact() {
           className="absolute inset-0 opacity-70"
           style={{
             background:
-              'radial-gradient(ellipse 42% 34% at 28% 18%, rgb(var(--ei-midnight-rgb) / 0.22) 0%, transparent 68%), radial-gradient(ellipse 34% 28% at 77% 16%, rgb(var(--ei-luxe-violet-rgb) / 0.07) 0%, transparent 72%), radial-gradient(ellipse 52% 38% at 50% 58%, rgb(var(--ei-aurora-blue-rgb) / 0.035) 0%, transparent 70%)',
+              'radial-gradient(ellipse 42% 34% at 28% 18%, rgb(var(--ei-midnight-rgb) / 0.22) 0%, transparent 68%), radial-gradient(ellipse 34% 28% at 77% 16%, rgb(var(--ei-luxe-violet-rgb) / 0.07) 0%, transparent 72%), radial-gradient(ellipse 52% 38% at 50% 58%, rgb(var(--ei-electric-blue-rgb) / 0.035) 0%, transparent 70%)',
           }}
         />
         <div
@@ -210,10 +210,10 @@ export function Contact() {
                     Contact
                   </span>
                   <div
-                    className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-aurora-blue-rgb)/0.45)]"
+                    className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-electric-blue-rgb)/0.45)]"
                     style={{
                       background:
-                        'linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-aurora-blue-rgb) / 0.95) 100%)',
+                        'linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-electric-blue-rgb) / 0.95) 100%)',
                     }}
                   />
                 </div>
@@ -253,7 +253,7 @@ export function Contact() {
                   key={block.title}
                   className="grid grid-cols-[56px_1fr] gap-5 border-white/[0.08] pb-9 md:border-b md:pt-9 first:md:pt-2 last:md:border-b-0"
                 >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[rgb(var(--ei-soft-lavender-rgb)/0.18)] text-[rgb(var(--ei-soft-lavender-rgb)/0.82)] shadow-[inset_0_0_24px_rgb(var(--ei-aurora-blue-rgb)/0.035)] transition-colors duration-500 hover:border-white/25 hover:text-white">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[rgb(var(--ei-soft-lavender-rgb)/0.18)] text-[rgb(var(--ei-soft-lavender-rgb)/0.82)] shadow-[inset_0_0_24px_rgb(var(--ei-electric-blue-rgb)/0.035)] transition-colors duration-500 hover:border-white/25 hover:text-white">
                     <ContactIcon name={block.icon} />
                   </span>
                   <div>
@@ -357,7 +357,7 @@ export function Contact() {
                     type="submit"
                     variant="primary"
                     disabled={formState === 'submitting'}
-                    className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] focus-visible:ring-[rgb(var(--ei-aurora-blue-rgb)/0.36)] hover:shadow-[0_10px_40px_rgb(var(--ei-aurora-blue-rgb)/0.08)] disabled:opacity-80"
+                    className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] focus-visible:ring-[rgb(var(--ei-electric-blue-rgb)/0.36)] hover:shadow-[0_10px_40px_rgb(var(--ei-electric-blue-rgb)/0.08)] disabled:opacity-80"
                   >
                     {formState === 'submitting' ? 'Sending...' : 'Send Message'}
                   </Button>

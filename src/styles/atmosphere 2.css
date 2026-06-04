@@ -17,7 +17,7 @@
 .ei-aurora-cyan-glow {
   background: radial-gradient(
     ellipse 60% 66% at 58% 46%,
-    rgb(var(--ei-aurora-blue-rgb) / 0.07) 0%,
+    rgb(var(--ei-electric-blue-rgb) / 0.07) 0%,
     rgb(var(--ei-midnight-rgb) / 0.035) 54%,
     transparent 82%
   );
