@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Container } from '@/components/layout/Container';
@@ -20,6 +21,8 @@ interface OfferHeroProps {
   primaryCta?: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   titleLines?: string[];
+  /** Optional restrained right-side visual. When present the hero becomes a balanced two-column layout. */
+  media?: ReactNode;
 }
 
 export function OfferHero({
@@ -32,6 +35,7 @@ export function OfferHero({
   primaryCta,
   secondaryCta,
   titleLines,
+  media,
 }: OfferHeroProps) {
   const headings = titleLines?.length ? titleLines : [title];
 
@@ -54,7 +58,14 @@ export function OfferHero({
       />
 
       <Container size="xl" className="relative z-10">
-        <div className="mx-auto max-w-[680px] md:pl-6 lg:pl-10">
+        <div
+          className={
+            media
+              ? 'grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:gap-16'
+              : ''
+          }
+        >
+        <div className={media ? 'max-w-[640px]' : 'mx-auto max-w-[680px] md:pl-6 lg:pl-10'}>
           {atmosphereLine && (
             <motion.p
               variants={fadeSoft}
@@ -140,6 +151,17 @@ export function OfferHero({
                     {secondaryCta.label} →
                   </Link>
                 ))}
+            </motion.div>
+          )}
+        </div>
+
+          {media && (
+            <motion.div
+              variants={fadeSoft}
+              className="relative"
+              aria-hidden="true"
+            >
+              {media}
             </motion.div>
           )}
         </div>

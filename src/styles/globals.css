@@ -6,6 +6,7 @@
 @import './02-base/accessibility.css' layer(base);
 
 @import './03-components/cards.css' layer(components);
+@import './03-components/identity.css' layer(components);
 @import './03-components/atmosphere.css' layer(components);
 @import './03-components/forms.css' layer(components);
 @import './03-components/buttons.css' layer(components);
