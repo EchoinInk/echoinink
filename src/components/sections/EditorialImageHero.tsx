@@ -21,7 +21,7 @@ interface EditorialImageHeroProps {
   mobileImage: string;
   imageAlt: string;
   align?: 'left' | 'center';
-  variant?: 'default' | 'studio';
+  variant?: 'default' | 'studio' | 'intimate';
 }
 
 export function EditorialImageHero({
@@ -35,6 +35,7 @@ export function EditorialImageHero({
   mobileImage,
   imageAlt,
   align = 'left',
+  variant = 'default',
 }: EditorialImageHeroProps) {
   const titleParts = italicWord
     ? title.split(new RegExp(`(${italicWord})`, 'i'))
@@ -48,11 +49,12 @@ export function EditorialImageHero({
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className="
+      className={`
         relative flex min-h-[48vh] items-start overflow-hidden
         bg-[var(--ei-void)]
         pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]
-      "
+        ${variant === 'intimate' ? 'md:min-h-[60vh]' : ''}
+      `}
       aria-labelledby="editorial-hero-heading"
     >
       <picture className="absolute inset-0 z-0 block" aria-hidden="true">
