@@ -1,9 +1,8 @@
 export const identityHero = {
   eyebrow: 'IDENTITY',
   titleLines: [
-    'Identity is the inner resonance made visible. is the',
-    'inner resonance.',
-    'Identity is the echo made visible.',
+    'Identity is the',
+    'inner resonance made visible.',
   ],
   body: [
     'Before a brand becomes visual, it has a temperature, a rhythm, a voice, and a world it belongs to.',
