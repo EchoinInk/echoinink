@@ -73,9 +73,9 @@ export function HeroBackground() {
         style={{
           background: `linear-gradient(
             90deg,
-            rgba(6, 8, 18, 0.94) 0%,
-            rgba(6, 8, 18, 0.72) 30%,
-            rgba(6, 8, 18, 0.32) 52%,
+            rgb(var(--ei-void-rgb) / 0.94) 0%,
+            rgb(var(--ei-void-rgb) / 0.72) 30%,
+            rgb(var(--ei-void-rgb) / 0.32) 52%,
             transparent 100%
           )`,
         }}

@@ -171,7 +171,7 @@ export function Contact() {
             className="absolute inset-0 z-[1] pointer-events-none"
             style={{
               background:
-                'linear-gradient(180deg, rgba(6, 8, 18, 0.15) 0%, rgba(6, 8, 18, 0.45) 100%)',
+                'linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.15) 0%, rgb(var(--ei-void-rgb) / 0.45) 100%)',
             }}
           />
 
@@ -388,7 +388,7 @@ export function Contact() {
     className="absolute inset-0"
     style={{
       background:
-        'linear-gradient(90deg, rgba(6, 8, 18, 0.92) 0%, rgba(6, 8, 18, 0.80) 35%, rgba(6, 8, 18, 0.48) 100%)',
+        'linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.92) 0%, rgb(var(--ei-void-rgb) / 0.80) 35%, rgb(var(--ei-void-rgb) / 0.48) 100%)',
     }}
   />
 
