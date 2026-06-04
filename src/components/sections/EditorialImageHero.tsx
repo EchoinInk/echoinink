@@ -42,10 +42,7 @@ export function EditorialImageHero({
     : [title];
 
   const isLeft = align === 'left';
-
-  const atmosphereClass = isIntimate
-    ? 'ei-quote mb-7 max-w-[28ch] text-[clamp(1rem,1.55vw,1.22rem)] leading-[1.5] text-[var(--ei-text-secondary)]'
-    : 'ei-quote mb-8 max-w-[28ch] text-[clamp(1.15rem,2.2vw,1.5rem)] leading-[1.45] text-[var(--ei-text-secondary)]';
+const isIntimate = variant === 'intimate';
 
   const titleClass = isIntimate
     ? 'font-editorial max-w-[24ch] text-[clamp(1.85rem,3.35vw,2.75rem)] leading-[1.12] tracking-tight text-[var(--ei-text-primary)]'
