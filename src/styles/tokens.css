@@ -112,7 +112,7 @@
     --ei-section-padding-y: clamp(5rem, 10vw, 9rem);
     --ei-section-padding-y-sm: clamp(3rem, 7vw, 6rem);
 
-    --ei-card-bg: rgb(var(--ei-ink-rgb) / 0.64);
+    --ei-card-bg: rgb(var(--ei-midnight-rgb) / 0.64);
     --ei-card-bg-hover: rgb(var(--ei-midnight-rgb) / 0.28);
     --ei-card-border: rgb(var(--ei-moonlit-rgb) / 0.12);
     --ei-card-border-hover: rgb(var(--ei-electric-blue-rgb) / 0.34);
