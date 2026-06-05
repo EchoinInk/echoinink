@@ -165,15 +165,7 @@
   .ei-card:hover .ei-card-atmosphere {
     opacity: 1;
   }
-.ei-card:hover .ei-link-subtle,
-.ei-card:hover .link-subtle {
-  color: var(--ei-type-color-tertiary);
-}
 
-.ei-card:hover .ei-link,
-.ei-card:hover .link-primary {
-  color: var(--ei-type-color-primary);
-}
   /* ─────────────────────────────────────────────────────────
      Transformation Card
      Use for philosophy, identity, values, creative direction,
