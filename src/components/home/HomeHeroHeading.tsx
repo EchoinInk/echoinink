@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import { heroReveal } from '@/lib/motion-cinematic';
+import { motion } from "framer-motion";
+import { heroReveal } from "@/lib/motion-cinematic";
 
 export function HeroHeading() {
   return (
@@ -8,15 +8,13 @@ export function HeroHeading() {
         variants={heroReveal}
         className="mb-3 flex items-center gap-4 md:mb-5"
       >
-        <span className="ei-type-hero-eyebrow">
-          WE DESIGN WORLDS
-        </span>
+        <span className="ei-type-hero-eyebrow">WE DESIGN WORLDS</span>
 
         <div
           className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-halo-blue-rgb)/0.45)]"
           style={{
             background:
-              'linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-halo-blue-rgb) / 0.95) 100%)',
+              "linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-halo-blue-rgb) / 0.95) 100%)",
           }}
         />
       </motion.div>
@@ -35,7 +33,7 @@ export function HeroHeading() {
           lg:text-[4.15rem]
         "
         style={{
-          textShadow: '0 0 48px rgb(var(--ei-violet-rgb) / 0.04)',
+          textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
         }}
       >
         Designing the worlds your work lives in.
