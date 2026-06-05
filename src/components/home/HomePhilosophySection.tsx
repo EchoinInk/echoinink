@@ -30,8 +30,11 @@ const fragments = [
 
 export function Philosophy() {
   return (
-<Section spacing="sm" className="relative overflow-hidden">
-        <div
+    <Section
+      spacing="none"
+      className="relative overflow-hidden pt-8 pb-8 md:pt-10 md:pb-12"
+    >
+      <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
         style={{
@@ -48,9 +51,10 @@ export function Philosophy() {
           whileInView="visible"
           viewport={VIEWPORT.normal}
         >
+          {/* Section eyebrow */}
           <motion.div
             variants={driftUp}
-            className="mb-8 flex items-center gap-3 md:mb-12"
+            className="mb-6 flex items-center gap-3 md:mb-8"
           >
             <span className="ei-type-label">Our Philosophy</span>
 
@@ -63,14 +67,15 @@ export function Philosophy() {
             />
           </motion.div>
 
-          <div className="grid items-start gap-8 md:grid-cols-[2fr_3fr] md:gap-16">
+          <div className="grid items-start gap-8 md:grid-cols-[2fr_3fr] md:gap-12">
+            {/* Left — Heading + body */}
             <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
               <motion.h2
-  variants={blurEmergence}
-  className="ei-type-philosophy-heading mb-5 whitespace-pre-line"
->
-  {"Atmosphere is not decoration —\nit is how meaning is felt."}
-</motion.h2>
+                variants={blurEmergence}
+                className="ei-type-philosophy-heading mb-5 whitespace-pre-line"
+              >
+                {"Atmosphere is not decoration —\nit is how meaning is felt."}
+              </motion.h2>
 
               <motion.p
                 variants={driftUp}
@@ -81,12 +86,14 @@ export function Philosophy() {
               </motion.p>
             </motion.div>
 
+            {/* Right — Philosophy fragments */}
             <motion.div
               variants={staggerContainer(STAGGER.normal, 0.25)}
-              className="mt-2 grid grid-cols-2 gap-4 md:mt-0 md:grid-cols-4 md:gap-5"
+              className="mt-0 grid grid-cols-2 gap-4 md:mt-10 md:grid-cols-4 md:gap-5"
             >
               {fragments.map((fragment, i) => (
                 <motion.div key={i} variants={driftUp} className="relative pl-4">
+                  {/* Vertical divider */}
                   {i !== 0 && (
                     <div
                       className="absolute left-0 top-0 h-full w-px"
@@ -97,6 +104,7 @@ export function Philosophy() {
                     />
                   )}
 
+                  {/* Glow anchor dot */}
                   <div className="mb-3" aria-hidden="true">
                     <span className="relative inline-block h-3 w-3">
                       <span
@@ -119,6 +127,7 @@ export function Philosophy() {
                     </span>
                   </div>
 
+                  {/* Fragment text */}
                   <p
                     className={[
                       "ei-type-philosophy-fragment",
