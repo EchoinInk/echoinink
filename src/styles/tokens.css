@@ -150,30 +150,31 @@
       0 0 32px rgb(var(--ei-electric-blue-rgb) / 0.12),
       0 0 64px rgb(var(--ei-echo-magenta-rgb) / 0.10);
 
-  --ei-button-bg: rgb(var(--ei-midnight-rgb) / 0.42);
-  --ei-button-bg-hover: rgb(var(--ei-electric-blue-rgb) / 0.18);
-  --ei-button-border: rgb(var(--ei-moonlit-rgb) / 0.16);
-  --ei-button-border-hover: rgb(var(--ei-electric-blue-rgb) / 0.42);
+    --ei-button-bg: rgb(var(--ei-midnight-rgb) / 0.42);
+    --ei-button-bg-hover: rgb(var(--ei-electric-blue-rgb) / 0.18);
+    --ei-button-border: rgb(var(--ei-moonlit-rgb) / 0.16);
+    --ei-button-border-hover: rgb(var(--ei-electric-blue-rgb) / 0.42);
 
-  --ei-filter-bg: rgb(var(--ei-midnight-rgb) / 0.18);
-  --ei-filter-bg-active: rgb(var(--ei-electric-blue-rgb) / 0.15);
-  --ei-filter-border-active: rgb(var(--ei-electric-blue-rgb) / 0.38);
+    --ei-filter-bg: rgb(var(--ei-midnight-rgb) / 0.18);
+    --ei-filter-bg-active: rgb(var(--ei-electric-blue-rgb) / 0.15);
+    --ei-filter-border-active: rgb(var(--ei-electric-blue-rgb) / 0.38);
 
-  --ei-image-overlay-bg:
+    --ei-image-overlay-bg:
         linear-gradient(
         180deg,
         rgb(var(--ei-void-rgb) / 0) 0%,
         rgb(var(--ei-void-rgb) / 0.72) 100%
        );
 
-      --ei-image-overlay-left:
+    --ei-image-overlay-left:
         linear-gradient(
           90deg,
           rgb(var(--ei-void-rgb) / 0.86) 0%,
           rgb(var(--ei-void-rgb) / 0.48) 45%,
           rgb(var(--ei-void-rgb) / 0) 100%
         );
-    /* ── Spacing scale ───────────────────────────────────────────────────────────── */
+   
+  /* ── Spacing scale ───────────────────────────────────────────────────────────── */
     --ei-space-8: 0.5rem;
     --ei-space-12: 0.75rem;
     --ei-space-16: 1rem;
