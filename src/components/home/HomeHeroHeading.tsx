@@ -19,15 +19,15 @@ export function HeroHeading() {
         />
       </motion.div>
 
-     <h1
-  id="hero-heading"
-  className="ei-type-hero-home max-w-[24ch] whitespace-pre-line"
-  style={{
-    textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
-  }}
->
-  Designing the worlds your work lives in.
-</h1>
+      <h1
+        id="hero-heading"
+        className="ei-type-hero-home max-w-[24ch] whitespace-pre-line"
+        style={{
+          textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
+        }}
+      >
+        Designing the worlds your work lives in.
+      </h1>
 
       <p className="ei-type-hero-kicker mt-5">
         Identity systems, digital experiences, and narrative direction.
