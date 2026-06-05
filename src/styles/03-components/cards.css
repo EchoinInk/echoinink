@@ -84,7 +84,7 @@
 
   .ei-card:hover .ei-link-subtle,
   .ei-card:hover .link-subtle {
-    color: var(--ei-type-color-tertiary);
+    color: var(--ei-color-text-accent);
   }
 
   .ei-card:hover .ei-link,
@@ -124,7 +124,7 @@
     opacity: 0;
     transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1);
   }
-  
+
   .ei-card:hover .ei-link-subtle {
   color: var(--ei-type-color-tertiary);
 }
