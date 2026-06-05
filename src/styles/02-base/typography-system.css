@@ -272,6 +272,16 @@
 .ei-type-philosophy-fragment-accent {
   color: var(--ei-color-text-accent);
 }
+
+.ei-type-philosophy-heading {
+  font-family: var(--ei-font-editorial);
+  font-size: clamp(1.65rem, 2.4vw, 2.35rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+  color: var(--ei-type-color-primary);
+}
+
 }
 /* ────────────────────────────────────────────────────────────── Mobile Typography Rules ────────────────────────────────────────────────────────────── */
 @layer base {
