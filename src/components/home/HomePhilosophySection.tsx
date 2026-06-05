@@ -67,7 +67,7 @@ export function Philosophy() {
             <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
               <motion.h2
                 variants={blurEmergence}
-                className="ei-type-philosophy-heading whitespace-pre-line mb-5"
+                className="ei-type-philosophy-heading whitespace-pre-line mb-5x"
               >
                 {"Atmosphere is not decoration —\nit is how meaning is felt."}
               </motion.h2>
