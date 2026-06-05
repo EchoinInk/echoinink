@@ -30,9 +30,9 @@
   }
 
   body {
-    background-color: var(--ei-color-background-body);
-    color: var(--ei-color-text-primary);
-    font-family: var(--ei-font-structural);
+    background-color: var(--ei-void);
+    color: var(--ei-ice-white);
+    font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
