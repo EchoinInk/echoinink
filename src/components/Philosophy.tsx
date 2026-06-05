@@ -36,7 +36,7 @@ export function Philosophy() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            'radial-gradient(ellipse 50% 30% at 30% 40%, rgb(var(--ei-echo-magenta-rgb) / 0.018) 0%, transparent 60%)',
+            'radial-gradient(ellipse 50% 30% at 30% 40%, rgb(var(--ei-NEON-magenta-rgb) / 0.018) 0%, transparent 60%)',
           filter: 'blur(50px)',
         }}
       />
