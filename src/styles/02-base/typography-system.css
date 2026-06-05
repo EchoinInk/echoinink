@@ -93,6 +93,21 @@
          font-weight: 400;
          color: var(--ei-type-color-primary);
     }
+    .ei-type-hero-home {
+
+  font-family: var(--ei-font-editorial);
+
+  font-size: clamp(2.45rem, 5.6vw, 4.15rem);
+
+  line-height: 1.06;
+
+  letter-spacing: -0.035em;
+
+  font-weight: 400;
+
+  color: var(--ei-type-color-primary);
+
+}
      .ei-type-statement {
          font-family: var(--ei-font-editorial);
          font-size: clamp(2.125rem, 5vw, 4rem);
@@ -233,12 +248,19 @@
 }
 /* ────────────────────────────────────────────────────────────── Mobile Typography Rules ────────────────────────────────────────────────────────────── */
  @layer base {
+
+
+}
      @media (max-width: 767px) {
          .ei-type-hero {
              font-size: clamp(2.75rem, 13vw, 3.5rem);
              line-height: 1;
              letter-spacing: -0.035em;
         }
+        .ei-type-hero-home {
+    line-height: 1.04;
+
+  }
          .ei-type-statement {
              font-size: clamp(2.125rem, 10vw, 2.625rem);
              line-height: 1.07;
