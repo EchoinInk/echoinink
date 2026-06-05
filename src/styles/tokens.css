@@ -40,7 +40,7 @@
     --ei-text-accent-secondary: var(--ei-soft-neon);
 
     /* ── Surface & Background ───────────────────────────────────────────────────── */
-    --ei-surface-deep: var(--ei-void);
+    --ei-surface-deep: var(--ei-ink);
     --ei-surface-panel: rgb(var(--ei-midnight-rgb) / 0.35);
     --ei-surface-card: rgb(var(--ei-midnight-rgb) / 0.25);
     --ei-surface-elevated: rgb(var(--ei-electric-blue-rgb) / 0.15);
