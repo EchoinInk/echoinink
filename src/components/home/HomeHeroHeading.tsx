@@ -26,7 +26,7 @@ export function HeroHeading() {
           textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
         }}
       >
-        Designing the worlds your work lives in.
+        Designing the worldsnyour work lives in.
       </h1>
 
       <p className="ei-type-hero-kicker mt-5">
