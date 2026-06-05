@@ -114,7 +114,7 @@
       rgb(var(--ei-halo-blue-rgb) / 0.82) 0%,),
       rgb(var(--ei-violet) / 0.58) 50%,
       rgb(var(--ei-echo-magenta-rgb) / 0.84) 100%
-    );
+    ;
 
     /* ── Shadows / Rings ─────────────────────────────────────────────────────────── */
     
@@ -159,7 +159,7 @@
   --ei-filter-bg-active: rgb(var(--ei-electric-blue-rgb) / 0.15);
   --ei-filter-border-active: rgb(var(--ei-electric-blue-rgb) / 0.38);
 
-      --ei-image-overlay-soft:
+  --ei-image-overlay-bg:
         linear-gradient(
         180deg,
         rgb(var(--ei-void-rgb) / 0) 0%,
