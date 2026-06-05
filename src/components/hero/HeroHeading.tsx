@@ -49,7 +49,7 @@ export function HeroHeading() {
   md:text-[12px]
   tracking-[0.16em]
   uppercase
-  text-ei-echo-magenta
+  text-whisper-uppercase
 ">
   Identity Systems, Digital Experiences & Narrative Direction
 </p>
