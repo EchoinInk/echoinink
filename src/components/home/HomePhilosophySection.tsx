@@ -32,7 +32,7 @@ export function Philosophy() {
   return (
     <Section
       spacing="none"
-      className="relative overflow-hidden pt-8 pb-2 md:pt-12 md:pb-4"
+      className="relative overflow-hidden pt-12 pb-2 md:pt-16 md:pb-4"
     >
       <div
         aria-hidden="true"
