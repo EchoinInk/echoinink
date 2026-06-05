@@ -67,7 +67,7 @@
       var(--ei-echo-magenta) 100%
     );
 
-        --ei-gradient-primary-hover: linear-gradient(
+    --ei-gradient-primary-hover: linear-gradient(
       110deg,
       var(--ei-halo-blue) 0%,
       var(--ei-soft-neon) 50%,
@@ -117,7 +117,23 @@
     );
 
     /* ── Shadows / Rings ─────────────────────────────────────────────────────────── */
-    --shadow-ei-glow:
+    
+      --ei-glow-blue: 0 0 24px rgba(73, 133, 253, 0.36),
+      0 0 64px rgba(73, 133, 253, 0.18);
+
+    --ei-glow-violet: 0 0 30px rgba(113, 7, 234, 0.36),
+      0 0 86px rgba(113, 7, 234, 0.18);
+
+    --ei-glow-magenta: 0 0 28px rgba(221, 18, 203, 0.34),
+      0 0 72px rgba(230, 105, 242, 0.18);
+
+    --ei-glow-balanced: 0 0 28px rgba(73, 133, 253, 0.22),
+      0 0 52px rgba(221, 18, 203, 0.2);
+
+    --ei-glow-soft-field: 0 0 120px rgba(73, 133, 253, 0.09),
+      0 0 160px rgba(221, 18, 203, 0.09);
+
+  --shadow-ei-glow:
       0 0 24px var(--glow-cobalt),
       0 0 52px var(--glow-violet);
 
