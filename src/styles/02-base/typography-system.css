@@ -108,7 +108,7 @@
   }
   .ei-type-hero-home {
     font-family: var(--ei-font-editorial);
-    font-size: clamp(2.45rem, 5.6vw, 4.15rem);
+    font-size: clamp(2.35rem, 5.6vw, 4.15rem);
     line-height: 1.06;
     letter-spacing: -0.035em;
     font-weight: 400;
