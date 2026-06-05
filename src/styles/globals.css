@@ -1,16 +1,19 @@
-@import './tokens.css' layer(base);
-@import './typography.css' layer(base);
-@import './typography-enhanced.css' layer(base);
-@import './typography-system.css' layer(base);
-@import './layout.css' layer(base);
-@import './spacing-enhanced.css' layer(base);
-@import './atmosphere-enhanced.css' layer(components);
-@import './atmosphere.css' layer(components);
-@import './hero.css' layer(components);
-@import './mobile-refinements.css' layer(utilities);
-@import './forms-luxury.css' layer(components);
-@import './accessibility.css';
-@import './browser-chrome.css' layer(base);
+@import './easy-page.css' layer(styles);
+
+@import './01-tokens/tokens.css' layer(tokens);
+
+@import './02-base/typography-system.css' layer(base);
+@import './02-base/layout.css' layer(base);
+@import './02-base/browser-chrome.css' layer(base);
+@import './02-base/accessibility.css' layer(base);
+
+@import './03-components/cards.css' layer(components);
+@import './03-components/identity.css' layer(components);
+@import './03-components/atmosphere.css' layer(components);
+@import './03-components/forms.css' layer(components);
+@import './03-components/buttons.css' layer(components);
+
+@import './04-utilities/mobile.css' layer(utilities);
 
 @tailwind base;
 @tailwind components;
