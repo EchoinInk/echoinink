@@ -1,34 +1,43 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Section } from '@/components/layout/Section';
-import { Container } from '@/components/layout/Container';
-import { OrbitalVisual } from '@/components/ui/OrbitalVisual';
-import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Section } from "@/components/layout/Section";
+import { Container } from "@/components/layout/Container";
+import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
+import {
+  driftUp,
+  staggerContainer,
+  STAGGER,
+  VIEWPORT,
+} from "@/lib/motion-cinematic";
 
 const capabilities = [
   {
-    variant: 'hinge' as const,
-    title: 'Brand Identity',
-    description: 'Identity systems that uncover essence and create emotional resonance.',
-    href: '/identity',
+    variant: "hinge" as const,
+    title: "Brand Identity",
+    description:
+      "Identity systems that uncover essence and create emotional resonance.",
+    href: "/identity",
   },
   {
-    variant: 'lens' as const,
-    title: 'Digital Experiences',
-    description: 'Immersive websites and interfaces that feel like entering a world.',
-    href: '/worlds',
+    variant: "lens" as const,
+    title: "Digital Experiences",
+    description:
+      "Immersive websites and interfaces that feel like entering a world.",
+    href: "/worlds",
   },
   {
-    variant: 'ribbon' as const,
-    title: 'Narrative Architecture',
-    description: 'Story systems that bring coherence, clarity, and transformational depth.',
-    href: '/sessions',
+    variant: "ribbon" as const,
+    title: "Narrative Architecture",
+    description:
+      "Story systems that bring coherence, clarity, and transformational depth.",
+    href: "/sessions",
   },
   {
-    variant: 'veil' as const,
-    title: 'Creative Direction',
-    description: 'Atmospheric direction that aligns every detail with the bigger vision.',
-    href: '/works',
+    variant: "veil" as const,
+    title: "Creative Direction",
+    description:
+      "Atmospheric direction that aligns every detail with the bigger vision.",
+    href: "/works",
   },
 ];
 
@@ -39,8 +48,9 @@ export function WhatWeCreate() {
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none"
         style={{
-          background: 'radial-gradient(ellipse 60% 40% at 50% 30%, rgb(var(--ei-echo-magenta-rgb) / 0.025) 0%, transparent 60%)',
-          filter: 'blur(60px)',
+          background:
+            "radial-gradient(ellipse 60% 40% at 50% 30%, rgb(var(--ei-echo-magenta-rgb) / 0.025) 0%, transparent 60%)",
+          filter: "blur(60px)",
         }}
       />
 
@@ -53,15 +63,19 @@ export function WhatWeCreate() {
           className="max-w-6xl mx-auto"
         >
           {/* Section header */}
-          <motion.div variants={driftUp} className="flex items-center gap-3 mb-10 md:mb-14">
+          <motion.div
+            variants={driftUp}
+            className="flex items-center gap-3 mb-10 md:mb-14"
+          >
             <span className="ei-eyebrow">What We Create</span>
-<div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-electric-blue-rgb)/0.45)]"
-          style={{
-            background:
-              'linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-electric-blue-rgb) / 0.95) 100%)',
-          }}
-        />          </motion.div>
+            <div
+              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-electric-blue-rgb)/0.45)]"
+              style={{
+                background:
+                  "linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-electric-blue-rgb) / 0.95) 100%)",
+              }}
+            />{" "}
+          </motion.div>
 
           {/* 4-card transformation grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
@@ -89,7 +103,10 @@ export function WhatWeCreate() {
 
                   {/* CTA */}
                   <span className="font-mono text-[10px] tracking-[0.18em] uppercase text-[var(--ei-echo-magenta)/75] group-hover:text-[var(--ei-echo-magenta)] transition-colors duration-500 inline-flex items-center gap-1.5">
-                    Explore <span className="group-hover:translate-x-0.5 motion-reduce:transition-none transition-transform duration-500">→</span>
+                    Explore{" "}
+                    <span className="group-hover:translate-x-0.5 motion-reduce:transition-none transition-transform duration-500">
+                      →
+                    </span>
                   </span>
                 </Link>
               </motion.article>
