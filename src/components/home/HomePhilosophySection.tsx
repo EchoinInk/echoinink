@@ -11,7 +11,7 @@ import {
 
 const fragments = [
   {
-    text: "Brands change now and forget later. We build worlds.",
+    text: "text: "Brands shift fast and fade faster. We build worlds.",
     accent: false,
   },
   {
