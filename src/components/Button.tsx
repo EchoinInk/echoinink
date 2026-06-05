@@ -79,8 +79,8 @@ before:bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_
 
   shadow-[
     inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.14),
-    0_0_30px_rgb(var(--ei-electric-blue-rgb)/0.10),
-    0_0_90px_rgb(var(--ei-electric-blue-rgb)/0.035)
+    0_0_30px_rgb(var(--ei-halo-blue-rgb)/0.10),
+    0_0_90px_rgb(var(--ei-halo-blue-rgb)/0.035)
   ]
 
   hover:shadow-[
