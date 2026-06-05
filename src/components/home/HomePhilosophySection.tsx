@@ -32,7 +32,7 @@ export function Philosophy() {
   return (
     <Section
       spacing="none"
-      className="relative overflow-hidden pt-8 pb-8 md:pt-10 md:pb-12"
+      className="relative overflow-hidden pt-8 pb-2 md:pt-10 md:pb-4"
     >
       <div
         aria-hidden="true"
@@ -92,7 +92,11 @@ export function Philosophy() {
               className="mt-0 grid grid-cols-2 gap-4 md:mt-10 md:grid-cols-4 md:gap-5"
             >
               {fragments.map((fragment, i) => (
-                <motion.div key={i} variants={driftUp} className="relative pl-4">
+                <motion.div
+                  key={i}
+                  variants={driftUp}
+                  className="relative pl-4"
+                >
                   {/* Vertical divider */}
                   {i !== 0 && (
                     <div
