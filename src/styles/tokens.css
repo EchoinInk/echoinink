@@ -111,8 +111,8 @@
 
     --gradient-orbital-border: linear-gradient(
       120deg,
-      rgb(var(--ei-halo-blue-rgb) / 0.82) 0%,),
-      rgb(var(--ei-violet) / 0.58) 50%,
+      rgb(var(--ei-halo-blue-rgb) / 0.82) 0%,
+      rgb(var(--ei-violet-rgb) / 0.58) 50%,
       rgb(var(--ei-echo-magenta-rgb) / 0.84) 100%
     );
 
