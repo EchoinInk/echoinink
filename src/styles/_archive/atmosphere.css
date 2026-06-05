@@ -1,0 +1,481 @@
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Global Atmospheric System
+   Centralized utilities and tokens for cinematic ambience.
+   All effects are subtle, restrained, and expensive through
+   reduction rather than complexity.
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer base {
+  /* ── Tonal Black Surfaces ─────────────────────────────────── */
+  :root {
+    --ei-surface-void: var(--ei-void-black);
+    --ei-surface-deep: var(--ei-deep-indigo);
+    --ei-surface-mid: rgb(var(--ei-deep-indigo-rgb) / 0.8);
+    --ei-surface-base: rgb(var(--ei-deep-indigo-rgb) / 0.6);
+    --ei-surface-raised: rgb(var(--ei-deep-indigo-rgb) / 0.5);
+    --ei-surface-elevated: rgb(var(--ei-aurora-blue-rgb) / 0.4);
+  }
+
+  .ei-surface-void {
+    background-color: var(--ei-surface-void);
+  }
+  .ei-surface-deep {
+    background-color: var(--ei-surface-deep);
+  }
+  .ei-surface-mid {
+    background-color: var(--ei-surface-mid);
+  }
+  .ei-surface-base {
+    background-color: var(--ei-surface-base);
+  }
+  .ei-surface-raised {
+    background-color: var(--ei-surface-raised);
+  }
+  .ei-surface-elevated {
+    background-color: var(--ei-surface-elevated);
+  }
+}
+
+@layer components {
+  /* ── Atmospheric Gradients ───────────────────────────────── */
+
+  /* Primary brand gradient — used sparingly */
+  .ei-gradient-brand {
+    background: var(--gradient-signature-orbit);
+  }
+
+  /* Subtle ink gradient — section depth */
+  .ei-gradient-ink {
+    background: linear-gradient(
+      180deg,
+      rgb(var(--ei-void-black-rgb) / 0.4) 0%,
+      rgb(var(--ei-void-black-rgb) / 0.9) 100%
+    );
+  }
+
+  /* Bridge gradient — dissolves between sections */
+  .ei-gradient-bridge {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--ei-void-black-rgb) / 0.5) 60%,
+      rgb(var(--ei-void-black-rgb) / 0.95) 100%
+    );
+  }
+
+  /* Top bleed — soft entrance from above */
+  .ei-gradient-bleed-top {
+    background: linear-gradient(
+      to top,
+      transparent 0%,
+      rgb(var(--ei-void-black-rgb) / 0.15) 100%
+    );
+  }
+
+  /* ── Radial Glows ────────────────────────────────────────── */
+
+  /* Violet — primary atmospheric presence */
+  .ei-glow-violet-core {
+    background: radial-gradient(
+      ellipse 55% 50% at 50% 55%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.045) 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.022) 50%,
+      transparent 70%
+    );
+    filter: blur(100px);
+    pointer-events: none;
+  }
+
+  /* Indigo — secondary depth layer */
+  .ei-glow-indigo-core {
+    background: radial-gradient(
+      ellipse 60% 55% at 45% 50%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.038) 0%,
+      rgb(var(--ei-aurora-blue-rgb) / 0.015) 55%,
+      transparent 75%
+    );
+    filter: blur(110px);
+    pointer-events: none;
+  }
+
+  /* Aqua — accent, used sparingly */
+  .ei-glow-aqua-core {
+    background: radial-gradient(
+      ellipse 50% 45% at 55% 48%,
+      rgb(var(--ei-aurora-blue-rgb) / 0.03) 0%,
+      rgb(var(--ei-aurora-blue-rgb) / 0.015) 50%,
+      transparent 70%
+    );
+    filter: blur(90px);
+    pointer-events: none;
+  }
+
+  /* Pink — warm accent, rare */
+  .ei-glow-pink-core {
+    background: radial-gradient(
+      ellipse 50% 45% at 50% 50%,
+      rgb(var(--ei-orchid-pink-rgb) / 0.025) 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.012) 50%,
+      transparent 70%
+    );
+    filter: blur(100px);
+    pointer-events: none;
+  }
+
+  /* Page-level ambient glow — violet/indigo wash */
+  .ei-glow-page {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 100% 50% at 50% 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.035) 0%,
+      transparent 50%
+    );
+    filter: blur(80px);
+    pointer-events: none;
+  }
+
+  /* ── Vignette Overlays ───────────────────────────────────── */
+
+  /* Deep vignette — edges dissolve to black */
+  .ei-vignette-deep {
+    background: radial-gradient(
+      circle at center,
+      transparent 30%,
+      rgb(var(--ei-void-black-rgb) / 0.4) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Soft vignette — gentle edge dimming */
+  .ei-vignette-soft {
+    background: radial-gradient(
+      ellipse 80% 80% at 50% 50%,
+      transparent 50%,
+      rgb(var(--ei-deep-indigo-rgb) / 0.25) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Edge vignette — top and bottom only */
+  .ei-vignette-edges {
+    background:
+      linear-gradient(to bottom, rgb(var(--ei-void-black-rgb) / 0.3) 0%, transparent 15%),
+      linear-gradient(to top, rgb(var(--ei-void-black-rgb) / 0.5) 0%, transparent 20%);
+    pointer-events: none;
+  }
+
+  /* ── Depth Layering ──────────────────────────────────────── */
+
+  /* Background layer — furthest back */
+  .ei-layer-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* Ambient layer — glows and atmosphere */
+  .ei-layer-ambient {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Content layer — primary reading */
+  .ei-layer-content {
+    position: relative;
+    z-index: 10;
+  }
+
+  /* Foreground layer — overlays, vignettes */
+  .ei-layer-fg {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  /* ── Cinematic Transitions ───────────────────────────────── */
+
+  /* Fade to ink — section bottom dissolve */
+  .ei-fade-to-ink {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgb(var(--ei-void-black-rgb) / 0.5) 60%,
+      rgb(var(--ei-void-black-rgb) / 0.95) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Fade from ink — section top emerge */
+  .ei-fade-from-ink {
+    background: linear-gradient(
+      to top,
+      transparent 0%,
+      rgb(var(--ei-void-black-rgb) / 0.5) 60%,
+      rgb(var(--ei-void-black-rgb) / 0.95) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* ── Grain Handling ──────────────────────────────────────── */
+
+  /* Film grain overlay — subtle texture */
+  .ei-grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.03 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23g)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    mix-blend-mode: overlay;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  /* ── Ambient Lighting ────────────────────────────────────── */
+
+  /* Reactive light field — centered, soft */
+  .ei-light-field {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 50% 40% at 50% 45%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.04) 0%,
+      transparent 60%
+    );
+    filter: blur(80px);
+    pointer-events: none;
+    transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Warm light field — pink/violet accent */
+  .ei-light-field-warm {
+    background: radial-gradient(
+      ellipse 50% 40% at 50% 45%,
+      rgb(var(--ei-orchid-pink-rgb) / 0.03) 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.02) 50%,
+      transparent 60%
+    );
+  }
+
+  /* Cool light field — aqua/indigo accent */
+  .ei-light-field-cool {
+    background: radial-gradient(
+      ellipse 50% 40% at 50% 45%,
+      rgb(var(--ei-aurora-blue-rgb) / 0.03) 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.02) 50%,
+      transparent 60%
+    );
+  }
+
+  /* ── Subtle Divider Treatments ─────────────────────────── */
+
+  /* Atmospheric line — gradient fade at edges */
+  .ei-divider-atmospheric {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.1) 20%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.08) 50%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.1) 80%,
+      transparent 100%
+    );
+  }
+
+  /* Quiet line — minimal presence */
+  .ei-divider-quiet {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgb(var(--ei-ice-white-rgb) / 0.04) 25%,
+      rgb(var(--ei-ice-white-rgb) / 0.04) 75%,
+      transparent 100%
+    );
+  }
+
+  /* Deep line — stronger grounding */
+  .ei-divider-deep {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.06) 30%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.06) 70%,
+      transparent 100%
+    );
+  }
+
+  /* ── Card & Surface Atmospheres ───────────────────────────── */
+
+  /* Glass surface — minimal, restrained */
+  .ei-surface-glass {
+    background: rgb(var(--ei-ice-white-rgb) / 0.018);
+    border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.05);
+    backdrop-filter: blur(16px);
+  }
+
+  /* Elevated surface — subtle lift */
+  .ei-surface-elevated {
+    background: rgb(var(--ei-ice-white-rgb) / 0.025);
+    border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.06);
+    box-shadow:
+      0 0 0 1px rgb(var(--ei-ice-white-rgb) / 0.04),
+      0 20px 50px -20px rgb(var(--ei-void-black-rgb) / 0.4),
+      0 0 60px -30px rgb(var(--ei-luxe-violet-rgb) / 0.1);
+  }
+
+  /* ── Breathing Space Atmosphere ─────────────────────────── */
+
+  .ei-breathing-space {
+    background:
+      radial-gradient(
+        ellipse 35% 25% at 50% 50%,
+        rgb(var(--ei-luxe-violet-rgb) / 0.015) 0%,
+        transparent 55%
+      );
+    position: relative;
+  }
+
+  /* ── Monogram / Sacred Framing ──────────────────────────── */
+
+  .ei-monogram-frame {
+    position: relative;
+  }
+
+  .ei-monogram-frame::before {
+    content: '';
+    position: absolute;
+    inset: -15%;
+    background: radial-gradient(
+      ellipse 45% 40% at 50% 50%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.022) 0%,
+      transparent 65%
+    );
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+/* ── Animation Keyframes ───────────────────────────────────── */
+@keyframes ei-glow-pulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.6; }
+}
+
+@keyframes ei-grain-shift {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-1%, -1%); }
+}
+
+@keyframes ei-luminance-drift {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.02);
+  }
+}
+
+/* ── Page Atmosphere Presets ───────────────────────────────── */
+@layer components {
+  /* Default — indigo/violet wash */
+  .ei-atmosphere-default {
+    position: relative;
+  }
+  .ei-atmosphere-default::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 100% 50% at 50% 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.035) 0%,
+      transparent 50%
+    );
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Identity — violet/pink warmth */
+  .ei-atmosphere-identity {
+    position: relative;
+  }
+  .ei-atmosphere-identity::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 100% 50% at 50% 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.03) 0%,
+      rgb(var(--ei-orchid-pink-rgb) / 0.02) 30%,
+      transparent 60%
+    );
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Sessions — aqua/indigo coolness */
+  .ei-atmosphere-sessions {
+    position: relative;
+  }
+  .ei-atmosphere-sessions::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 100% 50% at 50% 0%,
+      rgb(var(--ei-aurora-blue-rgb) / 0.025) 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.02) 40%,
+      transparent 60%
+    );
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Worlds — deep cosmic violet */
+  .ei-atmosphere-worlds {
+    position: relative;
+  }
+  .ei-atmosphere-worlds::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 100% 50% at 50% 0%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.035) 0%,
+      rgb(var(--ei-deep-indigo-rgb) / 0.025) 40%,
+      transparent 60%
+    );
+    filter: blur(90px);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Works — archive atmosphere, quiet */
+  .ei-atmosphere-works {
+    position: relative;
+  }
+  .ei-atmosphere-works::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse 80% 40% at 80% 10%,
+      rgb(var(--ei-luxe-violet-rgb) / 0.025) 0%,
+      transparent 50%
+    );
+    filter: blur(70px);
+    pointer-events: none;
+    z-index: 0;
+  }
+}

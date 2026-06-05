@@ -1,0 +1,237 @@
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Button System
+   Cinematic gradient-border buttons and luminous invitation states.
+   Location: src/styles/03-components/buttons.css
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer components {
+  .ei-button-glow {
+    position: relative;
+    isolation: isolate;
+  }
+
+  /* Refined gradient border button */
+  .ei-gradient-border-btn-refined {
+    position: relative;
+    z-index: 1;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+
+  .ei-gradient-border-btn-refined::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 9999px;
+    padding: 1px;
+    background: var(--ei-gradient-orbital-border);
+    pointer-events: none;
+    opacity: 0.7;
+    transition: opacity 0.6s var(--ei-ease-soft);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .ei-gradient-border-btn-refined:hover::before {
+    opacity: 1;
+  }
+
+  .ei-gradient-border-btn-refined::after {
+    content: "";
+    position: absolute;
+    inset: -6px;
+    z-index: -2;
+    border-radius: 9999px;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--ei-halo-blue-rgb) / 0.12),
+      rgb(var(--ei-violet-rgb) / 0.08),
+      rgb(var(--ei-soft-neon-rgb) / 0.06),
+      rgb(var(--ei-echo-magenta-rgb) / 0.04)
+    );
+    filter: blur(16px);
+    opacity: 0;
+    transition: opacity 0.7s var(--ei-ease-soft);
+  }
+
+  .ei-gradient-border-btn-refined:hover::after {
+    opacity: 1;
+  }
+
+  /* Premium invitation button */
+  .ei-invitation-btn {
+    position: relative;
+    z-index: 1;
+    border-radius: 9999px;
+    cursor: pointer;
+  }
+
+  .ei-invitation-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 9999px;
+    padding: 1px;
+    background: var(--ei-gradient-primary-hover);
+    pointer-events: none;
+    opacity: 0.5;
+    transition: opacity 0.8s var(--ei-ease-soft);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .ei-invitation-btn:hover::before {
+    opacity: 0.9;
+  }
+
+  .ei-invitation-btn::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    z-index: -2;
+    border-radius: 9999px;
+    background: linear-gradient(
+      160deg,
+      rgb(var(--ei-echo-magenta-rgb) / 0.1),
+      rgb(var(--ei-soft-neon-rgb) / 0.07),
+      rgb(var(--ei-violet-rgb) / 0.05),
+      rgb(var(--ei-halo-blue-rgb) / 0.03)
+    );
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.8s var(--ei-ease-soft);
+  }
+
+  .ei-invitation-btn:hover::after {
+    opacity: 1;
+  }
+
+  /* Primary cinematic button */
+  .ei-btn-primary-cinematic {
+    position: relative;
+    isolation: isolate;
+    z-index: 1;
+    border-radius: 9999px;
+    cursor: pointer;
+    overflow: visible;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .ei-btn-primary-cinematic::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 9999px;
+    padding: 1.5px;
+    background: linear-gradient(
+      135deg,
+      rgb(var(--ei-halo-blue-rgb) / 0.95) 0%,
+      rgb(var(--ei-halo-blue-rgb) / 0.42) 42%,
+      rgb(var(--ei-soft-neon-rgb) / 0.52) 72%,
+      rgb(var(--ei-echo-magenta-rgb) / 0.34) 100%
+    );
+    pointer-events: none;
+    opacity: 0.72;
+    transition: opacity 0.5s var(--ei-ease-soft);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .ei-btn-primary-cinematic:hover::before {
+    opacity: 0.95;
+  }
+
+  .ei-btn-primary-cinematic::after {
+    content: "";
+    position: absolute;
+    inset: -18px;
+    z-index: -2;
+    border-radius: 9999px;
+    background: radial-gradient(
+      circle,
+      rgb(var(--ei-halo-blue-rgb) / 0.38) 0%,
+      rgb(var(--ei-halo-blue-rgb) / 0.2) 36%,
+      rgb(var(--ei-halo-blue-rgb) / 0.08) 58%,
+      transparent 78%
+    );
+    filter: blur(28px);
+    opacity: 0.78;
+    pointer-events: none;
+    transition:
+      opacity 0.6s var(--ei-ease-soft),
+      transform 0.6s var(--ei-ease-soft);
+  }
+
+  .ei-btn-primary-cinematic:hover::after {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+
+  /* Legacy button — temporary compatibility */
+  .ei-gradient-border-btn {
+    position: relative;
+    z-index: 1;
+    border-radius: 9999px;
+    cursor: pointer;
+    background: rgb(var(--ei-midnight-rgb) / 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+
+  .ei-gradient-border-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: 9999px;
+    padding: 1.5px;
+    background: var(--ei-gradient-orbital-border);
+    pointer-events: none;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
+
+  .ei-gradient-border-btn::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    z-index: -2;
+    border-radius: 9999px;
+    background: var(--ei-gradient-primary);
+    filter: blur(12px);
+    opacity: 0;
+    transition: opacity 0.5s var(--ei-ease-soft);
+  }
+
+  .ei-gradient-border-btn:hover::after {
+    opacity: 1;
+  }
+}
