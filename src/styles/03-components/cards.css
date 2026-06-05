@@ -6,9 +6,7 @@
    ═══════════════════════════════════════════════════════════════ */
 
 @layer base {
-
   :root {
-
     --ei-card-radius-sm: 20px;
 
     --ei-card-radius-md: 24px;
@@ -18,33 +16,21 @@
     --ei-card-radius-xl: 32px;
 
     --ei-card-bg: linear-gradient(
-
       180deg,
-
       rgb(var(--ei-midnight-rgb) / 0.72),
-
       rgb(var(--ei-void-rgb) / 0.92)
-
     );
 
     --ei-card-bg-soft: linear-gradient(
-
       180deg,
-
       rgb(var(--ei-midnight-rgb) / 0.48),
-
       rgb(var(--ei-void-rgb) / 0.72)
-
     );
 
     --ei-card-bg-hover: linear-gradient(
-
       180deg,
-
       rgb(var(--ei-midnight-rgb) / 0.86),
-
       rgb(var(--ei-void-rgb) / 0.96)
-
     );
 
     --ei-card-border: rgb(var(--ei-moonlit-rgb) / 0.1);
@@ -54,7 +40,6 @@
     --ei-card-shadow: 0 0 60px rgb(var(--ei-violet-rgb) / 0.08);
 
     --ei-card-shadow-hover: 0 36px 140px rgb(0 0 0 / 0.54),
-
       0 0 80px rgb(var(--ei-echo-magenta-rgb) / 0.1);
 
     --ei-card-inner-highlight: inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.04);
@@ -66,15 +51,11 @@
     --ei-card-padding-lg: 2.5rem;
 
     --ei-card-padding-xl: 3rem;
-
   }
-
 }
 
 @layer components {
-
   .ei-card {
-
     position: relative;
 
     overflow: hidden;
@@ -88,57 +69,39 @@
     box-shadow: var(--ei-card-inner-highlight), var(--ei-card-shadow);
 
     transition: border-color 500ms cubic-bezier(0.22, 1, 0.36, 1),
-
       background 500ms cubic-bezier(0.22, 1, 0.36, 1),
-
       box-shadow 500ms cubic-bezier(0.22, 1, 0.36, 1),
-
       transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
-
   }
 
   .ei-card:hover {
-
     background: var(--ei-card-bg-hover);
 
     border-color: var(--ei-card-border-hover);
 
     box-shadow: var(--ei-card-inner-highlight), var(--ei-card-shadow-hover);
-
   }
 
   .ei-card:hover .ei-link-subtle,
-
   .ei-card:hover .link-subtle {
-
     color: var(--ei-type-color-tertiary);
-
   }
 
   .ei-card:hover .ei-link,
-
   .ei-card:hover .link-primary {
-
     color: var(--ei-type-color-primary);
-
   }
 
   .ei-card-interactive {
-
     cursor: pointer;
-
   }
 
   .ei-card-interactive:hover {
-
     transform: translateY(-2px);
-
   }
 
   .ei-card-soft {
-
     background: var(--ei-card-bg-soft);
-
   }
 
   .ei-card-small {
@@ -553,16 +516,16 @@
   }
 
   .ei-project-card-description {
-  display: -webkit-box;
-  overflow: hidden;
-  font-family: var(--ei-font-structural);
-  font-size: 0.8125rem;
-  line-height: 1.68;
-  color: var(--ei-color-text-secondary);
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
-}
+    display: -webkit-box;
+    overflow: hidden;
+    font-family: var(--ei-font-structural);
+    font-size: 0.8125rem;
+    line-height: 1.68;
+    color: var(--ei-color-text-secondary);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
 
   .ei-project-card-tag {
     border-radius: 999px;
