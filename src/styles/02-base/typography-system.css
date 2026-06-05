@@ -279,7 +279,6 @@
              letter-spacing: 0.12em;
         }
     }
-}
 /* ────────────────────────────────────────────────────────────── Backwards Compatibility Aliases Temporary only. Existing components can keep working, but new components should use .ei-type-* classes. ────────────────────────────────────────────────────────────── */
  @layer base {
      .ei-hero-display, .text-editorial-hero {
