@@ -30,7 +30,7 @@ const fragments = [
 
 export function Philosophy() {
   return (
-    <Section spacing="sm" className="ei-section-standard relative overflow-hidden">
+   <Section className="ei-section-compact relative overflow-hidden">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
