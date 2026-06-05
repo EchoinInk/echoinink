@@ -251,6 +251,27 @@
   .ei-type-accent-secondary {
     color: var(--ei-type-accent-secondary);
   }
+  .ei-type-philosophy-body {
+  font-family: var(--ei-font-structural);
+  font-size: clamp(0.9375rem, 1vw, 1rem);
+  line-height: 1.72;
+  letter-spacing: -0.003em;
+  font-weight: 400;
+  color: var(--ei-type-color-tertiary);
+}
+
+.ei-type-philosophy-fragment {
+  font-family: var(--ei-font-structural);
+  font-size: clamp(0.8125rem, 0.9vw, 0.875rem);
+  line-height: 1.68;
+  letter-spacing: -0.002em;
+  font-weight: 400;
+  color: var(--ei-type-color-tertiary);
+}
+
+.ei-type-philosophy-fragment-accent {
+  color: var(--ei-color-text-accent);
+}
 }
 /* ────────────────────────────────────────────────────────────── Mobile Typography Rules ────────────────────────────────────────────────────────────── */
 @layer base {
