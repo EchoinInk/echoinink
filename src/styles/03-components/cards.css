@@ -125,10 +125,6 @@
     transition: opacity 700ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  .ei-card:hover .ei-card-atmosphere {
-    opacity: 1;
-  }
-
   /* ─────────────────────────────────────────────────────────
      Transformation Card
      Use for philosophy, identity, values, creative direction,
