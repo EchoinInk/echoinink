@@ -21,17 +21,7 @@ export function HeroHeading() {
 
       <h1
         id="hero-heading"
-        className="
-          ei-type-hero
-          max-w-[29ch]
-          whitespace-pre-line
-          text-[2.45rem]
-          leading-[1.06]
-          tracking-tight
-          md:text-[3.45rem]
-          md:leading-[1.04]
-          lg:text-[4.15rem]
-        "
+        className="ei-type-hero max-w-[29ch] whitespace-pre-line"
         style={{
           textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
         }}
@@ -45,11 +35,7 @@ export function HeroHeading() {
 
       <motion.p
         variants={heroReveal}
-        className="
-          ei-type-hero-description
-          mt-6
-          max-w-[46ch]
-        "
+        className="ei-type-hero-description mt-6 max-w-[46ch]"
       >
         Emotionally intelligent identity systems, immersive websites, and
         atmospheric digital experiences for founders, artists, and emerging
