@@ -148,7 +148,7 @@
 
     --ei-card-shadow-hover:
       0 0 32px rgb(var(--ei-electric-blue-rgb) / 0.12),
-      0 0 64px rgb(var(--ei-echo-magenta-rgb) / 0.10);
+      0 0 64px rgb(var(--ei-halo-magenta-rgb) / 0.10);
 
     --ei-button-bg: rgb(var(--ei-midnight-rgb) / 0.42);
     --ei-button-bg-hover: rgb(var(--ei-electric-blue-rgb) / 0.18);
