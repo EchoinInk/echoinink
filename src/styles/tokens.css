@@ -1,10 +1,10 @@
 @layer base {
   :root {
-    --ei-void: #060812;
-    --ei-void-rgb: 6 8 18;
+    --ei-void: #05030b;
+    --ei-void-rgb: 5 3 11;
 
-    --ei-midnight: #263954;
-    --ei-midnight-rgb: 38 57 84;
+    --ei-midnight: #0b0d2a;
+    --ei-midnight-rgb: 11 13 42;
 
     --ei-halo-blue: #8FCFE3;
     --ei-halo-blue-rgb: 143 207 227;
