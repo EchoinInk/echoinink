@@ -8,7 +8,7 @@ export function HeroHeading() {
         variants={heroReveal}
         className="mb-3 flex items-center gap-4 md:mb-5"
       >
-        <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
+        <span className="ei-type-hero-eyebrow">
           WE DESIGN WORLDS
         </span>
 
@@ -21,47 +21,42 @@ export function HeroHeading() {
         />
       </motion.div>
 
-    <h1
-  id="hero-heading"
-  className="
-    ei-type-hero
-    max-w-[29ch]
-    whitespace-pre-line
-    text-[2.45rem]
-    leading-[1.06]
-    tracking-tight
-    text-white/[0.94]
-    md:text-[3.45rem]
-    md:leading-[1.04]
-    lg:text-[4.15rem]
-  "
-  style={{
-    textShadow: '0 0 48px rgb(var(--ei-violet-rgb) / 0.04)',
-  }}
->
-  Designing the worlds your work lives in.
-</h1>
+      <h1
+        id="hero-heading"
+        className="
+          ei-type-hero
+          max-w-[29ch]
+          whitespace-pre-line
+          text-[2.45rem]
+          leading-[1.06]
+          tracking-tight
+          md:text-[3.45rem]
+          md:leading-[1.04]
+          lg:text-[4.15rem]
+        "
+        style={{
+          textShadow: '0 0 48px rgb(var(--ei-violet-rgb) / 0.04)',
+        }}
+      >
+        Designing the worlds your work lives in.
+      </h1>
 
-<p className="
-ei-type-whisper mt-5">
-  Identity systems, immersive websites, and narrative direction.
-</p>
+      <p className="ei-type-hero-kicker mt-5">
+        Identity systems, digital experiences, and narrative direction.
+      </p>
 
-<motion.p
-  variants={heroReveal}
-  className="
-    ei-type-body
-    mt-6
-    max-w-[46ch]
-    text-[16px]
-    md:text-[17px]
-    leading-[1.68]
-    text-white/88
-  "
-  style={{ letterSpacing: '0.005em' }}
->
-  Emotionally intelligent identity systems, immersive websites, and atmospheric digital experiences for founders, artists, and emerging brands.
-</motion.p>
+      <motion.p
+        variants={heroReveal}
+        className="
+          ei-type-hero-description
+          mt-6
+          max-w-[46ch]
+        "
+      >
+        Emotionally intelligent identity systems, immersive websites, and
+        atmospheric digital experiences for founders, artists, and emerging
+        brands.
+      </motion.p>
     </div>
   );
 }
