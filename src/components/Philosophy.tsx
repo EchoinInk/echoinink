@@ -113,7 +113,7 @@ export function Philosophy() {
                         className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full"
                         style={{
                           background: fragment.accent
-                            ? 'var(--ei-halo-blue) / '
+                            ? 'var(--ei-halo-blue)'
                             : 'rgb(var(--ei-echo-magenta-rgb) / 0.45)',
                         }}
                       />
@@ -122,7 +122,7 @@ export function Philosophy() {
                         className="absolute inset-0 rounded-full blur-sm"
                         style={{
                           background: fragment.accent
-                            ? 'rgb(var(--ei-electric-blue-rgb) / 0.3)'
+                            ? 'rgb(var(--ei-halo-blue-rgb) / 0.)'
                             : 'rgb(var(--ei-ice-white-rgb) / 0.2)',
                         }}
                       />
