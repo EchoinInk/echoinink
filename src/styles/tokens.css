@@ -115,7 +115,7 @@
     --ei-card-bg: rgb(var(--ei-midnight-rgb) / 0.64);
     --ei-card-bg-hover: rgb(var(--ei-midnight-rgb) / 0.28);
     --ei-card-border: rgb(var(--ei-moonlit-rgb) / 0.12);
-    --ei-card-border-hover: rgb(var(--ei-electric-blue-rgb) / 0.34);
+    --ei-card-border-hover: rgb(var(--ei-moonlit-rgb) / 0.20);
 
     --ei-card-shadow-hover:
       0 0 32px rgb(var(--ei-electric-blue-rgb) / 0.12),
