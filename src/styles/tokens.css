@@ -3,7 +3,8 @@
     --ei-void: #05030b;
     --ei-void-rgb: 5 3 11;
 
-        --ei-ink-rgb: 8 7 24;
+    --ei-ink: #080718;
+    --ei-ink-rgb: 8 7 24;
 
     --ei-midnight: #0b0d2a;
     --ei-midnight-rgb: 11 13 42;
@@ -14,6 +15,9 @@
     --ei-electric-blue: #0b20f6;
     --ei-electric-blue-rgb: 11 32 246;
 
+    --ei-violet: #7107ea;
+    --ei-violet-rgb: 113 7 234;
+    
     --ei-soft-neon: #e669f2;
     --ei-soft-neon-rgb: 230 105 242;
 
