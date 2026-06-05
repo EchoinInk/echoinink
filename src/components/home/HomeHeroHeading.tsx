@@ -21,7 +21,7 @@ export function HeroHeading() {
 
       <h1
         id="hero-heading"
-        className="ei-type-hero-home max-w-[24ch] whitespace-pre-line"
+        className="ei-type-hero-home max-w-[23ch] whitespace-pre-line"
         style={{
           textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
         }}
