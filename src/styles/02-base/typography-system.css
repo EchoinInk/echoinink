@@ -296,10 +296,10 @@
 
   .ei-type-whisper {
     font-family: var(--ei-font-structural);
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.02em;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
     color: var(--ei-type-color-muted);
   }
 
