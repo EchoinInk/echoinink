@@ -67,6 +67,13 @@
       var(--ei-echo-magenta) 100%
     );
 
+        --ei-gradient-primary-hover: linear-gradient(
+      110deg,
+      var(--ei-halo-blue) 0%,
+      var(--ei-soft-neon) 50%,
+      var(--ei-echo-magenta) 100%
+    );
+
     --gradient-glow-field: radial-gradient(
       circle,
       rgb(var(--ei-electric-blue-rgb) / 0.45),
@@ -81,11 +88,25 @@
       var(--ei-void) 72%
     );
 
-    --gradient-nebula: linear-gradient(
+    --ei-gradient-image-overlay-soft: linear-gradient(
       180deg,
-      var(--ei-void) 0%,
-      rgb(var(--ei-midnight-rgb) / 0.5) 50%,
-      var(--ei-void) 100%
+      rgba(5, 3, 11, 0) 0%,
+      rgba(5, 3, 11, 0.46) 62%,
+      rgba(5, 3, 11, 0.84) 100%
+    );
+
+    --ei-gradient-image-overlay-left: linear-gradient(
+      90deg,
+      rgba(5, 3, 11, 0.88) 0%,
+      rgba(5, 3, 11, 0.46) 48%,
+      rgba(5, 3, 11, 0) 100%
+    );
+
+    --ei-gradient-image-overlay-right: linear-gradient(
+      270deg,
+      rgba(5, 3, 11, 0.88) 0%,
+      rgba(5, 3, 11, 0.46) 48%,
+      rgba(5, 3, 11, 0) 100%
     );
 
     --gradient-orbital-border: linear-gradient(
