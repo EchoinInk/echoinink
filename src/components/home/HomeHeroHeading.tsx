@@ -44,7 +44,7 @@ export function HeroHeading() {
 
 <p className="
 ei-type-whisper mt-5">
-  Identity Systems, Digital Experiences & Narrative Direction
+  Identity systems, immersive websites, and narrative direction.
 </p>
 
 <motion.p
