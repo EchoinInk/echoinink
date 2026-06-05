@@ -134,7 +134,7 @@ export function Philosophy() {
                     className="font-structural text-[12px] leading-[1.7] md:text-[13px]"
                     style={{
                       color: fragment.accent
-                        ? 'var(--ei-halo-blue)'
+                        ? 'var(--ei-moonlit)'
                         : 'rgb(var(--ei-ice-white-rgb) / 0.62)',
                     }}
                   >
