@@ -72,8 +72,8 @@ before:bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_
   text-white/[0.94]
   hover:text-white
 
-  border border-[rgb(var(--ei-electric-blue-rgb)/0.30)]
-  hover:border-[rgb(var(--ei-electric-blue-rgb)/0.45)]
+  border border-[rgb(var(--ei-halo-blue-rgb)/0.30)]
+  hover:border-[rgb(var(--ei-halo-blue-rgb)/0.45)]
 
   bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.85),rgb(var(--ei-void-rgb)/0.94))]
 
