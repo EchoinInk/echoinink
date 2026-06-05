@@ -3,6 +3,8 @@
     --ei-void: #05030b;
     --ei-void-rgb: 5 3 11;
 
+        --ei-ink-rgb: 8 7 24;
+
     --ei-midnight: #0b0d2a;
     --ei-midnight-rgb: 11 13 42;
 
@@ -12,14 +14,14 @@
     --ei-electric-blue: #0b20f6;
     --ei-electric-blue-rgb: 11 32 246;
 
-    --ei-soft-neon: #D98AB8;
-    --ei-soft-neon-rgb: 217 138 184;
+    --ei-soft-neon: #e669f2;
+    --ei-soft-neon-rgb: 230 105 242;
 
-    --ei-echo-magenta: #C978B8;
-    --ei-echo-magenta-rgb: 201 120 184;
+    --ei-echo-magenta: #dd12cb;
+    --ei-echo-magenta-rgb: 221 18 203;
 
-    --ei-moonlit: #D9D7EA;
-    --ei-moonlit-rgb: 217 215 234;
+    --ei-moonlit: #e3d8fd;
+    --ei-moonlit-rgb: 227 216 253;
 
     --ei-ice-white: #F7F5FA;
     --ei-ice-white-rgb: 247 245 250;
