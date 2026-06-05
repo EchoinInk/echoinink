@@ -489,6 +489,17 @@
   .link-subtle:hover {
     color: var(--ei-type-color-tertiary);
   }
+  .group:hover .ei-link-subtle {
+
+  color: var(--ei-type-color-tertiary);
+
+}
+
+.group:hover .ei-link-subtle span {
+
+  transform: translateX(0.125rem);
+
+}
 }
 /* ────────────────────────────────────────────────────────────── Typography Utilities ────────────────────────────────────────────────────────────── */
 @layer utilities {
