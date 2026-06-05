@@ -66,11 +66,11 @@ export function Philosophy() {
           <div className="grid items-start gap-8 md:grid-cols-[2fr_3fr] md:gap-16">
             <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
               <motion.h2
-                variants={blurEmergence}
-                className="ei-type-philosophy-heading whitespace-pre-line mb-5x"
-              >
-                {"Atmosphere is not decoration —\nit is how meaning is felt."}
-              </motion.h2>
+  variants={blurEmergence}
+  className="ei-type-philosophy-heading mb-5 whitespace-pre-line"
+>
+  {"Atmosphere is not decoration —\nit is how meaning is felt."}
+</motion.h2>
 
               <motion.p
                 variants={driftUp}
