@@ -92,7 +92,8 @@ export function LumoCaseStudyTeaser() {
             className="ei-card ei-card-world"
           >
             <Link to="/works/lumo" className="ei-card-world-link group">
-              <div className="ei-card-world-copy">
+
+  <div className="ei-card-world-media">
                 <motion.div variants={staggerContainer(STAGGER.normal, 0.15)}>
                   <motion.h2
                     variants={orchestratedReveal(0, 3)}
