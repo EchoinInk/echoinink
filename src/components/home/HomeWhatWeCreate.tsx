@@ -98,12 +98,9 @@ export function WhatWeCreate() {
                     {cap.description}
                   </p>
 
-                  <span className="ei-link-subtle inline-flex items-center gap-1.5">
-                    Explore{" "}
-                    <span className="transition-transform duration-500 group-hover:translate-x-0.5 motion-reduce:transition-none">
-                      →
-                    </span>
-                  </span>
+                  <span className="ei-card-action">
+  Explore <span className="ei-card-action-arrow">→</span>
+</span>
                 </Link>
               </motion.article>
             ))}
