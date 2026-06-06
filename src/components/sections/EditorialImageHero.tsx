@@ -201,7 +201,7 @@ export function EditorialImageHero({
                 ) : null}
 
                 {secondaryCtaLabel && secondaryCtaHref ? (
-                  <Button to={secondaryCtaHref} variant="tertiary" className="self-start">
+                  <Button to={secondaryCtaHref} variant="secondary" className="self-start">
                     {secondaryCtaLabel}
                     <span aria-hidden="true">→</span>
                   </Button>
