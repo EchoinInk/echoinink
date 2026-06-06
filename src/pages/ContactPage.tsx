@@ -40,7 +40,7 @@ const contactBlocks = [
     title: "Let's Connect",
     icon: 'send',
     lines: [
-      <a key="email" href="mailto:hello@echoin.ink" className="ei-type-color-accent transition-colors duration-500 hover:text-[var(--ei-color-text-primary)]">
+      <a key="email" href="mailto:hello@echoin.ink" className="ei-type-color-accent ei-type-color-primary-hover transition-colors duration-500">
         hello@echoin.ink
       </a>,
       'Auckland, New Zealand',
@@ -256,7 +256,7 @@ export function Contact() {
                   key={block.title}
                   className="grid grid-cols-[56px_1fr] gap-5 border-white/[0.08] pb-9 md:border-b md:pt-9 first:md:pt-2 last:md:border-b-0"
                 >
-                  <span className="ei-type-color-accent flex h-12 w-12 items-center justify-center rounded-full border border-[rgb(var(--ei-moonlit-rgb)/0.18)] shadow-[inset_0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.035)] transition-colors duration-500 hover:border-white/25 hover:text-[var(--ei-color-text-primary)]">
+                  <span className="ei-type-color-accent ei-type-color-primary-hover flex h-12 w-12 items-center justify-center rounded-full border border-[rgb(var(--ei-moonlit-rgb)/0.18)] shadow-[inset_0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.035)] transition-colors duration-500 hover:border-white/25">
                     <ContactIcon name={block.icon} />
                   </span>
                   <div>
@@ -422,7 +422,7 @@ export function Contact() {
       <Button
         to="/sessions"
         variant="secondary"
-        className="ei-type-color-accent min-h-[42px] gap-3 self-start px-5 py-3 border-white/[0.12] hover:text-[var(--ei-color-text-primary)] hover:border-white/[0.18]"
+        className="ei-type-color-accent ei-type-color-primary-hover min-h-[42px] gap-3 self-start px-5 py-3 border-white/[0.12] hover:border-white/[0.18]"
       >
         View session options
         <span aria-hidden="true">→</span>

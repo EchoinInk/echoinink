@@ -11,7 +11,7 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgb(var(--ei-ice-white-rgb) / 0.6);
+    color: var(--ei-color-text-muted);
     display: block;
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -25,7 +25,7 @@
     font-weight: 400;
     letter-spacing: 0.01em;
     line-height: 1.6;
-    color: rgb(var(--ei-ice-white-rgb) / 0.86);
+    color: var(--ei-color-text-secondary);
 
     /* Minimal, tonal styling */
     width: 100%;
@@ -49,7 +49,7 @@
   /* Placeholder styling - quiet, atmospheric */
   .ei-form-input::placeholder,
   .ei-form-textarea::placeholder {
-    color: rgb(var(--ei-ice-white-rgb) / 0.42);
+    color: var(--ei-color-text-muted);
     font-style: italic;
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -67,7 +67,7 @@
   .ei-form-textarea:focus,
   .ei-form-select:focus {
     border-color: rgb(var(--ei-halo-blue-rgb) / 0.54);
-    color: rgb(var(--ei-ice-white-rgb) / 0.92);
+    color: var(--ei-color-text-primary);
     background: rgb(var(--ei-void-rgb) / 0.32);
     box-shadow: 0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.12),
       0 0 28px rgb(var(--ei-halo-blue-rgb) / 0.07);
@@ -76,7 +76,7 @@
   /* Focus placeholder fade */
   .ei-form-input:focus::placeholder,
   .ei-form-textarea:focus::placeholder {
-    color: rgb(var(--ei-ice-white-rgb) / 0.1);
+    color: var(--ei-color-text-faint);
   }
 
   /* Focus label enhancement */
@@ -87,7 +87,7 @@
   :has(> .ei-form-input:focus) .ei-form-label,
   :has(> .ei-form-textarea:focus) .ei-form-label,
   :has(> .ei-form-select:focus) .ei-form-label {
-    color: rgb(var(--ei-ice-white-rgb) / 0.6);
+    color: var(--ei-color-text-muted);
   }
 
   /* ── Select Specific ─────────────────────────────────────── */
@@ -111,7 +111,7 @@
 
   .ei-form-select option {
     background: var(--ei-void);
-    color: rgb(var(--ei-ice-white-rgb) / 0.7);
+    color: var(--ei-color-text-tertiary);
     padding: 0.5rem;
   }
 
@@ -129,7 +129,7 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: rgb(var(--ei-ice-white-rgb) / 0.85);
+    color: var(--ei-color-text-accent);
 
     /* Refined button styling */
     padding: 1.25rem 3rem;
@@ -148,7 +148,7 @@
   .ei-form-submit:hover:not(:disabled) {
     background: rgb(var(--ei-ice-white-rgb) / 0.06);
     border-color: rgb(var(--ei-ice-white-rgb) / 0.18);
-    color: rgb(var(--ei-ice-white-rgb) / 0.95);
+    color: var(--ei-color-text-primary);
   }
 
   .ei-form-submit:active:not(:disabled) {
@@ -175,7 +175,7 @@
   .ei-form-input:-webkit-autofill,
   .ei-form-input:-webkit-autofill:hover,
   .ei-form-input:-webkit-autofill:focus {
-    -webkit-text-fill-color: rgb(var(--ei-ice-white-rgb) / 0.75);
+    -webkit-text-fill-color: var(--ei-color-text-secondary);
     -webkit-box-shadow: 0 0 0px 1000px var(--ei-void) inset;
     transition: background-color 5000s ease-in-out 0s;
   }

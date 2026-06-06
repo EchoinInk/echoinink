@@ -347,6 +347,10 @@
     color: var(--ei-color-text-accent);
   }
 
+  .ei-type-color-primary-hover:hover {
+    color: var(--ei-color-text-primary);
+  }
+
   .ei-card-action,
   .ei-link,
   .link-primary,

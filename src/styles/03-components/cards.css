@@ -319,12 +319,12 @@
   line-height: 1.22;
   letter-spacing: -0.012em;
   font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.88);
+  color: var(--ei-color-text-primary);
   transition: color 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .ei-card-system:hover .ei-card-system-title {
-  color: rgb(var(--ei-ice-white-rgb) / 0.96);
+  color: var(--ei-color-text-primary);
 }
 
 .ei-card-system-copy {
@@ -334,12 +334,12 @@
   font-size: clamp(0.6875rem, 0.75vw, 0.75rem);
   line-height: 1.62;
   letter-spacing: -0.004em;
-  color: rgb(var(--ei-ice-white-rgb) / 0.54);
+  color: var(--ei-color-text-tertiary);
   transition: color 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .ei-card-system:hover .ei-card-system-copy {
-  color: rgb(var(--ei-ice-white-rgb) / 0.66);
+  color: var(--ei-color-text-secondary);
 }
 
 .ei-card-system-category {
@@ -351,7 +351,7 @@
   line-height: 1.4;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgb(var(--ei-ice-white-rgb) / 0.44);
+  color: var(--ei-color-text-muted);
   transition: color 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -377,7 +377,7 @@
 }
 
 .ei-card-system[data-status="soon"] {
-  --ei-system-status-color: rgb(var(--ei-ice-white-rgb) / 0.42);
+  --ei-system-status-color: var(--ei-color-text-muted);
   --ei-system-card-accent: rgb(var(--ei-ice-white-rgb) / 0.04);
 }
 
@@ -393,7 +393,7 @@
 }
 
 .ei-card-system-status[data-status="soon"] {
-  color: rgb(var(--ei-ice-white-rgb) / 0.54);
+  color: var(--ei-color-text-muted);
   background: rgb(var(--ei-ice-white-rgb) / 0.07);
   border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.14);
 }
@@ -922,7 +922,7 @@
     font-family: var(--ei-font-editorial);
     font-size: 1.75rem;
     line-height: 1;
-    color: rgb(var(--ei-ice-white-rgb) / 0.82);
+    color: var(--ei-color-text-primary);
   }
 
   .ei-deliverable-type-caption {

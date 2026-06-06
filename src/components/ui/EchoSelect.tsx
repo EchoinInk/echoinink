@@ -179,7 +179,7 @@ export function EchoSelect({
             className="
               relative cursor-pointer select-none rounded-[11px] px-4 py-3
               ei-type-color-tertiary font-mono text-[13px] transition-colors duration-300
-              hover:bg-white/[0.07] hover:text-[var(--ei-color-text-primary)]
+              ei-type-color-primary-hover hover:bg-white/[0.07]
             "
           >
             {placeholder}

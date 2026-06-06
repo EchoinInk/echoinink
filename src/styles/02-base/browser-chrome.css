@@ -35,12 +35,12 @@
   /* ── Text Selection ───────────────────────────────────────── */
   ::selection {
     background: rgb(var(--ei-halo-blue-rgb) / 0.26);
-    color: rgb(var(--ei-ice-white-rgb) / 0.96);
+    color: var(--ei-color-text-primary);
   }
 
   ::-moz-selection {
     background: rgb(var(--ei-halo-blue-rgb) / 0.26);
-    color: rgb(var(--ei-ice-white-rgb) / 0.96);
+    color: var(--ei-color-text-primary);
   }
 
   /* ── Tap Highlight (Mobile) ───────────────────────────────── */
@@ -94,8 +94,8 @@
   select:-webkit-autofill:hover,
   select:-webkit-autofill:focus {
     transition: background-color 1000000s ease-in-out 0s;
-    -webkit-text-fill-color: rgb(var(--ei-ice-white-rgb) / 0.75) !important;
-    caret-color: rgb(var(--ei-ice-white-rgb) / 0.75);
+    -webkit-text-fill-color: var(--ei-color-text-secondary) !important;
+    caret-color: var(--ei-color-text-secondary);
   }
 
   /* ── iOS Momentum Scrolling ───────────────────────────────── */
