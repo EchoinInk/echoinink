@@ -44,17 +44,17 @@ export default function OrbitalsSheet() {
         Orbital Variants Sheet
       </h1>
 
-      <div
-  key={v}
-  className="flex flex-col items-center gap-3 rounded-xl bg-[rgb(var(--ei-midnight-rgb)/0.6)] border border-white/10 p-5"
->
-  <div className="brightness-125 contrast-125">
-    <OrbitalVisual variant={v} size={110} />
-  </div>
-  <span className="text-xs text-white/70">{v}</span>
-</div>
-
-
+      <div className="grid grid-cols-3 gap-10 md:grid-cols-4 lg:grid-cols-6">
+        {variants.map((v) => (
+          <div
+            key={v}
+            className="flex flex-col items-center gap-3 rounded-xl bg-[rgb(var(--ei-midnight-rgb)/0.6)] border border-white/10 p-5"
+          >
+            <div className="brightness-125 contrast-125">
+              <OrbitalVisual variant={v} size={110} />
+            </div>
+            <span className="text-xs text-white/70">{v}</span>
+          </div>
         ))}
       </div>
     </div>
