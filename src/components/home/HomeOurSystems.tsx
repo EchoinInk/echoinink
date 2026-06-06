@@ -12,35 +12,35 @@ import {
 
 const systems = [
   {
-    variant: "ember" as const,
+    variant: "canvas" as const,
     title: "Identity Canvas",
     description: "Map your essence, influence, and emotional positioning.",
     meta: "Framework",
     href: "/systems",
   },
   {
-    variant: "pulse" as const,
+    variant: "reflection" as const,
     title: "Founder Reflection",
     description: "A guided system for clarity, identity, and next alignment.",
     meta: "Reflective Tool",
     href: "/systems",
   },
   {
-    variant: "monolith" as const,
+    variant: "architect" as const,
     title: "Narrative Architect",
     description: "Build stories that hold meaning, tension, and transformation.",
     meta: "Framework",
     href: "/systems",
   },
   {
-    variant: "spiral" as const,
+    variant: "gpt" as const,
     title: "Identity GPT",
     description: "An AI companion for identity clarity and narrative direction.",
     meta: "GPT System",
     href: "/systems",
   },
   {
-    variant: "lattice" as const,
+    variant: "uikit" as const,
     title: "Atmosphere UI Kit",
     description: "Cinematic UI components for immersive digital worlds.",
     meta: "UI System",
@@ -108,7 +108,7 @@ export function EmergingSystems() {
 
                   <div className="ei-card-system-inner">
                     <div className="mb-3 flex h-14 items-center justify-center">
-                      <OrbitalVisual variant={system.variant} size={56}} />
+                      <OrbitalVisual variant={system.variant} size={56} />
                     </div>
 
                     <div className="ei-card-system-main">
