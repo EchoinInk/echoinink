@@ -143,8 +143,7 @@ export function Header() {
               shadow-[0_32px_120px_rgb(0_0_0/0.58)]
               backdrop-blur-xl
               md:hidden
-            "
-          >
+            "          >
             {/* Atmosphere */}
             <div
               aria-hidden="true"
