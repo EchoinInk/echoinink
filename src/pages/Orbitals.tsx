@@ -1,5 +1,5 @@
-import OrbitalsSheet from "@/components/dev/OrbitalSheet";
-import <OrbitalVisualNew from "@/components/ui/OrbitalPreviewGrid";
+import OrbitalSheet from "@/components/dev/OrbitalSheet";
+import { OrbitalsNewPreview } from "@/components/dev/OrbitalsNewPreview";
 
 export default function OrbitalsPage() {
   return (
@@ -7,7 +7,7 @@ export default function OrbitalsPage() {
       {/* Original orbital system */}
       <section>
         <h2 className="text-white text-2xl mb-6">Original Orbitals</h2>
-        <OrbitalsSheet />
+        <OrbitalsNewPreview />
       </section>
 
       {/* New Codex‑generated orbital system */}
