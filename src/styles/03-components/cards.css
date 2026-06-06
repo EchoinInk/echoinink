@@ -112,13 +112,13 @@
   letter-spacing: 0.22em;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--ei-card-action-text);
+  color: var(--ei-card-action-text, rgb(var(--ei-ice-white-rgb) / 0.58));
   transition: color 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .ei-card:hover .ei-card-action,
 .ei-card-world:hover .ei-card-action {
-  color: var(--ei-card-action-text-hover);
+  color: var(--ei-card-action-text-hover, rgb(var(--ei-halo-blue-rgb) / 0.92));
 }
 
 .ei-card-action-arrow {
@@ -130,7 +130,7 @@
 .ei-card:hover .ei-card-action-arrow,
 .ei-card-world:hover .ei-card-action-arrow {
   transform: translateX(0.125rem);
-  }
+}
 
   .ei-card:hover .ei-link-subtle,
   .ei-card:hover .link-subtle {
