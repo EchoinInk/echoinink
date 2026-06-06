@@ -48,18 +48,18 @@ export default function Footer() {
       />
 
       <div className="relative z-10 ei-container max-w-[1220px]">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT.normal}
-          variants={atmosphericFade}
-          transition={{
-            duration: DURATION.slow,
-            ease: EASE_LUXURY,
-            delay: 0.1,
-          }}
-          className="pt-12 md:pt-16 pb-5"
-        >
+       <motion.div
+  initial="hidden"
+  whileInView="visible"
+  viewport={VIEWPORT.normal}
+  variants={atmosphericFade}
+  transition={{
+    duration: DURATION.slow,
+    ease: EASE_LUXURY,
+    delay: 0.1,
+  }}
+  className="pt-10 pb-0 md:pt-12"
+>
           {/* 4-column grid */}
 <div className="grid grid-cols-2 items-start gap-8 md:grid-cols-[1.1fr_0.7fr_0.85fr_1.05fr] md:gap-8 lg:gap-10">            <div className="col-span-2 md:col-span-1">
               <span className="font-structural text-[11px] tracking-[0.18em] uppercase text-white/75 block mb-3">
