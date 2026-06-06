@@ -52,7 +52,7 @@ export function Header() {
 
           {/* Desktop Nav */}
           <div className="hidden items-center gap-8 md:flex lg:gap-10">
-  <div className="flex gap-6 lg:gap-7">
+            <div className="flex gap-6 lg:gap-7">
               {navItems.map((item) => {
                 const active = pathname === item.href;
 
@@ -65,9 +65,9 @@ export function Header() {
                       font-structural text-[11px] font-medium uppercase tracking-[0.16em]
                       transition-colors duration-500
                       ${
-  active
-    ? "text-[var(--ei-header-text-active)]"
-    : "text-[var(--ei-header-text)] hover:text-[var(--ei-header-text-hover)]"
+                        active
+                          ? "text-[var(--ei-header-text-active)]"
+                          : "text-[var(--ei-header-text)] hover:text-[var(--ei-header-text-hover)]"
                       }
                     `}
                   >
@@ -93,15 +93,20 @@ export function Header() {
 
             <Link
               to="/contact"
-              className="  ei-focus-rounded rounded-full border border-[rgb(var(--ei-ice-white-rgb)/0.12)]
-  bg-[rgb(var(--ei-ice-white-rgb)/0.035)] px-3.5 py-2
-  text-[10px] font-medium uppercase tracking-[0.18em]
-  text-[var(--ei-header-text)] transition-all duration-700
-  hover:border-[rgb(var(--ei-halo-blue-rgb)/0.32)]
-  hover:bg-[rgb(var(--ei-ice-white-rgb)/0.07)]
-  hover:text-[var(--ei-header-text-hover)]
-  hover:shadow-[0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.12)]
-">
+              className="
+                ei-focus-rounded rounded-full
+                border border-[rgb(var(--ei-ice-white-rgb)/0.12)]
+                bg-[rgb(var(--ei-ice-white-rgb)/0.035)]
+                px-3.5 py-2
+                font-structural text-[10px] font-medium uppercase tracking-[0.18em]
+                text-[var(--ei-header-text)]
+                transition-all duration-700
+                hover:border-[rgb(var(--ei-halo-blue-rgb)/0.32)]
+                hover:bg-[rgb(var(--ei-ice-white-rgb)/0.07)]
+                hover:text-[var(--ei-header-text-hover)]
+                hover:shadow-[0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.12)]
+              "
+            >
               Start a Conversation
             </Link>
           </div>
@@ -115,11 +120,14 @@ export function Header() {
             }
             aria-expanded={menuOpen}
             className="
-  flex min-h-[44px] min-w-[60px] items-center justify-end
-  font-structural text-[11px] font-medium uppercase tracking-[0.18em]
-  text-[var(--ei-header-text)] transition-colors duration-500
-  hover:text-[var(--ei-header-text-hover)] md:hidden
-"          >
+              flex min-h-[44px] min-w-[60px] items-center justify-end
+              font-structural text-[11px] font-medium uppercase tracking-[0.18em]
+              text-[var(--ei-header-text)]
+              transition-colors duration-500
+              hover:text-[var(--ei-header-text-hover)]
+              md:hidden
+            "
+          >
             {menuOpen ? "Close" : "Menu"}
           </button>
         </nav>
@@ -138,12 +146,13 @@ export function Header() {
               fixed left-0 right-0 top-0 z-40
               max-h-[82vh] overflow-y-auto
               rounded-b-[28px]
-              border-b border-white/[0.1]
+              border-b border-[rgb(var(--ei-ice-white-rgb)/0.1)]
               bg-[rgb(var(--ei-void-rgb)/0.96)]
               shadow-[0_32px_120px_rgb(0_0_0/0.58)]
               backdrop-blur-xl
               md:hidden
-            "          >
+            "
+          >
             {/* Atmosphere */}
             <div
               aria-hidden="true"
@@ -170,7 +179,7 @@ export function Header() {
               transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
               className="relative z-10 flex flex-col px-6 pb-8 pt-24"
             >
-              <span className="mb-6 font-structural text-[10px] uppercase tracking-[0.28em] text-white/38">
+              <span className="mb-6 font-structural text-[10px] uppercase tracking-[0.28em] text-[var(--ei-header-text-muted)]">
                 Navigation
               </span>
 
@@ -194,13 +203,14 @@ export function Header() {
                         onClick={closeMenu}
                         className={`
                           group relative flex items-center justify-between
-                          border-b border-white/[0.07] py-4
+                          border-b border-[rgb(var(--ei-ice-white-rgb)/0.07)]
+                          py-4
                           font-editorial text-[1.55rem] leading-none tracking-[-0.03em]
                           transition-colors duration-500
                           ${
                             active
-                              ? "text-[rgb(var(--ei-halo-blue-rgb)/0.96)]"
-                              : "text-white/82 hover:text-white"
+                              ? "text-[var(--ei-header-text-active)]"
+                              : "text-[rgb(var(--ei-ice-white-rgb)/0.82)] hover:text-[var(--ei-header-text-hover)]"
                           }
                         `}
                       >
@@ -213,7 +223,7 @@ export function Header() {
                             ${
                               active
                                 ? "text-[rgb(var(--ei-halo-blue-rgb)/0.78)]"
-                                : "text-white/28 group-hover:translate-x-1 group-hover:text-white/54"
+                                : "text-[rgb(var(--ei-ice-white-rgb)/0.28)] group-hover:translate-x-1 group-hover:text-[rgb(var(--ei-ice-white-rgb)/0.54)]"
                             }
                           `}
                         >
@@ -245,17 +255,17 @@ export function Header() {
                     bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.64),rgb(var(--ei-void-rgb)/0.9))]
                     px-6 py-3
                     font-structural text-[10px] font-medium uppercase tracking-[0.2em]
-                    text-white/86
+                    text-[var(--ei-button-text-primary)]
                     shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.07),0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.075)]
                     transition-all duration-500
                     hover:border-[rgb(var(--ei-halo-blue-rgb)/0.42)]
-                    hover:text-white
+                    hover:text-[var(--ei-button-text-primary-hover)]
                   "
                 >
                   Start a Conversation
                 </Link>
 
-                <p className="mt-4 max-w-[32ch] font-structural text-[0.72rem] leading-[1.65] text-white/42">
+                <p className="mt-4 max-w-[32ch] font-[var(--ei-font-copy)] text-[0.72rem] leading-[1.65] tracking-[-0.004em] text-[rgb(var(--ei-ice-white-rgb)/0.42)]">
                   Designing worlds that hold meaning, atmosphere, and emotional
                   intelligence.
                 </p>
