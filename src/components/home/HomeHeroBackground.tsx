@@ -1,4 +1,4 @@
-import widePng from '@/assets/imagery/hero/home-hero.png';
+import widePng from "@/assets/imagery/hero/home-hero.png";
 
 export function HeroBackground() {
   return (
@@ -11,19 +11,19 @@ export function HeroBackground() {
 
       {/* MONOGRAM — one responsive image, no breakpoint swapping */}
       <img
-  src={widePng}
-  alt="Echo in Ink monogram"
-  aria-hidden="true"
-  className="
+        src={widePng}
+        alt="Echo in Ink monogram"
+        aria-hidden="true"
+        className="
     absolute inset-0 z-[1] pointer-events-none select-none
     w-full h-full object-cover
     opacity-[0.88] brightness-[0.94] saturate-[0.82]
     scale-[1.00]
   "
-  style={{ mixBlendMode: 'normal', objectPosition: '58% center' }}
-/>
-<div
-  className="
+        style={{ mixBlendMode: "normal", objectPosition: "58% center" }}
+      />
+      <div
+        className="
     absolute
     inset-y-0
     left-0
@@ -35,7 +35,7 @@ export function HeroBackground() {
     via-[#020615]/85
     to-transparent
   "
-/>
+      />
       {/* LEFT FADE */}
       <div
         aria-hidden="true"
