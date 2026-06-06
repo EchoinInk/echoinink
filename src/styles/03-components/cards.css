@@ -506,6 +506,18 @@
         rgb(var(--ei-void-rgb) / 0.52) 100%
       );
   }
+  
+  @media (max-width: 768px) {
+  .ei-card-world-overlay {
+    background:
+      linear-gradient(
+        180deg,
+        rgb(var(--ei-void-rgb) / 0.86) 0%,
+        rgb(var(--ei-void-rgb) / 0.62) 42%,
+        rgb(var(--ei-void-rgb) / 0.38) 100%
+      );
+  }
+}
 }
   /* ─────────────────────────────────────────────────────────
      Project Cards
