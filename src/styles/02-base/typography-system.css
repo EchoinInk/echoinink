@@ -148,13 +148,13 @@
     color: var(--ei-type-color-secondary);
   }
   .ei-type-hero-description {
-    font-family: var(--ei-font-structural);
-    font-size: clamp(1rem, 1.15vw, 1.0625rem);
-    line-height: 1.68;
-    letter-spacing: 0.005em;
-    font-weight: 400;
-    color: var(--ei-type-color-secondary);
-  }
+  font-family: var(--ei-font-copy);
+  font-size: clamp(0.9375rem, 1.05vw, 1rem);
+  line-height: 1.8;
+  letter-spacing: 0.002em;
+  font-weight: 400;
+  color: var(--ei-type-color-secondary);
+}
   .ei-type-section-structural {
     font-family: var(--ei-font-structural);
     font-size: clamp(1.75rem, 3.2vw, 2.5rem);
