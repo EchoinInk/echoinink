@@ -147,13 +147,14 @@
     text-wrap: balance;
   }
 
-  .ei-type-studio-card-body,
-  .ei-type-studio-pillar-body {
+  ei-type-studio-card-body,
+  .ei-type-studio-pillar-body,
+  .ei-type-studio-process-body,
+  .ei-type-studio-feature-body {
     font-family: var(--ei-font-structural);
-    font-size: clamp(0.9rem, 0.98vw, 1rem);
-    line-height: 1.66;
-    letter-spacing: -0.004em;
-    font-weight: 400;
+    font-size: clamp(0.9rem, 0.95vw, 1rem);
+    line-height: 1.68;
+    letter-spacing: -0.003em;
     color: var(--ei-color-text-secondary);
   }
 
