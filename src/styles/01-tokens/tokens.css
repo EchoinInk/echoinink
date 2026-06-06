@@ -60,6 +60,8 @@
 
     --ei-color-text-accent: var(--ei-halo-blue);
     --ei-color-text-accent-secondary: var(--ei-soft-neon);
+    --ei-font-copy: var(--ei-font-system);
+
 
     --ei-color-border-hairline: rgba(227, 216, 253, 0.08);
     --ei-color-border-soft: rgba(227, 216, 253, 0.12);
