@@ -1,5 +1,6 @@
 import homeHero from "@/assets/imagery/sections/home-hero.webp";
 import homeHeroMobile from "@/assets/imagery/sections/home-hero-mobile.webp";
+
 export function HeroBackground() {
   return (
     <>
@@ -9,34 +10,39 @@ export function HeroBackground() {
         className="absolute inset-0 bg-[var(--ei-void)]"
       />
 
-      {/* MONOGRAM — one responsive image, no breakpoint swapping */}
-      <img
-        src={widePng}
-        alt="Echo in Ink monogram"
+      {/* Responsive hero image */}
+      <picture
+        aria-hidden="true"
+        className="absolute inset-0 z-[1] block pointer-events-none select-none"
+      >
+        <source media="(max-width: 768px)" srcSet={homeHeroMobile} />
+
+        <img
+          src={homeHero}
+          alt=""
+          className="
+            h-full w-full object-cover
+            opacity-[0.88] brightness-[0.94] saturate-[0.82]
+          "
+          style={{
+            mixBlendMode: "normal",
+            objectPosition: "58% center",
+          }}
+        />
+      </picture>
+
+      {/* Desktop left fade */}
+      <div
         aria-hidden="true"
         className="
-    absolute inset-0 z-[1] pointer-events-none select-none
-    w-full h-full object-cover
-    opacity-[0.88] brightness-[0.94] saturate-[0.82]
-    scale-[1.00]
-  "
-        style={{ mixBlendMode: "normal", objectPosition: "58% center" }}
+          pointer-events-none absolute inset-y-0 left-0 z-[2]
+          hidden w-[55%] bg-gradient-to-r
+          from-[#020615] via-[#020615]/85 to-transparent
+          md:block
+        "
       />
-      <div
-        className="
-    absolute
-    inset-y-0
-    left-0
-    z-[2]
-    w-[55%]
-    pointer-events-none
-    bg-gradient-to-r
-    from-[#020615]
-    via-[#020615]/85
-    to-transparent
-  "
-      />
-      {/* LEFT FADE */}
+
+      {/* Main left fade */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none z-[2]"
@@ -52,7 +58,7 @@ export function HeroBackground() {
         }}
       />
 
-      {/* NAVIGATION PROTECTION — soft gradient behind header only */}
+      {/* Navigation protection */}
       <div
         aria-hidden="true"
         className="absolute top-0 left-0 right-0 h-[140px] pointer-events-none z-[3]"
@@ -66,7 +72,7 @@ export function HeroBackground() {
         }}
       />
 
-      {/* MOBILE COPY FADE */}
+      {/* Mobile copy fade */}
       <div
         aria-hidden="true"
         className="absolute inset-0 pointer-events-none z-[4] md:hidden"
@@ -81,7 +87,7 @@ export function HeroBackground() {
         }}
       />
 
-      {/* BOTTOM FADE — sink the bright horizon into the void for a restrained, premium base */}
+      {/* Bottom fade */}
       <div
         aria-hidden="true"
         className="absolute bottom-0 left-0 right-0 pointer-events-none z-[5] h-[42vh]"
