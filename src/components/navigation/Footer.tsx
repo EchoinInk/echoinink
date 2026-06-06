@@ -61,8 +61,7 @@ export default function Footer() {
           className="pt-12 md:pt-16 pb-5"
         >
           {/* 4-column grid */}
-<div className="grid grid-cols-2 md:grid-cols-[1.35fr_0.75fr_0.9fr_1.1fr] gap-10 md:gap-10 items-start">              {/* Col 1 — Brand */}
-            <div className="col-span-2 md:col-span-1">
+<div className="grid grid-cols-2 items-start gap-8 md:grid-cols-[1.1fr_0.7fr_0.85fr_1.05fr] md:gap-8 lg:gap-10">            <div className="col-span-2 md:col-span-1">
               <span className="font-structural text-[11px] tracking-[0.18em] uppercase text-white/75 block mb-3">
                 Echo in Ink
               </span>
