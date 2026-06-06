@@ -107,32 +107,7 @@
   letter-spacing: -0.002em;
   color: rgb(var(--ei-moonlit-rgb) / 0.66);
 }
-/* Process section type */
-.ei-type-studio-process-number {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(2.4rem, 5.2vw, 4.6rem);
-  line-height: 0.95;
-  letter-spacing: -0.055em;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.22);
-}
 
-.ei-type-studio-process-title {
-  font-family: var(--ei-font-structural);
-  font-size: 0.6875rem;
-  line-height: 1.4;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: rgb(var(--ei-ice-white-rgb) / 0.62);
-}
-
-.ei-type-studio-process-body {
-  font-family: var(--ei-font-structural);
-  font-size: 0.75rem;
-  line-height: 1.55;
-  color: rgb(var(--ei-moonlit-rgb) / 0.56);
-}
 /* Feature section type */
 .ei-type-studio-feature-title {
   font-family: var(--ei-font-editorial);
@@ -160,4 +135,6 @@
   font-weight: 400;
   color: rgb(var(--ei-ice-white-rgb) / 0.88);
 }
+
+
 }
