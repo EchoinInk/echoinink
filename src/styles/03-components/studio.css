@@ -171,4 +171,28 @@
   text-transform: uppercase;
   font-weight: 500;
   color: rgb(var(--ei-moonlit-rgb) / 0.62);
-}}
+}
+/* Card overlay effect */
+.ei-card-studio-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(var(--ei-void-rgb) / 0.98) 0%,
+      rgb(var(--ei-void-rgb) / 0.9) 24%,
+      rgb(var(--ei-void-rgb) / 0.62) 44%,
+      rgb(var(--ei-void-rgb) / 0.22) 64%,
+      transparent 84%
+    ),
+    linear-gradient(
+      180deg,
+      rgb(var(--ei-void-rgb) / 0.18) 0%,
+      transparent 40%,
+      rgb(var(--ei-void-rgb) / 0.2) 100%
+    );
+}
+
+}

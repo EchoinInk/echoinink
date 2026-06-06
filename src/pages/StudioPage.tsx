@@ -315,8 +315,7 @@ export function Studio() {
           />
         </div>
 
-        <div className="ei-card-world-overlay" aria-hidden="true" />
-
+<div className="ei-card-studio-overlay" aria-hidden="true" />
         <div className="ei-card-world-copy">
           <div>
             <span className="ei-type-studio-label">
