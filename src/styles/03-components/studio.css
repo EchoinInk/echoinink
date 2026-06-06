@@ -47,13 +47,14 @@
      ───────────────────────────────────────────────────────── */
 
   .ei-type-studio-hero {
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(3.25rem, 6.6vw, 5.85rem);
-    line-height: 0.98;
-    letter-spacing: -0.045em;
-    font-weight: 400;
-    color: var(--ei-color-text-primary);
-  }
+  font-family: var(--ei-font-editorial);
+  font-size: clamp(2.55rem, 5vw, 4.65rem);
+  line-height: 0.99;
+  letter-spacing: -0.044em;
+  font-weight: 400;
+  color: var(--ei-color-text-primary);
+}
+
 
   .ei-type-studio-hero-emphasis {
     font-style: italic;
