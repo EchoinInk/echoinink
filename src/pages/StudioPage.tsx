@@ -318,9 +318,9 @@ export function Studio() {
   Featured Work
 </span>
 
-                  <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--ei-color-text-muted)]">
-                    LUMO
-                  </p>
+                  <p className="ei-type-studio-label mt-6">
+  LUMO
+</p>
 
                   <h2 className="ei-type-studio-feature-title mt-4 max-w-[11ch]">
                     A world built for overwhelmed humans.
