@@ -139,6 +139,8 @@ export function Studio() {
         description="We partner with founders, artists, and cultural projects to design identity systems and immersive experiences that move people."
         ctaLabel="Start a Project"
         ctaHref="/contact"
+        secondaryCtaLabel="View Our Work"
+        secondaryCtaHref="/works"
         image={studioHeroDesktop}
         mobileImage={studioHeroMobile}
         imageAlt="Atmospheric cosmic portal in violet, blue, and magenta light"

@@ -17,6 +17,8 @@ interface EditorialImageHeroProps {
   description: string;
   ctaLabel?: string;
   ctaHref?: string;
+  secondaryCtaLabel?: string;
+  secondaryCtaHref?: string;
   image: string;
   mobileImage: string;
   imageAlt: string;
@@ -31,6 +33,8 @@ export function EditorialImageHero({
   description,
   ctaLabel,
   ctaHref,
+  secondaryCtaLabel,
+  secondaryCtaHref,
   image,
   mobileImage,
   imageAlt,
@@ -109,7 +113,7 @@ export function EditorialImageHero({
         style={{
           background: isLeft
             ? isStudio
-              ? "radial-gradient(ellipse 46% 68% at 18% 48%, rgb(var(--ei-void-rgb) / 0.7) 0%, rgb(var(--ei-void-rgb) / 0.42) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.44) 0%, transparent 58%)"
+              ? "radial-gradient(ellipse 52% 74% at 18% 48%, rgb(var(--ei-void-rgb) / 0.86) 0%, rgb(var(--ei-void-rgb) / 0.55) 44%, transparent 75%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.30) 38%, transparent 68%)"
               : "radial-gradient(ellipse 52% 64% at 16% 46%, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.48) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.52) 0%, transparent 58%)"
             : "radial-gradient(ellipse 52% 64% at 84% 46%, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.48) 42%, transparent 74%), linear-gradient(270deg, rgb(var(--ei-void-rgb) / 0.52) 0%, transparent 58%)",
         }}
@@ -183,18 +187,27 @@ export function EditorialImageHero({
 
             <p className={`${bodyClass} mt-5 md:mt-6`}>{description}</p>
 
-            {ctaLabel && ctaHref && (
+            {(ctaLabel && ctaHref) || (secondaryCtaLabel && secondaryCtaHref) ? (
               <motion.div
                 variants={fadeSoft}
-                className={`mt-8 md:mt-10 ${
-                  isLeft ? "" : "flex justify-center"
+                className={`mt-8 flex flex-wrap items-center gap-4 md:mt-10 ${
+                  isLeft ? "" : "justify-center"
                 }`}
               >
-                <Button to={ctaHref} variant="primary" className="self-start">
-                  {ctaLabel}
-                </Button>
+                {ctaLabel && ctaHref ? (
+                  <Button to={ctaHref} variant="primary" className="self-start">
+                    {ctaLabel}
+                  </Button>
+                ) : null}
+
+                {secondaryCtaLabel && secondaryCtaHref ? (
+                  <Button to={secondaryCtaHref} variant="tertiary" className="self-start">
+                    {secondaryCtaLabel}
+                    <span aria-hidden="true">→</span>
+                  </Button>
+                ) : null}
               </motion.div>
-            )}
+            ) : null}
           </motion.div>
         </div>
       </Container>
