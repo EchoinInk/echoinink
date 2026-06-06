@@ -140,18 +140,18 @@
     color: var(--ei-type-color-tertiary);
   }
   .ei-type-hero-kicker {
-    font-family: var(--ei-font-structural);
-    font-size: clamp(0.85rem, 0.95vw, 0.95rem);
-    line-height: 1.45;
-    letter-spacing: 0.035em;
-    font-weight: 500;
-    color: var(--ei-type-color-secondary);
-  }
+  font-family: var(--ei-font-copy);
+  font-size: clamp(0.875rem, 1vw, 1rem);
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  color: var(--ei-type-color-secondary);
+}
   .ei-type-hero-description {
   font-family: var(--ei-font-copy);
   font-size: clamp(0.9375rem, 1.05vw, 1rem);
-  line-height: 1.8;
-  letter-spacing: 0.002em;
+  line-height: 1.85;
+  letter-spacing: -0.005em;
   font-weight: 400;
   color: var(--ei-type-color-secondary);
 }
