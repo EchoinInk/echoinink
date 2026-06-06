@@ -35,7 +35,7 @@ const principles: Array<{
   {
     title: "Design with feeling",
     body: "Strategy is held with care.\nIdentity becomes coherent when the inner world is acknowledged, not avoided.",
-    icon: "pulse",
+    icon: "constellation",
   },
   {
     title: "Built to resonate",
