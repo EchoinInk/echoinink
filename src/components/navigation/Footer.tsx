@@ -59,8 +59,7 @@ export default function Footer() {
             ease: EASE_LUXURY,
             delay: 0.1,
           }}
-          className="pt-10 pb-0 md:pt-10"
-        >
+className="pt-8 pb-0 md:pt-8">        >
           <div className="grid grid-cols-2 items-start gap-8 md:grid-cols-[1.05fr_0.95fr_0.85fr_1.1fr] md:gap-8 lg:gap-10">
             {/* Col 1 — Brand */}
             <div className="col-span-2 md:col-span-1">
