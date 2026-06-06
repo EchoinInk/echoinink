@@ -133,35 +133,35 @@
   }
 
   .ei-btn-primary-cinematic::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: -1;
-    border-radius: 9999px;
-    padding: 1.5px;
-    background: linear-gradient(
-      135deg,
-      rgb(var(--ei-halo-blue-rgb) / 0.95) 0%,
-      rgb(var(--ei-halo-blue-rgb) / 0.42) 42%,
-      rgb(var(--ei-soft-neon-rgb) / 0.52) 72%,
-      rgb(var(--ei-echo-magenta-rgb) / 0.34) 100%
-    );
-    pointer-events: none;
-    opacity: 0.78;
-    transition: opacity 0.5s var(--ei-ease-soft);
-    -webkit-mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    mask:
-      linear-gradient(#fff 0 0) content-box,
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-  }
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: 9999px;
+  padding: 1.5px;
+  background: linear-gradient(
+    135deg,
+    rgb(var(--ei-halo-blue-rgb) / 0.9) 0%,
+    rgb(var(--ei-halo-blue-rgb) / 0.38) 42%,
+    rgb(var(--ei-soft-neon-rgb) / 0.46) 72%,
+    rgb(var(--ei-echo-magenta-rgb) / 0.3) 100%
+  );
+  pointer-events: none;
+  opacity: 0.68;
+  transition: opacity 0.5s var(--ei-ease-soft);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
 
-  .ei-btn-primary-cinematic:hover::before {
-    opacity: 0.95;
-  }
+.ei-btn-primary-cinematic:hover::before {
+  opacity: 0.95;
+}
 
  .ei-btn-primary-cinematic::after {
   content: "";
