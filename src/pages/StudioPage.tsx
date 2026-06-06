@@ -72,7 +72,7 @@ const pillars: Array<{
   {
     number: "03",
     title: "Narrative Direction",
-    body: "Story systems, creative direction, and visual language that align message, audience, and feeling. nNarrative as the connective tissue of identity.",    href: "/direction",
+    body: "Story systems, creative direction, and visual language that align message, audience, and feeling. <br />Narrative as the connective tissue of identity.",    href: "/direction",
     imageClass:
       "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
     icon: "ribbon",
@@ -338,7 +338,7 @@ export function Studio() {
 </p>
 
 <p className="mt-7 max-w-[38ch] font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em] text-[rgb(var(--ei-moonlit-rgb)/0.7)]">
-  Lumo translates softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system —
+  Lumo translates softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system —<br />
 an interface shaped to calm cognitive noise through atmosphere, rhythm, and restraint.
 </p>
           </div>
