@@ -322,18 +322,18 @@ export function Studio() {
               Featured Work
             </span>
 
-            <h2 className="ei-card-world-title mt-8 font-editorial text-[3.75rem] leading-[0.92] tracking-[-0.045em] md:text-[4.6rem] lg:text-[5.15rem]">
-              LUMO
-            </h2>
+            <h2 className="mt-8 font-editorial text-[3.75rem] leading-[0.92] tracking-[-0.045em] text-[rgb(var(--ei-ice-white-rgb)/0.94)] md:text-[4.6rem] lg:text-[5.15rem]">
+  LUMO
+</h2>
 
-            <p className="mt-5 max-w-[18ch] font-editorial text-[1.35rem] leading-[1.18] tracking-[-0.025em] text-[var(--ei-color-text-secondary)] md:text-[1.5rem]">
-              A world built for overwhelmed humans.
-            </p>
+<p className="mt-5 max-w-[18ch] font-editorial text-[1.35rem] leading-[1.18] tracking-[-0.025em] text-[rgb(var(--ei-moonlit-rgb)/0.82)] md:text-[1.5rem]">
+  A world built for overwhelmed humans.
+</p>
 
-            <p className="ei-card-world-copy-text mt-7 font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em]">
-              An emotionally intelligent app shaped by an identity system built
-              to calm cognitive noise through atmosphere, rhythm, and restraint.
-            </p>
+<p className="mt-7 max-w-[38ch] font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em] text-[rgb(var(--ei-moonlit-rgb)/0.7)]">
+  An emotionally intelligent app shaped by an identity system built to calm
+  cognitive noise through atmosphere, rhythm, and restraint.
+</p>
           </div>
 
           <span className="ei-card-action">
