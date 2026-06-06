@@ -337,9 +337,8 @@ export function Studio() {
   A world built for overwhelmed humans.
 </p>
 
-<p className="mt-7 max-w-[38ch] font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em] text-[rgb(var(--ei-moonlit-rgb)/0.7)] Whitespace-pre-line">
-  Lumo translates softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system —\n
-an interface shaped to calm cognitive noise through atmosphere, rhythm, and restraint.
+<p className="mt-7 max-w-[38ch] font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em] text-[rgb(var(--ei-moonlit-rgb)/0.7)] whitespace-pre-line">
+  {"Lumo translates softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system —\nan interface shaped to calm cognitive noise through atmosphere, rhythm, and restraint."}
 </p>
           </div>
 
