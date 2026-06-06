@@ -1,5 +1,4 @@
-import lumoFeatured from '@/assets/imagery/sections/lumo-featured-bg.png';
-import auroraImage from '@/assets/imagery/sections/ei-lightwave-work-card.png';
+import lumoFeatured from '@/assets/imagery/sections/lumo-featured-bg.webp';import auroraImage from '@/assets/imagery/sections/ei-lightwave-work-card.png';
 import obsidianImage from '@/assets/imagery/sections/ei-planetsilhouette-work-card.png';
 import verdeImage from '@/assets/imagery/sections/placeholder-works-card.png';
 import nexusImage from '@/assets/imagery/sections/nexus-work-card.png';
