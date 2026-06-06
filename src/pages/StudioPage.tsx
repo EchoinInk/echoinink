@@ -85,7 +85,8 @@ export function Studio() {
         eyebrow="Studio"
         title="Where the philosophy becomes form."
         italicWord="philosophy."
-        description="Translating inner worlds into coherent external form."
+        description="Echo in Ink begins with what is felt but not yet shaped — the emotional architecture beneath a person, project, or world.
+        We translate inner worlds into coherent identity systems, creative direction, and digital presence."
         image={studioHeroDesktop}
         mobileImage={studioHeroMobile}
         imageAlt="Cinematic cosmic void surrounded by violet and blue nebula energy"
