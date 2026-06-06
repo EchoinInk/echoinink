@@ -9,6 +9,7 @@ const navItems = [
   { label: "Identity", href: "/identity" },
   { label: "Sessions", href: "/sessions" },
   { label: "Worlds", href: "/worlds" },
+  { label: "Archive", href: "/archive" },
 ];
 
 export function Header() {
