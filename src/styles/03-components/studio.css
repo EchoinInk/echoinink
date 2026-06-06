@@ -48,19 +48,18 @@
 
   .ei-type-studio-hero {
     font-family: var(--ei-font-editorial);
-    font-size: clamp(3rem, 6vw, 5.75rem);
+    font-size: clamp(3.25rem, 6.6vw, 5.85rem);
     line-height: 0.98;
     letter-spacing: -0.045em;
     font-weight: 400;
     color: var(--ei-color-text-primary);
-    text-wrap: balance;
   }
 
   .ei-type-studio-hero-emphasis {
     font-style: italic;
     font-weight: 400;
-    color: rgb(var(--ei-soft-neon-rgb) / 0.92);
-    text-shadow: 0 0 34px rgb(var(--ei-echo-magenta-rgb) / 0.26);
+    color: rgb(var(--ei-soft-neon-rgb) / 0.86);
+    text-shadow: 0 0 26px rgb(var(--ei-echo-magenta-rgb) / 0.22);
   }
 
   .ei-type-studio-kicker,
