@@ -65,9 +65,9 @@ export function Header() {
                       font-structural text-[11px] font-medium uppercase tracking-[0.16em]
                       transition-colors duration-500
                       ${
-                        active
-                          ? "text-[rgb(var(--ei-halo-blue-rgb)/0.95)]"
-                          : "text-white/68 hover:text-white/95"
+  active
+    ? "text-[var(--ei-header-text-active)]"
+    : "text-[var(--ei-header-text)] hover:text-[var(--ei-header-text-hover)]"
                       }
                     `}
                   >
@@ -93,15 +93,15 @@ export function Header() {
 
             <Link
               to="/contact"
-              className="
-  ei-focus-rounded rounded-full border border-white/[0.12]
-  bg-white/[0.035] px-3.5 py-2
+              className="  ei-focus-rounded rounded-full border border-[rgb(var(--ei-ice-white-rgb)/0.12)]
+  bg-[rgb(var(--ei-ice-white-rgb)/0.035)] px-3.5 py-2
   text-[10px] font-medium uppercase tracking-[0.18em]
-  text-white/78 transition-all duration-700
+  text-[var(--ei-header-text)] transition-all duration-700
   hover:border-[rgb(var(--ei-halo-blue-rgb)/0.32)]
-  hover:bg-white/[0.07] hover:text-white
+  hover:bg-[rgb(var(--ei-ice-white-rgb)/0.07)]
+  hover:text-[var(--ei-header-text-hover)]
   hover:shadow-[0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.12)]
-">          
+">
               Start a Conversation
             </Link>
           </div>
@@ -115,12 +115,11 @@ export function Header() {
             }
             aria-expanded={menuOpen}
             className="
-              flex min-h-[44px] min-w-[60px] items-center justify-end
-              font-structural text-[11px] font-medium uppercase tracking-[0.18em]
-              text-white/78 transition-colors duration-500
-              hover:text-white md:hidden
-            "
-          >
+  flex min-h-[44px] min-w-[60px] items-center justify-end
+  font-structural text-[11px] font-medium uppercase tracking-[0.18em]
+  text-[var(--ei-header-text)] transition-colors duration-500
+  hover:text-[var(--ei-header-text-hover)] md:hidden
+"          >
             {menuOpen ? "Close" : "Menu"}
           </button>
         </nav>
