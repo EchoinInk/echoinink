@@ -28,12 +28,12 @@ const principles: Array<{
 }> = [
   {
     title: "Meaning over noise",
-    body: {"We strip away the unnecessary to reveal what matters.\nClarity is not minimalism — it is emotional precision.",
+    body: {"We strip away the unnecessary to reveal what matters.\nClarity is not minimalism — it is emotional precision."},
     icon: "reflection",
   },
   {
     title: "Design with feeling",
-    body: "Strategy is held with care. Identity becomes coherent when the inner world is acknowledged, not avoided.",
+    body: {"Strategy is held with care. Identity becomes coherent when the inner world is acknowledged, not avoided."},
     icon: "pulse",
   },
   {
