@@ -57,9 +57,9 @@ export function Button({
       text-[10px]
       font-medium
       tracking-[0.18em]
-      text-[var(--ei-color-text-primary)]
+      text-[var(--ei-button-text-primary)]
       hover:-translate-y-[2px]
-      hover:text-[var(--ei-color-text-primary)]
+      hover:text-[var(--ei-button-text-primary-hover)]
       active:translate-y-0
     `,
 
@@ -73,12 +73,12 @@ export function Button({
       text-[10px]
       font-medium
       tracking-[0.18em]
-      text-[var(--ei-color-text-tertiary)]
+      text-[var(--ei-button-text-secondary)]
       shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
       hover:-translate-y-[1px]
       hover:border-[rgb(var(--ei-ice-white-rgb)/0.18)]
       hover:bg-[rgb(var(--ei-void-rgb)/0.32)]
-      hover:text-[var(--ei-color-text-secondary)]
+      hover:text-[var(--ei-button-text-secondary-hover)]
       active:translate-y-0
     `,
 
@@ -90,8 +90,8 @@ export function Button({
       text-[10px]
       font-medium
       tracking-[0.14em]
-      text-[var(--ei-color-text-muted)]
-      hover:text-[var(--ei-color-text-secondary)]
+      text-[var(--ei-button-text-tertiary)]
+      hover:text-[var(--ei-button-text-tertiary-hover)]
     `,
   };
 
@@ -102,7 +102,7 @@ export function Button({
       <span className="relative z-10">{children}</span>
 
       {variant === "tertiary" && (
-        <span className="absolute bottom-0 left-0 h-px w-0 bg-[var(--ei-color-text-secondary)]/40 transition-all duration-500 ease-out group-hover:w-full" />
+        <span className="absolute bottom-0 left-0 h-px w-0 bg-[var(--ei-button-text-tertiary-hover)]/40 transition-all duration-500 ease-out group-hover:w-full" />
       )}
     </>
   );

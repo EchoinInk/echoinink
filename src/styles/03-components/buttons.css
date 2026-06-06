@@ -65,6 +65,21 @@
     opacity: 1;
   }
 
+  .ei-btn-primary-cinematic {
+  color: var(--ei-button-text-primary);
+}
+
+.ei-btn-primary-cinematic:hover {
+  color: var(--ei-button-text-primary-hover);
+}
+
+.ei-btn-secondary-cinematic {
+  color: var(--ei-button-text-secondary);
+}
+
+.ei-btn-secondary-cinematic:hover {
+  color: var(--ei-button-text-secondary-hover);
+}
   /* Premium invitation button */
   .ei-invitation-btn {
     position: relative;
