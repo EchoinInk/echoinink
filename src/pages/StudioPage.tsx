@@ -12,7 +12,7 @@ import { ProjectCTA } from '@/components/sections/ProjectCTA';
 import studioHeroDesktop from '@/assets/imagery/hero/studio-hero-desktop.webp';
 import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.webp';
 import studioCTADesktop from '@/assets/imagery/sections/studio-cta-desktop.webp';
-import studioCTADesktop from '@/assets/imagery/sections/studio-cta-desktop.webp';
+import studioCTAMobile from '@/assets/imagery/sections/studio-cta-mobile.webp';
 
 import {
   originCopy,
@@ -220,7 +220,7 @@ export function Studio() {
             body="If our approach resonates, let's explore how we can build something meaningful together."
             buttonLabel="Work with the Studio"
             buttonHref="/contact"
-            backgroundImage={studioCTABg}
+            backgroundImage={studioCTADesktop}
             secondaryLinks={[
               {
                 label: 'Book a Session',
