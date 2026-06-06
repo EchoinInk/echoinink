@@ -6,7 +6,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/layout/Container";
 import { EditorialImageHero } from "@/components/sections/EditorialImageHero";
 import { Button } from "@/components/ui/Button";
-import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
+import { OrbitalVisual, type OrbitalVariant } from "@/components/ui/OrbitalVisual";
 
 import studioHeroDesktop from "@/assets/imagery/hero/studio-hero-desktop.webp";
 import studioHeroMobile from "@/assets/imagery/hero/studio-hero-mobile.webp";
@@ -20,25 +20,36 @@ import {
   VIEWPORT,
 } from "@/lib/motion-cinematic";
 
-const principles = [
+const principles: Array<{
+  title: string;
+  body: string;
+  icon: OrbitalVariant;
+}> = [
   {
     title: "Meaning over noise",
     body: "We strip away the unnecessary to reveal what matters.",
-    icon: "star",
+    icon: "reflection",
   },
   {
     title: "Design with feeling",
     body: "We hold strategy with emotion to create work that connects.",
-    icon: "reflection",
+    icon: "pulse",
   },
   {
     title: "Built to resonate",
     body: "We craft identity systems and digital worlds designed to endure.",
-    icon: "orbit",
+    icon: "lattice",
   },
-] as const;
+];
 
-const pillars = [
+const pillars: Array<{
+  number: string;
+  title: string;
+  body: string;
+  href: string;
+  imageClass: string;
+  icon: OrbitalVariant;
+}> = [
   {
     number: "01",
     title: "Identity Systems",
@@ -66,7 +77,7 @@ const pillars = [
       "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
     icon: "ribbon",
   },
-] as const;
+];
 
 const process = [
   {
