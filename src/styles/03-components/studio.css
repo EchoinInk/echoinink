@@ -73,14 +73,13 @@
     color: rgb(var(--ei-moonlit-rgb) / 0.54);
   }
 
-  .ei-type-studio-body {
+   .ei-type-studio-body {
     font-family: var(--ei-font-structural);
-    font-size: clamp(0.975rem, 1.08vw, 1.125rem);
+    font-size: clamp(0.98rem, 1.05vw, 1.1rem);
     line-height: 1.72;
-    letter-spacing: -0.006em;
-    font-weight: 400;
-    color: var(--ei-color-text-secondary);
+    letter-spacing: -0.004em;
   }
+
 
   .ei-type-studio-body-small {
     font-family: var(--ei-font-structural);
@@ -96,20 +95,18 @@
      ───────────────────────────────────────────────────────── */
 
   .ei-type-studio-manifesto,
-  .ei-type-studio-philosophy {
+  ei-type-studio-philosophy {
     font-family: var(--ei-font-editorial);
-    font-size: clamp(2.35rem, 4.6vw, 4.25rem);
-    line-height: 1.04;
-    letter-spacing: -0.038em;
+    font-size: clamp(2rem, 3.25vw, 3.25rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
     font-weight: 400;
     color: var(--ei-color-text-primary);
-    text-wrap: balance;
   }
 
   .ei-type-studio-philosophy-emphasis {
     font-style: italic;
-    color: rgb(var(--ei-soft-neon-rgb) / 0.88);
-    text-shadow: 0 0 28px rgb(var(--ei-violet-rgb) / 0.2);
+    color: rgb(var(--ei-soft-neon-rgb) / 0.82);
   }
 
   /* ─────────────────────────────────────────────────────────
