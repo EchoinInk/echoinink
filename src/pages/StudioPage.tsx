@@ -86,7 +86,7 @@ const pillars: Array<{
     href: "/worlds",
     imageClass:
       "bg-[radial-gradient(circle_at_35%_30%,rgb(var(--ei-violet-rgb)/0.2),transparent_38%),radial-gradient(circle_at_75%_62%,rgb(var(--ei-soft-neon-rgb)/0.11),transparent_50%)]",
-    icon: "hinge",
+    icon: "inner-tide",
   },
 ];
 
