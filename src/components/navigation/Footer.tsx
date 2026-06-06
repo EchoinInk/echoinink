@@ -47,7 +47,7 @@ export default function Footer() {
         }}
       />
 
-      <div className="relative z-10 ei-container max-w-[1400px]">
+      <div className="relative z-10 ei-container max-w-[1220px]">
         <motion.div
           initial="hidden"
           whileInView="visible"
