@@ -1,4 +1,4 @@
-import OrbitalsSheet from "@/assets/components/dev/OrbitalsSheet";
+import { OrbitalsSheet from "";
 
 export default function OrbitalsPage() {
   return <OrbitalsSheet />;
