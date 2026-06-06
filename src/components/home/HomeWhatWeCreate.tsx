@@ -45,7 +45,7 @@ export function WhatWeCreate() {
   return (
     <Section
       spacing="none"
-      className="relative overflow-hidden pt-6 pb-6 md:pt-8 md:pb-6"
+      className="relative overflow-hidden pt-6 pb-2 md:pt-8 md:pb-4"
     >
       <div
         aria-hidden="true"
