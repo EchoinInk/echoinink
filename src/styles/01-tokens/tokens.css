@@ -53,7 +53,7 @@
     --ei-color-surface-scrim: rgba(5, 3, 11, 0.72);
 
     --ei-color-text-primary: rgba(247, 245, 250, 0.96);
-   --ei-type-color-secondary: rgb(var(--ei-ice-white-rgb) / 0.64);
+   --ei-type-color-secondary: rgba(247, 245, 250, 0.64);
     --ei-type-color-tertiary: rgb(var(--ei-moonlit-rgb) / 0.58);
     --ei-type-color-muted: rgb(var(--ei-moonlit-rgb) / 0.42);
     --ei-type-color-faint: rgb(var(--ei-moonlit-rgb) / 0.28);
