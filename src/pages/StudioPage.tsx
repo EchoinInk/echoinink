@@ -248,7 +248,7 @@ export function Studio() {
                       {pillar.title}
                     </h3>
 
-                    <p className="ei-type-studio-pillar-body mt-4 max-w-[31ch]">
+                    <p className="ei-type-studio-pillar-body mt-4 max-w-[31ch whitespace-pre-line">]">
                       {pillar.body}
                     </p>
 
@@ -293,7 +293,7 @@ export function Studio() {
                     {step.title}
                   </h3>
 
-                  <p className="ei-type-studio-process-body mt-3 max-w-[20ch]">
+                  <p className="ei-type-studio-process-body mt-3 max-w-[20ch] whitespace-pre-line">
                     {step.body}
                   </p>
                 </article>
