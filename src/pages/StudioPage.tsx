@@ -83,7 +83,8 @@ const process = [
   {
     number: "01",
     title: "Discover",
-    body: "We uncover the signal beneath the surface.",
+    body: "We uncover the signal beneath the surfac — the emotional and structural truth of the work.
+",
   },
   {
     number: "02",
