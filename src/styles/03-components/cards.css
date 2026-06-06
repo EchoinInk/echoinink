@@ -87,11 +87,6 @@
     color: var(--ei-color-text-accent);
   }
 
-  .ei-card:hover .ei-link,
-  .ei-card:hover .link-primary {
-    color: var(--ei-type-color-primary);
-  }
-
   .ei-card-interactive {
     cursor: pointer;
   }
@@ -126,7 +121,7 @@
   }
 
   .ei-card:hover .ei-link-subtle {
-  color: var(--ei-type-color-tertiary);
+  color: var(--ei-color-text-accent);
 }
 
   /* ─────────────────────────────────────────────────────────
