@@ -187,7 +187,7 @@ export function Studio() {
                     <h3 className="ei-type-studio-principle-title">
                       {principle.title}
                     </h3>
-                    <p className="ei-type-studio-principle-body mt-2 max-w-[32ch]">
+                    <p className="ei-type-studio-principle-body mt-2 max-w-[32ch] whitespace-pre-line">
                       {principle.body}
                     </p>
                   </div>
