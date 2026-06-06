@@ -127,8 +127,16 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-40 overflow-hidden bg-[var(--ei-void)] md:hidden"
-          >
+className="
+  fixed left-0 right-0 top-0 z-40
+  max-h-[82vh] overflow-y-auto
+  rounded-b-[28px]
+  border-b border-white/[0.1]
+  bg-[rgb(var(--ei-void-rgb)/0.96)]
+  shadow-[0_32px_120px_rgb(0_0_0/0.58)]
+  backdrop-blur-xl
+  md:hidden
+"          >
             {/* Atmosphere */}
             <div
               aria-hidden="true"
@@ -153,8 +161,7 @@ export function Header() {
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               exit={{ opacity: 0, y: 12, filter: "blur(8px)" }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10 flex min-h-full flex-col px-6 pb-10 pt-28"
-            >
+className="relative z-10 flex flex-col px-6 pb-8 pt-24"            >
               <span className="mb-8 font-structural text-[10px] uppercase tracking-[0.28em] text-white/38">
                 Navigation
               </span>
