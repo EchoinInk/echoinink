@@ -68,7 +68,7 @@ const pillars: Array<{
     href: "/websites",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_30%,rgb(var(--ei-halo-blue-rgb)/0.18),transparent_42%),linear-gradient(145deg,rgb(var(--ei-midnight-rgb)/0.7),rgb(var(--ei-void-rgb)/0.95))]",
-    icon: "spiral",
+    icon: "axis",
   },
   {
     number: "03",
