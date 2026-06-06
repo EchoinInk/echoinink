@@ -1,12 +1,14 @@
-import type { ReactNode } from 'react';
-import { cn } from '@/lib/utils';
+import type { ReactNode } from "react";
+import { cn } from "@/lib/utils";
 
 const spacingMap = {
-  none: '',
-  sm: 'pt-8 pb-8 md:pt-16 md:pb-16',
-  md: 'pt-11 pb-11 md:pt-24 md:pb-24',
-  lg: 'pt-12 pb-12 md:pt-28 md:pb-28',
-  xl: 'pt-16 pb-16 md:pt-32 md:pb-32',
+  none: "",
+  compact: "ei-section-compact",
+  intimate: "ei-section-intimate",
+  standard: "ei-section-standard",
+  expansive: "ei-section-expansive",
+  pause: "ei-section-pause",
+  closing: "ei-section-closing",
 } as const;
 
 type SectionSpacing = keyof typeof spacingMap;
@@ -18,12 +20,14 @@ interface SectionProps {
   spacing?: SectionSpacing;
 }
 
-export function Section({ children, id, className, spacing = 'lg' }: SectionProps) {
+export function Section({
+  children,
+  id,
+  className,
+  spacing = "standard",
+}: SectionProps) {
   return (
-    <section
-      id={id}
-      className={cn('ei-section', spacingMap[spacing], className)}
-    >
+    <section id={id} className={cn("ei-section", spacingMap[spacing], className)}>
       {children}
     </section>
   );
