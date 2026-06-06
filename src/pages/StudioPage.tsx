@@ -11,7 +11,8 @@ import { ProjectCTA } from '@/components/sections/ProjectCTA';
 
 import studioHeroDesktop from '@/assets/imagery/hero/studio-hero-desktop.webp';
 import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.webp';
-import studioCTABg from '@/assets/imagery/sections/studio-ct-bg.png';
+import studioCTADesktop from '@/assets/imagery/sections/studio-cta-desktop.webp';
+import studioCTADesktop from '@/assets/imagery/sections/studio-cta-desktop.webp';
 
 import {
   originCopy,
