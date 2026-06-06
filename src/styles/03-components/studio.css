@@ -3,13 +3,13 @@
 @layer components {
   /* Hero section type */
   .ei-type-studio-hero {
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(2.75rem, 5.4vw, 4.8rem);
-    line-height: 1.04;
-    letter-spacing: -0.035em;
-    font-weight: 400;
-    color: var(--ei-color-text-primary);
-  }
+  font-family: var(--ei-font-editorial);
+  font-size: clamp(2.45rem, 4.8vw, 4.25rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+  font-weight: 400;
+  color: rgb(var(--ei-ice-white-rgb) / 0.94) !important;
+}
 
   .ei-type-studio-hero-emphasis {
     font-style: italic;
