@@ -63,7 +63,7 @@ const pillars: Array<{
   {
     number: "02",
     title: "Digital Experiences",
-    body: "Immersive websites and interfaces that blend story, design, and atmosphere into seamless worlds.",
+    body: "Immersive websites and interfaces where story, design, and atmosphere form a coherent world. Digital presence as a cinematic environment.",
     href: "/websites",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_30%,rgb(var(--ei-halo-blue-rgb)/0.18),transparent_42%),linear-gradient(145deg,rgb(var(--ei-midnight-rgb)/0.7),rgb(var(--ei-void-rgb)/0.95))]",
@@ -72,8 +72,7 @@ const pillars: Array<{
   {
     number: "03",
     title: "Narrative Direction",
-    body: "Story systems, creative direction, and visual language that align message, audience, and feeling.",
-    href: "/direction",
+    body: "Story systems, creative direction, and visual language that align message, audience, and feeling. nNarrative as the connective tissue of identity.",    href: "/direction",
     imageClass:
       "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
     icon: "ribbon",
