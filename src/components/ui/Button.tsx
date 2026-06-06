@@ -1,7 +1,7 @@
-import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from 'react';
-import { Link, type LinkProps } from 'react-router-dom';
+import type { ButtonHTMLAttributes, ReactNode } from "react";
+import { Link, type LinkProps } from "react-router-dom";
 
-type ButtonVariant = 'primary' | 'secondary' | 'tertiary';
+type ButtonVariant = "primary" | "secondary" | "tertiary";
 
 type BaseButtonProps = {
   children: ReactNode;
@@ -9,14 +9,13 @@ type BaseButtonProps = {
   className?: string;
 };
 
-
 type NativeButtonProps = BaseButtonProps &
   ButtonHTMLAttributes<HTMLButtonElement> & {
     to?: never;
   };
 
 type RouterLinkButtonProps = BaseButtonProps &
-  Omit<LinkProps, 'to' | 'children' | 'className'> & {
+  Omit<LinkProps, "to" | "children" | "className"> & {
     to: string;
     disabled?: boolean;
   };
@@ -26,8 +25,8 @@ type ButtonProps = NativeButtonProps | RouterLinkButtonProps;
 export function Button({
   children,
   to,
-  variant = 'primary',
-  className = '',
+  variant = "primary",
+  className = "",
   disabled,
   ...props
 }: ButtonProps) {
@@ -35,92 +34,64 @@ export function Button({
     relative isolate
     inline-flex items-center justify-center
     font-structural uppercase
-    transition-all duration-700
-    ease-out
+    touch-manipulation
+    transition-all duration-500 ease-out
     focus-visible:outline-none
     focus-visible:ring-2
-    focus-visible:ring-white/45
+    focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.45)]
     focus-visible:ring-offset-2
-    focus-visible:ring-offset-[#05070D]
-    touch-manipulation
+    focus-visible:ring-offset-[var(--ei-color-background-canvas)]
     disabled:pointer-events-none
     disabled:cursor-not-allowed
     disabled:opacity-50
-    min-h-[48px] md:min-h-0
   `;
 
   const variants: Record<ButtonVariant, string> = {
-   primary: `
-  ei-btn-primary-cinematic
-  group
-  relative
-
-  before:absolute
-before:inset-0
-before:rounded-full
-before:pointer-events-none
-before:bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_65%)]
-
-  px-11 py-[18px]
-  min-w-[200px]
-  rounded-full
-
-  text-[10px]
-  tracking-[0.18em]
-  font-medium
-
-  text-white/[0.94]
-  hover:text-white
-
-  border border-[rgb(73, 133, 253/0.30)]
-  hover:border-[rgb(73, 133, 253/0.45)]
-
-  bg-[linear-gradient(to_bottom,rgb(11, 13, 42/0.85),rgb(5, 3, 11/0.94))]
-
-  shadow-[
-    inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.14),
-    0_0_30px_rgb(73, 133, 253/0.10),
-    0_0_90px_rgb(73, 133, 253/0.035)
-  ]
-
-  hover:shadow-[
-  inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.16),
-  0_0_32px_rgb(73, 133, 253/0.12),
-  0_0_80px_rgb(73, 133, 253/0.04)
-  ]
-
-  hover:-translate-y-[2px]
-  active:translate-y-0
-
-  transition-all
-  duration-500
-  ease-out
-`,
+    primary: `
+      ei-btn-primary-cinematic
+      group
+      min-h-[48px]
+      min-w-[200px]
+      rounded-full
+      px-11 py-[18px]
+      text-[10px]
+      font-medium
+      tracking-[0.18em]
+      text-[var(--ei-color-text-primary)]
+      hover:-translate-y-[2px]
+      hover:text-[var(--ei-color-text-primary)]
+      active:translate-y-0
+    `,
 
     secondary: `
       group
-      px-6 py-3.5
+      min-h-[44px]
       rounded-full
+      border border-[rgb(var(--ei-ice-white-rgb)/0.09)]
+      bg-[rgb(var(--ei-void-rgb)/0.26)]
+      px-6 py-3.5
       text-[10px]
+      font-medium
       tracking-[0.18em]
-      text-white/72
-      hover:text-white/88
-      border border-white/[0.09]
-      hover:border-white/[0.18]
-      bg-black/[0.26]
-      hover:bg-black/[0.32]
+      text-[var(--ei-color-text-tertiary)]
       shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
       hover:-translate-y-[1px]
+      hover:border-[rgb(var(--ei-ice-white-rgb)/0.18)]
+      hover:bg-[rgb(var(--ei-void-rgb)/0.32)]
+      hover:text-[var(--ei-color-text-secondary)]
       active:translate-y-0
     `,
 
     tertiary: `
       group
-      text-[10px]
-      tracking-[0.14em]
-      text-white/60
-      hover:text-white/86
+      rounded-none
       bg-transparent
+      px-0 py-1
+      text-[10px]
+      font-medium
+      tracking-[0.14em]
+      text-[var(--ei-color-text-muted)]
+      hover:text-[var(--ei-color-text-secondary)]
     `,
   };
 
@@ -130,8 +101,8 @@ before:bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_
     <>
       <span className="relative z-10">{children}</span>
 
-      {variant === 'tertiary' && (
-        <span className="absolute bottom-0 left-0 h-px w-0 bg-white/35 transition-all duration-500 ease-out group-hover:w-full" />
+      {variant === "tertiary" && (
+        <span className="absolute bottom-0 left-0 h-px w-0 bg-[var(--ei-color-text-secondary)]/40 transition-all duration-500 ease-out group-hover:w-full" />
       )}
     </>
   );
@@ -142,8 +113,10 @@ before:bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_
         to={to}
         aria-disabled={disabled || undefined}
         tabIndex={disabled ? -1 : undefined}
-        className={`${buttonClassName} ${disabled ? 'pointer-events-none cursor-not-allowed opacity-50' : ''}`}
-        {...(props as Omit<LinkProps, 'to' | 'children' | 'className'>)}
+        className={`${buttonClassName} ${
+          disabled ? "pointer-events-none cursor-not-allowed opacity-50" : ""
+        }`}
+        {...(props as Omit<LinkProps, "to" | "children" | "className">)}
       >
         {content}
       </Link>
@@ -152,7 +125,7 @@ before:bg-[radial-gradient(circle_at_50%_20%,rgba(255,255,255,0.08),transparent_
 
   return (
     <button
-      type={(props as ButtonHTMLAttributes<HTMLButtonElement>).type ?? 'button'}
+      type={(props as ButtonHTMLAttributes<HTMLButtonElement>).type ?? "button"}
       disabled={disabled}
       className={buttonClassName}
       {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
