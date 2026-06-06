@@ -168,7 +168,7 @@
   line-height: 1;
   letter-spacing: 0.24em;
   text-transform: uppercase;
-  color: var(--ei-type-color-tertiary);
+  color: var(--ei-color-text-muted);
 }
 
 .ei-section-label-line {

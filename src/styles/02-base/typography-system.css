@@ -266,7 +266,76 @@
   line-height: 1.65;
   letter-spacing: -0.002em;
   font-weight: 400;
-  color: var(--ei-type-color-tertiary);
+  color: var(--ei-type-color-secondary);
+}
+
+/* Semantic text color assignments */
+@layer base {
+  .ei-type-hero-home,
+  .ei-type-studio-hero,
+  .ei-type-philosophy-heading,
+  .ei-type-studio-manifesto,
+  .ei-type-studio-card-title,
+  .ei-type-studio-pillar-title,
+  .ei-type-studio-process-title,
+  .ei-type-studio-feature-title,
+  .ei-type-studio-slim-cta,
+  .ei-card-world-title {
+    color: var(--ei-color-text-primary);
+  }
+
+  .ei-type-studio-hero-emphasis {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ei-color-text-secondary);
+  }
+
+  .ei-type-hero-description,
+  .ei-type-philosophy-body,
+  .ei-type-studio-body,
+  .ei-type-studio-feature-subtitle,
+  .ei-card-world-subtitle {
+    color: var(--ei-color-text-secondary);
+  }
+
+  .ei-type-studio-card-body,
+  .ei-type-studio-pillar-body,
+  .ei-type-studio-principle-body,
+  .ei-type-studio-process-body,
+  .ei-type-studio-feature-body,
+  .ei-card-description,
+  .text-card-body,
+  .ei-body-small,
+  .ei-card-world-copy-text {
+    color: var(--ei-color-text-tertiary);
+  }
+
+  .ei-type-studio-label,
+  .ei-type-label,
+  .ei-type-footer-label,
+  .ei-type-footer-copy,
+  .ei-type-footer-meta,
+  .ei-section-label {
+    color: var(--ei-color-text-muted);
+  }
+
+  .ei-type-footer-brand {
+    color: var(--ei-color-text-primary);
+  }
+
+  .ei-card-action,
+  .ei-link,
+  .link-primary,
+  .ei-type-footer-link {
+    color: var(--ei-color-text-accent);
+  }
+
+  .ei-card-action:hover,
+  .ei-link:hover,
+  .link-primary:hover,
+  .ei-type-footer-link:hover {
+    color: var(--ei-color-text-primary);
+  }
 }
 
 .ei-type-philosophy-fragment {
@@ -468,12 +537,12 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--ei-type-color-tertiary);
+    color: var(--ei-color-text-accent);
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .ei-link:hover,
   .link-primary:hover {
-    color: var(--ei-type-color-primary);
+    color: var(--ei-color-text-primary);
   }
   .ei-link-subtle,
   .link-subtle {
