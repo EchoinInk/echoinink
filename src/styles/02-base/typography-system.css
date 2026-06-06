@@ -323,6 +323,30 @@
     color: var(--ei-color-text-primary);
   }
 
+  .ei-type-color-primary {
+    color: var(--ei-color-text-primary);
+  }
+
+  .ei-type-color-secondary {
+    color: var(--ei-color-text-secondary);
+  }
+
+  .ei-type-color-tertiary {
+    color: var(--ei-color-text-tertiary);
+  }
+
+  .ei-type-color-muted {
+    color: var(--ei-color-text-muted);
+  }
+
+  .ei-type-color-faint {
+    color: var(--ei-color-text-faint);
+  }
+
+  .ei-type-color-accent {
+    color: var(--ei-color-text-accent);
+  }
+
   .ei-card-action,
   .ei-link,
   .link-primary,

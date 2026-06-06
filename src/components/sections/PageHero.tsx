@@ -57,9 +57,8 @@ export function PageHero({
       >
         <span
           className={`
-            font-structural
+            ei-type-color-muted font-structural
             uppercase
-            text-white/60
             ${isIntimate ? "text-[10px] tracking-[0.24em]" : "text-[11px] tracking-[0.2em]"}
           `}
         >
@@ -83,10 +82,9 @@ export function PageHero({
       <h1
         id={headingId}
         className={`
-          font-editorial
+          ei-type-color-primary font-editorial
           whitespace-pre-line
           tracking-tight
-          text-white/[0.94]
 
           ${
             isIntimate
@@ -149,9 +147,8 @@ export function PageHero({
         <motion.p
           variants={variants}
           className={`
-            font-structural
+            ei-type-color-secondary font-structural
             leading-[1.68]
-            text-white/88
 
             ${
               isIntimate

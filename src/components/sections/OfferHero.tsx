@@ -37,16 +37,16 @@ export function OfferHero({
   const isIntimate = variant === 'intimate';
 
   const atmosphereClass = isIntimate
-    ? 'ei-quote mb-7 max-w-[28ch] text-[clamp(1rem,1.55vw,1.22rem)] leading-[1.5] text-[var(--ei-text-secondary)]'
-    : 'ei-quote mb-8 max-w-[28ch] text-[clamp(1.15rem,2.2vw,1.5rem)] leading-[1.45] text-[var(--ei-text-secondary)]';
+    ? 'ei-type-manifesto mb-7 max-w-[28ch] text-[clamp(1rem,1.55vw,1.22rem)] leading-[1.5]'
+    : 'ei-type-manifesto mb-8 max-w-[28ch] text-[clamp(1.15rem,2.2vw,1.5rem)] leading-[1.45]';
 
   const titleClass = isIntimate
-    ? 'font-editorial max-w-[24ch] text-[clamp(1.85rem,3.35vw,2.75rem)] leading-[1.12] tracking-tight text-[var(--ei-text-primary)]'
-    : 'font-editorial max-w-[22ch] text-[clamp(2rem,4.5vw,3.35rem)] leading-[1.08] tracking-tight text-[var(--ei-text-primary)]';
+    ? 'ei-type-hero-home max-w-[24ch] text-[clamp(1.85rem,3.35vw,2.75rem)] leading-[1.12] tracking-tight'
+    : 'ei-type-hero-home max-w-[22ch] text-[clamp(2rem,4.5vw,3.35rem)] leading-[1.08] tracking-tight';
 
   const bodyClass = isIntimate
-    ? 'ei-type-body text-[var(--ei-text-secondary)]'
-    : 'ei-type-body-large text-[var(--ei-text-secondary)]';
+    ? 'ei-type-body'
+    : 'ei-type-body-large';
 
   return (
     <motion.section
@@ -70,7 +70,7 @@ export function OfferHero({
         <div className="mx-auto max-w-[680px] md:pl-6 lg:pl-10">
 
           <motion.div variants={driftUp} className="mb-3 flex items-center gap-4 md:mb-5">
-            <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
+            <span className="ei-type-label text-[11px] tracking-[0.2em]">
               {eyebrow}
             </span>
             <div
@@ -86,7 +86,7 @@ export function OfferHero({
           {subtitle && (
             <motion.p
               variants={fadeSoft}
-              className="ei-type-label mb-6 block text-white/55"
+              className="ei-type-label mb-6 block"
             >
               {subtitle}
             </motion.p>
@@ -102,7 +102,7 @@ export function OfferHero({
                 key={line}
                 className={
                   index > 0
-                    ? 'mt-2 block text-[0.92em] text-[var(--ei-text-secondary)]'
+                    ? 'ei-type-studio-hero-emphasis mt-2 block text-[0.92em]'
                     : ''
                 }
               >
@@ -114,7 +114,7 @@ export function OfferHero({
           {tagline && (
             <motion.p
               variants={fadeSoft}
-              className="mt-5 max-w-[34ch] font-editorial text-[clamp(1.05rem,2vw,1.25rem)] leading-[1.5] text-[var(--ei-text-secondary)]"
+              className="ei-type-manifesto mt-5 max-w-[34ch] text-[clamp(1.05rem,2vw,1.25rem)] leading-[1.5]"
             >
               {tagline}
             </motion.p>

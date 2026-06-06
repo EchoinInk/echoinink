@@ -101,7 +101,7 @@ export function EchoSelect({
       {label && (
         <label
           id={`${id}-label`}
-          className="mb-4 block font-structural text-[11px] font-medium uppercase tracking-[0.24em] text-white/60"
+          className="ei-type-color-muted mb-4 block font-structural text-[11px] font-medium uppercase tracking-[0.24em]"
         >
           {label}
         </label>
@@ -135,13 +135,13 @@ export function EchoSelect({
           focus-visible:shadow-[0_0_0_1px_rgb(73, 133, 253/0.22),0_0_28px_rgb(73, 133, 253/0.08)]
         "
       >
-        <span className={value ? 'relative z-10 block truncate text-white/82' : 'relative z-10 block truncate text-white/55'}>
+        <span className={value ? 'ei-type-color-secondary relative z-10 block truncate' : 'ei-type-color-muted relative z-10 block truncate'}>
           {displayValue}
         </span>
 
         <span
           aria-hidden="true"
-          className={`pointer-events-none absolute right-5 top-1/2 z-10 -translate-y-1/2 text-[12px] text-white/55 transition-transform duration-500 ${
+          className={`ei-type-color-muted pointer-events-none absolute right-5 top-1/2 z-10 -translate-y-1/2 text-[12px] transition-transform duration-500 ${
             isOpen ? 'rotate-180' : ''
           }`}
         >
@@ -178,8 +178,8 @@ export function EchoSelect({
             onClick={() => selectOption('')}
             className="
               relative cursor-pointer select-none rounded-[11px] px-4 py-3
-              font-mono text-[13px] text-white/60 transition-colors duration-300
-              hover:bg-white/[0.07] hover:text-white/88
+              ei-type-color-tertiary font-mono text-[13px] transition-colors duration-300
+              hover:bg-white/[0.07] hover:text-[var(--ei-color-text-primary)]
             "
           >
             {placeholder}
@@ -201,10 +201,10 @@ export function EchoSelect({
                   font-mono text-[13px] transition-colors duration-300
                   ${
                     active
-                      ? 'bg-[rgb(73, 133, 253/0.10)] text-white'
+                      ? 'ei-type-color-primary bg-[rgb(73, 133, 253/0.10)]'
                       : selected
-                        ? 'text-white/90'
-                        : 'text-white/68'
+                        ? 'ei-type-color-primary'
+                        : 'ei-type-color-tertiary'
                   }
                 `}
               >

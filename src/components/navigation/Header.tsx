@@ -210,7 +210,7 @@ export function Header() {
                           ${
                             active
                               ? "text-[var(--ei-header-text-active)]"
-                              : "text-[rgb(var(--ei-ice-white-rgb)/0.82)] hover:text-[var(--ei-header-text-hover)]"
+                              : "ei-type-color-primary hover:text-[var(--ei-header-text-hover)]"
                           }
                         `}
                       >
@@ -223,7 +223,7 @@ export function Header() {
                             ${
                               active
                                 ? "text-[rgb(var(--ei-halo-blue-rgb)/0.78)]"
-                                : "text-[rgb(var(--ei-ice-white-rgb)/0.28)] group-hover:translate-x-1 group-hover:text-[rgb(var(--ei-ice-white-rgb)/0.54)]"
+                                : "ei-type-color-faint group-hover:translate-x-1 group-hover:text-[var(--ei-color-text-accent)]"
                             }
                           `}
                         >
@@ -265,7 +265,7 @@ export function Header() {
                   Start a Conversation
                 </Link>
 
-                <p className="mt-4 max-w-[32ch] font-[var(--ei-font-copy)] text-[0.72rem] leading-[1.65] tracking-[-0.004em] text-[rgb(var(--ei-ice-white-rgb)/0.42)]">
+                <p className="ei-type-color-muted mt-4 max-w-[32ch] font-[var(--ei-font-copy)] text-[0.72rem] leading-[1.65] tracking-[-0.004em]">
                   Designing worlds that hold meaning, atmosphere, and emotional
                   intelligence.
                 </p>
