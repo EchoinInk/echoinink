@@ -48,7 +48,7 @@ export default function OrbitalsSheet() {
         {variants.map((v) => (
           <div
             key={v}
-            className="flex flex-col items-center gap-3 rounded-xl border border-white/10 bg-white/5 p-4"
+className="rounded-xl bg-[rgb(var(--ei-midnight-rgb)/0.6)] border border-white/10 p-4"
           >
             <OrbitalVisual variant={v} size={72} />
             <span className="text-xs text-white/60">{v}</span>
