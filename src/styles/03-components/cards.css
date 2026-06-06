@@ -488,7 +488,13 @@
     max-width: 38ch;
     color: var(--ei-color-text-secondary);
   }
+.ei-card-world:hover .ei-card-action {
+  color: var(--ei-color-text-accent);
+}
 
+.ei-card-world:hover .ei-card-action-arrow {
+  transform: translateX(0.2rem);
+}
   /* ─────────────────────────────────────────────────────────
    Project Cards
    Use for Works grid, case study previews, selected projects,
