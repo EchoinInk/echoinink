@@ -173,12 +173,14 @@ export function Studio() {
 
             <motion.div variants={driftUp} className="max-w-[62ch]">
               <p className="ei-type-studio-body text-[var(--ei-color-text-secondary)]">
-                Design is not decoration — it is meaning made visible. Every decision is rooted
-                in understanding, shaped by emotion, and refined through story.
+                esign is not the surface of a thing — it is the truth of it, made visible.
+  Each decision carries intention. Each gesture holds emotion. Each system
+  becomes a story you can step inside.
               </p>
               <p className="ei-type-studio-body mt-5 text-[var(--ei-color-text-secondary)]">
-                We do not just build brands or websites. We build identity, atmosphere, and
-                transformation.
+                We don’t create brands or websites as artifacts. We create worlds —
+  identity, atmosphere, and the quiet shift that happens when something
+  finally feels like itself.
               </p>
             </motion.div>
 
