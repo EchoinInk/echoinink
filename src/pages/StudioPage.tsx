@@ -247,11 +247,11 @@ export function Studio() {
                         {pillar.number}
                       </span>
 
-                      <div className="mt-6 flex h-16 items-center">
+                      <div className="mt-4 flex h-12 items-center">
                         <OrbitalVisual
                           variant={pillar.icon}
                           size={64}
-                          className="opacity-90"
+                          className="opacity-98"
                         />
                       </div>
                     </div>
