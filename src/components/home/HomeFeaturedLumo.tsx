@@ -8,7 +8,7 @@ import {
   useSpring,
 } from "framer-motion";
 
-import lumoinkdrift from "@/assets/imagery/sections/lumo-featured-bg.png";
+import lumoinkdrift from "@/assets/imagery/sections/lumo-featured-bg.webp";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import {
