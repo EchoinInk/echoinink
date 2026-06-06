@@ -248,7 +248,7 @@ export function Studio() {
                       {pillar.title}
                     </h3>
 
-                    <p className="ei-type-studio-pillar-body mt-4 max-w-[31ch] whitespace-pre-line">
+                    <p className="ei-type-studio-card-body mt-4 max-w-[31ch] whitespace-pre-line">
                       {pillar.body}
                     </p>
 
@@ -337,8 +337,8 @@ export function Studio() {
   A world built for overwhelmed humans.
 </p>
 
-<p className="ei-type-studio-feature-body mt-7 max-w-[38ch] leading-[1.75] whitespace-pre-line">
-  {"Lumo translates softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system —\nan interface shaped to calm cognitive noise through atmosphere, rhythm, and restraint."}
+<p className="mt-7 max-w-[38ch] font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em] text-[var(--ei-color-text-secondary)]">
+  Lumo takes softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system — an interface shaped to calm cognitive noise through atmosphere, rhythm, and restraint.
 </p>
           </div>
 

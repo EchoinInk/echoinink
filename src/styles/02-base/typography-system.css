@@ -269,35 +269,37 @@
   color: var(--ei-type-color-secondary);
 }
 
-/* Semantic text color assignments */
+/* Studio: restore hierarchy after color cleanup */
 @layer base {
+  /* Hero + major section titles */
   .ei-type-hero-home,
-  .ei-type-studio-hero,
+  .ei-type-hero-home span,
   .ei-type-philosophy-heading,
   .ei-type-studio-manifesto,
   .ei-type-studio-card-title,
   .ei-type-studio-pillar-title,
   .ei-type-studio-process-title,
   .ei-type-studio-feature-title,
-  .ei-type-studio-slim-cta,
-  .ei-card-world-title {
+  .ei-type-studio-slim-cta {
     color: var(--ei-color-text-primary);
   }
 
+  /* Hero italic: subtle, but not dull */
   .ei-type-studio-hero-emphasis {
     font-style: italic;
     font-weight: 400;
     color: var(--ei-color-text-secondary);
   }
 
+  /* Important body copy */
   .ei-type-hero-description,
   .ei-type-philosophy-body,
   .ei-type-studio-body,
-  .ei-type-studio-feature-subtitle,
-  .ei-card-world-subtitle {
+  .ei-type-studio-feature-subtitle {
     color: var(--ei-color-text-secondary);
   }
 
+  /* Card/process body: readable supporting copy */
   .ei-type-studio-card-body,
   .ei-type-studio-pillar-body,
   .ei-type-studio-principle-body,
@@ -305,13 +307,29 @@
   .ei-type-studio-feature-body,
   .ei-card-description,
   .text-card-body,
-  .ei-body-small,
+  .ei-body-small {
+    color: var(--ei-color-text-tertiary);
+  }
+
+  /* Labels are muted, but not faint */
+  .ei-type-studio-label,
+  .ei-type-label {
+    color: var(--ei-color-text-muted);
+  }
+
+  /* Shared semantic assignments */
+  .ei-card-world-title {
+    color: var(--ei-color-text-primary);
+  }
+
+  .ei-card-world-subtitle {
+    color: var(--ei-color-text-secondary);
+  }
+
   .ei-card-world-copy-text {
     color: var(--ei-color-text-tertiary);
   }
 
-  .ei-type-studio-label,
-  .ei-type-label,
   .ei-type-footer-label,
   .ei-type-footer-copy,
   .ei-type-footer-meta,
