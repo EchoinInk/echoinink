@@ -45,11 +45,15 @@ export function EditorialImageHero({
   const isIntimate = variant === "intimate";
   const isStudio = variant === "studio";
 
-  const headingClass = "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
+  const headingClass = isStudio
+    ? "ei-type-studio-hero max-w-[13ch] whitespace-pre-line"
+    : "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
 
-  const bodyClass = isIntimate
-    ? "ei-type-hero-description max-w-[42ch]"
-    : "ei-type-hero-description max-w-[46ch]";
+  const bodyClass = isStudio
+    ? "ei-type-studio-body max-w-[47ch] text-[var(--ei-color-text-secondary)]"
+    : isIntimate
+      ? "ei-type-hero-description max-w-[42ch]"
+      : "ei-type-hero-description max-w-[46ch]";
 
   return (
     <motion.section
@@ -58,10 +62,11 @@ export function EditorialImageHero({
       whileInView="visible"
       viewport={VIEWPORT.loose}
       className={`
-        relative flex min-h-[48vh] items-start overflow-hidden
+        relative flex min-h-[54vh] items-start overflow-hidden
         bg-[var(--ei-void)]
         pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]
         ${isIntimate ? "md:min-h-[60vh]" : ""}
+        ${isStudio ? "md:min-h-[72vh] lg:min-h-[76vh]" : ""}
       `}
       aria-labelledby="editorial-hero-heading"
     >
@@ -70,8 +75,9 @@ export function EditorialImageHero({
         <img
           src={mobileImage}
           alt=""
-          className="h-full w-full object-cover object-center saturate-[0.86]
-            md:object-[72%_50%]"
+          className={`h-full w-full object-cover object-center ${
+            isStudio ? "saturate-[0.98] brightness-[0.96] md:object-[70%_50%]" : "saturate-[0.86] md:object-[72%_50%]"
+          }`}
           fetchPriority="high"
         />
       </picture>
@@ -81,7 +87,9 @@ export function EditorialImageHero({
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
-            "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.12) 0%, rgb(var(--ei-void-rgb) / 0.46) 100%)",
+            isStudio
+              ? "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.04) 0%, rgb(var(--ei-void-rgb) / 0.36) 100%)"
+              : "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.12) 0%, rgb(var(--ei-void-rgb) / 0.46) 100%)",
         }}
       />
 
@@ -100,7 +108,9 @@ export function EditorialImageHero({
         className="pointer-events-none absolute inset-0 z-[2]"
         style={{
           background: isLeft
-            ? "radial-gradient(ellipse 52% 64% at 16% 46%, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.48) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.52) 0%, transparent 58%)"
+            ? isStudio
+              ? "radial-gradient(ellipse 46% 68% at 18% 48%, rgb(var(--ei-void-rgb) / 0.7) 0%, rgb(var(--ei-void-rgb) / 0.42) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.44) 0%, transparent 58%)"
+              : "radial-gradient(ellipse 52% 64% at 16% 46%, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.48) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.52) 0%, transparent 58%)"
             : "radial-gradient(ellipse 52% 64% at 84% 46%, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.48) 42%, transparent 74%), linear-gradient(270deg, rgb(var(--ei-void-rgb) / 0.52) 0%, transparent 58%)",
         }}
       />
