@@ -46,14 +46,14 @@ export function EditorialImageHero({
   const isStudio = variant === "studio";
 
   const headingClass = isStudio
-    ? "ei-type-studio-hero max-w-[18ch] whitespace-pre-line"
+    ? "ei-type-studio-hero max-w-[18ch] whitespace-pre-line text-[rgb(var(--ei-ice-white-rgb)/0.94)]"
     : isIntimate
-      ? "font-editorial max-w-[24ch] whitespace-pre-line text-[clamp(1.85rem,3.35vw,2.75rem)] leading-[1.12] tracking-[-0.025em] text-[var(--ei-color-text-primary))]"
-      : "font-editorial max-w-[22ch] whitespace-pre-line text-[clamp(2.25rem,4.5vw,3.55rem)] leading-[1.045] tracking-[-0.034em] text-[var(--ei-color-text-primary)]";
+      ? "font-editorial max-w-[24ch] whitespace-pre-line text-[clamp(1.85rem,3.35vw,2.75rem)] leading-[1.12] tracking-[-0.025em] text-[rgb(var(--ei-ice-white-rgb)/0.94)]"
+      : "font-editorial max-w-[22ch] whitespace-pre-line text-[clamp(2.25rem,4.5vw,3.55rem)] leading-[1.045] tracking-[-0.034em] text-[rgb(var(--ei-ice-white-rgb)/0.94)]";
 
   const bodyClass = isIntimate
-    ? "ei-type-body max-w-[42ch]"
-    : "ei-type-body-large max-w-[46ch]";
+    ? "ei-type-body max-w-[42ch] text-[rgb(var(--ei-moonlit-rgb)/0.78)]"
+    : "ei-type-body-large max-w-[46ch] text-[rgb(var(--ei-moonlit-rgb)/0.78)]";
 
   return (
     <motion.section
@@ -106,8 +106,8 @@ export function EditorialImageHero({
         className="pointer-events-none absolute inset-0 z-[2]"
         style={{
           background: isLeft
-            ? "radial-gradient(ellipse 54% 62% at 20% 48%, rgb(var(--ei-void-rgb) / 0.58) 0%, rgb(var(--ei-void-rgb) / 0.34) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.34) 0%, transparent 54%)"
-            : "radial-gradient(ellipse 54% 62% at 80% 48%, rgb(var(--ei-void-rgb) / 0.58) 0%, rgb(var(--ei-void-rgb) / 0.34) 42%, transparent 72%), linear-gradient(270deg, rgb(var(--ei-void-rgb) / 0.34) 0%, transparent 54%)",
+            ? "radial-gradient(ellipse 52% 64% at 16% 46%, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.48) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.52) 0%, transparent 58%)"
+            : "radial-gradient(ellipse 52% 64% at 84% 46%, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.48) 42%, transparent 74%), linear-gradient(270deg, rgb(var(--ei-void-rgb) / 0.52) 0%, transparent 58%)",
         }}
       />
 
@@ -143,7 +143,7 @@ export function EditorialImageHero({
                 ${isLeft ? "" : "justify-center"}
               `}
             >
-              <span className="ei-type-studio-label var(--ei-color-text-primary)">
+              <span className="ei-type-studio-label text-[rgb(var(--ei-moonlit-rgb)/0.72)]">
                 {eyebrow}
               </span>
 
@@ -177,9 +177,7 @@ export function EditorialImageHero({
                 : title}
             </h1>
 
-            <p className={`${bodyClass} mt-5 md:mt-6`}>
-              {description}
-            </p>
+            <p className={`${bodyClass} mt-5 md:mt-6`}>{description}</p>
 
             {ctaLabel && ctaHref && (
               <motion.div
