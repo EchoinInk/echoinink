@@ -136,18 +136,16 @@
      Pillar / service card section type
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-card-title,
-  .ei-type-studio-pillar-title {
+  ei-type-studio-pillar-title,
+  .ei-type-studio-card-title {
     font-family: var(--ei-font-editorial);
-    font-size: clamp(1.55rem, 2.15vw, 2rem);
+    font-size: clamp(1.45rem, 1.8vw, 1.75rem);
     line-height: 1.12;
     letter-spacing: -0.025em;
-    font-weight: 400;
     color: var(--ei-color-text-primary);
-    text-wrap: balance;
   }
 
-  ei-type-studio-card-body,
+  .ei-type-studio-card-body,
   .ei-type-studio-pillar-body,
   .ei-type-studio-process-body,
   .ei-type-studio-feature-body {
@@ -238,14 +236,6 @@
     color: var(--ei-color-text-primary);
   }
 
-  .ei-type-studio-process-body {
-    font-family: var(--ei-font-structural);
-    font-size: clamp(0.875rem, 0.95vw, 1rem);
-    line-height: 1.62;
-    letter-spacing: -0.002em;
-    color: var(--ei-color-text-secondary);
-  }
-
   /* ─────────────────────────────────────────────────────────
      Featured work section type
      ───────────────────────────────────────────────────────── */
@@ -268,14 +258,6 @@
     font-weight: 400;
     color: var(--ei-color-text-primary);
     text-wrap: balance;
-  }
-
-  .ei-type-studio-feature-body {
-    font-family: var(--ei-font-structural);
-    font-size: clamp(0.875rem, 0.95vw, 1rem);
-    line-height: 1.66;
-    letter-spacing: -0.003em;
-    color: var(--ei-color-text-secondary);
   }
 
   /* The old overlay was making the Lumo feature feel buried.
