@@ -140,22 +140,22 @@ export function LumoCaseStudyTeaser() {
   </motion.div>
 
   <div
-    aria-hidden="true"
-    className="pointer-events-none absolute inset-y-0 left-0 w-[44%]"
-    style={{
-      background:
-        "linear-gradient(to right, rgb(var(--ei-void-rgb) / 0.9) 0%, rgb(var(--ei-void-rgb) / 0.62) 34%, rgb(var(--ei-void-rgb) / 0.24) 72%, transparent 100%)",
-    }}
-  />
+  aria-hidden="true"
+  className="pointer-events-none absolute inset-y-0 left-0 w-[46%]"
+  style={{
+    background:
+      "linear-gradient(to right, rgb(var(--ei-void-rgb) / 0.92) 0%, rgb(var(--ei-void-rgb) / 0.66) 36%, rgb(var(--ei-void-rgb) / 0.24) 74%, transparent 100%)",
+  }}
+/>
 
-  <div
-    aria-hidden="true"
-    className="pointer-events-none absolute inset-0"
-    style={{
-      background:
-        "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.12) 0%, transparent 36%, rgb(var(--ei-void-rgb) / 0.2) 100%)",
-    }}
-  />
+<div
+  aria-hidden="true"
+  className="pointer-events-none absolute inset-x-0 top-0 h-[42%]"
+  style={{
+    background:
+      "linear-gradient(to bottom, rgb(var(--ei-void-rgb) / 0.82) 0%, rgb(var(--ei-void-rgb) / 0.42) 42%, transparent 100%)",
+  }}
+/>
 
   <motion.div
     aria-hidden="true"
