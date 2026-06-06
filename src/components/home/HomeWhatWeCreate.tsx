@@ -99,8 +99,8 @@ export function WhatWeCreate() {
                   </p>
 
                   <span className="ei-card-action">
-                    Explore <span className="ei-card-action-arrow">→</span>
-                  </span>
+  Explore <span className="ei-card-action-arrow">→</span>
+</span>
                 </Link>
               </motion.article>
             ))}
