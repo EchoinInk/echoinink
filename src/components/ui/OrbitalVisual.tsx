@@ -64,10 +64,6 @@ const magenta = "rgb(var(--ei-echo-magenta) / 0.85)";
 const magentaSoft = "rgb(var(--ei-soft-neon) / 0.65)";
 
 
-  const magenta = "rgb(var(--ei-echo-magenta-rgb) / 0.58)";
-  const magentaSoft = "rgb(var(--ei-echo-magenta-rgb) / 0.5)";
-  const orchid = "rgb(var(--ei-echo-magenta-rgb) / 0.46)";
-
   const icons: Record<OrbitalVariant, React.ReactElement> = {
     triangle: (
       <svg
