@@ -46,6 +46,7 @@ export function EditorialImageHero({
   const isStudio = variant === "studio";
 
   const headingClass = "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
+
   const bodyClass = isIntimate
   ? "ei-type-hero-description max-w-[42ch]"
   : "ei-type-hero-description max-w-[46ch]";
