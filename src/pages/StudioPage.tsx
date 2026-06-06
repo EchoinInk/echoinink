@@ -54,7 +54,7 @@ const pillars: Array<{
   {
     number: "01",
     title: "Identity Systems",
-    body: "Strategic identity frameworks that reveal essence, build recognition, and create emotional resonance. Identity shaped as architecture, not ornament.",
+    body: "Strategic identity frameworks that reveal essence, build recognition, and create emotional resonance.\nIdentity shaped as architecture, not ornament.",
     href: "/identity",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_28%,rgb(var(--ei-violet-rgb)/0.22),transparent_38%),radial-gradient(circle_at_52%_62%,rgb(var(--ei-halo-blue-rgb)/0.08),transparent_54%)]",
@@ -63,7 +63,7 @@ const pillars: Array<{
   {
     number: "02",
     title: "Digital Experiences",
-    body: "Immersive websites and interfaces where story, design, and atmosphere form a coherent world. Digital presence as a cinematic environment.",
+    body: "Immersive websites and interfaces where story, design, and atmosphere form a coherent world.\nDigital presence as a cinematic environment.",
     href: "/websites",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_30%,rgb(var(--ei-halo-blue-rgb)/0.18),transparent_42%),linear-gradient(145deg,rgb(var(--ei-midnight-rgb)/0.7),rgb(var(--ei-void-rgb)/0.95))]",
@@ -72,7 +72,8 @@ const pillars: Array<{
   {
     number: "03",
     title: "Narrative Direction",
-    body: "Story systems, creative direction, and visual language that align message, audience, and feeling. Narrative as the connective tissue of identity.",    href: "/direction",
+    body: "Story systems, creative direction, and visual language that align message, audience, and feeling.\nNarrative as the connective tissue of identity.",
+    href: "/direction",
     imageClass:
       "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
     icon: "ribbon",
@@ -161,7 +162,7 @@ export function Studio() {
 
   <motion.p
     variants={driftUp}
-    className="ei-type-philosophy-body max-w-[38ch]"
+    className="ei-type-philosophy-body max-w-[38ch] whitespace-pre-line"
   >Everything we create begins in the unseen layers: memory, intention, emotional architecture. From there, we build worlds that hold meaning.
   </motion.p>
 </motion.div>
