@@ -1,57 +1,66 @@
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { Section } from '@/components/layout/Section';
-import { Container } from '@/components/layout/Container';
-import { OrbitalVisual } from '@/components/ui/OrbitalVisual';
-import { driftUp, staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { Section } from "@/components/layout/Section";
+import { Container } from "@/components/layout/Container";
+import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
+import {
+  driftUp,
+  staggerContainer,
+  STAGGER,
+  VIEWPORT,
+} from "@/lib/motion-cinematic";
 
 const systems = [
   {
-    variant: 'ember' as const,
-    title: 'Identity Canvas',
-    description: 'Map your essence, influence, and emotional positioning.',
-    meta: 'Framework',
-    href: '/systems',
+    variant: "ember" as const,
+    title: "Identity Canvas",
+    description: "Map your essence, influence, and emotional positioning.",
+    meta: "Framework",
+    href: "/systems",
   },
   {
-    variant: 'pulse' as const,
-    title: 'Founder Reflection',
-    description: 'A guided system for clarity, identity, and next alignment.',
-    meta: 'Reflective Tool',
-    href: '/systems',
+    variant: "pulse" as const,
+    title: "Founder Reflection",
+    description: "A guided system for clarity, identity, and next alignment.",
+    meta: "Reflective Tool",
+    href: "/systems",
   },
   {
-    variant: 'monolith' as const,
-    title: 'Narrative Architect',
-    description: 'Build stories that hold meaning, tension, and transformation.',
-    meta: 'Framework',
-    href: '/systems',
+    variant: "monolith" as const,
+    title: "Narrative Architect",
+    description: "Build stories that hold meaning, tension, and transformation.",
+    meta: "Framework",
+    href: "/systems",
   },
   {
-    variant: 'spiral' as const,
-    title: 'Identity GPT',
-    description: 'An AI companion for identity clarity and narrative direction.',
-    meta: 'GPT System',
-    href: '/systems',
+    variant: "spiral" as const,
+    title: "Identity GPT",
+    description: "An AI companion for identity clarity and narrative direction.",
+    meta: "GPT System",
+    href: "/systems",
   },
   {
-    variant: 'lattice' as const,
-    title: 'Atmosphere UI Kit',
-    description: 'Cinematic UI components for immersive digital worlds.',
-    meta: 'UI System',
-    href: '/systems',
+    variant: "lattice" as const,
+    title: "Atmosphere UI Kit",
+    description: "Cinematic UI components for immersive digital worlds.",
+    meta: "UI System",
+    href: "/systems",
   },
 ];
 
 export function EmergingSystems() {
   return (
-    <Section spacing="sm" className="relative overflow-hidden">
+    <Section
+      spacing="none"
+      className="relative overflow-hidden pt-6 pb-4 md:pt-8 md:pb-6"
+    >
       <div
         aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
+        className="pointer-events-none absolute inset-0"
         style={{
-          background: 'radial-gradient(ellipse 55% 40% at 50% 55%, rgb(73 133 253 / 0.02) 0%, transparent 60%)',
-          filter: 'blur(60px)',
+          background:
+            "radial-gradient(ellipse 55% 40% at 50% 55%, rgb(var(--ei-halo-blue-rgb) / 0.02) 0%, transparent 60%)",
+          filter: "blur(60px)",
         }}
       />
 
@@ -61,60 +70,59 @@ export function EmergingSystems() {
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.normal}
-          className="max-w-6xl mx-auto"
+          className="mx-auto max-w-6xl"
         >
-          {/* Section header — eyebrow left, explore link right */}
           <motion.div
             variants={driftUp}
-            className="flex items-center justify-between mb-10 md:mb-14"
+            className="mb-8 flex items-center justify-between md:mb-10"
           >
             <div className="flex items-center gap-3">
               <span className="ei-type-label">Our Systems</span>
-<div
-          className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(73_133_253_/0.45)]"
-          style={{
-            background:
-              'linear-gradient(90deg, rgb(11 13 42 / 0.15) 0%, rgb(73 133 253 / 0.95) 100%)',
-          }}
-        />            </div>
 
-            <Link
-              to="/systems"
-              className="group inline-flex items-center gap-2 font-mono text-[10px] tracking-[0.18em] uppercase text-white/55 hover:text-[var(--ei-violet)] transition-colors duration-500"
-            >
+              <div
+                className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-halo-blue-rgb)/0.45)]"
+                style={{
+                  background:
+                    "linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-halo-blue-rgb) / 0.95) 100%)",
+                }}
+              />
+            </div>
+
+            <Link to="/systems" className="group ei-link-subtle inline-flex items-center gap-2">
               Explore All Systems
-              <span className="group-hover:translate-x-1 transition-transform duration-500 ease-out">→</span>
+<span className="transition-transform duration-500 group-hover:translate-x-1">
+  →
+</span>
             </Link>
           </motion.div>
 
-          {/* 5 system cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-4 lg:grid-cols-5">
             {systems.map((system) => (
               <motion.article key={system.title} variants={driftUp}>
                 <Link
                   to={system.href}
-                  className="ei-card ei-card-soft ei-card-interactive group flex h-full flex-col p-7"
+                  className="ei-card-system group block h-full"
                   aria-label={system.title}
                 >
-                  {/* Orbital icon */}
-                  <div className="mb-7 flex items-center justify-center h-20">
-                    <OrbitalVisual variant={system.variant} size={72} />
+                  <div className="ei-card-system-glow" aria-hidden="true" />
+
+                  <div className="ei-card-system-inner">
+                    <div className="mb-4 flex h-16 items-center justify-center">
+                      <OrbitalVisual variant={system.variant} size={64} />
+                    </div>
+
+                    <div className="ei-card-system-main">
+                      <h3 className="ei-card-system-title">{system.title}</h3>
+
+                      <p className="ei-card-system-copy">
+                        {system.description}
+                      </p>
+                    </div>
+
+                    <span className="ei-card-system-category mt-auto">
+                      {system.meta}
+                    </span>
                   </div>
-
-                  {/* Title */}
-                  <h3 className="font-editorial text-lg text-[var(--ei-text-primary)] mb-3 leading-tight">
-                    {system.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="font-structural text-[12px] leading-[1.7] text-white/62 mb-6 flex-1">
-                    {system.description}
-                  </p>
-
-                  {/* Meta label */}
-                  <span className="font-mono text-[9px] tracking-[0.2em] uppercase text-white/58">
-                    {system.meta}
-                  </span>
                 </Link>
               </motion.article>
             ))}
