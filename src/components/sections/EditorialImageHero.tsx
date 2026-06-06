@@ -52,8 +52,8 @@ export function EditorialImageHero({
       : "font-editorial max-w-[22ch] whitespace-pre-line text-[clamp(2.25rem,4.5vw,3.55rem)] leading-[1.045] tracking-[-0.034em] text-[rgb(var(--ei-ice-white-rgb)/0.94)]";
 
   const bodyClass = isIntimate
-    ? "ei-type-body max-w-[42ch] text-[rgb(var(--ei-moonlit-rgb)/0.78)]"
-    : "ei-type-body-large max-w-[46ch] text-[rgb(var(--ei-moonlit-rgb)/0.78)]";
+  ? "ei-type-hero-description max-w-[42ch]"
+  : "ei-type-hero-description max-w-[46ch]";
 
   return (
     <motion.section
