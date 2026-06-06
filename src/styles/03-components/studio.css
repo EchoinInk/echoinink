@@ -170,6 +170,5 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   font-weight: 500;
-  color: var(--ei-color-text-muted);
-}
-}
+  color: rgb(var(--ei-moonlit-rgb) / 0.62);
+}}
