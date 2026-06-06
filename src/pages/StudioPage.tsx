@@ -1,24 +1,16 @@
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-import { PageShell } from '@/components/layout/PageShell';
-import { Container } from '@/components/layout/Container';
-import { EditorialImageHero } from '@/components/sections/EditorialImageHero';
-import { QuoteCard } from '@/components/cards/QuoteCard';
-import { PhilosophyCard } from '@/components/cards/PhilosophyCard';
-import { ValuesGrid } from '@/components/studio/StudioValuesGrid';
-import { ProjectCTA } from '@/components/sections/ProjectCTA';
+import { PageShell } from "@/components/layout/PageShell";
+import { Container } from "@/components/layout/Container";
+import { EditorialImageHero } from "@/components/sections/EditorialImageHero";
+import { Button } from "@/components/ui/Button";
+import { OrbitalVisual, type OrbitalVariant } from "@/components/ui/OrbitalVisual";
 
-import studioHeroDesktop from '@/assets/imagery/hero/studio-hero-desktop.webp';
-import studioHeroMobile from '@/assets/imagery/hero/studio-hero-mobile.webp';
-import studioCTADesktop from '@/assets/imagery/sections/studio-cta-desktop.webp';
-import studioCTAMobile from '@/assets/imagery/sections/studio-cta-mobile.webp';
-
-import {
-  originCopy,
-  philosophyItems,
-  studioQuoteLines,
-} from '@/data/studioContent';
+import studioHeroDesktop from "@/assets/imagery/hero/studio-hero-desktop.webp";
+import studioHeroMobile from "@/assets/imagery/hero/studio-hero-mobile.webp";
+import lumoFeaturedBg from "@/assets/imagery/sections/lumo-featured-bg.webp";
 
 import {
   driftUp,
@@ -26,48 +18,101 @@ import {
   staggerContainer,
   STAGGER,
   VIEWPORT,
-} from '@/lib/motion-cinematic';
+} from "@/lib/motion-cinematic";
 
-function StudioSectionRail({
-  number,
-  label,
-}: {
+const principles: Array<{
+  title: string;
+  body: string;
+  icon: OrbitalVariant;
+}> = [
+  {
+    title: "Meaning over noise",
+    body: "We strip away the unnecessary to reveal what matters.",
+    icon: "reflection",
+  },
+  {
+    title: "Design with feeling",
+    body: "We hold strategy with emotion to create work that connects.",
+    icon: "pulse",
+  },
+  {
+    title: "Built to resonate",
+    body: "We craft identity systems and digital worlds designed to endure.",
+    icon: "lattice",
+  },
+];
+
+const pillars: Array<{
   number: string;
-  label: string;
-}) {
+  title: string;
+  body: string;
+  href: string;
+  imageClass: string;
+  icon: OrbitalVariant;
+}> = [
+  {
+    number: "01",
+    title: "Identity Systems",
+    body: "Strategic identity frameworks that reveal essence, build recognition, and create emotional resonance.",
+    href: "/identity",
+    imageClass:
+      "bg-[radial-gradient(circle_at_50%_28%,rgb(var(--ei-violet-rgb)/0.22),transparent_38%),radial-gradient(circle_at_52%_62%,rgb(var(--ei-halo-blue-rgb)/0.08),transparent_54%)]",
+    icon: "canvas",
+  },
+  {
+    number: "02",
+    title: "Digital Experiences",
+    body: "Immersive websites and interfaces that blend story, design, and atmosphere into seamless worlds.",
+    href: "/websites",
+    imageClass:
+      "bg-[radial-gradient(circle_at_50%_30%,rgb(var(--ei-halo-blue-rgb)/0.18),transparent_42%),linear-gradient(145deg,rgb(var(--ei-midnight-rgb)/0.7),rgb(var(--ei-void-rgb)/0.95))]",
+    icon: "lens",
+  },
+  {
+    number: "03",
+    title: "Narrative Direction",
+    body: "Story systems, creative direction, and visual language that align message, audience, and feeling.",
+    href: "/direction",
+    imageClass:
+      "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
+    icon: "ribbon",
+  },
+];
+
+const process = [
+  {
+    number: "01",
+    title: "Discover",
+    body: "We uncover the signal beneath the surface.",
+  },
+  {
+    number: "02",
+    title: "Strategize",
+    body: "We define the emotional and strategic direction.",
+  },
+  {
+    number: "03",
+    title: "Create",
+    body: "We shape the system, story, and visual world.",
+  },
+  {
+    number: "04",
+    title: "Refine",
+    body: "We polish every touchpoint until it feels inevitable.",
+  },
+  {
+    number: "05",
+    title: "Launch",
+    body: "We deliver a world built to resonate.",
+  },
+] as const;
+
+function SectionLabel({ children }: { children: string }) {
   return (
-    <motion.div
-      variants={driftUp}
-      className="
-        pointer-events-none absolute top-12 z-10 hidden items-center gap-5
-        md:top-16 md:flex
-      "
-      style={{
-        left: 'max(2rem, calc((100vw - 1180px) / 2 - 7.5rem))',
-      }}
-    >
-      <span
-        className="font-structural text-[11px] uppercase tracking-[0.22em]"
-        style={{ color: 'var(--ei-text-tertiary)' }}
-      >
-        {number}
-      </span>
-
-      <span
-        className="block h-px w-20"
-        style={{
-          background:
-            'linear-gradient(90deg, rgb(var(--ei-electric-cyan-rgb) / 0.28), rgb(var(--ei-halo-blue-rgb) / 0.85))',
-        }}
-      />
-
-      <span
-        className="font-structural text-[11px] uppercase tracking-[0.32em]"
-        style={{ color: 'var(--ei-text-tertiary)' }}
-      >
-        {label}
-      </span>
-    </motion.div>
+    <div className="ei-section-label-row">
+      <span className="ei-section-label">{children}</span>
+      <span className="ei-section-label-line" />
+    </div>
   );
 }
 
@@ -84,156 +129,256 @@ export function Studio() {
 
       <EditorialImageHero
         eyebrow="Studio"
-        title="Where the philosophy becomes form."
-        italicWord="philosophy."
-        description="Echo in Ink begins with what is felt but not yet shaped — the emotional architecture beneath a person, project, or world.
-        We translate inner worlds into coherent identity systems, creative direction, and digital presence."
+        title="Where philosophy becomes form."
+        italicWord="philosophy"
+        description="Echo in Ink shapes identity systems, immersive websites, and narrative direction for founders, artists, and emerging brands."
         image={studioHeroDesktop}
         mobileImage={studioHeroMobile}
-        imageAlt="Cinematic cosmic void surrounded by violet and blue nebula energy"
+        imageAlt="Atmospheric cosmic portal in violet, blue, and magenta light"
         align="left"
+        variant="studio"
       />
 
-      {/* ORIGIN */}
+      {/* MANIFESTO */}
       <motion.section
         variants={staggerContainer(STAGGER.loose, 0)}
         initial="hidden"
         whileInView="visible"
         viewport={VIEWPORT.loose}
-        aria-labelledby="origin-heading"
+        className="relative border-y border-[rgb(var(--ei-moonlit-rgb)/0.08)] py-12 md:py-16"
+      >
+        <Container size="xl" className="relative z-10">
+          <div className="mx-auto grid max-w-[1180px] gap-10 md:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.72fr)] md:gap-14">
+            <motion.div variants={driftUp}>
+              <SectionLabel>Our Manifesto</SectionLabel>
+
+              <blockquote className="mt-7 max-w-[18ch] font-editorial text-[clamp(2.05rem,4vw,4rem)] leading-[1.08] tracking-[-0.035em] text-[var(--ei-color-text-primary)]">
+                “We design from the inner signal outward — turning feeling,
+                clarity, and atmosphere into form.”
+              </blockquote>
+            </motion.div>
+
+            <motion.div
+              variants={fadeSoft}
+              className="grid content-center gap-7 border-t border-[rgb(var(--ei-moonlit-rgb)/0.08)] pt-8 md:border-l md:border-t-0 md:pl-12 md:pt-0"
+            >
+              {principles.map((principle) => (
+                <article
+                  key={principle.title}
+                  className="grid grid-cols-[2.25rem_minmax(0,1fr)] gap-5"
+                >
+                  <div className="pt-1 text-[rgb(var(--ei-violet-rgb)/0.78)]">
+                    <OrbitalVisual
+                      variant={principle.icon}
+                      size={28}
+                      className="opacity-80"
+                    />
+                  </div>
+
+                  <div>
+                    <h3 className="font-structural text-[10px] uppercase tracking-[0.22em] text-[var(--ei-color-text-tertiary)]">
+                      {principle.title}
+                    </h3>
+                    <p className="mt-2 max-w-[32ch] font-structural text-[0.82rem] leading-[1.65] text-[var(--ei-color-text-secondary)]">
+                      {principle.body}
+                    </p>
+                  </div>
+                </article>
+              ))}
+            </motion.div>
+          </div>
+        </Container>
+      </motion.section>
+
+      {/* WHAT WE DO */}
+      <motion.section
+        variants={fadeSoft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={VIEWPORT.loose}
         className="relative py-12 md:py-16"
       >
-        <StudioSectionRail
-          number={originCopy.number}
-          label={originCopy.label}
-        />
-
         <Container size="xl" className="relative z-10">
-          <div
-            className="
-              mx-auto max-w-[1180px] pt-12 md:pt-16
-            "
-          >
-            <div
-              className="
-                grid items-center gap-12
-                lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)]
-                lg:gap-12 
-              "
-            >
-              <div>
-                <motion.h2
-                  id="origin-heading"
-                  variants={driftUp}
-                  className="ei-type-section whitespace-pre-line px-6 mb-5"
-                  style={{ color: 'var(--ei-text-primary)' }}
+          <div className="mx-auto max-w-[1180px]">
+            <div className="mb-8">
+              <SectionLabel>What We Do</SectionLabel>
+            </div>
+
+            <div className="grid grid-cols-1 overflow-hidden rounded-[var(--ei-card-radius-lg)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] md:grid-cols-3">
+              {pillars.map((pillar) => (
+                <Link
+                  key={pillar.title}
+                  to={pillar.href}
+                  className="group relative min-h-[390px] overflow-hidden border-b border-[rgb(var(--ei-moonlit-rgb)/0.1)] p-7 text-inherit no-underline transition-colors duration-500 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0 lg:p-8"
                 >
-                  {originCopy.heading}
-                </motion.h2>
+                  <div
+                    aria-hidden="true"
+                    className={`absolute inset-0 opacity-80 transition-opacity duration-700 group-hover:opacity-100 ${pillar.imageClass}`}
+                  />
 
-                <motion.div variants={fadeSoft} className="mt-8 space-y-5">
-                  {originCopy.paragraphs.map((paragraph) => (
-                    <p
-                      key={paragraph.slice(0, 32)}
-                      className="
-                        max-w-[60ch] px-8 ei-type-body-large whitespace-pre-line
-                      "
-                      style={{ color: 'var(--ei-text-secondary)' }}
-                    >
-                      {paragraph}
+                  <div
+                    aria-hidden="true"
+                    className="absolute inset-0 bg-[linear-gradient(180deg,rgb(var(--ei-void-rgb)/0.18),rgb(var(--ei-void-rgb)/0.86))]"
+                  />
+
+                  <div className="relative z-10 flex min-h-[336px] flex-col justify-end">
+                    <div className="mb-auto">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--ei-color-text-tertiary)]">
+                        {pillar.number}
+                      </span>
+
+                      <div className="mt-6 flex h-16 items-center">
+                        <OrbitalVisual
+                          variant={pillar.icon}
+                          size={58}
+                          className="opacity-85"
+                        />
+                      </div>
+                    </div>
+
+                    <h3 className="max-w-[10ch] font-editorial text-[clamp(1.7rem,2.7vw,2.45rem)] uppercase leading-[1.05] tracking-[0.08em] text-[var(--ei-color-text-primary)]">
+                      {pillar.title}
+                    </h3>
+
+                    <p className="mt-4 max-w-[31ch] font-structural text-[0.84rem] leading-[1.68] text-[var(--ei-color-text-secondary)]">
+                      {pillar.body}
                     </p>
-                  ))}
-                </motion.div>
-              </div>
 
-              <QuoteCard lines={studioQuoteLines} />
+                    <span className="ei-card-action mt-7">
+                      Explore <span className="ei-card-action-arrow">→</span>
+                    </span>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
         </Container>
       </motion.section>
 
-      {/* PHILOSOPHY */}
+      {/* PROCESS */}
       <motion.section
         variants={fadeSoft}
         initial="hidden"
         whileInView="visible"
         viewport={VIEWPORT.loose}
-        aria-labelledby="philosophy-heading"
-        className="relative py-12 md:py-16 md:px-10"
+        className="relative border-y border-[rgb(var(--ei-moonlit-rgb)/0.08)] py-12 md:py-14"
       >
-        <StudioSectionRail number="02" label="Philosophy" />
-
         <Container size="xl" className="relative z-10">
-          <div
-            className="
-              mx-auto max-w-[1180px]
-            "
-          >
- 
-<div className="mx-auto mt-12 grid max-w-[1180px] grid-cols-1 gap-7 px-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">               {philosophyItems.map((item, index) => (
-                  <PhilosophyCard
-                    key={item.title}
-                    {...item}
-                    index={index}
-                    variant="philosophy"
-                  />
-                ))}
-              </div>
+          <div className="mx-auto max-w-[1180px]">
+            <SectionLabel>Our Process</SectionLabel>
+
+            <div className="relative mt-8 grid gap-8 md:grid-cols-5 md:gap-6">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute left-0 right-0 top-[2.35rem] hidden h-px bg-[linear-gradient(90deg,transparent,rgb(var(--ei-halo-blue-rgb)/0.5),rgb(var(--ei-violet-rgb)/0.55),transparent)] md:block"
+              />
+
+              {process.map((step) => (
+                <article key={step.number} className="relative">
+                  <div className="font-editorial text-[clamp(3.2rem,7vw,5.4rem)] leading-none tracking-[-0.06em] text-[rgb(var(--ei-moonlit-rgb)/0.13)]">
+                    {step.number}
+                  </div>
+
+                  <span className="absolute left-0 top-[2.05rem] hidden h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.75)] shadow-[0_0_18px_rgb(var(--ei-violet-rgb)/0.75)] md:block" />
+
+                  <h3 className="mt-3 font-structural text-[0.72rem] uppercase tracking-[0.2em] text-[var(--ei-color-text-primary)]">
+                    {step.title}
+                  </h3>
+
+                  <p className="mt-3 max-w-[20ch] font-structural text-[0.78rem] leading-[1.6] text-[var(--ei-color-text-secondary)]">
+                    {step.body}
+                  </p>
+                </article>
+              ))}
             </div>
-        
+          </div>
         </Container>
       </motion.section>
 
-      {/* VALUES */}
+      {/* FEATURED WORK */}
       <motion.section
         variants={fadeSoft}
         initial="hidden"
         whileInView="visible"
         viewport={VIEWPORT.loose}
-        aria-labelledby="values-heading"
         className="relative py-12 md:py-16"
       >
-        <StudioSectionRail number="03" label="Values" />
-
         <Container size="xl" className="relative z-10">
-          <div
-            className="
-              mx-auto max-w-[1180px] pt-12 md:pt-16
-            "
-          >
-        
-
-              <div className="px-6">
-                <ValuesGrid showHeader={false} />
+          <article className="ei-card ei-card-world mx-auto max-w-[1180px]">
+            <Link to="/works/lumo" className="ei-card-world-link group">
+              <div className="ei-card-world-media" aria-hidden="true">
+                <img
+                  src={lumoFeaturedBg}
+                  alt=""
+                  className="object-[62%_50%]"
+                />
               </div>
-            </div>
-       
+
+              <div className="ei-card-world-overlay" aria-hidden="true" />
+
+              <div className="ei-card-world-copy">
+                <div>
+                  <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[var(--ei-color-text-tertiary)]">
+                    Featured Work
+                  </span>
+
+                  <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--ei-color-text-muted)]">
+                    LUMO
+                  </p>
+
+                  <h2 className="mt-4 max-w-[11ch] font-editorial text-[clamp(2.05rem,4vw,3.75rem)] uppercase leading-[1.02] tracking-[0.08em] text-[var(--ei-color-text-primary)]">
+                    A world built for overwhelmed humans.
+                  </h2>
+
+                  <p className="mt-5 max-w-[38ch] font-structural text-[0.88rem] leading-[1.7] text-[var(--ei-color-text-secondary)]">
+                    An emotionally intelligent app shaped by an identity system
+                    built to calm cognitive noise through atmosphere, rhythm,
+                    and restraint.
+                  </p>
+                </div>
+
+                <span className="ei-card-action">
+                  View Case Study{" "}
+                  <span className="ei-card-action-arrow">→</span>
+                </span>
+              </div>
+            </Link>
+          </article>
         </Container>
       </motion.section>
 
-      {/* CTA */}
-      <Container size="xl" className="relative z-10">
-        <div className="mx-auto max-w-[1180px] py-12 md:py-16">
-          <ProjectCTA
-            eyebrow="Continue the conversation"
-            heading="Aligned in philosophy?"
-            body="If our approach resonates, let's explore how we can build something meaningful together."
-            buttonLabel="Work with the Studio"
-            buttonHref="/contact"
-            backgroundImage={studioCTADesktop}
-            secondaryLinks={[
-              {
-                label: 'Book a Session',
-                href: '/sessions',
-              },
-              {
-                label: 'Explore the Works',
-                href: '/works',
-              },
-            ]}
-          />
-        </div>
-      </Container>
+      {/* SLIM CTA */}
+      <motion.section
+        variants={fadeSoft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={VIEWPORT.normal}
+        className="relative pb-12 md:pb-16"
+      >
+        <Container size="xl" className="relative z-10">
+          <div className="mx-auto flex max-w-[1180px] flex-col gap-6 rounded-[var(--ei-card-radius-lg)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-ice-white-rgb)/0.018)] px-7 py-7 md:flex-row md:items-center md:justify-between md:px-9">
+            <div className="flex items-center gap-5">
+              <span
+                aria-hidden="true"
+                className="h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.82)] shadow-[0_0_22px_rgb(var(--ei-violet-rgb)/0.8)]"
+              />
+
+              <p className="font-editorial text-[clamp(1.65rem,3vw,2.35rem)] leading-tight tracking-[-0.025em] text-[var(--ei-color-text-primary)]">
+                Let's build something meaningful.
+              </p>
+            </div>
+
+            <Button
+              to="/contact"
+              variant="secondary"
+              className="min-h-[42px] gap-3 self-start px-6 py-3 md:self-center"
+            >
+              Start a Conversation
+              <span aria-hidden="true">→</span>
+            </Button>
+          </div>
+        </Container>
+      </motion.section>
     </PageShell>
   );
 }
