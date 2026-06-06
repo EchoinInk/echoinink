@@ -231,7 +231,7 @@ export function Studio() {
 
                   <div className="relative z-10 flex min-h-[336px] flex-col justify-end">
                     <div className="mb-auto">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--ei-color-text-muted)]">
+                      <span className="ei-type-studio-label">
                         {pillar.number}
                       </span>
 
@@ -329,15 +329,15 @@ export function Studio() {
               Featured Work
             </span>
 
-            <h2 className="mt-8 font-editorial text-[3.75rem] leading-[0.92] tracking-[-0.045em] text-[rgb(var(--ei-ice-white-rgb)/0.94)] md:text-[4.6rem] lg:text-[5.15rem]">
+            <h2 className="ei-type-studio-feature-title mt-8 text-[3.75rem] leading-[0.92] tracking-[-0.045em] md:text-[4.6rem] lg:text-[5.15rem]">
   LUMO
 </h2>
 
-<p className="mt-5 max-w-[18ch] font-editorial text-[1.35rem] leading-[1.18] tracking-[-0.025em] text-[rgb(var(--ei-moonlit-rgb)/0.82)] md:text-[1.5rem]">
+<p className="ei-type-studio-feature-subtitle mt-5 max-w-[18ch] text-[1.35rem] leading-[1.18] tracking-[-0.025em] md:text-[1.5rem]">
   A world built for overwhelmed humans.
 </p>
 
-<p className="mt-7 max-w-[38ch] font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em] text-[rgb(var(--ei-moonlit-rgb)/0.7)] whitespace-pre-line">
+<p className="ei-type-studio-feature-body mt-7 max-w-[38ch] leading-[1.75] whitespace-pre-line">
   {"Lumo translates softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system —\nan interface shaped to calm cognitive noise through atmosphere, rhythm, and restraint."}
 </p>
           </div>

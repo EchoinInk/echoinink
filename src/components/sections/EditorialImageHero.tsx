@@ -48,8 +48,8 @@ export function EditorialImageHero({
   const headingClass = "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
 
   const bodyClass = isIntimate
-    ? "ei-type-hero-description max-w-[42ch] whitespace-pre-line"
-    : "ei-type-hero-description max-w-[46ch] whitespace-pre-line";
+    ? "ei-type-hero-description max-w-[42ch]"
+    : "ei-type-hero-description max-w-[46ch]";
 
   return (
     <motion.section
@@ -137,7 +137,7 @@ export function EditorialImageHero({
                 ${isLeft ? "" : "justify-center"}
               `}
             >
-              <span className="ei-type-studio-label text-[rgb(var(--ei-moonlit-rgb)/0.72)]">
+              <span className="ei-type-studio-label">
                 {eyebrow}
               </span>
 
@@ -171,7 +171,7 @@ export function EditorialImageHero({
                 : title}
             </h1>
 
-            <p className={`${bodyClass} mt-5 md:mt-6 whitespace-pre-line`}>{description}</p>
+            <p className={`${bodyClass} mt-5 md:mt-6`}>{description}</p>
 
             {ctaLabel && ctaHref && (
               <motion.div

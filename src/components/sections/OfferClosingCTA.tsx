@@ -27,20 +27,20 @@ export function OfferClosingCTA({
       <Container size="xl" className="relative z-10">
         <div className="mx-auto max-w-3xl text-center">
           {atmosphere && (
-            <motion.p variants={fadeSoft} className="ei-type-label mb-6 text-white/55">
+            <motion.p variants={fadeSoft} className="ei-type-label mb-6">
               {atmosphere}
             </motion.p>
           )}
           <motion.h2
             variants={driftUp}
-            className="font-editorial text-[clamp(1.85rem,4vw,2.75rem)] leading-[1.12] text-[var(--ei-text-primary)]"
+            className="ei-type-section text-[clamp(1.85rem,4vw,2.75rem)] leading-[1.12]"
           >
             {heading}
           </motion.h2>
           {subline && (
             <motion.p
               variants={fadeSoft}
-              className="mx-auto mt-6 max-w-[42ch] ei-type-body-large text-[var(--ei-text-secondary)]"
+              className="ei-type-body-large mx-auto mt-6 max-w-[42ch]"
             >
               {subline}
             </motion.p>

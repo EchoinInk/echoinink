@@ -142,11 +142,10 @@ export function LumoCaseStudyTeaser() {
                   <motion.h2
                     variants={orchestratedReveal(0, 3)}
                     className="
-                      font-editorial
+                      ei-card-world-title font-editorial
                       text-[3.75rem]
                       leading-[0.92]
                       tracking-[-0.045em]
-                      text-[rgb(var(--ei-ice-white-rgb)/0.94)]
                       md:text-[4.6rem]
                       lg:text-[5.15rem]
                     "
@@ -157,13 +156,12 @@ export function LumoCaseStudyTeaser() {
                   <motion.p
                     variants={orchestratedReveal(1, 3)}
                     className="
-                      mt-5
+                      ei-card-world-subtitle mt-5
                       max-w-[18ch]
                       font-editorial
                       text-[1.35rem]
                       leading-[1.18]
                       tracking-[-0.025em]
-                      text-[rgb(var(--ei-ice-white-rgb)/0.76)]
                       md:text-[1.5rem]
                     "
                   >
@@ -173,13 +171,12 @@ export function LumoCaseStudyTeaser() {
                   <motion.p
                     variants={orchestratedReveal(2, 3)}
                     className="
-                      mt-7
+                      ei-card-world-copy-text mt-7
                       max-w-[38ch]
                       font-[var(--ei-font-copy)]
                       text-[0.8125rem]
                       leading-[1.75]
                       tracking-[-0.004em]
-                      text-[rgb(var(--ei-ice-white-rgb)/0.62)]
                     "
                   >
                     An emotionally intelligent app shaped by an identity system
@@ -190,19 +187,7 @@ export function LumoCaseStudyTeaser() {
 
                 <motion.div variants={driftUp}>
                   <span
-                    className="
-                      inline-flex items-center gap-1.5
-                      font-structural
-                      text-[0.625rem]
-                      font-medium
-                      uppercase
-                      leading-none
-                      tracking-[0.22em]
-                      text-[rgb(var(--ei-ice-white-rgb)/0.58)]
-                      transition-colors
-                      duration-500
-                      group-hover:text-[rgb(var(--ei-halo-blue-rgb)/0.92)]
-                    "
+                    className="ei-card-action"
                   >
                     View Case Study{" "}
                     <span className="inline-block transition-transform duration-500 group-hover:translate-x-0.5">
@@ -220,12 +205,12 @@ export function LumoCaseStudyTeaser() {
           >
             {disciplines.map((tag, i) => (
               <span key={tag} className="flex items-center">
-                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[rgb(var(--ei-ice-white-rgb)/0.52)]">
+                <span className="ei-type-studio-label tracking-[0.18em]">
                   {tag}
                 </span>
 
                 {i < disciplines.length - 1 && (
-                  <span className="mx-4 font-mono text-[10px] text-[rgb(var(--ei-ice-white-rgb)/0.32)]">
+                  <span className="mx-4 font-mono text-[10px] text-[var(--ei-color-text-faint)]">
                     +
                   </span>
                 )}
