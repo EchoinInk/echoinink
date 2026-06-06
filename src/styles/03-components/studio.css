@@ -1,140 +1,165 @@
 /* Studio page type */
 
 @layer components {
-/* Hero section type */
-   .ei-type-studio-hero {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(2.6rem, 6vw, 5.6rem);
-  line-height: 0.98;
-  letter-spacing: -0.045em;
-  font-weight: 400;
-  color: var(--ei-color-text-primary);
-}
+  /* Hero section type */
+  .ei-type-studio-hero {
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(2.75rem, 5.4vw, 4.8rem);
+    line-height: 1.04;
+    letter-spacing: -0.035em;
+    font-weight: 400;
+    color: var(--ei-color-text-primary);
+  }
 
-.ei-type-studio-hero-emphasis {
-  font-style: italic;
-}
-/* Manifesto section type */
-.ei-type-studio-manifesto {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(1.85rem, 3.6vw, 3.6rem);
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.82);
-}
-/* Card section type */
-.ei-type-studio-card-title {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(1.35rem, 2.4vw, 2.25rem);
-  line-height: 1.05;
-  letter-spacing: -0.035em;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.86);
-}
+  .ei-type-studio-hero-emphasis {
+    font-style: italic;
+    color: rgb(var(--ei-violet-rgb) / 0.9);
+  }
 
-.ei-type-studio-card-body {
-  font-family: var(--ei-font-structural);
-  font-size: clamp(0.8125rem, 0.95vw, 0.9375rem);
-  line-height: 1.65;
-  letter-spacing: -0.002em;
-  font-weight: 400;
-  color: rgb(var(--ei-moonlit-rgb) / 0.66);
-}
-/* Process section type */
+  /* Philosophy / manifesto section type */
+  .ei-type-studio-manifesto,
+  .ei-type-studio-philosophy {
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.65rem, 2.6vw, 2.55rem);
+    line-height: 1.16;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    color: rgb(var(--ei-ice-white-rgb) / 0.9);
+  }
 
-.ei-type-studio-process-number {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(2rem, 4.2vw, 4rem);
-  line-height: 0.95;
-  letter-spacing: -0.045em;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.2);
-}
+  .ei-type-studio-philosophy-emphasis {
+    font-style: italic;
+    color: rgb(var(--ei-violet-rgb) / 0.9);
+  }
 
-.ei-type-studio-process-title {
-  font-family: var(--ei-font-structural);
-  font-size: 0.6875rem;
-  line-height: 1.4;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: rgb(var(--ei-ice-white-rgb) / 0.58);
-}
+  .ei-type-studio-body {
+    font-family: var(--ei-font-structural);
+    font-size: clamp(0.8125rem, 0.92vw, 0.9375rem);
+    line-height: 1.7;
+    letter-spacing: -0.002em;
+    color: rgb(var(--ei-moonlit-rgb) / 0.72);
+  }
 
-.ei-type-studio-process-body {
-  font-family: var(--ei-font-structural);
-  font-size: 0.75rem;
-  line-height: 1.55;
-  letter-spacing: -0.001em;
-  color: rgb(var(--ei-moonlit-rgb) / 0.5);
-}
+  /* Principle section type */
+  .ei-type-studio-principle-title {
+    font-family: var(--ei-font-structural);
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(var(--ei-ice-white-rgb) / 0.68);
+  }
 
-/* Card section type */
-.ei-type-studio-principle-title {
-  font-family: var(--ei-font-structural);
-  font-size: 0.6875rem;
-  line-height: 1.4;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: rgb(var(--ei-ice-white-rgb) / 0.68);
-}
+  .ei-type-studio-principle-body {
+    font-family: var(--ei-font-structural);
+    font-size: 0.8125rem;
+    line-height: 1.65;
+    letter-spacing: -0.002em;
+    font-weight: 400;
+    color: rgb(var(--ei-moonlit-rgb) / 0.68);
+  }
 
-.ei-type-studio-principle-body {
-  font-family: var(--ei-font-structural);
-  font-size: 0.8125rem;
-  line-height: 1.65;
-  letter-spacing: -0.002em;
-  font-weight: 400;
-  color: rgb(var(--ei-moonlit-rgb) / 0.68);
-}
-/* Pillar section type */
-.ei-type-studio-pillar-title {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(1.45rem, 2.2vw, 2.15rem);
-  line-height: 1.05;
-  letter-spacing: 0.055em;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.88);
-}
+  /* Pillar / card section type */
+  .ei-type-studio-card-title,
+  .ei-type-studio-pillar-title {
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+    line-height: 1.18;
+    letter-spacing: -0.018em;
+    font-weight: 400;
+    color: rgb(var(--ei-ice-white-rgb) / 0.9);
+  }
 
-.ei-type-studio-pillar-body {
-  font-family: var(--ei-font-structural);
-  font-size: 0.8125rem;
-  line-height: 1.65;
-  letter-spacing: -0.002em;
-  color: rgb(var(--ei-moonlit-rgb) / 0.66);
-}
+  .ei-type-studio-card-body,
+  .ei-type-studio-pillar-body {
+    font-family: var(--ei-font-structural);
+    font-size: 0.8125rem;
+    line-height: 1.65;
+    letter-spacing: -0.002em;
+    color: rgb(var(--ei-moonlit-rgb) / 0.68);
+  }
 
-/* Feature section type */
-.ei-type-studio-feature-title {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(2rem, 3.7vw, 3.5rem);
-  line-height: 1.02;
-  letter-spacing: 0.055em;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.88);
-}
+  /* Process section type */
+  .ei-type-studio-process-heading {
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.55rem, 2.4vw, 2.25rem);
+    line-height: 1.18;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    color: rgb(var(--ei-ice-white-rgb) / 0.88);
+  }
 
-.ei-type-studio-feature-body {
-  font-family: var(--ei-font-structural);
-  font-size: 0.875rem;
-  line-height: 1.7;
-  letter-spacing: -0.002em;
-  color: rgb(var(--ei-moonlit-rgb) / 0.68);
-}
-/* CTA section type */
-.ei-type-studio-slim-cta {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(1.45rem, 2.7vw, 2.2rem);
-  line-height: 1.12;
-  letter-spacing: -0.025em;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.88);
-}
+  .ei-type-studio-process-number {
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 999px;
+    border: 1px solid rgb(var(--ei-violet-rgb) / 0.22);
+    background: rgb(var(--ei-void-rgb) / 0.42);
+    font-family: var(--ei-font-system);
+    font-size: 0.625rem;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    color: rgb(var(--ei-ice-white-rgb) / 0.72);
+    box-shadow: 0 0 18px rgb(var(--ei-violet-rgb) / 0.12);
+  }
 
+  .ei-type-studio-process-title {
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.25;
+    letter-spacing: -0.012em;
+    text-transform: none;
+    font-weight: 400;
+    color: rgb(var(--ei-ice-white-rgb) / 0.86);
+  }
 
+  .ei-type-studio-process-body {
+    font-family: var(--ei-font-structural);
+    font-size: 0.75rem;
+    line-height: 1.6;
+    letter-spacing: -0.001em;
+    color: rgb(var(--ei-moonlit-rgb) / 0.62);
+  }
+
+  /* Featured work section type */
+  .ei-type-studio-feature-title {
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.7rem, 2.7vw, 2.5rem);
+    line-height: 1.08;
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(var(--ei-ice-white-rgb) / 0.9);
+  }
+
+  .ei-type-studio-feature-subtitle {
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1rem, 1.4vw, 1.25rem);
+    line-height: 1.28;
+    letter-spacing: -0.012em;
+    font-weight: 400;
+    color: rgb(var(--ei-ice-white-rgb) / 0.78);
+  }
+
+  .ei-type-studio-feature-body {
+    font-family: var(--ei-font-structural);
+    font-size: 0.8125rem;
+    line-height: 1.65;
+    letter-spacing: -0.002em;
+    color: rgb(var(--ei-moonlit-rgb) / 0.66);
+  }
+
+  /* CTA section type */
+  .ei-type-studio-slim-cta {
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.45rem, 2.7vw, 2.2rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    font-weight: 400;
+    color: rgb(var(--ei-ice-white-rgb) / 0.88);
+  }
 }
