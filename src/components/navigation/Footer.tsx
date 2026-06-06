@@ -126,8 +126,7 @@ export default function Footer() {
 
   <div className="flex items-start justify-between gap-5">
    <p className="font-structural text-[12px] leading-[1.7] text-white/60 mb-4 max-w-[30ch]">
-  Exploring the intersection of identity, emotion, and reflective
-  technology.
+Exploring how identity, emotion, and reflective technology shape the next generation of creative systems — and the brands bold enough to build with them.
 </p>
 
     <div className="shrink-0 pt-0.5 opacity-70">
