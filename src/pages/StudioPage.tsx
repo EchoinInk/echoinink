@@ -158,8 +158,11 @@ export function Studio() {
         className="relative py-14 md:py-16"
       >
         <Container size="xl" className="relative z-10">
-          <div className="mx-auto grid max-w-[1180px] gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:-translate-y-3 md:grid-cols-[minmax(0,1.18fr)_minmax(0,1.18fr)_220px] md:items-center md:gap-12 md:p-10 lg:p-12">
-            <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
+          <div className="mx-auto grid max-w-[1180px] gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:-translate-y-3 md:grid-cols-[minmax(0,1.18fr)_minmax(0,1.18fr)_220px] md:items-center md:gap-12 md:p-8 lg:p-10">
+            <motion.div
+              variants={staggerContainer(STAGGER.loose, 0)}
+              className="relative md:-top-4"
+            >
               <SectionLabel>Our Philosophy</SectionLabel>
 
               <motion.h2
@@ -173,17 +176,20 @@ export function Studio() {
  {"We design with\n"}
   <em className="ei-type-studio-philosophy-emphasis">feeling</em>,{" "}
   <em className="ei-type-studio-philosophy-emphasis">intention</em>,<br /> and{" "}
-  <em className="ei-type-studio-philosophy-emphasis">clarity</em>.
+  <em className="ei-type-studio-philosophy-emphasis-blue">clarity</em>.
 </motion.h2>
               </motion.h2>
             </motion.div>
 
-            <motion.div variants={driftUp} className="max-w-[62ch]">
-              <p className="ei-type-studio-body text-[var(--ei-color-text-secondary)]">
+            <motion.div
+              variants={driftUp}
+              className="relative max-w-[62ch] md:-top-4"
+            >
+              <p className="ei-type-studio-body text-[rgba(232,228,245,0.72)]">
                 Design is not decoration — it is meaning made visible. Every decision is rooted
                 in understanding, shaped by emotion, and refined through story.
               </p>
-              <p className="ei-type-studio-body mt-5 text-[var(--ei-color-text-secondary)]">
+              <p className="ei-type-studio-body mt-5 text-[rgba(232,228,245,0.72)]">
                 We do not just build brands or websites. We build identity, atmosphere, and
                 transformation.
               </p>
@@ -191,13 +197,13 @@ export function Studio() {
 
             <motion.div
               variants={fadeSoft}
-              className="hidden justify-self-end md:block"
+              className="relative hidden justify-self-end md:left-4 md:block"
               aria-hidden="true"
             >
               <img
                 src={studioManifestoImage}
                 alt=""
-                className="h-[190px] w-[220px] rounded-[28px] object-cover object-center opacity-85 mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,black_42%,transparent_76%)]"
+                className="h-[171px] w-[198px] rounded-[28px] object-cover object-center opacity-85 mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,black_42%,transparent_76%)]"
               />
             </motion.div>
           </div>

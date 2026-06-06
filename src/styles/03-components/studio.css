@@ -110,6 +110,11 @@
     color: rgb(var(--ei-soft-neon-rgb) / 0.82);
   }
 
+  .ei-type-studio-philosophy-emphasis-blue {
+    font-style: italic;
+    color: rgb(var(--ei-halo-blue-rgb) / 0.9);
+  }
+
   /* ─────────────────────────────────────────────────────────
      Principle section type
      ───────────────────────────────────────────────────────── */
