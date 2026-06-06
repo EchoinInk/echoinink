@@ -1,5 +1,5 @@
-import widePng from "@/assets/imagery/hero/home-hero.png";
-
+import homeHero from "@/assets/imagery/sections/home-hero.webp";
+import homeHeroMobile from "@/assets/imagery/sections/home-hero-mobile.webp";
 export function HeroBackground() {
   return (
     <>
