@@ -108,7 +108,7 @@ export function EmergingSystems() {
 
                   <div className="ei-card-system-inner">
                     <div className="mb-3 flex h-14 items-center justify-center">
-                      <OrbitalVisual variant={system.variant} size={52} className="opacity-85"/>
+                      <OrbitalVisual variant={system.variant} size={52} className="opacity-95"/>
                     </div>
 
                     <div className="ei-card-system-main">
