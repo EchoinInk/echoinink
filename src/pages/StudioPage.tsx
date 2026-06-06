@@ -33,12 +33,12 @@ const principles: Array<{
   },
   {
     title: "Design with feeling",
-    body: "We hold strategy with emotion to create work that connects.",
+    body: "Strategy is held with care. Identity becomes coherent when the inner world is acknowledged, not avoided.",
     icon: "pulse",
   },
   {
     title: "Built to resonate",
-    body: "We craft identity systems and digital worlds designed to endure.",
+    body: "We craft systems and digital worlds designed to endure —not louder, but deeper.",
     icon: "lattice",
   },
 ];
@@ -54,7 +54,7 @@ const pillars: Array<{
   {
     number: "01",
     title: "Identity Systems",
-    body: "Strategic identity frameworks that reveal essence, build recognition, and create emotional resonance.",
+    body: "Strategic identity frameworks that reveal essence, build recognition, and create emotional resonance. Identity shaped as architecture, not ornament.",
     href: "/identity",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_28%,rgb(var(--ei-violet-rgb)/0.22),transparent_38%),radial-gradient(circle_at_52%_62%,rgb(var(--ei-halo-blue-rgb)/0.08),transparent_54%)]",
