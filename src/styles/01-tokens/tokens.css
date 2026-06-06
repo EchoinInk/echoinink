@@ -66,6 +66,11 @@
     --ei-font-copy: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
 
+    /* Font fallbacks — safe defaults when typography-system has not loaded yet */
+    --ei-font-editorial: 'Fraunces', Georgia, 'Times New Roman', serif;
+    --ei-font-structural: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --ei-font-system: 'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace;
+
     --ei-card-action-text: var(--ei-color-text-tertiary);
     --ei-card-action-text-hover: var(--ei-color-text-accent);
     --ei-header-text: rgb(var(--ei-ice-white-rgb) / 0.72);
@@ -379,11 +384,11 @@
   }
 
   html {
-    background: var(--ei-surface-deep);
+    background: var(--ei-background-body);
   }
 
   body {
-    background: var(--ei-surface-deep);
+    background: var(--ei-background-body);
     color: var(--ei-text-primary);
   }
 }
