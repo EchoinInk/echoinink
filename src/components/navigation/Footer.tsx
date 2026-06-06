@@ -160,7 +160,7 @@ export default function Footer() {
             ease: EASE_LUXURY,
             delay: 0.2,
           }}
-          className="py-5"
+className="pt-4 pb-3"
         >
           <div
             aria-hidden="true"
