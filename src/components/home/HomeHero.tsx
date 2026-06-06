@@ -1,12 +1,10 @@
-import { motion } from 'framer-motion';
-import { HeroBackground } from './HomeHeroBackground';
-import { HeroCTA } from './HomeHeroCTA';
-import { HeroHeading } from './HomeHeroHeading';
-import { Container } from '../layout/Container';
+import { motion } from "framer-motion";
+import { HeroBackground } from "./HomeHeroBackground";
+import { HeroCTA } from "./HomeHeroCTA";
+import { HeroHeading } from "./HomeHeroHeading";
+import { Container } from "../layout/Container";
 
-import {
-  heroReveal,
-} from '@/lib/motion-cinematic';
+import { heroReveal } from "@/lib/motion-cinematic";
 
 export function Hero() {
   return (

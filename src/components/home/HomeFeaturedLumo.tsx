@@ -40,7 +40,7 @@ export function LumoCaseStudyTeaser() {
   const rawImageY = useTransform(
     scrollYProgress,
     [0, 1],
-    prefersReduced ? [0, 0] : [10, -10]
+    prefersReduced ? [0, 0] : [10, -10],
   );
 
   const imageY = useSpring(rawImageY, {
@@ -51,9 +51,9 @@ export function LumoCaseStudyTeaser() {
 
   return (
     <Section
-  spacing="none"
-  className="relative overflow-hidden pt-6 pb-2 md:pt-8 md:pb-4"
->
+      spacing="none"
+      className="relative overflow-hidden pt-6 pb-2 md:pt-8 md:pb-4"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -87,7 +87,10 @@ export function LumoCaseStudyTeaser() {
             />
           </motion.div>
 
-          <motion.article variants={blurEmergence} className="ei-card ei-card-world">
+          <motion.article
+            variants={blurEmergence}
+            className="ei-card ei-card-world"
+          >
             <Link to="/works/lumo" className="ei-card-world-link group">
               <div className="ei-card-world-copy">
                 <motion.div variants={staggerContainer(STAGGER.normal, 0.15)}>
@@ -164,7 +167,9 @@ export function LumoCaseStudyTeaser() {
                     backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
                   }}
                   animate={
-                    prefersReduced ? undefined : { opacity: [0.015, 0.03, 0.015] }
+                    prefersReduced
+                      ? undefined
+                      : { opacity: [0.015, 0.03, 0.015] }
                   }
                   transition={
                     prefersReduced

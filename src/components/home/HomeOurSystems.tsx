@@ -28,14 +28,16 @@ const systems = [
   {
     variant: "architect" as const,
     title: "Narrative Architect",
-    description: "Build stories that hold meaning, tension, and transformation.",
+    description:
+      "Build stories that hold meaning, tension, and transformation.",
     meta: "Framework",
     href: "/systems",
   },
   {
     variant: "gpt" as const,
     title: "Identity GPT",
-    description: "An AI companion for identity clarity and narrative direction.",
+    description:
+      "An AI companion for identity clarity and narrative direction.",
     meta: "GPT System",
     href: "/systems",
   },
@@ -52,7 +54,7 @@ export function EmergingSystems() {
   return (
     <Section
       spacing="none"
-      className="relative overflow-hidden pt-6 pb-4 md:pt-8 md:pb-6"
+      className="relative overflow-hidden pt-6 pb-0 md:pt-8 md:pb-0"
     >
       <div
         aria-hidden="true"
@@ -88,11 +90,14 @@ export function EmergingSystems() {
               />
             </div>
 
-            <Link to="/systems" className="group ei-link-subtle inline-flex items-center gap-2">
+            <Link
+              to="/systems"
+              className="group ei-link-subtle inline-flex items-center gap-2"
+            >
               Explore All Systems
-<span className="transition-transform duration-500 group-hover:translate-x-1">
-  →
-</span>
+              <span className="transition-transform duration-500 group-hover:translate-x-1">
+                →
+              </span>
             </Link>
           </motion.div>
 
@@ -108,7 +113,11 @@ export function EmergingSystems() {
 
                   <div className="ei-card-system-inner">
                     <div className="mb-3 flex h-14 items-center justify-center">
-                      <OrbitalVisual variant={system.variant} size={52} className="opacity-95"/>
+                      <OrbitalVisual
+                        variant={system.variant}
+                        size={52}
+                        className="opacity-95"
+                      />
                     </div>
 
                     <div className="ei-card-system-main">
