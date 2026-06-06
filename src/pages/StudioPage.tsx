@@ -303,7 +303,6 @@ export function Studio() {
         </Container>
       </motion.section>
 
-      {/* FEATURED WORK */}
    {/* FEATURED WORK */}
 <motion.section
   variants={fadeSoft}
