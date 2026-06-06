@@ -167,7 +167,7 @@ className="pt-8 pb-0 md:pt-8">        >
             ease: EASE_LUXURY,
             delay: 0.2,
           }}
-          className="pt-3 pb-2"
+          className="pt-4 pb-4"
         >
           <div
             aria-hidden="true"
