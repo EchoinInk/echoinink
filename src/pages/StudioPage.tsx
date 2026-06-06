@@ -11,6 +11,7 @@ import { OrbitalVisual, type OrbitalVariant } from "@/components/ui/OrbitalVisua
 import studioHeroDesktop from "@/assets/imagery/hero/studio-hero-desktop.webp";
 import studioHeroMobile from "@/assets/imagery/hero/studio-hero-mobile.webp";
 import lumoFeaturedBg from "@/assets/imagery/sections/lumo-featured-bg.webp";
+import studioManifestoImage from "@/assets/imagery/sections/studio-manifesto.webp";
 
 import {
   driftUp,
@@ -157,13 +158,13 @@ export function Studio() {
         className="relative py-14 md:py-16"
       >
         <Container size="xl" className="relative z-10">
-          <div className="mx-auto grid max-w-[1180px] gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)_180px] md:items-center md:gap-12 md:p-10 lg:p-12">
+          <div className="mx-auto grid max-w-[1180px] gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:-translate-y-3 md:grid-cols-[minmax(0,1.18fr)_minmax(0,1.18fr)_220px] md:items-center md:gap-12 md:p-10 lg:p-12">
             <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
               <SectionLabel>Our Philosophy</SectionLabel>
 
               <motion.h2
                 variants={blurEmergence}
-                className="ei-type-studio-philosophy mt-6 max-w-[16ch] whitespace-pre-line"
+                className="ei-type-studio-philosophy mt-6 max-w-[18ch] whitespace-pre-line"
               >
                 We design with <em className="ei-type-studio-philosophy-emphasis">feeling</em>,{" "}
                 <em className="ei-type-studio-philosophy-emphasis">intention</em>, and{" "}
@@ -173,14 +174,12 @@ export function Studio() {
 
             <motion.div variants={driftUp} className="max-w-[62ch]">
               <p className="ei-type-studio-body text-[var(--ei-color-text-secondary)]">
-                esign is not the surface of a thing — it is the truth of it, made visible.
-  Each decision carries intention. Each gesture holds emotion. Each system
-  becomes a story you can step inside.
+                Design is not decoration — it is meaning made visible. Every decision is rooted
+                in understanding, shaped by emotion, and refined through story.
               </p>
               <p className="ei-type-studio-body mt-5 text-[var(--ei-color-text-secondary)]">
-                We don’t create brands or websites as artifacts. We create worlds —
-  identity, atmosphere, and the quiet shift that happens when something
-  finally feels like itself.
+                We do not just build brands or websites. We build identity, atmosphere, and
+                transformation.
               </p>
             </motion.div>
 
@@ -189,7 +188,11 @@ export function Studio() {
               className="hidden justify-self-end md:block"
               aria-hidden="true"
             >
-              <OrbitalVisual variant="orbit" size={150} className="opacity-90" />
+              <img
+                src={studioManifestoImage}
+                alt=""
+                className="h-[190px] w-[220px] rounded-[28px] object-cover object-center opacity-85 mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,black_42%,transparent_76%)]"
+              />
             </motion.div>
           </div>
         </Container>
@@ -375,7 +378,7 @@ export function Studio() {
         className="relative pb-12 md:pb-16"
       >
         <Container size="xl" className="relative z-10">
-          <div className="mx-auto flex max-w-[1180px] flex-col gap-6 rounded-[var(--ei-card-radius-lg)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-ice-white-rgb)/0.026)] px-7 py-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_70px_rgb(var(--ei-violet-rgb)/0.055)] md:flex-row md:items-center md:justify-between md:px-9">
+          <div className="mx-auto flex max-w-[1180px] flex-col gap-6 rounded-[var(--ei-card-radius-lg)] bg-[rgb(var(--ei-ice-white-rgb)/0.026)] px-7 py-7 shadow-[0_0_70px_rgb(var(--ei-violet-rgb)/0.055)] md:flex-row md:items-center md:justify-between md:px-9">
             <div className="flex items-center gap-5">
               <span
                 aria-hidden="true"
