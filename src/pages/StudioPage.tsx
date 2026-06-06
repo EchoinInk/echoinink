@@ -28,7 +28,7 @@ const principles: Array<{
 }> = [
   {
     title: "Meaning over noise",
-    body: "We strip away the unnecessary to reveal what matters. Clarity is not minimalism — it is emotional precision.",
+    body: {"We strip away the unnecessary to reveal what matters.\nClarity is not minimalism — it is emotional precision.",
     icon: "reflection",
   },
   {

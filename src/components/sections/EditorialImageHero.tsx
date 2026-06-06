@@ -137,7 +137,7 @@ export function EditorialImageHero({
                 ${isLeft ? "" : "justify-center"}
               `}
             >
-              <span className="ei-type-studio-label text-[rgb(var(--ei-moonlit-rgb)/0.72)] ">
+              <span className="ei-type-studio-label text-[rgb(var(--ei-moonlit-rgb)/0.72)]">
                 {eyebrow}
               </span>
 
@@ -171,7 +171,7 @@ export function EditorialImageHero({
                 : title}
             </h1>
 
-            <p className={`${bodyClass} mt-5 md:mt-6`}>{description}</p>
+            <p className={`${bodyClass} mt-5 md:mt-6 whitespace-pre-line`}>{description}</p>
 
             {ctaLabel && ctaHref && (
               <motion.div
