@@ -250,7 +250,7 @@ export function Studio() {
                       <div className="mt-6 flex h-16 items-center">
                         <OrbitalVisual
                           variant={pillar.icon}
-                          size={58}
+                          size={64}
                           className="opacity-90"
                         />
                       </div>
