@@ -48,8 +48,8 @@ export function EditorialImageHero({
   const headingClass = "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
 
   const bodyClass = isIntimate
-    ? "ei-type-hero-description max-w-[42ch]"
-    : "ei-type-hero-description max-w-[46ch]";
+    ? "ei-type-hero-description max-w-[42ch] whitespace-pre-line"
+    : "ei-type-hero-description max-w-[46ch] whitespace-pre-line";
 
   return (
     <motion.section
@@ -137,7 +137,7 @@ export function EditorialImageHero({
                 ${isLeft ? "" : "justify-center"}
               `}
             >
-              <span className="ei-type-studio-label text-[rgb(var(--ei-moonlit-rgb)/0.72)]">
+              <span className="ei-type-studio-label text-[rgb(var(--ei-moonlit-rgb)/0.72)] ">
                 {eyebrow}
               </span>
 
