@@ -187,12 +187,12 @@ export function LumoCaseStudyTeaser() {
           >
             {disciplines.map((tag, i) => (
               <span key={tag} className="flex items-center">
-                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--ei-color-text-muted)]">
+                <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--ei-color-text-tertiary)]">
                   {tag}
                 </span>
 
                 {i < disciplines.length - 1 && (
-                  <span className="mx-4 font-mono text-[10px] text-[var(--ei-color-text-faint)]">
+                  <span className="mx-4 font-mono text-[10px] text-[var(--ei-color-text-muted)]">
                     +
                   </span>
                 )}
