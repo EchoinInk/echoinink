@@ -15,6 +15,7 @@ import lumoFeaturedBg from "@/assets/imagery/sections/lumo-featured-bg.webp";
 import {
   driftUp,
   fadeSoft,
+  blurEmergence,
   staggerContainer,
   STAGGER,
   VIEWPORT,
