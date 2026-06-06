@@ -12,19 +12,17 @@ import {
 
 export function ClosingSection() {
   return (
-    <section className="relative isolate min-h-[260px] overflow-hidden bg-[var(--ei-color-background-canvas)] py-8 md:py-12">
-      <CtaOrbitalBackground />
+<section className="relative isolate min-h-[260px] overflow-hidden bg-[var(--ei-color-background-void)] py-8 md:py-12">
+  <CtaOrbitalBackground />
 
-      {/* Soft vignette so the text stays readable */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-[46%] z-[1] h-[190px] w-[760px] max-w-[92vw] -translate-x-1/2 -translate-y-1/2 rounded-full"
-        style={{
-          background:
-            "radial-gradient(circle, rgb(var(--ei-void-rgb) / 0.68) 0%, rgb(var(--ei-void-rgb) / 0.38) 46%, transparent 76%)",
-          filter: "blur(12px)",
-        }}
-      />
+  <div
+    aria-hidden="true"
+    className="pointer-events-none absolute inset-0 z-0"
+    style={{
+      background:
+        "radial-gradient(ellipse 70% 65% at 50% 52%, rgb(var(--ei-halo-blue-rgb) / 0.06) 0%, rgb(var(--ei-midnight-rgb) / 0.16) 38%, transparent 72%)",
+    }}
+  />
 
       {/* Subtle darkening behind the copy */}
       <div
