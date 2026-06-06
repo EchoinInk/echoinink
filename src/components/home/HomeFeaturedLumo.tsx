@@ -137,7 +137,7 @@ export function LumoCaseStudyTeaser() {
                   <img
                     src={lumoinkdrift}
                     alt="LUMO — atmospheric UI exploration"
-                    className="className="h-full w-full object-cover object-[57%_50%]"
+                    className="h-full w-full object-cover object-[57%_50%]"
                   />
                 </motion.div>
 
