@@ -508,7 +508,7 @@
 
 .ei-card-world-copy-text {
   max-width: 38ch;
-  color: var(--ei-color-text-secondary);
+  color: var(--ei-color-text-tertiary);
 }
 
 @media (max-width: 768px) {
