@@ -66,8 +66,7 @@ export default function Footer() {
                 Echo in Ink
               </span>
               <p className="font-structural text-[12px] leading-[1.7] text-white/60 max-w-[30ch] mb-4">
-                Designing worlds that hold meaning, transform perception, and
-                outlive trends.
+                Building the kind of worlds brands grow into, not out of — intentional, enduring, and unmistakably theirs..
               </p>
             </div>
 
