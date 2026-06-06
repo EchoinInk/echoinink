@@ -189,6 +189,14 @@
   transform: scale(1.04);
 }
 
+@media (max-width: 768px) {
+  .ei-btn-primary-cinematic,
+  .ei-btn-secondary-cinematic {
+    min-height: 44px;
+    padding-block: 0.85rem;
+  }
+}
+
   /* Legacy button — temporary compatibility */
   .ei-gradient-border-btn {
     position: relative;
