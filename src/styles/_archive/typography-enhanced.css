@@ -1,0 +1,219 @@
+/* ═══════════════════════════════════════════════════════════════
+   DEPRECATED: This file has been consolidated into typography-system.css.
+   All typography classes have been migrated with backward compatibility.
+   This file is retained temporarily for migration safety.
+   Please remove this import from globals.css and use typography-system.css only.
+   ═══════════════════════════════════════════════════════════════
+
+   Echo in Ink — Cinematic Typography System
+   Unified editorial scale with consistent rhythm and hierarchy
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer base {
+  /* ── Core Typography Hierarchy ─────────────────────────────── */
+  
+  /* Hero Display — The EI monogram, main headline */
+  .ei-hero-display {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    letter-spacing: -0.018em;
+    line-height: 1.05;
+    color: rgb(var(--ei-ice-white-rgb) / 0.94);
+  }
+
+  /* Hero Lead — The tagline beneath display */
+  .ei-hero-lead {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(0.875rem, 1.2vw, 1rem);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgb(var(--ei-ice-white-rgb) / 0.48);
+    max-width: 44ch;
+  }
+
+  /* ── Section Headings ─────────────────────────────────────── */
+  
+  /* Section Eyebrow — system label (Geist Mono, 0.14em tracking per rules) */
+  .ei-eyebrow {
+    font-family: 'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.6875rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgb(var(--ei-ice-white-rgb) / 0.42);
+  }
+
+  /* Section Title — main editorial heading */
+  .ei-section-title {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    font-weight: 300;
+    letter-spacing: -0.012em;
+    line-height: 1.18;
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.92);
+  }
+
+  /* Section Description — supporting text */
+  .ei-section-description {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.8;
+    color: rgb(var(--ei-ice-white-rgb) / 0.58);
+    max-width: 52ch;
+  }
+
+  /* ── Editorial Text Blocks ────────────────────────────────── */
+  
+  /* Body Large — philosophical text, primary reading (min 16px, 75–85% opacity per rules) */
+  .ei-body-large {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: clamp(1rem, 1.1vw, 1.0625rem);
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    line-height: 1.65;
+    color: rgb(var(--ei-ice-white-rgb) / 0.78);
+  }
+
+  /* Body Standard — general content (min 16px, 75–85% opacity per rules) */
+  .ei-body {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    line-height: 1.65;
+    color: rgb(var(--ei-ice-white-rgb) / 0.76);
+  }
+
+  /* Body Small — captions, card descriptions, metadata (14–16px, 58–68% opacity) */
+  .ei-body-small {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: -0.003em;
+    line-height: 1.6;
+    color: rgb(var(--ei-ice-white-rgb) / 0.58);
+  }
+
+  /* ── UI Elements ──────────────────────────────────────────── */
+  
+  /* Button / CTA Text (14–15px, 0.01em tracking, no uppercase per rules) */
+  .ei-cta-text {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
+    color: rgb(var(--ei-ice-white-rgb) / 0.90);
+  }
+
+  /* Card Title */
+  .ei-card-title {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: -0.008em;
+    line-height: 1.24;
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.88);
+  }
+
+  /* Card Description (14–16px, small body per rules, 58–68% opacity) */
+  .ei-card-description {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: -0.003em;
+    line-height: 1.65;
+    color: rgb(var(--ei-ice-white-rgb) / 0.62);
+  }
+
+  /* Navigation (13–14px, 0.02em tracking per rules) */
+  .ei-nav-text {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: rgb(var(--ei-ice-white-rgb) / 0.60);
+  }
+
+  /* Footer Heading */
+  .ei-footer-heading {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    letter-spacing: -0.015em;
+    line-height: 1.05;
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.90);
+  }
+
+  /* ── Special Treatments ───────────────────────────────────── */
+  
+  /* Atmosphere Text — for breathing moments, poetic fragments */
+  .ei-atmosphere-text {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-weight: 300;
+    letter-spacing: -0.006em;
+    line-height: 1.6;
+    color: rgb(var(--ei-ice-white-rgb) / 0.34);
+    font-style: italic;
+  }
+
+  /* Quote / Testimonial */
+  .ei-quote {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.5;
+    color: rgb(var(--ei-soft-lavender-rgb) / 0.75);
+  }
+}
+
+/* ── Link Utilities ────────────────────────────────────────── */
+@layer utilities {
+  /* Primary link — secondary navigation */
+  .ei-link {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgb(var(--ei-ice-white-rgb) / 0.50);
+    transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .ei-link:hover {
+    color: rgb(var(--ei-ice-white-rgb) / 0.75);
+  }
+  
+  /* Subtle link — tertiary navigation */
+  .ei-link-subtle {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, sans-serif;
+    font-size: 0.625rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgb(var(--ei-ice-white-rgb) / 0.40);
+    transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  
+  .ei-link-subtle:hover {
+    color: rgb(var(--ei-ice-white-rgb) / 0.60);
+  }
+}
+
+/* ── Spacing Utilities for Typography ─────────────────────── */
+@layer utilities {
+  .ei-text-space-xs { margin-bottom: 0.5rem; }
+  .ei-text-space-sm { margin-bottom: 1rem; }
+  .ei-text-space-md { margin-bottom: 1.5rem; }
+  .ei-text-space-lg { margin-bottom: 2.5rem; }
+  .ei-text-space-xl { margin-bottom: 4rem; }
+}

@@ -1,0 +1,88 @@
+/* ───────────────────────────────────────────────────────────────
+   DEPRECATED: This file has been consolidated into typography-system.css.
+   Font faces are now defined in typography-system.css.
+   This file is retained temporarily for migration safety.
+   Please remove this import from globals.css and use typography-system.css only.
+   ─────────────────────────────────────────────────────────────── */
+
+/* ─── Neue Montreal — Practical & structural body font ────────── */
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/fonts/Neue Montreal/NeueMontreal-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/fonts/Neue Montreal/NeueMontreal-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/fonts/Neue Montreal/NeueMontreal-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/fonts/Neue Montreal/NeueMontreal-MediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/fonts/Neue Montreal/NeueMontreal-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/fonts/Neue Montreal/NeueMontreal-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/fonts/Neue Montreal/NeueMontreal-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neue Montreal';
+  src: url('../assets/fonts/Neue Montreal/NeueMontreal-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@layer base {
+  /* Fraunces — display/emotional font (rules: "Faunces", loaded via Google Fonts in index.html) */
+  .font-editorial {
+    font-family: 'Fraunces', Georgia, 'Times New Roman', serif;
+  }
+
+  /* Neue Montreal — practical/structural font for all body, nav, buttons, UI */
+  .font-structural {
+    font-family: 'Neue Montreal', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  /* Geist Mono — system labels, metadata, categories, tags (loaded via Google Fonts in index.html) */
+  .font-mono {
+    font-family: 'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace;
+  }
+}

@@ -1,0 +1,148 @@
+/* ═══════════════════════════════════════════════════════════════
+   Echo in Ink — Browser Chrome + Micro Polish
+   Scrollbar, selection, overscroll, and interaction refinement
+   ═══════════════════════════════════════════════════════════════ */
+
+@layer base {
+  /* ── Scrollbar Treatment ─────────────────────────────────── */
+
+  /* Webkit scrollbars (Chrome, Safari, Edge) */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgb(var(--ei-ice-white-rgb) / 0.08);
+    border-radius: 3px;
+    transition: background 0.3s ease;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(var(--ei-ice-white-rgb) / 0.15);
+  }
+
+  /* Firefox scrollbar */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(var(--ei-ice-white-rgb) / 0.08) transparent;
+  }
+
+  /* ── Text Selection ───────────────────────────────────────── */
+  ::selection {
+    background: rgb(var(--ei-halo-blue-rgb) / 0.26);
+    color: var(--ei-color-text-primary);
+  }
+
+  ::-moz-selection {
+    background: rgb(var(--ei-halo-blue-rgb) / 0.26);
+    color: var(--ei-color-text-primary);
+  }
+
+  /* ── Tap Highlight (Mobile) ───────────────────────────────── */
+  * {
+    -webkit-tap-highlight-color: rgb(var(--ei-halo-blue-rgb) / 0.16);
+  }
+  /* ── Overscroll Behavior ─────────────────────────────────── */
+  html {
+    overscroll-behavior-y: none;
+  }
+
+  body {
+    overscroll-behavior-y: auto;
+  }
+
+  /* ── Viewport + Background Flash Prevention ───────────────── */
+  html {
+    background-color: var(--ei-color-background-html);
+  }
+
+  body {
+    background-color: var(--ei-color-background-body);
+    min-height: 100vh;
+  }
+  /* ── Smooth Image Loading ────────────────────────────────── */
+  img {
+    opacity: 1;
+    transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  img[data-loading="true"] {
+    opacity: 0;
+  }
+
+  /* ── Prevent Layout Shift ────────────────────────────────── */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ── Input Autofill Smoothing ─────────────────────────────── */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    transition: background-color 1000000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--ei-color-text-secondary) !important;
+    caret-color: var(--ei-color-text-secondary);
+  }
+
+  /* ── iOS Momentum Scrolling ───────────────────────────────── */
+  .touch-scroll {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ── Disable Text Selection on UI Elements ────────────────── */
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* ── Smooth Scrolling with Reduced Motion Respect ─────────── */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* ── Mobile Browser Chrome ────────────────────────────────── */
+  @supports (-webkit-touch-callout: none) {
+    /* iOS-specific adjustments */
+    html {
+      min-height: -webkit-fill-available;
+    }
+
+    body {
+      min-height: -webkit-fill-available;
+    }
+  }
+
+  /* ── Print Styles ─────────────────────────────────────────── */
+  @media print {
+    html {
+      background: white;
+    }
+
+    body {
+      background: white;
+      color: black;
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

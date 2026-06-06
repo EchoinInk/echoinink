@@ -1,0 +1,230 @@
+import { useEffect, useId, useRef, useState } from 'react';
+
+interface EchoSelectProps {
+  id: string;
+  name: string;
+  label?: string;
+  value: string;
+  options: string[];
+  placeholder?: string;
+  onChange: (event: {
+    target: {
+      name: string;
+      value: string;
+    };
+  }) => void;
+  className?: string;
+}
+
+export function EchoSelect({
+  id,
+  name,
+  label,
+  value,
+  options,
+  placeholder = 'Select an option',
+  onChange,
+  className = '',
+}: EchoSelectProps) {
+  const generatedId = useId();
+  const listboxId = `${id || generatedId}-listbox`;
+  const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(() => {
+    const selectedIndex = options.findIndex((option) => option === value);
+    return selectedIndex >= 0 ? selectedIndex : 0;
+  });
+
+  const displayValue = value || placeholder;
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (!wrapperRef.current?.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  useEffect(() => {
+    const selectedIndex = options.findIndex((option) => option === value);
+    if (selectedIndex >= 0) {
+      setActiveIndex(selectedIndex);
+    }
+  }, [options, value]);
+
+  function selectOption(option: string) {
+    onChange({
+      target: {
+        name,
+        value: option,
+      },
+    });
+
+    setIsOpen(false);
+  }
+
+  function handleKeyDown(event: React.KeyboardEvent<HTMLButtonElement>) {
+    if (event.key === 'ArrowDown') {
+      event.preventDefault();
+      setIsOpen(true);
+      setActiveIndex((current) => Math.min(current + 1, options.length - 1));
+    }
+
+    if (event.key === 'ArrowUp') {
+      event.preventDefault();
+      setIsOpen(true);
+      setActiveIndex((current) => Math.max(current - 1, 0));
+    }
+
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+
+      if (!isOpen) {
+        setIsOpen(true);
+        return;
+      }
+
+      selectOption(options[activeIndex]);
+    }
+
+    if (event.key === 'Escape') {
+      event.preventDefault();
+      setIsOpen(false);
+    }
+  }
+
+  return (
+    <div ref={wrapperRef} className={`relative ${className}`}>
+      {label && (
+        <label
+          id={`${id}-label`}
+          className="ei-type-color-muted mb-4 block font-structural text-[11px] font-medium uppercase tracking-[0.24em]"
+        >
+          {label}
+        </label>
+      )}
+
+      <input type="hidden" id={id} name={name} value={value} />
+
+      <button
+        type="button"
+        aria-haspopup="listbox"
+        aria-expanded={isOpen}
+        aria-labelledby={label ? `${id}-label` : undefined}
+        aria-controls={listboxId}
+        onClick={() => setIsOpen((current) => !current)}
+        onKeyDown={handleKeyDown}
+        className="
+          group relative min-h-[58px] w-full overflow-hidden rounded-[14px]
+          border border-white/[0.12]
+          bg-[linear-gradient(to_bottom,rgb(11, 13, 42/0.24),rgb(5, 3, 11/0.80))]
+          px-5 py-4 pr-12 text-left
+          font-mono text-[13px]
+          shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
+          outline-none transition-all duration-500
+          hover:border-white/[0.18]
+          hover:bg-[linear-gradient(to_bottom,rgb(11, 13, 42/0.32),rgb(5, 3, 11/0.86))]
+          focus-visible:border-[rgb(73, 133, 253/0.54)]
+          focus-visible:ring-2
+          focus-visible:ring-white/35
+          focus-visible:ring-offset-2
+          focus-visible:ring-offset-[#05070D]
+          focus-visible:shadow-[0_0_0_1px_rgb(73, 133, 253/0.22),0_0_28px_rgb(73, 133, 253/0.08)]
+        "
+      >
+        <span className={value ? 'ei-type-color-secondary relative z-10 block truncate' : 'ei-type-color-muted relative z-10 block truncate'}>
+          {displayValue}
+        </span>
+
+        <span
+          aria-hidden="true"
+          className={`ei-type-color-muted pointer-events-none absolute right-5 top-1/2 z-10 -translate-y-1/2 text-[12px] transition-transform duration-500 ${
+            isOpen ? 'rotate-180' : ''
+          }`}
+        >
+          ↓
+        </span>
+
+        <span
+          aria-hidden="true"
+          className="
+            pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500
+            group-hover:opacity-100
+            bg-[radial-gradient(circle_at_82%_20%,rgb(73, 133, 253/0.10),transparent_34%)]
+          "
+        />
+      </button>
+
+      {isOpen && (
+        <ul
+          id={listboxId}
+          role="listbox"
+          aria-labelledby={label ? `${id}-label` : undefined}
+          className="
+            absolute z-50 mt-3 max-h-72 w-full overflow-auto rounded-[16px]
+            border border-white/[0.10]
+            bg-[linear-gradient(to_bottom,rgb(11, 13, 42/0.96),rgb(5, 3, 11/0.98))]
+            p-2
+            shadow-[0_24px_70px_rgb(5, 3, 11/0.72),inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
+            backdrop-blur-xl
+          "
+        >
+          <li
+            role="option"
+            aria-selected={!value}
+            onClick={() => selectOption('')}
+            className="
+              relative cursor-pointer select-none rounded-[11px] px-4 py-3
+              ei-type-color-tertiary font-mono text-[13px] transition-colors duration-300
+              ei-type-color-primary-hover hover:bg-white/[0.07]
+            "
+          >
+            {placeholder}
+          </li>
+
+          {options.map((option, index) => {
+            const selected = value === option;
+            const active = activeIndex === index;
+
+            return (
+              <li
+                key={option}
+                role="option"
+                aria-selected={selected}
+                onMouseEnter={() => setActiveIndex(index)}
+                onClick={() => selectOption(option)}
+                className={`
+                  relative cursor-pointer select-none rounded-[11px] px-4 py-3
+                  font-mono text-[13px] transition-colors duration-300
+                  ${
+                    active
+                      ? 'ei-type-color-primary bg-[rgb(73, 133, 253/0.10)]'
+                      : selected
+                        ? 'ei-type-color-primary'
+                        : 'ei-type-color-tertiary'
+                  }
+                `}
+              >
+                <div className="flex items-center justify-between gap-4">
+                  <span className="block truncate">{option}</span>
+
+                  {selected && (
+                    <span
+                      aria-hidden="true"
+                      className="text-[rgb(73, 133, 253/0.92)]"
+                    >
+                      ✓
+                    </span>
+                  )}
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+}
