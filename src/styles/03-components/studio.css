@@ -197,14 +197,13 @@
      Process section type
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-process-heading {
+ .ei-type-studio-process-heading {
     font-family: var(--ei-font-editorial);
-    font-size: clamp(2rem, 3.4vw, 3.25rem);
+    font-size: clamp(2rem, 3vw, 3rem);
     line-height: 1.08;
-    letter-spacing: -0.032em;
+    letter-spacing: -0.035em;
     font-weight: 400;
     color: var(--ei-color-text-primary);
-    text-wrap: balance;
   }
 
   .ei-type-studio-process-number {
@@ -226,38 +225,34 @@
       0 0 22px rgb(var(--ei-violet-rgb) / 0.18);
   }
 
-  .ei-type-studio-process-title {
+  ei-type-studio-process-title {
     font-family: var(--ei-font-editorial);
-    font-size: clamp(1.18rem, 1.55vw, 1.45rem);
+    font-size: clamp(1.15rem, 1.25vw, 1.35rem);
     line-height: 1.22;
     letter-spacing: -0.018em;
-    text-transform: none;
-    font-weight: 400;
     color: var(--ei-color-text-primary);
   }
+
 
   /* ─────────────────────────────────────────────────────────
      Featured work section type
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-feature-title {
+   .ei-type-studio-feature-title {
     font-family: var(--ei-font-editorial);
-    font-size: clamp(2.5rem, 4.8vw, 4.75rem);
-    line-height: 0.98;
-    letter-spacing: 0.035em;
+    font-size: clamp(3.35rem, 6vw, 5.2rem);
+    line-height: 0.92;
+    letter-spacing: 0.02em;
     text-transform: uppercase;
-    font-weight: 400;
     color: var(--ei-color-text-primary);
   }
 
   .ei-type-studio-feature-subtitle {
     font-family: var(--ei-font-editorial);
-    font-size: clamp(1.25rem, 1.8vw, 1.65rem);
-    line-height: 1.22;
-    letter-spacing: -0.018em;
-    font-weight: 400;
+    font-size: clamp(1.25rem, 1.7vw, 1.55rem);
+    line-height: 1.18;
+    letter-spacing: -0.025em;
     color: var(--ei-color-text-primary);
-    text-wrap: balance;
   }
 
   /* The old overlay was making the Lumo feature feel buried.
@@ -270,19 +265,19 @@
     background:
       linear-gradient(
         90deg,
-        rgb(var(--ei-void-rgb) / 0.92) 0%,
-        rgb(var(--ei-void-rgb) / 0.76) 24%,
-        rgb(var(--ei-void-rgb) / 0.44) 46%,
-        rgb(var(--ei-void-rgb) / 0.12) 66%,
-        transparent 88%
+        rgb(var(--ei-void-rgb) / 0.94) 0%,
+        rgb(var(--ei-void-rgb) / 0.74) 30%,
+        rgb(var(--ei-void-rgb) / 0.34) 51%,
+        transparent 82%
       ),
       linear-gradient(
         180deg,
-        rgb(var(--ei-void-rgb) / 0.06) 0%,
-        transparent 44%,
-        rgb(var(--ei-void-rgb) / 0.14) 100%
+        rgb(var(--ei-void-rgb) / 0.05) 0%,
+        transparent 48%,
+        rgb(var(--ei-void-rgb) / 0.18) 100%
       );
   }
+
 
   /* ─────────────────────────────────────────────────────────
      CTA section type
