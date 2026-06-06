@@ -33,12 +33,12 @@ const principles: Array<{
   },
   {
     title: "Design with feeling",
-    body: "Strategy is held with care.\Identity becomes coherent when the inner world is acknowledged, not avoided.",
+    body: "Strategy is held with care.\nIdentity becomes coherent when the inner world is acknowledged, not avoided.",
     icon: "pulse",
   },
   {
     title: "Built to resonate",
-    body: "We craft systems and digital worlds designed to endure —not louder, but deeper.",
+    body: "We craft systems and digital worlds designed to endure —\nnot louder, but deeper.",
     icon: "lattice",
   },
 ];
@@ -248,7 +248,7 @@ export function Studio() {
                       {pillar.title}
                     </h3>
 
-                    <p className="ei-type-studio-pillar-body mt-4 max-w-[31ch whitespace-pre-line">]">
+                    <p className="ei-type-studio-pillar-body mt-4 max-w-[31ch] whitespace-pre-line">
                       {pillar.body}
                     </p>
 
