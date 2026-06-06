@@ -149,14 +149,25 @@ export function Studio() {
       >
         <Container size="xl" className="relative z-10">
           <div className="mx-auto grid max-w-[1180px] gap-10 md:grid-cols-[minmax(0,1.08fr)_minmax(320px,0.72fr)] md:gap-14">
-            <motion.div variants={driftUp}>
-              <SectionLabel>Our Manifesto</SectionLabel>
+           <motion.div variants={staggerContainer(STAGGER.loose, 0)}>
+  <SectionLabel>Our Manifesto</SectionLabel>
 
-              <blockquote className="ei-type-studio-manifesto mt-7 max-w-[18ch]">
-                “We design from the inner signal outward — turning feeling,
-                clarity, and atmosphere into form.”
-              </blockquote>
-            </motion.div>
+  <motion.h2
+    variants={blurEmergence}
+    className="ei-type-philosophy-heading mt-6 mb-5 max-w-[20ch] whitespace-pre-line"
+  >
+    {"We design from the inner signal outward —\nturning feeling into form."}
+  </motion.h2>
+
+  <motion.p
+    variants={driftUp}
+    className="ei-type-philosophy-body max-w-[38ch]"
+  >
+    Our work begins beneath the surface: with emotion, clarity, memory,
+    and atmosphere. From there, we shape identities and digital worlds that
+    feel considered before they are understood.
+  </motion.p>
+</motion.div>
 
             <motion.div
               variants={fadeSoft}
