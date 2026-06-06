@@ -70,25 +70,6 @@
   color: rgb(var(--ei-moonlit-rgb) / 0.5);
 }
 
-/* Studio page type */
-/* Hero section type */
-.ei-type-studio-hero {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(2.6rem, 6vw, 5.6rem);
-  line-height: 0.98;
-  letter-spacing: -0.045em;
-  font-weight: 400;
-  color: var(--ei-color-text-primary);
-}
-/* Manifesto section type */
-.ei-type-studio-manifesto {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(1.85rem, 3.4vw, 3.4rem);
-  line-height: 1.08;
-  letter-spacing: -0.035em;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.84);
-}
 /* Card section type */
 .ei-type-studio-principle-title {
   font-family: var(--ei-font-structural);
