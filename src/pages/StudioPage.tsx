@@ -60,7 +60,7 @@ const pillars: Array<{
     href: "/identity",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_28%,rgb(var(--ei-violet-rgb)/0.22),transparent_38%),radial-gradient(circle_at_52%_62%,rgb(var(--ei-halo-blue-rgb)/0.08),transparent_54%)]",
-    icon: "pulse",
+    icon: "vector-lattice",
   },
   {
     number: "02",
@@ -69,7 +69,7 @@ const pillars: Array<{
     href: "/websites",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_30%,rgb(var(--ei-halo-blue-rgb)/0.18),transparent_42%),linear-gradient(145deg,rgb(var(--ei-midnight-rgb)/0.7),rgb(var(--ei-void-rgb)/0.95))]",
-    icon: "axis",
+    icon: "memory-comet",
   },
   {
     number: "03",
