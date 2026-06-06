@@ -369,18 +369,35 @@
     color: var(--ei-color-text-primary);
   }
 
+  /* Links/actions: quiet default, blue interaction */
   .ei-card-action,
   .ei-link,
-  .link-primary,
-  .ei-type-footer-link {
+  .link-primary {
+    color: var(--ei-color-text-tertiary);
+  }
+
+  .ei-card:hover .ei-card-action,
+  .ei-card:focus-within .ei-card-action,
+  .ei-card-world-link:hover .ei-card-action,
+  .ei-card-world-link:focus-visible .ei-card-action,
+  .ei-link:hover,
+  .ei-link:focus-visible,
+  .link-primary:hover,
+  .link-primary:focus-visible {
     color: var(--ei-color-text-accent);
   }
 
-  .ei-card-action:hover,
-  .ei-link:hover,
-  .link-primary:hover,
-  .ei-type-footer-link:hover {
-    color: var(--ei-color-text-primary);
+  .footer a,
+  .ei-footer a {
+    color: var(--ei-color-text-muted);
+    transition: color 300ms ease;
+  }
+
+  .footer a:hover,
+  .footer a:focus-visible,
+  .ei-footer a:hover,
+  .ei-footer a:focus-visible {
+    color: var(--ei-color-text-accent);
   }
 }
 
@@ -583,12 +600,14 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--ei-color-text-accent);
+    color: var(--ei-color-text-tertiary);
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
   .ei-link:hover,
-  .link-primary:hover {
-    color: var(--ei-color-text-primary);
+  .ei-link:focus-visible,
+  .link-primary:hover,
+  .link-primary:focus-visible {
+    color: var(--ei-color-text-accent);
   }
   .ei-link-subtle,
   .link-subtle {

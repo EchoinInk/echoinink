@@ -66,8 +66,8 @@
     --ei-font-copy: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
       "Segoe UI", sans-serif;
 
-    --ei-card-action-text: var(--ei-color-text-accent);
-    --ei-card-action-text-hover: var(--ei-color-text-primary);
+    --ei-card-action-text: var(--ei-color-text-tertiary);
+    --ei-card-action-text-hover: var(--ei-color-text-accent);
     --ei-header-text: rgb(var(--ei-ice-white-rgb) / 0.72);
     --ei-header-text-hover: rgb(var(--ei-ice-white-rgb) / 0.96);
     --ei-header-text-active: rgb(var(--ei-halo-blue-rgb) / 0.95);

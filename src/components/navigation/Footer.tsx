@@ -26,7 +26,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden pb-0">
+    <footer className="ei-footer relative overflow-hidden pb-0">
       {/* Top boundary */}
       <div
         aria-hidden="true"

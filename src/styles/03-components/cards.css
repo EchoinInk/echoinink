@@ -112,13 +112,15 @@
   letter-spacing: 0.22em;
   line-height: 1;
   text-transform: uppercase;
-  color: var(--ei-color-text-accent);
+  color: var(--ei-color-text-tertiary);
   transition: color 500ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .ei-card:hover .ei-card-action,
-.ei-card-world:hover .ei-card-action {
-  color: var(--ei-color-text-primary);
+.ei-card:focus-within .ei-card-action,
+.ei-card-world-link:hover .ei-card-action,
+.ei-card-world-link:focus-visible .ei-card-action {
+  color: var(--ei-color-text-accent);
 }
 
 .ei-card-action-arrow {
