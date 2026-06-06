@@ -64,6 +64,10 @@
     --ei-card-action-text: rgb(var(--ei-ice-white-rgb) / 0.58);
 
   --ei-card-action-text-hover: rgb(var(--ei-halo-blue-rgb) / 0.92);
+  --ei-header-text: rgb(var(--ei-ice-white-rgb) / 0.72);
+  --ei-header-text-hover: rgb(var(--ei-ice-white-rgb) / 0.96);
+  --ei-header-text-active: rgb(var(--ei-halo-blue-rgb) / 0.95);
+  --ei-header-text-muted: rgb(var(--ei-ice-white-rgb) / 0.38);
 
   --ei-button-text-primary: rgb(var(--ei-ice-white-rgb) / 0.94);
   --ei-button-text-primary-hover: rgb(var(--ei-ice-white-rgb) / 1);
