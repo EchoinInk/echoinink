@@ -166,9 +166,9 @@ export function Studio() {
                 variants={blurEmergence}
                 className="ei-type-studio-philosophy mt-6 max-w-[18ch] whitespace-pre-line"
               >
-                We design with <em className="ei-type-studio-philosophy-emphasis">feeling</em>,{" "}
+                {"We design with\n<em className="ei-type-studio-philosophy-emphasis">feeling</em>,{" "}
                 <em className="ei-type-studio-philosophy-emphasis">intention</em>, and{" "}
-                <em className="ei-type-studio-philosophy-emphasis">clarity</em>.
+                <em className="ei-type-studio-philosophy-emphasis">clarity</em>."}
               </motion.h2>
             </motion.div>
 
