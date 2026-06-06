@@ -48,7 +48,7 @@ export function EditorialImageHero({
   const headingClass = isIntimate
   ? "font-editorial max-w-[24ch] whitespace-pre-line text-[clamp(1.85rem,3.35vw,2.75rem)] leading-[1.12] tracking-[-0.025em] text-[rgb(var(--ei-ice-white-rgb)/0.94)]"
   : "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
-  
+
   const bodyClass = isIntimate
   ? "ei-type-hero-description max-w-[42ch]"
   : "ei-type-hero-description max-w-[46ch]";
@@ -155,25 +155,25 @@ export function EditorialImageHero({
               />
             </div>
 
-            <h1
-              id="editorial-hero-heading"
-              className={headingClass}
-              style={{
-                textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
-              }}
-            >
-              {italicWord
-                ? titleParts.map((part, i) =>
-                    part.toLowerCase() === italicWord.toLowerCase() ? (
-                      <em key={i} className="ei-type-studio-hero-emphasis">
-                        {part}
-                      </em>
-                    ) : (
-                      <span key={i}>{part}</span>
-                    ),
-                  )
-                : title}
-            </h1>
+           <h1
+  id="editorial-hero-heading"
+  className={headingClass}
+  style={{
+    textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
+  }}
+>
+  {italicWord
+    ? titleParts.map((part, i) =>
+        part.toLowerCase() === italicWord.toLowerCase() ? (
+          <em key={i} className="ei-type-studio-hero-emphasis">
+            {part}
+          </em>
+        ) : (
+          <span key={i}>{part}</span>
+        ),
+      )
+    : title}
+</h1>
 
            <p className={`${bodyClass} mt-5 md:mt-6`}>
   {description}
