@@ -429,6 +429,28 @@
   object-fit: cover;
 }
 
+.ei-card-world-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgb(var(--ei-void-rgb) / 0.96) 0%,
+      rgb(var(--ei-void-rgb) / 0.82) 26%,
+      rgb(var(--ei-void-rgb) / 0.48) 46%,
+      rgb(var(--ei-void-rgb) / 0.12) 68%,
+      transparent 86%
+    ),
+    linear-gradient(
+      180deg,
+      rgb(var(--ei-void-rgb) / 0.16) 0%,
+      transparent 42%,
+      rgb(var(--ei-void-rgb) / 0.24) 100%
+    );
+}
+
 .ei-card-world-copy {
   position: relative;
   z-index: 10;
@@ -439,28 +461,6 @@
   justify-content: space-between;
   gap: 2rem;
   padding: clamp(1.75rem, 4vw, 3rem);
-}
-
-.ei-card-world-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(var(--ei-void-rgb) / 0.96) 0%,
-      rgb(var(--ei-void-rgb) / 0.86) 24%,
-      rgb(var(--ei-void-rgb) / 0.56) 42%,
-      rgb(var(--ei-void-rgb) / 0.18) 62%,
-      transparent 82%
-    ),
-    linear-gradient(
-      180deg,
-      rgb(var(--ei-void-rgb) / 0.28) 0%,
-      transparent 38%,
-      rgb(var(--ei-void-rgb) / 0.22) 100%
-    );
 }
 
 .ei-card-world-title {
@@ -488,9 +488,9 @@
     background:
       linear-gradient(
         180deg,
-        rgb(var(--ei-void-rgb) / 0.92) 0%,
-        rgb(var(--ei-void-rgb) / 0.72) 42%,
-        rgb(var(--ei-void-rgb) / 0.46) 100%
+        rgb(var(--ei-void-rgb) / 0.94) 0%,
+        rgb(var(--ei-void-rgb) / 0.78) 44%,
+        rgb(var(--ei-void-rgb) / 0.52) 100%
       );
   }
 }
