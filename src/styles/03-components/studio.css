@@ -1,6 +1,8 @@
 /* Studio page type */
+
 @layer components {
-.ei-type-studio-hero {
+
+   .ei-type-studio-hero {
   font-family: var(--ei-font-editorial);
   font-size: clamp(2.6rem, 6vw, 5.6rem);
   line-height: 0.98;
@@ -39,6 +41,7 @@
   font-weight: 400;
   color: rgb(var(--ei-moonlit-rgb) / 0.66);
 }
+/* Process section type */
 
 .ei-type-studio-process-number {
   font-family: var(--ei-font-editorial);
