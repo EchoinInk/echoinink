@@ -71,7 +71,7 @@
 }
 
 /* Studio page type */
-
+/* Hero section type */
 .ei-type-studio-hero {
   font-family: var(--ei-font-editorial);
   font-size: clamp(2.6rem, 6vw, 5.6rem);
@@ -80,7 +80,7 @@
   font-weight: 400;
   color: var(--ei-color-text-primary);
 }
-
+/* Manifesto section type */
 .ei-type-studio-manifesto {
   font-family: var(--ei-font-editorial);
   font-size: clamp(1.85rem, 3.4vw, 3.4rem);
@@ -89,7 +89,7 @@
   font-weight: 400;
   color: rgb(var(--ei-ice-white-rgb) / 0.84);
 }
-
+/* Card section type */
 .ei-type-studio-principle-title {
   font-family: var(--ei-font-structural);
   font-size: 0.6875rem;
@@ -108,7 +108,7 @@
   font-weight: 400;
   color: rgb(var(--ei-moonlit-rgb) / 0.68);
 }
-
+/* Pillar section type */
 .ei-type-studio-pillar-title {
   font-family: var(--ei-font-editorial);
   font-size: clamp(1.45rem, 2.2vw, 2.15rem);
@@ -126,7 +126,7 @@
   letter-spacing: -0.002em;
   color: rgb(var(--ei-moonlit-rgb) / 0.66);
 }
-
+/* Process section type */
 .ei-type-studio-process-number {
   font-family: var(--ei-font-editorial);
   font-size: clamp(2.4rem, 5.2vw, 4.6rem);
@@ -152,7 +152,7 @@
   line-height: 1.55;
   color: rgb(var(--ei-moonlit-rgb) / 0.56);
 }
-
+/* Feature section type */
 .ei-type-studio-feature-title {
   font-family: var(--ei-font-editorial);
   font-size: clamp(2rem, 3.7vw, 3.5rem);
@@ -170,7 +170,7 @@
   letter-spacing: -0.002em;
   color: rgb(var(--ei-moonlit-rgb) / 0.68);
 }
-
+/* CTA section type */
 .ei-type-studio-slim-cta {
   font-family: var(--ei-font-editorial);
   font-size: clamp(1.45rem, 2.7vw, 2.2rem);
