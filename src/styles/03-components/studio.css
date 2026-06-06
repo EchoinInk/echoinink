@@ -4,17 +4,21 @@
   /* Hero section type */
   .ei-type-studio-hero {
   font-family: var(--ei-font-editorial);
-  font-size: clamp(2.45rem, 4.8vw, 4.25rem);
-  line-height: 1.04;
-  letter-spacing: -0.035em;
+  font-size: clamp(2.15rem, 4.4vw, 3.85rem);
+  line-height: 1.06;
+  letter-spacing: -0.032em;
   font-weight: 400;
   color: rgb(var(--ei-ice-white-rgb) / 0.94) !important;
 }
 
-  .ei-type-studio-hero-emphasis {
-    font-style: italic;
-    color: rgb(var(--ei-violet-rgb) / 0.9);
-  }
+.ei-type-studio-hero span {
+  color: rgb(var(--ei-ice-white-rgb) / 0.94) !important;
+}
+
+.ei-type-studio-hero-emphasis {
+  font-style: italic;
+  color: rgb(var(--ei-moonlit-rgb) / 0.88) !important;
+}
 
   /* Philosophy / manifesto section type */
   .ei-type-studio-manifesto,
