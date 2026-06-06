@@ -17,8 +17,8 @@
 
     --ei-card-bg: linear-gradient(
       180deg,
-      rgb(var(--ei-midnight-rgb) / 0.72),
-      rgb(var(--ei-void-rgb) / 0.92)
+      rgb(var(--ei-midnight-rgb) / 0.32),
+      rgb(var(--ei-void-rgb) / 0.94)
     );
 
     --ei-card-bg-soft: linear-gradient(
