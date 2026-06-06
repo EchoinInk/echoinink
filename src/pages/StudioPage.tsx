@@ -83,8 +83,8 @@ export function Studio() {
 
       <EditorialImageHero
         eyebrow="Studio"
-        title="The philosophy behind the worlds."
-        italicWord="worlds."
+        title="Where the philosophy becomes form."
+        italicWord="philosophy."
         description="Translating inner worlds into coherent external form."
         image={studioHeroDesktop}
         mobileImage={studioHeroMobile}
