@@ -42,34 +42,118 @@ export function Header() {
 
         {/* Desktop Nav — increased confidence, reduced fragility */}
         <div className="hidden md:flex items-center gap-10 lg:gap-12">
-          {/* Nav Links — refined typography */}
-          <div className="flex gap-8 lg:gap-9">
-            {navItems.map((item) => {
-              const active = pathname === item.href;
 
-              return (
-                <Link
-                  key={item.label}
-                  to={item.href}
-                  className={`font-structural text-[11px] tracking-[0.16em] uppercase font-medium transition-colors duration-500 ${
-                    active
-                      ? "text-white/92"
-                      : "text-white/72 hover:text-white/92"
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              );
-            })}
-          </div>
+  <div className="flex gap-8 lg:gap-9">
 
-          <Link
-            to="/contact"
-            className="ei-focus-rounded px-4 py-2 rounded-full border border-white/[0.1] bg-white/[0.03] text-[10px] tracking-[0.18em] uppercase font-medium text-white/76 hover:text-white/92 hover:bg-white/[0.06] hover:border-white/[0.14] transition-all duration-700"
-          >
-            Start a Conversation
-          </Link>
-        </div>
+    {navItems.map((item) => {
+
+      const active = pathname === item.href;
+
+      return (
+
+        <Link
+
+          key={item.label}
+
+          to={item.href}
+
+          className={`
+
+            group relative pb-1.5
+
+            font-structural text-[11px] tracking-[0.16em] uppercase font-medium
+
+            transition-colors duration-500
+
+            ${
+
+              active
+
+                ? "text-[rgb(var(--ei-halo-blue-rgb)/0.95)]"
+
+                : "text-white/68 hover:text-white/95"
+
+            }
+
+          `}
+
+        >
+
+          {item.label}
+
+          <span
+
+            className={`
+
+              pointer-events-none absolute left-0 -bottom-0.5 h-px
+
+              rounded-full
+
+              bg-[linear-gradient(90deg,rgb(var(--ei-halo-blue-rgb)/0.95),rgb(var(--ei-echo-magenta-rgb)/0.72))]
+
+              shadow-[0_0_10px_rgb(var(--ei-halo-blue-rgb)/0.45)]
+
+              transition-all duration-500 ease-out
+
+              ${
+
+                active
+
+                  ? "w-full opacity-100"
+
+                  : "w-0 opacity-0 group-hover:w-full group-hover:opacity-100"
+
+              }
+
+            `}
+
+          />
+
+        </Link>
+
+      );
+
+    })}
+
+  </div>
+
+  <Link
+
+    to="/contact"
+
+    className={`
+
+      ei-focus-rounded
+
+      rounded-full px-4 py-2
+
+      border border-white/[0.12]
+
+      bg-white/[0.035]
+
+      text-[10px] tracking-[0.18em] uppercase font-medium
+
+      text-white/78
+
+      transition-all duration-700
+
+      hover:text-white
+
+      hover:bg-white/[0.07]
+
+      hover:border-[rgb(var(--ei-halo-blue-rgb)/0.32)]
+
+      hover:shadow-[0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.12)]
+
+    `}
+
+  >
+
+    Start a Conversation
+
+  </Link>
+
+</div>
 
         {/* Mobile Menu Trigger */}
         <button
