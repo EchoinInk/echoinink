@@ -8,8 +8,8 @@ import { heroReveal } from "@/lib/motion-cinematic";
 
 export function Hero() {
   return (
-    <section className="relative w-full min-h-[720px] md:min-h-[760px] flex items-center overflow-hidden bg-[var(--ei-void)] ei-section-hero">
-      <HeroBackground />
+   <section className="relative flex min-h-[640px] w-full items-center overflow-hidden bg-[var(--ei-void)] md:min-h-[760px] ei-section-hero">
+     <HeroBackground />
 
       <Container size="xl" className="relative z-10">
         <motion.div className="max-w-[680px] text-left md:pl-10 lg:pl-14 md:-translate-y-[2vh]">
