@@ -92,8 +92,49 @@ export function LumoCaseStudyTeaser() {
             className="ei-card ei-card-world"
           >
             <Link to="/works/lumo" className="ei-card-world-link group">
+              <div className="ei-card-world-media">
+                <motion.div
+                  className="absolute inset-0"
+                  style={{
+                    y: imageY,
+                    scale: 1.04,
+                  }}
+                >
+                  <img
+                    src={lumoinkdrift}
+                    alt="LUMO — atmospheric UI exploration"
+                    className="h-full w-full object-cover object-[57%_50%]"
+                  />
+                </motion.div>
 
-  <div className="ei-card-world-media">
+                <motion.div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 z-[3] mix-blend-overlay"
+                  style={{
+                    opacity: 0.025,
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+                  }}
+                  animate={
+                    prefersReduced
+                      ? undefined
+                      : { opacity: [0.015, 0.03, 0.015] }
+                  }
+                  transition={
+                    prefersReduced
+                      ? undefined
+                      : {
+                          duration: DURATION.breath,
+                          ease: "easeInOut",
+                          repeat: Infinity,
+                          repeatType: "mirror",
+                        }
+                  }
+                />
+              </div>
+
+              <div className="ei-card-world-overlay" aria-hidden="true" />
+
+              <div className="ei-card-world-copy">
                 <motion.div variants={staggerContainer(STAGGER.normal, 0.15)}>
                   <motion.h2
                     variants={orchestratedReveal(0, 3)}
@@ -125,64 +166,6 @@ export function LumoCaseStudyTeaser() {
                     <span className="ei-card-action-arrow">→</span>
                   </span>
                 </motion.div>
-              </div>
-
-              <div className="ei-card-world-media">
-                <motion.div
-                  className="absolute inset-0"
-                  style={{
-                    y: imageY,
-                    scale: 1.04,
-                  }}
-                >
-                  <img
-                    src={lumoinkdrift}
-                    alt="LUMO — atmospheric UI exploration"
-                    className="h-full w-full object-cover object-[57%_50%]"
-                  />
-                </motion.div>
-
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-y-0 left-0 z-[2] w-[28%]"
-                  style={{
-                    background:
-                      "linear-gradient(to right, rgb(var(--ei-void-rgb) / 0.42) 0%, rgb(var(--ei-void-rgb) / 0.18) 52%, transparent 100%)",
-                  }}
-                />
-
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 z-[1]"
-                  style={{
-                    background:
-                      "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.08) 0%, transparent 38%, rgb(var(--ei-void-rgb) / 0.16) 100%)",
-                  }}
-                />
-
-                <motion.div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 z-[3] mix-blend-overlay"
-                  style={{
-                    opacity: 0.025,
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-                  }}
-                  animate={
-                    prefersReduced
-                      ? undefined
-                      : { opacity: [0.015, 0.03, 0.015] }
-                  }
-                  transition={
-                    prefersReduced
-                      ? undefined
-                      : {
-                          duration: DURATION.breath,
-                          ease: "easeInOut",
-                          repeat: Infinity,
-                          repeatType: "mirror",
-                        }
-                  }
-                />
               </div>
             </Link>
           </motion.article>
