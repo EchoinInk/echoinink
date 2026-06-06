@@ -68,7 +68,7 @@ const pillars: Array<{
     href: "/websites",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_30%,rgb(var(--ei-halo-blue-rgb)/0.18),transparent_42%),linear-gradient(145deg,rgb(var(--ei-midnight-rgb)/0.7),rgb(var(--ei-void-rgb)/0.95))]",
-    icon: "lens",
+    icon: "spiral",
   },
   {
     number: "03",
@@ -77,7 +77,7 @@ const pillars: Array<{
     href: "/direction",
     imageClass:
       "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
-    icon: "ribbon",
+    icon: "pathway",
   },
   {
     number: "04",
