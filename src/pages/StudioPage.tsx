@@ -154,7 +154,7 @@ export function Studio() {
         initial="hidden"
         whileInView="visible"
         viewport={VIEWPORT.loose}
-        className="relative border-y border-[rgb(var(--ei-moonlit-rgb)/0.1)] py-14 md:py-16"
+        className="relative py-14 md:py-16"
       >
         <Container size="xl" className="relative z-10">
           <div className="mx-auto grid max-w-[1180px] gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)_180px] md:items-center md:gap-12 md:p-10 lg:p-12">
@@ -264,7 +264,7 @@ export function Studio() {
         initial="hidden"
         whileInView="visible"
         viewport={VIEWPORT.loose}
-        className="relative border-y border-[rgb(var(--ei-moonlit-rgb)/0.08)] py-14 md:py-16"
+        className="relative py-14 md:py-16"
       >
         <Container size="xl" className="relative z-10">
           <div className="mx-auto grid max-w-[1180px] gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-ice-white-rgb)/0.018)] p-7 md:grid-cols-[0.9fr_1.6fr] md:gap-14 md:p-10">
