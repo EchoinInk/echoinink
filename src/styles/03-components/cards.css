@@ -212,7 +212,7 @@
   .ei-card-capability .ei-card-description {
     font-size: clamp(0.8125rem, 0.88vw, 0.875rem);
     line-height: 1.65;
-    color: var(--ei-color-text-tertiary);
+    color: var(--ei-type-color-tertiary);
   }
 
   /* ─────────────────────────────────────────────────────────

@@ -1,5 +1,3 @@
-@layer tokens, base, components, utilities, styles;
-
 @import './easy-page.css' layer(styles);
 
 @import './01-tokens/tokens.css' layer(tokens);
@@ -27,12 +25,12 @@
   body,
   #root {
     min-height: 100%;
-    background: var(--ei-background-body);
+    background: var(--ei-color-background-body);
     color: var(--ei-color-text-primary);
   }
 
   body {
-    background: var(--ei-background-body);
+    background-color: var(--ei-color-background-body);
     color: var(--ei-color-text-primary);
     font-family: var(--ei-font-structural);
     -webkit-font-smoothing: antialiased;

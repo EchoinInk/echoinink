@@ -257,13 +257,4 @@
   .ei-gradient-border-btn:hover::after {
     opacity: 1;
   }
-  .ei-btn-primary-cinematic:focus-visible,
-  .ei-btn-secondary-cinematic:focus-visible,
-  .ei-gradient-border-btn-refined:focus-visible,
-  .ei-invitation-btn:focus-visible,
-  .ei-gradient-border-btn:focus-visible {
-    outline: none;
-    box-shadow: var(--ei-ring-focus);
-  }
-
 }
