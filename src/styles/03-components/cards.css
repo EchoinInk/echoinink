@@ -202,7 +202,30 @@
     max-width: 18rem;
     color: var(--ei-color-text-secondary);
   }
+/* ─────────────────────────────────────────────────────────
+   Capability Card
+   Use for service offerings, capabilities, expertise areas,
+   and modular service descriptions.
+   ───────────────────────────────────────────────────────── */
+  .ei-card-capability {
+  min-height: 260px;
+  padding: 1.5rem;
+}
 
+.ei-card-capability-icon {
+  margin-bottom: 1.75rem;
+}
+
+.ei-card-capability .ei-card-title {
+  font-size: clamp(1.125rem, 1.3vw, 1.35rem);
+  line-height: 1.2;
+}
+
+.ei-card-capability .ei-card-description {
+  font-size: clamp(0.8125rem, 0.88vw, 0.875rem);
+  line-height: 1.65;
+  color: var(--ei-type-color-tertiary);
+}
   /* ─────────────────────────────────────────────────────────
      Systems Card
      Use for tools, frameworks, GPT systems, UI kits,

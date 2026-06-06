@@ -83,25 +83,25 @@ export function WhatWeCreate() {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-4">
             {capabilities.map((cap) => (
               <motion.article key={cap.title} variants={driftUp}>
-                <Link
-                  to={cap.href}
-                  className="ei-card ei-card-soft ei-card-interactive group flex h-full flex-col p-6 motion-reduce:transform-none"
-                  aria-label={`Explore ${cap.title}`}
-                >
-                  <div className="mb-8">
-                    <OrbitalVisual variant={cap.variant} size={72} />
-                  </div>
+              <Link
+  to={cap.href}
+  className="ei-card ei-card-soft ei-card-interactive ei-card-capability group flex h-full flex-col motion-reduce:transform-none"
+  aria-label={`Explore ${cap.title}`}
+>
+  <div className="ei-card-capability-icon">
+    <OrbitalVisual variant={cap.variant} size={72} />
+  </div>
 
-                  <h3 className="ei-card-title mb-3">{cap.title}</h3>
+  <h3 className="ei-card-title mb-3">{cap.title}</h3>
 
-                  <p className="ei-card-description mb-6 flex-1">
-                    {cap.description}
-                  </p>
+  <p className="ei-card-description mb-6 flex-1">
+    {cap.description}
+  </p>
 
-                  <span className="ei-card-action">
-  Explore <span className="ei-card-action-arrow">→</span>
-</span>
-                </Link>
+  <span className="ei-card-action">
+    Explore <span className="ei-card-action-arrow">→</span>
+  </span>
+</Link>
               </motion.article>
             ))}
           </div>
