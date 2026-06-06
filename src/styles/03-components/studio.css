@@ -282,15 +282,12 @@
   /* ─────────────────────────────────────────────────────────
      CTA section type
      ───────────────────────────────────────────────────────── */
-
-  .ei-type-studio-slim-cta {
+ .ei-type-studio-slim-cta {
     font-family: var(--ei-font-editorial);
-    font-size: clamp(2rem, 3.6vw, 3.15rem);
-    line-height: 1.06;
+    font-size: clamp(1.65rem, 2.85vw, 2.55rem);
+    line-height: 1.08;
     letter-spacing: -0.035em;
-    font-weight: 400;
     color: var(--ei-color-text-primary);
-    text-wrap: balance;
   }
 
   .ei-studio-slim-cta-shell {
@@ -303,10 +300,11 @@
   }
 
   @media (max-width: 768px) {
-    .ei-type-studio-hero {
-      font-size: clamp(2.65rem, 12vw, 4rem);
+     .ei-type-studio-hero {
+      font-size: clamp(2.9rem, 13vw, 4.1rem);
       line-height: 1;
     }
+
 
     .ei-type-studio-manifesto,
     .ei-type-studio-philosophy {
@@ -323,13 +321,13 @@
       line-height: 1.65;
     }
 
-    .ei-card-studio-overlay {
+   .ei-card-studio-overlay {
       background:
         linear-gradient(
           180deg,
-          rgb(var(--ei-void-rgb) / 0.90) 0%,
-          rgb(var(--ei-void-rgb) / 0.66) 42%,
-          rgb(var(--ei-void-rgb) / 0.34) 100%
+          rgb(var(--ei-void-rgb) / 0.88) 0%,
+          rgb(var(--ei-void-rgb) / 0.62) 44%,
+          rgb(var(--ei-void-rgb) / 0.38) 100%
         );
     }
   }
