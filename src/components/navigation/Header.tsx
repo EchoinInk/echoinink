@@ -161,7 +161,8 @@ className="
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               exit={{ opacity: 0, y: 12, filter: "blur(8px)" }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-className="relative z-10 flex flex-col px-6 pb-8 pt-24"            >
+className="relative z-10 flex flex-col px-6 pb-8 pt-24"
+            >
               <span className="mb-8 font-structural text-[10px] uppercase tracking-[0.28em] text-white/38">
                 Navigation
               </span>
@@ -185,17 +186,16 @@ className="relative z-10 flex flex-col px-6 pb-8 pt-24"            >
                         to={item.href}
                         onClick={closeMenu}
                         className={`
-                          group relative flex items-center justify-between
-                          border-b border-white/[0.07] py-5
-                          font-editorial text-[2rem] leading-none tracking-[-0.035em]
-                          transition-colors duration-500
-                          ${
-                            active
-                              ? "text-[rgb(var(--ei-halo-blue-rgb)/0.96)]"
-                              : "text-white/82 hover:text-white"
-                          }
-                        `}
-                      >
+  group relative flex items-center justify-between
+  border-b border-white/[0.07] py-4
+  font-editorial text-[1.55rem] leading-none tracking-[-0.03em]
+  transition-colors duration-500
+  ${
+    active
+      ? "text-[rgb(var(--ei-halo-blue-rgb)/0.96)]"
+      : "text-white/82 hover:text-white"
+  }
+`}                      >
                         <span>{item.label}</span>
 
                         <span
