@@ -126,81 +126,63 @@ export function LumoCaseStudyTeaser() {
                 </motion.div>
               </div>
 
-             <div className="ei-card-world-media">
-  <motion.div
-    className="absolute inset-0"
-    style={{
-      y: imageY,
-      scale: 1.04,
-    }}
-  >
-    <img
-      src={lumoinkdrift}
-      alt="LUMO — atmospheric UI exploration"
-      className="h-full w-full object-cover object-[58%_50%]"
-    />
-  </motion.div>
+              <div className="ei-card-world-media">
+                <motion.div
+                  className="absolute inset-0"
+                  style={{
+                    y: imageY,
+                    scale: 1.04,
+                  }}
+                >
+                  <img
+                    src={lumoinkdrift}
+                    alt="LUMO — atmospheric UI exploration"
+                    className="h-full w-full object-cover object-[55%_50%]"
+                  />
+                </motion.div>
 
-  {/* Hard seam dissolver — pulls the image into the copy side */}
-  <div
-    aria-hidden="true"
-    className="pointer-events-none absolute inset-y-0 left-[-1px] w-[34%] z-[2]"
-    style={{
-      background:
-        "linear-gradient(to right, rgb(var(--ei-void-rgb) / 1) 0%, rgb(var(--ei-void-rgb) / 0.94) 24%, rgb(var(--ei-void-rgb) / 0.58) 58%, rgb(var(--ei-void-rgb) / 0.18) 84%, transparent 100%)",
-    }}
-  />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-y-0 left-0 z-[2] w-[28%]"
+                  style={{
+                    background:
+                      "linear-gradient(to right, rgb(var(--ei-void-rgb) / 0.42) 0%, rgb(var(--ei-void-rgb) / 0.18) 52%, transparent 100%)",
+                  }}
+                />
 
-  {/* Top-left darkening so the top edge does not reveal the image block */}
-  <div
-    aria-hidden="true"
-    className="pointer-events-none absolute left-0 top-0 h-[48%] w-[52%] z-[3]"
-    style={{
-      background:
-        "radial-gradient(ellipse 90% 80% at 0% 0%, rgb(var(--ei-void-rgb) / 0.98) 0%, rgb(var(--ei-void-rgb) / 0.72) 38%, rgb(var(--ei-void-rgb) / 0.28) 68%, transparent 100%)",
-    }}
-  />
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 z-[1]"
+                  style={{
+                    background:
+                      "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.08) 0%, transparent 38%, rgb(var(--ei-void-rgb) / 0.16) 100%)",
+                  }}
+                />
 
-  {/* Soft top atmosphere across the whole image */}
-  <div
-    aria-hidden="true"
-    className="pointer-events-none absolute inset-x-0 top-0 h-[34%] z-[2]"
-    style={{
-      background:
-        "linear-gradient(to bottom, rgb(var(--ei-void-rgb) / 0.42) 0%, rgb(var(--ei-void-rgb) / 0.16) 54%, transparent 100%)",
-    }}
-  />
-
-  {/* Overall atmosphere and bottom grounding */}
-  <div
-    aria-hidden="true"
-    className="pointer-events-none absolute inset-0 z-[1]"
-    style={{
-      background:
-        "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.08) 0%, transparent 36%, rgb(var(--ei-void-rgb) / 0.18) 100%)",
-    }}
-  />
-
-  <motion.div
-    aria-hidden="true"
-    className="pointer-events-none absolute inset-0 z-[4] mix-blend-overlay"
-    style={{
-      opacity: 0.025,
-      backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
-    }}
-    animate={prefersReduced ? undefined : { opacity: [0.015, 0.03, 0.015] }}
-    transition={
-      prefersReduced
-        ? undefined
-        : {
-            duration: DURATION.breath,
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "mirror",
-          }
-    }
-  />
-</div>
+                <motion.div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 z-[3] mix-blend-overlay"
+                  style={{
+                    opacity: 0.025,
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")`,
+                  }}
+                  animate={
+                    prefersReduced
+                      ? undefined
+                      : { opacity: [0.015, 0.03, 0.015] }
+                  }
+                  transition={
+                    prefersReduced
+                      ? undefined
+                      : {
+                          duration: DURATION.breath,
+                          ease: "easeInOut",
+                          repeat: Infinity,
+                          repeatType: "mirror",
+                        }
+                  }
+                />
+              </div>
             </Link>
           </motion.article>
 
