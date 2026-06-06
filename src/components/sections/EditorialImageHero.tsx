@@ -48,7 +48,7 @@ export function EditorialImageHero({
   const headingClass = isStudio
     ? "ei-type-studio-hero max-w-[18ch] whitespace-pre-line"
     : isIntimate
-      ? "font-editorial max-w-[24ch] whitespace-pre-line text-[clamp(1.85rem,3.35vw,2.75rem)] leading-[1.12] tracking-[-0.025em] text-[var(--ei-color-text-primary)]"
+      ? "font-editorial max-w-[24ch] whitespace-pre-line text-[clamp(1.85rem,3.35vw,2.75rem)] leading-[1.12] tracking-[-0.025em] text-[var(--ei-color-text-primary))]"
       : "font-editorial max-w-[22ch] whitespace-pre-line text-[clamp(2.25rem,4.5vw,3.55rem)] leading-[1.045] tracking-[-0.034em] text-[var(--ei-color-text-primary)]";
 
   const bodyClass = isIntimate
@@ -143,7 +143,7 @@ export function EditorialImageHero({
                 ${isLeft ? "" : "justify-center"}
               `}
             >
-              <span className="ei-type-studio-label text-[rgb(var(--ei-moonlit-rgb)/0.68)]">
+              <span className="ei-type-studio-label var(--ei-color-text-primary)">
                 {eyebrow}
               </span>
 
