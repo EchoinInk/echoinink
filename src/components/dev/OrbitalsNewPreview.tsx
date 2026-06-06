@@ -1,6 +1,6 @@
 import React from "react";
-import { OrbitalVisualNew from "@components/dev/OrbitalVisualNew";
-import { ORBITALS } from "@data/orbitalsData";
+import { OrbitalVisualNew } from "@components/dev/OrbitalVisualNew";
+import { ORBITALS } from "@components/dev/OrbitalData";
 
 export default function OrbitalPreviewGrid() {
   return (
