@@ -70,10 +70,8 @@ export function EditorialImageHero({
         <img
           src={mobileImage}
           alt=""
-          className="
-            h-full w-full object-cover object-center saturate-[0.86]
-            md:object-[72%_50%]
-          "
+          className="h-full w-full object-cover object-center saturate-[0.86]
+            md:object-[72%_50%]"
           fetchPriority="high"
         />
       </picture>
