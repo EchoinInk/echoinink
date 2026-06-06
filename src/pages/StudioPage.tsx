@@ -338,8 +338,8 @@ export function Studio() {
 </p>
 
 <p className="mt-7 max-w-[38ch] font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em] text-[rgb(var(--ei-moonlit-rgb)/0.7)]">
-  An emotionally intelligent app shaped by an identity system built to calm
-  cognitive noise through atmosphere, rhythm, and restraint.
+  Lumo translates softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system —
+an interface shaped to calm cognitive noise through atmosphere, rhythm, and restraint.
 </p>
           </div>
 
@@ -369,7 +369,9 @@ export function Studio() {
               />
 
               <p className="ei-type-studio-slim-cta">
-                Let&apos;s build something meaningful.
+                Let’s build something meaningful.
+Not louder. Not faster.
+More true.
               </p>
             </div>
 
