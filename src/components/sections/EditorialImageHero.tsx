@@ -48,8 +48,8 @@ export function EditorialImageHero({
   const headingClass = "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
 
   const bodyClass = isIntimate
-  ? "ei-type-hero-description max-w-[42ch]"
-  : "ei-type-hero-description max-w-[46ch]";
+    ? "ei-type-hero-description max-w-[42ch]"
+    : "ei-type-hero-description max-w-[46ch]";
 
   return (
     <motion.section
@@ -151,29 +151,27 @@ export function EditorialImageHero({
               />
             </div>
 
-           <h1
-  id="editorial-hero-heading"
-  className={headingClass}
-  style={{
-    textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
-  }}
->
-  {italicWord
-    ? titleParts.map((part, i) =>
-        part.toLowerCase() === italicWord.toLowerCase() ? (
-          <em key={i} className="ei-type-studio-hero-emphasis">
-            {part}
-          </em>
-        ) : (
-          <span key={i}>{part}</span>
-        ),
-      )
-    : title}
-</h1>
+            <h1
+              id="editorial-hero-heading"
+              className={headingClass}
+              style={{
+                textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
+              }}
+            >
+              {italicWord
+                ? titleParts.map((part, i) =>
+                    part.toLowerCase() === italicWord.toLowerCase() ? (
+                      <em key={i} className="ei-type-studio-hero-emphasis">
+                        {part}
+                      </em>
+                    ) : (
+                      <span key={i}>{part}</span>
+                    ),
+                  )
+                : title}
+            </h1>
 
-           <p className={`${bodyClass} mt-5 md:mt-6`}>
-  {description}
-</p>
+            <p className={`${bodyClass} mt-5 md:mt-6`}>{description}</p>
 
             {ctaLabel && ctaHref && (
               <motion.div

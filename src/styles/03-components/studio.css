@@ -3,22 +3,22 @@
 @layer components {
   /* Hero section type */
   .ei-type-studio-hero {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(2.15rem, 4.4vw, 3.85rem);
-  line-height: 1.06;
-  letter-spacing: -0.032em;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.94) !important;
-}
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(2.15rem, 4.4vw, 3.85rem);
+    line-height: 1.06;
+    letter-spacing: -0.032em;
+    font-weight: 400;
+    color: rgb(var(--ei-ice-white-rgb) / 0.94) !important;
+  }
 
-.ei-type-studio-hero span {
-  color: rgb(var(--ei-ice-white-rgb) / 0.94) !important;
-}
+  .ei-type-studio-hero span {
+    color: rgb(var(--ei-ice-white-rgb) / 0.94) !important;
+  }
 
-.ei-type-studio-hero-emphasis {
-  font-style: italic;
-  color: rgb(var(--ei-moonlit-rgb) / 0.88) !important;
-}
+  .ei-type-studio-hero-emphasis {
+    font-style: italic;
+    color: rgb(var(--ei-moonlit-rgb) / 0.88) !important;
+  }
 
   /* Philosophy / manifesto section type */
   .ei-type-studio-manifesto,
@@ -76,13 +76,13 @@
   }
 
   .ei-type-studio-card-body,
-.ei-type-studio-pillar-body {
-  font-family: var(--ei-font-structural);
-  font-size: 0.8125rem;
-  line-height: 1.65;
-  letter-spacing: -0.002em;
-  color: rgb(var(--ei-moonlit-rgb) / 0.74);
-}
+  .ei-type-studio-pillar-body {
+    font-family: var(--ei-font-structural);
+    font-size: 0.8125rem;
+    line-height: 1.65;
+    letter-spacing: -0.002em;
+    color: rgb(var(--ei-moonlit-rgb) / 0.74);
+  }
 
   /* Process section type */
   .ei-type-studio-process-heading {
@@ -112,33 +112,33 @@
   }
 
   .ei-type-studio-process-title {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
-  line-height: 1.25;
-  letter-spacing: -0.012em;
-  text-transform: none;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.88);
-}
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+    line-height: 1.25;
+    letter-spacing: -0.012em;
+    text-transform: none;
+    font-weight: 400;
+    color: rgb(var(--ei-ice-white-rgb) / 0.88);
+  }
 
-.ei-type-studio-process-body {
-  font-family: var(--ei-font-structural);
-  font-size: 0.8125rem;
-  line-height: 1.6;
-  letter-spacing: -0.001em;
-  color: rgb(var(--ei-moonlit-rgb) / 0.68);
-}
+  .ei-type-studio-process-body {
+    font-family: var(--ei-font-structural);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    letter-spacing: -0.001em;
+    color: rgb(var(--ei-moonlit-rgb) / 0.68);
+  }
 
   /* Featured work section type */
   .ei-type-studio-feature-title {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(1.75rem, 2.8vw, 3rem);
-  line-height: 1.06;
-  letter-spacing: 0.045em;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: rgb(var(--ei-ice-white-rgb) / 0.9);
-}
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.75rem, 2.8vw, 3rem);
+    line-height: 1.06;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: rgb(var(--ei-ice-white-rgb) / 0.9);
+  }
 
   .ei-type-studio-feature-subtitle {
     font-family: var(--ei-font-editorial);
@@ -166,37 +166,35 @@
     font-weight: 400;
     color: rgb(var(--ei-ice-white-rgb) / 0.88);
   }
-/* Label type */
+  /* Label type */
   .ei-type-studio-label {
-  font-family: var(--ei-font-structural);
-  font-size: 0.625rem;
-  line-height: 1.4;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 500;
-  color: rgb(var(--ei-moonlit-rgb) / 0.62);
-}
-/* Card overlay effect */
-.ei-card-studio-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 5;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgb(var(--ei-void-rgb) / 0.98) 0%,
-      rgb(var(--ei-void-rgb) / 0.9) 24%,
-      rgb(var(--ei-void-rgb) / 0.62) 44%,
-      rgb(var(--ei-void-rgb) / 0.22) 64%,
-      transparent 84%
-    ),
-    linear-gradient(
-      180deg,
-      rgb(var(--ei-void-rgb) / 0.18) 0%,
-      transparent 40%,
-      rgb(var(--ei-void-rgb) / 0.2) 100%
-    );
-}
-
+    font-family: var(--ei-font-structural);
+    font-size: 0.625rem;
+    line-height: 1.4;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: rgb(var(--ei-moonlit-rgb) / 0.62);
+  }
+  /* Card overlay effect */
+  .ei-card-studio-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    background: linear-gradient(
+        90deg,
+        rgb(var(--ei-void-rgb) / 0.98) 0%,
+        rgb(var(--ei-void-rgb) / 0.9) 24%,
+        rgb(var(--ei-void-rgb) / 0.62) 44%,
+        rgb(var(--ei-void-rgb) / 0.22) 64%,
+        transparent 84%
+      ),
+      linear-gradient(
+        180deg,
+        rgb(var(--ei-void-rgb) / 0.18) 0%,
+        transparent 40%,
+        rgb(var(--ei-void-rgb) / 0.2) 100%
+      );
+  }
 }
