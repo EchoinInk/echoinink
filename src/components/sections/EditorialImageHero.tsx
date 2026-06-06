@@ -177,7 +177,9 @@ export function EditorialImageHero({
                 : title}
             </h1>
 
-            <p className={`${bodyClass} mt-5 md:mt-6`}>{description}</p>
+           <p className={`${bodyClass} mt-5 md:mt-6`}>
+  {description}
+</p>
 
             {ctaLabel && ctaHref && (
               <motion.div
