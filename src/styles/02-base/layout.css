@@ -153,6 +153,104 @@
   }
 
   /* ─────────────────────────────────────────────────────────
+   Section Labels / Eyebrow Rows
+   ───────────────────────────────────────────────────────── */
+
+.ei-section-label-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ei-section-label {
+  font-family: var(--ei-font-structural);
+  font-size: 0.6875rem;
+  line-height: 1;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ei-type-color-tertiary);
+}
+
+.ei-section-label-line {
+  height: 1px;
+  width: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgb(var(--ei-midnight-rgb) / 0.15) 0%,
+    rgb(var(--ei-halo-blue-rgb) / 0.92) 100%
+  );
+  box-shadow: 0 0 12px rgb(var(--ei-halo-blue-rgb) / 0.42);
+}
+
+.ei-section-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ei-grid-gap-md);
+  margin-bottom: var(--ei-space-7);
+}
+
+@media (max-width: 768px) {
+  .ei-section-heading-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--ei-space-4);
+    margin-bottom: var(--ei-space-6);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   Section Rail
+   ───────────────────────────────────────────────────────── */
+
+.ei-section-rail {
+  pointer-events: none;
+  position: absolute;
+  top: clamp(3rem, 7vh, 4rem);
+  left: max(2rem, calc((100vw - var(--ei-content-max)) / 2 - 7.25rem));
+  z-index: 10;
+  display: none;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.ei-section-rail-number {
+  font-family: var(--ei-font-structural);
+  font-size: 0.625rem;
+  line-height: 1;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--ei-type-color-muted);
+}
+
+.ei-section-rail-line {
+  display: block;
+  height: 1px;
+  width: 4rem;
+  background: linear-gradient(
+    90deg,
+    rgb(var(--ei-halo-blue-rgb) / 0.15),
+    rgb(var(--ei-halo-blue-rgb) / 0.75)
+  );
+}
+
+.ei-section-rail-label {
+  font-family: var(--ei-font-structural);
+  font-size: 0.625rem;
+  line-height: 1;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--ei-type-color-tertiary);
+}
+
+@media (min-width: 1180px) {
+  .ei-section-rail {
+    display: flex;
+  }
+}
+  /* ─────────────────────────────────────────────────────────
      Section Foundation
      ───────────────────────────────────────────────────────── */
 
