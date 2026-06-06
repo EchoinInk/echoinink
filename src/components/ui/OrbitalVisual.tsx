@@ -46,22 +46,20 @@ export function OrbitalVisual({
 }: OrbitalVisualProps) {
   const c = size / 2;
   const r = c - 4;
-  const photon = "rgb(var(--ei-ice-white) / 0.95)";
-const photonSoft = "rgb(var(--ei-moonlit) / 0.75)";
-const photonDim = "rgb(var(--ei-moonlit) / 0.55)";
+ const photon = "rgb(var(--ei-ice-white-rgb) / 0.95)";
+const photonSoft = "rgb(var(--ei-moonlit-rgb) / 0.75)";
+const photonDim = "rgb(var(--ei-moonlit-rgb) / 0.55)";
 
+const cobalt = "rgb(var(--ei-electric-blue-rgb) / 0.9)";
+const cobaltSoft = "rgb(var(--ei-halo-blue-rgb) / 0.75)";
+const cobaltDim = "rgb(var(--ei-halo-blue-rgb) / 0.55)";
 
- const cobalt = "rgb(var(--ei-electric-blue) / 0.9)";
-const cobaltSoft = "rgb(var(--ei-halo-blue) / 0.75)";
-const cobaltDim = "rgb(var(--ei-halo-blue) / 0.55)";
+const violet = "rgb(var(--ei-violet-rgb) / 0.85)";
+const violetSoft = "rgb(var(--ei-soft-neon-rgb) / 0.7)";
+const violetDim = "rgb(var(--ei-soft-neon-rgb) / 0.5)";
 
-
-  const violet = "rgb(var(--ei-violet) / 0.85)";
-const violetSoft = "rgb(var(--ei-soft-neon) / 0.7)";
-const violetDim = "rgb(var(--ei-soft-neon) / 0.5)";
-
-const magenta = "rgb(var(--ei-echo-magenta) / 0.85)";
-const magentaSoft = "rgb(var(--ei-soft-neon) / 0.65)";
+const magenta = "rgb(var(--ei-echo-magenta-rgb) / 0.85)";
+const magentaSoft = "rgb(var(--ei-soft-neon-rgb) / 0.65)";
 
 
   const icons: Record<OrbitalVariant, React.ReactElement> = {
