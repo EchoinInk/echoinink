@@ -87,7 +87,8 @@ export function ClosingSection() {
           }}
           className="mx-auto mb-6 max-w-[38ch] font-[var(--ei-font-copy)] text-[15px] leading-[1.8] tracking-[-0.006em] text-[var(--ei-type-color-secondary)] md:mb-8 md:text-[16px]"
         >
-          Let&apos;s build something meaningful, atmospheric, and unforgettable.
+          Let’s build something meaningful — atmospheric, resonant, and impossible to forget.
+
         </motion.p>
 
         <motion.div
