@@ -162,8 +162,7 @@ export function Studio() {
 
   <motion.p
     variants={driftUp}
-    className="ei-type-philosophy-body max-w-[38ch] whitespace-pre-line"
-  >Everything we create begins in the unseen layers: memory, intention, emotional architecture. From there, we build worlds that hold meaning.
+    className="ei-type-philosophy-body max-w-[38ch] whitespace-pre-line">{"Everything we create begins in the unseen layers: memory, intention, emotional architecture.\n\nFrom there, we build worlds that hold meaning."}
   </motion.p>
 </motion.div>
 
@@ -339,7 +338,7 @@ export function Studio() {
 </p>
 
 <p className="mt-7 max-w-[38ch] font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em] text-[rgb(var(--ei-moonlit-rgb)/0.7)] Whitespace-pre-line">
-  Lumo translates softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system —<br />
+  Lumo translates softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system —\n
 an interface shaped to calm cognitive noise through atmosphere, rhythm, and restraint.
 </p>
           </div>
