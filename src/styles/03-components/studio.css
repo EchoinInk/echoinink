@@ -66,4 +66,114 @@
   letter-spacing: -0.001em;
   color: rgb(var(--ei-moonlit-rgb) / 0.5);
 }
+
+/* Studio page type */
+
+.ei-type-studio-hero {
+  font-family: var(--ei-font-editorial);
+  font-size: clamp(2.6rem, 6vw, 5.6rem);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 400;
+  color: var(--ei-color-text-primary);
+}
+
+.ei-type-studio-manifesto {
+  font-family: var(--ei-font-editorial);
+  font-size: clamp(1.85rem, 3.4vw, 3.4rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 400;
+  color: rgb(var(--ei-ice-white-rgb) / 0.84);
+}
+
+.ei-type-studio-principle-title {
+  font-family: var(--ei-font-structural);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(var(--ei-ice-white-rgb) / 0.68);
+}
+
+.ei-type-studio-principle-body {
+  font-family: var(--ei-font-structural);
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  letter-spacing: -0.002em;
+  font-weight: 400;
+  color: rgb(var(--ei-moonlit-rgb) / 0.68);
+}
+
+.ei-type-studio-pillar-title {
+  font-family: var(--ei-font-editorial);
+  font-size: clamp(1.45rem, 2.2vw, 2.15rem);
+  line-height: 1.05;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgb(var(--ei-ice-white-rgb) / 0.88);
+}
+
+.ei-type-studio-pillar-body {
+  font-family: var(--ei-font-structural);
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  letter-spacing: -0.002em;
+  color: rgb(var(--ei-moonlit-rgb) / 0.66);
+}
+
+.ei-type-studio-process-number {
+  font-family: var(--ei-font-editorial);
+  font-size: clamp(2.4rem, 5.2vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+  font-weight: 400;
+  color: rgb(var(--ei-ice-white-rgb) / 0.22);
+}
+
+.ei-type-studio-process-title {
+  font-family: var(--ei-font-structural);
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(var(--ei-ice-white-rgb) / 0.62);
+}
+
+.ei-type-studio-process-body {
+  font-family: var(--ei-font-structural);
+  font-size: 0.75rem;
+  line-height: 1.55;
+  color: rgb(var(--ei-moonlit-rgb) / 0.56);
+}
+
+.ei-type-studio-feature-title {
+  font-family: var(--ei-font-editorial);
+  font-size: clamp(2rem, 3.7vw, 3.5rem);
+  line-height: 1.02;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgb(var(--ei-ice-white-rgb) / 0.88);
+}
+
+.ei-type-studio-feature-body {
+  font-family: var(--ei-font-structural);
+  font-size: 0.875rem;
+  line-height: 1.7;
+  letter-spacing: -0.002em;
+  color: rgb(var(--ei-moonlit-rgb) / 0.68);
+}
+
+.ei-type-studio-slim-cta {
+  font-family: var(--ei-font-editorial);
+  font-size: clamp(1.45rem, 2.7vw, 2.2rem);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  font-weight: 400;
+  color: rgb(var(--ei-ice-white-rgb) / 0.88);
+}
 }

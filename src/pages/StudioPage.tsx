@@ -152,7 +152,7 @@ export function Studio() {
             <motion.div variants={driftUp}>
               <SectionLabel>Our Manifesto</SectionLabel>
 
-              <blockquote className="mt-7 max-w-[18ch] font-editorial text-[clamp(2.05rem,4vw,4rem)] leading-[1.08] tracking-[-0.035em] ei-studio-manifesto-quote">
+              <blockquote className="ei-type-studio-manifesto mt-7 max-w-[18ch]">
                 “We design from the inner signal outward — turning feeling,
                 clarity, and atmosphere into form.”
               </blockquote>
@@ -167,19 +167,19 @@ export function Studio() {
                   key={principle.title}
                   className="grid grid-cols-[2.25rem_minmax(0,1fr)] gap-5"
                 >
-                  <div className="pt-1 text-[rgb(var(--ei-violet-rgb)/0.78)]">
+                  <div className="pt-1">
                     <OrbitalVisual
                       variant={principle.icon}
                       size={28}
-                      className="opacity-80"
+                      className="opacity-90"
                     />
                   </div>
 
                   <div>
-                    <h3 className="font-structural text-[10px] uppercase tracking-[0.22em] ei-studio-text-tertiary">
+                    <h3 className="ei-type-studio-principle-title">
                       {principle.title}
                     </h3>
-                    <p className="mt-2 max-w-[32ch] font-structural text-[0.82rem] leading-[1.65] ei-studio-text-secondary">
+                    <p className="ei-type-studio-principle-body mt-2 max-w-[32ch]">
                       {principle.body}
                     </p>
                   </div>
@@ -213,17 +213,17 @@ export function Studio() {
                 >
                   <div
                     aria-hidden="true"
-                    className={`absolute inset-0 opacity-80 transition-opacity duration-700 group-hover:opacity-100 ${pillar.imageClass}`}
+                    className={`absolute inset-0 opacity-75 transition-opacity duration-700 group-hover:opacity-95 ${pillar.imageClass}`}
                   />
 
                   <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-[linear-gradient(180deg,rgb(var(--ei-void-rgb)/0.18),rgb(var(--ei-void-rgb)/0.86))]"
+                    className="absolute inset-0 bg-[linear-gradient(180deg,rgb(var(--ei-void-rgb)/0.28),rgb(var(--ei-void-rgb)/0.9))]"
                   />
 
                   <div className="relative z-10 flex min-h-[336px] flex-col justify-end">
                     <div className="mb-auto">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] ei-studio-text-tertiary">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--ei-color-text-muted)]">
                         {pillar.number}
                       </span>
 
@@ -231,16 +231,16 @@ export function Studio() {
                         <OrbitalVisual
                           variant={pillar.icon}
                           size={58}
-                          className="opacity-85"
+                          className="opacity-90"
                         />
                       </div>
                     </div>
 
-                    <h3 className="max-w-[10ch] font-editorial text-[clamp(1.7rem,2.7vw,2.45rem)] uppercase leading-[1.05] tracking-[0.08em] ei-studio-text-primary">
+                    <h3 className="ei-type-studio-pillar-title max-w-[10ch]">
                       {pillar.title}
                     </h3>
 
-                    <p className="mt-4 max-w-[31ch] font-structural text-[0.84rem] leading-[1.68] ei-studio-text-secondary">
+                    <p className="ei-type-studio-pillar-body mt-4 max-w-[31ch]">
                       {pillar.body}
                     </p>
 
@@ -275,17 +275,17 @@ export function Studio() {
 
               {process.map((step) => (
                 <article key={step.number} className="relative">
-                  <div className="font-editorial text-[clamp(3.2rem,7vw,5.4rem)] leading-none tracking-[-0.06em] ei-studio-process-title">
+                  <div className="ei-type-studio-process-number">
                     {step.number}
                   </div>
 
                   <span className="absolute left-0 top-[2.05rem] hidden h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.75)] shadow-[0_0_18px_rgb(var(--ei-violet-rgb)/0.75)] md:block" />
 
-                  <h3 className="mt-3 font-structural text-[0.72rem] uppercase tracking-[0.2em] ei-studio-process-body">
+                  <h3 className="ei-type-studio-process-title mt-3">
                     {step.title}
                   </h3>
 
-                  <p className="mt-3 max-w-[20ch] font-structural text-[0.78rem] leading-[1.6] ei-studio-text-secondary">
+                  <p className="ei-type-studio-process-body mt-3 max-w-[20ch]">
                     {step.body}
                   </p>
                 </article>
@@ -307,18 +307,14 @@ export function Studio() {
           <article className="ei-card ei-card-world mx-auto max-w-[1180px]">
             <Link to="/works/lumo" className="ei-card-world-link group">
               <div className="ei-card-world-media" aria-hidden="true">
-                <img
-                  src={lumoFeaturedBg}
-                  alt=""
-                  className="object-[62%_50%]"
-                />
+                <img src={lumoFeaturedBg} alt="" className="object-[62%_50%]" />
               </div>
 
               <div className="ei-card-studio-overlay" aria-hidden="true" />
 
               <div className="ei-card-world-copy">
                 <div>
-                  <span className="font-mono text-[10px] uppercase tracking-[0.24em] ei-studio-text-tertiary">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[var(--ei-color-text-muted)]">
                     Featured Work
                   </span>
 
@@ -326,11 +322,11 @@ export function Studio() {
                     LUMO
                   </p>
 
-                  <h2 className="mt-4 max-w-[11ch] font-editorial text-[clamp(2.05rem,4vw,3.75rem)] uppercase leading-[1.02] tracking-[0.08em] ei-studio-text-primary">
+                  <h2 className="ei-type-studio-feature-title mt-4 max-w-[11ch]">
                     A world built for overwhelmed humans.
                   </h2>
 
-                  <p className="mt-5 max-w-[38ch] font-structural text-[0.88rem] leading-[1.7] ei-studio-text-secondary">
+                  <p className="ei-type-studio-feature-body mt-5 max-w-[38ch]">
                     An emotionally intelligent app shaped by an identity system
                     built to calm cognitive noise through atmosphere, rhythm,
                     and restraint.
@@ -363,8 +359,8 @@ export function Studio() {
                 className="h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.82)] shadow-[0_0_22px_rgb(var(--ei-violet-rgb)/0.8)]"
               />
 
-              <p className="font-editorial text-[clamp(1.65rem,3vw,2.35rem)] leading-tight tracking-[-0.025em] ei-studio-text-primary">
-                Let's build something meaningful.
+              <p className="ei-type-studio-slim-cta">
+                Let&apos;s build something meaningful.
               </p>
             </div>
 
