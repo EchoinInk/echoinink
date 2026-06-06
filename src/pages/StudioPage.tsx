@@ -314,9 +314,9 @@ export function Studio() {
 
               <div className="ei-card-world-copy">
                 <div>
-                  <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[var(--ei-color-text-muted)]">
-                    Featured Work
-                  </span>
+                 <span className="ei-type-studio-label">
+  Featured Work
+</span>
 
                   <p className="mt-6 font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--ei-color-text-muted)]">
                     LUMO

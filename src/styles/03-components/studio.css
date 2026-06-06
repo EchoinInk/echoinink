@@ -162,4 +162,14 @@
     font-weight: 400;
     color: rgb(var(--ei-ice-white-rgb) / 0.88);
   }
+/* Label type */
+  .ei-type-studio-label {
+  font-family: var(--ei-font-structural);
+  font-size: 0.625rem;
+  line-height: 1.4;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: var(--ei-color-text-muted);
+}
 }
