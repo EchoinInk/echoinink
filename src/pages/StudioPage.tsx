@@ -296,52 +296,55 @@ export function Studio() {
       </motion.section>
 
       {/* FEATURED WORK */}
-      <motion.section
-        variants={fadeSoft}
-        initial="hidden"
-        whileInView="visible"
-        viewport={VIEWPORT.loose}
-        className="relative py-12 md:py-16"
-      >
-        <Container size="xl" className="relative z-10">
-          <article className="ei-card ei-card-world mx-auto max-w-[1180px]">
-            <Link to="/works/lumo" className="ei-card-world-link group">
-              <div className="ei-card-world-media" aria-hidden="true">
-                <img src={lumoFeaturedBg} alt="" className="object-[62%_50%]" />
-              </div>
+   {/* FEATURED WORK */}
+<motion.section
+  variants={fadeSoft}
+  initial="hidden"
+  whileInView="visible"
+  viewport={VIEWPORT.loose}
+  className="relative py-12 md:py-16"
+>
+  <Container size="xl" className="relative z-10">
+    <article className="ei-card ei-card-world mx-auto max-w-[1180px]">
+      <Link to="/works/lumo" className="ei-card-world-link group">
+        <div className="ei-card-world-media" aria-hidden="true">
+          <img
+            src={lumoFeaturedBg}
+            alt=""
+            className="object-[57%_50%]"
+          />
+        </div>
 
-              <div className="ei-card-studio-overlay" aria-hidden="true" />
+        <div className="ei-card-world-overlay" aria-hidden="true" />
 
-              <div className="ei-card-world-copy">
-                <div>
-                 <span className="ei-type-studio-label">
-  Featured Work
-</span>
+        <div className="ei-card-world-copy">
+          <div>
+            <span className="ei-type-studio-label">
+              Featured Work
+            </span>
 
-                  <p className="ei-type-studio-label mt-6">
-  LUMO
-</p>
+            <h2 className="ei-card-world-title mt-8 font-editorial text-[3.75rem] leading-[0.92] tracking-[-0.045em] md:text-[4.6rem] lg:text-[5.15rem]">
+              LUMO
+            </h2>
 
-                  <h2 className="ei-type-studio-feature-title mt-4 max-w-[11ch]">
-                    A world built for overwhelmed humans.
-                  </h2>
+            <p className="mt-5 max-w-[18ch] font-editorial text-[1.35rem] leading-[1.18] tracking-[-0.025em] text-[var(--ei-color-text-secondary)] md:text-[1.5rem]">
+              A world built for overwhelmed humans.
+            </p>
 
-                  <p className="ei-type-studio-feature-body mt-5 max-w-[38ch]">
-                    An emotionally intelligent app shaped by an identity system
-                    built to calm cognitive noise through atmosphere, rhythm,
-                    and restraint.
-                  </p>
-                </div>
+            <p className="ei-card-world-copy-text mt-7 font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em]">
+              An emotionally intelligent app shaped by an identity system built
+              to calm cognitive noise through atmosphere, rhythm, and restraint.
+            </p>
+          </div>
 
-                <span className="ei-card-action">
-                  View Case Study{" "}
-                  <span className="ei-card-action-arrow">→</span>
-                </span>
-              </div>
-            </Link>
-          </article>
-        </Container>
-      </motion.section>
+          <span className="ei-card-action">
+            View Case Study <span className="ei-card-action-arrow">→</span>
+          </span>
+        </div>
+      </Link>
+    </article>
+  </Container>
+</motion.section>
 
       {/* SLIM CTA */}
       <motion.section
