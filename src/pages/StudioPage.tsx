@@ -281,7 +281,7 @@ export function Studio() {
 
                   <span className="absolute left-0 top-[2.05rem] hidden h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.75)] shadow-[0_0_18px_rgb(var(--ei-violet-rgb)/0.75)] md:block" />
 
-                  <h3 className="ei-type-studio-process-title mt-3">
+                  <h3 className="ei-type-studio-process-title mt-4">
                     {step.title}
                   </h3>
 
