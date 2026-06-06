@@ -269,7 +269,7 @@
   color: var(--ei-type-color-secondary);
 }
 
-/* Studio: restore hierarchy after color cleanup */
+/* Studio readability pass */
 @layer base {
   /* Hero + major section titles */
   .ei-type-hero-home,
@@ -295,11 +295,12 @@
   .ei-type-hero-description,
   .ei-type-philosophy-body,
   .ei-type-studio-body,
-  .ei-type-studio-feature-subtitle {
+  .ei-type-studio-feature-subtitle,
+  .ei-type-footer-copy {
     color: var(--ei-color-text-secondary);
   }
 
-  /* Card/process body: readable supporting copy */
+  /* Make supporting text readable again */
   .ei-type-studio-card-body,
   .ei-type-studio-pillar-body,
   .ei-type-studio-principle-body,
@@ -308,7 +309,7 @@
   .ei-card-description,
   .text-card-body,
   .ei-body-small {
-    color: var(--ei-color-text-tertiary);
+    color: var(--ei-color-text-secondary);
   }
 
   /* Labels are muted, but not faint */
@@ -331,7 +332,6 @@
   }
 
   .ei-type-footer-label,
-  .ei-type-footer-copy,
   .ei-type-footer-meta,
   .ei-section-label {
     color: var(--ei-color-text-muted);

@@ -368,8 +368,7 @@ export function Studio() {
               />
 
               <p className="ei-type-studio-slim-cta">
-                Let's build something meaningful.<br />
-Not louder. <br />Not faster.<br />More true.
+                Let&apos;s build something meaningful.
               </p>
             </div>
 
