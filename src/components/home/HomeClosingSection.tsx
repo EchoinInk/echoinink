@@ -12,8 +12,8 @@ import {
 
 export function ClosingSection() {
   return (
-    <section className="relative isolate min-h-[300px] overflow-hidden bg-[#05070D] py-14 md:py-20">
-      <CtaOrbitalBackground />
+<section className="relative isolate min-h-[260px] overflow-hidden bg-[var(--ei-color-background-canvas)] py-8 md:py-12">
+        <CtaOrbitalBackground />
 
       {/* Soft vignette so the text stays readable */}
 
@@ -48,15 +48,15 @@ export function ClosingSection() {
         viewport={{ once: true, margin: "-50px" }}
       >
         <motion.span
-          variants={dissolveReveal}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
-          className="font-structural mb-3 block text-[10px] uppercase tracking-[0.28em] text-white/55 md:mb-4"
-        >
-          Begin
-        </motion.span>
+  variants={dissolveReveal}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
+  className="ei-type-label mb-3 block md:mb-4"
+>
+  Begin
+</motion.span>
 
         <motion.h2
           variants={blurEmergence}
