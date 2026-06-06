@@ -369,9 +369,8 @@ an interface shaped to calm cognitive noise through atmosphere, rhythm, and rest
               />
 
               <p className="ei-type-studio-slim-cta">
-                Let’s build something meaningful.
-Not louder. Not faster.
-More true.
+                Let's build something meaningful.<br />
+Not louder. <br />Not faster.<br />More true.
               </p>
             </div>
 
