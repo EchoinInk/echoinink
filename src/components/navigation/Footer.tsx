@@ -134,14 +134,14 @@ Exploring how identity, emotion, and reflective technology shape the next genera
   </div>
 
   <Link
-    to="/systems"
-    className="group inline-flex items-center gap-1.5 font-mono text-[10px] tracking-[0.14em] uppercase text-[var(--ei-violet)]/70 hover:text-[var(--ei-violet)] transition-colors duration-400"
-  >
-    Learn more about our future systems
-    <span className="group-hover:translate-x-0.5 transition-transform duration-400">
-      →
-    </span>
-  </Link>
+  to="/systems"
+  className="group inline-flex max-w-[34ch] items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-[var(--ei-violet)]/70 transition-colors duration-400 hover:text-[var(--ei-violet)]"
+>
+  <span>Learn more about our future systems</span>
+  <span className="shrink-0 transition-transform duration-400 group-hover:translate-x-0.5">
+    →
+  </span>
+</Link>
 </div>
           </div>
         </motion.div>
