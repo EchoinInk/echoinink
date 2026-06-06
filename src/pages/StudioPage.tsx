@@ -59,7 +59,7 @@ const pillars: Array<{
     href: "/identity",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_28%,rgb(var(--ei-violet-rgb)/0.22),transparent_38%),radial-gradient(circle_at_52%_62%,rgb(var(--ei-halo-blue-rgb)/0.08),transparent_54%)]",
-    icon: "constellation",
+    icon: "pulse",
   },
   {
     number: "02",
@@ -86,7 +86,7 @@ const pillars: Array<{
     href: "/worlds",
     imageClass:
       "bg-[radial-gradient(circle_at_35%_30%,rgb(var(--ei-violet-rgb)/0.2),transparent_38%),radial-gradient(circle_at_75%_62%,rgb(var(--ei-soft-neon-rgb)/0.11),transparent_50%)]",
-    icon: "orbit",
+    icon: "hinge",
   },
 ];
 
