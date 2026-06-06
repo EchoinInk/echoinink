@@ -12,8 +12,8 @@ import {
 
 export function ClosingSection() {
   return (
-<section className="relative isolate min-h-[260px] overflow-hidden bg-[var(--ei-color-background-void)] py-8 md:py-12">
-  <CtaOrbitalBackground />
+<section className="relative isolate min-h-[250px] overflow-hidden bg-[var(--ei-color-background-void)] pt-8 pb-10 md:pt-10 md:pb-12">
+    <CtaOrbitalBackground />
 
   <div
     aria-hidden="true"
@@ -33,7 +33,14 @@ export function ClosingSection() {
             "radial-gradient(circle, rgb(var(--ei-void-rgb) / 0.48) 0%, rgb(var(--ei-void-rgb) / 0.22) 45%, transparent 72%)",
           filter: "blur(10px)",
         }}
-      />
+      /><div
+  aria-hidden="true"
+  className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-20"
+  style={{
+    background:
+      "linear-gradient(to bottom, transparent 0%, var(--ei-color-background-void) 100%)",
+  }}
+/>
 
       <motion.div
         className="relative z-10 mx-auto max-w-3xl px-6 text-center"
