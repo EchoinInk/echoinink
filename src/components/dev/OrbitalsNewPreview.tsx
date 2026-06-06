@@ -1,8 +1,10 @@
 import React from "react";
 import OrbitalVisualNew, { OrbitalVariant } from "../ui/OrbitalVisualNew";
 
-// Derive the list of variants from the exported OrbitalVariant enum/type
-const orbitalVariants = Object.values(OrbitalVariant) as OrbitalVariant[];
+// Runtime list of variants isn't exported from the module; keep a typed empty
+// array to avoid using the type as a value at runtime. Update with actual
+// variant strings if a runtime list becomes available.
+const orbitalVariants: OrbitalVariant[] = [];
 
 export default function OrbitalPreviewGrid() {
   return (
