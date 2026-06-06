@@ -58,8 +58,7 @@ export default function Footer() {
     ease: EASE_LUXURY,
     delay: 0.1,
   }}
-  className="pt-10 pb-0 md:pt-12"
->
+className="pt-10 pb-0 md:pt-10">
           {/* 4-column grid */}
 <div className="grid grid-cols-2 items-start gap-8 md:grid-cols-[1.1fr_0.7fr_0.85fr_1.05fr] md:gap-8 lg:gap-10">            <div className="col-span-2 md:col-span-1">
               <span className="font-structural text-[11px] tracking-[0.18em] uppercase text-white/75 block mb-3">
@@ -75,7 +74,7 @@ export default function Footer() {
               <span className="font-mono text-[9px] tracking-[0.22em] uppercase text-white/60 block mb-4">
                 Navigation
               </span>
-              <ul className="space-y-2.5">
+              <ul className="space-y-1.5">
                 {navLinks.map((link) => (
                   <li key={link.label}>
                     <Link
@@ -158,7 +157,7 @@ Exploring how identity, emotion, and reflective technology shape the next genera
             ease: EASE_LUXURY,
             delay: 0.2,
           }}
-className="pt-4 pb-3"
+className="pt-3 pb-2"
         >
           <div
             aria-hidden="true"
