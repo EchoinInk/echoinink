@@ -47,24 +47,24 @@ export function OrbitalVisual({
 }: OrbitalVisualProps) {
   const c = size / 2;
   const r = c - 4;
-  const photon = 'rgb(var(--ei-ice-white-rgb) / 0.88)';
-const photonSoft = 'rgb(var(--ei-ice-white-rgb) / 0.48)';
-const photonDim = 'rgb(var(--ei-ice-white-rgb) / 0.52)';
+const photon = "rgb(var(--ei-ice-white-rgb) / 0.76)";
+const photonSoft = "rgb(var(--ei-ice-white-rgb) / 0.42)";
+const photonDim = "rgb(var(--ei-ice-white-rgb) / 0.3)";
 
-const cobalt = 'rgb(73 133 253 / 0.92)';
-const cobaltSoft = 'rgb(73 133 253 / 0.52)';
-const cobaltDim = 'rgb(73 133 253 / 0.48)';
+const cobalt = "rgb(var(--ei-halo-blue-rgb) / 0.72)";
+const cobaltSoft = "rgb(var(--ei-halo-blue-rgb) / 0.46)";
+const cobaltDim = "rgb(var(--ei-halo-blue-rgb) / 0.34)";
 
-const orbitBlue = 'rgb(11 13 42 / 0.72)';
-const orbitBlueSoft = 'rgb(11 13 42 / 0.42)';
+const orbitBlue = "rgb(var(--ei-midnight-rgb) / 0.68)";
+const orbitBlueSoft = "rgb(var(--ei-midnight-rgb) / 0.38)";
 
-const violet = 'rgb(113 7 234 / 0.82)';
-const violetSoft = 'rgb(221 18 203 / 0.78)';
-const violetDim = 'rgb(113 7 234 / 0.54)';
+const violet = "rgb(var(--ei-violet-rgb) / 0.68)";
+const violetSoft = "rgb(var(--ei-violet-rgb) / 0.52)";
+const violetDim = "rgb(var(--ei-violet-rgb) / 0.36)";
 
-const magenta = 'rgb(221 18 203 / 0.78)';
-const magentaSoft = 'rgb(221 18 203 / 0.92)';
-const orchid = 'rgb(221 18 203 / 0.72)';
+const magenta = "rgb(var(--ei-echo-magenta-rgb) / 0.58)";
+const magentaSoft = "rgb(var(--ei-echo-magenta-rgb) / 0.5)";
+const orchid = "rgb(var(--ei-echo-magenta-rgb) / 0.46)";
 
  const icons: Record<OrbitalVariant, React.ReactElement> = {
 
@@ -934,16 +934,14 @@ ember: (
       style={{ width: size, height: size }}
     >
       <div
-        aria-hidden="true"
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background:
-            'radial-gradient(circle, rgb(73 133 253 / 0.13) 0%, rgb(113 7 234 / 0.09) 42%, rgb(221 18 203 / 0.05) 62%, transparent 72%)',
-          filter: 'blur(7px)',
-          borderRadius: '50%',
-        }}
-      />
-      {icons[variant]}
-    </div>
+  aria-hidden="true"
+  className="absolute inset-0 pointer-events-none"
+  style={{
+    background:
+      "radial-gradient(circle, rgb(var(--ei-halo-blue-rgb) / 0.08) 0%, rgb(var(--ei-violet-rgb) / 0.055) 44%, rgb(var(--ei-echo-magenta-rgb) / 0.035) 64%, transparent 74%)",
+    filter: "blur(7px)",
+    borderRadius: "50%",
+  }}
+/>
   );
 }
