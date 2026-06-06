@@ -1,4 +1,4 @@
-import OrbitalVisualNew from "./OrbitalVisualNew";
+import OrbitalVisualNew from "../OrbitalVisualNew";
 import { ORBITALS } from "./orbitals-data";
 
 export default function OrbitalPreviewGridNew() {
