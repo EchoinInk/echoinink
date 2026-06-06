@@ -172,7 +172,7 @@ export function Studio() {
 >
  {"We design with\n"}
   <em className="ei-type-studio-philosophy-emphasis">feeling</em>,{" "}
-  <em className="ei-type-studio-philosophy-emphasis">intention</em>, and{" "}
+  <em className="ei-type-studio-philosophy-emphasis">intention</em>,<br /> and{" "}
   <em className="ei-type-studio-philosophy-emphasis">clarity</em>.
 </motion.h2>
               </motion.h2>
