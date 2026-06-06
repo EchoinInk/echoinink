@@ -83,28 +83,27 @@ const process = [
   {
     number: "01",
     title: "Discover",
-    body: "We uncover the signal beneath the surfac — the emotional and structural truth of the work.
-",
+    body: "We uncover the signal beneath the surface — the emotional and structural truth of the work.",
   },
   {
     number: "02",
     title: "Strategize",
-    body: "We define the emotional and strategic direction.",
+    body: "We define the direction: the feeling, the framework, the identity architecture.",
   },
   {
     number: "03",
     title: "Create",
-    body: "We shape the system, story, and visual world.",
+    body: "We shape the system, story, and visual world with clarity and intention.",
   },
   {
     number: "04",
     title: "Refine",
-    body: "We polish every touchpoint until it feels inevitable.",
+    body: "We polish until the work feels inevitable — nothing extra, nothing missing.",
   },
   {
     number: "05",
     title: "Launch",
-    body: "We deliver a world built to resonate.",
+    body: "We deliver a world built to resonate, internally coherent and externally unmistakable",
   },
 ] as const;
 
