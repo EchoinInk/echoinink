@@ -9,6 +9,7 @@ import {
 } from "framer-motion";
 
 import lumoinkdrift from "@/assets/imagery/sections/lumo-featured-bg.webp";
+import lumoinkdriftMobile from "@/assets/imagery/sections/lumo-featured-mobile.webp";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import {
