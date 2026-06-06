@@ -94,15 +94,16 @@
      Philosophy / manifesto section type
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-manifesto,
-  .ei-type-studio-philosophy {
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(2.45rem, 4.05vw, 4.1rem);
-    line-height: 1.02;
-    letter-spacing: -0.035em;
-    font-weight: 400;
-    color: var(--ei-color-text-primary);
-  }
+.ei-type-studio-manifesto,
+.ei-type-studio-philosophy {
+  font-family: var(--ei-font-editorial);
+  font-size: clamp(1.65rem, 2.6vw, 2.55rem);
+  line-height: 1.14;
+  letter-spacing: -0.028em;
+  font-weight: 400;
+  color: var(--ei-color-text-primary);
+}
+
 
   .ei-type-studio-philosophy-emphasis {
     font-style: italic;
