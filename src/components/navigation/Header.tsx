@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+
 import { DURATION } from "@/lib/motion-cinematic";
 import wordmark from "@/assets/brand/marks/echo-in-ink-wordmark.png";
 
@@ -24,10 +25,15 @@ export function Header() {
       <motion.header
         initial={{ opacity: 0, y: -12 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: DURATION.slower, ease: "easeOut", delay: 0.3 }}
+        transition={{
+          duration: DURATION.slower,
+          ease: "easeOut",
+          delay: 0.3,
+        }}
         className="fixed left-0 top-0 z-50 w-full px-6 py-4 md:px-10 md:py-7 lg:px-12"
       >
         <div
+          aria-hidden="true"
           className="pointer-events-none absolute inset-0 backdrop-blur-[1px]"
           style={{
             background:
@@ -105,12 +111,15 @@ export function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen((open) => !open)}
-            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-label={
+              menuOpen ? "Close navigation menu" : "Open navigation menu"
+            }
             aria-expanded={menuOpen}
             className="
-              flex min-h-[44px] min-w-[60px] items-center justify-center
-              font-structural text-[11px] font-medium uppercase tracking-[0.16em]
-              text-white/78 transition-colors duration-500 hover:text-white md:hidden
+              flex min-h-[44px] min-w-[60px] items-center justify-end
+              font-structural text-[11px] font-medium uppercase tracking-[0.18em]
+              text-white/78 transition-colors duration-500
+              hover:text-white md:hidden
             "
           >
             {menuOpen ? "Close" : "Menu"}
@@ -118,32 +127,33 @@ export function Header() {
         </nav>
       </motion.header>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Sheet */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
             key="mobile-menu"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            initial={{ opacity: 0, y: -14 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
             transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-className="
-  fixed left-0 right-0 top-0 z-40
-  max-h-[82vh] overflow-y-auto
-  rounded-b-[28px]
-  border-b border-white/[0.1]
-  bg-[rgb(var(--ei-void-rgb)/0.96)]
-  shadow-[0_32px_120px_rgb(0_0_0/0.58)]
-  backdrop-blur-xl
-  md:hidden
-"          >
+            className="
+              fixed left-0 right-0 top-0 z-40
+              max-h-[82vh] overflow-y-auto
+              rounded-b-[28px]
+              border-b border-white/[0.1]
+              bg-[rgb(var(--ei-void-rgb)/0.96)]
+              shadow-[0_32px_120px_rgb(0_0_0/0.58)]
+              backdrop-blur-xl
+              md:hidden
+            "
+          >
             {/* Atmosphere */}
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-0"
               style={{
                 background:
-                  "radial-gradient(ellipse 80% 50% at 72% 18%, rgb(var(--ei-violet-rgb) / 0.18) 0%, transparent 62%), radial-gradient(ellipse 60% 42% at 22% 82%, rgb(var(--ei-halo-blue-rgb) / 0.12) 0%, transparent 64%)",
+                  "radial-gradient(ellipse 80% 50% at 72% 18%, rgb(var(--ei-violet-rgb) / 0.16) 0%, transparent 62%), radial-gradient(ellipse 60% 42% at 22% 82%, rgb(var(--ei-halo-blue-rgb) / 0.1) 0%, transparent 64%)",
               }}
             />
 
@@ -152,18 +162,18 @@ className="
               className="pointer-events-none absolute inset-0"
               style={{
                 background:
-                  "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.72) 0%, rgb(var(--ei-void-rgb) / 0.94) 100%)",
+                  "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.74) 0%, rgb(var(--ei-void-rgb) / 0.96) 100%)",
               }}
             />
 
             <motion.div
-              initial={{ opacity: 0, y: 18, filter: "blur(10px)" }}
+              initial={{ opacity: 0, y: 16, filter: "blur(10px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              exit={{ opacity: 0, y: 12, filter: "blur(8px)" }}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-className="relative z-10 flex flex-col px-6 pb-8 pt-24"
+              exit={{ opacity: 0, y: 10, filter: "blur(8px)" }}
+              transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+              className="relative z-10 flex flex-col px-6 pb-8 pt-24"
             >
-              <span className="mb-8 font-structural text-[10px] uppercase tracking-[0.28em] text-white/38">
+              <span className="mb-6 font-structural text-[10px] uppercase tracking-[0.28em] text-white/38">
                 Navigation
               </span>
 
@@ -174,12 +184,12 @@ className="relative z-10 flex flex-col px-6 pb-8 pt-24"
                   return (
                     <motion.div
                       key={item.label}
-                      initial={{ opacity: 0, y: 14 }}
+                      initial={{ opacity: 0, y: 12 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{
-                        duration: 0.55,
+                        duration: 0.5,
                         ease: [0.22, 1, 0.36, 1],
-                        delay: 0.08 + index * 0.045,
+                        delay: 0.06 + index * 0.04,
                       }}
                     >
                       <Link
@@ -187,8 +197,8 @@ className="relative z-10 flex flex-col px-6 pb-8 pt-24"
                         onClick={closeMenu}
                         className={`
                           group relative flex items-center justify-between
-                          border-b border-white/[0.07] py-5
-                          font-editorial text-[2rem] leading-none tracking-[-0.035em]
+                          border-b border-white/[0.07] py-4
+                          font-editorial text-[1.55rem] leading-none tracking-[-0.03em]
                           transition-colors duration-500
                           ${
                             active
@@ -201,7 +211,7 @@ className="relative z-10 flex flex-col px-6 pb-8 pt-24"
 
                         <span
                           className={`
-                            font-structural text-[0.7rem] uppercase tracking-[0.2em]
+                            font-structural text-[0.65rem] uppercase tracking-[0.2em]
                             transition-all duration-500
                             ${
                               active
@@ -228,18 +238,18 @@ className="relative z-10 flex flex-col px-6 pb-8 pt-24"
                 })}
               </div>
 
-              <div className="mt-auto pt-10">
+              <div className="pt-7">
                 <Link
                   to="/contact"
                   onClick={closeMenu}
                   className="
-                    inline-flex min-h-[48px] w-full items-center justify-center rounded-full
-                    border border-[rgb(var(--ei-halo-blue-rgb)/0.26)]
-                    bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.72),rgb(var(--ei-void-rgb)/0.92))]
-                    px-6 py-4
+                    inline-flex min-h-[44px] w-full items-center justify-center rounded-full
+                    border border-[rgb(var(--ei-halo-blue-rgb)/0.24)]
+                    bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.64),rgb(var(--ei-void-rgb)/0.9))]
+                    px-6 py-3
                     font-structural text-[10px] font-medium uppercase tracking-[0.2em]
-                    text-white/88
-                    shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.08),0_0_28px_rgb(var(--ei-halo-blue-rgb)/0.09)]
+                    text-white/86
+                    shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.07),0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.075)]
                     transition-all duration-500
                     hover:border-[rgb(var(--ei-halo-blue-rgb)/0.42)]
                     hover:text-white
@@ -248,8 +258,9 @@ className="relative z-10 flex flex-col px-6 pb-8 pt-24"
                   Start a Conversation
                 </Link>
 
-                <p className="mt-5 max-w-[32ch] font-structural text-[0.75rem] leading-[1.7] text-white/42">
-                  Designing worlds that hold meaning, atmosphere, and emotional intelligence.
+                <p className="mt-4 max-w-[32ch] font-structural text-[0.72rem] leading-[1.65] text-white/42">
+                  Designing worlds that hold meaning, atmosphere, and emotional
+                  intelligence.
                 </p>
               </div>
             </motion.div>
