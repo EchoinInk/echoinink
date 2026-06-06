@@ -157,16 +157,13 @@ export function Studio() {
     variants={blurEmergence}
     className="ei-type-philosophy-heading mt-6 mb-5 max-w-[20ch] whitespace-pre-line"
   >
-    {"We design from the inner signal outward —\nturning feeling, clarity, and atmosphere into form.\n\nEverything we create begins in the unseen layers: memory, intention, emotional architecture.\n\nFrom there, we build worlds that hold meaning."}
+    {"We design from the inner signal outward —\nturning feeling, clarity, and atmosphere into form."}
   </motion.h2>
 
   <motion.p
     variants={driftUp}
     className="ei-type-philosophy-body max-w-[38ch]"
-  >
-    Our work begins beneath the surface: with emotion, clarity, memory,
-    and atmosphere. From there, we shape identities and digital worlds that
-    feel considered before they are understood.
+  >Everything we create begins in the unseen layers: memory, intention, emotional architecture. From there, we build worlds that hold meaning.
   </motion.p>
 </motion.div>
 
