@@ -152,7 +152,7 @@ export function Studio() {
             <motion.div variants={driftUp}>
               <SectionLabel>Our Manifesto</SectionLabel>
 
-              <blockquote className="mt-7 max-w-[18ch] font-editorial text-[clamp(2.05rem,4vw,4rem)] leading-[1.08] tracking-[-0.035em] text-[var(--ei-color-text-primary)]">
+              <blockquote className="mt-7 max-w-[18ch] font-editorial text-[clamp(2.05rem,4vw,4rem)] leading-[1.08] tracking-[-0.035em] ei-studio-manifesto-quote">
                 “We design from the inner signal outward — turning feeling,
                 clarity, and atmosphere into form.”
               </blockquote>
@@ -176,10 +176,10 @@ export function Studio() {
                   </div>
 
                   <div>
-                    <h3 className="font-structural text-[10px] uppercase tracking-[0.22em] text-[var(--ei-color-text-tertiary)]">
+                    <h3 className="font-structural text-[10px] uppercase tracking-[0.22em] ei-studio-text-tertiary">
                       {principle.title}
                     </h3>
-                    <p className="mt-2 max-w-[32ch] font-structural text-[0.82rem] leading-[1.65] text-[var(--ei-color-text-secondary)]">
+                    <p className="mt-2 max-w-[32ch] font-structural text-[0.82rem] leading-[1.65] ei-studio-text-secondary">
                       {principle.body}
                     </p>
                   </div>
@@ -223,7 +223,7 @@ export function Studio() {
 
                   <div className="relative z-10 flex min-h-[336px] flex-col justify-end">
                     <div className="mb-auto">
-                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-[var(--ei-color-text-tertiary)]">
+                      <span className="font-mono text-[10px] uppercase tracking-[0.22em] ei-studio-text-tertiary">
                         {pillar.number}
                       </span>
 
@@ -236,11 +236,11 @@ export function Studio() {
                       </div>
                     </div>
 
-                    <h3 className="max-w-[10ch] font-editorial text-[clamp(1.7rem,2.7vw,2.45rem)] uppercase leading-[1.05] tracking-[0.08em] text-[var(--ei-color-text-primary)]">
+                    <h3 className="max-w-[10ch] font-editorial text-[clamp(1.7rem,2.7vw,2.45rem)] uppercase leading-[1.05] tracking-[0.08em] ei-studio-text-primary">
                       {pillar.title}
                     </h3>
 
-                    <p className="mt-4 max-w-[31ch] font-structural text-[0.84rem] leading-[1.68] text-[var(--ei-color-text-secondary)]">
+                    <p className="mt-4 max-w-[31ch] font-structural text-[0.84rem] leading-[1.68] ei-studio-text-secondary">
                       {pillar.body}
                     </p>
 
@@ -275,17 +275,17 @@ export function Studio() {
 
               {process.map((step) => (
                 <article key={step.number} className="relative">
-                  <div className="font-editorial text-[clamp(3.2rem,7vw,5.4rem)] leading-none tracking-[-0.06em] text-[rgb(var(--ei-moonlit-rgb)/0.13)]">
+                  <div className="font-editorial text-[clamp(3.2rem,7vw,5.4rem)] leading-none tracking-[-0.06em] ei-studio-process-title">
                     {step.number}
                   </div>
 
                   <span className="absolute left-0 top-[2.05rem] hidden h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.75)] shadow-[0_0_18px_rgb(var(--ei-violet-rgb)/0.75)] md:block" />
 
-                  <h3 className="mt-3 font-structural text-[0.72rem] uppercase tracking-[0.2em] text-[var(--ei-color-text-primary)]">
+                  <h3 className="mt-3 font-structural text-[0.72rem] uppercase tracking-[0.2em] ei-studio-process-body">
                     {step.title}
                   </h3>
 
-                  <p className="mt-3 max-w-[20ch] font-structural text-[0.78rem] leading-[1.6] text-[var(--ei-color-text-secondary)]">
+                  <p className="mt-3 max-w-[20ch] font-structural text-[0.78rem] leading-[1.6] ei-studio-text-secondary">
                     {step.body}
                   </p>
                 </article>
@@ -314,11 +314,11 @@ export function Studio() {
                 />
               </div>
 
-              <div className="ei-card-world-overlay" aria-hidden="true" />
+              <div className="ei-card-studio-overlay" aria-hidden="true" />
 
               <div className="ei-card-world-copy">
                 <div>
-                  <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-[var(--ei-color-text-tertiary)]">
+                  <span className="font-mono text-[10px] uppercase tracking-[0.24em] ei-studio-text-tertiary">
                     Featured Work
                   </span>
 
@@ -326,11 +326,11 @@ export function Studio() {
                     LUMO
                   </p>
 
-                  <h2 className="mt-4 max-w-[11ch] font-editorial text-[clamp(2.05rem,4vw,3.75rem)] uppercase leading-[1.02] tracking-[0.08em] text-[var(--ei-color-text-primary)]">
+                  <h2 className="mt-4 max-w-[11ch] font-editorial text-[clamp(2.05rem,4vw,3.75rem)] uppercase leading-[1.02] tracking-[0.08em] ei-studio-text-primary">
                     A world built for overwhelmed humans.
                   </h2>
 
-                  <p className="mt-5 max-w-[38ch] font-structural text-[0.88rem] leading-[1.7] text-[var(--ei-color-text-secondary)]">
+                  <p className="mt-5 max-w-[38ch] font-structural text-[0.88rem] leading-[1.7] ei-studio-text-secondary">
                     An emotionally intelligent app shaped by an identity system
                     built to calm cognitive noise through atmosphere, rhythm,
                     and restraint.
@@ -363,7 +363,7 @@ export function Studio() {
                 className="h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.82)] shadow-[0_0_22px_rgb(var(--ei-violet-rgb)/0.8)]"
               />
 
-              <p className="font-editorial text-[clamp(1.65rem,3vw,2.35rem)] leading-tight tracking-[-0.025em] text-[var(--ei-color-text-primary)]">
+              <p className="font-editorial text-[clamp(1.65rem,3vw,2.35rem)] leading-tight tracking-[-0.025em] ei-studio-text-primary">
                 Let's build something meaningful.
               </p>
             </div>
