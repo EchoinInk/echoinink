@@ -2,20 +2,12 @@ import { Button } from "../ui/Button";
 
 export function HeroCTA() {
   return (
-    <div className="mt-8 md:mt-12 flex flex-wrap items-center gap-3 md:gap-6">
-      {/* ═══════════════════════════════════════════════════════════════
-          PRIMARY CTA — Start a Project
-          Stronger contrast, confident border, clearer hover response
-          ═══════════════════════════════════════════════════════════════ */}
-      <Button to="/contact" variant="primary">
+    <div className="mt-8 flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center md:mt-12 md:gap-6">
+      <Button to="/contact" variant="primary" className="w-full sm:w-auto">
         Start a Conversation
       </Button>
 
-      {/* ═══════════════════════════════════════════════════════════════
-          SECONDARY CTA — View Work
-          Softer presence, editorial invitation
-          ═══════════════════════════════════════════════════════════════ */}
-      <Button to="/works" variant="secondary">
+      <Button to="/works" variant="secondary" className="w-full sm:w-auto">
         View the Work
       </Button>
     </div>
