@@ -85,10 +85,9 @@ export function ClosingSection() {
             ease: EASE_LUXURY,
             delay: 0.1,
           }}
-          className="mx-auto mb-6 max-w-[38ch] font-[var(--ei-font-copy)] text-[15px] leading-[1.8] tracking-[-0.006em] text-[var(--ei-type-color-secondary)] md:mb-8 md:text-[16px]"
+          className="mx-auto mb-6 max-w-[40ch] font-[var(--ei-font-copy)] text-[15px] leading-[1.8] tracking-[-0.006em] text-[var(--ei-type-color-secondary)] md:mb-8 md:text-[16px]"
         >
-          Let’s build something meaningful — atmospheric, resonant, and impossible to forget.
-
+          Let's build something meaningful — atmospheric, resonant, and impossible to forget.
         </motion.p>
 
         <motion.div
