@@ -152,7 +152,7 @@ export function Studio() {
             <motion.div variants={driftUp}>
               <SectionLabel>Our Manifesto</SectionLabel>
 
-              <blockquote className="ei-type-philosophy-heading mb-5 whitespace-pre-line">
+              <blockquote className="ei-type-studio-manifesto mt-7 max-w-[18ch]">
                 “We design from the inner signal outward — turning feeling,
                 clarity, and atmosphere into form.”
               </blockquote>
