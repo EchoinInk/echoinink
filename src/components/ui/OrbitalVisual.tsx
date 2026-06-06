@@ -46,9 +46,10 @@ export function OrbitalVisual({
 }: OrbitalVisualProps) {
   const c = size / 2;
   const r = c - 4;
-  const photon = "rgb(var(--ei-ice-white-rgb) / 0.76)";
-  const photonSoft = "rgb(var(--ei-ice-white-rgb) / 0.42)";
-  const photonDim = "rgb(var(--ei-ice-white-rgb) / 0.3)";
+  const photon = "rgb(var(--ei-ice-white) / 0.95)";
+const photonSoft = "rgb(var(--ei-moonlit) / 0.75)";
+const photonDim = "rgb(var(--ei-moonlit) / 0.55)";
+
 
   const cobalt = "rgb(var(--ei-halo-blue-rgb) / 0.72)";
   const cobaltSoft = "rgb(var(--ei-halo-blue-rgb) / 0.46)";
