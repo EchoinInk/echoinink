@@ -51,16 +51,18 @@ const photonSoft = "rgb(var(--ei-moonlit) / 0.75)";
 const photonDim = "rgb(var(--ei-moonlit) / 0.55)";
 
 
-  const cobalt = "rgb(var(--ei-halo-blue-rgb) / 0.72)";
-  const cobaltSoft = "rgb(var(--ei-halo-blue-rgb) / 0.46)";
-  const cobaltDim = "rgb(var(--ei-halo-blue-rgb) / 0.34)";
+ const cobalt = "rgb(var(--ei-electric-blue) / 0.9)";
+const cobaltSoft = "rgb(var(--ei-halo-blue) / 0.75)";
+const cobaltDim = "rgb(var(--ei-halo-blue) / 0.55)";
 
-  const orbitBlue = "rgb(var(--ei-midnight-rgb) / 0.68)";
-  const orbitBlueSoft = "rgb(var(--ei-midnight-rgb) / 0.38)";
 
-  const violet = "rgb(var(--ei-violet-rgb) / 0.68)";
-  const violetSoft = "rgb(var(--ei-violet-rgb) / 0.52)";
-  const violetDim = "rgb(var(--ei-violet-rgb) / 0.36)";
+  const violet = "rgb(var(--ei-violet) / 0.85)";
+const violetSoft = "rgb(var(--ei-soft-neon) / 0.7)";
+const violetDim = "rgb(var(--ei-soft-neon) / 0.5)";
+
+const magenta = "rgb(var(--ei-echo-magenta) / 0.85)";
+const magentaSoft = "rgb(var(--ei-soft-neon) / 0.65)";
+
 
   const magenta = "rgb(var(--ei-echo-magenta-rgb) / 0.58)";
   const magentaSoft = "rgb(var(--ei-echo-magenta-rgb) / 0.5)";
