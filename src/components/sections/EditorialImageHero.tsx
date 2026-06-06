@@ -45,10 +45,7 @@ export function EditorialImageHero({
   const isIntimate = variant === "intimate";
   const isStudio = variant === "studio";
 
-  const headingClass = isIntimate
-  ? "font-editorial max-w-[24ch] whitespace-pre-line text-[clamp(1.85rem,3.35vw,2.75rem)] leading-[1.12] tracking-[-0.025em] text-[rgb(var(--ei-ice-white-rgb)/0.94)]"
-  : "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
-
+  const headingClass = "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
   const bodyClass = isIntimate
   ? "ei-type-hero-description max-w-[42ch]"
   : "ei-type-hero-description max-w-[46ch]";
