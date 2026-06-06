@@ -1,6 +1,6 @@
 import React from "react";
 import { OrbitalVisualNew } from "@components/dev/OrbitalVisualNew";
-import { ORBITALS } from "@components/dev/OrbitalData";
+import { orbitalVariants } from "@components/ui/OrbitalVisualNew";
 
 export default function OrbitalPreviewGrid() {
   return (
@@ -13,9 +13,9 @@ export default function OrbitalPreviewGrid() {
         background: "#080718",
       }}
     >
-      {ORBITALS.map((orbital) => (
+      {orbitalVariants.map((variant) => (
         <div
-          key={orbital.variant}
+          key={variant}
           style={{
             display: "flex",
             flexDirection: "column",
@@ -26,7 +26,7 @@ export default function OrbitalPreviewGrid() {
             border: "1px solid rgba(255,255,255,0.05)",
           }}
         >
-          <OrbitalVisualNew variant={orbital.variant} size={96} />
+          <OrbitalVisualNew variant={variant} size={96} />
 
           <div
             style={{
@@ -37,7 +37,7 @@ export default function OrbitalPreviewGrid() {
               textAlign: "center",
             }}
           >
-            {orbital.name}
+            {variant}
           </div>
         </div>
       ))}
