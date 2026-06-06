@@ -51,9 +51,9 @@ export function LumoCaseStudyTeaser() {
 
   return (
     <Section
-      spacing="none"
-      className="relative overflow-hidden pt-6 pb-8 md:pt-8 md:pb-10"
-    >
+  spacing="none"
+  className="relative overflow-hidden pt-6 pb-2 md:pt-8 md:pb-4"
+>
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
