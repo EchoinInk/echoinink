@@ -40,7 +40,7 @@ const contactBlocks = [
     title: "Let's Connect",
     icon: 'send',
     lines: [
-      <a key="email" href="mailto:hello@echoin.ink" className="text-white/78 hover:text-white/95 transition-colors duration-500">
+      <a key="email" href="mailto:hello@echoin.ink" className="ei-type-color-accent transition-colors duration-500 hover:text-[var(--ei-color-text-primary)]">
         hello@echoin.ink
       </a>,
       'Auckland, New Zealand',
@@ -209,7 +209,7 @@ export function Contact() {
             <div className="max-w-[680px]">
               <motion.div variants={driftUp} className="max-w-[680px] text-left md:pl-10 md:-translate-y-[2vh] lg:pl-14">
                 <div className="mb-3 flex items-center gap-4 md:mb-5">
-                  <span className="font-structural text-[11px] uppercase tracking-[0.2em] text-white/60">
+                  <span className="ei-type-color-muted font-structural text-[11px] uppercase tracking-[0.2em]">
                     Contact
                   </span>
                   <div
@@ -222,16 +222,16 @@ export function Contact() {
                 </div>
 
                 <h1
-                  className="font-editorial max-w-[680px] pt-8 text-[2.25rem] leading-[1.06] tracking-tight text-white/92 max--md:leading-[1.12] md:pt-12 md:text-[3.1rem] lg:text-[3.7rem]"
+                  className="ei-type-color-primary font-editorial max-w-[680px] pt-8 text-[2.25rem] leading-[1.06] tracking-tight max--md:leading-[1.12] md:pt-12 md:text-[3.1rem] lg:text-[3.7rem]"
                   style={{
                     textShadow: '0 0 90px rgb(var(--ei-violet-rgb) / 0.08)',
                   }}
                 >
-                  Let's build <span className="inline-flex flex-wrap items-baseline gap-x-[0.14em] md:flex-nowrap md:whitespace-nowrap">something <em className="font-normal italic text-[rgb(var(--ei-moonlit-rgb)/0.9)]">meaningful.</em></span>
+                  Let's build <span className="inline-flex flex-wrap items-baseline gap-x-[0.14em] md:flex-nowrap md:whitespace-nowrap">something <em className="ei-type-color-secondary font-normal italic">meaningful.</em></span>
                 </h1>
 
                 <p
-                  className="mt-5 max-w-[42ch] font-structural text-[14px] leading-[1.65] text-white/84 md:mt-6 md:max-w-[46ch] md:text-[15px]"
+                  className="ei-type-color-secondary mt-5 max-w-[42ch] font-structural text-[14px] leading-[1.65] md:mt-6 md:max-w-[46ch] md:text-[15px]"
                   style={{ letterSpacing: '0.005em' }}
                 >
                   Share a little about your project and I'll get back to you within two days.
@@ -256,14 +256,14 @@ export function Contact() {
                   key={block.title}
                   className="grid grid-cols-[56px_1fr] gap-5 border-white/[0.08] pb-9 md:border-b md:pt-9 first:md:pt-2 last:md:border-b-0"
                 >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[rgb(var(--ei-moonlit-rgb)/0.18)] text-[rgb(var(--ei-moonlit-rgb)/0.82)] shadow-[inset_0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.035)] transition-colors duration-500 hover:border-white/25 hover:text-white">
+                  <span className="ei-type-color-accent flex h-12 w-12 items-center justify-center rounded-full border border-[rgb(var(--ei-moonlit-rgb)/0.18)] shadow-[inset_0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.035)] transition-colors duration-500 hover:border-white/25 hover:text-[var(--ei-color-text-primary)]">
                     <ContactIcon name={block.icon} />
                   </span>
                   <div>
-                    <h2 className="font-mono text-[10px] font-medium uppercase tracking-[0.24em] text-white/78">
+                    <h2 className="ei-type-color-primary font-mono text-[10px] font-medium uppercase tracking-[0.24em]">
                       {block.title}
                     </h2>
-                    <div className="mt-5 space-y-2 font-structural text-[0.95rem] leading-[1.45] text-white/64">
+                    <div className="ei-type-color-tertiary mt-5 space-y-2 font-structural text-[0.95rem] leading-[1.45]">
                       {block.lines.map((line, lineIndex) => (
                         <p key={`${block.title}-${lineIndex}`} className={index === 2 ? 'max-w-[26ch] leading-[1.7]' : ''}>
                           {line}
@@ -279,10 +279,10 @@ export function Contact() {
           <motion.div variants={fadeSoft}>
             {formState === 'success' ? (
               <div className="min-h-[420px] border border-white/[0.08] bg-white/[0.015] px-8 py-16 text-center backdrop-blur-sm md:px-14">
-                <p className="font-editorial text-[clamp(2rem,4vw,3.4rem)] leading-tight text-white/88">
+                <p className="ei-type-color-primary font-editorial text-[clamp(2rem,4vw,3.4rem)] leading-tight">
                   Thank you. Your message has been received.
                 </p>
-                <p className="mx-auto mt-6 max-w-[360px] font-structural text-[0.98rem] leading-[1.8] text-white/55">
+                <p className="ei-type-color-muted mx-auto mt-6 max-w-[360px] font-structural text-[0.98rem] leading-[1.8]">
                   I will be in touch shortly with a considered response.
                 </p>
               </div>
@@ -360,13 +360,13 @@ export function Contact() {
                     type="submit"
                     variant="primary"
                     disabled={formState === 'submitting'}
-                    className="min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] text-white/96 hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.36)] hover:shadow-[0_10px_40px_rgb(var(--ei-halo-blue-rgb)/0.08)] disabled:opacity-80"
+                    className="ei-type-color-primary min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.36)] hover:shadow-[0_10px_40px_rgb(var(--ei-halo-blue-rgb)/0.08)] disabled:opacity-80"
                   >
                     {formState === 'submitting' ? 'Sending...' : 'Send Message'}
                   </Button>
 
-                  <p className="flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65] text-white/60">
-                    <span className="mt-0.5 text-white/65">
+                  <p className="ei-type-color-muted flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65]">
+                    <span className="mt-0.5">
                       <ContactIcon name="lock" />
                     </span>
                     Your information is kept private and never shared.
@@ -406,15 +406,15 @@ export function Contact() {
 
   <div className="relative z-10 flex min-h-[360px] flex-col justify-center gap-9 p-7 md:min-h-[390px] md:max-w-[620px] md:p-12 lg:p-14">
       <div>
-        <span className="font-mono text-[10px] uppercase tracking-[0.24em] text-white/75">
+        <span className="ei-type-color-muted font-mono text-[10px] uppercase tracking-[0.24em]">
           Prefer a quick chat?
         </span>
 
-        <h2 className="mt-4 font-editorial text-[clamp(2rem,3vw,3.1rem)] leading-tight text-white/92">
+        <h2 className="ei-type-color-primary mt-4 font-editorial text-[clamp(2rem,3vw,3.1rem)] leading-tight">
           Book a session
         </h2>
 
-        <p className="mt-4 max-w-[430px] font-structural text-[0.98rem] leading-[1.75] text-white/86">
+        <p className="ei-type-color-secondary mt-4 max-w-[430px] font-structural text-[0.98rem] leading-[1.75]">
           Schedule a focused call to explore your project and see if we're a good fit.
         </p>
       </div>
@@ -422,7 +422,7 @@ export function Contact() {
       <Button
         to="/sessions"
         variant="secondary"
-        className="min-h-[42px] gap-3 self-start px-5 py-3 border-white/[0.12] text-white/78 hover:text-white hover:border-white/[0.18]"
+        className="ei-type-color-accent min-h-[42px] gap-3 self-start px-5 py-3 border-white/[0.12] hover:text-[var(--ei-color-text-primary)] hover:border-white/[0.18]"
       >
         View session options
         <span aria-hidden="true">→</span>
