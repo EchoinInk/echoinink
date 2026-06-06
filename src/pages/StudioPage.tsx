@@ -28,12 +28,12 @@ const principles: Array<{
 }> = [
   {
     title: "Meaning over noise",
-    body: {"We strip away the unnecessary to reveal what matters.\nClarity is not minimalism — it is emotional precision."},
+    body: "We strip away the unnecessary to reveal what matters.\nClarity is not minimalism — it is emotional precision.",
     icon: "reflection",
   },
   {
     title: "Design with feeling",
-    body: {"Strategy is held with care. Identity becomes coherent when the inner world is acknowledged, not avoided."},
+    body: "Strategy is held with care.\Identity becomes coherent when the inner world is acknowledged, not avoided.",
     icon: "pulse",
   },
   {
@@ -337,7 +337,7 @@ export function Studio() {
   A world built for overwhelmed humans.
 </p>
 
-<p className="mt-7 max-w-[38ch] font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em] text-[rgb(var(--ei-moonlit-rgb)/0.7)]">
+<p className="mt-7 max-w-[38ch] font-structural text-[0.8125rem] leading-[1.75] tracking-[-0.003em] text-[rgb(var(--ei-moonlit-rgb)/0.7)] Whitespace-pre-line">
   Lumo translates softness, care, and emotional regulation into an emotionally intelligent app and cinematic digital identity system —<br />
 an interface shaped to calm cognitive noise through atmosphere, rhythm, and restraint.
 </p>
