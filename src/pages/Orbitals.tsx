@@ -1,13 +1,10 @@
 import OrbitalsSheet  from "@/components/dev/OrbitalSheet";
-import OrbitalVisualsNew from "@/components/ui/OrbitalPreviewGrid";
-
+import OrbitalVisualsNew from "@/components/dev/OrbitalVisualsNew";
 
 export default function OrbitalsPage() {
   return <OrbitalsSheet />;
 }
 
-import OrbitalPreviewGrid from "@/components/ui/OrbitalPreviewGrid";
-
-export default function Page() {
-  return <OrbitalPreviewGrid />;
+function OrbitalVisuals() {   
+  return <OrbitalVisualsNew />;
 }
