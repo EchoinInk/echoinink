@@ -46,13 +46,10 @@ export default function OrbitalsSheet() {
 
       <div className="grid grid-cols-3 gap-10 md:grid-cols-4 lg:grid-cols-6">
         {variants.map((v) => (
-          <div
-            key={v}
-className="rounded-xl bg-[rgb(var(--ei-midnight-rgb)/0.6)] border border-white/10 p-4"
-          >
-            <OrbitalVisual variant={v} size={72} />
-            <span className="text-xs text-white/60">{v}</span>
-          </div>
+          <div className="brightness-125 contrast-125">
+  <OrbitalVisual variant={v} size={96} />
+</div>
+
         ))}
       </div>
     </div>
