@@ -1,6 +1,8 @@
 import React from "react";
-import { OrbitalVisualNew } from "@components/dev/OrbitalVisualNew";
-import { orbitalVariants } from "@components/ui/OrbitalVisualNew";
+import OrbitalVisualNew, { OrbitalVariant } from "../ui/OrbitalVisualNew";
+
+// Derive the list of variants from the exported OrbitalVariant enum/type
+const orbitalVariants = Object.values(OrbitalVariant) as OrbitalVariant[];
 
 export default function OrbitalPreviewGrid() {
   return (
