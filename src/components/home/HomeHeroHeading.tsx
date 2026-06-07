@@ -21,12 +21,12 @@ export function HeroHeading() {
 
       <h1
         id="hero-heading"
-        className="ei-type-studio-hero max-w-[13ch] whitespace-pre-line"
+        className="ei-type-studio-hero max-w-[26ch] whitespace-pre-line"
         style={{
           textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
         }}
       >
-        {"Designing the worlds\nyour work lives in."}
+        {"Designing the worlds your work lives in."}
       </h1>
 
       <p className="ei-type-hero-kicker mt-5">
