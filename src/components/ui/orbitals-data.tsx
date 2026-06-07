@@ -26,9 +26,8 @@ export type OrbitalsMap = Record<OrbitalName, OrbitalFn>
 // ORBITALS OBJECT (YOUR SVGs GO HERE)
 // -----------------------------
 // -----------------------------
-// ORBITAL COLOR CONSTANTS
+// COLORS
 // -----------------------------
-
 const ELECTRIC_BLUE = "rgb(11 32 246)"
 const HALO_BLUE = "rgb(73 133 253)"
 const VIOLET = "rgb(113 7 234)"
@@ -37,10 +36,86 @@ const SOFT_NEON = "rgb(230 105 242)"
 const MOONLIT = "rgb(227 216 253)"
 const ICE_WHITE = "rgb(247 245 250)"
 
+// -----------------------------
+// TYPES
+// -----------------------------
+export type OrbitalName =
+  | "axiomRing"
+  | "vectorLattice"
+  | "signalBridge"
+  | "prismMirror"
+  | "innerTide"
+  | "quietAxis"
+  | "chorusCore"
+  | "memoryComet"
+  | "synthesisStar"
+  | "haloGate"
+  | "focusDial"
+  | "threadBeacon"
+
+export type OrbitalFn = (size?: number) => JSX.Element
+export type OrbitalsMap = Record<OrbitalName, OrbitalFn>
+
+// -----------------------------
+// ORBITALS OBJECT
+// -----------------------------
 export const orbitals: OrbitalsMap = {
-  // Example placeholder so the file compiles before you paste your real ones:
-  axiomRing: (size = 96) => <div />,
-  vectorLattice: (size = 96) => <div />,
+  axiomRing: (size = 96) => {
+    const center = size / 2
+    const path = "M48 15C66.2 15 81 29.8 81 48S66.2 81 48 81"
+
+    return (
+      <svg width={size} height={size} viewBox="0 0 96 96" fill="none">
+        <path d={path} stroke={ELECTRIC_BLUE} strokeWidth="4.8" opacity="0.4" />
+        <path d={path} stroke={ELECTRIC_BLUE} strokeWidth="1.7" strokeLinecap="round" />
+        <path
+          d="M48 81C29.8 81 15 66.2 15 48S29.8 15 48 15"
+          stroke={HALO_BLUE}
+          strokeWidth="1"
+          strokeDasharray="4 5"
+          strokeLinecap="round"
+        />
+        <path
+          d="M48 30L63.6 57H32.4L48 30Z"
+          stroke={ELECTRIC_BLUE}
+          strokeWidth="1.6"
+          strokeLinejoin="round"
+        />
+        <circle cx={center} cy={center} r="4.5" stroke={HALO_BLUE} strokeWidth="1.1" />
+        <circle cx={center} cy="15" r="2.8" fill={ICE_WHITE} stroke={HALO_BLUE} />
+        <circle cx="32.4" cy="57" r="2.2" fill={ELECTRIC_BLUE} />
+        <circle cx="63.6" cy="57" r="2.2" fill={ELECTRIC_BLUE} />
+      </svg>
+    )
+  },
+
+  vectorLattice: (size = 96) => {
+    const center = size / 2
+    const lattice = "M12 48L48 12L84 48L48 84Z"
+
+    return (
+      <svg width={size} height={size} viewBox="0 0 96 96" fill="none">
+        <path d={lattice} stroke={ELECTRIC_BLUE} strokeWidth="4.5" opacity="0.38" />
+        <path d={lattice} stroke={ELECTRIC_BLUE} strokeWidth="1.6" strokeLinejoin="round" />
+        <path
+          d="M36 27L48 12M72 38L84 32M61 75L67 86"
+          stroke={HALO_BLUE}
+          strokeWidth="1"
+          strokeLinecap="round"
+        />
+        <circle cx="36" cy="27" r="3" fill={ICE_WHITE} stroke={HALO_BLUE} />
+        <circle cx="72" cy="38" r="3" fill={ELECTRIC_BLUE} />
+        <circle cx="61" cy="75" r="3" fill={HALO_BLUE} />
+        <circle cx="23" cy="67" r="3" fill={ICE_WHITE} stroke={ELECTRIC_BLUE} />
+        <circle cx={center + 1} cy={center + 3} r="4" stroke={HALO_BLUE} strokeWidth="1.1" />
+      </svg>
+    )
+  },
+
+  // -----------------------------
+  // ADD THE REST OF YOUR ORBITALS HERE
+  // -----------------------------
+
   signalBridge: (size = 96) => <div />,
   prismMirror: (size = 96) => <div />,
   innerTide: (size = 96) => <div />,
