@@ -7,6 +7,7 @@ import { Container } from "@/components/layout/Container";
 import { EditorialImageHero } from "@/components/sections/EditorialImageHero";
 import { Button } from "@/components/ui/Button";
 import { OrbitalVisual, type OrbitalVariant } from "@/components/ui/OrbitalVisual";
+import { orbitals } from "@/components/ui/orbitals-data";
 
 import studioHeroDesktop from "@/assets/imagery/hero/studio-hero-desktop.webp";
 import studioHeroMobile from "@/assets/imagery/hero/studio-hero-mobile.webp";
@@ -21,7 +22,6 @@ import {
   STAGGER,
   VIEWPORT,
 } from "@/lib/motion-cinematic";
-import { orbitals } from "@/components/ui/orbitals-data";
 
 const principles: Array<{
   title: string;
