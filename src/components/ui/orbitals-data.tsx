@@ -1,30 +1,4 @@
-// -----------------------------
-// ORBITAL TYPES
-// -----------------------------
 
-export type OrbitalName =
-  | "axiomRing"
-  | "vectorLattice"
-  | "signalBridge"
-  | "prismMirror"
-  | "innerTide"
-  | "quietAxis"
-  | "chorusCore"
-  | "memoryComet"
-  | "synthesisStar"
-  | "haloGate"
-  | "focusDial"
-  | "threadBeacon"
-
-// Each orbital is a function that returns JSX
-export type OrbitalFn = (size?: number) => JSX.Element
-
-// The orbitals object must contain exactly these keys
-export type OrbitalsMap = Record<OrbitalName, OrbitalFn>
-
-// -----------------------------
-// ORBITALS OBJECT (YOUR SVGs GO HERE)
-// -----------------------------
 // -----------------------------
 // COLORS
 // -----------------------------
