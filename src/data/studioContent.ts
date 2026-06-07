@@ -1,4 +1,4 @@
-import type { OrbitalVariant } from '@/components/ui/OrbitalVisual';
+import type { OrbitalVariant } from '@/components/orbitals/orbitals';
 
 export interface PhilosophyItem {
   title: string;
@@ -33,19 +33,19 @@ export const philosophyItems: PhilosophyItem[] = [
     title: 'Emotional Truth is Strategy',
     description:
       'If the emotional centre is unclear, everything built around it fractures. The work begins by finding what is actually true beneath expression.',
-    icon: 'prism',
+    icon: 'prismMirror',
   },
   {
     title: 'Identity is Relational',
     description:
       'Not a system of assets. The experience of being understood. The work is not to invent identity — but to translate what already exists.',
-    icon: 'nodes',
+    icon: 'chorusCore',
   },
   {
     title: 'Atmosphere is Information',
     description:
       'Nothing is neutral. Spacing, rhythm, motion and silence all carry meaning. Atmosphere shapes how a message is received.',
-    icon: 'pulse',
+    icon: 'innerTide',
   },
 ];
 
@@ -53,26 +53,26 @@ export const valueItems: ValueItem[] = [
   {
     title: 'Depth over speed',
     description: 'We move with clarity over velocity. Depth requires space.',
-    icon: 'pulse',
+    icon: 'innerTide',
   },
   {
     title: 'Coherence over volume',
     description: 'We build fewer things that fit together more powerfully.',
-    icon: 'lens',
+    icon: 'focusDial',
   },
   {
     title: 'Meaning over performance',
     description: 'We create from inner alignment, not external metrics.',
-    icon: 'lattice',
+    icon: 'vectorLattice',
   },
   {
     title: 'Restraint over excess',
     description: 'We remove more \nthan we add to \nreach clarity.',
-    icon: 'veil',
+    icon: 'quietAxis',
   },
   {
     title: 'Truth over optimisation',
     description: 'We protect integrity over trends, algorithms, and easy wins.',
-    icon: 'ember',
+    icon: 'synthesisStar',
   },
 ];

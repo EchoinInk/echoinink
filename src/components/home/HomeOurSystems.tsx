@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
+import type { OrbitalVariant } from "@/components/orbitals/orbitals";
 import {
   driftUp,
   staggerContainer,
@@ -10,23 +11,29 @@ import {
   VIEWPORT,
 } from "@/lib/motion-cinematic";
 
-const systems = [
+const systems: Array<{
+  variant: OrbitalVariant;
+  title: string;
+  description: string;
+  meta: string;
+  href: string;
+}> = [
   {
-    variant: "canvas" as const,
+    variant: "vectorLattice",
     title: "Identity Canvas",
     description: "Map your essence, influence, and emotional positioning.",
     meta: "Framework",
     href: "/systems",
   },
   {
-    variant: "reflection" as const,
+    variant: "prismMirror",
     title: "Founder Reflection",
     description: "A guided system for clarity, identity, and next alignment.",
     meta: "Reflective Tool",
     href: "/systems",
   },
   {
-    variant: "architect" as const,
+    variant: "synthesisStar",
     title: "Narrative Architect",
     description:
       "Build stories that hold meaning, tension, and transformation.",
@@ -34,7 +41,7 @@ const systems = [
     href: "/systems",
   },
   {
-    variant: "gpt" as const,
+    variant: "chorusCore",
     title: "Identity GPT",
     description:
       "An AI companion for identity clarity and narrative direction.",
@@ -42,7 +49,7 @@ const systems = [
     href: "/systems",
   },
   {
-    variant: "uikit" as const,
+    variant: "haloGate",
     title: "Atmosphere UI Kit",
     description: "Cinematic UI components for immersive digital worlds.",
     meta: "UI System",

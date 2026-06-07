@@ -6,8 +6,8 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/layout/Container";
 import { EditorialImageHero } from "@/components/sections/EditorialImageHero";
 import { Button } from "@/components/ui/Button";
-import { OrbitalVisual, type OrbitalVariant } from "@/components/ui/OrbitalVisual";
-import { orbitals } from "@/components/ui/orbitals-data";
+import type { OrbitalVariant } from "@/components/orbitals/orbitals";
+import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
 
 import studioHeroDesktop from "@/assets/imagery/hero/studio-hero-desktop.webp";
 import studioHeroMobile from "@/assets/imagery/hero/studio-hero-mobile.webp";
@@ -31,17 +31,17 @@ const principles: Array<{
   {
     title: "Meaning over noise",
     body: "We strip away the unnecessary to reveal what matters.\nClarity is not minimalism — it is emotional precision.",
-    icon: "lattice",
+    icon: "vectorLattice",
   },
   {
     title: "Design with feeling",
     body: "Strategy is held with care.\nIdentity becomes coherent when the inner world is acknowledged, not avoided.",
-    icon: "constellation",
+    icon: "chorusCore",
   },
   {
     title: "Built to resonate",
     body: "We craft systems and digital worlds designed to endure —\nnot louder, but deeper.",
-    icon: "lattice",
+    icon: "vectorLattice",
   },
 ];
 
@@ -51,7 +51,7 @@ const pillars: Array<{
   body: string;
   href: string;
   imageClass: string;
-icon: keyof typeof orbitals
+  icon: OrbitalVariant;
 }> = [
   {
     number: "01",
@@ -60,7 +60,7 @@ icon: keyof typeof orbitals
     href: "/identity",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_28%,rgb(var(--ei-violet-rgb)/0.22),transparent_38%),radial-gradient(circle_at_52%_62%,rgb(var(--ei-halo-blue-rgb)/0.08),transparent_54%)]",
-    icon: "vectorlattice",
+    icon: "vectorLattice",
   },
   {
     number: "02",
@@ -69,7 +69,7 @@ icon: keyof typeof orbitals
     href: "/websites",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_30%,rgb(var(--ei-halo-blue-rgb)/0.18),transparent_42%),linear-gradient(145deg,rgb(var(--ei-midnight-rgb)/0.7),rgb(var(--ei-void-rgb)/0.95))]",
-    icon: "memorycomet",
+    icon: "memoryComet",
   },
   {
     number: "03",
@@ -78,7 +78,7 @@ icon: keyof typeof orbitals
     href: "/direction",
     imageClass:
       "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
-    icon: "halogate",
+    icon: "haloGate",
   },
   {
     number: "04",
@@ -87,7 +87,7 @@ icon: keyof typeof orbitals
     href: "/worlds",
     imageClass:
       "bg-[radial-gradient(circle_at_35%_30%,rgb(var(--ei-violet-rgb)/0.2),transparent_38%),radial-gradient(circle_at_75%_62%,rgb(var(--ei-soft-neon-rgb)/0.11),transparent_50%)]",
-    icon: "innertide",
+    icon: "innerTide",
   },
 ];
 

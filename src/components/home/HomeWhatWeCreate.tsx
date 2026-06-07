@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
+import type { OrbitalVariant } from "@/components/orbitals/orbitals";
 import {
   driftUp,
   staggerContainer,
@@ -10,30 +11,35 @@ import {
   VIEWPORT,
 } from "@/lib/motion-cinematic";
 
-const capabilities = [
+const capabilities: Array<{
+  variant: OrbitalVariant;
+  title: string;
+  description: string;
+  href: string;
+}> = [
   {
-    variant: "hinge" as const,
+    variant: "signalBridge",
     title: "Brand Identity",
     description:
       "Identity systems that uncover essence and create emotional resonance.",
     href: "/identity",
   },
   {
-    variant: "lens" as const,
+    variant: "focusDial",
     title: "Digital Experiences",
     description:
       "Immersive websites and interfaces that feel like entering a world.",
     href: "/worlds",
   },
   {
-    variant: "ribbon" as const,
+    variant: "innerTide",
     title: "Narrative Architecture",
     description:
       "Story systems that bring coherence, clarity, and transformational depth.",
     href: "/sessions",
   },
   {
-    variant: "veil" as const,
+    variant: "quietAxis",
     title: "Creative Direction",
     description:
       "Atmospheric direction that aligns every detail with the bigger vision.",
