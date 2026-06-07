@@ -25,6 +25,17 @@ export type OrbitalsMap = Record<OrbitalName, OrbitalFn>
 // -----------------------------
 // ORBITALS OBJECT (YOUR SVGs GO HERE)
 // -----------------------------
+// -----------------------------
+// ORBITAL COLOR CONSTANTS
+// -----------------------------
+
+const ELECTRIC_BLUE = "rgb(11 32 246)"
+const HALO_BLUE = "rgb(73 133 253)"
+const VIOLET = "rgb(113 7 234)"
+const ECHO_MAGENTA = "rgb(221 18 203)"
+const SOFT_NEON = "rgb(230 105 242)"
+const MOONLIT = "rgb(227 216 253)"
+const ICE_WHITE = "rgb(247 245 250)"
 
 export const orbitals: OrbitalsMap = {
   // Example placeholder so the file compiles before you paste your real ones:
