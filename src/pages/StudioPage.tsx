@@ -6,10 +6,7 @@ import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/layout/Container";
 import { EditorialImageHero } from "@/components/sections/EditorialImageHero";
 import { Button } from "@/components/ui/Button";
-import {
-  orbitals,
-  type OrbitalVariant,
-} from "@/components/orbitals/orbitals";
+import type { OrbitalVariant } from "@/components/orbitals/orbitals";
 import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
 
 import studioHeroDesktop from "@/assets/imagery/hero/studio-hero-desktop.webp";
@@ -154,131 +151,138 @@ export function Studio() {
       />
 
       {/* PHILOSOPHY */}
-    <motion.section
-  variants={fadeSoft}
-  initial="hidden"
-  whileInView="visible"
-  viewport={VIEWPORT.loose}
-  className="relative mt-12 md:mt-20 py-14 md:py-16 will-change-transform"
->
-
+      <section className="relative mt-12 py-14 will-change-transform md:mt-20 md:py-16">
         <Container size="xl" className="relative z-10">
-          <div className="mx-auto grid max-w-[1180px] gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:-translate-y-3 md:grid-cols-[minmax(0,1.18fr)_minmax(0,1.18fr)_220px] md:items-center md:gap-12 md:px-8 md:pb-8 md:pt-12 lg:px-10 lg:pb-10 lg:pt-[4rem]">
-            <motion.div
-              variants={staggerContainer(STAGGER.loose, 0)}
-              className="relative md:-top-4"
-            >
-              <SectionLabel>Our Philosophy</SectionLabel>
-
-              <motion.h2
-                variants={blurEmergence}
-                className="ei-type-studio-philosophy mt-6 max-w-[18ch] whitespace-pre-line"
-              >
-               <motion.h2
-  variants={blurEmergence}
-  className="ei-type-studio-philosophy mt-6 max-w-[18ch] whitespace-pre-line"
->
- {"We design with\n"}
-  <em className="ei-type-studio-philosophy-emphasis">feeling</em>,{" "}
-  <em className="ei-type-studio-philosophy-emphasis">intention</em>,<br /> and{" "}
-  <em className="ei-type-studio-philosophy-emphasis-blue">clarity</em>.
-</motion.h2>
-              </motion.h2>
-            </motion.div>
-
-            <motion.div
-              variants={driftUp}
-              className="relative max-w-[62ch] md:-top-4"
-            >
-              <p className="ei-type-studio-body text-[rgba(232,228,245,0.72)]">
-                Design is not decoration — it is meaning made visible. Every decision is rooted
-                in understanding, shaped by emotion, and refined through story.
-              </p>
-              <p className="ei-type-studio-body mt-5 text-[rgba(232,228,245,0.72)]">
-                We do not just build brands or websites. We build identity, atmosphere, and
-                transformation.
-              </p>
-            </motion.div>
-
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
+          >
             <motion.div
               variants={fadeSoft}
-              className="relative hidden justify-self-end md:left-4 md:block"
-              aria-hidden="true"
+              className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:-translate-y-3 md:grid-cols-[minmax(0,1.18fr)_minmax(0,1.18fr)_220px] md:items-center md:gap-12 md:px-8 md:pb-8 md:pt-12 lg:px-10 lg:pb-10 lg:pt-[4rem]"
             >
-              <img
-                src={studioManifestoImage}
-                alt=""
-                className="h-[171px] w-[198px] rounded-[28px] object-cover object-center opacity-85 mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,black_42%,transparent_76%)]"
-              />
+              <motion.div variants={driftUp} className="relative md:-top-4">
+                <SectionLabel>Our Philosophy</SectionLabel>
+
+                <motion.h2
+                  variants={blurEmergence}
+                  className="ei-type-studio-philosophy mt-6 max-w-[18ch] whitespace-pre-line"
+                >
+                  {"We design with\n"}
+                  <em className="ei-type-studio-philosophy-emphasis">
+                    feeling
+                  </em>
+                  ,{" "}
+                  <em className="ei-type-studio-philosophy-emphasis">
+                    intention
+                  </em>
+                  ,<br /> and{" "}
+                  <em className="ei-type-studio-philosophy-emphasis-blue">
+                    clarity
+                  </em>
+                  .
+                </motion.h2>
+              </motion.div>
+
+              <motion.div
+                variants={driftUp}
+                className="relative max-w-[62ch] md:-top-4"
+              >
+                <p className="ei-type-studio-body text-[rgba(232,228,245,0.72)]">
+                  Design is not decoration — it is meaning made visible. Every
+                  decision is rooted in understanding, shaped by emotion, and
+                  refined through story.
+                </p>
+                <p className="ei-type-studio-body mt-5 text-[rgba(232,228,245,0.72)]">
+                  We do not just build brands or websites. We build identity,
+                  atmosphere, and transformation.
+                </p>
+              </motion.div>
+
+              <motion.div
+                variants={fadeSoft}
+                className="relative hidden justify-self-end md:left-4 md:block"
+                aria-hidden="true"
+              >
+                <img
+                  src={studioManifestoImage}
+                  alt=""
+                  className="h-[171px] w-[198px] rounded-[28px] object-cover object-center opacity-85 mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,black_42%,transparent_76%)]"
+                />
+              </motion.div>
             </motion.div>
-          </div>
+          </motion.div>
         </Container>
-      </motion.section>
+      </section>
 
       {/* WHAT WE DO */}
-      <motion.section
-        variants={fadeSoft}
-        initial="hidden"
-        whileInView="visible"
-        viewport={VIEWPORT.loose}
-        className="relative py-14 md:py-16"
-      >
+      <section className="relative py-14 md:py-16">
         <Container size="xl" className="relative z-10">
-          <div className="mx-auto max-w-[1180px]">
-            <div className="mb-8 text-center">
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
+          >
+            <motion.div variants={driftUp} className="mb-8 text-center">
               <SectionLabel>What We Do</SectionLabel>
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
               {pillars.map((pillar) => (
-                <Link
-                  key={pillar.title}
-                  to={pillar.href}
-                  className="ei-card group relative min-h-[330px] overflow-hidden p-7 text-inherit no-underline transition-colors duration-500 lg:p-8"
-                >
-                  <div
-                    aria-hidden="true"
-                    className={`absolute inset-0 opacity-72 transition-opacity duration-700 group-hover:opacity-95 ${pillar.imageClass}`}
-                  />
+                <motion.article key={pillar.title} variants={driftUp}>
+                  <Link
+                    to={pillar.href}
+                    className="ei-card group relative block min-h-[330px] overflow-hidden p-7 text-inherit no-underline transition-colors duration-500 lg:p-8"
+                  >
+                    <div
+                      aria-hidden="true"
+                      className={`absolute inset-0 opacity-72 transition-opacity duration-700 group-hover:opacity-95 ${pillar.imageClass}`}
+                    />
 
-                  <div
-                    aria-hidden="true"
-                    className="absolute inset-0 bg-[linear-gradient(180deg,rgb(var(--ei-void-rgb)/0.2),rgb(var(--ei-void-rgb)/0.88))]"
-                  />
+                    <div
+                      aria-hidden="true"
+                      className="absolute inset-0 bg-[linear-gradient(180deg,rgb(var(--ei-void-rgb)/0.2),rgb(var(--ei-void-rgb)/0.88))]"
+                    />
 
-                  <div className="relative z-10 flex min-h-[276px] flex-col">
-                    <div className="mb-auto">
-                      <span className="ei-type-studio-label">
-                        {pillar.number}
-                      </span>
+                    <div className="relative z-10 flex min-h-[276px] flex-col">
+                      <div className="mb-auto">
+                        <span className="ei-type-studio-label">
+                          {pillar.number}
+                        </span>
 
-                      <div className="mt-4 flex h-12 items-center">
-                        <OrbitalVisual
-                          variant={pillar.icon}
-                          size={64}
-                          className="opacity-98"
-                        />
+                        <div className="mt-4 flex h-12 items-center">
+                          <OrbitalVisual
+                            variant={pillar.icon}
+                            size={64}
+                            className="opacity-98"
+                          />
+                        </div>
                       </div>
+
+                      <h3 className="ei-type-studio-pillar-title max-w-[12ch]">
+                        {pillar.title}
+                      </h3>
+
+                      <p className="ei-type-studio-card-body mt-4 max-w-[32ch]">
+                        {pillar.body}
+                      </p>
+
+                      <span className="ei-card-action mt-7">
+                        Explore <span className="ei-card-action-arrow">→</span>
+                      </span>
                     </div>
-
-                    <h3 className="ei-type-studio-pillar-title max-w-[12ch]">
-                      {pillar.title}
-                    </h3>
-
-                    <p className="ei-type-studio-card-body mt-4 max-w-[32ch]">
-                      {pillar.body}
-                    </p>
-
-                    <span className="ei-card-action mt-7">
-                      Explore <span className="ei-card-action-arrow">→</span>
-                    </span>
-                  </div>
-                </Link>
+                  </Link>
+                </motion.article>
               ))}
             </div>
-          </div>
+          </motion.div>
         </Container>
-      </motion.section>
+      </section>
 
       {/* PROCESS */}
       <motion.section
