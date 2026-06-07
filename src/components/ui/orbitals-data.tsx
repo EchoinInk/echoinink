@@ -53,11 +53,6 @@ export const orbitals: OrbitalsMap = {
   threadBeacon: (size = 96) => <div />,
 }
 
-export const orbitals = {
-  axiomRing: (size = 96) => {
-    const c = size / 2;
-    const center = (c / size) * 96;
-    const path = "M48 15C66.2 15 81 29.8 81 48S66.2 81 48 81";
 
     return (
       <svg width={size} height={size} viewBox="0 0 96 96" fill="none">
@@ -87,7 +82,6 @@ export const orbitals = {
         <circle cx="63.6" cy="57" r="2.2" fill={ELECTRIC_BLUE} />
       </svg>
     );
-  },
 
   vectorLattice: (size = 96) => {
     const c = size / 2;
