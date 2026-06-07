@@ -222,8 +222,8 @@
 
 ### New Homepage Restructure
 
-**New Component Created**
-- `src/components/ui/OrbitalVisual.tsx` — 9-variant SVG orbital icon primitive (triangle, orbit, nodes, compass, canvas, reflection, architect, gpt, uikit) with ambient radial glow; shared by Pathways and EmergingSystems
+**Orbital System**
+- `src/components/orbitals/orbitals.tsx` and `src/components/ui/OrbitalVisual.tsx` — 12-variant SVG orbital registry and rendering primitive (axiomRing, vectorLattice, signalBridge, prismMirror, innerTide, quietAxis, chorusCore, memoryComet, synthesisStar, haloGate, focusDial, threadBeacon)
 
 **Hero Refinements**
 - `HeroHeading.tsx`: Eyebrow text updated from "Echo in Ink" → "WE DESIGN WORLDS"
