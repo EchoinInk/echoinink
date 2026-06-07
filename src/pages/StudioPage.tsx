@@ -60,7 +60,7 @@ icon: keyof typeof orbitals
     href: "/identity",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_28%,rgb(var(--ei-violet-rgb)/0.22),transparent_38%),radial-gradient(circle_at_52%_62%,rgb(var(--ei-halo-blue-rgb)/0.08),transparent_54%)]",
-    icon: "vector-lattice",
+    icon: "vectorlattice",
   },
   {
     number: "02",
@@ -69,7 +69,7 @@ icon: keyof typeof orbitals
     href: "/websites",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_30%,rgb(var(--ei-halo-blue-rgb)/0.18),transparent_42%),linear-gradient(145deg,rgb(var(--ei-midnight-rgb)/0.7),rgb(var(--ei-void-rgb)/0.95))]",
-    icon: "memory-comet",
+    icon: "memorycomet",
   },
   {
     number: "03",
@@ -78,7 +78,7 @@ icon: keyof typeof orbitals
     href: "/direction",
     imageClass:
       "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
-    icon: "halo-gate",
+    icon: "halogate",
   },
   {
     number: "04",
@@ -87,7 +87,7 @@ icon: keyof typeof orbitals
     href: "/worlds",
     imageClass:
       "bg-[radial-gradient(circle_at_35%_30%,rgb(var(--ei-violet-rgb)/0.2),transparent_38%),radial-gradient(circle_at_75%_62%,rgb(var(--ei-soft-neon-rgb)/0.11),transparent_50%)]",
-    icon: "inner-tide",
+    icon: "innertide",
   },
 ];
 
