@@ -285,143 +285,179 @@ export function Studio() {
       </section>
 
       {/* PROCESS */}
-      <motion.section
-        variants={fadeSoft}
-        initial="hidden"
-        whileInView="visible"
-        viewport={VIEWPORT.loose}
-        className="relative py-14 md:py-16"
-      >
+      <section className="relative py-14 md:py-16">
         <Container size="xl" className="relative z-10">
-          <div className="mx-auto grid max-w-[1180px] gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-ice-white-rgb)/0.018)] p-7 md:grid-cols-[0.9fr_1.6fr] md:gap-14 md:p-10">
-            <div>
-              <SectionLabel>Our Process</SectionLabel>
-              <h2 className="ei-type-studio-process-heading mt-6 max-w-[15ch]">
-                A thoughtful journey from essence to world.
-              </h2>
-              <div className="mt-8">
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
+          >
+            <motion.div
+              variants={fadeSoft}
+              className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-ice-white-rgb)/0.018)] p-7 md:grid-cols-[0.9fr_1.6fr] md:gap-14 md:p-10"
+            >
+              <motion.div variants={driftUp}>
+                <SectionLabel>Our Process</SectionLabel>
+                <motion.h2
+                  variants={blurEmergence}
+                  className="ei-type-studio-process-heading mt-6 max-w-[15ch]"
+                >
+                  A thoughtful journey from essence to world.
+                </motion.h2>
+                <div className="mt-8">
+                  <Button
+                    to="/contact"
+                    variant="secondary"
+                    className="min-h-[42px] gap-3 px-6 py-3"
+                  >
+                    Our Approach
+                    <span aria-hidden="true">↓</span>
+                  </Button>
+                </div>
+              </motion.div>
+
+              <motion.div
+                variants={staggerContainer(STAGGER.loose, 0)}
+                className="relative grid gap-8 md:grid-cols-4 md:gap-6"
+              >
+                <div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute left-0 right-0 top-[2.35rem] hidden h-px bg-[linear-gradient(90deg,transparent,rgb(var(--ei-halo-blue-rgb)/0.45),rgb(var(--ei-violet-rgb)/0.52),transparent)] md:block"
+                />
+
+                {process.map((step) => (
+                  <motion.article
+                    key={step.number}
+                    variants={driftUp}
+                    className="relative"
+                  >
+                    <div className="ei-type-studio-process-number">
+                      {step.number}
+                    </div>
+
+                    <span className="absolute left-0 top-[2.05rem] hidden h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.75)] shadow-[0_0_18px_rgb(var(--ei-violet-rgb)/0.75)] md:block" />
+
+                    <h3 className="ei-type-studio-process-title mt-4">
+                      {step.title}
+                    </h3>
+
+                    <p className="ei-type-studio-process-body mt-3 max-w-[23ch]">
+                      {step.body}
+                    </p>
+                  </motion.article>
+                ))}
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        </Container>
+      </section>
+
+      {/* FEATURED WORK */}
+      <section className="relative py-14 md:py-16">
+        <Container size="xl" className="relative z-10">
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
+          >
+            <motion.article
+              variants={fadeSoft}
+              className="ei-card ei-card-world"
+            >
+              <Link to="/works/lumo" className="ei-card-world-link group">
+                <motion.div
+                  variants={fadeSoft}
+                  className="ei-card-world-media"
+                  aria-hidden="true"
+                >
+                  <img
+                    src={lumoFeaturedBg}
+                    alt=""
+                    className="object-[57%_50%]"
+                  />
+                </motion.div>
+
+                <div className="ei-card-studio-overlay" aria-hidden="true" />
+
+                <motion.div variants={driftUp} className="ei-card-world-copy">
+                  <div>
+                    <span className="ei-type-studio-label">
+                      Featured Work
+                    </span>
+
+                    <h2 className="ei-type-studio-feature-title mt-8">
+                      LUMO
+                    </h2>
+
+                    <p className="ei-type-studio-feature-subtitle mt-5 max-w-[18ch]">
+                      A world built for overwhelmed humans.
+                    </p>
+
+                    <p className="ei-type-studio-feature-body mt-7 max-w-[38ch] text-[var(--ei-color-text-secondary)]">
+                      Lumo takes softness, care, and emotional regulation into
+                      an emotionally intelligent app and cinematic digital
+                      identity system — an interface shaped to calm cognitive
+                      noise through atmosphere, rhythm, and restraint.
+                    </p>
+                  </div>
+
+                  <span className="ei-card-action">
+                    View Case Study{" "}
+                    <span className="ei-card-action-arrow">→</span>
+                  </span>
+                </motion.div>
+              </Link>
+            </motion.article>
+          </motion.div>
+        </Container>
+      </section>
+
+      {/* SLIM CTA */}
+      <section className="relative pb-12 md:pb-16">
+        <Container size="xl" className="relative z-10">
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
+          >
+            <motion.div
+              variants={fadeSoft}
+              className="flex flex-col gap-6 rounded-[var(--ei-card-radius-lg)] bg-[rgb(var(--ei-ice-white-rgb)/0.026)] px-7 py-7 shadow-[0_0_70px_rgb(var(--ei-violet-rgb)/0.055)] md:flex-row md:items-center md:justify-between md:px-9"
+            >
+              <motion.div
+                variants={driftUp}
+                className="flex items-center gap-5"
+              >
+                <span
+                  aria-hidden="true"
+                  className="h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.82)] shadow-[0_0_22px_rgb(var(--ei-violet-rgb)/0.8)]"
+                />
+
+                <p className="ei-type-studio-slim-cta">
+                  Let&apos;s build something meaningful.
+                </p>
+              </motion.div>
+
+              <motion.div variants={driftUp}>
                 <Button
                   to="/contact"
                   variant="secondary"
-                  className="min-h-[42px] gap-3 px-6 py-3"
+                  className="min-h-[42px] gap-3 self-start px-6 py-3 md:self-center"
                 >
-                  Our Approach
-                  <span aria-hidden="true">↓</span>
+                  Start a Conversation
+                  <span aria-hidden="true">→</span>
                 </Button>
-              </div>
-            </div>
-
-            <div className="relative grid gap-8 md:grid-cols-4 md:gap-6">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute left-0 right-0 top-[2.35rem] hidden h-px bg-[linear-gradient(90deg,transparent,rgb(var(--ei-halo-blue-rgb)/0.45),rgb(var(--ei-violet-rgb)/0.52),transparent)] md:block"
-              />
-
-              {process.map((step) => (
-                <article key={step.number} className="relative">
-                  <div className="ei-type-studio-process-number">
-                    {step.number}
-                  </div>
-
-                  <span className="absolute left-0 top-[2.05rem] hidden h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.75)] shadow-[0_0_18px_rgb(var(--ei-violet-rgb)/0.75)] md:block" />
-
-                  <h3 className="ei-type-studio-process-title mt-4">
-                    {step.title}
-                  </h3>
-
-                  <p className="ei-type-studio-process-body mt-3 max-w-[23ch]">
-                    {step.body}
-                  </p>
-                </article>
-              ))}
-            </div>
-          </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
         </Container>
-      </motion.section>
-
-      {/* FEATURED WORK */}
-      <motion.section
-        variants={fadeSoft}
-        initial="hidden"
-        whileInView="visible"
-        viewport={VIEWPORT.loose}
-        className="relative py-14 md:py-16"
-      >
-        <Container size="xl" className="relative z-10">
-          <article className="ei-card ei-card-world mx-auto max-w-[1180px]">
-            <Link to="/works/lumo" className="ei-card-world-link group">
-              <div className="ei-card-world-media" aria-hidden="true">
-                <img
-                  src={lumoFeaturedBg}
-                  alt=""
-                  className="object-[57%_50%]"
-                />
-              </div>
-
-              <div className="ei-card-studio-overlay" aria-hidden="true" />
-
-              <div className="ei-card-world-copy">
-                <div>
-                  <span className="ei-type-studio-label">
-                    Featured Work
-                  </span>
-
-                  <h2 className="ei-type-studio-feature-title mt-8">
-                    LUMO
-                  </h2>
-
-                  <p className="ei-type-studio-feature-subtitle mt-5 max-w-[18ch]">
-                    A world built for overwhelmed humans.
-                  </p>
-
-                  <p className="ei-type-studio-feature-body mt-7 max-w-[38ch] text-[var(--ei-color-text-secondary)]">
-                    Lumo takes softness, care, and emotional regulation into an emotionally
-                    intelligent app and cinematic digital identity system — an interface shaped
-                    to calm cognitive noise through atmosphere, rhythm, and restraint.
-                  </p>
-                </div>
-
-                <span className="ei-card-action">
-                  View Case Study <span className="ei-card-action-arrow">→</span>
-                </span>
-              </div>
-            </Link>
-          </article>
-        </Container>
-      </motion.section>
-
-      {/* SLIM CTA */}
-      <motion.section
-        variants={fadeSoft}
-        initial="hidden"
-        whileInView="visible"
-        viewport={VIEWPORT.normal}
-        className="relative pb-12 md:pb-16"
-      >
-        <Container size="xl" className="relative z-10">
-          <div className="mx-auto flex max-w-[1180px] flex-col gap-6 rounded-[var(--ei-card-radius-lg)] bg-[rgb(var(--ei-ice-white-rgb)/0.026)] px-7 py-7 shadow-[0_0_70px_rgb(var(--ei-violet-rgb)/0.055)] md:flex-row md:items-center md:justify-between md:px-9">
-            <div className="flex items-center gap-5">
-              <span
-                aria-hidden="true"
-                className="h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.82)] shadow-[0_0_22px_rgb(var(--ei-violet-rgb)/0.8)]"
-              />
-
-              <p className="ei-type-studio-slim-cta">
-                Let&apos;s build something meaningful.
-              </p>
-            </div>
-
-            <Button
-              to="/contact"
-              variant="secondary"
-              className="min-h-[42px] gap-3 self-start px-6 py-3 md:self-center"
-            >
-              Start a Conversation
-              <span aria-hidden="true">→</span>
-            </Button>
-          </div>
-        </Container>
-      </motion.section>
+      </section>
     </PageShell>
   );
 }
