@@ -82,12 +82,9 @@ export const orbitals: OrbitalsMap = {
         <circle cx="63.6" cy="57" r="2.2" fill={ELECTRIC_BLUE} />
       </svg>
     );
+  },
 
-  vectorLattice: (size = 96) => {
-    const c = size / 2;
-    const center = (c / size) * 96;
-    const lattice =
-      "M23 67L36 27L72 38L61 75L23 67ZM36 27L61 75M72 38L23 67";
+
 
     return (
       <svg width={size} height={size} viewBox="0 0 96 96" fill="none">
