@@ -154,13 +154,14 @@ export function Studio() {
       />
 
       {/* PHILOSOPHY */}
-      <motion.section
-        variants={staggerContainer(STAGGER.loose, 0)}
-        initial="hidden"
-        whileInView="visible"
-        viewport={VIEWPORT.loose}
-className="relative mt-12 md:mt-20 py-14 md:py-16"
-      >
+    <motion.section
+  variants={fadeSoft}
+  initial="hidden"
+  whileInView="visible"
+  viewport={VIEWPORT.loose}
+  className="relative mt-12 md:mt-20 py-14 md:py-16 will-change-transform"
+>
+
         <Container size="xl" className="relative z-10">
           <div className="mx-auto grid max-w-[1180px] gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:-translate-y-3 md:grid-cols-[minmax(0,1.18fr)_minmax(0,1.18fr)_220px] md:items-center md:gap-12 md:px-8 md:pb-8 md:pt-12 lg:px-10 lg:pb-10 lg:pt-[4rem]">
             <motion.div
