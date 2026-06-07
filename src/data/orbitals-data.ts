@@ -1,3 +1,47 @@
+// -----------------------------
+// ORBITAL TYPES
+// -----------------------------
+
+export type OrbitalName =
+  | "axiomRing"
+  | "vectorLattice"
+  | "signalBridge"
+  | "prismMirror"
+  | "innerTide"
+  | "quietAxis"
+  | "chorusCore"
+  | "memoryComet"
+  | "synthesisStar"
+  | "haloGate"
+  | "focusDial"
+  | "threadBeacon"
+
+// Each orbital is a function that returns JSX
+export type OrbitalFn = (size?: number) => JSX.Element
+
+// The orbitals object must contain exactly these keys
+export type OrbitalsMap = Record<OrbitalName, OrbitalFn>
+
+// -----------------------------
+// ORBITALS OBJECT (YOUR SVGs GO HERE)
+// -----------------------------
+
+export const orbitals: OrbitalsMap = {
+  // Example placeholder so the file compiles before you paste your real ones:
+  axiomRing: (size = 96) => <div />,
+  vectorLattice: (size = 96) => <div />,
+  signalBridge: (size = 96) => <div />,
+  prismMirror: (size = 96) => <div />,
+  innerTide: (size = 96) => <div />,
+  quietAxis: (size = 96) => <div />,
+  chorusCore: (size = 96) => <div />,
+  memoryComet: (size = 96) => <div />,
+  synthesisStar: (size = 96) => <div />,
+  haloGate: (size = 96) => <div />,
+  focusDial: (size = 96) => <div />,
+  threadBeacon: (size = 96) => <div />,
+}
+
 export const orbitals = {
   axiomRing: (size = 96) => {
     const c = size / 2;
