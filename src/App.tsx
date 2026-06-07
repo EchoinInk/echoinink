@@ -14,7 +14,6 @@ import { Studio } from '@/pages/StudioPage';
 import { Contact } from '@/pages/ContactPage';
 import SystemsPage from '@/pages/SystemsPage';
 import ArchivePage from '@/pages/ArchivePage';
-import Orbitals from './pages/Orbitals';
 
 function AppRoutes() {
   const location = useLocation();
@@ -32,7 +31,6 @@ function AppRoutes() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/systems" element={<SystemsPage />} />
         <Route path="/archive" element={<ArchivePage />} />
-        <Route path="/orbitals" element={<Orbitals />} />
       </Routes>
     </AnimatePresence>
   );
