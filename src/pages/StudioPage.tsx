@@ -7,7 +7,6 @@ import { Container } from "@/components/layout/Container";
 import { EditorialImageHero } from "@/components/sections/EditorialImageHero";
 import { Button } from "@/components/ui/Button";
 import { OrbitalVisual, type OrbitalVariant } from "@/components/ui/OrbitalVisual";
-import OrbitalPreviewGridNew from "@/components/ui/OrbitalPreviewGridNew";
 
 import studioHeroDesktop from "@/assets/imagery/hero/studio-hero-desktop.webp";
 import studioHeroMobile from "@/assets/imagery/hero/studio-hero-mobile.webp";
@@ -22,6 +21,7 @@ import {
   STAGGER,
   VIEWPORT,
 } from "@/lib/motion-cinematic";
+import { orbitals } from "@/components/ui/orbitals-data";
 
 const principles: Array<{
   title: string;
@@ -51,7 +51,7 @@ const pillars: Array<{
   body: string;
   href: string;
   imageClass: string;
-  icon: OrbitalVariant;
+icon: keyof typeof orbitals
 }> = [
   {
     number: "01",
