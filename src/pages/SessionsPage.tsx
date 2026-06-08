@@ -21,7 +21,11 @@ import {
 
 import sessionsHeroDesktop from "@/assets/imagery/hero/sessions-hero-desktop.webp";
 import sessionsHeroMobile from "@/assets/imagery/hero/sessions-hero-mobile.webp";
-import bookSessionBg from "@/assets/imagery/sections/cta-image-desktop.webp";
+import imageCTA from "@/assets/imagery/sections/sessions-cta-desktop.webp";
+
+import imageFocus from "@/assets/imagery/sections/sessions-focus-desktop.webp";
+import imageOffer from "@/assets/imagery/sections/sessions-offer-desktop.webp";
+
 
 import {
   sessionsApproach,
@@ -115,7 +119,7 @@ export function SessionsPage() {
         <title>Echo Sessions — Echo in Ink</title>
         <meta
           name="description"
-          content="One-to-one creative direction sessions for founders, artists, writers, and makers — clarity, naming, identity, and worldbuilding."
+          content="One-to-one creativee direction sessions for founders, artists, writers, and makers — clarity, naming, identity, and worldbuilding.."
         />
       </Helmet>
 
@@ -226,7 +230,7 @@ export function SessionsPage() {
                   ))}
                 </div>
                 <div className="ei-sessions-detail-image" aria-hidden="true">
-                  <img src={bookSessionBg} alt="" loading="lazy" />
+                  <img src={imageFocus} alt="" loading="lazy" />
                 </div>
               </motion.article>
 
@@ -287,7 +291,7 @@ export function SessionsPage() {
                 </div>
               </div>
               <div className="ei-sessions-offer-image" aria-hidden="true">
-                <img src={bookSessionBg} alt="" loading="lazy" />
+                <img src={imageOffer} alt="" loading="lazy" />
               </div>
             </motion.article>
 
@@ -305,7 +309,7 @@ export function SessionsPage() {
 
             <motion.article variants={fadeSoft} className="ei-card ei-sessions-cta">
               <div className="ei-sessions-cta-image" aria-hidden="true">
-                <img src={bookSessionBg} alt="" loading="lazy" />
+                <img src={imageCTA} alt="" loading="lazy" />
               </div>
               <div className="ei-sessions-cta-copy">
                 <h2 className="ei-type-section">{sessionsClosing.heading}</h2>
