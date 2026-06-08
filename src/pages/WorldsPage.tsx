@@ -132,7 +132,7 @@ export function WorldsPage() {
       >
         <picture className="ei-worlds-hero-image" aria-hidden="true">
           <source media="(min-width: 768px)" srcSet={worldsHeroDesktop} />
-          <img src={worldsHeroMobile} alt="" fetchPriority="high" />
+          <img src={worldsHeroMobile} alt="" />
         </picture>
 
         <div className="ei-worlds-hero-overlay" aria-hidden="true" />
