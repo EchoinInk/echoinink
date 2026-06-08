@@ -165,7 +165,7 @@ export function ArchivePage() {
                 label="Sort"
                 value={sortBy}
                 options={[...archiveSortOptions]}
-                onChange={(event) => setSortBy(event.target.value as ArchiveSort)}
+                onChange={(event) => setSortBy((event.target.value || 'Latest') as ArchiveSort)}
                 className="ei-archive-sort"
               />
             </motion.div>
