@@ -92,7 +92,7 @@ export function ProjectCard({
             src={image}
             alt=""
             aria-hidden="true"
-            className="ei-project-card-image absolute inset-0 h-full w-full object-cover object-[57%_50%] transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+            className="ei-project-card-image absolute inset-0 h-full w-full object-cover object-[57%_50%] transition-transform duration-700 ease-[cubic-bezier(0.22,_1,_0.36,_1)] group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
           />
 
           <div
@@ -139,7 +139,7 @@ export function ProjectCard({
         src={image}
         alt=""
         aria-hidden="true"
-        className="ei-project-card-image absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+        className="ei-project-card-image absolute inset-0 h-full w-full object-cover object-center transition-transform duration-700 ease-[cubic-bezier(0.22,_1,_0.36,_1)] group-hover:scale-[1.02] motion-reduce:transition-none motion-reduce:group-hover:scale-100"
       />
 
       <div
