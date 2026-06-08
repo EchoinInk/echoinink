@@ -76,7 +76,7 @@
   /* Focus placeholder fade */
   .ei-form-input:focus::placeholder,
   .ei-form-textarea:focus::placeholder {
-    color: var(--ei-color-text-muted);
+    color: var(--ei-color-text-tertiary);
   }
 
   /* Focus label enhancement */

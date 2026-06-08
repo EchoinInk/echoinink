@@ -79,7 +79,10 @@
       --ei-color-text-tertiary,
       rgb(227 216 253 / 0.58)
     );
-    --ei-type-color-muted: var(--ei-color-text-muted, rgb(227 216 253 / 0.42));
+    --ei-type-color-muted: var(
+      --ei-color-text-tertiary,
+      rgb(227 216 253 / 0.58)
+    );
     --ei-type-accent: var(--ei-halo-blue, #8fd8ff);
     --ei-type-accent-secondary: var(--ei-soft-neon, #d8a8ff);
   }
@@ -354,7 +357,7 @@
   }
 
   .ei-type-color-muted {
-    color: var(--ei-color-text-muted);
+    color: var(--ei-color-text-tertiary);
   }
 
   .ei-type-color-faint {

@@ -360,12 +360,12 @@ export function Contact() {
                     type="submit"
                     variant="primary"
                     disabled={formState === 'submitting'}
-	                    className="ei-type-color-primary min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] hover:shadow-[0_10px_40px_rgb(var(--ei-halo-blue-rgb)/0.08)] disabled:opacity-80"
+                    className="ei-type-color-primary min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] hover:shadow-[0_10px_40px_rgb(var(--ei-halo-blue-rgb)/0.08)] disabled:opacity-80"
                   >
                     {formState === 'submitting' ? 'Sending...' : 'Send Message'}
                   </Button>
 
-	                  <p className="ei-type-color-tertiary flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65]">
+                  <p className="ei-type-color-tertiary flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65]">
                     <span className="mt-0.5">
                       <ContactIcon name="lock" />
                     </span>
