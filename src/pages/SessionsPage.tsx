@@ -21,7 +21,7 @@ import {
 
 import sessionsHeroDesktop from "@/assets/imagery/hero/sessions-hero-desktop.webp";
 import sessionsHeroMobile from "@/assets/imagery/hero/sessions-hero-mobile.webp";
-import bookSessionBg from "@/assets/imagery/sections/book-session-bg.png";
+import bookSessionBg from "@/assets/imagery/sections/cta-image-desktop.webp";
 
 import {
   sessionsApproach,
