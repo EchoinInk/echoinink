@@ -39,8 +39,8 @@ export function WorksGrid({ activeFilter, sortBy }: WorksGridProps) {
     return sortProjects(filtered, sortBy);
   }, [activeFilter, sortBy]);
 
-  const largeProjects = visibleProjects.filter((project) => project.variant === 'large');
-  const smallProjects = visibleProjects.filter((project) => project.variant === 'small');
+  const featuredProject = visibleProjects.find((project) => project.featured);
+  const editorialProjects = visibleProjects.filter((project) => !project.featured);
 
   if (visibleProjects.length === 0) {
     return (
@@ -48,9 +48,9 @@ export function WorksGrid({ activeFilter, sortBy }: WorksGridProps) {
         variants={fadeSoft}
         initial="hidden"
         whileInView="visible"
-        viewport={VIEWPORT.loose}
+        viewport={VIEWPORT.normal}
         className="py-20 text-center font-structural text-[14px]"
-        style={{ color: 'var(--ei-text-tertiary)' }}
+        style={{ color: 'var(--ei-color-text-tertiary)' }}
       >
         No projects match this filter yet.
       </motion.p>
@@ -58,22 +58,18 @@ export function WorksGrid({ activeFilter, sortBy }: WorksGridProps) {
   }
 
   return (
-    <div className="space-y-6 md:space-y-8">
-      {largeProjects.length > 0 && (
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-          {largeProjects.map((project, index) => (
-            <ProjectCard key={project.title} {...project} index={index} />
-          ))}
-        </div>
-      )}
+    <div className="space-y-4 md:space-y-5">
+      {featuredProject ? (
+        <ProjectCard key={featuredProject.title} {...featuredProject} index={0} />
+      ) : null}
 
-      {smallProjects.length > 0 && (
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 md:gap-8">
-          {smallProjects.map((project, index) => (
+      {editorialProjects.length > 0 && (
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
+          {editorialProjects.map((project, index) => (
             <ProjectCard
               key={project.title}
               {...project}
-              index={largeProjects.length + index}
+              index={featuredProject ? index + 1 : index}
             />
           ))}
         </div>
