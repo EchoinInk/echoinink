@@ -120,7 +120,7 @@ export function Header() {
             }
             aria-expanded={menuOpen}
             className="
-              flex min-h-[44px] min-w-[60px] items-center justify-end
+              ei-focus-rounded flex min-h-[44px] min-w-[60px] items-center justify-end rounded-full
               font-structural text-[11px] font-medium uppercase tracking-[0.18em]
               text-[var(--ei-header-text)]
               transition-colors duration-500

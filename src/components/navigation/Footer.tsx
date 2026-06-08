@@ -138,7 +138,7 @@ export default function Footer() {
                 </p>
 
                 <div className="shrink-0 pt-0.5 opacity-70">
-                  <OrbitalVisual variant="haloGate" size={44} />
+                  <OrbitalVisual variant="chorusCore" size={44} />
                 </div>
               </div>
 

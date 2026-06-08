@@ -1,5 +1,15 @@
 # Changelog
 
+## 2026-06-08 — WCAG Contrast and Focus Pass
+
+- Improved muted text contrast for meaningful small copy while keeping faint text reserved for decorative marks.
+- Strengthened visible focus indicators with the shared WCAG-safe halo treatment.
+- Improved form labels, placeholders, footer links, and subtle-link readability.
+- Fixed system status pill text contrast.
+- Refined the mobile navigation Close button focus ring to match its rounded control shape without reducing contrast.
+
+---
+
 ## 2026-06-04 — Design System Migration: Echo in Ink Palette Update
 
 ### Color Token System Migration
