@@ -138,7 +138,7 @@ export const identityPricing = {
     },
     {
       name: 'Full Atmospheric Kit',
-      price: '$300–$400',
+      price: '$300-$400',
       currency: 'NZD',
       description:
         'For projects needing a complete emotional and visual foundation.',
