@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/layout/Container";
+import { Section } from "@/components/layout/Section";
 import { EditorialImageHero } from "@/components/sections/EditorialImageHero";
 import { Button } from "@/components/ui/Button";
 import type { OrbitalVariant } from "@/components/orbitals/orbitals";
@@ -151,7 +152,10 @@ export function Studio() {
       />
 
       {/* PHILOSOPHY */}
-      <section className="relative mt-12 py-14 will-change-transform md:mt-20 md:py-16">
+      <Section
+        spacing="none"
+        className="relative pt-12 pb-2 will-change-transform md:pt-16 md:pb-4"
+      >
         <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -216,10 +220,10 @@ export function Studio() {
             </motion.div>
           </motion.div>
         </Container>
-      </section>
+      </Section>
 
       {/* WHAT WE DO */}
-      <section className="relative py-14 md:py-16">
+      <Section spacing="none" className="relative pt-6 pb-2 md:pt-8 md:pb-4">
         <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -282,10 +286,10 @@ export function Studio() {
             </div>
           </motion.div>
         </Container>
-      </section>
+      </Section>
 
       {/* PROCESS */}
-      <section className="relative py-14 md:py-16">
+      <Section spacing="none" className="relative pt-6 pb-2 md:pt-8 md:pb-4">
         <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -352,10 +356,10 @@ export function Studio() {
             </motion.div>
           </motion.div>
         </Container>
-      </section>
+      </Section>
 
       {/* FEATURED WORK */}
-      <section className="relative py-14 md:py-16">
+      <Section spacing="none" className="relative pt-6 pb-2 md:pt-8 md:pb-4">
         <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -414,10 +418,13 @@ export function Studio() {
             </motion.article>
           </motion.div>
         </Container>
-      </section>
+      </Section>
 
       {/* SLIM CTA */}
-      <section className="relative pb-12 md:pb-16">
+      <Section
+        spacing="none"
+        className="relative pt-8 pb-10 md:pt-10 md:pb-12"
+      >
         <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -428,23 +435,50 @@ export function Studio() {
           >
             <motion.div
               variants={fadeSoft}
-              className="flex flex-col gap-6 rounded-[var(--ei-card-radius-lg)] bg-[rgb(var(--ei-ice-white-rgb)/0.026)] px-7 py-7 shadow-[0_0_70px_rgb(var(--ei-violet-rgb)/0.055)] md:flex-row md:items-center md:justify-between md:px-9"
+              className="relative flex flex-col gap-6 overflow-hidden rounded-[var(--ei-card-radius-lg)] border border-[rgb(var(--ei-moonlit-rgb)/0.16)] bg-[linear-gradient(100deg,rgb(var(--ei-midnight-rgb)/0.64),rgb(var(--ei-void-rgb)/0.9)_58%,rgb(var(--ei-violet-rgb)/0.13))] px-7 py-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.045),0_0_76px_rgb(var(--ei-violet-rgb)/0.075)] md:flex-row md:items-center md:justify-between md:px-10"
             >
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -left-10 top-1/2 hidden h-28 w-44 -translate-y-1/2 text-[rgb(var(--ei-halo-blue-rgb)/0.28)] opacity-75 md:block"
+              >
+                <svg
+                  viewBox="0 0 180 112"
+                  fill="none"
+                  className="h-full w-full"
+                >
+                  {Array.from({ length: 7 }).map((_, index) => (
+                    <path
+                      key={index}
+                      d={`M0 ${28 + index * 7}C32 ${2 + index * 3} 58 ${6 + index * 4} 82 ${32 + index * 5}C108 ${60 + index * 4} 136 ${62 + index * 2} 180 ${38 + index * 6}`}
+                      stroke="currentColor"
+                      strokeWidth="1"
+                      opacity={0.38 - index * 0.035}
+                    />
+                  ))}
+                </svg>
+              </div>
+
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute left-0 top-0 h-full w-36 bg-[radial-gradient(circle_at_0%_42%,rgb(var(--ei-violet-rgb)/0.16),transparent_62%)]"
+              />
+
               <motion.div
                 variants={driftUp}
-                className="flex items-center gap-5"
+                className="relative z-10 max-w-[42rem] md:pl-16"
               >
-                <span
-                  aria-hidden="true"
-                  className="h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.82)] shadow-[0_0_22px_rgb(var(--ei-violet-rgb)/0.8)]"
-                />
-
                 <p className="ei-type-studio-slim-cta">
                   Let&apos;s build something meaningful.
                 </p>
+                <p className="ei-type-studio-body-small mt-2 text-[var(--ei-color-text-secondary)]">
+                  Strategic design. Immersive experiences. Lasting impact.
+                </p>
               </motion.div>
 
-              <motion.div variants={driftUp}>
+              <motion.div
+                variants={driftUp}
+                className="relative z-10 mt-6 md:mt-0 md:ml-8"
+              >
                 <Button
                   to="/contact"
                   variant="secondary"
@@ -457,7 +491,7 @@ export function Studio() {
             </motion.div>
           </motion.div>
         </Container>
-      </section>
+      </Section>
     </PageShell>
   );
 }
