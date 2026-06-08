@@ -17,6 +17,7 @@ interface PageSectionHeroProps {
   description: string;
   ctaLabel?: string;
   ctaHref?: string;
+  ctaVariant?: "primary" | "secondary" | "tertiary";
   secondaryCtaLabel?: string;
   secondaryCtaHref?: string;
   image: string;
@@ -33,6 +34,7 @@ export function PageSectionHero({
   description,
   ctaLabel,
   ctaHref,
+  ctaVariant = "primary",
   secondaryCtaLabel,
   secondaryCtaHref,
   image,
@@ -195,7 +197,7 @@ export function PageSectionHero({
                 }`}
               >
                 {ctaLabel && ctaHref ? (
-                  <Button to={ctaHref} variant="primary" className="self-start">
+                  <Button to={ctaHref} variant={ctaVariant} className="self-start">
                     {ctaLabel}
                   </Button>
                 ) : null}
