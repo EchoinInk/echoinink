@@ -21,6 +21,14 @@ Avoid making the site look generic, SaaS-like, corporate, bright, busy, or templ
 
 Use the existing project structure and conventions.
 
+Repo shape:
+- This is a Vite React TypeScript app, not Next.js.
+- Do not introduce Next.js conventions.
+- Routing lives in `src/App.tsx` via `react-router-dom`.
+- The main CSS entry is `src/styles/globals.css`.
+- Prefer page-specific CSS before changing global tokens.
+- Avoid archive folders unless explicitly asked.
+
 Before editing:
 - inspect the relevant files first
 - identify the component, style, and token files involved
