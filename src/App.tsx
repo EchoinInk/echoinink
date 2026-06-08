@@ -1,19 +1,18 @@
-import { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
 import { Layout } from '@/components/layout/Layout';
 import { PageTransition } from '@/components/system/PageTransition';
-import { Home } from '@/pages/HomePage';
-import Identity from '@/pages/IdentityPage';
-import SessionsPage from '@/pages/SessionsPage';
-import WorldsPage from '@/pages/WorldsPage';
+import { HomePage } from '@/pages/HomePage';
+import { IdentityPage } from '@/pages/IdentityPage';
+import { SessionsPage } from '@/pages/SessionsPage';
+import { WorldsPage } from '@/pages/WorldsPage';
 import { WorksPage } from '@/pages/WorksPage';
 import { LumoPage } from '@/pages/LumoPage';
-import { Studio } from '@/pages/StudioPage';
-import { Contact } from '@/pages/ContactPage';
-import SystemsPage from '@/pages/SystemsPage';
-import ArchivePage from '@/pages/ArchivePage';
+import { StudioPage } from '@/pages/StudioPage';
+import { ContactPage } from '@/pages/ContactPage';
+import { SystemsPage } from '@/pages/SystemsPage';
+import { ArchivePage } from '@/pages/ArchivePage';
 
 function AppRoutes() {
   const location = useLocation();
@@ -21,14 +20,14 @@ function AppRoutes() {
   return (
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/identity" element={<Identity />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/identity" element={<IdentityPage />} />
         <Route path="/sessions" element={<SessionsPage />} />
         <Route path="/worlds" element={<WorldsPage />} />
         <Route path="/works" element={<WorksPage />} />
         <Route path="/works/lumo" element={<LumoPage />} />
-        <Route path="/studio" element={<Studio />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/studio" element={<StudioPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/systems" element={<SystemsPage />} />
         <Route path="/archive" element={<ArchivePage />} />
       </Routes>

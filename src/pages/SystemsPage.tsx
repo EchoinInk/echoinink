@@ -7,7 +7,7 @@ import { SystemCard } from '@/components/cards/SystemCard';
 import { systemsCategories, systemsGrid, systemsHero } from '@/data/systemsContent';
 import { staggerContainer, STAGGER, VIEWPORT } from '@/lib/motion-cinematic';
 
-export default function SystemsPage() {
+export function SystemsPage() {
   return (
     <PageShell atmosphere="works" withTopSpacing={false}>
       <Helmet>

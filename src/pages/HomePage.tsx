@@ -7,7 +7,7 @@ import { LumoCaseStudyTeaser } from '@/components/home/HomeFeaturedLumo';
 import { EmergingSystems } from '@/components/home/HomeOurSystems';
 import { ClosingSection } from '@/components/home/HomeClosingSection';
 
-export function Home() {
+export function HomePage() {
   return (
     <PageShell id="main-content" atmosphere="default" withTopSpacing={false}>
       <Helmet>

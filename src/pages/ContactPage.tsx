@@ -8,8 +8,10 @@ import { Section } from "@/components/layout/Section";
 import { PageSectionHero } from "@/components/sections/PageSectionHero";
 import { Button } from "@/components/ui/Button";
 import { EchoSelect } from "@/components/ui/EchoSelect";
-import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
-import type { OrbitalVariant } from "@/components/orbitals/orbitals";
+import {
+  OrbitalVisual,
+  type OrbitalVariant,
+} from "@/components/ui/OrbitalVisual";
 import contactHeroDesktop from "@/assets/imagery/hero/contact-hero-desktop.webp";
 import contactHeroMobile from "@/assets/imagery/hero/contact-hero-mobile.webp";
 import {
@@ -95,7 +97,7 @@ function SectionLabel({ children }: { children: string }) {
   );
 }
 
-export function Contact() {
+export function ContactPage() {
   const [formState, setFormState] = useState<"idle" | "submitting" | "success">(
     "idle",
   );

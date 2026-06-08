@@ -2,8 +2,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
-import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
-import type { OrbitalVariant } from "@/components/orbitals/orbitals";
+import {
+  OrbitalVisual,
+  type OrbitalVariant,
+} from "@/components/ui/OrbitalVisual";
 import {
   driftUp,
   staggerContainer,

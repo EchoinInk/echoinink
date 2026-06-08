@@ -7,8 +7,10 @@ import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { PageSectionHero } from "@/components/sections/PageSectionHero";
 import { Button } from "@/components/ui/Button";
-import type { OrbitalVariant } from "@/components/orbitals/orbitals";
-import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
+import {
+  OrbitalVisual,
+  type OrbitalVariant,
+} from "@/components/ui/OrbitalVisual";
 
 import studioHeroDesktop from "@/assets/imagery/hero/studio-hero-desktop.webp";
 import studioHeroMobile from "@/assets/imagery/hero/studio-hero-mobile.webp";
@@ -124,7 +126,7 @@ function SectionLabel({ children }: { children: string }) {
   );
 }
 
-export function Studio() {
+export function StudioPage() {
   return (
     <PageShell atmosphere="studio" withTopSpacing={false}>
       <Helmet>

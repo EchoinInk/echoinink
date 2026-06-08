@@ -1,6 +1,8 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import type { OrbitalVariant } from '@/components/orbitals/orbitals';
-import { OrbitalVisual } from '@/components/ui/OrbitalVisual';
+import {
+  OrbitalVisual,
+  type OrbitalVariant,
+} from '@/components/ui/OrbitalVisual';
 import { DURATION, EASE_CINEMATIC, VIEWPORT } from '@/lib/motion-cinematic';
 
 interface PhilosophyCardProps {

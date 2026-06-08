@@ -9,7 +9,7 @@ import {
   archiveNotes,
 } from '@/data/archiveContent';
 
-export default function ArchivePage() {
+export function ArchivePage() {
   return (
     <PageShell atmosphere="default" withTopSpacing={false}>
       <Helmet>

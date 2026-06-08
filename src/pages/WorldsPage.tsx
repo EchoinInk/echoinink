@@ -22,7 +22,7 @@ import {
   worldsUseCases,
 } from '@/data/worldsContent';
 
-export default function WorldsPage() {
+export function WorldsPage() {
   return (
     <PageShell atmosphere="worlds" withTopSpacing={false}>
       <Helmet>

@@ -6,8 +6,10 @@ import { Container } from "@/components/layout/Container";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { Button } from "@/components/ui/Button";
-import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
-import type { OrbitalVariant } from "@/components/orbitals/orbitals";
+import {
+  OrbitalVisual,
+  type OrbitalVariant,
+} from "@/components/ui/OrbitalVisual";
 import {
   blurEmergence,
   driftUp,
@@ -103,7 +105,7 @@ function SignalCard({ eyebrow, icon, items }: SignalCardProps) {
   );
 }
 
-export default function SessionsPage() {
+export function SessionsPage() {
   const primaryTier = sessionsPricing.tiers[0];
   const deepTier = sessionsPricing.tiers[1];
 

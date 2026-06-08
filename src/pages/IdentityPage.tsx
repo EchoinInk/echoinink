@@ -40,7 +40,7 @@ function IdentityHeroTitle() {
   );
 }
 
-export default function Identity() {
+export function IdentityPage() {
   return (
     <PageShell
       atmosphere="identity"
