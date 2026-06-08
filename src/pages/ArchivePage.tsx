@@ -94,7 +94,7 @@ export function ArchivePage() {
       >
         <picture className="ei-archive-hero-media" aria-hidden="true">
           <source media="(min-width: 768px)" srcSet={archiveImageDesktop} />
-          <img src={archiveImageMobile} alt="" loading="high" />
+          <img src={archiveImageMobile} alt="" loading="lazy" />
         </picture>
 
         <div className="ei-archive-hero-scrim" aria-hidden="true" />
