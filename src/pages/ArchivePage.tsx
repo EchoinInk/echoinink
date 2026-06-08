@@ -96,9 +96,6 @@ export function ArchivePage() {
         </picture>
 
         <div className="ei-archive-hero-scrim" aria-hidden="true" />
-        <div className="ei-archive-hero-orbit" aria-hidden="true">
-          <OrbitalVisual variant="haloGate" size={300} />
-        </div>
 
         <Container size="xl" className="relative z-10">
           <motion.div variants={driftUp} className="ei-archive-hero-copy">
