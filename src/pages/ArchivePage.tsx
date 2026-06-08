@@ -20,8 +20,10 @@ import {
   type ArchiveFilter,
   type ArchiveSort,
 } from '@/data/archiveContent';
-import archiveImageDesktop from '@/assets/imagery/sections/archive-image-1-desktop.webp';
-import archiveImageMobile from '@/assets/imagery/sections/archive-image-1-mobile.webp';
+import archiveImageDesktop from '@/assets/imagery/hero/archive-hero-desktop.webp';
+import archiveImageMobile from '@/assets/imagery/heroarchive-hero-mobile.webp';
+import archiveEssayDesktop from '@/assets/imagery/hero/archive-hero-desktop.webp';
+import archiveImageMobile from '@/assets/imagery/heroarchive-hero-mobile.webp';
 import {
   blurEmergence,
   driftUp,
