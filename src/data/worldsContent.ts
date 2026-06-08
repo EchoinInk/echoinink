@@ -205,3 +205,79 @@ export const worldsClosing = {
   heading: 'If your work needs a deeper atmosphere, a clearer narrative, and a system people can enter, this is where the world begins.',
   cta: { label: 'Enquire about World Architecture', href: '/contact' },
 };
+
+export const worldsSignalCards = [
+  {
+    eyebrow: 'What it includes',
+    icon: 'synthesisStar',
+    items: [
+      'Narrative system architecture',
+      'Visual coherence systems',
+      'Interaction and motion principles',
+      'Atmospheric perception systems',
+      'Digital presence architecture',
+      'Long-term continuity mapping',
+    ],
+  },
+  {
+    eyebrow: 'What it does',
+    icon: 'focusDial',
+    items: [
+      'Transforms identity into a living environment',
+      'Stabilises expression across growth and scale',
+      'Removes contradiction between platforms and presence',
+      'Builds continuity between atmosphere, interaction, and meaning',
+      'Allows the work to evolve without losing itself',
+    ],
+  },
+  {
+    eyebrow: 'What it feels like',
+    icon: 'chorusCore',
+    items: [
+      'Stepping into a complete environment rather than disconnected parts',
+      'Everything already knowing what it is supposed to be',
+      'Clarity persisting even as complexity increases',
+      'The absence of emotional contradiction across the system',
+    ],
+  },
+];
+
+export const worldsArchitecture = [
+  { label: 'Identity Core', icon: 'axiomRing' },
+  { label: 'Atmospheric Register', icon: 'innerTide' },
+  { label: 'Narrative Spine', icon: 'threadBeacon' },
+  { label: 'System Architecture', icon: 'vectorLattice' },
+  { label: 'Interaction Logic', icon: 'focusDial' },
+  { label: 'Touchpoint Mapping', icon: 'prismMirror' },
+  { label: 'Expansion Pathways', icon: 'haloGate' },
+  { label: 'Continuity Principles', icon: 'signalBridge' },
+];
+
+export const worldsFitSignals = [
+  {
+    icon: 'threadBeacon',
+    text: 'Your work has outgrown fragmented expression.',
+  },
+  {
+    icon: 'focusDial',
+    text: 'You want coherence across every touchpoint and platform.',
+  },
+  {
+    icon: 'synthesisStar',
+    text: 'You need systems capable of preserving emotional truth at scale.',
+  },
+  {
+    icon: 'axiomRing',
+    text: 'You are building something expansive enough to require continuity architecture.',
+  },
+  {
+    icon: 'chorusCore',
+    text: 'You want your identity to behave like a world rather than a collection of assets.',
+  },
+];
+
+export const worldsJourneyLinks = [
+  { label: 'Begin a collaboration', href: '/contact', variant: 'primary' },
+  { label: 'Explore identity translation', href: '/identity', variant: 'tertiary' },
+  { label: 'Explore the works', href: '/works', variant: 'tertiary' },
+];
