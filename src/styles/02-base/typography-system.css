@@ -402,7 +402,6 @@
   .ei-footer a:focus-visible {
     color: var(--ei-color-text-accent);
   }
-}
 
 .ei-type-philosophy-fragment {
   font-family: var(--ei-font-structural);
@@ -416,7 +415,7 @@
 .ei-type-philosophy-fragment-accent {
   color: var(--ei-color-text-accent);
 }
-
+}
 /* ────────────────────────────────────────────────────────────── Mobile Typography Rules ────────────────────────────────────────────────────────────── */
 @layer base {
 @media (max-width: 767px) {
@@ -447,6 +446,7 @@
     font-size: 0.625rem;
     letter-spacing: 0.12em;
   }
+}
 }
 /* ────────────────────────────────────────────────────────────── Backwards Compatibility Aliases Temporary only. Existing components can keep working, but new components should use .ei-type-* classes. ────────────────────────────────────────────────────────────── */
 @layer base {
