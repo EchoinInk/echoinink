@@ -12,7 +12,7 @@ import { OrbitalVisual } from '@/components/ui/OrbitalVisual';
 
 import systemsHeroDesktop from '@/assets/imagery/hero/systems-hero-desktop.webp';
 import systemsHeroMobile from '@/assets/imagery/hero/systems-hero-mobile.webp';
-import featuredSystemImage from '@/assets/imagery/sections/cta-im';
+import systemsCTAImage from '@/assets/imagery/sections/cta-image-desktop.webp';
 
 import {
   featuredSystem,
