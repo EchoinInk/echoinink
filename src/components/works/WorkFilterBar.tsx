@@ -16,8 +16,7 @@ export function WorkFilterBar({
 }: WorkFilterBarProps) {
   return (
     <div
-      className="flex flex-col gap-6 border-b pb-8 md:flex-row md:items-end md:justify-between md:gap-10"
-      style={{ borderColor: 'var(--border-soft)' }}
+      className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-10"
     >
       <div
         role="group"
@@ -33,13 +32,15 @@ export function WorkFilterBar({
               type="button"
               aria-pressed={isActive}
               onClick={() => onFilterChange(filter)}
-              className="relative shrink-0 rounded-full border px-4 py-2.5 font-structural text-[10px] uppercase tracking-[0.18em] transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/45 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)]"
+              className="relative shrink-0 rounded-full border px-4 py-2.5 font-structural text-[10px] uppercase tracking-[0.18em] transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.72)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)]"
               style={{
-                color: isActive ? 'var(--ei-text-primary)' : 'var(--ei-text-tertiary)',
+                color: isActive
+                  ? 'var(--ei-color-text-primary)'
+                  : 'var(--ei-color-text-tertiary)',
                 background: isActive ? 'var(--ei-filter-bg-active)' : 'transparent',
                 borderColor: isActive ? 'var(--ei-filter-border-active)' : 'transparent',
                 boxShadow: isActive
-                  ? '0 0 20px rgb(73, 133, 253 / 0.08)'
+                  ? '0 0 20px rgb(var(--ei-halo-blue-rgb) / 0.08)'
                   : 'none',
               }}
             >
@@ -48,8 +49,8 @@ export function WorkFilterBar({
                   aria-hidden="true"
                   className="absolute -bottom-3 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full"
                   style={{
-                    background: 'var(--ei-text-accent)',
-                    boxShadow: '0 0 8px rgb(73, 133, 253 / 0.6)',
+                    background: 'var(--ei-color-text-accent)',
+                    boxShadow: '0 0 8px rgb(var(--ei-halo-blue-rgb) / 0.6)',
                   }}
                 />
               )}
