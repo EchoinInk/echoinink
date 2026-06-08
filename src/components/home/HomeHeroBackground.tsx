@@ -1,5 +1,6 @@
-import homeHero from "@public/home-hero-desktop.webp";
-import homeHeroMobile from "@public/home-hero-mobile.webp";
+// Use public static assets by path instead of importing from @public
+const homeHero = "/home-hero-desktop.webp";
+const homeHeroMobile = "/home-hero-mobile.webp";
 
 export function HeroBackground() {
   return (
