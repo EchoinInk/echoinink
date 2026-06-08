@@ -1,36 +1,40 @@
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import { HelmetProvider } from 'react-helmet-async';
+import { lazy, Suspense } from 'react';
 import { Layout } from '@/components/layout/Layout';
 import { PageTransition } from '@/components/system/PageTransition';
-import { HomePage } from '@/pages/HomePage';
-import { IdentityPage } from '@/pages/IdentityPage';
-import { SessionsPage } from '@/pages/SessionsPage';
-import { WorldsPage } from '@/pages/WorldsPage';
-import { WorksPage } from '@/pages/WorksPage';
-import { LumoPage } from '@/pages/LumoPage';
-import { StudioPage } from '@/pages/StudioPage';
-import { ContactPage } from '@/pages/ContactPage';
-import { SystemsPage } from '@/pages/SystemsPage';
-import { ArchivePage } from '@/pages/ArchivePage';
+
+const HomePage = lazy(() => import('@/pages/HomePage').then((module) => ({ default: module.HomePage })));
+const IdentityPage = lazy(() => import('@/pages/IdentityPage').then((module) => ({ default: module.IdentityPage })));
+const SessionsPage = lazy(() => import('@/pages/SessionsPage').then((module) => ({ default: module.SessionsPage })));
+const WorldsPage = lazy(() => import('@/pages/WorldsPage').then((module) => ({ default: module.WorldsPage })));
+const WorksPage = lazy(() => import('@/pages/WorksPage').then((module) => ({ default: module.WorksPage })));
+const LumoPage = lazy(() => import('@/pages/LumoPage').then((module) => ({ default: module.LumoPage })));
+const StudioPage = lazy(() => import('@/pages/StudioPage').then((module) => ({ default: module.StudioPage })));
+const ContactPage = lazy(() => import('@/pages/ContactPage').then((module) => ({ default: module.ContactPage })));
+const SystemsPage = lazy(() => import('@/pages/SystemsPage').then((module) => ({ default: module.SystemsPage })));
+const ArchivePage = lazy(() => import('@/pages/ArchivePage').then((module) => ({ default: module.ArchivePage })));
 
 function AppRoutes() {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait" initial={false}>
-      <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/identity" element={<IdentityPage />} />
-        <Route path="/sessions" element={<SessionsPage />} />
-        <Route path="/worlds" element={<WorldsPage />} />
-        <Route path="/works" element={<WorksPage />} />
-        <Route path="/works/lumo" element={<LumoPage />} />
-        <Route path="/studio" element={<StudioPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/systems" element={<SystemsPage />} />
-        <Route path="/archive" element={<ArchivePage />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/identity" element={<IdentityPage />} />
+          <Route path="/sessions" element={<SessionsPage />} />
+          <Route path="/worlds" element={<WorldsPage />} />
+          <Route path="/works" element={<WorksPage />} />
+          <Route path="/works/lumo" element={<LumoPage />} />
+          <Route path="/studio" element={<StudioPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/systems" element={<SystemsPage />} />
+          <Route path="/archive" element={<ArchivePage />} />
+        </Routes>
+      </Suspense>
     </AnimatePresence>
   );
 }
