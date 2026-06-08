@@ -1,5 +1,28 @@
 # Changelog
 
+## 2026-06-09 — Redesigned Page Registry
+
+Current active redesigned pages as of this update:
+
+- `/` — `HomePage`: cinematic world-entry homepage with modular hero, philosophy, creation, featured Lumo, systems, and closing sections.
+- `/identity` — `IdentityPage`: atmospheric identity offer page with image-led hero, audience framing, deliverables, process, transformation, pricing, and CTA flow.
+- `/sessions` — `SessionsPage`: Echo Sessions offer page with immersive hero imagery, orbital signal cards, session types, outcomes, pricing, and booking CTA.
+- `/worlds` — `WorldsPage`: World Architecture offer page using the shared offer-section system for use cases, layers, deliverables, proof, pricing, and closing CTA.
+- `/works` — `WorksPage`: redesigned works archive with cinematic page hero, filter/sort controls, project grid, and image-backed project CTA.
+- `/works/lumo` — `LumoPage`: Lumo signature case-study route with the full case-study component, process sequence, and related CTA.
+- `/studio` — `StudioPage`: studio philosophy page with cinematic hero, principles, pillars, process, featured work, manifesto, and closing CTA.
+- `/contact` — `ContactPage`: intimate contact route with cinematic hero, guided form flow, service signals, trust notes, and orbital accents.
+- `/systems` — `SystemsPage`: systems/product route using shared offer hero, category pills, and atmospheric systems grid.
+- `/archive` — `ArchivePage`: editorial archive route using shared offer sections for featured archive content, categories, and recent notes.
+
+Maintenance notes:
+- Active route source of truth is `src/App.tsx`.
+- Page modules now use named exports aligned with route page names.
+- `src/pages/EasyPage.tsx` is not included because it is not currently routed.
+- Archive folders are not included unless actively imported by the live app.
+
+---
+
 ## 2026-06-08 — WCAG Contrast and Focus Pass
 
 - Improved muted text contrast for meaningful small copy while keeping faint text reserved for decorative marks.
