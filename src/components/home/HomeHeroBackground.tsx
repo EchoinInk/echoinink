@@ -1,5 +1,5 @@
-import homeHero from "@/assets/imagery/hero/home-hero-desktop.webp";
-import homeHeroMobile from "public/home-hero-desktop.webp";
+import homeHero from "@public/home-hero-desktop.webp";
+import homeHeroMobile from "@public/home-hero-mobile.webp";
 
 export function HeroBackground() {
   return (
