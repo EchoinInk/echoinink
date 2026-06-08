@@ -271,7 +271,7 @@
   font-weight: 400;
   color: var(--ei-type-color-secondary);
 }
-
+}
 /* Studio readability pass */
 @layer base {
   /* Hero + major section titles */
@@ -417,10 +417,8 @@
   color: var(--ei-color-text-accent);
 }
 
-}
 /* ────────────────────────────────────────────────────────────── Mobile Typography Rules ────────────────────────────────────────────────────────────── */
 @layer base {
-}
 @media (max-width: 767px) {
   .ei-type-hero {
     font-size: clamp(2.75rem, 13vw, 3.5rem);
