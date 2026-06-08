@@ -32,7 +32,7 @@ import {
 function IdentityHeroTitle() {
   return (
     <>
-      Every world
+      Every world{" "}
       <br />
       begins with a{" "}
       <em className="ei-type-studio-hero-emphasis">{identityHero.italicWord}</em>.
