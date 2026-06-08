@@ -115,7 +115,7 @@ Common layout/component files may include:
 - Container
 - Section
 - Button
-- EditorialImageHero
+- PageSectionHero
 - OrbitalVisual
 - cards
 - page-specific CSS

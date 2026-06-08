@@ -10,7 +10,7 @@ import {
   VIEWPORT,
 } from "@/lib/motion-cinematic";
 
-interface EditorialImageHeroProps {
+interface PageSectionHeroProps {
   eyebrow: string;
   title: string;
   italicWord?: string;
@@ -26,7 +26,7 @@ interface EditorialImageHeroProps {
   variant?: "default" | "studio" | "intimate";
 }
 
-export function EditorialImageHero({
+export function PageSectionHero({
   eyebrow,
   title,
   italicWord,
@@ -40,7 +40,7 @@ export function EditorialImageHero({
   imageAlt,
   align = "left",
   variant = "default",
-}: EditorialImageHeroProps) {
+}: PageSectionHeroProps) {
   const titleParts = italicWord
     ? title.split(new RegExp(`(${italicWord})`, "i"))
     : [title];
