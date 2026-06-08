@@ -17,7 +17,7 @@
 }
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'/fonts/neue-montreal/NeueMontreal-Medium.otf") format("opentype");
+  src: url("/fonts/neue-montreal/NeueMontreal-Medium.otf") format("opentype");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -143,7 +143,7 @@
     color: var(--ei-type-color-tertiary);
   }
   .ei-type-hero-kicker {
-  font-family: var(--ei-font-copy);
+  font-family: var(--ei-font-structural);
   font-size: clamp(0.875rem, 1vw, 1rem);
   line-height: 1.6;
   letter-spacing: 0.01em;
@@ -151,7 +151,7 @@
   color: var(--ei-type-color-secondary);
 }
   .ei-type-hero-description {
-  font-family: var(--ei-font-copy);
+  font-family: var(--ei-font-structural);
   font-size: clamp(0.9375rem, 1.05vw, 1rem);
   line-height: 1.85;
   letter-spacing: -0.005em;
