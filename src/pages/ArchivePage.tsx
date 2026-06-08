@@ -21,9 +21,9 @@ import {
   type ArchiveSort,
 } from '@/data/archiveContent';
 import archiveImageDesktop from '@/assets/imagery/hero/archive-hero-desktop.webp';
-import archiveImageMobile from '@/assets/imagery/heroarchive-hero-mobile.webp';
-import archiveEssayDesktop from '@/assets/imagery/hero/archive-hero-desktop.webp';
-import archiveImageMobile from '@/assets/imagery/heroarchive-hero-mobile.webp';
+import archiveImageMobile from '@/assets/imagery/hero/archive-hero-mobile.webp';
+import archiveEssayDesktop from '@/assets/imagery/sections/archive-essay-desktop.webp';
+import archiveEssayMobile from '@/assets/imagery/sections/archive-essay-mobile.webp';
 import {
   blurEmergence,
   driftUp,
