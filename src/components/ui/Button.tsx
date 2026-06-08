@@ -38,7 +38,7 @@ export function Button({
     transition-all duration-500 ease-out
     focus-visible:outline-none
     focus-visible:ring-2
-    focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.45)]
+    focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.72)]
     focus-visible:ring-offset-2
     focus-visible:ring-offset-[var(--ei-color-background-canvas)]
     disabled:pointer-events-none

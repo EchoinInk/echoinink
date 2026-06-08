@@ -127,15 +127,15 @@ export function EchoSelect({
           outline-none transition-all duration-500
           hover:border-white/[0.18]
           hover:bg-[linear-gradient(to_bottom,rgb(11, 13, 42/0.32),rgb(5, 3, 11/0.86))]
-          focus-visible:border-[rgb(73, 133, 253/0.54)]
+          focus-visible:border-[rgb(var(--ei-halo-blue-rgb)/0.72)]
           focus-visible:ring-2
-          focus-visible:ring-white/35
+          focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.72)]
           focus-visible:ring-offset-2
-          focus-visible:ring-offset-[#05070D]
-          focus-visible:shadow-[0_0_0_1px_rgb(73, 133, 253/0.22),0_0_28px_rgb(73, 133, 253/0.08)]
+          focus-visible:ring-offset-[var(--ei-void)]
+          focus-visible:shadow-[0_0_0_1px_rgb(var(--ei-halo-blue-rgb)/0.72),0_0_28px_rgb(var(--ei-halo-blue-rgb)/0.08)]
         "
       >
-        <span className={value ? 'ei-type-color-secondary relative z-10 block truncate' : 'ei-type-color-muted relative z-10 block truncate'}>
+        <span className={value ? 'ei-type-color-secondary relative z-10 block truncate' : 'ei-type-color-tertiary relative z-10 block truncate'}>
           {displayValue}
         </span>
 

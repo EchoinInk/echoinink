@@ -11,7 +11,7 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--ei-color-text-muted);
+    color: var(--ei-color-text-tertiary);
     display: block;
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -49,7 +49,7 @@
   /* Placeholder styling - quiet, atmospheric */
   .ei-form-input::placeholder,
   .ei-form-textarea::placeholder {
-    color: var(--ei-color-text-muted);
+    color: var(--ei-color-text-tertiary);
     font-style: italic;
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
@@ -66,17 +66,17 @@
   .ei-form-input:focus,
   .ei-form-textarea:focus,
   .ei-form-select:focus {
-    border-color: rgb(var(--ei-halo-blue-rgb) / 0.54);
+    border-color: rgb(var(--ei-halo-blue-rgb) / 0.72);
     color: var(--ei-color-text-primary);
     background: rgb(var(--ei-void-rgb) / 0.32);
-    box-shadow: 0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.12),
+    box-shadow: 0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.72),
       0 0 28px rgb(var(--ei-halo-blue-rgb) / 0.07);
   }
 
   /* Focus placeholder fade */
   .ei-form-input:focus::placeholder,
   .ei-form-textarea:focus::placeholder {
-    color: var(--ei-color-text-faint);
+    color: var(--ei-color-text-muted);
   }
 
   /* Focus label enhancement */
@@ -87,7 +87,7 @@
   :has(> .ei-form-input:focus) .ei-form-label,
   :has(> .ei-form-textarea:focus) .ei-form-label,
   :has(> .ei-form-select:focus) .ei-form-label {
-    color: var(--ei-color-text-muted);
+    color: var(--ei-color-text-tertiary);
   }
 
   /* ── Select Specific ─────────────────────────────────────── */

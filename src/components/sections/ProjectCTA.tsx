@@ -144,7 +144,7 @@ export function ProjectCTA({
                     hover:text-[var(--ei-text-primary)]
                     focus-visible:outline-none
                     focus-visible:ring-2
-                    focus-visible:ring-[rgb(73, 133, 253/0.38)]
+                    focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.72)]
                     focus-visible:ring-offset-4
                     focus-visible:ring-offset-transparent
                   "

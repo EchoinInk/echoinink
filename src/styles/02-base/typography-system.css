@@ -194,7 +194,7 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
     font-weight: 400;
-    color: var(--ei-type-color-muted);
+    color: var(--ei-type-color-tertiary);
   }
   .ei-type-nav {
     font-family: var(--ei-font-structural);
@@ -315,7 +315,7 @@
   /* Labels are muted, but not faint */
   .ei-type-studio-label,
   .ei-type-label {
-    color: var(--ei-color-text-muted);
+    color: var(--ei-color-text-tertiary);
   }
 
   /* Shared semantic assignments */
@@ -334,7 +334,7 @@
   .ei-type-footer-label,
   .ei-type-footer-meta,
   .ei-section-label {
-    color: var(--ei-color-text-muted);
+    color: var(--ei-color-text-tertiary);
   }
 
   .ei-type-footer-brand {
@@ -389,7 +389,7 @@
 
   .footer a,
   .ei-footer a {
-    color: var(--ei-color-text-muted);
+    color: var(--ei-color-text-tertiary);
     transition: color 300ms ease;
   }
 
@@ -476,7 +476,7 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
     font-weight: 400;
-    color: var(--ei-type-color-muted);
+    color: var(--ei-type-color-tertiary);
   }
   .ei-section-title,
   .text-cinematic-heading {
@@ -525,7 +525,7 @@
     line-height: 1.6;
     letter-spacing: -0.003em;
     font-weight: 400;
-    color: var(--ei-type-color-tertiary);
+    color: var(--ei-type-color-secondary);
   }
   .ei-card-title,
   .text-card-title {
@@ -625,7 +625,7 @@
   }
   .group:hover .ei-link-subtle {
 
-  color: var(--ei-type-color-tertiary);
+  color: var(--ei-type-color-secondary);
 
 }
 

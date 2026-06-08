@@ -209,7 +209,7 @@ export function Contact() {
             <div className="max-w-[680px]">
               <motion.div variants={driftUp} className="max-w-[680px] text-left md:pl-10 md:-translate-y-[2vh] lg:pl-14">
                 <div className="mb-3 flex items-center gap-4 md:mb-5">
-                  <span className="ei-type-color-muted font-structural text-[11px] uppercase tracking-[0.2em]">
+                  <span className="ei-type-color-tertiary font-structural text-[11px] uppercase tracking-[0.2em]">
                     Contact
                   </span>
                   <div
@@ -360,12 +360,12 @@ export function Contact() {
                     type="submit"
                     variant="primary"
                     disabled={formState === 'submitting'}
-                    className="ei-type-color-primary min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.36)] hover:shadow-[0_10px_40px_rgb(var(--ei-halo-blue-rgb)/0.08)] disabled:opacity-80"
+	                    className="ei-type-color-primary min-h-[58px] w-full sm:w-auto border-white/[0.18] bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] hover:border-white/[0.28] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] hover:shadow-[0_10px_40px_rgb(var(--ei-halo-blue-rgb)/0.08)] disabled:opacity-80"
                   >
                     {formState === 'submitting' ? 'Sending...' : 'Send Message'}
                   </Button>
 
-                  <p className="ei-type-color-muted flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65]">
+	                  <p className="ei-type-color-tertiary flex max-w-[260px] items-start gap-3 font-structural text-[0.82rem] leading-[1.65]">
                     <span className="mt-0.5">
                       <ContactIcon name="lock" />
                     </span>
@@ -406,7 +406,7 @@ export function Contact() {
 
   <div className="relative z-10 flex min-h-[360px] flex-col justify-center gap-9 p-7 md:min-h-[390px] md:max-w-[620px] md:p-12 lg:p-14">
       <div>
-        <span className="ei-type-color-muted font-mono text-[10px] uppercase tracking-[0.24em]">
+        <span className="ei-type-color-tertiary font-mono text-[10px] uppercase tracking-[0.24em]">
           Prefer a quick chat?
         </span>
 
