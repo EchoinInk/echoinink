@@ -202,7 +202,7 @@ export function SystemsPage() {
                 className="ei-systems-featured-media"
                 aria-hidden="true"
               >
-                <img src={featuredSystemImage} alt="" />
+                <img src={systemsCTAImage} alt="" />
                 <div className="ei-systems-product-cover">
                   <span>The</span>
                   <strong>Identity Clarity</strong>
