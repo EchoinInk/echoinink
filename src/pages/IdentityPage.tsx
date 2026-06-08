@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { PageShell } from "@/components/layout/PageShell";
-import { EditorialImageHero } from "@/components/sections/EditorialImageHero";
+import { EditorialImageHero } from "@/components/sections/PageSectionHero";
 import identityHeroAtmosphere from "@/assets/imagery/hero/identity-hero-atmosphere.png";
 import { OfferSection } from "@/components/sections/OfferSection";
 import { DeliverableCard } from "@/components/cards/DeliverableCard";

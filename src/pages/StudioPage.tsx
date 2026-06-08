@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
-import { EditorialImageHero } from "@/components/sections/EditorialImageHero";
+import { EditorialImageHero } from "@/components/sections/PageSectionHero";
 import { Button } from "@/components/ui/Button";
 import type { OrbitalVariant } from "@/components/orbitals/orbitals";
 import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
