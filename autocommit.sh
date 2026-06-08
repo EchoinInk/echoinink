@@ -1,12 +1,12 @@
 #!/bin/bash
 
-while true
-do
-    git add .
+set -u
 
-    if ! git diff --cached --quiet; then
+BRANCH="main"
+AUTO_PUSH=false
+SLEEP_SECONDS=120
 
-        MESSAGES=(
+MESSAGES=(
   "style: refine interface atmosphere"
   "style: improve editorial composition"
   "style: polish typography and spacing"
@@ -24,12 +24,31 @@ do
   "a11y: improve contrast and focus states"
 )
 
-        RANDOM_MESSAGE=${MESSAGES[$RANDOM % ${#MESSAGES[@]}]}
+while true; do
+  CURRENT_BRANCH=$(git branch --show-current)
 
-        git commit -m "$RANDOM_MESSAGE"
-        git push origin main
+  if [ "$CURRENT_BRANCH" != "$BRANCH" ]; then
+    echo "Skipping: currently on '$CURRENT_BRANCH', expected '$BRANCH'."
+    sleep "$SLEEP_SECONDS"
+    continue
+  fi
 
+  git add .
+
+  if ! git diff --cached --quiet; then
+    RANDOM_MESSAGE=${MESSAGES[$RANDOM % ${#MESSAGES[@]}]}
+    TIMESTAMP=$(date "+%Y-%m-%d %H:%M")
+
+    git commit -m "$RANDOM_MESSAGE — $TIMESTAMP"
+
+    if [ "$AUTO_PUSH" = true ]; then
+      npm run typecheck && git push origin "$BRANCH"
+    else
+      echo "Committed locally. Auto-push is off."
     fi
+  else
+    echo "No changes to commit."
+  fi
 
-    sleep 60
+  sleep "$SLEEP_SECONDS"
 done
