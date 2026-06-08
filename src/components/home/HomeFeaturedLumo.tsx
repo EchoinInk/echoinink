@@ -65,13 +65,13 @@ export function LumoCaseStudyTeaser() {
         }}
       />
 
-      <Container>
+      <Container className="relative">
         <motion.div
           ref={sectionRef}
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.loose}
-          className="relative mx-auto max-w-6xl"
+          className="mx-auto max-w-6xl"
         >
           <motion.div
             variants={driftUp}
