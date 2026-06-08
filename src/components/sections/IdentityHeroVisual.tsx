@@ -1,4 +1,4 @@
-import heroAtmosphere from '@/assets/imagery/hero/identity-hero-atmosphere.png';
+import heroAtmosphere from '@/assets/imagery/hero/identity-hero-desktop.webp';
 
 /**
  * IdentityHeroVisual — the right-side atmospheric field for the Identity hero.
