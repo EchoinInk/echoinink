@@ -32,6 +32,7 @@ export function PageTransition({ children }: PageTransitionProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: isReady ? 1 : 0 }}
       exit={{ opacity: 0 }}
+      className="relative"
       transition={{ 
         duration: 0.6, 
         ease: [0.22, 1, 0.36, 1],
