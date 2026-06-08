@@ -108,7 +108,6 @@ export default function Identity() {
                   src={identityHeroMobile}
                   alt="Atmospheric moonlit world in violet and blue light."
                   className="ei-identity-hero-image"
-                  fetchPriority="high"
                 />
               </picture>
               <div className="ei-identity-hero-gridlines" aria-hidden="true" />
