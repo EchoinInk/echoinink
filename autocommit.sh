@@ -3,8 +3,8 @@
 set -u
 
 BRANCH="main"
-AUTO_PUSH=false
-SLEEP_SECONDS=120
+AUTO_PUSH=true
+SLEEP_SECONDS=240
 
 MESSAGES=(
   "style: refine interface atmosphere"
