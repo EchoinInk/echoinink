@@ -2,7 +2,7 @@ import type { OrbitalVariant } from '@/components/orbitals/orbitals';
 
 import atmosphereReferenceImage from '@/assets/imagery/sections/works-image-3.webp';
 import toneOfVoiceImage from '@/assets/imagery/sections/ei-lightwave-work-card.png';
-import worldLoreImage from '@/assets/imagery/sections/ei-planetsilhouette-work-card.png';
+import worldLoreImage from '@/assets/imagery/backgrounds/planet-rings-desktop.webp';
 import clientOnboardingImage from '@/assets/imagery/sections/nexus-work-card.png';
 
 export const systemsHero = {
