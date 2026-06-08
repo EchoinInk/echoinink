@@ -3,14 +3,14 @@
 /* ────────────────────────────────────────────────────────────── Font Faces Neue Montreal — practical / structural body font Fraunces + Geist Mono should be loaded via Google Fonts or your existing font import in index.html. ────────────────────────────────────────────────────────────── */
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'/fonts/neue-montreal/NeueMontreal-Regular.otf") format("opentype");
+  src: url("/fonts/neue-montreal/NeueMontreal-Regular.otf") format("opentype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'/fonts/neue-montreal/NeueMontreal-Italic.otf") format("opentype");
+  src: url("/fonts/neue-montreal/NeueMontreal-Italic.otf") format("opentype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
@@ -24,7 +24,7 @@
 }
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'/fonts/neue-montreal/NeueMontreal-MediumItalic.otf")
+  src: url("/fonts/neue-montreal/NeueMontreal-MediumItalic.otf")
     format("opentype");
   font-weight: 500;
   font-style: italic;
@@ -32,14 +32,14 @@
 }
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'/fonts/neue-montreal/NeueMontreal-Bold.otf") format("opentype");
+  src: url("/fonts/neue-montreal/NeueMontreal-Bold.otf") format("opentype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'/fonts/neue-montreal/NeueMontreal-BoldItalic.otf")
+  src: url("/fonts/neue-montreal/NeueMontreal-BoldItalic.otf")
     format("opentype");
   font-weight: 700;
   font-style: italic;
@@ -47,14 +47,14 @@
 }
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'/fonts/neue-montreal/NeueMontreal-Light.otf") format("opentype");
+  src: url("/fonts/neue-montreal/NeueMontreal-Light.otf") format("opentype");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Neue Montreal";
-  src: url("'/fonts/neue-montreal/NeueMontreal-LightItalic.otf")
+  src: url("/fonts/neue-montreal/NeueMontreal-LightItalic.otf")
     format("opentype");
   font-weight: 300;
   font-style: italic;
@@ -110,13 +110,13 @@
     color: var(--ei-type-color-primary);
   }
   .ei-type-hero-home {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(3.5rem, 6vw, 5.5rem);
-  line-height: 0.96;
-  letter-spacing: -0.045em;
-  font-weight: 400;
-  color: var(--ei-type-color-primary);
-}
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(2.25rem, 4.55vw, 3.55rem);
+    line-height: 1.04;
+    letter-spacing: -0.034em;
+    font-weight: 400;
+    color: var(--ei-type-color-primary);
+  }
   .ei-type-statement {
     font-family: var(--ei-font-editorial);
     font-size: clamp(2.125rem, 5vw, 4rem);
@@ -143,7 +143,7 @@
     color: var(--ei-type-color-tertiary);
   }
   .ei-type-hero-kicker {
-  font-family: var(--ei-font-structural);
+  font-family: var(--ei-font-copy);
   font-size: clamp(0.875rem, 1vw, 1rem);
   line-height: 1.6;
   letter-spacing: 0.01em;
@@ -151,7 +151,7 @@
   color: var(--ei-type-color-secondary);
 }
   .ei-type-hero-description {
-  font-family: var(--ei-font-structural);
+  font-family: var(--ei-font-copy);
   font-size: clamp(0.9375rem, 1.05vw, 1rem);
   line-height: 1.85;
   letter-spacing: -0.005em;
@@ -200,62 +200,21 @@
     color: var(--ei-type-color-tertiary);
   }
   .ei-type-nav {
-  font-family: var(--ei-font-system);
-  font-size: 0.625rem;
-  line-height: 1;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: var(--ei-type-color-tertiary);
-}
-
-.ei-type-button {
-  font-family: var(--ei-font-system);
-  font-size: 0.625rem;
-  line-height: 1;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: var(--ei-button-text, var(--ei-type-color-primary));
-}
-
-.ei-type-hero-home {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(3.5rem, 6vw, 5.5rem);
-  line-height: 0.96;
-  letter-spacing: -0.045em;
-  font-weight: 400;
-  color: var(--ei-type-color-primary);
-}
-
-.ei-type-philosophy-heading {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(2rem, 3.8vw, 3.25rem);
-  line-height: 1.05;
-  letter-spacing: -0.035em;
-  font-weight: 400;
-  color: var(--ei-type-color-primary);
-}
-
-.ei-card-title,
-.text-card-title {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(1.125rem, 1.4vw, 1.25rem);
-  line-height: 1.18;
-  letter-spacing: -0.018em;
-  font-weight: 400;
-  color: var(--ei-type-color-primary);
-}
+    font-family: var(--ei-font-structural);
+    font-size: 0.8125rem;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    font-weight: 500;
+    color: var(--ei-type-color-tertiary);
   }
- .ei-type-button {
-  font-family: var(--ei-font-system);
-  font-size: 0.625rem;
-  line-height: 1;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: var(--ei-button-text, var(--ei-type-color-primary));
-}
+  .ei-type-button {
+    font-family: var(--ei-font-structural);
+    font-size: 0.875rem;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    font-weight: 500;
+    color: var(--ei-button-text, var(--ei-type-color-primary));
+  }
   .ei-type-quote {
     font-family: var(--ei-font-editorial);
     font-size: clamp(1.5rem, 3vw, 2.25rem);
