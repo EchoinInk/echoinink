@@ -1,14 +1,26 @@
-import { Helmet } from 'react-helmet-async';
-import { PageShell } from '@/components/layout/PageShell';
-import { OfferHero } from '@/components/sections/OfferHero';
-import { OfferSection } from '@/components/sections/OfferSection';
-import { ProcessSteps } from '@/components/sections/ProcessSteps';
-import { BeforeAfterSection } from '@/components/sections/BeforeAfterSection';
-import { PricingTiers } from '@/components/sections/PricingTiers';
-import { UseCasesList } from '@/components/sections/UseCasesList';
-import { OfferClosingCTA } from '@/components/sections/OfferClosingCTA';
-import { VIEWPORT } from '@/lib/motion-cinematic';
-import { motion } from 'framer-motion';
+import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+
+import { Container } from "@/components/layout/Container";
+import { PageShell } from "@/components/layout/PageShell";
+import { Section } from "@/components/layout/Section";
+import { Button } from "@/components/ui/Button";
+import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
+import type { OrbitalVariant } from "@/components/orbitals/orbitals";
+import {
+  blurEmergence,
+  driftUp,
+  fadeSoft,
+  staggerContainer,
+  STAGGER,
+  VIEWPORT,
+} from "@/lib/motion-cinematic";
+
+import sessionsHeroDesktop from "@/assets/imagery/hero/sessions-hero-desktop.webp";
+import sessionsHeroMobile from "@/assets/imagery/hero/sessions-hero-mobile.webp";
+import bookSessionBg from "@/assets/imagery/sections/book-session-bg.png";
+
 import {
   sessionsApproach,
   sessionsAudience,
@@ -21,40 +33,80 @@ import {
   sessionsTransformation,
   sessionsTypes,
   sessionsUseCases,
-} from '@/data/sessionsContent';
+} from "@/data/sessionsContent";
 
-function SessionTypeCard({
-  number,
-  title,
-  description,
-  bestFor,
-  index,
-}: {
-  number: string;
-  title: string;
-  description: string;
-  bestFor: string;
-  index: number;
-}) {
+type SignalCardProps = {
+  eyebrow: string;
+  icon: OrbitalVariant;
+  items: string[];
+};
+
+const signalCards: SignalCardProps[] = [
+  {
+    eyebrow: "What can emerge",
+    icon: "prismMirror",
+    items: [
+      sessionsUseCases[0],
+      sessionsUseCases[1],
+      sessionsUseCases[6],
+      sessionsUseCases[4],
+    ],
+  },
+  {
+    eyebrow: "What it does",
+    icon: "focusDial",
+    items: sessionsApproach.pillars.map((pillar) => pillar.description),
+  },
+  {
+    eyebrow: "What it feels like",
+    icon: "chorusCore",
+    items: sessionsTransformation.after.slice(0, 4),
+  },
+];
+
+const audienceSignals = [
+  "You feel something clearly but cannot yet articulate it.",
+  "Your direction has become emotionally fragmented.",
+  "You are circling the truth without landing on it.",
+  "You need clarity before committing to larger creative decisions.",
+  "You want a direction that feels internally trustworthy.",
+];
+
+const bringItems = sessionsBring.items.slice(0, 4);
+const outcomeItems = sessionsOutcomes.items.slice(0, 4);
+
+function SectionLabel({ children }: { children: string }) {
   return (
-    <motion.article
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={VIEWPORT.normal}
-      transition={{ delay: index * 0.06 }}
-      className="ei-card ei-card-soft p-6 md:p-8"
-    >
-      <span className="ei-type-label text-[var(--ei-text-tertiary)]">{number}</span>
-      <h3 className="mt-4 ei-type-section text-[1.15rem] text-[var(--ei-text-primary)]">{title}</h3>
-      <p className="mt-3 ei-type-body text-[var(--ei-text-secondary)]">{description}</p>
-      {bestFor ? (
-        <p className="mt-5 ei-type-small text-[var(--ei-text-tertiary)]">Best for: {bestFor}</p>
-      ) : null}
+    <div className="ei-section-label-row">
+      <span className="ei-section-label">{children}</span>
+      <span className="ei-section-label-line" />
+    </div>
+  );
+}
+
+function SignalCard({ eyebrow, icon, items }: SignalCardProps) {
+  return (
+    <motion.article variants={driftUp} className="ei-card ei-sessions-card">
+      <span className="ei-type-studio-label">{eyebrow}</span>
+      <OrbitalVisual
+        variant={icon}
+        size={78}
+        className="ei-sessions-card-icon"
+      />
+      <ul className="ei-sessions-list">
+        {items.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+      <span className="ei-sessions-card-star" aria-hidden="true" />
     </motion.article>
   );
 }
 
 export default function SessionsPage() {
+  const primaryTier = sessionsPricing.tiers[0];
+  const deepTier = sessionsPricing.tiers[1];
+
   return (
     <PageShell atmosphere="sessions" withTopSpacing={false}>
       <Helmet>
@@ -65,101 +117,210 @@ export default function SessionsPage() {
         />
       </Helmet>
 
-      <OfferHero
-        eyebrow={sessionsHero.eyebrow}
-        subtitle={sessionsHero.subtitle}
-        title={sessionsHero.title}
-        tagline={sessionsHero.tagline}
-        body={sessionsHero.body}
-        primaryCta={sessionsHero.primaryCta}
-        secondaryCta={sessionsHero.secondaryCta}
-      />
+      <motion.section
+        variants={staggerContainer(STAGGER.cinematic, 0)}
+        initial="hidden"
+        whileInView="visible"
+        viewport={VIEWPORT.loose}
+        className="ei-sessions-hero"
+        aria-labelledby="sessions-hero-heading"
+      >
+        <picture className="ei-sessions-hero-image" aria-hidden="true">
+          <source media="(min-width: 768px)" srcSet={sessionsHeroDesktop} />
+          <img src={sessionsHeroMobile} alt="" fetchPriority="high" />
+        </picture>
 
-      <OfferSection title={sessionsOrientation.heading}>
-        <div className="max-w-3xl space-y-5">
-          {sessionsOrientation.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 32)} className="ei-type-body-large text-[var(--ei-text-secondary)]">
-              {paragraph}
-            </p>
-          ))}
-        </div>
-      </OfferSection>
+        <div className="ei-sessions-hero-overlay" aria-hidden="true" />
+        <div className="ei-sessions-hero-vignette" aria-hidden="true" />
 
-      <OfferSection eyebrow="Use cases">
-        <UseCasesList items={sessionsUseCases} />
-      </OfferSection>
+        <Container size="xl" className="relative z-10">
+          <motion.div variants={driftUp} className="ei-sessions-hero-copy">
+            <SectionLabel>Signal Session</SectionLabel>
 
-      <OfferSection title={sessionsApproach.heading}>
-        <div className="grid gap-5 md:grid-cols-3">
-          {sessionsApproach.pillars.map((pillar, index) => (
-            <SessionTypeCard
-              key={pillar.title}
-              number={`0${index + 1}`}
-              title={pillar.title}
-              description={pillar.description}
-              bestFor=""
-              index={index}
-            />
-          ))}
-        </div>
-      </OfferSection>
+            <motion.h1
+              id="sessions-hero-heading"
+              variants={blurEmergence}
+              className="ei-type-studio-hero"
+            >
+              Clarity before expression.
+            </motion.h1>
 
-      <OfferSection title={sessionsBring.heading} description={sessionsBring.intro}>
-        <UseCasesList items={sessionsBring.items} />
-      </OfferSection>
+            <motion.p
+              variants={fadeSoft}
+              className="ei-type-studio-body ei-sessions-hero-description"
+            >
+              {sessionsHero.body[0]}
+            </motion.p>
 
-      <OfferSection id="session-types" eyebrow="Session types">
-        <div className="grid gap-5 lg:grid-cols-3">
-          {sessionsTypes.map((session, index) => (
-            <SessionTypeCard key={session.title} {...session} index={index} />
-          ))}
-        </div>
-      </OfferSection>
+            <motion.div variants={fadeSoft} className="ei-sessions-hero-meta">
+              <div>
+                <OrbitalVisual variant="synthesisStar" size={42} />
+                <span>60 or 90 minutes of focused creative direction</span>
+              </div>
+              <div>
+                <OrbitalVisual variant="focusDial" size={42} />
+                <span>Optional Session Reflection Note</span>
+              </div>
+            </motion.div>
 
-      <OfferSection title={sessionsOutcomes.heading} description={sessionsOutcomes.intro}>
-        <UseCasesList items={sessionsOutcomes.items} />
-        <div className="mt-10 max-w-2xl ei-card ei-card-soft p-6 md:p-8">
-          <span className="ei-type-label text-[var(--ei-text-tertiary)]">Optional add-on</span>
-          <h3 className="mt-3 ei-type-section text-[1.1rem] text-[var(--ei-text-primary)]">
-            {sessionsOutcomes.addon.title}
-          </h3>
-          <p className="mt-3 ei-type-body text-[var(--ei-text-secondary)]">
-            {sessionsOutcomes.addon.description}
-          </p>
-        </div>
-      </OfferSection>
+            <motion.div variants={fadeSoft} className="ei-sessions-hero-actions">
+              <Button to={sessionsHero.primaryCta.href} variant="primary">
+                {sessionsHero.primaryCta.label}
+              </Button>
+              <a href="#session-types" className="ei-link">
+                {sessionsHero.secondaryCta.label} →
+              </a>
+            </motion.div>
+          </motion.div>
+        </Container>
+      </motion.section>
 
-      <OfferSection title={sessionsTransformation.heading}>
-        <BeforeAfterSection
-          divider={sessionsTransformation.divider}
-          before={sessionsTransformation.before}
-          after={sessionsTransformation.after}
-        />
-      </OfferSection>
+      <Section spacing="none" className="ei-sessions-main">
+        <Container size="xl" className="relative z-10">
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+            className="ei-sessions-stack"
+          >
+            <motion.figure variants={fadeSoft} className="ei-sessions-quote">
+              <blockquote className="ei-type-quote">
+                “{sessionsTransformation.divider}”
+              </blockquote>
+            </motion.figure>
 
-      <OfferSection title={sessionsPricing.heading}>
-        <div className="max-w-3xl space-y-4">
-          {sessionsPricing.intro.map((paragraph) => (
-            <p key={paragraph} className="ei-type-body-large text-[var(--ei-text-secondary)]">
-              {paragraph}
-            </p>
-          ))}
-          <p className="ei-type-label text-[var(--ei-text-tertiary)]">{sessionsPricing.note}</p>
-        </div>
-        <div className="mt-10">
-          <PricingTiers tiers={sessionsPricing.tiers} />
-        </div>
-      </OfferSection>
+            <div className="ei-sessions-signal-grid">
+              {signalCards.map((card) => (
+                <SignalCard key={card.eyebrow} {...card} />
+              ))}
+            </div>
 
-      <OfferSection spacing="intimate">
-        <p className="max-w-3xl ei-type-body-large text-[var(--ei-text-secondary)]">{sessionsAudience}</p>
-      </OfferSection>
+            <div className="ei-sessions-detail-grid" id="session-types">
+              <motion.article
+                variants={driftUp}
+                className="ei-card ei-sessions-detail-panel"
+              >
+                <SectionLabel>Format</SectionLabel>
+                <div className="ei-sessions-format-line">
+                  <OrbitalVisual variant="signalBridge" size={58} />
+                  <div>
+                    <p className="ei-type-body">{sessionsPricing.note}</p>
+                    <p className="ei-type-small">
+                      {primaryTier.name} - {primaryTier.duration} -{" "}
+                      {primaryTier.price}
+                    </p>
+                    <p className="ei-type-small">
+                      {deepTier.name} - {deepTier.duration} - {deepTier.price}
+                    </p>
+                  </div>
+                </div>
+                <div className="ei-sessions-session-types">
+                  {sessionsTypes.map((session) => (
+                    <div key={session.title}>
+                      <span>{session.number}</span>
+                      <p>{session.title}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="ei-sessions-detail-image" aria-hidden="true">
+                  <img src={bookSessionBg} alt="" loading="lazy" />
+                </div>
+              </motion.article>
 
-      <OfferClosingCTA
-        heading={sessionsClosing.heading}
-        subline={sessionsClosing.subline}
-        cta={sessionsClosing.cta}
-      />
+              <motion.article
+                variants={driftUp}
+                className="ei-card ei-sessions-detail-panel"
+              >
+                <SectionLabel>This is for you if...</SectionLabel>
+                <OrbitalVisual
+                  variant="threadBeacon"
+                  size={64}
+                  className="ei-sessions-audience-icon"
+                />
+                <ul className="ei-sessions-list ei-sessions-list-left">
+                  {audienceSignals.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </motion.article>
+            </div>
+
+            <motion.article variants={fadeSoft} className="ei-card ei-sessions-offer">
+              <div className="ei-sessions-offer-copy">
+                <span className="ei-type-studio-label">Session offer</span>
+                <h2 className="ei-type-section">{sessionsPricing.heading}</h2>
+                <div className="ei-sessions-offer-intro">
+                  {sessionsPricing.intro.map((paragraph) => (
+                    <p key={paragraph} className="ei-type-body">
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+                <p className="ei-sessions-price">{sessionsPricing.note}</p>
+                <p className="ei-type-small">
+                  {primaryTier.description} {deepTier.description}
+                </p>
+                <div className="ei-sessions-offer-lists">
+                  <div>
+                    <span className="ei-type-studio-label">
+                      {sessionsBring.heading}
+                    </span>
+                    <ul className="ei-sessions-list ei-sessions-list-left">
+                      {bringItems.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div>
+                    <span className="ei-type-studio-label">
+                      {sessionsOutcomes.heading}
+                    </span>
+                    <ul className="ei-sessions-list ei-sessions-list-left">
+                      {outcomeItems.map((item) => (
+                        <li key={item}>{item}</li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="ei-sessions-offer-image" aria-hidden="true">
+                <img src={bookSessionBg} alt="" loading="lazy" />
+              </div>
+            </motion.article>
+
+            <motion.article variants={fadeSoft} className="ei-sessions-audience">
+              <h2 className="ei-type-section">{sessionsOrientation.heading}</h2>
+              <div className="ei-sessions-orientation">
+                {sessionsOrientation.paragraphs.map((paragraph) => (
+                  <p key={paragraph} className="ei-type-body">
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+              <p className="ei-type-body-large">{sessionsAudience}</p>
+            </motion.article>
+
+            <motion.article variants={fadeSoft} className="ei-card ei-sessions-cta">
+              <div className="ei-sessions-cta-image" aria-hidden="true">
+                <img src={bookSessionBg} alt="" loading="lazy" />
+              </div>
+              <div className="ei-sessions-cta-copy">
+                <h2 className="ei-type-section">{sessionsClosing.heading}</h2>
+                <p className="ei-type-body">{sessionsClosing.subline}</p>
+                <Button to={sessionsClosing.cta.href} variant="primary">
+                  {sessionsClosing.cta.label}
+                  <span aria-hidden="true">→</span>
+                </Button>
+                <div className="ei-sessions-secondary-links">
+                  <Link to="/identity">Explore Identity Translation →</Link>
+                  <Link to="/works">Explore the Works →</Link>
+                </div>
+              </div>
+            </motion.article>
+          </motion.div>
+        </Container>
+      </Section>
     </PageShell>
   );
 }
