@@ -133,7 +133,7 @@ export function SessionsPage() {
       >
         <picture className="ei-sessions-hero-image" aria-hidden="true">
           <source media="(min-width: 768px)" srcSet={sessionsHeroDesktop} />
-          <img src={sessionsHeroMobile} alt="" fetchpriority="high" />
+          <img src={sessionsHeroMobile} alt="" fetchPriority="high" />
         </picture>
 
         <div className="ei-sessions-hero-overlay" aria-hidden="true" />
