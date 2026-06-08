@@ -171,10 +171,7 @@ export function ArchivePage() {
 
             <motion.article variants={fadeSoft} className="ei-archive-featured">
               <div className="ei-archive-featured-media" aria-hidden="true">
-                <img src={archiveImageDesktop} alt="" />
-                <div className="ei-archive-featured-orbit">
-                  <OrbitalVisual variant="haloGate" size={190} />
-                </div>
+                <img src={archiveEssayDesktop} alt="" />
               </div>
 
               <div className="ei-archive-featured-copy">
@@ -302,12 +299,6 @@ export function ArchivePage() {
             className="ei-archive-inner"
           >
             <motion.div variants={fadeSoft} className="ei-archive-cta">
-              <div className="ei-archive-cta-orbit ei-archive-cta-orbit-left" aria-hidden="true">
-                <OrbitalVisual variant="axiomRing" size={190} />
-              </div>
-              <div className="ei-archive-cta-orbit ei-archive-cta-orbit-right" aria-hidden="true">
-                <OrbitalVisual variant="haloGate" size={170} />
-              </div>
 
               <motion.div variants={blurEmergence} className="ei-archive-cta-copy">
                 <p className="ei-type-studio-slim-cta">{archiveCta.title}</p>
