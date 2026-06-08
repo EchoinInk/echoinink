@@ -200,7 +200,7 @@
     color: var(--ei-type-color-tertiary);
   }
   .ei-type-nav {
-    font-family: var(--ei-font-structural);
+    font-family: var(--ei-font-system);
     font-size: 0.8125rem;
     line-height: 1;
     letter-spacing: 0.02em;
@@ -208,7 +208,7 @@
     color: var(--ei-type-color-tertiary);
   }
   .ei-type-button {
-    font-family: var(--ei-font-structural);
+    font-family: var(--ei-font-system);
     font-size: 0.875rem;
     line-height: 1;
     letter-spacing: 0.01em;
