@@ -39,7 +39,7 @@ function SectionLabel({ children }: { children: string }) {
   );
 }
 
-export default function SystemsPage() {
+export function SystemsPage() {
   return (
     <PageShell
       atmosphere="works"
