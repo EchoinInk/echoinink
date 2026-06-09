@@ -264,6 +264,24 @@
     --ei-filter-border: rgba(227, 216, 253, 0.12);
     --ei-filter-border-active: rgba(221, 18, 203, 0.36);
 
+    --ei-form-control-bg: rgb(var(--ei-void-rgb) / 0.22);
+    --ei-form-control-bg-hover: rgb(var(--ei-ice-white-rgb) / 0.025);
+    --ei-form-control-bg-focus: rgb(var(--ei-void-rgb) / 0.32);
+    --ei-form-control-border: var(--ei-color-border-soft);
+    --ei-form-control-border-focus: rgb(var(--ei-halo-blue-rgb) / 0.72);
+    --ei-form-control-radius: 0.875rem;
+    --ei-form-control-shadow: inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.04);
+    --ei-form-panel-bg: linear-gradient(
+      180deg,
+      rgb(var(--ei-midnight-rgb) / 0.34),
+      rgb(var(--ei-void-rgb) / 0.9)
+    );
+    --ei-form-panel-bg-elevated: linear-gradient(
+      180deg,
+      rgb(var(--ei-midnight-rgb) / 0.52),
+      rgb(var(--ei-void-rgb) / 0.88)
+    );
+
     --ei-selection-bg: rgba(221, 18, 203, 0.34);
     --ei-selection-color: var(--ei-ice-white);
 

@@ -65,7 +65,7 @@ export const AMBIENT = {
   },
 } as const;
 
-// ── Stagger Configuration — Cinematic pacing with organic variation ─────────────────
+// ── Stagger Configuration — Cinematic, deterministic pacing ─────────────────
 export const STAGGER: Record<string, number> = {
   tight: 0.06,       // Quick sequence
   normal: 0.12,      // Standard flow
@@ -73,20 +73,21 @@ export const STAGGER: Record<string, number> = {
   cinematic: 0.32,   // Hero sequences
 } as const;
 
-// Organic delay offsets for breaking predictable patterns
+// Retained for compatibility. Shared motion now remains deterministic.
 export const organicOffset = (base: number, variance = 0.08): number => {
-  return base + (Math.random() - 0.5) * variance;
+  void variance;
+  return base;
 };
 
 // ── Cinematic Reveal Variants ────────────────────────────────
 
-// Soft fade — minimal movement, mostly opacity (with organic duration variation)
+// Soft fade — minimal movement, mostly opacity
 export const fadeSoft: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      duration: DURATION.slow * (0.9 + Math.random() * 0.2),
+      duration: DURATION.slow,
       ease: EASE_CINEMATIC,
     },
   },
@@ -105,14 +106,14 @@ export const fadeRise: Variants = {
   },
 };
 
-// Drift up — even more subtle (variable distance for organic feel)
+// Drift up — even more subtle
 export const driftUp: Variants = {
-  hidden: { opacity: 0, y: 10 + Math.random() * 6 },
+  hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: DURATION.slow * (0.95 + Math.random() * 0.1),
+      duration: DURATION.slow,
       ease: EASE_SOFT,
     },
   },
@@ -137,8 +138,8 @@ export const staggerContainer = (stagger = STAGGER.normal, delay = 0): Variants 
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: stagger * (0.85 + Math.random() * 0.3),
-      delayChildren: delay * (0.9 + Math.random() * 0.2),
+      staggerChildren: stagger,
+      delayChildren: delay,
     },
   },
 });
@@ -229,7 +230,7 @@ export const ambientGlow = {
     scale: [1, 1.015, 1],
   },
   transition: {
-    duration: DURATION.ambient * (0.95 + Math.random() * 0.1),
+    duration: DURATION.ambient,
     ease: 'easeInOut',
     repeat: Infinity,
     repeatType: 'mirror' as const,

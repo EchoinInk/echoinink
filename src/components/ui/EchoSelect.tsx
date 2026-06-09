@@ -1,11 +1,18 @@
-import { useEffect, useId, useRef, useState } from 'react';
+import { useEffect, useId, useMemo, useRef, useState } from 'react';
+
+import { cn } from '@/lib/utils';
+
+interface EchoSelectOption {
+  label: string;
+  value: string;
+}
 
 interface EchoSelectProps {
   id: string;
   name: string;
   label?: string;
   value: string;
-  options: string[];
+  options: readonly (string | EchoSelectOption)[];
   placeholder?: string;
   onChange: (event: {
     target: {
@@ -14,6 +21,10 @@ interface EchoSelectProps {
     };
   }) => void;
   className?: string;
+  hint?: string;
+  error?: string;
+  disabled?: boolean;
+  required?: boolean;
 }
 
 export function EchoSelect({
@@ -25,17 +36,30 @@ export function EchoSelect({
   placeholder = 'Select an option',
   onChange,
   className = '',
+  hint,
+  error,
+  disabled = false,
+  required = false,
 }: EchoSelectProps) {
   const generatedId = useId();
   const listboxId = `${id || generatedId}-listbox`;
+  const descriptionId = hint || error ? `${id || generatedId}-description` : undefined;
   const wrapperRef = useRef<HTMLDivElement | null>(null);
+  const normalizedOptions = useMemo(
+    () =>
+      options.map((option) =>
+        typeof option === 'string' ? { label: option, value: option } : option,
+      ),
+    [options],
+  );
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(() => {
-    const selectedIndex = options.findIndex((option) => option === value);
-    return selectedIndex >= 0 ? selectedIndex : 0;
+    const selectedIndex = normalizedOptions.findIndex((option) => option.value === value);
+    return selectedIndex;
   });
 
-  const displayValue = value || placeholder;
+  const displayValue =
+    normalizedOptions.find((option) => option.value === value)?.label || value || placeholder;
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -49,17 +73,19 @@ export function EchoSelect({
   }, []);
 
   useEffect(() => {
-    const selectedIndex = options.findIndex((option) => option === value);
-    if (selectedIndex >= 0) {
-      setActiveIndex(selectedIndex);
-    }
-  }, [options, value]);
+    const selectedIndex = normalizedOptions.findIndex((option) => option.value === value);
+    setActiveIndex(selectedIndex);
+  }, [normalizedOptions, value]);
 
-  function selectOption(option: string) {
+  function selectOption(option: EchoSelectOption | undefined) {
+    if (!option) {
+      return;
+    }
+
     onChange({
       target: {
         name,
-        value: option,
+        value: option.value,
       },
     });
 
@@ -67,10 +93,14 @@ export function EchoSelect({
   }
 
   function handleKeyDown(event: React.KeyboardEvent<HTMLButtonElement>) {
+    if (disabled) {
+      return;
+    }
+
     if (event.key === 'ArrowDown') {
       event.preventDefault();
       setIsOpen(true);
-      setActiveIndex((current) => Math.min(current + 1, options.length - 1));
+      setActiveIndex((current) => Math.min(current + 1, normalizedOptions.length - 1));
     }
 
     if (event.key === 'ArrowUp') {
@@ -87,7 +117,7 @@ export function EchoSelect({
         return;
       }
 
-      selectOption(options[activeIndex]);
+      selectOption(normalizedOptions[activeIndex]);
     }
 
     if (event.key === 'Escape') {
@@ -97,13 +127,15 @@ export function EchoSelect({
   }
 
   return (
-    <div ref={wrapperRef} className={`relative ${className}`}>
+    <div
+      ref={wrapperRef}
+      className={cn('ei-select', className)}
+      data-invalid={error ? 'true' : 'false'}
+    >
       {label && (
-        <label
-          id={`${id}-label`}
-          className="ei-type-color-muted mb-4 block font-structural text-[11px] font-medium uppercase tracking-[0.24em]"
-        >
+        <label id={`${id}-label`} className="ei-form-label ei-select-label">
           {label}
+          {required ? <span aria-hidden="true"> *</span> : null}
         </label>
       )}
 
@@ -115,47 +147,33 @@ export function EchoSelect({
         aria-expanded={isOpen}
         aria-labelledby={label ? `${id}-label` : undefined}
         aria-controls={listboxId}
+        aria-activedescendant={
+          isOpen && normalizedOptions[activeIndex]
+            ? `${listboxId}-option-${activeIndex}`
+            : undefined
+        }
+        aria-describedby={descriptionId}
+        aria-invalid={error ? true : undefined}
+        aria-required={required || undefined}
+        disabled={disabled}
         onClick={() => setIsOpen((current) => !current)}
         onKeyDown={handleKeyDown}
-        className="
-          group relative min-h-[58px] w-full overflow-hidden rounded-[14px]
-          border border-white/[0.12]
-          bg-[linear-gradient(to_bottom,rgb(11, 13, 42/0.24),rgb(5, 3, 11/0.80))]
-          px-5 py-4 pr-12 text-left
-          font-mono text-[13px]
-          shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
-          outline-none transition-all duration-500
-          hover:border-white/[0.18]
-          hover:bg-[linear-gradient(to_bottom,rgb(11, 13, 42/0.32),rgb(5, 3, 11/0.86))]
-          focus-visible:border-[rgb(var(--ei-halo-blue-rgb)/0.72)]
-          focus-visible:ring-2
-          focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.72)]
-          focus-visible:ring-offset-2
-          focus-visible:ring-offset-[var(--ei-void)]
-          focus-visible:shadow-[0_0_0_1px_rgb(var(--ei-halo-blue-rgb)/0.72),0_0_28px_rgb(var(--ei-halo-blue-rgb)/0.08)]
-        "
+        className="ei-select-trigger"
       >
-        <span className={value ? 'ei-type-color-secondary relative z-10 block truncate' : 'ei-type-color-tertiary relative z-10 block truncate'}>
+        <span
+          className="ei-select-value block truncate"
+          data-placeholder={!value ? 'true' : 'false'}
+        >
           {displayValue}
         </span>
 
         <span
           aria-hidden="true"
-          className={`ei-type-color-muted pointer-events-none absolute right-5 top-1/2 z-10 -translate-y-1/2 text-[12px] transition-transform duration-500 ${
-            isOpen ? 'rotate-180' : ''
-          }`}
+          className="ei-select-chevron"
+          data-open={isOpen ? 'true' : 'false'}
         >
           ↓
         </span>
-
-        <span
-          aria-hidden="true"
-          className="
-            pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500
-            group-hover:opacity-100
-            bg-[radial-gradient(circle_at_82%_20%,rgb(73, 133, 253/0.10),transparent_34%)]
-          "
-        />
       </button>
 
       {isOpen && (
@@ -163,59 +181,38 @@ export function EchoSelect({
           id={listboxId}
           role="listbox"
           aria-labelledby={label ? `${id}-label` : undefined}
-          className="
-            absolute z-50 mt-3 max-h-72 w-full overflow-auto rounded-[16px]
-            border border-white/[0.10]
-            bg-[linear-gradient(to_bottom,rgb(11, 13, 42/0.96),rgb(5, 3, 11/0.98))]
-            p-2
-            shadow-[0_24px_70px_rgb(5, 3, 11/0.72),inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.05)]
-            backdrop-blur-xl
-          "
+          className="ei-select-list"
         >
           <li
             role="option"
             aria-selected={!value}
-            onClick={() => selectOption('')}
-            className="
-              relative cursor-pointer select-none rounded-[11px] px-4 py-3
-              ei-type-color-tertiary font-mono text-[13px] transition-colors duration-300
-              ei-type-color-primary-hover hover:bg-white/[0.07]
-            "
+            onClick={() => selectOption({ label: placeholder, value: '' })}
+            className="ei-select-option"
+            data-active={activeIndex < 0 && !value ? 'true' : 'false'}
           >
             {placeholder}
           </li>
 
-          {options.map((option, index) => {
-            const selected = value === option;
+          {normalizedOptions.map((option, index) => {
+            const selected = value === option.value;
             const active = activeIndex === index;
 
             return (
               <li
-                key={option}
+                id={`${listboxId}-option-${index}`}
+                key={option.value}
                 role="option"
                 aria-selected={selected}
                 onMouseEnter={() => setActiveIndex(index)}
                 onClick={() => selectOption(option)}
-                className={`
-                  relative cursor-pointer select-none rounded-[11px] px-4 py-3
-                  font-mono text-[13px] transition-colors duration-300
-                  ${
-                    active
-                      ? 'ei-type-color-primary bg-[rgb(73, 133, 253/0.10)]'
-                      : selected
-                        ? 'ei-type-color-primary'
-                        : 'ei-type-color-tertiary'
-                  }
-                `}
+                className="ei-select-option"
+                data-active={active || selected ? 'true' : 'false'}
               >
                 <div className="flex items-center justify-between gap-4">
-                  <span className="block truncate">{option}</span>
+                  <span className="block truncate">{option.label}</span>
 
                   {selected && (
-                    <span
-                      aria-hidden="true"
-                      className="text-[rgb(73, 133, 253/0.92)]"
-                    >
+                    <span aria-hidden="true" className="ei-select-check">
                       ✓
                     </span>
                   )}
@@ -225,6 +222,15 @@ export function EchoSelect({
           })}
         </ul>
       )}
+      {descriptionId ? (
+        <p
+          id={descriptionId}
+          className="ei-form-message mt-3"
+          data-error={error ? 'true' : 'false'}
+        >
+          {error ?? hint}
+        </p>
+      ) : null}
     </div>
   );
 }

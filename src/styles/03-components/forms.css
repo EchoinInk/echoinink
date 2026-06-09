@@ -30,9 +30,10 @@
     /* Minimal, tonal styling */
     width: 100%;
     padding: 0.95rem 1rem;
-    background: rgb(var(--ei-void-rgb) / 0.22);
-    border: 1px solid rgb(var(--ei-ice-white-rgb) / 0.12);
-    border-radius: 8px;
+    background: var(--ei-form-control-bg);
+    border: 1px solid var(--ei-form-control-border);
+    border-radius: var(--ei-form-control-radius);
+    box-shadow: var(--ei-form-control-shadow);
 
     /* Transition for interaction */
     transition: border-color 0.5s cubic-bezier(0.22, 1, 0.36, 1),
@@ -58,18 +59,18 @@
   .ei-form-input:hover,
   .ei-form-textarea:hover,
   .ei-form-select:hover {
-    border-color: rgb(var(--ei-ice-white-rgb) / 0.12);
-    background: rgb(var(--ei-ice-white-rgb) / 0.025);
+    border-color: var(--ei-form-control-border);
+    background: var(--ei-form-control-bg-hover);
   }
 
   /* Focus state - softly acknowledged */
   .ei-form-input:focus,
   .ei-form-textarea:focus,
   .ei-form-select:focus {
-    border-color: rgb(var(--ei-halo-blue-rgb) / 0.72);
+    border-color: var(--ei-form-control-border-focus);
     color: var(--ei-color-text-primary);
-    background: rgb(var(--ei-void-rgb) / 0.32);
-    box-shadow: 0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.72),
+    background: var(--ei-form-control-bg-focus);
+    box-shadow: 0 0 0 1px var(--ei-form-control-border-focus),
       0 0 28px rgb(var(--ei-halo-blue-rgb) / 0.07);
   }
 
