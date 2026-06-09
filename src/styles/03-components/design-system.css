@@ -794,11 +794,22 @@
       flex: 0 0 auto;
     }
 
-    .ei-form-panel:has(.ei-form-panel-aside) {
+    .ei-form-panel[data-split-at="md"]:has(.ei-form-panel-aside) {
       grid-template-columns: minmax(0, 0.44fr) minmax(0, 0.56fr);
     }
 
-    .ei-form-panel-aside {
+    .ei-form-panel[data-split-at="md"] .ei-form-panel-aside {
+      border-right: 1px solid var(--ei-color-border-hairline);
+      border-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .ei-form-panel[data-split-at="lg"]:has(.ei-form-panel-aside) {
+      grid-template-columns: minmax(0, 0.44fr) minmax(0, 0.56fr);
+    }
+
+    .ei-form-panel[data-split-at="lg"] .ei-form-panel-aside {
       border-right: 1px solid var(--ei-color-border-hairline);
       border-bottom: 0;
     }

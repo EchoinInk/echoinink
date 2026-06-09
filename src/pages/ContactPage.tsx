@@ -7,7 +7,10 @@ import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { PageSectionHero } from "@/components/sections/PageSectionHero";
 import { Button } from "@/components/ui/Button";
+import { EchoFormField } from "@/components/ui/EchoFormField";
+import { EchoFormPanel } from "@/components/ui/EchoFormPanel";
 import { EchoSelect } from "@/components/ui/EchoSelect";
+import { EchoTextarea } from "@/components/ui/EchoTextarea";
 import {
   OrbitalVisual,
   type OrbitalVariant,
@@ -163,67 +166,68 @@ export function ContactPage() {
             viewport={VIEWPORT.normal}
             className="mx-auto max-w-[1180px]"
           >
-            <motion.div
-              variants={fadeSoft}
-              className="grid overflow-hidden rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[linear-gradient(180deg,rgb(var(--ei-midnight-rgb)/0.44),rgb(var(--ei-void-rgb)/0.84))] shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.045),0_28px_120px_rgb(var(--ei-void-rgb)/0.46)] lg:grid-cols-[0.44fr_0.56fr]"
-            >
-              <motion.aside
-                variants={driftUp}
-                className="relative overflow-hidden border-b border-[rgb(var(--ei-moonlit-rgb)/0.1)] p-7 md:p-10 lg:border-b-0 lg:border-r lg:p-12"
-              >
-                <div
-                  aria-hidden="true"
-                  className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgb(var(--ei-soft-neon-rgb)/0.08),transparent_34%),radial-gradient(circle_at_82%_76%,rgb(var(--ei-halo-blue-rgb)/0.055),transparent_40%)]"
-                />
+            <motion.div variants={fadeSoft}>
+              <EchoFormPanel
+                tone="quiet"
+                splitAt="lg"
+                aside={
+                  <>
+                    <div
+                      aria-hidden="true"
+                      className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_12%,rgb(var(--ei-soft-neon-rgb)/0.08),transparent_34%),radial-gradient(circle_at_82%_76%,rgb(var(--ei-halo-blue-rgb)/0.055),transparent_40%)]"
+                    />
 
-                <div className="relative z-10">
-                  <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full border border-[rgb(var(--ei-moonlit-rgb)/0.16)] bg-[rgb(var(--ei-void-rgb)/0.34)] shadow-[inset_0_0_42px_rgb(var(--ei-violet-rgb)/0.12),0_0_34px_rgb(var(--ei-violet-rgb)/0.08)]">
-                    <OrbitalVisual variant="synthesisStar" size={58} />
-                  </div>
+                    <motion.div variants={driftUp} className="relative z-10">
+                      <div className="mb-8 flex h-20 w-20 items-center justify-center rounded-full border border-[rgb(var(--ei-moonlit-rgb)/0.16)] bg-[rgb(var(--ei-void-rgb)/0.34)] shadow-[inset_0_0_42px_rgb(var(--ei-violet-rgb)/0.12),0_0_34px_rgb(var(--ei-violet-rgb)/0.08)]">
+                        <OrbitalVisual variant="synthesisStar" size={58} />
+                      </div>
 
-                  <h2 className="ei-type-section max-w-[12ch]">
-                    Let’s explore what’s possible.
-                  </h2>
+                      <h2 className="ei-type-section max-w-[12ch]">
+                        Let’s explore what’s possible.
+                      </h2>
 
-                  <p className="ei-type-studio-body mt-5 max-w-[32ch] text-[var(--ei-color-text-secondary)]">
-                    Whether you have a clear vision or just a feeling that
-                    something needs to be built — start here.
-                  </p>
+                      <p className="ei-type-studio-body mt-5 max-w-[32ch] text-[var(--ei-color-text-secondary)]">
+                        Whether you have a clear vision or just a feeling that
+                        something needs to be built — start here.
+                      </p>
 
-                  <div className="mt-9 border-t border-[rgb(var(--ei-moonlit-rgb)/0.1)] pt-7">
-                    <div className="grid gap-5">
-                      {serviceRows.map((service) => (
-                        <div
-                          key={service.title}
-                          className="grid grid-cols-[2.4rem_1fr] gap-4"
-                        >
-                          <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[rgb(var(--ei-soft-neon-rgb)/0.24)] bg-[rgb(var(--ei-void-rgb)/0.36)] text-[rgb(var(--ei-moonlit-rgb)/0.86)] shadow-[inset_0_0_22px_rgb(var(--ei-violet-rgb)/0.075)]">
-                            <OrbitalVisual variant={service.icon} size={26} />
-                          </div>
+                      <div className="mt-9 border-t border-[rgb(var(--ei-moonlit-rgb)/0.1)] pt-7">
+                        <div className="grid gap-5">
+                          {serviceRows.map((service) => (
+                            <div
+                              key={service.title}
+                              className="grid grid-cols-[2.4rem_1fr] gap-4"
+                            >
+                              <div className="flex h-9 w-9 items-center justify-center rounded-full border border-[rgb(var(--ei-soft-neon-rgb)/0.24)] bg-[rgb(var(--ei-void-rgb)/0.36)] text-[rgb(var(--ei-moonlit-rgb)/0.86)] shadow-[inset_0_0_22px_rgb(var(--ei-violet-rgb)/0.075)]">
+                                <OrbitalVisual
+                                  variant={service.icon}
+                                  size={26}
+                                />
+                              </div>
 
-                          <div>
-                            <h3 className="ei-type-studio-label text-[var(--ei-color-text-primary)]">
-                              {service.title}
-                            </h3>
-                            <p className="ei-type-studio-body-small mt-1 text-[var(--ei-color-text-tertiary)]">
-                              {service.description}
-                            </p>
-                          </div>
+                              <div>
+                                <h3 className="ei-type-studio-label text-[var(--ei-color-text-primary)]">
+                                  {service.title}
+                                </h3>
+                                <p className="ei-type-studio-body-small mt-1 text-[var(--ei-color-text-tertiary)]">
+                                  {service.description}
+                                </p>
+                              </div>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
-                  </div>
+                      </div>
 
-                  <blockquote className="mt-10 max-w-[28ch] border-l border-[rgb(var(--ei-soft-neon-rgb)/0.42)] pl-5">
-                    <p className="font-editorial text-[clamp(1.15rem,1.6vw,1.45rem)] italic leading-[1.55] tracking-[-0.015em] text-[rgb(var(--ei-moonlit-rgb)/0.9)]">
-                      The best work begins with honest intention and clear
-                      communication.
-                    </p>
-                  </blockquote>
-                </div>
-              </motion.aside>
-
-              <motion.div variants={fadeSoft} className="relative p-7 md:p-10 lg:p-12">
+                      <blockquote className="mt-10 max-w-[28ch] border-l border-[rgb(var(--ei-soft-neon-rgb)/0.42)] pl-5">
+                        <p className="font-editorial text-[clamp(1.15rem,1.6vw,1.45rem)] italic leading-[1.55] tracking-[-0.015em] text-[rgb(var(--ei-moonlit-rgb)/0.9)]">
+                          The best work begins with honest intention and clear
+                          communication.
+                        </p>
+                      </blockquote>
+                    </motion.div>
+                  </>
+                }
+              >
                 <div
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_80%_10%,rgb(var(--ei-halo-blue-rgb)/0.055),transparent_45%)]"
@@ -242,94 +246,77 @@ export function ContactPage() {
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-8">
                       <div className="grid gap-6 md:grid-cols-2">
-                        <div className="space-y-3">
-                          <label htmlFor="name" className="ei-form-label">
-                            Name
-                          </label>
-                          <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                            className="ei-form-input"
-                            placeholder="Your name"
-                          />
-                        </div>
-
-                        <div className="space-y-3">
-                          <label htmlFor="email" className="ei-form-label">
-                            Email
-                          </label>
-                          <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                            className="ei-form-input"
-                            placeholder="your@email.com"
-                          />
-                        </div>
-                      </div>
-
-                      <div className="space-y-3">
-                        <label htmlFor="exploration" className="ei-form-label">
-                          What are you exploring?
-                        </label>
-                        <EchoSelect
-                          id="exploration"
-                          name="exploration"
-                          value={formData.exploration}
+                        <EchoFormField
+                          type="text"
+                          id="name"
+                          name="name"
+                          label="Name"
+                          value={formData.name}
                           onChange={handleChange}
-                          options={explorationOptions}
-                          placeholder="Select an option"
+                          required
+                          placeholder="Your name"
+                        />
+
+                        <EchoFormField
+                          type="email"
+                          id="email"
+                          name="email"
+                          label="Email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          required
+                          placeholder="your@email.com"
                         />
                       </div>
 
-                      <div className="space-y-3">
-                        <label htmlFor="message" className="ei-form-label">
-                          Tell me about what you are trying to express
-                        </label>
-                        <textarea
-                          id="message"
-                          name="message"
-                          value={formData.message}
-                          onChange={handleChange}
-                          rows={6}
-                          className="ei-form-textarea"
-                          placeholder="Describe your project, your questions, or what feels unclear..."
-                        />
-                      </div>
+                      <EchoSelect
+                        id="exploration"
+                        name="exploration"
+                        label="What are you exploring?"
+                        value={formData.exploration}
+                        onChange={handleChange}
+                        options={explorationOptions}
+                        placeholder="Select an option"
+                      />
+
+                      <EchoTextarea
+                        id="message"
+                        name="message"
+                        label="Tell me about what you are trying to express"
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows={6}
+                        placeholder="Describe your project, your questions, or what feels unclear..."
+                      />
 
                       <div className="flex flex-col gap-6 pt-2 sm:flex-row sm:items-center">
                         <Button
                           type="submit"
                           variant="primary"
                           disabled={formState === "submitting"}
-                          className="min-h-[58px] w-full border-[rgb(var(--ei-moonlit-rgb)/0.18)] bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.9),rgb(var(--ei-void-rgb)/0.94))] hover:border-[rgb(var(--ei-moonlit-rgb)/0.28)] hover:bg-[linear-gradient(to_bottom,rgb(var(--ei-midnight-rgb)/0.92),rgb(var(--ei-void-rgb)/0.96))] hover:shadow-[0_10px_40px_rgb(var(--ei-halo-blue-rgb)/0.08)] disabled:opacity-80 sm:w-auto"
+                          className="w-full sm:w-auto"
                         >
                           {formState === "submitting"
                             ? "Sending..."
                             : "Send Message"}
                         </Button>
 
-                        <p className="ei-type-studio-body-small flex max-w-[300px] items-start gap-3 text-[var(--ei-color-text-tertiary)]">
+                        <div className="ei-type-studio-body-small flex max-w-[300px] items-start gap-3 text-[var(--ei-color-text-tertiary)]">
                           <span
                             className="mt-0.5 shrink-0 text-[rgb(var(--ei-halo-blue-rgb)/0.82)]"
                             aria-hidden="true"
                           >
                             <OrbitalVisual variant="haloGate" size={24} />
                           </span>
-                          Your information is kept private and never shared.
-                        </p>
+                          <span>
+                            Your information is kept private and never shared.
+                          </span>
+                        </div>
                       </div>
                     </form>
                   )}
                 </div>
-              </motion.div>
+              </EchoFormPanel>
             </motion.div>
 
             <motion.div
