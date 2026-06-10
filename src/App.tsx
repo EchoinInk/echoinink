@@ -8,6 +8,7 @@ import { PageTransition } from '@/components/system/PageTransition';
 const HomePage = lazy(() => import('@/pages/HomePage').then((module) => ({ default: module.HomePage })));
 const IdentityPage = lazy(() => import('@/pages/IdentityPage').then((module) => ({ default: module.IdentityPage })));
 const SessionsPage = lazy(() => import('@/pages/SessionsPage').then((module) => ({ default: module.SessionsPage })));
+const BookingPage = lazy(() => import('@/pages/BookingPage').then((module) => ({ default: module.BookingPage })));
 const WorldsPage = lazy(() => import('@/pages/WorldsPage').then((module) => ({ default: module.WorldsPage })));
 const WorksPage = lazy(() => import('@/pages/WorksPage').then((module) => ({ default: module.WorksPage })));
 const LumoPage = lazy(() => import('@/pages/LumoPage').then((module) => ({ default: module.LumoPage })));
@@ -29,6 +30,7 @@ function AppRoutes() {
           <Route path="/" element={<HomePage />} />
           <Route path="/identity" element={<IdentityPage />} />
           <Route path="/sessions" element={<SessionsPage />} />
+          <Route path="/booking" element={<BookingPage />} />
           <Route path="/worlds" element={<WorldsPage />} />
           <Route path="/works" element={<WorksPage />} />
           <Route path="/works/lumo" element={<LumoPage />} />

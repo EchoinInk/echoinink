@@ -6,7 +6,7 @@ export const sessionsHero = {
   body: [
     'Echo Sessions are one-to-one creative direction sessions for founders, artists, writers, and makers who are shaping something meaningful — but need help finding the language, identity, structure, or emotional direction beneath it.',
   ],
-  primaryCta: { label: 'Book an Echo Session', href: '/contact' },
+  primaryCta: { label: 'Book an Echo Session', href: '/booking' },
   secondaryCta: { label: 'See what we can explore', href: '#session-types' },
 };
 
@@ -164,5 +164,5 @@ export const sessionsAudience =
 export const sessionsClosing = {
   heading: 'Bring the unfinished thing into the room.',
   subline: 'We will listen for what it is trying to become.',
-  cta: { label: 'Book an Echo Session', href: '/contact' },
+  cta: { label: 'Book an Echo Session', href: '/booking' },
 };
