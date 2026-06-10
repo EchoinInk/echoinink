@@ -66,6 +66,7 @@ export const archiveIndexMeta = {
 export const archiveIndex = [
   {
     title: 'Why coherence matters more than volume.',
+    descriptor: 'On restraint, recognition, and the discipline of a clear signal.',
     category: 'Philosophy',
     readTime: '8 min read',
     date: 'May 12, 2025',
@@ -73,6 +74,7 @@ export const archiveIndex = [
   },
   {
     title: 'The invisible architecture of a world.',
+    descriptor: 'The structures an audience feels before they can name them.',
     category: 'Worldbuilding',
     readTime: '10 min read',
     date: 'May 9, 2025',
@@ -80,6 +82,7 @@ export const archiveIndex = [
   },
   {
     title: 'Process is poetry in motion.',
+    descriptor: 'A note on method, rhythm, and leaving room for discovery.',
     category: 'Notes',
     readTime: '6 min read',
     date: 'May 6, 2025',
@@ -87,6 +90,7 @@ export const archiveIndex = [
   },
   {
     title: 'Case fragment: Obsidian.',
+    descriptor: 'A study in depth, restraint, and material atmosphere.',
     category: 'Case Fragments',
     readTime: '4 min read',
     date: 'May 3, 2025',
@@ -94,6 +98,7 @@ export const archiveIndex = [
   },
   {
     title: 'Systems thinking for creative clarity.',
+    descriptor: 'How connected decisions create a more coherent whole.',
     category: 'Systems',
     readTime: '9 min read',
     date: 'Apr 28, 2025',
@@ -101,12 +106,20 @@ export const archiveIndex = [
   },
   {
     title: 'Light, contrast, and emotional pacing.',
+    descriptor: 'An experiment in directing attention through tonal rhythm.',
     category: 'Experiments',
     readTime: '7 min read',
     date: 'Apr 24, 2025',
     icon: 'haloGate',
   },
 ] as const;
+
+export const archivePhilosophy = {
+  title: 'Every entry is a point in a larger field.',
+  description:
+    'The archive is less a timeline than a map: recurring questions around atmosphere, identity, systems, story, signal, and worldbuilding.',
+  themes: ['Atmosphere', 'Identity', 'Systems', 'Story', 'Signal', 'Worldbuilding'],
+} as const;
 
 export const archiveCta = {
   title: 'The archive grows. Meaning stays.',
