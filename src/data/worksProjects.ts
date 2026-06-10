@@ -4,7 +4,7 @@ import obsidianImage from '@/assets/imagery/sections/works-image-5.webp';
 import verdeImage from '@/assets/imagery/sections/works-image-4.webp';
 import nexusImage from '@/assets/imagery/sections/works-image-1.webp';
 
-export type ProjectVariant = 'large' | 'small';
+export type ProjectPresentation = 'study' | 'fragment';
 
 export type ProjectTag =
   | 'Identity Systems'
@@ -22,10 +22,11 @@ export interface WorkProject {
   title: string;
   category: string;
   description: string;
+  proofLine: string;
   image: string;
   href?: string;
   tags: ProjectTag[];
-  variant: ProjectVariant;
+  presentation: ProjectPresentation;
   featured?: boolean;
   status?: ProjectStatus;
 }
@@ -36,10 +37,12 @@ export const worksProjects: WorkProject[] = [
     category: 'Identity + Digital Experience',
     description:
       'An emotionally intelligent identity and web experience for a platform built to support overwhelmed humans.',
+    proofLine:
+      'A calm, coherent product world that turns emotional intelligence into a usable digital experience.',
     image: lumoFeatured,
     href: '/works/lumo',
     tags: ['Identity Systems', 'Digital Experiences'],
-    variant: 'large',
+    presentation: 'study',
     featured: true,
     status: 'Case Study',
   },
@@ -48,9 +51,10 @@ export const worksProjects: WorkProject[] = [
     category: 'Fintech Identity',
     description:
       'A modern identity for a global fintech platform redefining seamless transactions.',
+    proofLine: 'Clarity and trust shaped into a distinctive financial identity.',
     image: auroraImage,
     tags: ['Identity Systems'],
-    variant: 'small',
+    presentation: 'study',
     status: 'Identity Concept',
   },
   {
@@ -58,9 +62,10 @@ export const worksProjects: WorkProject[] = [
     category: 'Brand Experience',
     description:
       'A next-generation web experience for a private investment collective focused on long-term vision.',
+    proofLine: 'A restrained digital presence designed to make long-term vision feel tangible.',
     image: obsidianImage,
     tags: ['Digital Experiences'],
-    variant: 'small',
+    presentation: 'study',
     status: 'Concept Prototype',
   },
   {
@@ -68,9 +73,10 @@ export const worksProjects: WorkProject[] = [
     category: 'Brand Identity',
     description:
       'A sustainable luxury skincare brand with a focus on purity, nature, and timeless elegance.',
+    proofLine: 'A quiet luxury identity built around material restraint and enduring recognition.',
     image: verdeImage,
     tags: ['Identity Systems'],
-    variant: 'small',
+    presentation: 'fragment',
     status: 'Concept Prototype',
   },
   {
@@ -78,9 +84,10 @@ export const worksProjects: WorkProject[] = [
     category: 'System Design',
     description:
       'A modular UI system built for scalability, clarity, and beautiful products.',
+    proofLine: 'A reusable interface language that keeps product expression coherent at scale.',
     image: nexusImage,
     tags: ['UI Systems'],
-    variant: 'small',
+    presentation: 'fragment',
     status: 'System Prototype',
   },
 ];

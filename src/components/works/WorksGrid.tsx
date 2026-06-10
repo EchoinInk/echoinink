@@ -1,11 +1,13 @@
 import { useMemo } from 'react';
 import { motion } from 'framer-motion';
+
 import { ProjectCard } from '@/components/cards/ProjectCard';
+import { SectionLabel } from '@/components/ui/SectionLabel';
 import {
   worksProjects,
   type WorkFilter,
   type WorkProject,
-  type WorkSort,
+  type WorkSort
 } from '@/data/worksProjects';
 import { fadeSoft, VIEWPORT } from '@/lib/motion-cinematic';
 
@@ -23,7 +25,9 @@ function sortProjects(projects: WorkProject[], sort: WorkSort): WorkProject[] {
   const sorted = [...projects];
 
   if (sort === 'Featured') {
-    return sorted.sort((a, b) => Number(b.featured ?? false) - Number(a.featured ?? false));
+    return sorted.sort(
+      (a, b) => Number(a.presentation === 'fragment') - Number(b.presentation === 'fragment')
+    );
   }
 
   if (sort === 'A–Z') {
@@ -35,12 +39,12 @@ function sortProjects(projects: WorkProject[], sort: WorkSort): WorkProject[] {
 
 export function WorksGrid({ activeFilter, sortBy }: WorksGridProps) {
   const visibleProjects = useMemo(() => {
-    const filtered = filterProjects(worksProjects, activeFilter);
-    return sortProjects(filtered, sortBy);
+    const nonFeaturedProjects = worksProjects.filter((project) => !project.featured);
+    return sortProjects(filterProjects(nonFeaturedProjects, activeFilter), sortBy);
   }, [activeFilter, sortBy]);
 
-  const featuredProject = visibleProjects.find((project) => project.featured);
-  const editorialProjects = visibleProjects.filter((project) => !project.featured);
+  const selectedProjects = visibleProjects.filter((project) => project.presentation === 'study');
+  const fragments = visibleProjects.filter((project) => project.presentation === 'fragment');
 
   if (visibleProjects.length === 0) {
     return (
@@ -49,8 +53,7 @@ export function WorksGrid({ activeFilter, sortBy }: WorksGridProps) {
         initial="hidden"
         whileInView="visible"
         viewport={VIEWPORT.normal}
-        className="py-20 text-center font-structural text-[14px]"
-        style={{ color: 'var(--ei-color-text-tertiary)' }}
+        className="ei-works-empty"
       >
         No projects match this filter yet.
       </motion.p>
@@ -58,22 +61,39 @@ export function WorksGrid({ activeFilter, sortBy }: WorksGridProps) {
   }
 
   return (
-    <div className="space-y-4 md:space-y-5">
-      {featuredProject ? (
-        <ProjectCard key={featuredProject.title} {...featuredProject} index={0} />
-      ) : null}
-
-      {editorialProjects.length > 0 && (
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
-          {editorialProjects.map((project, index) => (
-            <ProjectCard
-              key={project.title}
-              {...project}
-              index={featuredProject ? index + 1 : index}
-            />
+    <div className="ei-works-collection">
+      {selectedProjects.length > 0 ? (
+        <div className="ei-works-selected-grid">
+          {selectedProjects.map((project, index) => (
+            <ProjectCard key={project.title} {...project} index={index + 1} />
           ))}
         </div>
-      )}
+      ) : null}
+
+      {fragments.length > 0 ? (
+        <section className="ei-works-fragments" aria-labelledby="works-fragments-heading">
+          <div className="ei-works-section-heading ei-works-fragments-heading">
+            <SectionLabel label="Case fragments" index="04" />
+            <div>
+              <h2 id="works-fragments-heading">Smaller studies, held in proportion.</h2>
+              <p>
+                Concepts and system fragments that show the thinking without asking them to carry
+                the weight of a full case study.
+              </p>
+            </div>
+          </div>
+
+          <div className="ei-works-fragment-list">
+            {fragments.map((project, index) => (
+              <ProjectCard
+                key={project.title}
+                {...project}
+                index={selectedProjects.length + index + 1}
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
     </div>
   );
 }

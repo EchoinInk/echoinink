@@ -18,6 +18,7 @@
 @import './03-components/forms.css' layer(components);
 @import './03-components/buttons.css' layer(components);
 @import './03-components/design-system.css' layer(components);
+@import './03-components/works.css' layer(components);
 
 @import './04-utilities/mobile.css' layer(utilities);
 

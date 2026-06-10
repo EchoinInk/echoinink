@@ -1,40 +1,70 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-import { PageShell } from '@/components/layout/PageShell';
-import { Section } from '@/components/layout/Section';
-import { Container } from '@/components/layout/Container';
-import { PageSectionHero } from '@/components/sections/PageSectionHero';
-import { WorkFilterBar } from '@/components/works/WorkFilterBar';
-import { WorksGrid } from '@/components/works/WorksGrid';
-import { Button } from '@/components/ui/Button';
+import { Link } from 'react-router-dom';
+
 import worksHeroDesktop from '@/assets/imagery/hero/works-hero-desktop.webp';
 import worksHeroMobile from '@/assets/imagery/hero/works-hero-mobile.webp';
 import worksCtaImage from '@/assets/imagery/sections/works-cta.webp';
-import type { WorkFilter, WorkSort } from '@/data/worksProjects';
+import { ContentFrame } from '@/components/layout/ContentFrame';
+import { PageShell } from '@/components/layout/PageShell';
+import { Section } from '@/components/layout/Section';
+import { CTASection } from '@/components/sections/CTASection';
+import { EchoHero } from '@/components/sections/EchoHero';
+import { Button } from '@/components/ui/Button';
+import { EchoCard } from '@/components/ui/EchoCard';
+import { IconWell } from '@/components/ui/IconWell';
+import { OrbitalVisual, type OrbitalVariant } from '@/components/ui/OrbitalVisual';
+import { SectionLabel } from '@/components/ui/SectionLabel';
+import { WorkFilterBar } from '@/components/works/WorkFilterBar';
+import { WorksGrid } from '@/components/works/WorksGrid';
+import { worksProjects, type WorkFilter, type WorkSort } from '@/data/worksProjects';
 import {
+  blurEmergence,
   driftUp,
   fadeSoft,
   staggerContainer,
   STAGGER,
-  VIEWPORT,
+  VIEWPORT
 } from '@/lib/motion-cinematic';
 
-function WorksSectionLabel({ children }: { children: string }) {
-  return (
-    <div className="ei-section-label-row">
-      <span className="ei-section-label">{children}</span>
-      <span className="ei-section-label-line" />
-    </div>
-  );
-}
+const featuredProject = worksProjects.find((project) => project.featured);
+
+const proofValues: Array<{
+  title: string;
+  description: string;
+  icon: OrbitalVariant;
+  tone: 'blue' | 'violet' | 'magenta';
+}> = [
+  {
+    title: 'Atmosphere',
+    description:
+      'An emotional climate that makes the work recognisable before every detail is explained.',
+    icon: 'innerTide',
+    tone: 'violet'
+  },
+  {
+    title: 'System',
+    description:
+      'A coherent visual and verbal language designed to hold together across real touchpoints.',
+    icon: 'vectorLattice',
+    tone: 'blue'
+  },
+  {
+    title: 'Commercial clarity',
+    description:
+      'A sharper expression of value, so people can understand the offer and trust where it leads.',
+    icon: 'signalBridge',
+    tone: 'magenta'
+  }
+];
 
 export function WorksPage() {
   const [activeFilter, setActiveFilter] = useState<WorkFilter>('All Works');
   const [sortBy, setSortBy] = useState<WorkSort>('Latest');
 
   return (
-    <PageShell atmosphere="works" withTopSpacing={false}>
+    <PageShell atmosphere="works" withTopSpacing={false} className="ei-works-page">
       <Helmet>
         <title>Works | Echo In Ink</title>
         <meta
@@ -43,42 +73,107 @@ export function WorksPage() {
         />
       </Helmet>
 
-      <PageSectionHero
-        eyebrow="The Archive"
-        title="Works shaped with atmosphere."
-        italicWord="atmosphere"
-        description="A curated body of identity, narrative, and experiential projects — shaped by feeling, built with clarity, and designed to leave a lasting echo."
-        ctaLabel="View Our Approach →"
-        ctaHref="/studio"
-        ctaVariant="tertiary"
-        image={worksHeroDesktop}
-        mobileImage={worksHeroMobile}
-        imageAlt="Cinematic nebula visual representing Echo In Ink selected works"
-        align="left"
+      <EchoHero
+        variant="archive"
+        eyebrow="Selected proof"
+        index="01"
+        title={
+          <>
+            Proof, shaped as <em>atmosphere.</em>
+          </>
+        }
+        description="A curated body of identity, narrative, and digital work — showing how feeling becomes structure, and structure becomes value."
+        backgroundImage={worksHeroDesktop}
+        mobileBackgroundImage={worksHeroMobile}
+        imageAlt=""
+        headingId="works-hero-heading"
+        className="ei-works-hero"
+        contentClassName="ei-works-hero-content"
+        actions={
+          <>
+            <Button to="/works/lumo" variant="primary">
+              View featured case study
+            </Button>
+            <Button to="#selected-works" variant="tertiary">
+              Explore selected work <span aria-hidden="true">→</span>
+            </Button>
+          </>
+        }
       />
 
-      <Section spacing="compact" className="relative z-10">
-        <Container size="xl">
+      {featuredProject ? (
+        <Section spacing="none" className="ei-works-section ei-works-featured">
+          <ContentFrame width="standard" gutters>
+            <motion.div
+              variants={staggerContainer(STAGGER.loose, 0)}
+              initial="hidden"
+              whileInView="visible"
+              viewport={VIEWPORT.normal}
+            >
+              <motion.div variants={fadeSoft}>
+                <EchoCard variant="proof" padding="none" className="ei-works-featured-panel">
+                  <div className="ei-works-featured-media">
+                    <img src={featuredProject.image} alt="" aria-hidden="true" />
+                    <div className="ei-works-featured-scrim" aria-hidden="true" />
+                    <span>Featured case study</span>
+                  </div>
+
+                  <div className="ei-works-featured-copy">
+                    <SectionLabel label="Credibility anchor" index="02" />
+                    <div className="ei-works-featured-meta">
+                      <span>{featuredProject.status}</span>
+                      <span>{featuredProject.category}</span>
+                    </div>
+                    <motion.h2 variants={blurEmergence}>{featuredProject.title}</motion.h2>
+                    <p className="ei-works-featured-outcome">{featuredProject.proofLine}</p>
+                    <p className="ei-works-featured-description">{featuredProject.description}</p>
+
+                    <dl className="ei-works-featured-facts">
+                      <div>
+                        <dt>Focus</dt>
+                        <dd>Emotional clarity</dd>
+                      </div>
+                      <div>
+                        <dt>System</dt>
+                        <dd>{featuredProject.tags.join(' + ')}</dd>
+                      </div>
+                      <div>
+                        <dt>Proof</dt>
+                        <dd>Full case study</dd>
+                      </div>
+                    </dl>
+
+                    <Button to={featuredProject.href ?? '/works/lumo'} variant="secondary">
+                      Enter the Lumo case study <span aria-hidden="true">→</span>
+                    </Button>
+                  </div>
+                </EchoCard>
+              </motion.div>
+            </motion.div>
+          </ContentFrame>
+        </Section>
+      ) : null}
+
+      <Section id="selected-works" spacing="none" className="ei-works-section ei-works-selected">
+        <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="mx-auto max-w-[1180px]"
           >
-            <motion.div
-              variants={driftUp}
-              className="mb-6 flex flex-col gap-5 border-b pb-7 md:mb-7 md:flex-row md:items-end md:justify-between"
-              style={{ borderColor: 'var(--ei-color-border-soft)' }}
-            >
-              <WorksSectionLabel>Selected Works</WorksSectionLabel>
-
-              <p className="ei-type-studio-body-small max-w-[36ch] text-[var(--ei-color-text-tertiary)] md:text-right">
-                Case studies, concepts, and system fragments from the Echo in Ink archive.
-              </p>
+            <motion.div variants={driftUp} className="ei-works-section-heading">
+              <SectionLabel label="Selected works" index="03" />
+              <div>
+                <h2>Curated by the weight of the proof.</h2>
+                <p>
+                  Full studies lead. Concepts and fragments follow in a quieter register, so every
+                  piece is honest about what it demonstrates.
+                </p>
+              </div>
             </motion.div>
 
-            <motion.div variants={fadeSoft}>
+            <motion.div variants={fadeSoft} className="ei-works-filter-wrap">
               <WorkFilterBar
                 activeFilter={activeFilter}
                 sortBy={sortBy}
@@ -87,69 +182,87 @@ export function WorksPage() {
               />
             </motion.div>
 
-            <motion.div variants={fadeSoft} className="mt-7 md:mt-8">
+            <motion.div variants={fadeSoft}>
               <WorksGrid activeFilter={activeFilter} sortBy={sortBy} />
             </motion.div>
           </motion.div>
-        </Container>
+        </ContentFrame>
       </Section>
 
-      <Section spacing="none" className="relative z-10 pt-8 pb-10 md:pt-10 md:pb-12">
-        <Container size="xl">
+      <Section spacing="none" className="ei-works-section ei-works-proof">
+        <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="mx-auto max-w-[1180px]"
           >
-            <motion.div
-              variants={fadeSoft}
-              className="relative flex flex-col gap-6 overflow-hidden rounded-[var(--ei-card-radius-lg)] border px-7 py-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.045),0_0_76px_rgb(var(--ei-violet-rgb)/0.075)] md:flex-row md:items-center md:justify-between md:px-10"
-              style={{
-                background:
-                  'linear-gradient(100deg, rgb(var(--ei-midnight-rgb) / 0.64), rgb(var(--ei-void-rgb) / 0.9) 58%, rgb(var(--ei-violet-rgb) / 0.13))',
-                borderColor: 'rgb(var(--ei-moonlit-rgb) / 0.16)',
-              }}
-            >
-              <img
-                src={worksCtaImage}
-                alt=""
-                aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-center opacity-45"
-              />
-              <div
-                aria-hidden="true"
-                className="absolute inset-0"
-                style={{
-                  background:
-                    'linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.88), rgb(var(--ei-void-rgb) / 0.62) 54%, rgb(var(--ei-void-rgb) / 0.32))',
-                }}
-              />
-
-              <motion.div variants={driftUp} className="relative z-10 max-w-[42rem]">
-                <p className="ei-type-studio-slim-cta">
-                  Begin a world of <em className="ei-type-studio-hero-emphasis">your own</em>.
+            <motion.div variants={driftUp} className="ei-works-section-heading">
+              <SectionLabel label="What the work demonstrates" index="05" />
+              <div>
+                <h2>Beauty is only useful when it carries meaning.</h2>
+                <p>
+                  The work is designed to create recognition, coherence, and a clearer path into the
+                  value behind the offer.
                 </p>
-                <p className="ei-type-studio-body-small mt-2 text-[var(--ei-color-text-secondary)]">
-                  Every great project begins with a conversation.
-                </p>
-              </motion.div>
-
-              <motion.div variants={driftUp} className="relative z-10 md:ml-8">
-                <Button
-                  to="/contact"
-                  variant="secondary"
-                  className="min-h-[42px] gap-3 self-start px-6 py-3 md:self-center"
-                >
-                  Start a Project
-                  <span aria-hidden="true">→</span>
-                </Button>
-              </motion.div>
+              </div>
             </motion.div>
+
+            <div className="ei-works-proof-grid">
+              {proofValues.map((value, index) => (
+                <motion.div key={value.title} variants={driftUp}>
+                  <EchoCard
+                    variant={index === 1 ? 'feature' : 'static'}
+                    padding="lg"
+                    className="ei-works-proof-card"
+                  >
+                    <IconWell size="md" tone={value.tone} orbital glow>
+                      <OrbitalVisual variant={value.icon} size={42} />
+                    </IconWell>
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <h3>{value.title}</h3>
+                    <p>{value.description}</p>
+                  </EchoCard>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.p variants={fadeSoft} className="ei-works-proof-note">
+              Looking for the thinking behind the work?{' '}
+              <Link to="/studio">
+                Explore the studio approach <span aria-hidden="true">→</span>
+              </Link>
+            </motion.p>
           </motion.div>
-        </Container>
+        </ContentFrame>
       </Section>
+
+      <CTASection
+        variant="imagePanel"
+        eyebrow="Begin a project"
+        heading={
+          <>
+            Make the value <em>felt.</em>
+          </>
+        }
+        body="Bring the idea, tension, or ambition. We will shape the atmosphere, system, and expression around what it needs to become."
+        image={worksCtaImage}
+        imageAlt=""
+        className="ei-works-closing"
+        actions={
+          <>
+            <Button to="/contact" variant="primary">
+              Start a conversation
+            </Button>
+            <Button to="/studio" variant="tertiary">
+              Explore the studio <span aria-hidden="true">→</span>
+            </Button>
+          </>
+        }
+        secondary={
+          <Link to="/sessions">Need clarity before a full engagement? Explore Echo Sessions.</Link>
+        }
+      />
     </PageShell>
   );
 }

@@ -1,4 +1,5 @@
 import { EchoSelect } from '@/components/ui/EchoSelect';
+import { FilterBar } from '@/components/ui/FilterBar';
 import { workFilters, workSortOptions, type WorkFilter, type WorkSort } from '@/data/worksProjects';
 
 interface WorkFilterBarProps {
@@ -12,55 +13,17 @@ export function WorkFilterBar({
   activeFilter,
   sortBy,
   onFilterChange,
-  onSortChange,
+  onSortChange
 }: WorkFilterBarProps) {
   return (
-    <div
-      className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-10"
-    >
-      <div
-        role="group"
-        aria-label="Filter projects by category"
-        className="-mx-6 flex gap-2 overflow-x-auto px-6 pb-1 md:mx-0 md:flex-wrap md:overflow-visible md:px-0"
-      >
-        {workFilters.map((filter) => {
-          const isActive = activeFilter === filter;
-
-          return (
-            <button
-              key={filter}
-              type="button"
-              aria-pressed={isActive}
-              onClick={() => onFilterChange(filter)}
-              className="relative shrink-0 rounded-full border px-4 py-2.5 font-structural text-[10px] uppercase tracking-[0.18em] transition-all duration-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[rgb(var(--ei-halo-blue-rgb)/0.72)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--ei-void)]"
-              style={{
-                color: isActive
-                  ? 'var(--ei-color-text-primary)'
-                  : 'var(--ei-color-text-tertiary)',
-                background: isActive ? 'var(--ei-filter-bg-active)' : 'transparent',
-                borderColor: isActive ? 'var(--ei-filter-border-active)' : 'transparent',
-                boxShadow: isActive
-                  ? '0 0 20px rgb(var(--ei-halo-blue-rgb) / 0.08)'
-                  : 'none',
-              }}
-            >
-              {isActive && (
-                <span
-                  aria-hidden="true"
-                  className="absolute -bottom-3 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full"
-                  style={{
-                    background: 'var(--ei-color-text-accent)',
-                    boxShadow: '0 0 8px rgb(var(--ei-halo-blue-rgb) / 0.6)',
-                  }}
-                />
-              )}
-              {filter}
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="w-full shrink-0 md:w-[200px]">
+    <FilterBar
+      filters={workFilters}
+      activeFilter={activeFilter}
+      onFilterChange={onFilterChange}
+      ariaLabel="Filter projects by category"
+      tone="editorial"
+      className="ei-works-filter-bar"
+      sort={
         <EchoSelect
           id="works-sort"
           name="works-sort"
@@ -68,9 +31,9 @@ export function WorkFilterBar({
           value={sortBy}
           options={[...workSortOptions]}
           onChange={(event) => onSortChange(event.target.value as WorkSort)}
-          className="[&_button]:min-h-[46px] [&_button]:rounded-full [&_button]:px-4 [&_button]:py-2.5 [&_button]:text-[10px] [&_button]:uppercase [&_button]:tracking-[0.16em]"
+          className="ei-works-sort"
         />
-      </div>
-    </div>
+      }
+    />
   );
 }
