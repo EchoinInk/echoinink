@@ -1,131 +1,205 @@
-import type { OrbitalVariant } from '@/components/orbitals/orbitals';
+import type { OrbitalVariant } from "@/components/orbitals/orbitals";
 
-import atmosphereReferenceImage from '@/assets/imagery/sections/works-image-3.webp';
-import toneOfVoiceImage from '@/assets/imagery/sections/ei-lightwave-work-card.png';
-import worldLoreImage from '@/assets/imagery/backgrounds/planet-rings-desktop.webp';
-import clientOnboardingImage from '@/assets/imagery/sections/nexus-work-card.png';
+import atmosphereReferenceImage from "@/assets/imagery/sections/works-image-3.webp";
+import toneOfVoiceImage from "@/assets/imagery/sections/ei-lightwave-work-card.png";
+import worldLoreImage from "@/assets/imagery/backgrounds/planet-rings-desktop.webp";
+import clientOnboardingImage from "@/assets/imagery/sections/nexus-work-card.png";
 
 export const systemsHero = {
-  eyebrow: 'Systems',
-  title: 'Tools for building atmospheric worlds.',
-  italicWord: 'atmospheric worlds',
+  eyebrow: "Systems",
+  title: "Atmosphere, made usable.",
   description:
-    'Creative systems, templates, prompts, and digital products for shaping identity, atmosphere, and narrative coherence.',
+    "Modular creative infrastructure for shaping identity, atmosphere, direction, and coherent worlds — from focused prompts to connected systems.",
   primaryCta: {
-    label: 'Browse Systems',
-    href: '#systems-categories',
+    label: "Explore Systems",
+    href: "#systems-categories"
   },
   secondaryCta: {
-    label: 'Learn More',
-    href: '#featured-system',
-  },
+    label: "Start with a tool",
+    href: "#featured-system"
+  }
 } as const;
 
 export interface SystemsCategory {
+  layer: string;
   title: string;
   description: string;
+  includes: string[];
   icon: OrbitalVariant;
 }
 
 export const systemsCategories: SystemsCategory[] = [
   {
-    title: 'Identity prompts',
+    layer: "Orient",
+    title: "Foundation systems",
     description:
-      'Guided prompts that help you find your voice, clarify direction, and define your world.',
-    icon: 'chorusCore',
+      "Find the central signal before building the expression around it.",
+    includes: ["Identity prompts", "Clarity frameworks"],
+    icon: "chorusCore"
   },
   {
-    title: 'Atmosphere mapping tools',
+    layer: "Shape",
+    title: "Creative tools",
     description:
-      'Tools for analysing, shaping, and refining the emotional tone and sensory atmosphere.',
-    icon: 'focusDial',
+      "Resolve a focused question around tone, language, reference, or process.",
+    includes: ["Atmosphere mapping", "Voice building"],
+    icon: "focusDial"
   },
   {
-    title: 'Creative direction workbooks',
+    layer: "Direct",
+    title: "Direction kits",
     description:
-      'Structured workbooks for building coherent visual and narrative direction.',
-    icon: 'synthesisStar',
+      "Turn instinct and references into a coherent visual and narrative direction.",
+    includes: ["Creative workbooks", "Worldbuilding systems"],
+    icon: "synthesisStar"
   },
   {
-    title: 'Worldbuilding systems',
+    layer: "Express",
+    title: "Output systems",
     description:
-      'Systems for designing worlds, lore, symbols, languages, and narrative structures.',
-    icon: 'vectorLattice',
-  },
-  {
-    title: 'Digital UI kits',
-    description:
-      'Premium UI kits and components for building beautiful, atmospheric digital experiences.',
-    icon: 'quietAxis',
-  },
+      "Carry the direction into usable touchpoints without losing its atmosphere.",
+    includes: ["Digital UI kits", "Client toolkits"],
+    icon: "vectorLattice"
+  }
 ];
 
 export const featuredSystem = {
-  category: 'Identity Prompts',
-  title: 'The Identity Clarity Prompt Kit',
+  category: "Foundation system",
+  title: "The Identity Clarity Prompt Kit",
   description:
-    'A guided set of prompts to help you uncover your essence, shape your identity, and align every element of your brand or project.',
+    "A guided set of prompts to help you uncover your essence, shape your identity, and align every element of your brand or project.",
   features: [
-    '50+ deep prompts',
-    'Identity clarity framework',
-    'Reflection + discovery exercises',
-    'PDF + Notion compatible',
+    "50+ deep prompts",
+    "Identity clarity framework",
+    "Reflection + discovery exercises",
+    "PDF + Notion compatible"
   ],
+  format: "Guided digital kit",
   cta: {
-    label: 'View Product',
-    href: '/contact',
-  },
+    label: "View Product",
+    href: "/contact"
+  }
 } as const;
 
 export interface LatestSystem {
   title: string;
   description: string;
   price: string;
+  type: string;
+  status: string;
+  useCase: string;
+  output: string;
   image: string;
   imagePosition?: string;
 }
 
 export const latestSystems: LatestSystem[] = [
   {
-    title: 'Atmosphere Reference Atlas',
+    title: "Atmosphere Reference Atlas",
     description:
-      'A library of atmosphere references to inspire tone, texture, and mood.',
-    price: '$29 NZD',
+      "A library of atmosphere references to inspire tone, texture, and mood.",
+    price: "$29 NZD",
+    type: "Reference tool",
+    status: "Available",
+    useCase: "Finding a shared emotional language",
+    output: "A focused atmosphere reference set",
     image: atmosphereReferenceImage,
-    imagePosition: 'center',
+    imagePosition: "center"
   },
   {
-    title: 'Tone of Voice Builder',
+    title: "Tone of Voice Builder",
     description:
-      'Build a brand voice that feels consistent, natural, and unmistakably yours.',
-    price: '$24 NZD',
+      "Build a brand voice that feels consistent, natural, and unmistakably yours.",
+    price: "$24 NZD",
+    type: "Creative tool",
+    status: "Available",
+    useCase: "Clarifying how the work should sound",
+    output: "Voice principles and usable language",
     image: toneOfVoiceImage,
-    imagePosition: '62% center',
+    imagePosition: "62% center"
   },
   {
-    title: 'World Lore Blueprint',
+    title: "World Lore Blueprint",
     description:
-      'A structured system for building rich, believable, and interconnected worlds.',
-    price: '$34 NZD',
+      "A structured system for building rich, believable, and interconnected worlds.",
+    price: "$34 NZD",
+    type: "Direction kit",
+    status: "Available",
+    useCase: "Connecting story, symbols, and meaning",
+    output: "A coherent world lore framework",
     image: worldLoreImage,
-    imagePosition: 'center',
+    imagePosition: "center"
   },
   {
-    title: 'Client Onboarding Toolkit',
+    title: "Client Onboarding Toolkit",
     description:
-      'A refined onboarding experience for creative studios and solo creators.',
-    price: '$19 NZD',
+      "A refined onboarding experience for creative studios and solo creators.",
+    price: "$19 NZD",
+    type: "Output system",
+    status: "Available",
+    useCase: "Making the first client touchpoint clear",
+    output: "A reusable onboarding experience",
     image: clientOnboardingImage,
-    imagePosition: 'center',
+    imagePosition: "center"
+  }
+];
+
+export const systemsUseCases = [
+  {
+    audience: "Founders",
+    need: "Clarify the identity before investing in expression.",
+    fit: "Foundation systems + direction kits"
   },
+  {
+    audience: "Artists & writers",
+    need: "Give an emerging world a stronger internal logic.",
+    fit: "Creative tools + worldbuilding systems"
+  },
+  {
+    audience: "Creative studios",
+    need: "Create repeatable structure without making the work generic.",
+    fit: "Direction kits + output systems"
+  },
+  {
+    audience: "Independent makers",
+    need: "Move from scattered references to a coherent next step.",
+    fit: "Prompts + focused modules"
+  }
+] as const;
+
+export const systemPathway: Array<{
+  title: string;
+  description: string;
+  icon: OrbitalVariant;
+}> = [
+  {
+    title: "Session",
+    description: "Find the signal and name what needs to become clear.",
+    icon: "signalBridge"
+  },
+  {
+    title: "System",
+    description: "Use prompts, tools, and frameworks to make the signal usable.",
+    icon: "focusDial"
+  },
+  {
+    title: "Identity Kit",
+    description: "Translate the direction into a coherent visual and verbal language.",
+    icon: "prismMirror"
+  },
+  {
+    title: "World",
+    description: "Carry the identity into an atmosphere people can recognise and enter.",
+    icon: "haloGate"
+  }
 ];
 
 export const systemsClosing = {
-  title: 'Built for creators who care about depth, clarity, and coherence.',
+  title: "Built for creators who care about depth, clarity, and coherence.",
   description:
-    'Tools that support your process — so you can focus on creating what matters.',
+    "Choose a focused tool, begin with a session, or shape a larger system around the work.",
   cta: {
-    label: 'Join the Circle',
-    href: '/contact',
-  },
+    label: "Explore the right system",
+    href: "/contact"
+  }
 } as const;
