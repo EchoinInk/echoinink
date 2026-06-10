@@ -55,7 +55,7 @@ export function CaseStudyLayout({
   return (
     <article className={cn("ei-case-study-layout", className)}>
       <header>{hero}</header>
-      <CaseStudyRegion name="outcome" width="reading">
+      <CaseStudyRegion name="outcome">
         {outcome}
       </CaseStudyRegion>
       <CaseStudyRegion name="context">{context}</CaseStudyRegion>
