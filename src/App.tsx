@@ -15,6 +15,9 @@ const StudioPage = lazy(() => import('@/pages/StudioPage').then((module) => ({ d
 const ContactPage = lazy(() => import('@/pages/ContactPage').then((module) => ({ default: module.ContactPage })));
 const SystemsPage = lazy(() => import('@/pages/SystemsPage').then((module) => ({ default: module.SystemsPage })));
 const ArchivePage = lazy(() => import('@/pages/ArchivePage').then((module) => ({ default: module.ArchivePage })));
+const ArchiveEssayPage = lazy(() => import('@/pages/ArchiveEssayPage').then((module) => ({ default: module.ArchiveEssayPage })));
+const ArchiveNotesPage = lazy(() => import('@/pages/ArchiveNotesPage').then((module) => ({ default: module.ArchiveNotesPage })));
+const ArchiveIndexPage = lazy(() => import('@/pages/ArchiveIndexPage').then((module) => ({ default: module.ArchiveIndexPage })));
 
 function AppRoutes() {
   const location = useLocation();
@@ -33,6 +36,9 @@ function AppRoutes() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/systems" element={<SystemsPage />} />
           <Route path="/archive" element={<ArchivePage />} />
+          <Route path="/archive/atmosphere-is-information" element={<ArchiveEssayPage />} />
+          <Route path="/archive/notes" element={<ArchiveNotesPage />} />
+          <Route path="/archive/index" element={<ArchiveIndexPage />} />
         </Routes>
       </Suspense>
     </AnimatePresence>

@@ -14,6 +14,7 @@
 @import './03-components/sessions.css' layer(components);
 @import './03-components/worlds.css' layer(components);
 @import './03-components/archive.css' layer(components);
+@import './03-components/editorial-archive.css' layer(components);
 @import './03-components/atmosphere.css' layer(components);
 @import './03-components/forms.css' layer(components);
 @import './03-components/buttons.css' layer(components);

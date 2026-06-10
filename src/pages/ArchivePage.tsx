@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
+import { ArchiveConstellation } from '@/components/archive/ArchiveConstellation';
+import { ArchiveIndexList } from '@/components/archive/ArchiveIndexList';
 import { ContentFrame } from '@/components/layout/ContentFrame';
 import { PageShell } from '@/components/layout/PageShell';
 import { Section } from '@/components/layout/Section';
@@ -12,7 +14,7 @@ import { EchoCard } from '@/components/ui/EchoCard';
 import { EchoSelect } from '@/components/ui/EchoSelect';
 import { FilterBar } from '@/components/ui/FilterBar';
 import { IconWell } from '@/components/ui/IconWell';
-import { OrbitalVisual, type OrbitalVariant } from '@/components/ui/OrbitalVisual';
+import { OrbitalVisual } from '@/components/ui/OrbitalVisual';
 import { SectionLabel } from '@/components/ui/SectionLabel';
 import {
   archiveCta,
@@ -20,7 +22,6 @@ import {
   archiveFilters,
   archiveHero,
   archiveIndex,
-  archiveIndexMeta,
   archiveNotes,
   archivePhilosophy,
   archiveSortOptions,
@@ -95,8 +96,8 @@ export function ArchivePage() {
         className="ei-archive-hero"
         contentClassName="ei-archive-hero-content"
         actions={
-          <Button to="#archive-featured" variant="tertiary">
-            Enter the index <span aria-hidden="true">↓</span>
+          <Button to="/archive/index" variant="tertiary">
+            Enter the index <span aria-hidden="true">→</span>
           </Button>
         }
       />
@@ -133,7 +134,7 @@ export function ArchivePage() {
 
                   <p>{archiveFeatured.excerpt}</p>
 
-                  <Button to="#archive-index" variant="tertiary">
+                  <Button to={archiveFeatured.href} variant="tertiary">
                     {archiveFeatured.action} <span aria-hidden="true">→</span>
                   </Button>
                 </div>
@@ -232,7 +233,7 @@ export function ArchivePage() {
                     </h3>
                     <p>{note.excerpt}</p>
 
-                    <Button to="#archive-index" variant="tertiary">
+                    <Button to="/archive/notes" variant="tertiary">
                       {note.action} <span aria-hidden="true">→</span>
                     </Button>
                   </EchoCard>
@@ -261,37 +262,18 @@ export function ArchivePage() {
               </div>
               <span className="ei-archive-index-count">
                 {activeFilter === 'All'
-                  ? archiveIndexMeta.count
+                  ? `${archiveIndex.length} Entries`
                   : `${visibleEntries.length} ${visibleEntries.length === 1 ? 'Entry' : 'Entries'}`}
               </span>
             </motion.div>
 
             <motion.div variants={fadeSoft}>
-              <EchoCard variant="index" padding="none" className="ei-archive-index-table">
-                {visibleEntries.length > 0 ? (
-                  visibleEntries.map((entry) => (
-                    <a key={entry.title} href="#archive-index" className="ei-archive-index-row">
-                      <IconWell size="sm" tone="violet" className="ei-archive-index-icon">
-                        <OrbitalVisual variant={entry.icon as OrbitalVariant} size={22} />
-                      </IconWell>
-                      <span className="ei-archive-index-copy">
-                        <span className="ei-archive-index-title">{entry.title}</span>
-                        <span className="ei-archive-index-descriptor">{entry.descriptor}</span>
-                      </span>
-                      <span className="ei-archive-index-category">{entry.category}</span>
-                      <span className="ei-archive-index-read">{entry.readTime}</span>
-                      <span className="ei-archive-index-date">{entry.date}</span>
-                      <span className="ei-archive-index-arrow" aria-hidden="true">
-                        →
-                      </span>
-                    </a>
-                  ))
-                ) : (
-                  <p className="ei-archive-index-empty">
-                    No indexed entries currently sit under this signal.
-                  </p>
-                )}
-              </EchoCard>
+              <ArchiveIndexList entries={visibleEntries} />
+            </motion.div>
+            <motion.div variants={fadeSoft} className="ei-archive-index-action">
+              <Button to="/archive/index" variant="secondary">
+                Open the full index <span aria-hidden="true">→</span>
+              </Button>
             </motion.div>
           </motion.div>
         </ContentFrame>
@@ -312,24 +294,8 @@ export function ArchivePage() {
                 <p>{archivePhilosophy.description}</p>
               </div>
 
-              <motion.div variants={fadeSoft} className="ei-archive-constellation" aria-hidden="true">
-                <span className="ei-archive-constellation-orbit" />
-                <span className="ei-archive-constellation-axis" />
-                {archivePhilosophy.themes.map((theme, index) => (
-                  <span
-                    key={theme}
-                    className="ei-archive-constellation-node"
-                    data-node={String(index + 1)}
-                  >
-                    <span />
-                    {theme}
-                  </span>
-                ))}
-                <OrbitalVisual
-                  variant="synthesisStar"
-                  size={74}
-                  className="ei-archive-constellation-center"
-                />
+              <motion.div variants={fadeSoft}>
+                <ArchiveConstellation />
               </motion.div>
             </EchoCard>
           </motion.div>
@@ -345,8 +311,8 @@ export function ArchivePage() {
         headingId="archive-cta-heading"
         actions={
           <>
-            <Button to="#archive-index" variant="secondary">
-              Explore the index <span aria-hidden="true">↑</span>
+            <Button to="/archive/index" variant="secondary">
+              Explore the index <span aria-hidden="true">→</span>
             </Button>
             <Button to={archiveCta.href} variant="tertiary">
               {archiveCta.action} <span aria-hidden="true">→</span>

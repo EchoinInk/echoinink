@@ -17,6 +17,7 @@ export const archiveFilters = [
 ] as const;
 
 export const archiveSortOptions = ['Latest'] as const;
+export const archiveIndexSortOptions = ['Latest', 'Oldest', 'Title'] as const;
 
 export const archiveFeatured = {
   label: 'Featured Essay',
@@ -27,10 +28,12 @@ export const archiveFeatured = {
   excerpt:
     'Atmosphere is not decoration. It is the first data your audience receives. Before words, before identity, before logic — there is feeling.',
   action: 'Read Essay',
+  href: '/archive/atmosphere-is-information',
 };
 
 export const archiveNotes = [
   {
+    id: 'identity-is-not-decoration',
     category: 'Notes',
     readTime: '6 min read',
     title: 'Identity is not decoration.',
@@ -38,8 +41,10 @@ export const archiveNotes = [
     excerpt:
       'Your identity should carry the weight of meaning — not just the weight of visual preference.',
     action: 'Read Note',
+    thread: 'Identity',
   },
   {
+    id: 'the-feeling-is-the-product',
     category: 'Notes',
     readTime: '5 min read',
     title: 'The feeling is the product.',
@@ -47,8 +52,10 @@ export const archiveNotes = [
     excerpt:
       'You are not selling features. You are transmitting a state. Everything else is in service of that.',
     action: 'Read Note',
+    thread: 'Atmosphere',
   },
   {
+    id: 'designing-for-memory',
     category: 'Notes',
     readTime: '7 min read',
     title: 'Designing for memory.',
@@ -56,12 +63,9 @@ export const archiveNotes = [
     excerpt:
       'Memory is not about what people see. It’s about what they feel, what lingers, and what repeats.',
     action: 'Read Note',
+    thread: 'Memory',
   },
-];
-
-export const archiveIndexMeta = {
-  count: '272 Entries',
-};
+] as const;
 
 export const archiveIndex = [
   {
@@ -71,6 +75,7 @@ export const archiveIndex = [
     readTime: '8 min read',
     date: 'May 12, 2025',
     icon: 'synthesisStar',
+    href: '/archive/index',
   },
   {
     title: 'The invisible architecture of a world.',
@@ -79,6 +84,7 @@ export const archiveIndex = [
     readTime: '10 min read',
     date: 'May 9, 2025',
     icon: 'axiomRing',
+    href: '/archive/index',
   },
   {
     title: 'Process is poetry in motion.',
@@ -87,6 +93,7 @@ export const archiveIndex = [
     readTime: '6 min read',
     date: 'May 6, 2025',
     icon: 'innerTide',
+    href: '/archive/notes',
   },
   {
     title: 'Case fragment: Obsidian.',
@@ -95,6 +102,7 @@ export const archiveIndex = [
     readTime: '4 min read',
     date: 'May 3, 2025',
     icon: 'vectorLattice',
+    href: '/archive/index',
   },
   {
     title: 'Systems thinking for creative clarity.',
@@ -103,6 +111,7 @@ export const archiveIndex = [
     readTime: '9 min read',
     date: 'Apr 28, 2025',
     icon: 'signalBridge',
+    href: '/archive/index',
   },
   {
     title: 'Light, contrast, and emotional pacing.',
@@ -111,6 +120,7 @@ export const archiveIndex = [
     readTime: '7 min read',
     date: 'Apr 24, 2025',
     icon: 'haloGate',
+    href: '/archive/index',
   },
 ] as const;
 
@@ -130,5 +140,7 @@ export const archiveCta = {
 
 export type ArchiveFilter = (typeof archiveFilters)[number];
 export type ArchiveSort = (typeof archiveSortOptions)[number];
+export type ArchiveIndexSort = (typeof archiveIndexSortOptions)[number];
 
 export type ArchiveIndexIcon = (typeof archiveIndex)[number]['icon'];
+export type ArchiveIndexEntry = (typeof archiveIndex)[number];
