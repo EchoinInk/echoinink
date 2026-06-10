@@ -1,283 +1,472 @@
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
-import { Container } from "@/components/layout/Container";
+import worldsHeroDesktop from "@/assets/imagery/hero/worlds-hero-desktop.webp";
+import worldsHeroMobile from "@/assets/imagery/hero/worlds-hero-mobile.webp";
+import worldsImageDesktop from "@/assets/imagery/sections/worlds-image-1-desktop.webp";
+import { ContentFrame } from "@/components/layout/ContentFrame";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
+import { CTASection } from "@/components/sections/CTASection";
+import { EchoHero } from "@/components/sections/EchoHero";
 import { Button } from "@/components/ui/Button";
+import { EchoCard } from "@/components/ui/EchoCard";
+import { IconWell } from "@/components/ui/IconWell";
+import { OrbitalVisual, type OrbitalVariant } from "@/components/ui/OrbitalVisual";
+import { SectionLabel } from "@/components/ui/SectionLabel";
 import {
-  OrbitalVisual,
-  type OrbitalVariant,
-} from "@/components/ui/OrbitalVisual";
+  worldsClosing,
+  worldsDeliverables,
+  worldsHero,
+  worldsIntro,
+  worldsLayers,
+  worldsPricing,
+  worldsProcess,
+  worldsUseCases
+} from "@/data/worldsContent";
 import {
   blurEmergence,
   driftUp,
   fadeSoft,
   staggerContainer,
   STAGGER,
-  VIEWPORT,
+  VIEWPORT
 } from "@/lib/motion-cinematic";
 
-import worldsHeroDesktop from "@/assets/imagery/hero/worlds-hero-desktop.webp";
-import worldsHeroMobile from "@/assets/imagery/hero/worlds-hero-mobile.webp";
-import worldsImageDesktop from "@/assets/imagery/sections/worlds-image-1-desktop.webp";
-import worldsImageMobile from "@/assets/imagery/sections/worlds-image-1-mobile.webp";
+const worldMeaning = [
+  {
+    title: "Atmosphere",
+    description: "The emotional field people enter before they understand the details."
+  },
+  {
+    title: "Narrative",
+    description: "The deeper story, tension, and philosophy that give the work meaning."
+  },
+  {
+    title: "Identity",
+    description: "A distinct visual and verbal character that belongs to this work alone."
+  },
+  {
+    title: "Tone",
+    description: "The rhythm, language, imagery, and behaviour that make expression feel coherent."
+  },
+  {
+    title: "System",
+    description: "Principles that keep every touchpoint connected as the world grows."
+  },
+  {
+    title: "Expression",
+    description: "A usable direction for digital presence, launches, content, and experience."
+  }
+];
 
-import {
-  worldsArchitecture,
-  worldsClosing,
-  worldsFitSignals,
-  worldsHero,
-  worldsIntro,
-  worldsJourneyLinks,
-  worldsPricing,
-  worldsSignalCards,
-} from "@/data/worldsContent";
+const needStates = [
+  {
+    title: "Launching a brand",
+    description: "Create a distinct emotional position before the identity reaches the world."
+  },
+  {
+    title: "Repositioning a product",
+    description: "Give an existing offer a clearer narrative, atmosphere, and reason to matter."
+  },
+  {
+    title: "Building an artist universe",
+    description: "Connect the work, voice, imagery, releases, and audience experience around one centre."
+  },
+  {
+    title: "Creating a cultural platform",
+    description: "Build a coherent world that can hold many voices, formats, and future expressions."
+  },
+  {
+    title: "Unifying scattered ideas",
+    description: "Turn strong but disconnected references into a direction people can understand and use."
+  }
+];
 
-type IconItem = {
-  icon: string;
-};
+const worldTypes: Array<{
+  title: string;
+  description: string;
+  outcome: string;
+  icon: OrbitalVariant;
+}> = [
+  {
+    title: "Brand World",
+    description:
+      "For founder-led brands and studios that need more than a visual identity: a recognisable point of view with emotional depth.",
+    outcome: "A coherent identity, voice, digital atmosphere, and launch direction.",
+    icon: "axiomRing"
+  },
+  {
+    title: "Product World",
+    description:
+      "For products whose value depends on how the experience feels, behaves, and becomes part of someone’s life.",
+    outcome: "A product narrative, experience principles, interface atmosphere, and expression system.",
+    icon: "focusDial"
+  },
+  {
+    title: "Artist World",
+    description:
+      "For artists, writers, musicians, and makers building a public universe around a body of work.",
+    outcome: "A narrative centre, visual language, release atmosphere, and continuity across eras.",
+    icon: "threadBeacon"
+  },
+  {
+    title: "Cultural World",
+    description:
+      "For platforms, movements, and creative ecosystems designed to hold participation and evolve over time.",
+    outcome: "A shared mythology, cultural codes, participation logic, and expansion framework.",
+    icon: "chorusCore"
+  }
+];
 
-type SignalCard = IconItem & {
-  eyebrow: string;
-  items: string[];
-};
+const process = [
+  {
+    title: "Signal",
+    description: "Find the emotional truth, tension, and ambition already alive in the work."
+  },
+  {
+    title: "Architecture",
+    description: "Define the narrative centre and organise the world around a clear internal logic."
+  },
+  {
+    title: "Atmosphere",
+    description: "Shape the visual, verbal, sensory, and behavioural qualities people will feel."
+  },
+  {
+    title: "System",
+    description: "Translate the direction into principles that remain coherent across touchpoints."
+  },
+  {
+    title: "Expression",
+    description: "Apply the world to the site, product, launch, content, or next creative phase."
+  }
+];
 
-type ArchitectureItem = IconItem & {
-  label: string;
-};
+function scrollToDefinition() {
+  const definition = document.getElementById("worldbuilding-definition");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-type FitSignal = IconItem & {
-  text: string;
-};
-
-function SectionLabel({ children }: { children: string }) {
-  return (
-    <div className="ei-section-label-row">
-      <span className="ei-section-label">{children}</span>
-      <span className="ei-section-label-line" />
-    </div>
-  );
-}
-
-function asOrbitalVariant(icon: string) {
-  return icon as OrbitalVariant;
-}
-
-function SignalCard({ eyebrow, icon, items }: SignalCard) {
-  return (
-    <motion.article variants={driftUp} className="ei-card ei-worlds-signal-card">
-      <OrbitalVisual
-        variant={asOrbitalVariant(icon)}
-        size={46}
-        className="ei-worlds-signal-icon"
-      />
-
-      <h2 className="ei-type-studio-label">{eyebrow}</h2>
-
-      <ul className="ei-worlds-list">
-        {items.map((item) => (
-          <li key={item}>{item}</li>
-        ))}
-      </ul>
-    </motion.article>
-  );
-}
-
-function ArchitectureItem({ label, icon }: ArchitectureItem) {
-  return (
-    <motion.li variants={fadeSoft} className="ei-worlds-architecture-item">
-      <OrbitalVisual
-        variant={asOrbitalVariant(icon)}
-        size={54}
-        className="ei-worlds-architecture-icon"
-      />
-      <span>{label}</span>
-    </motion.li>
-  );
-}
-
-function FitSignal({ icon, text }: FitSignal) {
-  return (
-    <motion.li variants={fadeSoft} className="ei-worlds-fit-item">
-      <OrbitalVisual
-        variant={asOrbitalVariant(icon)}
-        size={56}
-        className="ei-worlds-fit-icon"
-      />
-      <span>{text}</span>
-    </motion.li>
-  );
+  definition?.scrollIntoView({
+    behavior: prefersReducedMotion ? "auto" : "smooth",
+    block: "start"
+  });
 }
 
 export function WorldsPage() {
   return (
-    <PageShell atmosphere="worlds" withTopSpacing={false}>
+    <PageShell atmosphere="worlds" withTopSpacing={false} className="ei-worlds-page">
       <Helmet>
         <title>World Architecture — Echo in Ink</title>
         <meta
           name="description"
-          content="Creative universe building for founders, artists, and projects that need emotional architecture, narrative direction, and atmospheric digital presence."
+          content="Premium worldbuilding for brands, products, artists, and cultural projects that need narrative architecture, atmosphere, identity, and a coherent digital presence."
         />
       </Helmet>
 
-      <motion.section
-        variants={staggerContainer(STAGGER.cinematic, 0)}
-        initial="hidden"
-        whileInView="visible"
-        viewport={VIEWPORT.loose}
+      <EchoHero
+        variant="offer"
+        eyebrow="World Architecture"
+        index="01"
+        title={
+          <>
+            Build the <em>world</em> your work belongs to.
+          </>
+        }
+        description={worldsHero.description}
+        kicker={worldsIntro.atmosphere}
+        backgroundImage={worldsHeroDesktop}
+        mobileBackgroundImage={worldsHeroMobile}
+        imageAlt=""
+        headingId="worlds-hero-heading"
         className="ei-worlds-hero"
-        aria-labelledby="worlds-hero-heading"
+        contentClassName="ei-worlds-hero-content"
+        actions={
+          <>
+            <Button to={worldsHero.primaryCta.href} variant="primary">
+              Enquire about your world
+            </Button>
+            <Button to="#worldbuilding-definition" variant="tertiary" onClick={scrollToDefinition}>
+              See what worldbuilding means <span aria-hidden="true">→</span>
+            </Button>
+          </>
+        }
+      />
+
+      <Section
+        id="worldbuilding-definition"
+        spacing="none"
+        className="ei-worlds-section ei-worlds-definition"
       >
-        <picture className="ei-worlds-hero-image" aria-hidden="true">
-          <source media="(min-width: 768px)" srcSet={worldsHeroDesktop} />
-          <img src={worldsHeroMobile} alt="" />
-        </picture>
-
-        <div className="ei-worlds-hero-overlay" aria-hidden="true" />
-        <div className="ei-worlds-hero-vignette" aria-hidden="true" />
-
-        <Container size="xl" className="relative z-10">
-          <motion.div variants={driftUp} className="ei-worlds-hero-copy">
-            <SectionLabel>/ Worlds</SectionLabel>
-
-            <motion.h1
-              id="worlds-hero-heading"
-              variants={blurEmergence}
-              className="ei-type-studio-hero"
-            >
-              Build the{" "}
-              <em className="ei-type-studio-hero-emphasis">world</em> your work
-              belongs to.
-            </motion.h1>
-
-            <motion.div
-              variants={fadeSoft}
-              className="ei-worlds-hero-description"
-            >
-              <p className="ei-type-studio-body">{worldsIntro.atmosphere}</p>
-              <p className="ei-type-studio-body">{worldsHero.description}</p>
-            </motion.div>
-
-            <motion.div variants={fadeSoft} className="ei-worlds-hero-actions">
-              <Button to={worldsHero.primaryCta.href} variant="primary">
-                {worldsHero.primaryCta.label}
-              </Button>
-              <a href={worldsHero.secondaryCta.href} className="ei-link">
-                {worldsHero.secondaryCta.label} →
-              </a>
-            </motion.div>
-          </motion.div>
-        </Container>
-      </motion.section>
-
-      <Section spacing="none" className="ei-worlds-main">
-        <Container size="xl" className="relative z-10">
+        <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-worlds-stack"
           >
-            <div className="ei-worlds-signal-grid">
-              {worldsSignalCards.map((card) => (
-                <SignalCard key={card.eyebrow} {...card} />
+            <motion.div variants={fadeSoft}>
+              <EchoCard variant="offer" padding="none" className="ei-worlds-definition-panel">
+                <div className="ei-worlds-definition-copy">
+                  <SectionLabel label="What worldbuilding means" index="02" />
+                  <motion.h2 variants={blurEmergence}>
+                    A creative service for shaping the whole environment around an idea.
+                  </motion.h2>
+                  <p>{worldsIntro.body}</p>
+                  <p>
+                    Worldbuilding aligns what the work means with how it looks, speaks, moves, and
+                    meets people. The result is not a collection of assets. It is a direction your
+                    team can use.
+                  </p>
+                </div>
+
+                <div className="ei-worlds-definition-visual" aria-hidden="true">
+                  <OrbitalVisual variant="vectorLattice" size={172} />
+                  <span>Meaning</span>
+                  <span>Memory</span>
+                  <span>Presence</span>
+                </div>
+
+                <dl className="ei-worlds-meaning-grid">
+                  {worldMeaning.map((item) => (
+                    <div key={item.title}>
+                      <dt>{item.title}</dt>
+                      <dd>{item.description}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </EchoCard>
+            </motion.div>
+          </motion.div>
+        </ContentFrame>
+      </Section>
+
+      <Section spacing="none" className="ei-worlds-section ei-worlds-needs">
+        <ContentFrame width="standard" gutters>
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+          >
+            <motion.div variants={driftUp} className="ei-worlds-section-heading">
+              <SectionLabel label="When you need it" index="03" />
+              <div>
+                <h2>When the idea is strong, but the world around it is not yet coherent.</h2>
+                <p>
+                  World Architecture is for meaningful work that needs a clearer centre and a
+                  practical way to express it.
+                </p>
+              </div>
+            </motion.div>
+
+            <ol className="ei-worlds-need-list">
+              {needStates.map((item, index) => (
+                <motion.li key={item.title} variants={driftUp}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </motion.li>
               ))}
+            </ol>
+
+            <motion.p variants={fadeSoft} className="ei-worlds-needs-note">
+              Also suited to: {worldsUseCases.slice(0, 4).join(" · ")}.
+            </motion.p>
+          </motion.div>
+        </ContentFrame>
+      </Section>
+
+      <Section
+        id="layers"
+        spacing="none"
+        className="ei-worlds-section ei-worlds-architecture"
+      >
+        <ContentFrame width="standard" gutters>
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+          >
+            <motion.div variants={driftUp} className="ei-worlds-section-heading">
+              <SectionLabel label="What a world includes" index="04" />
+              <div>
+                <h2>{worldsLayers.heading}</h2>
+                <p>
+                  Each layer makes the offer tangible: a set of decisions, principles, and
+                  directions that can guide real creative work.
+                </p>
+              </div>
+            </motion.div>
+
+            <div className="ei-worlds-layer-layout">
+              <div className="ei-worlds-layer-grid">
+                {worldsLayers.items.map((layer, index) => (
+                  <motion.div key={layer.title} variants={driftUp}>
+                    <EchoCard
+                      variant={index === 1 || index === 4 ? "feature" : "static"}
+                      padding="lg"
+                      className="ei-worlds-layer-card"
+                    >
+                      <span>{layer.number}</span>
+                      <h3>{layer.title}</h3>
+                      <p>{layer.description}</p>
+                    </EchoCard>
+                  </motion.div>
+                ))}
+              </div>
+
+              <motion.div variants={fadeSoft}>
+                <EchoCard variant="proof" padding="lg" className="ei-worlds-output-panel">
+                  <SectionLabel label="Possible outputs" rule="none" />
+                  <h3>{worldsDeliverables.heading}</h3>
+                  <ul>
+                    {worldsDeliverables.items.slice(0, 10).map((item) => (
+                      <li key={item}>
+                        <span aria-hidden="true">+</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <p>{worldsDeliverables.note}</p>
+                </EchoCard>
+              </motion.div>
             </div>
 
-            <motion.article
-              variants={fadeSoft}
-              id="layers"
-              className="ei-card ei-worlds-architecture-panel"
-            >
-              <SectionLabel>World Architecture</SectionLabel>
-              <ul className="ei-worlds-architecture-row">
-                {worldsArchitecture.map((item) => (
-                  <ArchitectureItem key={item.label} {...item} />
-                ))}
-              </ul>
-            </motion.article>
-
-            <motion.article
-              variants={fadeSoft}
-              className="ei-card ei-worlds-investment-panel"
-            >
-              <div className="ei-worlds-investment-copy">
-                <SectionLabel>Investment</SectionLabel>
-                <h2 className="ei-type-section">{worldsPricing.heading}</h2>
-                <div className="ei-worlds-investment-intro">
-                  {worldsPricing.intro.map((paragraph) => (
-                    <p key={paragraph} className="ei-type-body">
-                      {paragraph}
-                    </p>
+            <motion.div variants={fadeSoft}>
+              <EchoCard variant="offer" padding="lg" className="ei-worlds-investment">
+                <div>
+                  <SectionLabel label="Selective collaboration" rule="none" />
+                  <h3>{worldsPricing.heading}</h3>
+                  <p>{worldsPricing.intro[0]}</p>
+                </div>
+                <dl>
+                  {worldsPricing.tiers.map((tier) => (
+                    <div key={tier.name}>
+                      <dt>{tier.name}</dt>
+                      <dd>{tier.price}</dd>
+                      <p>{tier.description}</p>
+                    </div>
                   ))}
-                </div>
-                <Button to="/contact" variant="primary">
-                  Begin a collaboration
-                </Button>
-              </div>
-
-              <div className="ei-worlds-investment-orbit" aria-hidden="true">
-                <OrbitalVisual variant="axiomRing" size={220} />
-              </div>
-
-              <div className="ei-worlds-tier-list">
-                {worldsPricing.tiers.map((tier) => (
-                  <div key={tier.name} className="ei-worlds-tier">
-                    <span className="ei-type-studio-label">{tier.name}</span>
-                    <strong>{tier.price}</strong>
-                    <p>{tier.description}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.article>
-
-            <motion.article variants={fadeSoft} className="ei-card ei-worlds-fit-panel">
-              <div className="ei-worlds-fit-heading">
-                <span className="ei-type-studio-label">This is for you if...</span>
-              </div>
-              <ul className="ei-worlds-fit-row">
-                {worldsFitSignals.map((item) => (
-                  <FitSignal key={item.text} {...item} />
-                ))}
-              </ul>
-            </motion.article>
-
-            <motion.article variants={fadeSoft} className="ei-card ei-worlds-journey">
-              <picture className="ei-worlds-journey-image" aria-hidden="true">
-                <source media="(min-width: 768px)" srcSet={worldsImageDesktop} />
-                <img src={worldsImageMobile} alt="" loading="lazy" />
-              </picture>
-              <div className="ei-worlds-journey-overlay" aria-hidden="true" />
-
-              <div className="ei-worlds-journey-content">
-                <SectionLabel>Continue your journey</SectionLabel>
-                <h2 className="ei-type-section">
-                  Some projects are not brands. They are{" "}
-                  <em className="ei-type-studio-hero-emphasis">worlds</em>.
-                </h2>
-                <p className="ei-type-body">{worldsClosing.heading}</p>
-
-                <div className="ei-worlds-journey-actions">
-                  {worldsJourneyLinks.map((link) =>
-                    link.variant === "primary" ? (
-                      <Button key={link.href} to={link.href} variant="primary">
-                        {link.label}
-                      </Button>
-                    ) : (
-                      <Link key={link.href} to={link.href} className="ei-link">
-                        {link.label} →
-                      </Link>
-                    ),
-                  )}
-                </div>
-              </div>
-            </motion.article>
+                </dl>
+              </EchoCard>
+            </motion.div>
           </motion.div>
-        </Container>
+        </ContentFrame>
       </Section>
+
+      <Section spacing="none" className="ei-worlds-section ei-worlds-types">
+        <ContentFrame width="standard" gutters>
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+          >
+            <motion.div variants={driftUp} className="ei-worlds-section-heading">
+              <SectionLabel label="World types" index="05" />
+              <div>
+                <h2>Different forms. The same need for coherence.</h2>
+                <p>
+                  The engagement is shaped around what you are building, who needs to enter it, and
+                  where the world must become visible.
+                </p>
+              </div>
+            </motion.div>
+
+            <div className="ei-worlds-type-grid">
+              {worldTypes.map((world, index) => (
+                <motion.div key={world.title} variants={driftUp}>
+                  <EchoCard
+                    variant={index === 0 ? "feature" : "static"}
+                    padding="lg"
+                    className="ei-worlds-type-card"
+                  >
+                    <div className="ei-worlds-type-topline">
+                      <IconWell
+                        size="lg"
+                        tone={index === 3 ? "magenta" : "violet"}
+                        orbital
+                        glow
+                      >
+                        <OrbitalVisual variant={world.icon} size={54} />
+                      </IconWell>
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                    </div>
+                    <h3>{world.title}</h3>
+                    <p>{world.description}</p>
+                    <div>
+                      <span>Practical outcome</span>
+                      <p>{world.outcome}</p>
+                    </div>
+                  </EchoCard>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </ContentFrame>
+      </Section>
+
+      <Section spacing="none" className="ei-worlds-section ei-worlds-process">
+        <ContentFrame width="standard" gutters>
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+          >
+            <motion.div variants={driftUp} className="ei-worlds-section-heading">
+              <SectionLabel label="The process" index="06" />
+              <div>
+                <h2>{worldsProcess.heading}</h2>
+                <p>
+                  The work moves from discovery to application without rushing the decisions that
+                  give the world its integrity.
+                </p>
+              </div>
+            </motion.div>
+
+            <ol className="ei-worlds-process-list">
+              {process.map((step, index) => (
+                <motion.li key={step.title} variants={driftUp}>
+                  <span className="ei-worlds-process-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="ei-worlds-process-node" aria-hidden="true" />
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </motion.li>
+              ))}
+            </ol>
+          </motion.div>
+        </ContentFrame>
+      </Section>
+
+      <CTASection
+        variant="imagePanel"
+        eyebrow="Begin a world"
+        heading={
+          <>
+            Some projects are not brands. They are <em>worlds.</em>
+          </>
+        }
+        body={worldsClosing.heading}
+        image={worldsImageDesktop}
+        imageAlt=""
+        className="ei-worlds-closing"
+        headingId="worlds-closing-heading"
+        actions={
+          <Button to={worldsClosing.cta.href} variant="primary">
+            Enquire about World Architecture
+          </Button>
+        }
+        secondary={
+          <p>
+            For founders, artists, studios, and cultural projects ready to build with depth and
+            continuity.
+          </p>
+        }
+      />
     </PageShell>
   );
 }
