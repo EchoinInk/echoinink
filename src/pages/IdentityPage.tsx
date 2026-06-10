@@ -1,16 +1,20 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
-import { DeliverableCard } from "@/components/cards/DeliverableCard";
-import { Container } from "@/components/layout/Container";
-import { PageShell } from "@/components/layout/PageShell";
-import { Section } from "@/components/layout/Section";
-import { ProcessSteps } from "@/components/sections/ProcessSteps";
-import { UseCasesList } from "@/components/sections/UseCasesList";
-import { Button } from "@/components/ui/Button";
 import identityHeroDesktop from "@/assets/imagery/hero/identity-hero-desktop.webp";
 import identityHeroMobile from "@/assets/imagery/hero/identity-hero-mobile.webp";
+import { ContentFrame } from "@/components/layout/ContentFrame";
+import { PageShell } from "@/components/layout/PageShell";
+import { Section } from "@/components/layout/Section";
+import { CTASection } from "@/components/sections/CTASection";
+import { EchoHero } from "@/components/sections/EchoHero";
+import { Button } from "@/components/ui/Button";
+import { EchoCard } from "@/components/ui/EchoCard";
+import { IconWell } from "@/components/ui/IconWell";
+import { OrbitalVisual } from "@/components/ui/OrbitalVisual";
+import { SectionLabel } from "@/components/ui/SectionLabel";
 import {
+  identityApplications,
   identityAudience,
   identityClosing,
   identityDeliverables,
@@ -18,7 +22,7 @@ import {
   identityPricing,
   identityProcess,
   identityTransformation,
-  identityUseCases,
+  identityUseCases
 } from "@/data/identityContent";
 import {
   blurEmergence,
@@ -26,27 +30,42 @@ import {
   fadeSoft,
   staggerContainer,
   STAGGER,
-  VIEWPORT,
+  VIEWPORT
 } from "@/lib/motion-cinematic";
 
-function IdentityHeroTitle() {
+function scrollToProcess() {
+  const processSection = document.getElementById("identity-process");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  processSection?.scrollIntoView({
+    behavior: prefersReducedMotion ? "auto" : "smooth",
+    block: "start"
+  });
+}
+
+function IdentityHeroSignal() {
   return (
-    <>
-      Every world{" "}
-      <br />
-      begins with a{" "}
-      <em className="ei-type-studio-hero-emphasis">{identityHero.italicWord}</em>.
-    </>
+    <div className="ei-identity-hero-signal" aria-hidden="true">
+      <span className="ei-identity-hero-ring ei-identity-hero-ring-outer" />
+      <span className="ei-identity-hero-ring ei-identity-hero-ring-inner" />
+      <span className="ei-identity-hero-core">
+        <OrbitalVisual variant="innerTide" size={96} />
+      </span>
+      {identityHero.atmosphereRail.map((item, index) => (
+        <span
+          key={item}
+          className={`ei-identity-hero-signal-label ei-identity-hero-signal-label-${index + 1}`}
+        >
+          {item}
+        </span>
+      ))}
+    </div>
   );
 }
 
 export function IdentityPage() {
   return (
-    <PageShell
-      atmosphere="identity"
-      withTopSpacing={false}
-      className="ei-identity-page"
-    >
+    <PageShell atmosphere="identity" withTopSpacing={false} className="ei-identity-page">
       <Helmet>
         <title>Atmospheric Identity Direction — Echo in Ink</title>
         <meta
@@ -55,272 +74,304 @@ export function IdentityPage() {
         />
       </Helmet>
 
-      <motion.section
-        variants={staggerContainer(STAGGER.cinematic, 0)}
-        initial="hidden"
-        whileInView="visible"
-        viewport={VIEWPORT.loose}
-        className="ei-identity-hero"
-        aria-labelledby="identity-hero-heading"
-      >
-        <Container size="xl" className="relative z-10">
-          <div className="ei-identity-hero-grid">
-            <motion.div variants={driftUp} className="ei-identity-hero-copy">
-              <p className="ei-type-studio-label">{identityHero.eyebrow}</p>
-
-              <h1
-                id="identity-hero-heading"
-                className="ei-type-studio-hero ei-identity-hero-title"
-              >
-                <IdentityHeroTitle />
-              </h1>
-
-              <p className="ei-type-studio-label ei-identity-hero-subheading">
-                {identityHero.subheading}
-              </p>
-
-              <div className="ei-identity-hero-body">
-                {identityHero.body.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
-                ))}
-              </div>
-
-              <motion.div variants={fadeSoft} className="ei-identity-hero-actions">
-                <Button to={identityHero.primaryCta.href} variant="primary">
-                  {identityHero.primaryCta.label}
-                  <span aria-hidden="true">→</span>
-                </Button>
-                <Button
-                  to={identityHero.secondaryCta.href}
-                  variant="tertiary"
-                  className="ei-identity-secondary-link"
-                >
-                  {identityHero.secondaryCta.label}
-                  <span aria-hidden="true">→</span>
-                </Button>
-              </motion.div>
-            </motion.div>
-
-            <motion.div variants={fadeSoft} className="ei-identity-hero-stage">
-              <picture className="ei-identity-hero-picture">
-                <source media="(min-width: 768px)" srcSet={identityHeroDesktop} />
-                <img
-                  src={identityHeroMobile}
-                  alt="Atmospheric moonlit world in violet and blue light."
-                  className="ei-identity-hero-image"
-                />
-              </picture>
-              <div className="ei-identity-hero-gridlines" aria-hidden="true" />
-              <div className="ei-identity-hero-orbit" aria-hidden="true" />
-              <div className="ei-identity-hero-veil" aria-hidden="true" />
-            </motion.div>
-
-            <motion.ul
-              variants={fadeSoft}
-              className="ei-identity-hero-rail"
-              aria-label="Identity atmosphere includes"
+      <EchoHero
+        variant="offer"
+        eyebrow={identityHero.eyebrow}
+        index="01"
+        title={
+          <>
+            Every world begins with a <em>feeling.</em>
+          </>
+        }
+        kicker={identityHero.subheading}
+        description={
+          <>
+            {identityHero.body.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </>
+        }
+        actions={
+          <>
+            <Button to={identityHero.primaryCta.href} variant="primary">
+              {identityHero.primaryCta.label}
+            </Button>
+            <Button
+              to={identityHero.secondaryCta.href}
+              variant="tertiary"
+              onClick={scrollToProcess}
             >
-              {identityHero.atmosphereRail.map((item) => (
-                <li key={item}>
-                  <span aria-hidden="true" />
-                  {item}
-                </li>
-              ))}
-            </motion.ul>
-          </div>
-        </Container>
-      </motion.section>
+              {identityHero.secondaryCta.label} <span aria-hidden="true">→</span>
+            </Button>
+          </>
+        }
+        backgroundImage={identityHeroDesktop}
+        mobileBackgroundImage={identityHeroMobile}
+        imageAlt=""
+        media={<IdentityHeroSignal />}
+        headingId="identity-hero-heading"
+        className="ei-identity-hero"
+        contentClassName="ei-identity-hero-content"
+      />
 
-      <Section spacing="none" className="ei-identity-section ei-identity-intro-section">
-        <Container size="xl" className="relative z-10">
+      <Section spacing="none" className="ei-identity-section ei-identity-orientation">
+        <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-identity-intro-grid"
+            className="ei-identity-orientation-grid"
           >
-            <motion.div variants={driftUp} className="ei-identity-audience">
-              <h2 className="ei-type-studio-philosophy">
-                For the creator who can{" "}
-                <em className="ei-type-studio-philosophy-emphasis">feel</em>
-                <br />
-                the world, but cannot yet
-                <br />
-                see it{" "}
-                <em className="ei-type-studio-philosophy-emphasis">clearly</em>.
+            <motion.div variants={driftUp} className="ei-identity-orientation-copy">
+              <SectionLabel label="Who it is for" index="02" />
+              <h2>
+                For the creator who can <em>feel</em> the world, but cannot yet see it clearly.
               </h2>
-
-              <div className="ei-identity-star-rule" aria-hidden="true" />
-
-              <div className="ei-identity-audience-copy">
+              <div>
                 {identityAudience.intro.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
             </motion.div>
 
-            <motion.div variants={fadeSoft} className="ei-identity-use-cases">
-              <p className="ei-type-studio-label">Use cases</p>
-              <UseCasesList items={identityUseCases} variant="marked" />
+            <motion.div variants={fadeSoft}>
+              <EchoCard variant="index" padding="lg" className="ei-identity-use-cases">
+                <p className="ei-identity-overline">This may be the right moment if</p>
+                <ul>
+                  {identityUseCases.map((item) => (
+                    <li key={item}>
+                      <span aria-hidden="true">+</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </EchoCard>
             </motion.div>
           </motion.div>
-        </Container>
+        </ContentFrame>
       </Section>
 
-      <Section spacing="none" className="ei-identity-section">
-        <Container size="xl" className="relative z-10">
+      <Section spacing="none" className="ei-identity-section ei-identity-kit">
+        <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-identity-deliverables-panel"
           >
-            <motion.p variants={fadeSoft} className="ei-type-studio-label">
-              {identityDeliverables.heading}
-            </motion.p>
+            <motion.div variants={driftUp} className="ei-identity-section-heading">
+              <SectionLabel label="Inside the Identity Kit" index="03" />
+              <div>
+                <h2>{identityDeliverables.heading}</h2>
+                <p>
+                  A focused set of connected decisions, grouped around the six parts that make an
+                  identity feel whole.
+                </p>
+              </div>
+            </motion.div>
 
-            <div className="ei-identity-deliverables-grid">
+            <div className="ei-identity-kit-grid">
               {identityDeliverables.items.map((item, index) => (
-                <DeliverableCard key={item.title} {...item} index={index} />
+                <motion.div key={item.title} variants={driftUp}>
+                  <EchoCard
+                    variant={index === 0 || index === 3 ? "feature" : "static"}
+                    padding="lg"
+                    className="ei-identity-kit-card"
+                  >
+                    <div className="ei-identity-kit-card-heading">
+                      <IconWell
+                        size="md"
+                        tone={index === 4 ? "magenta" : "violet"}
+                        orbital
+                        glow
+                      >
+                        <OrbitalVisual variant={item.icon} size={40} />
+                      </IconWell>
+                      <span>{String(index + 1).padStart(2, "0")}</span>
+                    </div>
+                    <h3>{item.title}</h3>
+                    <p>{item.description}</p>
+                    <ul>
+                      {item.includes.map((include) => (
+                        <li key={include}>{include}</li>
+                      ))}
+                    </ul>
+                  </EchoCard>
+                </motion.div>
               ))}
             </div>
 
-            <motion.p variants={fadeSoft} className="ei-identity-deliverables-closing">
+            <motion.p variants={fadeSoft} className="ei-identity-kit-note">
               {identityDeliverables.closing}
             </motion.p>
           </motion.div>
-        </Container>
+        </ContentFrame>
+      </Section>
+
+      <Section spacing="none" className="ei-identity-section ei-identity-coherence">
+        <ContentFrame width="standard" gutters>
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+          >
+            <motion.div variants={driftUp} className="ei-identity-section-heading">
+              <SectionLabel label="From signal to world" index="04" />
+              <div>
+                <h2>{identityTransformation.heading}</h2>
+                <p>{identityTransformation.intro}</p>
+              </div>
+            </motion.div>
+
+            <motion.div variants={fadeSoft}>
+              <EchoCard variant="offer" padding="none" className="ei-identity-coherence-panel">
+                <div className="ei-identity-signal-cloud">
+                  <p>Scattered signals</p>
+                  {identityTransformation.signals.map((signal) => (
+                    <span key={signal}>{signal}</span>
+                  ))}
+                </div>
+
+                <div className="ei-identity-coherence-core" aria-hidden="true">
+                  <span className="ei-identity-coherence-line" />
+                  <IconWell size="lg" tone="violet" orbital glow>
+                    <OrbitalVisual variant="chorusCore" size={58} />
+                  </IconWell>
+                  <strong>One centre</strong>
+                </div>
+
+                <div className="ei-identity-world-output">
+                  <p>Coherent expression</p>
+                  <strong>{identityTransformation.output}</strong>
+                  <span>{identityTransformation.divider}</span>
+                </div>
+              </EchoCard>
+            </motion.div>
+
+            <div className="ei-identity-application-grid">
+              {identityApplications.map((application, index) => (
+                <motion.div key={application.title} variants={driftUp}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <h3>{application.title}</h3>
+                  <p>{application.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </ContentFrame>
       </Section>
 
       <Section
-        id="process"
+        id="identity-process"
         spacing="none"
-        className="ei-identity-section ei-identity-process-section"
+        className="ei-identity-section ei-identity-process"
       >
-        <Container size="xl" className="relative z-10">
+        <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-identity-process-grid"
           >
-            <motion.h2 variants={blurEmergence} className="ei-type-studio-label">
-              {identityProcess.heading}
-            </motion.h2>
-
-            <motion.div variants={driftUp} className="ei-identity-process-steps">
-              <ProcessSteps
-                steps={identityProcess.steps}
-                closing={identityProcess.closing}
-                layout="horizontal"
-              />
+            <motion.div variants={driftUp} className="ei-identity-section-heading">
+              <SectionLabel label="The process" index="05" />
+              <div>
+                <h2>{identityProcess.heading}</h2>
+                <p>A deliberate progression from instinct to a direction you can use.</p>
+              </div>
             </motion.div>
-          </motion.div>
-        </Container>
-      </Section>
 
-      <Section spacing="none" className="ei-identity-transformation">
-        <Container size="xl" className="relative z-10">
-          <motion.div
-            variants={staggerContainer(STAGGER.loose, 0)}
-            initial="hidden"
-            whileInView="visible"
-            viewport={VIEWPORT.normal}
-            className="ei-identity-transformation-inner"
-          >
-            <motion.p variants={driftUp} className="ei-type-studio-philosophy">
-              {identityTransformation.heading}
-              <br />
-              <em>{identityTransformation.divider}</em>
+            <ol className="ei-identity-process-list">
+              {identityProcess.steps.map((step, index) => (
+                <motion.li key={step.title} variants={driftUp}>
+                  <span className="ei-identity-process-number">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="ei-identity-process-dot" aria-hidden="true" />
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </motion.li>
+              ))}
+            </ol>
+
+            <motion.p variants={fadeSoft} className="ei-identity-process-closing">
+              {identityProcess.closing}
             </motion.p>
           </motion.div>
-        </Container>
+        </ContentFrame>
       </Section>
 
-      <Section spacing="none" className="ei-identity-section ei-identity-pricing-section">
-        <Container size="xl" className="relative z-10">
+      <Section spacing="none" className="ei-identity-section ei-identity-engagement">
+        <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-identity-pricing-grid"
           >
-            <motion.div variants={driftUp} className="ei-identity-pricing-copy">
-              <p className="ei-type-studio-label">{identityPricing.eyebrow}</p>
-              <h2 className="ei-type-studio-philosophy">{identityPricing.heading}</h2>
-              <p>{identityPricing.intro}</p>
+            <motion.div variants={driftUp} className="ei-identity-section-heading">
+              <SectionLabel label={identityPricing.eyebrow} index="06" />
+              <div>
+                <h2>{identityPricing.heading}</h2>
+                <p>{identityPricing.intro}</p>
+              </div>
             </motion.div>
 
-            <motion.div variants={fadeSoft} className="ei-identity-pricing-cards">
-              {identityPricing.tiers.map((tier) => (
-                <article
-                  key={tier.name}
-                  className={`ei-card ei-identity-price-card ${
-                    tier.featured ? "ei-identity-price-card-featured" : ""
-                  }`}
-                >
-                  <p className="ei-type-studio-label">{tier.name}</p>
-                  <p className="ei-identity-price">
-                    {tier.price}
-                    {tier.currency && <span>{tier.currency}</span>}
-                  </p>
-                  <p className="ei-type-small">{tier.summary}</p>
-                  <ul className="ei-identity-price-features">
-                    {tier.features.map((feature) => (
-                      <li key={feature}>{feature}</li>
-                    ))}
-                  </ul>
-                  <Button
-                    to={tier.cta.href}
-                    variant={tier.featured ? "primary" : "secondary"}
-                    className="ei-identity-price-button"
+            <div className="ei-identity-engagement-grid">
+              {identityPricing.tiers.map((tier, index) => (
+                <motion.div key={tier.name} variants={driftUp}>
+                  <EchoCard
+                    variant={tier.featured ? "feature" : "static"}
+                    padding="lg"
+                    className="ei-identity-engagement-card"
                   >
-                    {tier.cta.label}
-                    <span aria-hidden="true">→</span>
-                  </Button>
-                </article>
+                    <div className="ei-identity-engagement-topline">
+                      <p>{tier.name}</p>
+                      <span>{index === 0 ? "Focused" : "Expanded"}</span>
+                    </div>
+                    <p className="ei-identity-price">
+                      {tier.price} <span>{tier.currency}</span>
+                    </p>
+                    <p className="ei-identity-engagement-summary">{tier.summary}</p>
+                    <ul>
+                      {tier.features.map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                    <Button
+                      to={tier.cta.href}
+                      variant={tier.featured ? "primary" : "secondary"}
+                    >
+                      {tier.cta.label} <span aria-hidden="true">→</span>
+                    </Button>
+                  </EchoCard>
+                </motion.div>
               ))}
-            </motion.div>
 
-            <motion.aside variants={driftUp} className="ei-identity-pricing-anchor">
-              <span aria-hidden="true">✦</span>
-              <p>{identityPricing.anchor}</p>
-            </motion.aside>
-          </motion.div>
-        </Container>
-      </Section>
-
-      <Section spacing="none" className="ei-identity-closing-section">
-        <Container size="xl" className="relative z-10">
-          <motion.div
-            variants={staggerContainer(STAGGER.loose, 0)}
-            initial="hidden"
-            whileInView="visible"
-            viewport={VIEWPORT.normal}
-            className="ei-identity-closing-strip"
-          >
-            <div className="ei-identity-closing-mark" aria-hidden="true">
-              E
+              <motion.aside variants={blurEmergence} className="ei-identity-engagement-anchor">
+                <span aria-hidden="true">✦</span>
+                <p>{identityPricing.anchor}</p>
+              </motion.aside>
             </div>
-
-            <motion.div variants={driftUp} className="ei-identity-closing-copy">
-              <h2 className="ei-type-studio-slim-cta">{identityClosing.heading}</h2>
-              <p className="ei-type-studio-body-small">{identityClosing.subline}</p>
-            </motion.div>
-
-            <motion.div variants={fadeSoft} className="ei-identity-closing-action">
-              <Button to={identityClosing.cta.href} variant="primary">
-                {identityClosing.cta.label}
-                <span aria-hidden="true">→</span>
-              </Button>
-            </motion.div>
           </motion.div>
-        </Container>
+        </ContentFrame>
       </Section>
+
+      <CTASection
+        variant="editorialInvitation"
+        eyebrow="Begin with the feeling"
+        heading={identityClosing.heading}
+        body={identityClosing.subline}
+        actions={
+          <Button to={identityClosing.cta.href} variant="primary">
+            {identityClosing.cta.label} <span aria-hidden="true">→</span>
+          </Button>
+        }
+        className="ei-identity-cta"
+        headingId="identity-cta-heading"
+      />
     </PageShell>
   );
 }
