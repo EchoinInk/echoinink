@@ -136,8 +136,8 @@ export function ContactPage() {
 
       <PageSectionHero
         eyebrow="START A CONVERSATION"
-        title="Begin with what you’re trying to make real."
-        description="Tell me what you’re building, what’s changing, or what you can’t quite name yet. I’ll meet you in the middle of it."
+        title="Begin with what you're trying to make real."
+        description="Tell me what you're building, what's changing, or what you can't quite name yet. I'll meet you in the middle of it."
         image={contactHeroDesktop}
         mobileImage={contactHeroMobile}
         imageAlt="Atmospheric violet orbital sphere over a dark reflective horizon"
@@ -183,7 +183,7 @@ export function ContactPage() {
                       </div>
 
                       <h2 className="ei-type-section max-w-[12ch]">
-                        Let’s explore what’s possible.
+                        Let's explore what's possible.
                       </h2>
 
                       <p className="ei-type-studio-body mt-5 max-w-[32ch] text-[var(--ei-color-text-secondary)]">
