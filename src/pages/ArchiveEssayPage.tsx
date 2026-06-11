@@ -86,7 +86,7 @@ export function ArchiveEssayPage() {
               actions={
                 <>
                   <Button to="/archive" variant="primary">Back to Archive</Button>
-                  <Button to="/archive/index" variant="secondary">Open the index</Button>
+                  <Button to="/archive/map" variant="secondary">Open the index</Button>
                 </>
               }
               headingId="essay-cta-heading"

@@ -40,7 +40,7 @@ function AppRoutes() {
           <Route path="/archive" element={<ArchivePage />} />
           <Route path="/archive/atmosphere-is-information" element={<ArchiveEssayPage />} />
           <Route path="/archive/notes" element={<ArchiveNotesPage />} />
-          <Route path="/archive/index" element={<ArchiveIndexPage />} />
+          <Route path="/archive/map" element={<ArchiveIndexPage />} />
         </Routes>
       </Suspense>
     </AnimatePresence>

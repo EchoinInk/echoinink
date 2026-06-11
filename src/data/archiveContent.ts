@@ -75,7 +75,7 @@ export const archiveIndex = [
     readTime: '8 min read',
     date: 'May 12, 2025',
     icon: 'synthesisStar',
-    href: '/archive/index',
+    href: '/archive/map',
   },
   {
     title: 'The invisible architecture of a world.',
@@ -84,7 +84,7 @@ export const archiveIndex = [
     readTime: '10 min read',
     date: 'May 9, 2025',
     icon: 'axiomRing',
-    href: '/archive/index',
+    href: '/archive/map',
   },
   {
     title: 'Process is poetry in motion.',
@@ -102,7 +102,7 @@ export const archiveIndex = [
     readTime: '4 min read',
     date: 'May 3, 2025',
     icon: 'vectorLattice',
-    href: '/archive/index',
+    href: '/archive/map',
   },
   {
     title: 'Systems thinking for creative clarity.',
@@ -111,7 +111,7 @@ export const archiveIndex = [
     readTime: '9 min read',
     date: 'Apr 28, 2025',
     icon: 'signalBridge',
-    href: '/archive/index',
+    href: '/archive/map',
   },
   {
     title: 'Light, contrast, and emotional pacing.',
@@ -120,7 +120,7 @@ export const archiveIndex = [
     readTime: '7 min read',
     date: 'Apr 24, 2025',
     icon: 'haloGate',
-    href: '/archive/index',
+    href: '/archive/map',
   },
 ] as const;
 

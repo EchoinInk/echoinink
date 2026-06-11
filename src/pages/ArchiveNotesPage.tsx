@@ -163,7 +163,7 @@ export function ArchiveNotesPage() {
                 <SectionLabel label="Note index" index="05" />
                 <h2>Notes inside the larger archive.</h2>
               </div>
-              <Button to="/archive/index" variant="tertiary">
+              <Button to="/archive/map" variant="tertiary">
                 View full index <span aria-hidden="true">→</span>
               </Button>
             </motion.div>
@@ -182,7 +182,7 @@ export function ArchiveNotesPage() {
         actions={
           <>
             <Button to="/archive" variant="primary">Enter the Archive</Button>
-            <Button to="/archive/index" variant="secondary">Open the index</Button>
+            <Button to="/archive/map" variant="secondary">Open the index</Button>
           </>
         }
         headingId="notes-cta-heading"

@@ -96,7 +96,7 @@ export function ArchivePage() {
         className="ei-archive-hero"
         contentClassName="ei-archive-hero-content"
         actions={
-          <Button to="/archive/index" variant="tertiary">
+          <Button to="/archive/map" variant="tertiary">
             Enter the index <span aria-hidden="true">→</span>
           </Button>
         }
@@ -272,7 +272,7 @@ export function ArchivePage() {
               <ArchiveIndexList entries={visibleEntries} />
             </motion.div>
             <motion.div variants={fadeSoft} className="ei-archive-index-action">
-              <Button to="/archive/index" variant="secondary">
+              <Button to="/archive/map" variant="secondary">
                 Open the full index <span aria-hidden="true">→</span>
               </Button>
             </motion.div>
@@ -312,7 +312,7 @@ export function ArchivePage() {
         headingId="archive-cta-heading"
         actions={
           <>
-            <Button to="/archive/index" variant="secondary">
+            <Button to="/archive/map" variant="secondary">
               Explore the index <span aria-hidden="true">→</span>
             </Button>
             <Button to={archiveCta.href} variant="tertiary">
