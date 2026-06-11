@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
-import archiveImageDesktop from '@/assets/imagery/hero/archive-hero-desktop.webp';
-import archiveImageMobile from '@/assets/imagery/hero/archive-hero-mobile.webp';
+import archiveImageDesktop from '@/assets/imagery/hero/notes-hero-light-ribbon-desktop.webp';
+import archiveImageMobile from '@/assets/imagery/hero/notes-hero-light-ribbon-mobile.webp';
 import { ArchiveIndexList } from '@/components/archive/ArchiveIndexList';
 import { ContentFrame } from '@/components/layout/ContentFrame';
 import { PageShell } from '@/components/layout/PageShell';

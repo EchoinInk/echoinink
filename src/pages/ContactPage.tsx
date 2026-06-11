@@ -15,8 +15,8 @@ import {
   OrbitalVisual,
   type OrbitalVariant,
 } from "@/components/ui/OrbitalVisual";
-import contactHeroDesktop from "@/assets/imagery/hero/contact-hero-desktop.webp";
-import contactHeroMobile from "@/assets/imagery/hero/contact-hero-mobile.webp";
+import contactHeroDesktop from "@/assets/imagery/hero/contact-hero-planet-dawn-desktop.webp";
+import contactHeroMobile from "@/assets/imagery/hero/contact-hero-planet-dawn-mobile.webp";
 import {
   driftUp,
   fadeSoft,

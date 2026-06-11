@@ -2,9 +2,9 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import systemsHeroDesktop from "@/assets/imagery/hero/systems-hero-desktop.webp";
-import systemsHeroMobile from "@/assets/imagery/hero/systems-hero-mobile.webp";
-import systemsCTAImage from "@/assets/imagery/sections/cta-image-desktop.webp";
+import systemsHeroDesktop from "@/assets/imagery/hero/systems-hero-signal-grid-desktop.webp";
+import systemsHeroMobile from "@/assets/imagery/hero/systems-hero-signal-grid-mobile.webp";
+import systemsCTAImage from "@/assets/imagery/sections/cta-signal-convergence-desktop.webp";
 import { ContentFrame } from "@/components/layout/ContentFrame";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
