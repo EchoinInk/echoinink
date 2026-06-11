@@ -28,6 +28,7 @@ export function WorkFilterBar({
           id="works-sort"
           name="works-sort"
           label="Sort"
+          variant="editorial"
           value={sortBy}
           options={[...workSortOptions]}
           onChange={(event) => onSortChange(event.target.value as WorkSort)}

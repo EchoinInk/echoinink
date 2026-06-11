@@ -11,6 +11,7 @@ interface EchoSelectProps {
   id: string;
   name: string;
   label?: string;
+  variant?: 'form' | 'editorial';
   value: string;
   options: readonly (string | EchoSelectOption)[];
   placeholder?: string;
@@ -31,6 +32,7 @@ export function EchoSelect({
   id,
   name,
   label,
+  variant = 'form',
   value,
   options,
   placeholder = 'Select an option',
@@ -130,6 +132,7 @@ export function EchoSelect({
     <div
       ref={wrapperRef}
       className={cn('ei-select', className)}
+      data-variant={variant}
       data-invalid={error ? 'true' : 'false'}
     >
       {label && (

@@ -208,13 +208,6 @@
     box-shadow: none;
   }
 
-  .ei-archive-sort .ei-select-label {
-    margin-bottom: var(--ei-space-2);
-    font-size: 0.625rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-
   .ei-archive-notes {
     display: grid;
     grid-template-columns: 1fr;

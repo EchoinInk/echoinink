@@ -207,6 +207,7 @@ export function ArchiveIndexPage() {
                     id="archive-index-sort"
                     name="archive-index-sort"
                     label="Order"
+                    variant="editorial"
                     value={sortBy}
                     options={[...archiveIndexSortOptions]}
                     onChange={(event) => setSortBy(event.target.value as ArchiveIndexSort)}

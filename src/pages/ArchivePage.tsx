@@ -176,6 +176,7 @@ export function ArchivePage() {
                     id="archive-sort"
                     name="archive-sort"
                     label="Order"
+                    variant="editorial"
                     value={sortBy}
                     options={[...archiveSortOptions]}
                     onChange={(event) =>
