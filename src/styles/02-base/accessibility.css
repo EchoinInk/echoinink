@@ -246,7 +246,7 @@
     left: 1rem;
     z-index: 9999;
     padding: 0.75rem 1.25rem;
-    background: var(--ei-void-black);
+    background: var(--ei-void);
     color: var(--ei-ice-white);
     border: 1px solid rgb(var(--ei-halo-blue-rgb) / 0.72);
     border-radius: 6px;
