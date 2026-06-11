@@ -65,8 +65,9 @@ export default {
         },
         // Echo in Ink: EI Aurora Luxe (refer to CSS variables in tokens.css)
         ei: {
-          void: 'var(--ei-void-black)',
+          void: 'var(--ei-void)',
           ink: 'var(--ei-ink)',
+          midnight: 'var(--ei-midnight)',
           electricblue: 'var(--ei-electric-blue)',
           haloblue: 'var(--ei-halo-blue)',
           magenta: 'var(--ei-echo-magenta)',
@@ -81,36 +82,36 @@ export default {
           'text-soft': 'rgb(var(--ei-moonlit-rgb) / 0.85)',
           'text-accent': 'var(--ei-halo-blue)',
           'text-accent-secondary': 'var(--ei-echo-magenta)',
-          'surface-deep': 'var(--ei-void-black)',
-          'surface-panel': 'rgb(var(--ei-deep-indigo-rgb) / 0.35)',
-          'surface-card': 'rgb(var(--ei-deep-indigo-rgb) / 0.25)',
-          'surface-elevated': 'rgb(var(--ei-aurora-blue-rgb) / 0.15)',
+          'surface-deep': 'var(--ei-void)',
+          'surface-panel': 'rgb(var(--ei-midnight-rgb) / 0.35)',
+          'surface-card': 'rgb(var(--ei-midnight-rgb) / 0.25)',
+          'surface-elevated': 'rgb(var(--ei-electric-blue-rgb) / 0.15)',
         },
       },
       bboxShadow: {
-  'ei-aurora': '0 0 32px rgb(var(--ei-aurora-blue-rgb) / 0.22)',
-  'ei-cyan': '0 0 28px rgb(var(--ei-electric-cyan-rgb) / 0.2)',
-  'ei-orchid': '0 0 30px rgb(var(--ei-orchid-pink-rgb) / 0.18)',
-  'ei-luxe':
-    '0 18px 70px rgb(var(--ei-void-black-rgb) / 0.55), 0 0 48px rgb(var(--ei-aurora-blue-rgb) / 0.14)',
+  'ei-halo': '0 0 32px rgb(var(--ei-halo-blue-rgb) / 0.22)',
+  'ei-blue': '0 0 28px rgb(var(--ei-electric-blue-rgb) / 0.2)',
+  'ei-magenta': '0 0 30px rgb(var(--ei-echo-magenta-rgb) / 0.18)',
+  'ei-void':
+    '0 18px 70px rgb(var(--ei-void-rgb) / 0.55), 0 0 48px rgb(var(--ei-halo-blue-rgb) / 0.14)',
 },
       backgroundImage: {
         'ei-gradient-primary':
-          'linear-gradient(135deg, var(--ei-aurora-blue) 0%, var(--ei-luxe-violet) 48%, var(--ei-orchid-pink) 100%)',
+          'linear-gradient(135deg, var(--ei-halo-blue) 0%, var(--ei-violet) 48%, var(--ei-echo-magenta) 100%)',
         'ei-gradient-glow':
-          'radial-gradient(circle, rgb(var(--ei-aurora-blue-rgb) / 0.45), rgb(var(--ei-orchid-pink-rgb) / 0.18), transparent 70%)',
+          'radial-gradient(circle, rgb(var(--ei-halo-blue-rgb) / 0.45), rgb(var(--ei-echo-magenta-rgb) / 0.18), transparent 70%)',
       },
       borderColor: {
         soft: 'rgb(var(--ei-ice-white-rgb) / 0.10)',
-        glow: 'rgb(var(--ei-luxe-violet-rgb) / 0.32)',
-        card: 'rgb(var(--ei-soft-lavender-rgb) / 0.12)',
-        cobalt: 'rgb(var(--ei-aurora-blue-rgb) / 0.28)',
-        magenta: 'rgb(var(--ei-orchid-pink-rgb) / 0.25)',
+        glow: 'rgb(var(--ei-violet-rgb) / 0.32)',
+        card: 'rgb(var(--ei-moonlit-rgb) / 0.12)',
+        cobalt: 'rgb(var(--ei-halo-blue-rgb) / 0.28)',
+        magenta: 'rgb(var(--ei-echo-magenta-rgb) / 0.25)',
       },
       ringColor: {
-        cobalt: 'rgb(var(--ei-aurora-blue-rgb) / 0.5)',
-        violet: 'rgb(var(--ei-luxe-violet-rgb) / 0.5)',
-        magenta: 'rgb(var(--ei-orchid-pink-rgb) / 0.5)',
+        cobalt: 'rgb(var(--ei-halo-blue-rgb) / 0.5)',
+        violet: 'rgb(var(--ei-violet-rgb) / 0.5)',
+        magenta: 'rgb(var(--ei-echo-magenta-rgb) / 0.5)',
       },
       borderRadius: {
         lg: "var(--radius)",
