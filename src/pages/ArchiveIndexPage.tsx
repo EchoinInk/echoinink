@@ -2,8 +2,8 @@ import { useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
-import archiveImageDesktop from '@/assets/imagery/hero/archive-hero-orbital-map-desktop.webp';
-import archiveImageMobile from '@/assets/imagery/hero/archive-hero-orbital-map-mobile.webp';
+import archiveImageDesktop from '@/assets/imagery/hero/archive-index-hero-orbital-map-desktop.webp';
+import archiveImageMobile from '@/assets/imagery/hero/archive-index-hero-orbital-map-mobile.webp';
 import { ArchiveConstellation } from '@/components/archive/ArchiveConstellation';
 import { ArchiveIndexList } from '@/components/archive/ArchiveIndexList';
 import { ContentFrame } from '@/components/layout/ContentFrame';
