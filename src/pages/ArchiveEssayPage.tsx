@@ -1,8 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 
-import archiveEssayDesktop from '@/assets/imagery/sections/essay-hero-atmosphere-wave-desktop.webp';
-import archiveEssayMobile from '@/assets/imagery/sections/essay-hero-atmosphere-wave-mobile.webp';
+import archiveEssayDesktop from '@/assets/imagery/hero/essay-hero-atmosphere-wave-desktop.webp';
+import archiveEssayMobile from '@/assets/imagery/hero/essay-hero-atmosphere-wave-mobile.webp';
 import { EditorialArticleLayout } from '@/components/layout/EditorialArticleLayout';
 import { PageShell } from '@/components/layout/PageShell';
 import { CTASection } from '@/components/sections/CTASection';
