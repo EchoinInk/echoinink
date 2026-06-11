@@ -195,25 +195,25 @@ export function ArchiveIndexPage() {
                   placeholder="Search titles, descriptions, or categories"
                 />
               </label>
-              <FilterBar
-                filters={archiveFilters}
-                activeFilter={activeFilter}
-                onFilterChange={setActiveFilter}
-                ariaLabel="Filter archive index by category"
-                tone="editorial"
-                className="ei-archive-filter-bar"
-                sort={
-                  <EchoSelect
-                    id="archive-index-sort"
-                    name="archive-index-sort"
-                    label="Order"
-                    variant="editorial"
-                    value={sortBy}
-                    options={[...archiveIndexSortOptions]}
-                    onChange={(event) => setSortBy(event.target.value as ArchiveIndexSort)}
-                  />
-                }
-              />
+             <FilterBar<ArchiveFilter>
+  filters={archiveFilters}
+  activeFilter={activeFilter}
+  onFilterChange={setActiveFilter}
+  ariaLabel="Filter archive index by category"
+  tone="editorial"
+  className="ei-archive-filter-bar"
+  sort={
+    <EchoSelect
+      id="archive-index-sort"
+      name="archive-index-sort"
+      label="Order"
+      variant="editorial"
+      value={sortBy}
+      options={[...archiveIndexSortOptions]}
+      onChange={(event) => setSortBy(event.target.value as ArchiveIndexSort)}
+    />
+  }
+/>
             </motion.div>
 
             <motion.div variants={fadeSoft}>
