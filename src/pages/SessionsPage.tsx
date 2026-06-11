@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
-import sessionsHeroDesktop from "@/assets/imagery/hero/sessions-hero-desktop.webp";
-import sessionsHeroMobile from "@/assets/imagery/hero/sessions-hero-mobile.webp";
+import sessionsHeroDesktop from "@/assets/imagery/hero/sessions-hero-luminous-threshold-desktop.webp";
+import sessionsHeroMobile from "@/assets/imagery/hero/sessions-hero-luminous-threshold-mobile.webp";
 import imageCTA from "@/assets/imagery/sections/sessions-cta-desktop.webp";
 import imageOffer from "@/assets/imagery/sections/sessions-offer-desktop.webp";
 import { ContentFrame } from "@/components/layout/ContentFrame";
