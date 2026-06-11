@@ -12,7 +12,7 @@ import {
 
 export function ClosingSection() {
   return (
-    <section className="relative isolate min-h-[250px] overflow-hidden bg-[var(--ei-color-background-void)] pt-8 pb-10 md:pt-10 md:pb-12">
+    <section className="relative isolate min-h-[250px] overflow-hidden bg-[var(--ei-color-background-body)] pt-8 pb-10 md:pt-10 md:pb-12">
       <CtaOrbitalBackground />
 
       <div
@@ -39,7 +39,7 @@ export function ClosingSection() {
         className="pointer-events-none absolute inset-x-0 bottom-0 z-[2] h-20"
         style={{
           background:
-            "linear-gradient(to bottom, transparent 0%, var(--ei-color-background-void) 100%)",
+            "linear-gradient(to bottom, transparent 0%, var(--ei-color-background-body) 100%)",
         }}
       />
 

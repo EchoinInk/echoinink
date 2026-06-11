@@ -8,10 +8,10 @@ interface LayoutProps {
 
 export function Layout({ children }: LayoutProps) {
   return (
-    <div className="relative min-h-screen bg-[var(--ei-ink-black)]">
+    <div className="relative min-h-screen bg-[var(--ei-color-background-body)]">
       <AtmosphericCursor />
       <Header />
-<main>{children}</main>
+      {children}
     </div>
   );
 }

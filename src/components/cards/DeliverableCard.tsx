@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { DURATION, EASE_CINEMATIC, VIEWPORT } from '@/lib/motion-cinematic';
 
 export type DeliverableMotif =
@@ -87,8 +87,6 @@ export function DeliverableCard({
   motif = 'feeling',
   index = 0,
 }: DeliverableCardProps) {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
     <motion.article
       initial={{ opacity: 0, y: 10 }}
@@ -99,11 +97,6 @@ export function DeliverableCard({
         ease: EASE_CINEMATIC,
         delay: index * 0.06,
       }}
-      whileHover={
-        prefersReducedMotion
-          ? undefined
-          : { y: -2, transition: { duration: DURATION.instant, ease: EASE_CINEMATIC } }
-      }
       className="ei-card ei-card-soft ei-card-deliverable"
     >
       <MotifField motif={motif} />

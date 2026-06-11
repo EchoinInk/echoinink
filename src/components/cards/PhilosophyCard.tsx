@@ -1,4 +1,4 @@
-import { motion, useReducedMotion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   OrbitalVisual,
   type OrbitalVariant,
@@ -20,7 +20,6 @@ export function PhilosophyCard({
   index = 0,
   variant = 'philosophy',
 }: PhilosophyCardProps) {
-  const prefersReducedMotion = useReducedMotion();
   const isValue = variant === 'value';
 
   return (
@@ -33,20 +32,8 @@ export function PhilosophyCard({
     ease: EASE_CINEMATIC,
     delay: index * 0.08,
   }}
-  whileHover={
-    prefersReducedMotion
-      ? undefined
-      : {
-          y: -2,
-          transition: {
-            duration: DURATION.instant,
-            ease: EASE_CINEMATIC,
-          },
-        }
-  }
   className={[
     'ei-card',
-    'ei-card-interactive',
     'ei-card-transformation',
     isValue ? 'ei-card-transformation-compact' : '',
   ].join(' ')}

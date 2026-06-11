@@ -69,7 +69,7 @@ const pillars: Array<{
     number: "02",
     title: "Immersive Websites",
     body: "Digital experiences that blend story, design, and atmosphere into seamless worlds.",
-    href: "/websites",
+    href: "/works",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_30%,rgb(var(--ei-halo-blue-rgb)/0.18),transparent_42%),linear-gradient(145deg,rgb(var(--ei-midnight-rgb)/0.7),rgb(var(--ei-void-rgb)/0.95))]",
     icon: "memoryComet",
@@ -78,7 +78,7 @@ const pillars: Array<{
     number: "03",
     title: "Narrative Architecture",
     body: "Story systems that align your message, audience, and transformation.",
-    href: "/direction",
+    href: "/worlds",
     imageClass:
       "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
     icon: "haloGate",
@@ -197,12 +197,12 @@ export function StudioPage() {
                 variants={driftUp}
                 className="relative max-w-[62ch] md:-top-4"
               >
-                <p className="ei-type-studio-body text-[rgba(232,228,245,0.72)]">
+                <p className="ei-type-studio-body text-[var(--ei-color-text-secondary)]">
                   Design is not decoration — it is meaning made visible. Every
                   decision is rooted in understanding, shaped by emotion, and
                   refined through story.
                 </p>
-                <p className="ei-type-studio-body mt-5 text-[rgba(232,228,245,0.72)]">
+                <p className="ei-type-studio-body mt-5 text-[var(--ei-color-text-secondary)]">
                   We do not just build brands or websites. We build identity,
                   atmosphere, and transformation.
                 </p>
