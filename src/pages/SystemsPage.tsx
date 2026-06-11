@@ -142,6 +142,16 @@ export function SystemsPage() {
                     <p className="ei-systems-category-layer">{category.layer}</p>
                     <h3>{category.title}</h3>
                     <p>{category.description}</p>
+                    <dl className="ei-systems-category-facts">
+                      <div>
+                        <dt>Best for</dt>
+                        <dd>{category.bestFor}</dd>
+                      </div>
+                      <div>
+                        <dt>Output</dt>
+                        <dd>{category.output}</dd>
+                      </div>
+                    </dl>
                     <ul>
                       {category.includes.map((item) => (
                         <li key={item}>{item}</li>
@@ -174,6 +184,17 @@ export function SystemsPage() {
                   <p className="ei-systems-featured-category">{featuredSystem.category}</p>
                   <motion.h2 variants={blurEmergence}>{featuredSystem.title}</motion.h2>
                   <p className="ei-systems-featured-description">{featuredSystem.description}</p>
+
+                  <dl className="ei-systems-featured-facts">
+                    <div>
+                      <dt>Best for</dt>
+                      <dd>{featuredSystem.bestFor}</dd>
+                    </div>
+                    <div>
+                      <dt>Output</dt>
+                      <dd>{featuredSystem.output}</dd>
+                    </div>
+                  </dl>
 
                   <div className="ei-systems-featured-parts">
                     <span>Inside the system</span>
@@ -261,7 +282,7 @@ export function SystemsPage() {
                         <p>{system.description}</p>
                         <dl>
                           <div>
-                            <dt>Use it for</dt>
+                            <dt>Best for</dt>
                             <dd>{system.useCase}</dd>
                           </div>
                           <div>

@@ -161,12 +161,12 @@ export function IdentityPage() {
             viewport={VIEWPORT.normal}
           >
             <motion.div variants={driftUp} className="ei-identity-section-heading">
-              <SectionLabel label="Inside the Identity Kit" index="03" />
+              <SectionLabel label="What you receive" index="03" />
               <div>
                 <h2>{identityDeliverables.heading}</h2>
                 <p>
-                  A focused set of connected decisions, grouped around the six parts that make an
-                  identity feel whole.
+                  A concise direction system covering palette, type, tone, visual references,
+                  usage principles, and launch guidance.
                 </p>
               </div>
             </motion.div>

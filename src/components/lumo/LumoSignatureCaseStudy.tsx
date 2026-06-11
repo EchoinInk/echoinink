@@ -381,11 +381,28 @@ export function SignatureCaseStudy() {
           }
           description="A luminous identity and digital experience shaped around clarity, atmosphere, and emotional safety."
           kicker={
-            <div className="ei-lumo-hero-meta">
-              <span>Identity system</span>
-              <span>Digital atmosphere</span>
-              <span>Interface direction</span>
-            </div>
+            <dl className="ei-lumo-hero-meta">
+              <div>
+                <dt>Project</dt>
+                <dd>Lumo</dd>
+              </div>
+              <div>
+                <dt>Scope</dt>
+                <dd>Identity + digital experience</dd>
+              </div>
+              <div>
+                <dt>Role</dt>
+                <dd>Creative direction + design</dd>
+              </div>
+              <div>
+                <dt>Deliverables</dt>
+                <dd>Identity, atmosphere, interface system</dd>
+              </div>
+              <div>
+                <dt>Timeline</dt>
+                <dd>Exploratory concept phase</dd>
+              </div>
+            </dl>
           }
           actions={
             <Button to="#lumo-snapshot" variant="tertiary">

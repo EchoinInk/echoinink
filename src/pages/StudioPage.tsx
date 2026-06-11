@@ -52,6 +52,7 @@ const pillars: Array<{
   number: string;
   title: string;
   body: string;
+  output: string;
   href: string;
   imageClass: string;
   icon: OrbitalVariant;
@@ -60,6 +61,7 @@ const pillars: Array<{
     number: "01",
     title: "Identity Systems",
     body: "Strategic identity frameworks that reveal essence, build recognition, and create emotional resonance.",
+    output: "Output: identity strategy, visual language, and practical guidance.",
     href: "/identity",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_28%,rgb(var(--ei-violet-rgb)/0.22),transparent_38%),radial-gradient(circle_at_52%_62%,rgb(var(--ei-halo-blue-rgb)/0.08),transparent_54%)]",
@@ -69,6 +71,7 @@ const pillars: Array<{
     number: "02",
     title: "Immersive Websites",
     body: "Digital experiences that blend story, design, and atmosphere into seamless worlds.",
+    output: "Output: a responsive website and coherent digital experience.",
     href: "/works",
     imageClass:
       "bg-[radial-gradient(circle_at_50%_30%,rgb(var(--ei-halo-blue-rgb)/0.18),transparent_42%),linear-gradient(145deg,rgb(var(--ei-midnight-rgb)/0.7),rgb(var(--ei-void-rgb)/0.95))]",
@@ -78,6 +81,7 @@ const pillars: Array<{
     number: "03",
     title: "Narrative Architecture",
     body: "Story systems that align your message, audience, and transformation.",
+    output: "Output: positioning, messaging architecture, and a story framework.",
     href: "/worlds",
     imageClass:
       "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
@@ -87,6 +91,7 @@ const pillars: Array<{
     number: "04",
     title: "Creative Direction",
     body: "Art direction and visual strategy that bring coherence, depth, and vision to every touchpoint.",
+    output: "Output: art direction, reference systems, and touchpoint guidance.",
     href: "/worlds",
     imageClass:
       "bg-[radial-gradient(circle_at_35%_30%,rgb(var(--ei-violet-rgb)/0.2),transparent_38%),radial-gradient(circle_at_75%_62%,rgb(var(--ei-soft-neon-rgb)/0.11),transparent_50%)]",
@@ -276,6 +281,10 @@ export function StudioPage() {
 
                       <p className="ei-type-studio-card-body mt-4 max-w-[32ch]">
                         {pillar.body}
+                      </p>
+
+                      <p className="ei-type-studio-output mt-5">
+                        {pillar.output}
                       </p>
 
                       <span className="ei-card-action mt-7">

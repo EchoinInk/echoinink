@@ -63,21 +63,33 @@
   }
 
   .ei-lumo-hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--ei-space-3) var(--ei-space-5);
+    margin: 0;
+    font-style: normal;
+  }
+
+  .ei-lumo-hero-meta div {
+    min-width: 0;
+  }
+
+  .ei-lumo-hero-meta dt {
     color: var(--ei-color-text-muted);
     font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    font-style: normal;
-    letter-spacing: 0.18em;
+    font-size: 0.58rem;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
   }
 
-  .ei-lumo-hero-meta span:not(:last-child)::after {
-    content: "·";
-    margin-left: 1.5rem;
-    color: var(--ei-color-text-faint);
+  .ei-lumo-hero-meta dd {
+    margin: 0.25rem 0 0;
+    color: var(--ei-color-text-secondary);
+    font-family: var(--ei-font-copy);
+    font-size: 0.76rem;
+    letter-spacing: 0;
+    line-height: 1.4;
+    text-transform: none;
   }
 
   .ei-lumo-hero-artifact {
@@ -768,12 +780,8 @@
     }
 
     .ei-lumo-hero-meta {
-      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 0.45rem;
-    }
-
-    .ei-lumo-hero-meta span::after {
-      display: none;
     }
 
     .ei-lumo-hero-artifact {

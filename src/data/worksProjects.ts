@@ -23,6 +23,10 @@ export interface WorkProject {
   category: string;
   description: string;
   proofLine: string;
+  challenge: string;
+  scope: string;
+  output: string;
+  result: string;
   image: string;
   href?: string;
   tags: ProjectTag[];
@@ -39,6 +43,10 @@ export const worksProjects: WorkProject[] = [
       'An emotionally intelligent identity and web experience for a platform built to support overwhelmed humans.',
     proofLine:
       'A calm, coherent product world that turns emotional intelligence into a usable digital experience.',
+    challenge: 'Translate emotional safety into a clear, credible product world.',
+    scope: 'Identity system, digital atmosphere, and interface direction.',
+    output: 'A connected visual language and modular experience system.',
+    result: 'A calmer, more recognisable expression of Lumo across its core touchpoints.',
     image: lumoFeatured,
     href: '/works/lumo',
     tags: ['Identity Systems', 'Digital Experiences'],
@@ -52,6 +60,10 @@ export const worksProjects: WorkProject[] = [
     description:
       'A modern identity for a global fintech platform redefining seamless transactions.',
     proofLine: 'Clarity and trust shaped into a distinctive financial identity.',
+    challenge: 'Make seamless global transactions feel clear, modern, and trustworthy.',
+    scope: 'Identity concept and visual direction.',
+    output: 'A focused fintech identity concept with a distinct trust signal.',
+    result: 'A concept demonstrating how clarity and confidence can coexist without visual noise.',
     image: auroraImage,
     tags: ['Identity Systems'],
     presentation: 'study',
@@ -63,6 +75,10 @@ export const worksProjects: WorkProject[] = [
     description:
       'A next-generation web experience for a private investment collective focused on long-term vision.',
     proofLine: 'A restrained digital presence designed to make long-term vision feel tangible.',
+    challenge: 'Express privacy, patience, and long-term vision without financial clichés.',
+    scope: 'Brand experience concept and web direction.',
+    output: 'A restrained digital prototype with an editorial investment atmosphere.',
+    result: 'A concept demonstrating a quieter, more tangible expression of long-term value.',
     image: obsidianImage,
     tags: ['Digital Experiences'],
     presentation: 'study',
@@ -74,6 +90,10 @@ export const worksProjects: WorkProject[] = [
     description:
       'A sustainable luxury skincare brand with a focus on purity, nature, and timeless elegance.',
     proofLine: 'A quiet luxury identity built around material restraint and enduring recognition.',
+    challenge: 'Connect sustainability and luxury without relying on familiar category signals.',
+    scope: 'Brand identity concept.',
+    output: 'A material-led visual direction for a premium skincare world.',
+    result: 'A concept demonstrating quiet recognition through restraint and natural texture.',
     image: verdeImage,
     tags: ['Identity Systems'],
     presentation: 'fragment',
@@ -85,6 +105,10 @@ export const worksProjects: WorkProject[] = [
     description:
       'A modular UI system built for scalability, clarity, and beautiful products.',
     proofLine: 'A reusable interface language that keeps product expression coherent at scale.',
+    challenge: 'Create consistency across a growing interface without flattening its character.',
+    scope: 'UI system prototype.',
+    output: 'A modular component and interaction language.',
+    result: 'A prototype demonstrating how reusable patterns can support clarity at scale.',
     image: nexusImage,
     tags: ['UI Systems'],
     presentation: 'fragment',

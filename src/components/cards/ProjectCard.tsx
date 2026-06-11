@@ -14,6 +14,10 @@ export function ProjectCard({
   category,
   description,
   proofLine,
+  challenge,
+  scope,
+  output,
+  result,
   image,
   href,
   presentation,
@@ -53,6 +57,25 @@ export function ProjectCard({
             <p className="ei-works-project-description">{description}</p>
           ) : null}
         </div>
+
+        <dl className="ei-works-project-facts">
+          <div>
+            <dt>Challenge</dt>
+            <dd>{challenge}</dd>
+          </div>
+          <div>
+            <dt>Scope</dt>
+            <dd>{scope}</dd>
+          </div>
+          <div>
+            <dt>Output</dt>
+            <dd>{output}</dd>
+          </div>
+          <div>
+            <dt>Result</dt>
+            <dd>{result}</dd>
+          </div>
+        </dl>
 
         <span className="ei-card-action">
           {isLinked

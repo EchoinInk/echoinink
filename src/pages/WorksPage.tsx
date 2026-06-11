@@ -130,16 +130,20 @@ export function WorksPage() {
 
                     <dl className="ei-works-featured-facts">
                       <div>
-                        <dt>Focus</dt>
-                        <dd>Emotional clarity</dd>
+                        <dt>Challenge</dt>
+                        <dd>{featuredProject.challenge}</dd>
                       </div>
                       <div>
-                        <dt>System</dt>
-                        <dd>{featuredProject.tags.join(' + ')}</dd>
+                        <dt>Scope</dt>
+                        <dd>{featuredProject.scope}</dd>
                       </div>
                       <div>
-                        <dt>Proof</dt>
-                        <dd>Full case study</dd>
+                        <dt>Output</dt>
+                        <dd>{featuredProject.output}</dd>
+                      </div>
+                      <div>
+                        <dt>Result</dt>
+                        <dd>{featuredProject.result}</dd>
                       </div>
                     </dl>
 

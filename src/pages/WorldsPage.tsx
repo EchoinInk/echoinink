@@ -62,24 +62,28 @@ const worldMeaning = [
 
 const needStates = [
   {
-    title: "Launching a brand",
+    title: "Brand launch",
     description: "Create a distinct emotional position before the identity reaches the world."
   },
   {
-    title: "Repositioning a product",
-    description: "Give an existing offer a clearer narrative, atmosphere, and reason to matter."
+    title: "Repositioning",
+    description: "Give an existing brand or offer a clearer narrative, atmosphere, and reason to matter."
   },
   {
-    title: "Building an artist universe",
+    title: "Artist universe",
     description: "Connect the work, voice, imagery, releases, and audience experience around one centre."
   },
   {
-    title: "Creating a cultural platform",
+    title: "Cultural platform",
     description: "Build a coherent world that can hold many voices, formats, and future expressions."
   },
   {
-    title: "Unifying scattered ideas",
-    description: "Turn strong but disconnected references into a direction people can understand and use."
+    title: "Campaign world",
+    description: "Create a distinct narrative and visual environment for a launch, season, or cultural moment."
+  },
+  {
+    title: "Product atmosphere",
+    description: "Shape how a digital or physical product feels, behaves, and becomes recognisable."
   }
 ];
 
@@ -249,7 +253,7 @@ export function WorldsPage() {
             viewport={VIEWPORT.normal}
           >
             <motion.div variants={driftUp} className="ei-worlds-section-heading">
-              <SectionLabel label="When you need it" index="03" />
+              <SectionLabel label="This is for" index="03" />
               <div>
                 <h2>When the idea is strong, but the world around it is not yet coherent.</h2>
                 <p>

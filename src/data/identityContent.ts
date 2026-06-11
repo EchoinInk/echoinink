@@ -42,38 +42,38 @@ export const identityDeliverables: {
     icon: OrbitalVariant;
   }>;
 } = {
-  heading: "A compact identity atmosphere.",
+  heading: "A concise identity direction you can use.",
   closing:
     "Each piece is focused on purpose — together they form the emotional architecture of your world.",
   items: [
     {
       title: "Atmosphere Direction",
       description: "The emotional field the identity should create before the details are understood.",
-      includes: ["Moodboard", "Texture and light", "Reference rhythm"],
+      includes: ["Visual references", "Texture and light", "Reference rhythm"],
       icon: "innerTide"
     },
     {
       title: "Tone & Language",
       description: "A clear verbal character for how the world speaks, names, and introduces itself.",
-      includes: ["Tone guide", "Key language", "Micro-manifesto"],
+      includes: ["Tone direction", "Key language", "Micro-manifesto"],
       icon: "signalBridge"
     },
     {
       title: "Visual Language",
       description: "A refined direction for the visible qualities that make the work recognisable.",
-      includes: ["Palette", "Typography", "Image direction"],
+      includes: ["Palette", "Type direction", "Image direction"],
       icon: "prismMirror"
     },
     {
       title: "Identity System",
       description: "A coherent centre that keeps separate decisions working as one identity.",
-      includes: ["Core principles", "Hierarchy", "Consistency notes"],
+      includes: ["Usage principles", "Hierarchy", "Consistency notes"],
       icon: "chorusCore"
     },
     {
       title: "Launch Direction",
       description: "Guidance for the first public expression of the identity and the feeling it should leave.",
-      includes: ["Launch mood", "Priority moments", "Entry touchpoints"],
+      includes: ["Launch guidance", "Priority moments", "Entry touchpoints"],
       icon: "memoryComet"
     },
     {

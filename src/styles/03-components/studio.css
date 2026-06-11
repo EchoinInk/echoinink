@@ -163,6 +163,15 @@
     color: var(--ei-color-text-secondary);
   }
 
+  .ei-type-studio-output {
+    color: var(--ei-color-text-tertiary);
+    font-family: var(--ei-font-structural);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    line-height: 1.55;
+    text-transform: uppercase;
+  }
+
   .ei-card-studio {
     position: relative;
     overflow: hidden;

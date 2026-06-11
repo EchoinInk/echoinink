@@ -24,6 +24,8 @@ export interface SystemsCategory {
   layer: string;
   title: string;
   description: string;
+  bestFor: string;
+  output: string;
   includes: string[];
   icon: OrbitalVariant;
 }
@@ -34,6 +36,8 @@ export const systemsCategories: SystemsCategory[] = [
     title: "Foundation systems",
     description:
       "Find the central signal before building the expression around it.",
+    bestFor: "Early ideas, new offers, and unclear positioning",
+    output: "A defined identity centre and next-step brief",
     includes: ["Identity prompts", "Clarity frameworks"],
     icon: "chorusCore"
   },
@@ -42,6 +46,8 @@ export const systemsCategories: SystemsCategory[] = [
     title: "Creative tools",
     description:
       "Resolve a focused question around tone, language, reference, or process.",
+    bestFor: "Creators resolving one specific direction",
+    output: "A usable voice, atmosphere, or decision framework",
     includes: ["Atmosphere mapping", "Voice building"],
     icon: "focusDial"
   },
@@ -50,6 +56,8 @@ export const systemsCategories: SystemsCategory[] = [
     title: "Direction kits",
     description:
       "Turn instinct and references into a coherent visual and narrative direction.",
+    bestFor: "Projects ready to align story and expression",
+    output: "A connected visual and narrative direction",
     includes: ["Creative workbooks", "Worldbuilding systems"],
     icon: "synthesisStar"
   },
@@ -58,6 +66,8 @@ export const systemsCategories: SystemsCategory[] = [
     title: "Output systems",
     description:
       "Carry the direction into usable touchpoints without losing its atmosphere.",
+    bestFor: "Teams translating direction into delivery",
+    output: "Reusable tools for digital and client touchpoints",
     includes: ["Digital UI kits", "Client toolkits"],
     icon: "vectorLattice"
   }
@@ -68,6 +78,8 @@ export const featuredSystem = {
   title: "The Identity Clarity Prompt Kit",
   description:
     "A guided set of prompts to help you uncover your essence, shape your identity, and align every element of your brand or project.",
+  bestFor: "Founders and creators clarifying an early identity",
+  output: "A completed clarity framework and creative brief",
   features: [
     "50+ deep prompts",
     "Identity clarity framework",

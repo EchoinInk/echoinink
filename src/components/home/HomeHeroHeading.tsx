@@ -30,16 +30,16 @@ export function HeroHeading() {
       </h1>
 
       <p className="ei-type-hero-kicker mt-5">
-        Identity systems, digital experiences, and narrative direction.
+        Identity systems, immersive websites, creative direction, and
+        worldbuilding.
       </p>
 
       <motion.p
         variants={heroReveal}
         className="ei-type-hero-description mt-6 max-w-[46ch]"
       >
-        Emotionally intelligent identity systems, immersive websites, and
-        atmospheric digital experiences for founders, artists, and emerging
-        brands.
+        We shape the identity, story, and digital atmosphere around meaningful
+        work for founders, artists, and emerging brands.
       </motion.p>
     </div>
   );
