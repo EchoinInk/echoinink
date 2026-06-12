@@ -3,8 +3,8 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-import worksHeroDesktop from '@/assets/imagery/hero/works-hero-desktop.webp';
-import worksHeroMobile from '@/assets/imagery/hero/works-hero-mobile.webp';
+import worksHeroDesktop from '@/assets/imagery/hero/works-hero-signal-stream-desktop.webp';
+import worksHeroMobile from '@/assets/imagery/hero/works-hero-signal-stream-mobile.webp';
 import worksCtaImage from '@/assets/imagery/sections/works-cta.webp';
 import { ContentFrame } from '@/components/layout/ContentFrame';
 import { PageShell } from '@/components/layout/PageShell';
