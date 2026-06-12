@@ -5,7 +5,7 @@
     overflow: hidden;
     background:
       radial-gradient(circle at 82% 20%, rgb(var(--ei-violet-rgb) / 0.055), transparent 24%),
-      linear-gradient(180deg, var(--ei-void), var(--ei-ink) 48%, var(--ei-void));
+      linear-gradient(180deg, var(--ei-ink), var(--ei-ink) 48%, var(--ei-ink));
   }
 
   .ei-systems-hero {
@@ -23,16 +23,16 @@
       radial-gradient(
         ellipse 36% 52% at 76% 48%,
         transparent 15%,
-        rgb(var(--ei-void-rgb) / 0.18) 70%
+        rgb(var(--ei-ink-rgb) / 0.18) 70%
       ),
       linear-gradient(
         90deg,
-        rgb(var(--ei-void-rgb) / 0.98) 0%,
-        rgb(var(--ei-void-rgb) / 0.84) 38%,
-        rgb(var(--ei-void-rgb) / 0.24) 72%,
-        rgb(var(--ei-void-rgb) / 0.52) 100%
+        rgb(var(--ei-ink-rgb) / 0.98) 0%,
+        rgb(var(--ei-ink-rgb) / 0.84) 38%,
+        rgb(var(--ei-ink-rgb) / 0.24) 72%,
+        rgb(var(--ei-ink-rgb) / 0.52) 100%
       ),
-      linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.16), transparent 56%, var(--ei-void));
+      linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.16), transparent 56%, var(--ei-ink));
   }
 
   .ei-systems-hero-content {
@@ -393,7 +393,7 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(180deg, var(--ei-void), transparent 30%, rgb(var(--ei-void-rgb) / 0.62)),
+      linear-gradient(180deg, var(--ei-ink), transparent 30%, rgb(var(--ei-void-rgb) / 0.62)),
       linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.72), transparent 70%);
   }
 
@@ -698,7 +698,7 @@
 
   .ei-systems-pathway-list .ei-icon-well {
     margin-top: var(--ei-space-4);
-    background: var(--ei-void);
+    background: var(--ei-ink);
   }
 
   .ei-systems-pathway-list h3 {
@@ -953,7 +953,7 @@
     background:
       radial-gradient(circle at 82% 18%, rgb(var(--ei-halo-blue-rgb) / 0.085), transparent 28%),
       radial-gradient(circle at 72% 52%, rgb(var(--ei-violet-rgb) / 0.075), transparent 32%),
-      linear-gradient(180deg, var(--ei-ink) 0%, var(--ei-void) 44%, var(--ei-ink) 100%);
+      linear-gradient(180deg, var(--ei-ink) 0%, var(--ei-ink) 44%, var(--ei-ink) 100%);
   }
 
   .ei-systems-hero .ei-echo-hero-media img {

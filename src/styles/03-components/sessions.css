@@ -20,17 +20,17 @@
       radial-gradient(
         ellipse 50% 70% at 68% 43%,
         transparent 24%,
-        rgb(var(--ei-void-rgb) / 0.18) 62%,
-        rgb(var(--ei-void-rgb) / 0.5) 100%
+        rgb(var(--ei-ink-rgb) / 0.18) 62%,
+        rgb(var(--ei-ink-rgb) / 0.5) 100%
       ),
       linear-gradient(
         90deg,
-        rgb(var(--ei-void-rgb) / 0.96) 0%,
-        rgb(var(--ei-void-rgb) / 0.78) 38%,
-        rgb(var(--ei-void-rgb) / 0.18) 72%,
-        rgb(var(--ei-void-rgb) / 0.36) 100%
+        rgb(var(--ei-ink-rgb) / 0.96) 0%,
+        rgb(var(--ei-ink-rgb) / 0.78) 38%,
+        rgb(var(--ei-ink-rgb) / 0.18) 72%,
+        rgb(var(--ei-ink-rgb) / 0.36) 100%
       ),
-      linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.28), transparent 54%, var(--ei-void) 100%);
+      linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.28), transparent 54%, var(--ei-ink) 100%);
   }
 
   .ei-sessions-hero-content {
@@ -144,7 +144,7 @@
     position: absolute;
     inset: 0;
     background:
-      linear-gradient(180deg, var(--ei-void), transparent 28%),
+      linear-gradient(180deg, var(--ei-ink), transparent 28%),
       linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.7), transparent 68%);
   }
 
@@ -300,7 +300,7 @@
     margin-top: var(--ei-space-4);
     border: 1px solid var(--ei-moonlit);
     border-radius: 50%;
-    background: var(--ei-void);
+    background: var(--ei-ink);
     box-shadow:
       0 0 0 0.35rem rgb(var(--ei-violet-rgb) / 0.1),
       0 0 18px rgb(var(--ei-halo-blue-rgb) / 0.34);
@@ -588,7 +588,7 @@
           rgb(var(--ei-void-rgb) / 0.14) 0%,
           rgb(var(--ei-void-rgb) / 0.32) 34%,
           rgb(var(--ei-void-rgb) / 0.94) 76%,
-          var(--ei-void) 100%
+          var(--ei-ink) 100%
         ),
         radial-gradient(ellipse 80% 45% at 54% 32%, transparent, rgb(var(--ei-void-rgb) / 0.4) 100%);
     }
@@ -760,7 +760,7 @@
         180deg,
         rgb(var(--ei-void-rgb) / 0.2),
         transparent 54%,
-        var(--ei-void) 100%
+        var(--ei-ink) 100%
       );
   }
 
@@ -945,7 +945,7 @@
           rgb(var(--ei-void-rgb) / 0.1) 0%,
           rgb(var(--ei-void-rgb) / 0.24) 34%,
           rgb(var(--ei-void-rgb) / 0.86) 74%,
-          var(--ei-void) 100%
+          var(--ei-ink) 100%
         ),
         radial-gradient(
           ellipse 82% 46% at 54% 32%,

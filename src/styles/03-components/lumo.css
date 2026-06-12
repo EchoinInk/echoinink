@@ -37,8 +37,8 @@
 
   .ei-lumo-hero .ei-echo-hero-scrim {
     background:
-      linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.96) 0%, rgb(var(--ei-void-rgb) / 0.68) 45%, rgb(var(--ei-void-rgb) / 0.14) 78%),
-      linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.12), var(--ei-void) 100%);
+      linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.96) 0%, rgb(var(--ei-ink-rgb) / 0.68) 45%, rgb(var(--ei-ink-rgb) / 0.14) 78%),
+      linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.12), var(--ei-ink) 100%);
   }
 
   .ei-lumo-hero-content {
@@ -604,7 +604,7 @@
     inset: 0;
     background:
       radial-gradient(circle at 65% 45%, rgb(var(--ei-violet-rgb) / 0.2), transparent 34%),
-      linear-gradient(145deg, var(--ei-midnight), var(--ei-void));
+      linear-gradient(145deg, var(--ei-midnight), var(--ei-ink));
   }
 
   .ei-lumo-gallery-study strong {
@@ -768,7 +768,7 @@
 
     .ei-lumo-hero .ei-echo-hero-scrim {
       background:
-        linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.72) 0%, rgb(var(--ei-void-rgb) / 0.78) 42%, var(--ei-void) 100%);
+        linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.72) 0%, rgb(var(--ei-void-rgb) / 0.78) 42%, var(--ei-ink) 100%);
     }
 
     .ei-lumo-hero .ei-echo-hero-title {
@@ -933,7 +933,7 @@
       linear-gradient(
         180deg,
         rgb(var(--ei-void-rgb) / 0.08),
-        var(--ei-void) 100%
+        var(--ei-ink) 100%
       );
   }
 
@@ -994,7 +994,7 @@
           rgb(var(--ei-void-rgb) / 0.64) 0%,
           rgb(var(--ei-void-rgb) / 0.44) 40%,
           rgb(var(--ei-void-rgb) / 0.84) 76%,
-          var(--ei-void) 100%
+          var(--ei-ink) 100%
         );
     }
 

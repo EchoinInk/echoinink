@@ -12,7 +12,7 @@
         rgb(var(--ei-echo-magenta-rgb) / 0.06),
         transparent 28%
       ),
-      var(--ei-void);
+      var(--ei-ink);
   }
 
   .ei-identity-section {
@@ -46,15 +46,15 @@
   .ei-identity-hero .ei-echo-hero-scrim {
     background: linear-gradient(
         90deg,
-        rgb(var(--ei-void-rgb) / 0.98) 0%,
-        rgb(var(--ei-void-rgb) / 0.86) 35%,
-        rgb(var(--ei-void-rgb) / 0.24) 72%,
-        rgb(var(--ei-void-rgb) / 0.6) 100%
+        rgb(var(--ei-ink-rgb) / 0.98) 0%,
+        rgb(var(--ei-ink-rgb) / 0.86) 35%,
+        rgb(var(--ei-ink-rgb) / 0.24) 72%,
+        rgb(var(--ei-ink-rgb) / 0.6) 100%
       ),
       linear-gradient(
         180deg,
-        rgb(var(--ei-void-rgb) / 0.16),
-        var(--ei-void) 100%
+        rgb(var(--ei-ink-rgb) / 0.16),
+        var(--ei-ink) 100%
       );
   }
 
@@ -454,7 +454,7 @@
     margin-top: var(--ei-space-5);
     border: 1px solid var(--ei-color-text-accent);
     border-radius: 50%;
-    background: var(--ei-void);
+    background: var(--ei-ink);
     box-shadow: 0 0 16px rgb(var(--ei-violet-rgb) / 0.34);
   }
 
@@ -610,7 +610,7 @@
         180deg,
         rgb(var(--ei-void-rgb) / 0.82) 0%,
         rgb(var(--ei-void-rgb) / 0.44) 46%,
-        var(--ei-void) 100%
+        var(--ei-ink) 100%
       ),
       linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.72), transparent);
   }
@@ -795,7 +795,7 @@
       linear-gradient(
         180deg,
         var(--ei-ink) 0%,
-        var(--ei-void) 48%,
+        var(--ei-ink) 48%,
         var(--ei-ink) 100%
       );
   }
