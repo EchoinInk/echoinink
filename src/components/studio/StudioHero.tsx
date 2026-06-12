@@ -112,7 +112,7 @@ export function StudioHero({
                 className="absolute inset-0"
                 style={{
                   background:
-                    'linear-gradient(to right, var(--ei-void) 0%, transparent 38%, rgba(5, 3, 11, 0.18) 100%)',
+                    'linear-gradient(to right, var(--ei-ink) 0%, transparent 38%, rgba(5, 3, 11, 0.18) 100%)',
                 }}
               />
               <div
@@ -136,7 +136,7 @@ export function StudioHero({
                 className="absolute inset-0"
                 style={{
                   background:
-                    'linear-gradient(to top, var(--ei-void) 0%, transparent 32%), linear-gradient(to right, var(--ei-void) 0%, transparent 28%)',
+                    'linear-gradient(to top, var(--ei-ink) 0%, transparent 32%), linear-gradient(to right, var(--ei-ink) 0%, transparent 28%)',
                 }}
               />
             </div>

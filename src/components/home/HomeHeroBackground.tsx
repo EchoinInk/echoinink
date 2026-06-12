@@ -8,7 +8,7 @@ export function HeroBackground() {
       {/* Base */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 bg-[var(--ei-void)]"
+        className="absolute inset-0 bg-[var(--ei-ink)]"
       />
 
       {/* Responsive hero image */}

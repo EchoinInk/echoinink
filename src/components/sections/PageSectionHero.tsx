@@ -69,7 +69,7 @@ export function PageSectionHero({
       viewport={VIEWPORT.loose}
       className={`
         relative flex min-h-[54vh] items-start overflow-hidden
-        bg-[var(--ei-void)]
+        bg-[var(--ei-ink)]
         pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]
         ${isIntimate ? "md:min-h-[60vh]" : ""}
         ${isStudio ? "md:min-h-[72vh] lg:min-h-[76vh]" : ""}
@@ -94,8 +94,8 @@ export function PageSectionHero({
         style={{
           background:
             isStudio
-              ? "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.04) 0%, rgb(var(--ei-void-rgb) / 0.36) 100%)"
-              : "linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.12) 0%, rgb(var(--ei-void-rgb) / 0.46) 100%)",
+              ? "linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.04) 0%, rgb(var(--ei-ink-rgb) / 0.36) 100%)"
+              : "linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.12) 0%, rgb(var(--ei-ink-rgb) / 0.46) 100%)",
         }}
       />
 
@@ -104,8 +104,8 @@ export function PageSectionHero({
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background: isLeft
-            ? "linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-void-rgb) / 0.16) 100%)"
-            : "linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.16) 0%, transparent 56%, transparent 100%)",
+            ? "linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-ink-rgb) / 0.16) 100%)"
+            : "linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.16) 0%, transparent 56%, transparent 100%)",
         }}
       />
 
@@ -115,9 +115,9 @@ export function PageSectionHero({
         style={{
           background: isLeft
             ? isStudio
-              ? "radial-gradient(ellipse 52% 74% at 18% 48%, rgb(var(--ei-void-rgb) / 0.86) 0%, rgb(var(--ei-void-rgb) / 0.55) 44%, transparent 75%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.30) 38%, transparent 68%)"
-              : "radial-gradient(ellipse 52% 64% at 16% 46%, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.48) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.52) 0%, transparent 58%)"
-            : "radial-gradient(ellipse 52% 64% at 84% 46%, rgb(var(--ei-void-rgb) / 0.78) 0%, rgb(var(--ei-void-rgb) / 0.48) 42%, transparent 74%), linear-gradient(270deg, rgb(var(--ei-void-rgb) / 0.52) 0%, transparent 58%)",
+              ? "radial-gradient(ellipse 52% 74% at 18% 48%, rgb(var(--ei-ink-rgb) / 0.86) 0%, rgb(var(--ei-ink-rgb) / 0.55) 44%, transparent 75%), linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink -rgb) / 0.30) 38%, transparent 68%)"
+              : "radial-gradient(ellipse 52% 64% at 16% 46%, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink-rgb) / 0.48) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.52) 0%, transparent 58%)"
+            : "radial-gradient(ellipse 52% 64% at 84% 46%, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink-rgb) / 0.48) 42%, transparent 74%), linear-gradient(270deg, rgb(var(--ei-ink-rgb) / 0.52) 0%, transparent 58%)",
         }}
       />
 
@@ -126,7 +126,7 @@ export function PageSectionHero({
         className="pointer-events-none absolute bottom-0 left-0 right-0 z-[3] h-[20vh]"
         style={{
           background:
-            "linear-gradient(to bottom, transparent 0%, rgb(var(--ei-void-rgb) / 0.34) 70%, var(--ei-void) 100%)",
+            "linear-gradient(to bottom, transparent 0%, rgb(var(--ei-ink-rgb) / 0.34) 70%, var(--ei-ink) 100%)",
         }}
       />
 
