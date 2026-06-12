@@ -23,7 +23,7 @@ export function HeroBackground() {
           alt=""
           className="
             h-full w-full object-cover
-            opacity-[0.88] brightness-[0.94] saturate-[0.82]
+            opacity-[0.92] brightness-[0.98] saturate-[0.9]
           "
           style={{
             mixBlendMode: "normal",
@@ -38,7 +38,7 @@ export function HeroBackground() {
         className="
           pointer-events-none absolute inset-y-0 left-0 z-[2]
           hidden w-[55%] bg-gradient-to-r
-          from-[#020615] via-[#020615]/85 to-transparent
+          from-[#080718] via-[#080718]/78 to-transparent
           md:block
         "
       />
@@ -50,10 +50,10 @@ export function HeroBackground() {
         style={{
           background: `linear-gradient(
             90deg,
-            rgb(5 3 11 / 1) 0%,
-            rgb(5 3 11 / 0.96) 18%,
-            rgb(5 3 11 / 0.74) 34%,
-            rgb(5 3 11 / 0.26) 48%,
+            rgb(8 7 24 / 0.94) 0%,
+            rgb(8 7 24 / 0.88) 18%,
+            rgb(8 7 24 / 0.62) 34%,
+            rgb(8 7 24 / 0.18) 48%,
             transparent 60%
           )`,
         }}
@@ -66,9 +66,9 @@ export function HeroBackground() {
         style={{
           background: `linear-gradient(
             180deg,
-            rgb(5 3 11 / 0.78) 0%,
-            rgb(5 3 11 / 0.42) 55%,
-            rgb(5 3 11 / 0) 100%
+            rgb(8 7 24 / 0.68) 0%,
+            rgb(8 7 24 / 0.34) 55%,
+            rgb(8 7 24 / 0) 100%
           )`,
         }}
       />
@@ -80,9 +80,9 @@ export function HeroBackground() {
         style={{
           background: `linear-gradient(
             90deg,
-            rgba(6, 8, 18, 0.94) 0%,
-            rgba(6, 8, 18, 0.72) 30%,
-            rgba(6, 8, 18, 0.32) 52%,
+            rgb(8 7 24 / 0.9) 0%,
+            rgb(8 7 24 / 0.66) 30%,
+            rgb(8 7 24 / 0.28) 52%,
             transparent 100%
           )`,
         }}
@@ -96,9 +96,9 @@ export function HeroBackground() {
           background: `linear-gradient(
             to bottom,
             transparent 0%,
-            rgb(5 3 11 / 0.55) 52%,
-            rgb(5 3 11 / 0.9) 80%,
-            var(--ei-void) 100%
+            rgb(8 7 24 / 0.42) 52%,
+            rgb(8 7 24 / 0.78) 80%,
+            var(--ei-ink) 100%
           )`,
         }}
       />
