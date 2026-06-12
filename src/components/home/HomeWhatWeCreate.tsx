@@ -21,31 +21,31 @@ const capabilities: Array<{
 }> = [
   {
     variant: "signalBridge",
-    title: "Brand Identity",
+    title: "Identity Systems",
     description:
-      "Identity systems that uncover essence and create emotional resonance.",
+      "Names, visual language, voice, and brand architecture shaped into a coherent world.",
     href: "/identity",
   },
   {
     variant: "focusDial",
-    title: "Digital Experiences",
+    title: "Atmospheric Websites",
     description:
-      "Immersive websites and interfaces that feel like entering a world.",
+      "Digital spaces with cinematic structure, editorial rhythm, and conversion clarity.",
     href: "/worlds",
   },
   {
     variant: "innerTide",
-    title: "Narrative Architecture",
+    title: "Narrative Direction",
     description:
-      "Story systems that bring coherence, clarity, and transformational depth.",
+      "Messaging, story logic, and positioning that make the work easier to understand.",
     href: "/sessions",
   },
   {
     variant: "quietAxis",
-    title: "Creative Direction",
+    title: "Creative Systems",
     description:
-      "Atmospheric direction that aligns every detail with the bigger vision.",
-    href: "/works",
+      "Reusable frameworks, prompts, and direction kits for building with consistency.",
+    href: "/systems",
   },
 ];
 
@@ -53,7 +53,7 @@ export function WhatWeCreate() {
   return (
     <Section
       spacing="none"
-      className="relative overflow-hidden pt-6 pb-2 md:pt-8 md:pb-4"
+      className="relative overflow-hidden pt-5 pb-1 md:pt-8 md:pb-4"
     >
       <div
         aria-hidden="true"
@@ -75,7 +75,7 @@ export function WhatWeCreate() {
         >
           <motion.div
             variants={driftUp}
-            className="mb-8 flex items-center gap-3 md:mb-10"
+            className="mb-7 flex items-center gap-3 md:mb-10"
           >
             <span className="ei-type-label">What We Create</span>
 
@@ -88,7 +88,7 @@ export function WhatWeCreate() {
             />
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-5 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-5 lg:grid-cols-4">
             {capabilities.map((cap) => (
               <motion.article key={cap.title} variants={driftUp}>
                 <Link
@@ -96,19 +96,19 @@ export function WhatWeCreate() {
                   className="ei-card ei-card-soft ei-card-interactive ei-card-capability group flex h-full flex-col motion-reduce:transform-none"
                   aria-label={`Explore ${cap.title}`}
                 >
-                  <div className="ei-card-capability-icon">
-                    <OrbitalVisual variant={cap.variant} size={72} />
+                  <div className="ei-card-capability-icon mb-5 md:mb-7">
+                    <OrbitalVisual variant={cap.variant} size={68} />
                   </div>
 
                   <h3 className="ei-card-title mb-3">{cap.title}</h3>
 
-                  <p className="ei-card-description mb-6 flex-1">
+                  <p className="ei-card-description mb-5 flex-1 md:mb-6">
                     {cap.description}
                   </p>
 
                   <span className="ei-card-action">
-  Explore <span className="ei-card-action-arrow">→</span>
-</span>
+                    Explore <span className="ei-card-action-arrow">→</span>
+                  </span>
                 </Link>
               </motion.article>
             ))}

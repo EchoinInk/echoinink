@@ -23,14 +23,14 @@ const systems: Array<{
   {
     variant: "vectorLattice",
     title: "Identity Canvas",
-    description: "Map your essence, influence, and emotional positioning.",
+    description: "Map essence, audience tension, tone, and emotional position.",
     meta: "Framework",
     href: "/systems",
   },
   {
     variant: "prismMirror",
     title: "Founder Reflection",
-    description: "A guided system for clarity, identity, and next alignment.",
+    description: "Clarify what you are building, why it matters, and what changes next.",
     meta: "Reflective Tool",
     href: "/systems",
   },
@@ -38,7 +38,7 @@ const systems: Array<{
     variant: "synthesisStar",
     title: "Narrative Architect",
     description:
-      "Build stories that hold meaning, tension, and transformation.",
+      "Build story systems with meaning, contrast, sequence, and transformation.",
     meta: "Framework",
     href: "/systems",
   },
@@ -46,14 +46,14 @@ const systems: Array<{
     variant: "chorusCore",
     title: "Identity GPT",
     description:
-      "An AI companion for identity clarity and narrative direction.",
+      "A guided AI companion for voice, positioning, and creative direction.",
     meta: "GPT System",
     href: "/systems",
   },
   {
     variant: "haloGate",
     title: "Atmosphere UI Kit",
-    description: "Cinematic UI components for immersive digital worlds.",
+    description: "Cinematic interface components for expressive digital worlds.",
     meta: "UI System",
     href: "/systems",
   },
@@ -63,7 +63,7 @@ export function EmergingSystems() {
   return (
     <Section
       spacing="none"
-      className="relative overflow-hidden pt-6 pb-0 md:pt-8 md:pb-0"
+      className="relative overflow-hidden pt-5 pb-0 md:pt-8 md:pb-0"
     >
       <div
         aria-hidden="true"
@@ -85,7 +85,7 @@ export function EmergingSystems() {
         >
           <motion.div
             variants={driftUp}
-            className="mb-8 flex items-center justify-between md:mb-10"
+            className="mb-7 flex items-start justify-between gap-5 md:mb-10 md:items-center"
           >
             <div className="flex items-center gap-3">
               <span className="ei-type-label">Our Systems</span>
@@ -101,7 +101,7 @@ export function EmergingSystems() {
 
             <Link
               to="/systems"
-              className="group ei-link-subtle inline-flex items-center gap-2"
+              className="ei-link-subtle group inline-flex items-center gap-2 text-right text-[0.7rem] tracking-[0.14em] uppercase md:text-[0.75rem]"
             >
               Explore All Systems
               <span className="transition-transform duration-500 group-hover:translate-x-1">
@@ -110,7 +110,7 @@ export function EmergingSystems() {
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-4 lg:grid-cols-5">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-5">
             {systems.map((system) => (
               <motion.article key={system.title} variants={driftUp}>
                 <Link
@@ -121,11 +121,11 @@ export function EmergingSystems() {
                   <div className="ei-card-system-glow" aria-hidden="true" />
 
                   <div className="ei-card-system-inner">
-                    <div className="mb-3 flex h-14 items-center justify-center">
+                    <div className="mb-2 flex h-12 items-center justify-center md:mb-3 md:h-14">
                       <OrbitalVisual
                         variant={system.variant}
-                        size={52}
-                        className="opacity-95"
+                        size={50}
+                        className="opacity-95 md:size-[52px]"
                       />
                     </div>
 
