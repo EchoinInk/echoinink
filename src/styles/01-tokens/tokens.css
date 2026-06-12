@@ -50,16 +50,16 @@
     --ei-color-surface-glass: rgba(227, 216, 253, 0.055);
     --ei-color-surface-scrim: rgba(5, 3, 11, 0.72);
 
-    --ei-color-text-primary: rgba(247, 245, 250, 0.96);
-    --ei-color-text-secondary: rgba(227, 216, 253, 0.78);
-    --ei-color-text-tertiary: rgba(227, 216, 253, 0.58);
-    --ei-color-text-muted: rgba(227, 216, 253, 0.42);
-    --ei-color-text-faint: rgba(227, 216, 253, 0.28);
+    --ei-color-text-primary: #f4eeff;
+    --ei-color-text-secondary: #d9cff6;
+    --ei-color-text-tertiary: #c3b2e4;
+    --ei-color-text-muted: #b4a1d7;
+    --ei-color-text-faint: #9489b7;
 
     --ei-type-color-primary: var(--ei-color-text-primary);
     --ei-type-color-secondary: var(--ei-color-text-secondary);
     --ei-type-color-tertiary: var(--ei-color-text-tertiary);
-    --ei-type-color-muted: var(--ei-color-text-tertiary);
+    --ei-type-color-muted: var(--ei-color-text-muted);
 
     --ei-color-text-accent: var(--ei-halo-blue);
     --ei-color-text-accent-secondary: var(--ei-soft-neon);
@@ -68,19 +68,19 @@
 
     --ei-card-action-text: var(--ei-color-text-tertiary);
     --ei-card-action-text-hover: var(--ei-color-text-accent);
-    --ei-header-text: rgb(var(--ei-ice-white-rgb) / 0.72);
-    --ei-header-text-hover: rgb(var(--ei-ice-white-rgb) / 0.96);
-    --ei-header-text-active: rgb(var(--ei-halo-blue-rgb) / 0.95);
+    --ei-header-text: var(--ei-color-text-secondary);
+    --ei-header-text-hover: var(--ei-color-text-primary);
+    --ei-header-text-active: var(--ei-color-text-accent);
     --ei-header-text-muted: var(--ei-color-text-tertiary);
 
-    --ei-button-text-primary: rgb(var(--ei-ice-white-rgb) / 0.94);
-    --ei-button-text-primary-hover: rgb(var(--ei-ice-white-rgb) / 1);
+    --ei-button-text-primary: var(--ei-color-text-primary);
+    --ei-button-text-primary-hover: var(--ei-color-text-primary);
 
-    --ei-button-text-secondary: rgb(var(--ei-ice-white-rgb) / 0.72);
-    --ei-button-text-secondary-hover: rgb(var(--ei-ice-white-rgb) / 0.92);
+    --ei-button-text-secondary: var(--ei-color-text-secondary);
+    --ei-button-text-secondary-hover: var(--ei-color-text-primary);
 
-    --ei-button-text-tertiary: rgb(var(--ei-ice-white-rgb) / 0.56);
-    --ei-button-text-tertiary-hover: rgb(var(--ei-ice-white-rgb) / 0.86);
+    --ei-button-text-tertiary: var(--ei-color-text-tertiary);
+    --ei-button-text-tertiary-hover: var(--ei-color-text-secondary);
 
     --ei-color-border-hairline: rgba(227, 216, 253, 0.08);
     --ei-color-border-soft: rgba(227, 216, 253, 0.12);
