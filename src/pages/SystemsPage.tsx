@@ -22,7 +22,7 @@ import {
   systemsCategories,
   systemsClosing,
   systemsHero,
-  systemsUseCases
+  systemsUseCases,
 } from "@/data/systemsContent";
 import {
   blurEmergence,
@@ -30,32 +30,62 @@ import {
   fadeSoft,
   staggerContainer,
   STAGGER,
-  VIEWPORT
+  VIEWPORT,
 } from "@/lib/motion-cinematic";
 
 function scrollToSystems() {
   const systemsSection = document.getElementById("systems-categories");
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
   systemsSection?.scrollIntoView({
     behavior: prefersReducedMotion ? "auto" : "smooth",
-    block: "start"
+    block: "start",
   });
 }
 
 function SystemsHeroArchitecture() {
   return (
     <div className="ei-systems-hero-architecture" aria-hidden="true">
+      <span className="ei-systems-hero-blueprint-grid" />
+      <span className="ei-systems-hero-blueprint-glow" />
+
+      <span className="ei-systems-hero-framework-card ei-systems-hero-framework-card-primary">
+        <span>Framework</span>
+        <strong>Signal → Structure → Output</strong>
+      </span>
+
+      <span className="ei-systems-hero-framework-card ei-systems-hero-framework-card-secondary">
+        <span>Module map</span>
+        <strong>Tools / Prompts / Direction</strong>
+      </span>
+
       <span className="ei-systems-hero-orbit ei-systems-hero-orbit-one" />
       <span className="ei-systems-hero-orbit ei-systems-hero-orbit-two" />
       <span className="ei-systems-hero-orbit ei-systems-hero-orbit-three" />
+
+      <span className="ei-systems-hero-line ei-systems-hero-line-one" />
+      <span className="ei-systems-hero-line ei-systems-hero-line-two" />
+      <span className="ei-systems-hero-line ei-systems-hero-line-three" />
+      <span className="ei-systems-hero-line ei-systems-hero-line-four" />
+
       <span className="ei-systems-hero-node ei-systems-hero-node-core">
         <OrbitalVisual variant="vectorLattice" size={96} />
       </span>
-      <span className="ei-systems-hero-node ei-systems-hero-node-foundation">Foundation</span>
-      <span className="ei-systems-hero-node ei-systems-hero-node-tools">Tools</span>
-      <span className="ei-systems-hero-node ei-systems-hero-node-direction">Direction</span>
-      <span className="ei-systems-hero-node ei-systems-hero-node-output">Output</span>
+
+      <span className="ei-systems-hero-node ei-systems-hero-node-foundation">
+        Foundation
+      </span>
+      <span className="ei-systems-hero-node ei-systems-hero-node-tools">
+        Tools
+      </span>
+      <span className="ei-systems-hero-node ei-systems-hero-node-direction">
+        Direction
+      </span>
+      <span className="ei-systems-hero-node ei-systems-hero-node-output">
+        Output
+      </span>
     </div>
   );
 }
@@ -87,7 +117,11 @@ export function SystemsPage() {
         contentClassName="ei-systems-hero-content"
         actions={
           <>
-            <Button to={systemsHero.primaryCta.href} variant="primary" onClick={scrollToSystems}>
+            <Button
+              to={systemsHero.primaryCta.href}
+              variant="primary"
+              onClick={scrollToSystems}
+            >
               {systemsHero.primaryCta.label}
             </Button>
             <Button to={systemsHero.secondaryCta.href} variant="tertiary">
@@ -100,7 +134,7 @@ export function SystemsPage() {
       <Section
         id="systems-categories"
         spacing="none"
-        className="ei-systems-section ei-systems-categories"
+        className="ei-systems-section ei-systems-section-anchor ei-systems-categories"
       >
         <ContentFrame width="standard" gutters>
           <motion.div
@@ -139,9 +173,11 @@ export function SystemsPage() {
                       </IconWell>
                       <span>{String(index + 1).padStart(2, "0")}</span>
                     </div>
+
                     <p className="ei-systems-category-layer">{category.layer}</p>
                     <h3>{category.title}</h3>
                     <p>{category.description}</p>
+
                     <dl className="ei-systems-category-facts">
                       <div>
                         <dt>Best for</dt>
@@ -152,6 +188,7 @@ export function SystemsPage() {
                         <dd>{category.output}</dd>
                       </div>
                     </dl>
+
                     <ul>
                       {category.includes.map((item) => (
                         <li key={item}>{item}</li>
@@ -168,7 +205,7 @@ export function SystemsPage() {
       <Section
         id="featured-system"
         spacing="none"
-        className="ei-systems-section ei-systems-featured-section"
+        className="ei-systems-section ei-systems-section-anchor ei-systems-featured-section"
       >
         <ContentFrame width="standard" gutters>
           <motion.div
@@ -178,12 +215,24 @@ export function SystemsPage() {
             viewport={VIEWPORT.normal}
           >
             <motion.div variants={fadeSoft}>
-              <EchoCard variant="offer" padding="none" className="ei-systems-featured">
+              <EchoCard
+                variant="offer"
+                padding="none"
+                className="ei-systems-featured"
+              >
                 <div className="ei-systems-featured-copy">
                   <SectionLabel label="Featured system" index="03" />
-                  <p className="ei-systems-featured-category">{featuredSystem.category}</p>
-                  <motion.h2 variants={blurEmergence}>{featuredSystem.title}</motion.h2>
-                  <p className="ei-systems-featured-description">{featuredSystem.description}</p>
+                  <p className="ei-systems-featured-category">
+                    {featuredSystem.category}
+                  </p>
+
+                  <motion.h2 variants={blurEmergence}>
+                    {featuredSystem.title}
+                  </motion.h2>
+
+                  <p className="ei-systems-featured-description">
+                    {featuredSystem.description}
+                  </p>
 
                   <dl className="ei-systems-featured-facts">
                     <div>
@@ -218,14 +267,21 @@ export function SystemsPage() {
 
                 <div className="ei-systems-featured-media" aria-hidden="true">
                   <img src={systemsCTAImage} alt="" loading="lazy" />
+
                   <div className="ei-systems-featured-map">
-                    <span className="ei-systems-map-node ei-systems-map-node-signal">Signal</span>
+                    <span className="ei-systems-map-node ei-systems-map-node-signal">
+                      Signal
+                    </span>
                     <span className="ei-systems-map-node ei-systems-map-node-core">
                       Identity
                       <strong>Clarity</strong>
                     </span>
-                    <span className="ei-systems-map-node ei-systems-map-node-voice">Voice</span>
-                    <span className="ei-systems-map-node ei-systems-map-node-world">World</span>
+                    <span className="ei-systems-map-node ei-systems-map-node-voice">
+                      Voice
+                    </span>
+                    <span className="ei-systems-map-node ei-systems-map-node-world">
+                      World
+                    </span>
                     <span className="ei-systems-map-line ei-systems-map-line-one" />
                     <span className="ei-systems-map-line ei-systems-map-line-two" />
                     <span className="ei-systems-map-line ei-systems-map-line-three" />
@@ -237,7 +293,10 @@ export function SystemsPage() {
         </ContentFrame>
       </Section>
 
-      <Section spacing="none" className="ei-systems-section ei-systems-modules">
+      <Section
+        spacing="none"
+        className="ei-systems-section ei-systems-section-anchor ei-systems-modules"
+      >
         <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -263,7 +322,11 @@ export function SystemsPage() {
                   variants={driftUp}
                   className={index === 0 ? "ei-systems-module-featured" : undefined}
                 >
-                  <EchoCard variant="interactive" padding="none" className="ei-systems-module-card">
+                  <EchoCard
+                    variant="interactive"
+                    padding="none"
+                    className="ei-systems-module-card"
+                  >
                     <Link to="/contact" aria-label={`Enquire about ${system.title}`}>
                       <div className="ei-systems-module-media">
                         <img
@@ -273,13 +336,16 @@ export function SystemsPage() {
                           style={{ objectPosition: system.imagePosition }}
                         />
                       </div>
+
                       <div className="ei-systems-module-copy">
                         <div className="ei-systems-module-meta">
                           <span>{system.type}</span>
                           <span>{system.status}</span>
                         </div>
+
                         <h3>{system.title}</h3>
                         <p>{system.description}</p>
+
                         <dl>
                           <div>
                             <dt>Best for</dt>
@@ -290,6 +356,7 @@ export function SystemsPage() {
                             <dd>{system.output}</dd>
                           </div>
                         </dl>
+
                         <div className="ei-systems-module-action">
                           <span>{system.price}</span>
                           <span>
@@ -306,7 +373,10 @@ export function SystemsPage() {
         </ContentFrame>
       </Section>
 
-      <Section spacing="none" className="ei-systems-section ei-systems-use-cases">
+      <Section
+        spacing="none"
+        className="ei-systems-section ei-systems-section-anchor ei-systems-use-cases"
+      >
         <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -326,7 +396,11 @@ export function SystemsPage() {
             </motion.div>
 
             <motion.div variants={fadeSoft}>
-              <EchoCard variant="index" padding="none" className="ei-systems-use-case-table">
+              <EchoCard
+                variant="index"
+                padding="none"
+                className="ei-systems-use-case-table"
+              >
                 {systemsUseCases.map((useCase) => (
                   <div key={useCase.audience} className="ei-systems-use-case-row">
                     <h3>{useCase.audience}</h3>
@@ -340,7 +414,10 @@ export function SystemsPage() {
         </ContentFrame>
       </Section>
 
-      <Section spacing="none" className="ei-systems-section ei-systems-pathway">
+      <Section
+        spacing="none"
+        className="ei-systems-section ei-systems-section-anchor ei-systems-pathway"
+      >
         <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
