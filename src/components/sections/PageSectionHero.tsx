@@ -84,7 +84,7 @@ export function PageSectionHero({
           className={`h-full w-full object-cover object-center ${
             isStudio ? "saturate-[0.98] brightness-[0.96] md:object-[70%_50%]" : "saturate-[0.86] md:object-[72%_50%]"
           }`}
-          fetchpriority="high"
+          fetchPriority="high"
         />
       </picture>
 
