@@ -81,7 +81,7 @@ export function ProductHero({
           {eyebrow && (
             <motion.span
               variants={driftUp}
-              className="font-structural text-[10px] tracking-[0.28em] uppercase text-white/45 block mb-4"
+              className="font-structural text-[10px] tracking-[0.28em] uppercase text-[var(--ei-color-text-tertiary)] block mb-4"
             >
               {eyebrow}
             </motion.span>
@@ -98,7 +98,7 @@ export function ProductHero({
           {subline && (
             <motion.p
               variants={driftUp}
-              className="font-structural text-[14px] md:text-[15px] text-white/72 leading-[1.65] max-w-[52ch] mb-3"
+              className="font-structural text-[14px] md:text-[15px] text-[var(--ei-color-text-secondary)] leading-[1.65] max-w-[52ch] mb-3"
             >
               {subline}
             </motion.p>
@@ -107,7 +107,7 @@ export function ProductHero({
           {description && (
             <motion.p
               variants={driftUp}
-              className="font-structural text-[12px] md:text-[13px] text-white/50 leading-[1.75] max-w-[44ch] mb-8"
+              className="font-structural text-[12px] md:text-[13px] text-[var(--ei-color-text-tertiary)] leading-[1.75] max-w-[44ch] mb-8"
             >
               {description}
             </motion.p>

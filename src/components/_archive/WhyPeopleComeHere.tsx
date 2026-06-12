@@ -71,7 +71,7 @@ export function WhyPeopleComeHere() {
               <motion.span
                 key={reason}
                 variants={driftUp}
-                className="font-editorial italic text-[1rem] md:text-[1.1rem] text-white/60 hover:text-white/80 transition-colors duration-500"
+                className="font-editorial italic text-[1rem] md:text-[1.1rem] text-[var(--ei-color-text-secondary)] hover:text-[var(--ei-color-text-primary)] transition-colors duration-500"
                 style={{ transitionDelay: `${i * 40}ms` }}
               >
                 — {reason}

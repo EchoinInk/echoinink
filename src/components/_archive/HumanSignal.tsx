@@ -46,11 +46,11 @@ export function HumanSignal() {
           <motion.p
             variants={blurEmergence}
             transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.08 }}
-            className="font-editorial text-[1.35rem] md:text-[1.65rem] text-white/75 leading-[1.45] tracking-tight"
+            className="font-editorial text-[1.35rem] md:text-[1.65rem] text-[var(--ei-color-text-primary)] leading-[1.45] tracking-tight"
             style={{ letterSpacing: '-0.01em' }}
           >
             I create worlds for people who feel too much and think too deeply.
-            <span className="block mt-3 text-white/90">
+            <span className="block mt-3 text-[var(--ei-color-text-secondary)]">
               If that's you, you're home.
             </span>
           </motion.p>
@@ -59,7 +59,7 @@ export function HumanSignal() {
           <motion.span
             variants={driftUp}
             transition={{ duration: DURATION.slow, ease: EASE_LUXURY, delay: 0.14 }}
-            className="font-structural text-[10px] tracking-[0.22em] uppercase text-white/50 block pt-2"
+            className="font-structural text-[10px] tracking-[0.22em] uppercase text-[var(--ei-color-text-tertiary)] block pt-2"
           >
             Echo in Ink
           </motion.span>

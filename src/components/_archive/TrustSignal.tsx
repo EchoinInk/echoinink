@@ -43,8 +43,7 @@ export function TrustSignal() {
         >
           {/* Eyebrow — quiet indicator */}
           <motion.div variants={driftUp} className="text-center mb-8">
-            <span className="font-structural text-[10px] tracking-[0.22em] uppercase text-white/55">
-              Currently shaping
+              <span className="font-structural text-[10px] tracking-[0.22em] uppercase text-[var(--ei-color-text-secondary)]">
             </span>
           </motion.div>
 
@@ -59,10 +58,10 @@ export function TrustSignal() {
                 variants={driftUp}
                 className="group text-center"
               >
-                <span className="font-structural text-[12px] md:text-[13px] tracking-[0.1em] uppercase text-white/65 group-hover:text-white/80 transition-colors duration-500 block">
+                <span className="font-structural text-[12px] md:text-[13px] tracking-[0.1em] uppercase text-[var(--ei-color-text-secondary)] group-hover:text-[var(--ei-color-text-primary)] transition-colors duration-500 block">
                   {type.category}
                 </span>
-                <span className="font-editorial text-[12px] md:text-[13px] italic text-white/50 group-hover:text-white/62 transition-colors duration-500 block mt-1">
+                <span className="font-editorial text-[12px] md:text-[13px] italic text-[var(--ei-color-text-tertiary)] group-hover:text-[var(--ei-color-text-secondary)] transition-colors duration-500 block mt-1">
                   {type.context}
                 </span>
               </motion.div>

@@ -5,11 +5,11 @@
        Single Source of Truth
        ─────────────────────────────────────────────────────────────── */
 
-    --ei-void: #05030b;
-    --ei-ink: #080718;
-    --ei-midnight: #0b0d2a;
+    --ei-void: #05030b; /* Absolute darkest tone, used for the deepest shadows and overlays */
+    --ei-ink: #080718; /* Primary canvas color, used for backgrounds and surfaces */
+    --ei-midnight: #0b0d2a; /* Secondary canvas color, used for surfaces */
 
-    --ei-electric-blue: #0b20f6;
+    --ei-electric-blue: #0b20f6; /* Vibrant accent color, used for primary actions and highlights */
     --ei-halo-blue: #4985fd;
     --ei-violet: #7107ea;
     --ei-echo-magenta: #dd12cb;

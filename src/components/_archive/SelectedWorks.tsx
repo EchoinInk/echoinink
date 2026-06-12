@@ -252,7 +252,7 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
             transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
             className="flex justify-center mt-14 md:mt-20"
           >
-            <button className="ei-focus-glow ei-gradient-border-btn relative inline-flex items-center gap-3 px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-white/70 transition-all duration-500 hover:text-white hover:scale-[1.02] focus-visible:text-white focus-visible:scale-[1.02]">
+            <button className="ei-focus-glow ei-gradient-border-btn relative inline-flex items-center gap-3 px-8 py-3.5 font-structural text-[11px] tracking-[0.2em] uppercase text-[var(--ei-color-text-secondary)] transition-all duration-500 hover:text-[var(--ei-color-text-primary)] hover:scale-[1.02] focus-visible:text-[var(--ei-color-text-primary)] focus-visible:scale-[1.02]">
               <span className="relative z-10">View Selected Works</span>
             </button>
           </motion.div>
