@@ -47,7 +47,7 @@ export function WhyPeopleComeHere() {
           {/* Eyebrow */}
           <motion.span
             variants={driftUp}
-            className="font-structural text-[9px] tracking-[0.32em] uppercase text-white/60 block mb-6"
+            className="font-structural text-[9px] tracking-[0.32em] uppercase text-[var(--ei-color-text-secondary)] block mb-6"
           >
             People come to Echo in Ink for
           </motion.span>

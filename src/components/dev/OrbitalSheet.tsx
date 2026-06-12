@@ -21,7 +21,7 @@ const variants: OrbitalVariant[] = [
 export default function OrbitalsSheet() {
   return (
     <div className="mx-auto max-w-[1200px] p-10">
-      <h1 className="mb-10 text-3xl font-semibold text-white/90">
+      <h1 className="mb-10 text-3xl font-semibold text-[var(--ei-color-text-primary)]">
         Orbital Variants Sheet
       </h1>
 
@@ -34,7 +34,7 @@ export default function OrbitalsSheet() {
             <div className="brightness-125 contrast-125">
               <OrbitalVisual variant={variant} size={110} />
             </div>
-            <span className="text-xs text-white/70">{variant}</span>
+            <span className="text-xs text-[var(--ei-color-text-secondary)]">{variant}</span>
           </div>
         ))}
       </div>

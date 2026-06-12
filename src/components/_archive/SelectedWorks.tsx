@@ -157,7 +157,7 @@ function WorkPanel({
       {/* Text overlay */}
       <div className={`absolute bottom-0 left-0 right-0 ${padClass}`}>
         {/* Description — revealed on hover, slides up into caption */}
-        <p className="font-structural text-[11px] md:text-[12px] text-white/45 leading-[1.78] mb-3 max-w-xs opacity-0 translate-y-1 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:translate-y-0">
+        <p className="font-structural text-[11px] md:text-[12px] text-[var(--ei-color-text-tertiary)] leading-[1.78] mb-3 max-w-xs opacity-0 translate-y-1 transition-all duration-700 ease-out group-hover:opacity-100 group-hover:translate-y-0">
           {work.description}
         </p>
 
@@ -168,10 +168,10 @@ function WorkPanel({
 
         {/* Editorial subtitle — category + index on one credited line */}
         <div className="flex items-baseline gap-3 mt-2">
-          <span className="font-structural text-[9px] tracking-[0.22em] uppercase text-white/45">
+          <span className="font-structural text-[9px] tracking-[0.22em] uppercase text-[var(--ei-color-text-tertiary)]">
             {work.category}
           </span>
-          <span className="font-structural text-[8px] tracking-[0.2em] text-white/15">
+          <span className="font-structural text-[8px] tracking-[0.2em] text-[var(--ei-color-text-faint)]">
             {work.index}
           </span>
         </div>
@@ -198,7 +198,7 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
             whileInView={{ opacity: 1 }}
             viewport={VIEWPORT.normal}
             transition={{ duration: DURATION.normal, ease: EASE }}
-            className="font-structural text-[10px] tracking-[0.38em] uppercase text-white/20"
+            className="font-structural text-[10px] tracking-[0.38em] uppercase text-[var(--ei-color-text-faint)]"
           >
             Selected Works
           </motion.span>
@@ -207,7 +207,7 @@ export function SelectedWorks({ hideViewAll = false }: { hideViewAll?: boolean }
             whileInView={{ opacity: 1 }}
             viewport={VIEWPORT.normal}
             transition={{ duration: DURATION.normal, ease: EASE, delay: 0.1 }}
-            className="font-structural text-[10px] tracking-[0.25em] text-white/30"
+            className="font-structural text-[10px] tracking-[0.25em] text-[var(--ei-color-text-tertiary)]"
           >
             2024 — 2025
           </motion.span>

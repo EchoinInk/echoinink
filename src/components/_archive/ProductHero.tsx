@@ -89,7 +89,7 @@ export function ProductHero({
 
           <motion.h2
             variants={blurEmergence}
-            className="font-editorial text-[2.2rem] md:text-[3rem] lg:text-[3.5rem] text-white/90 leading-[1.08] tracking-tight mb-5"
+            className="font-editorial text-[2.2rem] md:text-[3rem] lg:text-[3.5rem] text-[var(--ei-color-text-primary)] leading-[1.08] tracking-tight mb-5"
             style={{ letterSpacing: '-0.02em' }}
           >
             {headline}
