@@ -105,7 +105,7 @@ export function EcosystemPathways() {
                   <div className="relative z-10 grid md:grid-cols-12 gap-4 md:gap-8 items-center px-6 py-7 md:px-10 md:py-9">
                     {/* Number tag */}
                     <div className="md:col-span-1 hidden md:block">
-                      <span className="font-structural text-[10px] tracking-[0.22em] text-white/30">
+                      <span className="font-structural text-[10px] tracking-[0.22em] text-[var(--ei-color-text-tertiary)]">
                         {layer.tag}
                       </span>
                     </div>
@@ -114,7 +114,7 @@ export function EcosystemPathways() {
                     <div className="md:col-span-2">
                       <motion.span
                         variants={blurEmergence}
-                        className="font-structural text-[11px] md:text-[12px] tracking-[0.2em] uppercase text-white/55 group-hover:text-white/70 transition-colors duration-500 block"
+                        className="font-structural text-[11px] md:text-[12px] tracking-[0.2em] uppercase text-[var(--ei-color-text-secondary)] group-hover:text-[var(--ei-color-text-primary)] transition-colors duration-500 block"
                       >
                         {layer.label}
                       </motion.span>
@@ -130,17 +130,17 @@ export function EcosystemPathways() {
 
                     {/* Content */}
                     <div className="md:col-span-6">
-                      <p className="font-editorial text-[1.05rem] md:text-[1.2rem] text-white/80 group-hover:text-white/92 transition-colors duration-500 leading-[1.4] mb-2">
+                      <p className="font-editorial text-[1.05rem] md:text-[1.2rem] text-[var(--ei-color-text-primary)] group-hover:text-[var(--ei-color-text-primary)] transition-colors duration-500 leading-[1.4] mb-2">
                         {layer.headline}
                       </p>
-                      <p className="font-structural text-[12px] md:text-[13px] text-white/48 group-hover:text-white/62 transition-colors duration-500 leading-[1.72]">
+                      <p className="font-structural text-[12px] md:text-[13px] text-[var(--ei-color-text-secondary)] group-hover:text-[var(--ei-color-text-primary)] transition-colors duration-500 leading-[1.72]">
                         {layer.description}
                       </p>
                     </div>
 
                     {/* Arrow */}
                     <div className="md:col-span-2 flex md:justify-end items-center">
-                      <span className="font-structural text-[11px] tracking-[0.16em] text-white/30 group-hover:text-white/55 transition-all duration-500 group-hover:translate-x-1">
+                      <span className="font-structural text-[11px] tracking-[0.16em] text-[var(--ei-color-text-tertiary)] group-hover:text-[var(--ei-color-text-secondary)] transition-all duration-500 group-hover:translate-x-1">
                         Explore →
                       </span>
                     </div>

@@ -37,7 +37,7 @@ export function HumanSignal() {
           <motion.span
             variants={driftUp}
             transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
-            className="font-editorial italic text-[2rem] text-white/20 leading-none block"
+            className="font-editorial italic text-[2rem] text-[var(--ei-color-text-tertiary)] leading-none block"
           >
             "
           </motion.span>

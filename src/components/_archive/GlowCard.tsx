@@ -146,13 +146,13 @@ export default function GlowCard({
           {/* CONTENT - anchored bottom-left */}
           <div className="absolute inset-0 z-10 flex flex-col justify-end p-8 md:p-10">
             <div className="max-w-[36ch]">
-              <h3 className="font-serif text-2xl md:text-[1.75rem] font-light tracking-tight text-white/95 leading-tight">
+              <h3 className="font-serif text-2xl md:text-[1.75rem] font-light tracking-tight text-[var(--ei-color-text-primary)] leading-tight">
                 {title}
               </h3>
-              <p className="text-sm leading-relaxed text-white/65 mt-6 whitespace-pre-line">
+              <p className="text-sm leading-relaxed text-[var(--ei-color-text-secondary)] mt-6 whitespace-pre-line">
                 {description}
               </p>
-              <span className="block mt-5 text-[11px] uppercase tracking-[0.22em] text-white/50 group-hover:text-white/80 transition-colors duration-500">
+              <span className="block mt-5 text-[11px] uppercase tracking-[0.22em] text-[var(--ei-color-text-tertiary)] group-hover:text-[var(--ei-color-text-primary)] transition-colors duration-500">
                 Explore →
               </span>
             </div>
@@ -192,17 +192,17 @@ export default function GlowCard({
           <div className="absolute inset-x-0 bottom-0 z-10 px-8 md:px-10 pb-10 md:pb-12 pt-24">
             <div className="space-y-4">
               <h3
-                className="font-serif text-[1.75rem] md:text-[2rem] font-light leading-[1.1] tracking-tight text-white/95"
+                className="font-serif text-[1.75rem] md:text-[2rem] font-light leading-[1.1] tracking-tight text-[var(--ei-color-text-primary)]"
                 style={{ letterSpacing: '-0.02em' }}
               >
                 {title}
               </h3>
 
-              <p className="max-w-[32ch] text-[14px] pt-6 leading-[1.8] text-white/72 whitespace-pre-line">
+              <p className="max-w-[32ch] text-[14px] pt-6 leading-[1.8] text-[var(--ei-color-text-secondary)] whitespace-pre-line">
                 {description}
               </p>
 
-              <span className="block pt-8 text-[11px] uppercase tracking-[0.28em] text-white/55 transition-colors duration-500 group-hover:text-white/85">
+              <span className="block pt-8 text-[11px] uppercase tracking-[0.28em] text-[var(--ei-color-text-tertiary)] transition-colors duration-500 group-hover:text-[var(--ei-color-text-primary)]">
                 Explore →
               </span>
             </div>

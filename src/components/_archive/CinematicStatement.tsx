@@ -57,7 +57,7 @@ export function CinematicStatement() {
           {/* Eyebrow — quiet indicator of tonal shift */}
           <motion.span
             variants={driftUp}
-            className="font-structural text-[9px] tracking-[0.32em] uppercase text-white/45 block"
+            className="font-structural text-[9px] tracking-[0.32em] uppercase text-[var(--ei-color-text-tertiary)] block"
           >
             A different frequency
           </motion.span>
@@ -65,17 +65,17 @@ export function CinematicStatement() {
           {/* Main statement — the emotional anchor */}
           <motion.h2
             variants={blurEmergence}
-            className="font-editorial text-[1.75rem] md:text-[2.5rem] lg:text-[3rem] text-white/80 leading-[1.25] tracking-tight"
+            className="font-editorial text-[1.75rem] md:text-[2.5rem] lg:text-[3rem] text-[var(--ei-color-text-primary)] leading-[1.25] tracking-tight"
             style={{ letterSpacing: '-0.02em' }}
           >
             <span className="block mb-2">We do not decorate brands.</span>
-            <span className="block text-white/55">We reveal what they are becoming.</span>
+            <span className="block text-[var(--ei-color-text-secondary)]">We reveal what they are becoming.</span>
           </motion.h2>
 
           {/* Supporting line — the philosophy reinforcement */}
           <motion.p
             variants={driftUp}
-            className="font-structural text-[12px] md:text-[13px] text-white/65 leading-[1.8] max-w-[48ch] mx-auto pt-4"
+            className="font-structural text-[12px] md:text-[13px] text-[var(--ei-color-text-secondary)] leading-[1.8] max-w-[48ch] mx-auto pt-4"
           >
             Every project begins with a question: what truth wants to emerge through this work?
           </motion.p>
