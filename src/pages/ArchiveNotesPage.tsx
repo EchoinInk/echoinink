@@ -8,7 +8,7 @@ import { ContentFrame } from "@/components/layout/ContentFrame";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
-import { EchoHero } from "@/components/sections/EchoHero";
+import { PageSectionHero } from "@/components/sections/PageSectionHero";
 import { Button } from "@/components/ui/Button";
 import { EchoCard } from "@/components/ui/EchoCard";
 import { IconWell } from "@/components/ui/IconWell";
@@ -60,39 +60,21 @@ export function ArchiveNotesPage() {
         />
       </Helmet>
 
-      <EchoHero
-        variant="standard"
-        eyebrow="Archive · Notes"
-        index="01"
-        title={
-          <>
-            Fragments from <em>the studio.</em>
-          </>
-        }
-        description="Short observations on identity, atmosphere, systems, memory, and the quiet structures beneath creative work."
-        kicker="Ideas kept close to the moment they arrived."
-        backgroundImage={archiveImageDesktop}
-        mobileBackgroundImage={archiveImageMobile}
-        imageAlt=""
-        headingId="notes-hero-heading"
-        className="ei-notes-hero"
-        actions={
-          <>
-            <Button
-              onClick={() => scrollToSection("featured-note")}
-              variant="primary"
-            >
-              Read the featured note <span aria-hidden="true">↓</span>
-            </Button>
-            <Button
-              onClick={() => scrollToSection("recent-notes")}
-              variant="tertiary"
-            >
-              Browse notes <span aria-hidden="true">→</span>
-            </Button>
-          </>
-        }
-      />
+     <PageSectionHero
+  eyebrow="Notes"
+  title="Fragments from the studio."
+  italicWord="studio."
+  description="Short essays, observations, and working fragments on identity, atmosphere, systems, and emotional design."
+  image={archiveImageDesktop}
+  mobileImage={archiveImageMobile}
+  imageAlt="Dark cinematic editorial notebook scene with annotated fragments and a soft luminous ribbon"
+  align="left"
+  variant="intimate"
+  ctaLabel="Read the latest note"
+  ctaHref="#latest-note"
+  secondaryCtaLabel="Work with the studio"
+  secondaryCtaHref="/contact"
+/>
 
       <Section
         id="featured-note"

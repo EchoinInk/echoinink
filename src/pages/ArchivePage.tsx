@@ -8,7 +8,7 @@ import { ContentFrame } from '@/components/layout/ContentFrame';
 import { PageShell } from '@/components/layout/PageShell';
 import { Section } from '@/components/layout/Section';
 import { CTASection } from '@/components/sections/CTASection';
-import { EchoHero } from '@/components/sections/EchoHero';
+import { PageSectionHero } from '@/components/sections/PageSectionHero';
 import { Button } from '@/components/ui/Button';
 import { EchoCard } from '@/components/ui/EchoCard';
 import { EchoSelect } from '@/components/ui/EchoSelect';
@@ -91,34 +91,21 @@ export function ArchivePage() {
         <meta name="description" content={archiveHero.description} />
       </Helmet>
 
-      <EchoHero
-        variant="archive"
-        eyebrow={archiveHero.eyebrow}
-        index="01"
-        title={
-          <>
-            Thoughts. Notes. <em>Worlds.</em>
-          </>
-        }
-        description={archiveHero.description}
-        kicker="An authored index of ideas in motion."
-        backgroundImage={archiveImageDesktop}
-        mobileBackgroundImage={archiveImageMobile}
-        imageAlt=""
-        headingId="archive-hero-heading"
-        className="ei-archive-hero"
-        contentClassName="ei-archive-hero-content"
-        actions={
-          <>
-            <Button onClick={scrollToArchiveIndex} variant="primary">
-              Browse the Archive <span aria-hidden="true">↓</span>
-            </Button>
-            <Button to="/archive/map" variant="tertiary">
-              Open the index <span aria-hidden="true">→</span>
-            </Button>
-          </>
-        }
-      />
+      <PageSectionHero
+  eyebrow={archiveHero.eyebrow}
+  title="Thoughts. Notes. Worlds."
+  italicWord="Worlds."
+  description={archiveHero.description}
+  image={archiveImageDesktop}
+  mobileImage={archiveImageMobile}
+  imageAlt="Dark cinematic living archive with luminous fragments, constellation threads, and nebula-like ink clouds"
+  align="left"
+  variant="intimate"
+  ctaLabel="Browse the Archive"
+  ctaHref="#archive-index"
+  secondaryCtaLabel="Open the index"
+  secondaryCtaHref="/archive/map"
+/>
 
       <Section
         id="archive-featured"

@@ -9,7 +9,7 @@ import { ContentFrame } from "@/components/layout/ContentFrame";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
-import { EchoHero } from "@/components/sections/EchoHero";
+import { PageSectionHero } from "@/components/sections/PageSectionHero";
 import { Button } from "@/components/ui/Button";
 import { EchoCard } from "@/components/ui/EchoCard";
 import { IconWell } from "@/components/ui/IconWell";
@@ -124,28 +124,20 @@ export function SessionsPage() {
         />
       </Helmet>
 
-      <EchoHero
-        variant="offer"
-        eyebrow="Echo Sessions"
-        title="Clarity before expression."
-        description={sessionsHero.body[0]}
-        backgroundImage={sessionsHeroDesktop}
-        mobileBackgroundImage={sessionsHeroMobile}
-        imageAlt=""
-        headingId="sessions-hero-heading"
-        className="ei-sessions-hero"
-        contentClassName="ei-sessions-hero-content"
-        actions={
-          <>
-            <Button to={sessionsHero.primaryCta.href} variant="primary">
-              Book a session
-            </Button>
-            <Button to="#inside-the-session" variant="tertiary" onClick={scrollToSessionProcess}>
-              See what happens inside <span aria-hidden="true">→</span>
-            </Button>
-          </>
-        }
-      />
+     <PageSectionHero
+  eyebrow="Echo Sessions"
+  title="Clarity before expression."
+  description={sessionsHero.body[0]}
+  image={sessionsHeroDesktop}
+  mobileImage={sessionsHeroMobile}
+  imageAlt="Luminous blue-violet threshold over a dark cinematic horizon"
+  align="left"
+  variant="intimate"
+  ctaLabel="Book a session"
+  ctaHref={sessionsHero.primaryCta.href}
+  secondaryCtaLabel="See what happens inside"
+  secondaryCtaHref="#inside-the-session"
+/>
 
       <Section spacing="none" className="ei-sessions-section ei-sessions-definition">
         <ContentFrame width="standard" gutters>

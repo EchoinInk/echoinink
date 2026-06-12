@@ -9,7 +9,7 @@ import { ContentFrame } from "@/components/layout/ContentFrame";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
-import { EchoHero } from "@/components/sections/EchoHero";
+import { PageSectionHero } from "@/components/sections/PageSectionHero";
 import { Button } from "@/components/ui/Button";
 import { EchoCard } from "@/components/ui/EchoCard";
 import { IconWell } from "@/components/ui/IconWell";
@@ -33,63 +33,6 @@ import {
   VIEWPORT,
 } from "@/lib/motion-cinematic";
 
-function scrollToSystems() {
-  const systemsSection = document.getElementById("systems-categories");
-  const prefersReducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)",
-  ).matches;
-
-  systemsSection?.scrollIntoView({
-    behavior: prefersReducedMotion ? "auto" : "smooth",
-    block: "start",
-  });
-}
-
-function SystemsHeroArchitecture() {
-  return (
-    <div className="ei-systems-hero-architecture" aria-hidden="true">
-      <span className="ei-systems-hero-blueprint-grid" />
-      <span className="ei-systems-hero-blueprint-glow" />
-
-      <span className="ei-systems-hero-framework-card ei-systems-hero-framework-card-primary">
-        <span>Framework</span>
-        <strong>Signal → Structure → Output</strong>
-      </span>
-
-      <span className="ei-systems-hero-framework-card ei-systems-hero-framework-card-secondary">
-        <span>Module map</span>
-        <strong>Tools / Prompts / Direction</strong>
-      </span>
-
-      <span className="ei-systems-hero-orbit ei-systems-hero-orbit-one" />
-      <span className="ei-systems-hero-orbit ei-systems-hero-orbit-two" />
-      <span className="ei-systems-hero-orbit ei-systems-hero-orbit-three" />
-
-      <span className="ei-systems-hero-line ei-systems-hero-line-one" />
-      <span className="ei-systems-hero-line ei-systems-hero-line-two" />
-      <span className="ei-systems-hero-line ei-systems-hero-line-three" />
-      <span className="ei-systems-hero-line ei-systems-hero-line-four" />
-
-      <span className="ei-systems-hero-node ei-systems-hero-node-core">
-        <OrbitalVisual variant="vectorLattice" size={96} />
-      </span>
-
-      <span className="ei-systems-hero-node ei-systems-hero-node-foundation">
-        Foundation
-      </span>
-      <span className="ei-systems-hero-node ei-systems-hero-node-tools">
-        Tools
-      </span>
-      <span className="ei-systems-hero-node ei-systems-hero-node-direction">
-        Direction
-      </span>
-      <span className="ei-systems-hero-node ei-systems-hero-node-output">
-        Output
-      </span>
-    </div>
-  );
-}
-
 export function SystemsPage() {
   return (
     <PageShell atmosphere="works" withTopSpacing={false} className="ei-systems-page">
@@ -98,38 +41,21 @@ export function SystemsPage() {
         <meta name="description" content={systemsHero.description} />
       </Helmet>
 
-      <EchoHero
-        variant="archive"
-        eyebrow={systemsHero.eyebrow}
-        index="01"
-        title={
-          <>
-            Atmosphere, made <em>usable.</em>
-          </>
-        }
-        description={systemsHero.description}
-        backgroundImage={systemsHeroDesktop}
-        mobileBackgroundImage={systemsHeroMobile}
-        imageAlt=""
-        media={<SystemsHeroArchitecture />}
-        headingId="systems-hero-heading"
-        className="ei-systems-hero"
-        contentClassName="ei-systems-hero-content"
-        actions={
-          <>
-            <Button
-              to={systemsHero.primaryCta.href}
-              variant="primary"
-              onClick={scrollToSystems}
-            >
-              {systemsHero.primaryCta.label}
-            </Button>
-            <Button to={systemsHero.secondaryCta.href} variant="tertiary">
-              {systemsHero.secondaryCta.label} <span aria-hidden="true">→</span>
-            </Button>
-          </>
-        }
-      />
+     <PageSectionHero
+  eyebrow={systemsHero.eyebrow}
+  title="Atmosphere, made usable."
+  italicWord="usable."
+  description={systemsHero.description}
+  image={systemsHeroDesktop}
+  mobileImage={systemsHeroMobile}
+  imageAlt="Dark cinematic systems blueprint with luminous signal grids and modular framework lines"
+  align="left"
+  variant="intimate"
+  ctaLabel={systemsHero.primaryCta.label}
+  ctaHref={systemsHero.primaryCta.href}
+  secondaryCtaLabel={systemsHero.secondaryCta.label}
+  secondaryCtaHref={systemsHero.secondaryCta.href}
+/>
 
       <Section
         id="systems-categories"

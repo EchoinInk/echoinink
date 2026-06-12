@@ -7,7 +7,7 @@ import { ContentFrame } from "@/components/layout/ContentFrame";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
-import { EchoHero } from "@/components/sections/EchoHero";
+import { PageSectionHero } from "@/components/sections/PageSectionHero";
 import { Button } from "@/components/ui/Button";
 import { EchoCard } from "@/components/ui/EchoCard";
 import { IconWell } from "@/components/ui/IconWell";
@@ -60,46 +60,25 @@ export function IdentityPage() {
         />
       </Helmet>
 
-      <EchoHero
-        variant="offer"
-        eyebrow={identityHero.eyebrow}
-        index="01"
-        title={
-          <>
-            Every world begins with a <em>feeling.</em>
-          </>
-        }
-        kicker={identityHero.subheading}
-        description={
-          <>
-            {identityHero.body.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </>
-        }
-        actions={
-          <>
-            <Button to={identityHero.primaryCta.href} variant="primary">
-              {identityHero.primaryCta.label}
-            </Button>
-            <Button
-              to={identityHero.secondaryCta.href}
-              variant="tertiary"
-              onClick={scrollToProcess}
-            >
-              {identityHero.secondaryCta.label}{" "}
-              <span aria-hidden="true">→</span>
-            </Button>
-          </>
-        }
-        backgroundImage={identityHeroDesktop}
-        mobileBackgroundImage={identityHeroMobile}
-        imageAlt=""
-        headingId="identity-hero-heading"
-        className="ei-identity-hero"
-        contentClassName="ei-identity-hero-content"
-      />
+      <PageSectionHero
+        eyebrow="01  IDENTITY"
+        title="Every world begins with a feeling."
+        italicWord="feeling."
+        description="Before a name. Before a logo. Before the visuals.
 
+Identity begins as a feeling — an atmosphere waiting to be understood, shaped, and expressed.
+
+I translate that feeling into visual language, rhythm, and voice."
+        image={identityHeroDesktop}
+        mobileImage={identityHeroMobile}
+        imageAlt="Orbital violet identity system over a dark cinematic field"
+        align="left"
+        variant="intimate"
+        ctaLabel="Start an identity project"
+        ctaHref="/contact"
+        secondaryCtaLabel="Explore sessions"
+        secondaryCtaHref="/sessions"
+      />
       <Section
         spacing="none"
         className="ei-identity-section ei-identity-section-anchor ei-identity-orientation"
@@ -297,7 +276,10 @@ export function IdentityPage() {
               <SectionLabel label="The process" index="05" />
               <div>
                 <h2>{identityProcess.heading}</h2>
-                <p>A deliberate progression from instinct to a direction you can use.</p>
+                <p>
+                  A deliberate progression from instinct to a direction you can
+                  use.
+                </p>
               </div>
             </motion.div>
 

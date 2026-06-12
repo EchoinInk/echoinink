@@ -5,7 +5,7 @@ import lumoAtmosphere from "@/assets/imagery/hero/lumo-hero-light-horizon-deskto
 import lumoAtmosphereMobile from "@/assets/imagery/hero/lumo-hero-light-horizon-mobile.webp";
 import { CaseStudyLayout } from "@/components/layout/CaseStudyLayout";
 import { CTASection } from "@/components/sections/CTASection";
-import { EchoHero } from "@/components/sections/EchoHero";
+import { LumoHero } from "@/components/lumo/LumoHero";
 import { Button } from "@/components/ui/Button";
 import { EchoCard } from "@/components/ui/EchoCard";
 import { IconWell } from "@/components/ui/IconWell";
@@ -367,7 +367,7 @@ export function SignatureCaseStudy() {
     <CaseStudyLayout
       className="ei-lumo-case-study"
       hero={
-        <EchoHero
+        <LumoHero
           variant="caseStudy"
           eyebrow="Case study · Lumo"
           index="01"

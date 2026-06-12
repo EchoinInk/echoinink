@@ -8,11 +8,14 @@ import { ContentFrame } from "@/components/layout/ContentFrame";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
-import { EchoHero } from "@/components/sections/EchoHero";
+import { PageSectionHero } from "@/components/sections/PageSectionHero";
 import { Button } from "@/components/ui/Button";
 import { EchoCard } from "@/components/ui/EchoCard";
 import { IconWell } from "@/components/ui/IconWell";
-import { OrbitalVisual, type OrbitalVariant } from "@/components/ui/OrbitalVisual";
+import {
+  OrbitalVisual,
+  type OrbitalVariant,
+} from "@/components/ui/OrbitalVisual";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import {
   worldsClosing,
@@ -22,7 +25,7 @@ import {
   worldsLayers,
   worldsPricing,
   worldsProcess,
-  worldsUseCases
+  worldsUseCases,
 } from "@/data/worldsContent";
 import {
   blurEmergence,
@@ -30,61 +33,73 @@ import {
   fadeSoft,
   staggerContainer,
   STAGGER,
-  VIEWPORT
+  VIEWPORT,
 } from "@/lib/motion-cinematic";
 
 const worldMeaning = [
   {
     title: "Atmosphere",
-    description: "The emotional field people enter before they understand the details."
+    description:
+      "The emotional field people enter before they understand the details.",
   },
   {
     title: "Narrative",
-    description: "The deeper story, tension, and philosophy that give the work meaning."
+    description:
+      "The deeper story, tension, and philosophy that give the work meaning.",
   },
   {
     title: "Identity",
-    description: "A distinct visual and verbal character that belongs to this work alone."
+    description:
+      "A distinct visual and verbal character that belongs to this work alone.",
   },
   {
     title: "Tone",
-    description: "The rhythm, language, imagery, and behaviour that make expression feel coherent."
+    description:
+      "The rhythm, language, imagery, and behaviour that make expression feel coherent.",
   },
   {
     title: "System",
-    description: "Principles that keep every touchpoint connected as the world grows."
+    description:
+      "Principles that keep every touchpoint connected as the world grows.",
   },
   {
     title: "Expression",
-    description: "A usable direction for digital presence, launches, content, and experience."
-  }
+    description:
+      "A usable direction for digital presence, launches, content, and experience.",
+  },
 ];
 
 const needStates = [
   {
     title: "Brand launch",
-    description: "Create a distinct emotional position before the identity reaches the world."
+    description:
+      "Create a distinct emotional position before the identity reaches the world.",
   },
   {
     title: "Repositioning",
-    description: "Give an existing brand or offer a clearer narrative, atmosphere, and reason to matter."
+    description:
+      "Give an existing brand or offer a clearer narrative, atmosphere, and reason to matter.",
   },
   {
     title: "Artist universe",
-    description: "Connect the work, voice, imagery, releases, and audience experience around one centre."
+    description:
+      "Connect the work, voice, imagery, releases, and audience experience around one centre.",
   },
   {
     title: "Cultural platform",
-    description: "Build a coherent world that can hold many voices, formats, and future expressions."
+    description:
+      "Build a coherent world that can hold many voices, formats, and future expressions.",
   },
   {
     title: "Campaign world",
-    description: "Create a distinct narrative and visual environment for a launch, season, or cultural moment."
+    description:
+      "Create a distinct narrative and visual environment for a launch, season, or cultural moment.",
   },
   {
     title: "Product atmosphere",
-    description: "Shape how a digital or physical product feels, behaves, and becomes recognisable."
-  }
+    description:
+      "Shape how a digital or physical product feels, behaves, and becomes recognisable.",
+  },
 ];
 
 const worldTypes: Array<{
@@ -97,68 +112,83 @@ const worldTypes: Array<{
     title: "Brand World",
     description:
       "For founder-led brands and studios that need more than a visual identity: a recognisable point of view with emotional depth.",
-    outcome: "A coherent identity, voice, digital atmosphere, and launch direction.",
-    icon: "axiomRing"
+    outcome:
+      "A coherent identity, voice, digital atmosphere, and launch direction.",
+    icon: "axiomRing",
   },
   {
     title: "Product World",
     description:
       "For products whose value depends on how the experience feels, behaves, and becomes part of someone’s life.",
-    outcome: "A product narrative, experience principles, interface atmosphere, and expression system.",
-    icon: "focusDial"
+    outcome:
+      "A product narrative, experience principles, interface atmosphere, and expression system.",
+    icon: "focusDial",
   },
   {
     title: "Artist World",
     description:
       "For artists, writers, musicians, and makers building a public universe around a body of work.",
-    outcome: "A narrative centre, visual language, release atmosphere, and continuity across eras.",
-    icon: "threadBeacon"
+    outcome:
+      "A narrative centre, visual language, release atmosphere, and continuity across eras.",
+    icon: "threadBeacon",
   },
   {
     title: "Cultural World",
     description:
       "For platforms, movements, and creative ecosystems designed to hold participation and evolve over time.",
-    outcome: "A shared mythology, cultural codes, participation logic, and expansion framework.",
-    icon: "chorusCore"
-  }
+    outcome:
+      "A shared mythology, cultural codes, participation logic, and expansion framework.",
+    icon: "chorusCore",
+  },
 ];
 
 const process = [
   {
     title: "Signal",
-    description: "Find the emotional truth, tension, and ambition already alive in the work."
+    description:
+      "Find the emotional truth, tension, and ambition already alive in the work.",
   },
   {
     title: "Architecture",
-    description: "Define the narrative centre and organise the world around a clear internal logic."
+    description:
+      "Define the narrative centre and organise the world around a clear internal logic.",
   },
   {
     title: "Atmosphere",
-    description: "Shape the visual, verbal, sensory, and behavioural qualities people will feel."
+    description:
+      "Shape the visual, verbal, sensory, and behavioural qualities people will feel.",
   },
   {
     title: "System",
-    description: "Translate the direction into principles that remain coherent across touchpoints."
+    description:
+      "Translate the direction into principles that remain coherent across touchpoints.",
   },
   {
     title: "Expression",
-    description: "Apply the world to the site, product, launch, content, or next creative phase."
-  }
+    description:
+      "Apply the world to the site, product, launch, content, or next creative phase.",
+  },
 ];
 
 function scrollToDefinition() {
   const definition = document.getElementById("worldbuilding-definition");
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
   definition?.scrollIntoView({
     behavior: prefersReducedMotion ? "auto" : "smooth",
-    block: "start"
+    block: "start",
   });
 }
 
 export function WorldsPage() {
   return (
-    <PageShell atmosphere="worlds" withTopSpacing={false} className="ei-worlds-page">
+    <PageShell
+      atmosphere="worlds"
+      withTopSpacing={false}
+      className="ei-worlds-page"
+    >
       <Helmet>
         <title>World Architecture — Echo in Ink</title>
         <meta
@@ -167,37 +197,23 @@ export function WorldsPage() {
         />
       </Helmet>
 
-      <EchoHero
-        variant="offer"
+      <PageSectionHero
         eyebrow="World Architecture"
-        index="01"
-        title={
-          <>
-            Build the <em>world</em> your work belongs to.
-          </>
-        }
+        title="Build the world your work belongs to."
+        italicWord="world"
         description={worldsHero.description}
-        kicker={worldsIntro.atmosphere}
-        backgroundImage={worldsHeroDesktop}
-        mobileBackgroundImage={worldsHeroMobile}
-        imageAlt=""
-        headingId="worlds-hero-heading"
-        className="ei-worlds-hero"
-        contentClassName="ei-worlds-hero-content"
-        actions={
-          <>
-            <Button to={worldsHero.primaryCta.href} variant="primary">
-              Enquire about your world
-            </Button>
-            <Button to="#worldbuilding-definition" variant="tertiary" onClick={scrollToDefinition}>
-              See what worldbuilding means <span aria-hidden="true">→</span>
-            </Button>
-          </>
-        }
+        image={worldsHeroDesktop}
+        mobileImage={worldsHeroMobile}
+        imageAlt="Dark cinematic vertical portal suggesting an immersive creative world"
+        align="left"
+        variant="intimate"
+        ctaLabel="Enquire about your world"
+        ctaHref={worldsHero.primaryCta.href}
+        secondaryCtaLabel="See what worldbuilding means"
+        secondaryCtaHref="#worldbuilding-definition"
       />
 
       <Section
-        id="worldbuilding-definition"
         spacing="none"
         className="ei-worlds-section ei-worlds-definition"
       >
@@ -209,17 +225,22 @@ export function WorldsPage() {
             viewport={VIEWPORT.normal}
           >
             <motion.div variants={fadeSoft}>
-              <EchoCard variant="offer" padding="none" className="ei-worlds-definition-panel">
+              <EchoCard
+                variant="offer"
+                padding="none"
+                className="ei-worlds-definition-panel"
+              >
                 <div className="ei-worlds-definition-copy">
                   <SectionLabel label="What worldbuilding means" index="02" />
                   <motion.h2 variants={blurEmergence}>
-                    A creative service for shaping the whole environment around an idea.
+                    A creative service for shaping the whole environment around
+                    an idea.
                   </motion.h2>
                   <p>{worldsIntro.body}</p>
                   <p>
-                    Worldbuilding aligns what the work means with how it looks, speaks, moves, and
-                    meets people. The result is not a collection of assets. It is a direction your
-                    team can use.
+                    Worldbuilding aligns what the work means with how it looks,
+                    speaks, moves, and meets people. The result is not a
+                    collection of assets. It is a direction your team can use.
                   </p>
                 </div>
 
@@ -252,13 +273,19 @@ export function WorldsPage() {
             whileInView="visible"
             viewport={VIEWPORT.normal}
           >
-            <motion.div variants={driftUp} className="ei-worlds-section-heading">
+            <motion.div
+              variants={driftUp}
+              className="ei-worlds-section-heading"
+            >
               <SectionLabel label="This is for" index="03" />
               <div>
-                <h2>When the idea is strong, but the world around it is not yet coherent.</h2>
+                <h2>
+                  When the idea is strong, but the world around it is not yet
+                  coherent.
+                </h2>
                 <p>
-                  World Architecture is for meaningful work that needs a clearer centre and a
-                  practical way to express it.
+                  World Architecture is for meaningful work that needs a clearer
+                  centre and a practical way to express it.
                 </p>
               </div>
             </motion.div>
@@ -292,13 +319,16 @@ export function WorldsPage() {
             whileInView="visible"
             viewport={VIEWPORT.normal}
           >
-            <motion.div variants={driftUp} className="ei-worlds-section-heading">
+            <motion.div
+              variants={driftUp}
+              className="ei-worlds-section-heading"
+            >
               <SectionLabel label="What a world includes" index="04" />
               <div>
                 <h2>{worldsLayers.heading}</h2>
                 <p>
-                  Each layer makes the offer tangible: a set of decisions, principles, and
-                  directions that can guide real creative work.
+                  Each layer makes the offer tangible: a set of decisions,
+                  principles, and directions that can guide real creative work.
                 </p>
               </div>
             </motion.div>
@@ -308,7 +338,9 @@ export function WorldsPage() {
                 {worldsLayers.items.map((layer, index) => (
                   <motion.div key={layer.title} variants={driftUp}>
                     <EchoCard
-                      variant={index === 1 || index === 4 ? "feature" : "static"}
+                      variant={
+                        index === 1 || index === 4 ? "feature" : "static"
+                      }
                       padding="lg"
                       className="ei-worlds-layer-card"
                     >
@@ -321,7 +353,11 @@ export function WorldsPage() {
               </div>
 
               <motion.div variants={fadeSoft}>
-                <EchoCard variant="proof" padding="lg" className="ei-worlds-output-panel">
+                <EchoCard
+                  variant="proof"
+                  padding="lg"
+                  className="ei-worlds-output-panel"
+                >
                   <SectionLabel label="Possible outputs" rule="none" />
                   <h3>{worldsDeliverables.heading}</h3>
                   <ul>
@@ -338,7 +374,11 @@ export function WorldsPage() {
             </div>
 
             <motion.div variants={fadeSoft}>
-              <EchoCard variant="offer" padding="lg" className="ei-worlds-investment">
+              <EchoCard
+                variant="offer"
+                padding="lg"
+                className="ei-worlds-investment"
+              >
                 <div>
                   <SectionLabel label="Selective collaboration" rule="none" />
                   <h3>{worldsPricing.heading}</h3>
@@ -367,13 +407,16 @@ export function WorldsPage() {
             whileInView="visible"
             viewport={VIEWPORT.normal}
           >
-            <motion.div variants={driftUp} className="ei-worlds-section-heading">
+            <motion.div
+              variants={driftUp}
+              className="ei-worlds-section-heading"
+            >
               <SectionLabel label="World types" index="05" />
               <div>
                 <h2>Different forms. The same need for coherence.</h2>
                 <p>
-                  The engagement is shaped around what you are building, who needs to enter it, and
-                  where the world must become visible.
+                  The engagement is shaped around what you are building, who
+                  needs to enter it, and where the world must become visible.
                 </p>
               </div>
             </motion.div>
@@ -419,13 +462,16 @@ export function WorldsPage() {
             whileInView="visible"
             viewport={VIEWPORT.normal}
           >
-            <motion.div variants={driftUp} className="ei-worlds-section-heading">
+            <motion.div
+              variants={driftUp}
+              className="ei-worlds-section-heading"
+            >
               <SectionLabel label="The process" index="06" />
               <div>
                 <h2>{worldsProcess.heading}</h2>
                 <p>
-                  The work moves from discovery to application without rushing the decisions that
-                  give the world its integrity.
+                  The work moves from discovery to application without rushing
+                  the decisions that give the world its integrity.
                 </p>
               </div>
             </motion.div>
@@ -466,8 +512,8 @@ export function WorldsPage() {
         }
         secondary={
           <p>
-            For founders, artists, studios, and cultural projects ready to build with depth and
-            continuity.
+            For founders, artists, studios, and cultural projects ready to build
+            with depth and continuity.
           </p>
         }
       />

@@ -10,7 +10,7 @@ import { ContentFrame } from '@/components/layout/ContentFrame';
 import { PageShell } from '@/components/layout/PageShell';
 import { Section } from '@/components/layout/Section';
 import { CTASection } from '@/components/sections/CTASection';
-import { EchoHero } from '@/components/sections/EchoHero';
+import { PageSectionHero } from '@/components/sections/PageSectionHero';
 import { Button } from '@/components/ui/Button';
 import { EchoCard } from '@/components/ui/EchoCard';
 import { EchoSelect } from '@/components/ui/EchoSelect';
@@ -82,24 +82,19 @@ export function ArchiveIndexPage() {
         />
       </Helmet>
 
-      <EchoHero
-        variant="archive"
-        eyebrow="Archive · Index"
-        index="01"
-        title={<>A map of <em>the signal.</em></>}
-        description="A structured companion to the Archive: entries arranged for discovery across ideas, disciplines, and recurring themes."
-        kicker={`${archiveIndex.length} current entries · six connected fields`}
-        backgroundImage={archiveImageDesktop}
-        mobileBackgroundImage={archiveImageMobile}
-        imageAlt=""
-        headingId="archive-index-hero-heading"
-        className="ei-index-hero"
-        actions={
-          <Button onClick={scrollToIndex} variant="tertiary">
-            Enter the index <span aria-hidden="true">↓</span>
-          </Button>
-        }
-      />
+      <PageSectionHero
+  eyebrow="Archive · Index"
+  title="A map of the signal."
+  italicWord="signal."
+  description="A structured companion to the Archive: entries arranged for discovery across ideas, disciplines, and recurring themes."
+  image={archiveImageDesktop}
+  mobileImage={archiveImageMobile}
+  imageAlt="Dark cinematic archive map with floating catalogue panels and constellation index lines"
+  align="left"
+  variant="intimate"
+  ctaLabel="Enter the index"
+  ctaHref="#archive-index"
+/>
 
       <Section spacing="none" className="ei-editorial-page-section ei-index-featured-section">
         <ContentFrame width="standard" gutters>

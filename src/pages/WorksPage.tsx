@@ -10,7 +10,7 @@ import { ContentFrame } from '@/components/layout/ContentFrame';
 import { PageShell } from '@/components/layout/PageShell';
 import { Section } from '@/components/layout/Section';
 import { CTASection } from '@/components/sections/CTASection';
-import { EchoHero } from '@/components/sections/EchoHero';
+import { PageSectionHero } from '@/components/sections/PageSectionHero';
 import { Button } from '@/components/ui/Button';
 import { EchoCard } from '@/components/ui/EchoCard';
 import { IconWell } from '@/components/ui/IconWell';
@@ -72,34 +72,21 @@ export function WorksPage() {
           content="Selected identity systems, immersive websites, and atmospheric digital experiences by Echo In Ink."
         />
       </Helmet>
-
-      <EchoHero
-        variant="archive"
-        eyebrow="Selected proof"
-        index="01"
-        title={
-          <>
-            Proof, shaped as <em>atmosphere.</em>
-          </>
-        }
-        description="A curated body of identity, narrative, and digital work — showing how feeling becomes structure, and structure becomes value."
-        backgroundImage={worksHeroDesktop}
-        mobileBackgroundImage={worksHeroMobile}
-        imageAlt=""
-        headingId="works-hero-heading"
-        className="ei-works-hero"
-        contentClassName="ei-works-hero-content"
-        actions={
-          <>
-            <Button to="/works/lumo" variant="primary">
-              View featured case study
-            </Button>
-            <Button to="#selected-works" variant="tertiary">
-              Explore selected work <span aria-hidden="true">→</span>
-            </Button>
-          </>
-        }
-      />
+<PageSectionHero
+  eyebrow="Selected proof"
+  title="Proof, shaped as atmosphere."
+  italicWord="atmosphere."
+  description="A curated body of identity, narrative, and digital work — showing how feeling becomes structure, and structure becomes value."
+  image={worksHeroDesktop}
+  mobileImage={worksHeroMobile}
+  imageAlt="Dark cinematic signal stream with luminous blue-violet atmosphere"
+  align="left"
+  variant="intimate"
+  ctaLabel="View featured case study"
+  ctaHref="/works/lumo"
+  secondaryCtaLabel="Explore selected work"
+  secondaryCtaHref="#selected-works"
+/>
 
       {featuredProject ? (
         <Section spacing="none" className="ei-works-section ei-works-featured">
