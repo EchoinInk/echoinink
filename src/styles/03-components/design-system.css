@@ -907,3 +907,117 @@
     }
   }
 }
+/* ─────────────────────────────────────────────────────────
+   Global pre-launch readability pass
+   Fixes site-wide contrast that sits too close to the edge.
+   Keep the dark cinematic atmosphere, but lift text clarity.
+   ───────────────────────────────────────────────────────── */
+
+@layer components {
+  body {
+    color: rgb(var(--ei-moonlit-rgb) / 0.9);
+  }
+
+  .ei-type-body,
+  .ei-type-studio-body,
+  .ei-echo-hero-description,
+  .ei-page-section-hero-description,
+  p {
+    color: rgb(var(--ei-moonlit-rgb) / 0.78);
+  }
+
+  .ei-type-studio-body-small,
+  small,
+  figcaption,
+  .ei-color-text-tertiary {
+    color: rgb(var(--ei-moonlit-rgb) / 0.62);
+  }
+
+  .ei-color-text-muted,
+  .ei-section-label,
+  .ei-type-studio-label,
+  dt,
+  .eyebrow,
+  [class*="eyebrow"],
+  [class*="kicker"],
+  [class*="meta"] {
+    color: rgb(var(--ei-moonlit-rgb) / 0.58);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .ei-echo-hero-title,
+  .ei-page-section-hero-title,
+  .ei-type-section {
+    color: var(--ei-color-text-primary);
+    text-shadow:
+      0 2px 30px rgb(0 0 0 / 0.38),
+      0 0 44px rgb(var(--ei-violet-rgb) / 0.08);
+  }
+
+  a:not(.ei-button):not(.ei-btn-primary-cinematic):not(.ei-btn-secondary-cinematic) {
+    color: rgb(var(--ei-moonlit-rgb) / 0.9);
+  }
+
+  a:not(.ei-button):not(.ei-btn-primary-cinematic):not(.ei-btn-secondary-cinematic):hover {
+    color: var(--ei-color-text-primary);
+  }
+
+  .ei-card,
+  .ei-echo-card,
+  [class*="card"] {
+    border-color: rgb(var(--ei-moonlit-rgb) / 0.12);
+  }
+
+  .ei-card p,
+  .ei-echo-card p,
+  [class*="card"] p {
+    color: rgb(var(--ei-moonlit-rgb) / 0.72);
+  }
+
+  .ei-card h2,
+  .ei-card h3,
+  .ei-echo-card h2,
+  .ei-echo-card h3,
+  [class*="card"] h2,
+  [class*="card"] h3 {
+    color: var(--ei-color-text-primary);
+  }
+
+  input,
+  textarea,
+  select {
+    color: var(--ei-color-text-primary);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: rgb(var(--ei-moonlit-rgb) / 0.42);
+  }
+
+  @media (max-width: 767px) {
+    .ei-echo-hero-description,
+    .ei-page-section-hero-description,
+    .ei-type-body,
+    .ei-type-studio-body,
+    p {
+      color: rgb(var(--ei-moonlit-rgb) / 0.82);
+    }
+
+    .ei-type-studio-body-small,
+    small,
+    figcaption {
+      color: rgb(var(--ei-moonlit-rgb) / 0.66);
+    }
+
+    .ei-section-label,
+    .ei-type-studio-label,
+    [class*="eyebrow"],
+    [class*="kicker"],
+    [class*="meta"] {
+      color: rgb(var(--ei-moonlit-rgb) / 0.62);
+    }
+  }
+}
