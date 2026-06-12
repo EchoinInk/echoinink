@@ -62,7 +62,7 @@ export function EchoHero({
           <img
             src={mobileBackgroundImage ?? backgroundImage}
             alt={imageAlt}
-            fetchpriority={variant === "home" ? "high" : undefined}
+            fetchPriority={variant === "home" ? "high" : undefined}
           />
         </picture>
       ) : null}

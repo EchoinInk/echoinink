@@ -45,48 +45,6 @@ function scrollToProcess() {
   });
 }
 
-function IdentityHeroSignal() {
-  return (
-    <div className="ei-identity-hero-signal" aria-hidden="true">
-      <span className="ei-identity-hero-glow" />
-      <span className="ei-identity-hero-axis ei-identity-hero-axis-horizontal" />
-      <span className="ei-identity-hero-axis ei-identity-hero-axis-vertical" />
-
-      <span className="ei-identity-hero-ring ei-identity-hero-ring-outer" />
-      <span className="ei-identity-hero-ring ei-identity-hero-ring-middle" />
-      <span className="ei-identity-hero-ring ei-identity-hero-ring-inner" />
-
-      <span className="ei-identity-hero-node ei-identity-hero-node-1" />
-      <span className="ei-identity-hero-node ei-identity-hero-node-2" />
-      <span className="ei-identity-hero-node ei-identity-hero-node-3" />
-      <span className="ei-identity-hero-node ei-identity-hero-node-4" />
-
-      <span className="ei-identity-hero-core">
-        <OrbitalVisual variant="innerTide" size={104} />
-      </span>
-
-      <div className="ei-identity-hero-proof-card ei-identity-hero-proof-card-primary">
-        <span>Identity system</span>
-        <strong>Feeling → Form → World</strong>
-      </div>
-
-      <div className="ei-identity-hero-proof-card ei-identity-hero-proof-card-secondary">
-        <span>Signal map</span>
-        <strong>Palette / Voice / Atmosphere</strong>
-      </div>
-
-      {identityHero.atmosphereRail.map((item, index) => (
-        <span
-          key={item}
-          className={`ei-identity-hero-signal-label ei-identity-hero-signal-label-${index + 1}`}
-        >
-          {item}
-        </span>
-      ))}
-    </div>
-  );
-}
-
 export function IdentityPage() {
   return (
     <PageShell
@@ -137,7 +95,6 @@ export function IdentityPage() {
         backgroundImage={identityHeroDesktop}
         mobileBackgroundImage={identityHeroMobile}
         imageAlt=""
-        media={<IdentityHeroSignal />}
         headingId="identity-hero-heading"
         className="ei-identity-hero"
         contentClassName="ei-identity-hero-content"

@@ -10,8 +10,8 @@ export const identityHero = {
     "Identity begins as a feeling — an atmosphere waiting to be understood, shaped, and expressed.",
     "I translate that feeling into visual language, rhythm, and voice."
   ],
-  primaryCta: { label: "Begin an Identity Kit", href: "/contact" },
-  secondaryCta: { label: "View the process", href: "#identity-process" },
+  primaryCta: { label: "Start an Identity project", href: "/contact" },
+  secondaryCta: { label: "Explore Sessions", href: "/sessions" },
   atmosphereRail: ["Atmosphere", "Language", "Rhythm", "Voice", "Presence"]
 };
 
