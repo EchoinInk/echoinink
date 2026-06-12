@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
-import worldsHeroDesktop from "@/assets/imagery/hero/worlds-hero-desktop.webp";
-import worldsHeroMobile from "@/assets/imagery/hero/worlds-hero-mobile.webp";
+import worldsHeroDesktop from "@/assets/imagery/hero/worlds-hero-vertical-portal-desktop.webp";
+import worldsHeroMobile from "@/assets/imagery/hero/worlds-hero-vertical-portal-mobile.webp";
 import worldsImageDesktop from "@/assets/imagery/sections/worlds-image-1-desktop.webp";
 import { ContentFrame } from "@/components/layout/ContentFrame";
 import { PageShell } from "@/components/layout/PageShell";
