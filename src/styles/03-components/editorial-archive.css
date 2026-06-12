@@ -1,10 +1,6 @@
 @layer components {
   .ei-editorial-page {
     overflow: clip;
-    color: var(--ei-color-text-primary);
-    background:
-      radial-gradient(circle at 76% 18%, rgb(var(--ei-violet-rgb) / 0.055), transparent 26%),
-      linear-gradient(180deg, var(--ei-ink), var(--ei-ink) 52%, var(--ei-ink));
   }
 
   .ei-editorial-page-section {

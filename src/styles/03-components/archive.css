@@ -3,11 +3,7 @@
 @layer components {
   .ei-archive-page {
     overflow: hidden;
-    color: var(--ei-color-text-primary);
-    background:
-      radial-gradient(circle at 70% 44%, rgb(var(--ei-violet-rgb) / 0.055), transparent 34%),
-      linear-gradient(180deg, var(--ei-ink) 0%, var(--ei-ink) 48%, var(--ei-ink) 100%);
-  }
+   }
 
   .ei-echo-hero.ei-archive-hero {
     min-height: min(880px, 90vh);
@@ -626,12 +622,6 @@
    ───────────────────────────────────────────────────────── */
 
 @layer components {
-  .ei-archive-page {
-    background:
-      radial-gradient(circle at 74% 18%, rgb(var(--ei-halo-blue-rgb) / 0.085), transparent 28%),
-      radial-gradient(circle at 34% 42%, rgb(var(--ei-violet-rgb) / 0.055), transparent 32%),
-      linear-gradient(180deg, var(--ei-ink) 0%, var(--ei-ink) 48%, var(--ei-ink) 100%);
-  }
 
   .ei-archive-hero .ei-echo-hero-media img {
     object-position: 70% 48%;

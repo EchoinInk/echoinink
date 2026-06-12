@@ -124,30 +124,6 @@ export function PageSectionHero({
             : "radial-gradient(ellipse 52% 64% at 84% 46%, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink-rgb) / 0.48) 42%, transparent 74%), linear-gradient(270deg, rgb(var(--ei-ink-rgb) / 0.52) 0%, transparent 58%)",
         }}
       />
-
-      {isStudio ? (
-        <div
-          aria-hidden="true"
-          className="ei-studio-hero-proof-board pointer-events-none absolute right-[clamp(1.25rem,5vw,5rem)] bottom-[12vh] z-[4] hidden lg:block"
-        >
-          <div className="ei-studio-hero-proof-card ei-studio-hero-proof-card-main">
-            <span>Identity map</span>
-            <strong>Signal / Story / System</strong>
-          </div>
-
-          <div className="ei-studio-hero-proof-card ei-studio-hero-proof-card-small">
-            <span>Visual language</span>
-            <strong>12-frame direction board</strong>
-          </div>
-
-          <div className="ei-studio-hero-proof-lines">
-            <i />
-            <i />
-            <i />
-          </div>
-        </div>
-      ) : null}
-
       <div
         aria-hidden="true"
         className="pointer-events-none absolute right-0 bottom-0 left-0 z-[5] h-[24vh]"

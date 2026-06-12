@@ -1,19 +1,15 @@
 /* Studio page type + Studio-only visual polish
-   Safe scope: this file only changes Studio-specific .ei-type-studio-* and
-   .ei-card-studio-* classes, so the locked Home page stays untouched.
+   Safe scope: Studio page/components only.
 */
 
 @layer components {
   /* ─────────────────────────────────────────────────────────
-     Studio page atmosphere helpers
+     Studio page shell
+     Let the global canvas provide the ink background.
      ───────────────────────────────────────────────────────── */
 
   .ei-studio-page {
-    color: var(--ei-color-text-primary);
-    background:
-      radial-gradient(circle at 74% 16%, rgb(var(--ei-echo-magenta-rgb) / 0.12) 0%, transparent 34%),
-      radial-gradient(circle at 32% 18%, rgb(var(--ei-halo-blue-rgb) / 0.10) 0%, transparent 32%),
-      linear-gradient(180deg, var(--ei-void) 0%, var(--ei-ink) 44%, var(--ei-void) 100%);
+    overflow: hidden;
   }
 
   .ei-studio-section {
@@ -21,46 +17,130 @@
     border-top: 1px solid rgb(var(--ei-moonlit-rgb) / 0.075);
   }
 
+  .ei-studio-section-anchor {
+    position: relative;
+  }
+
+  .ei-studio-section-anchor::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: max(1.5rem, calc((100vw - 1180px) / 2));
+    right: max(1.5rem, calc((100vw - 1180px) / 2));
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgb(var(--ei-halo-blue-rgb) / 0.28),
+      rgb(var(--ei-violet-rgb) / 0.22),
+      transparent
+    );
+    opacity: 0.86;
+  }
+
   .ei-studio-panel {
     position: relative;
     overflow: hidden;
     border-radius: var(--ei-card-radius-xl, 32px);
-    background:
-      radial-gradient(circle at 78% 18%, rgb(var(--ei-violet-rgb) / 0.10) 0%, transparent 42%),
-      linear-gradient(180deg, rgb(var(--ei-midnight-rgb) / 0.58), rgb(var(--ei-void-rgb) / 0.70));
     border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.12);
+    background:
+      radial-gradient(circle at 78% 18%, rgb(var(--ei-violet-rgb) / 0.08) 0%, transparent 42%),
+      linear-gradient(180deg, rgb(var(--ei-midnight-rgb) / 0.22), rgb(var(--ei-ink-rgb) / 0.84));
     box-shadow:
       inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.045),
       0 28px 110px rgb(0 0 0 / 0.38);
   }
 
   .ei-studio-panel-soft {
-    background:
-      radial-gradient(circle at 22% 10%, rgb(var(--ei-halo-blue-rgb) / 0.085) 0%, transparent 38%),
-      radial-gradient(circle at 82% 18%, rgb(var(--ei-echo-magenta-rgb) / 0.08) 0%, transparent 42%),
-      linear-gradient(180deg, rgb(var(--ei-midnight-rgb) / 0.46), rgb(var(--ei-void-rgb) / 0.76));
     border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.115);
+    background:
+      radial-gradient(circle at 22% 10%, rgb(var(--ei-halo-blue-rgb) / 0.065) 0%, transparent 38%),
+      radial-gradient(circle at 82% 18%, rgb(var(--ei-echo-magenta-rgb) / 0.055) 0%, transparent 42%),
+      linear-gradient(180deg, rgb(var(--ei-midnight-rgb) / 0.18), rgb(var(--ei-ink-rgb) / 0.86));
   }
 
   /* ─────────────────────────────────────────────────────────
-     Hero section type
+     Hero
+     Keep only a clean ink fade. No media repositioning.
+     ───────────────────────────────────────────────────────── */
+
+  .ei-studio-page .ei-page-section-hero,
+  .ei-studio-page .ei-page-section-hero-media {
+    background-color: #080718;
+  }
+
+  .ei-studio-page .ei-page-section-hero-title,
+  .ei-studio-page .ei-type-studio-hero {
+    text-shadow:
+      0 2px 34px rgb(0 0 0 / 0.52),
+      0 0 54px rgb(var(--ei-violet-rgb) / 0.12);
+  }
+
+  .ei-studio-page .ei-page-section-hero-scrim {
+    opacity: 0.94;
+  }
+
+  .ei-studio-page .ei-page-section-hero::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: -1px;
+    z-index: 25;
+    height: clamp(10rem, 20vh, 16rem);
+    pointer-events: none;
+    background:
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        rgb(var(--ei-ink-rgb) / 0.42) 32%,
+        rgb(var(--ei-ink-rgb) / 0.86) 68%,
+        #080718 100%
+      );
+  }
+
+  .ei-studio-page .ei-page-section-hero-media::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+    background:
+      linear-gradient(
+        90deg,
+        rgb(var(--ei-ink-rgb) / 0.9) 0%,
+        rgb(var(--ei-ink-rgb) / 0.66) 38%,
+        rgb(var(--ei-ink-rgb) / 0.2) 68%,
+        transparent 100%
+      ),
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        transparent 46%,
+        rgb(var(--ei-ink-rgb) / 0.62) 76%,
+        #080718 100%
+      );
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Type
      ───────────────────────────────────────────────────────── */
 
   .ei-type-studio-hero {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(2.55rem, 5vw, 4.65rem);
-  line-height: 0.99;
-  letter-spacing: -0.044em;
-  font-weight: 400;
-  color: var(--ei-color-text-primary);
-}
-
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(2.7rem, 5.35vw, 5.15rem);
+    line-height: 0.96;
+    letter-spacing: -0.05em;
+    font-weight: 400;
+    color: var(--ei-color-text-primary);
+  }
 
   .ei-type-studio-hero-emphasis {
     font-style: italic;
     font-weight: 400;
-    color: rgb(var(--ei-soft-neon-rgb) / 0.86);
-    text-shadow: 0 0 26px rgb(var(--ei-echo-magenta-rgb) / 0.22);
+    color: rgb(var(--ei-soft-neon-rgb) / 0.92);
+    text-shadow:
+      0 0 24px rgb(var(--ei-echo-magenta-rgb) / 0.22),
+      0 0 56px rgb(var(--ei-violet-rgb) / 0.18);
   }
 
   .ei-type-studio-kicker,
@@ -74,13 +154,18 @@
     color: rgb(var(--ei-moonlit-rgb) / 0.54);
   }
 
-   .ei-type-studio-body {
+  .ei-type-studio-body {
+    max-width: 43ch;
     font-family: var(--ei-font-structural);
     font-size: clamp(0.98rem, 1.05vw, 1.1rem);
-    line-height: 1.72;
+    line-height: 1.62;
     letter-spacing: -0.004em;
+    color: rgb(var(--ei-moonlit-rgb) / 0.78);
   }
 
+  .ei-type-studio-body + .ei-type-studio-body {
+    margin-top: 1.05rem;
+  }
 
   .ei-type-studio-body-small {
     font-family: var(--ei-font-structural);
@@ -92,19 +177,18 @@
   }
 
   /* ─────────────────────────────────────────────────────────
-     Philosophy / manifesto section type
+     Philosophy / manifesto
      ───────────────────────────────────────────────────────── */
 
-.ei-type-studio-manifesto,
-.ei-type-studio-philosophy {
-  font-family: var(--ei-font-editorial);
-  font-size: clamp(1.65rem, 2.6vw, 2.55rem);
-  line-height: 1.14;
-  letter-spacing: -0.028em;
-  font-weight: 400;
-  color: var(--ei-color-text-primary);
-}
-
+  .ei-type-studio-manifesto,
+  .ei-type-studio-philosophy {
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.65rem, 2.6vw, 2.55rem);
+    line-height: 1.14;
+    letter-spacing: -0.028em;
+    font-weight: 400;
+    color: var(--ei-color-text-primary);
+  }
 
   .ei-type-studio-philosophy-emphasis {
     font-style: italic;
@@ -116,8 +200,23 @@
     color: rgb(var(--ei-halo-blue-rgb) / 0.9);
   }
 
+  .ei-studio-philosophy-visual {
+    width: clamp(22rem, 32vw, 34rem);
+    transform: translateX(-0.5rem);
+  }
+
+  .ei-studio-philosophy-visual img {
+    display: block;
+    width: 100%;
+    height: clamp(15rem, 20vw, 22rem);
+    object-fit: cover;
+    border-radius: 2rem;
+    opacity: 0.92;
+    filter: saturate(1.04) contrast(1.04);
+  }
+
   /* ─────────────────────────────────────────────────────────
-     Principle section type
+     Principles
      ───────────────────────────────────────────────────────── */
 
   .ei-type-studio-principle-title {
@@ -127,7 +226,7 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 500;
-    color: rgb(var(--ei-moonlit-rgb) / 0.50);
+    color: rgb(var(--ei-moonlit-rgb) / 0.5);
   }
 
   .ei-type-studio-principle-body {
@@ -140,10 +239,10 @@
   }
 
   /* ─────────────────────────────────────────────────────────
-     Pillar / service card section type
+     Pillar / service cards
      ───────────────────────────────────────────────────────── */
 
-  ei-type-studio-pillar-title,
+  .ei-type-studio-pillar-title,
   .ei-type-studio-card-title {
     font-family: var(--ei-font-editorial);
     font-size: clamp(1.45rem, 1.8vw, 1.75rem);
@@ -164,7 +263,7 @@
   }
 
   .ei-type-studio-output {
-    color: var(--ei-color-text-tertiary);
+    color: rgb(var(--ei-moonlit-rgb) / 0.66);
     font-family: var(--ei-font-structural);
     font-size: 0.7rem;
     letter-spacing: 0.08em;
@@ -176,13 +275,14 @@
     position: relative;
     overflow: hidden;
     border-radius: var(--ei-card-radius-lg, 28px);
-    background:
-      radial-gradient(circle at 30% 10%, rgb(var(--ei-violet-rgb) / 0.11) 0%, transparent 42%),
-      linear-gradient(180deg, rgb(var(--ei-midnight-rgb) / 0.50), rgb(var(--ei-void-rgb) / 0.76));
     border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.12);
+    background:
+      radial-gradient(circle at 30% 10%, rgb(var(--ei-violet-rgb) / 0.09) 0%, transparent 42%),
+      linear-gradient(180deg, rgb(var(--ei-midnight-rgb) / 0.22), rgb(var(--ei-ink-rgb) / 0.84));
     box-shadow:
       inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.045),
-      0 0 54px rgb(var(--ei-violet-rgb) / 0.045);
+      0 22px 90px rgb(0 0 0 / 0.28),
+      0 0 64px rgb(var(--ei-violet-rgb) / 0.055);
     transition:
       border-color 500ms var(--ei-ease-soft, cubic-bezier(0.22, 1, 0.36, 1)),
       box-shadow 500ms var(--ei-ease-soft, cubic-bezier(0.22, 1, 0.36, 1)),
@@ -206,14 +306,59 @@
     opacity: 0.62;
     background:
       linear-gradient(180deg, rgb(var(--ei-ice-white-rgb) / 0.035), transparent 28%),
-      radial-gradient(circle at 18% 18%, rgb(var(--ei-halo-blue-rgb) / 0.09), transparent 32%);
+      radial-gradient(circle at 18% 18%, rgb(var(--ei-halo-blue-rgb) / 0.08), transparent 32%);
+  }
+
+  .ei-card.group {
+    min-height: 354px;
+    box-shadow:
+      inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.045),
+      0 22px 90px rgb(0 0 0 / 0.28),
+      0 0 64px rgb(var(--ei-violet-rgb) / 0.055);
+  }
+
+  .ei-card.group .ei-type-studio-output {
+    color: rgb(var(--ei-moonlit-rgb) / 0.58);
+  }
+
+  .ei-card.group:hover .ei-type-studio-output {
+    color: rgb(var(--ei-halo-blue-rgb) / 0.76);
+  }
+
+  .ei-studio-pillar-card-inner {
+    display: grid;
+    min-height: 276px;
+    grid-template-rows: 6.65rem 4.9rem 6.15rem 5.45rem auto;
+    align-content: start;
+  }
+
+  .ei-studio-pillar-card-inner .ei-type-studio-pillar-title {
+    align-self: start;
+    max-width: 12ch;
+  }
+
+  .ei-studio-pillar-card-inner .ei-type-studio-card-body {
+    align-self: start;
+    max-width: 30ch;
+    margin-top: 0;
+  }
+
+  .ei-studio-pillar-card-inner .ei-type-studio-output {
+    align-self: start;
+    max-width: 28ch;
+    margin-top: 0;
+  }
+
+  .ei-studio-pillar-card-inner .ei-card-action {
+    align-self: end;
+    margin-top: 0;
   }
 
   /* ─────────────────────────────────────────────────────────
-     Process section type
+     Process
      ───────────────────────────────────────────────────────── */
 
- .ei-type-studio-process-heading {
+  .ei-type-studio-process-heading {
     font-family: var(--ei-font-editorial);
     font-size: clamp(2rem, 3vw, 3rem);
     line-height: 1.08;
@@ -222,14 +367,28 @@
     color: var(--ei-color-text-primary);
   }
 
+  .ei-type-studio-process-title {
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.15rem, 1.25vw, 1.35rem);
+    line-height: 1.22;
+    letter-spacing: -0.018em;
+    color: var(--ei-color-text-primary);
+  }
+
   .ei-type-studio-process-number {
+    position: relative;
+    z-index: 2;
     display: inline-grid;
     place-items: center;
-    width: 2.15rem;
-    height: 2.15rem;
+    width: 2.35rem;
+    height: 2.35rem;
+    margin-left: -0.4rem;
+    margin-bottom: 2.15rem;
     border-radius: 999px;
     border: 1px solid rgb(var(--ei-violet-rgb) / 0.32);
-    background: rgb(var(--ei-void-rgb) / 0.52);
+    background:
+      radial-gradient(circle at 50% 18%, rgb(var(--ei-halo-blue-rgb) / 0.12), transparent 58%),
+      rgb(var(--ei-ink-rgb) / 0.72);
     font-family: var(--ei-font-system, var(--ei-font-structural));
     font-size: 0.6875rem;
     line-height: 1;
@@ -241,20 +400,19 @@
       0 0 22px rgb(var(--ei-violet-rgb) / 0.18);
   }
 
-  ei-type-studio-process-title {
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(1.15rem, 1.25vw, 1.35rem);
-    line-height: 1.22;
-    letter-spacing: -0.018em;
-    color: var(--ei-color-text-primary);
+  .ei-type-studio-process-number::after {
+    display: none !important;
   }
 
+  .ei-type-studio-process-body {
+    max-width: 25ch;
+  }
 
   /* ─────────────────────────────────────────────────────────
-     Featured work section type
+     Featured work
      ───────────────────────────────────────────────────────── */
 
-   .ei-type-studio-feature-title {
+  .ei-type-studio-feature-title {
     font-family: var(--ei-font-editorial);
     font-size: clamp(3.35rem, 6vw, 5.2rem);
     line-height: 0.92;
@@ -271,8 +429,6 @@
     color: var(--ei-color-text-primary);
   }
 
-  /* The old overlay was making the Lumo feature feel buried.
-     This keeps the left copy readable while letting the artwork glow. */
   .ei-card-studio-overlay {
     position: absolute;
     inset: 0;
@@ -281,24 +437,24 @@
     background:
       linear-gradient(
         90deg,
-        rgb(var(--ei-void-rgb) / 0.94) 0%,
-        rgb(var(--ei-void-rgb) / 0.74) 30%,
-        rgb(var(--ei-void-rgb) / 0.34) 51%,
+        rgb(var(--ei-ink-rgb) / 0.92) 0%,
+        rgb(var(--ei-ink-rgb) / 0.68) 30%,
+        rgb(var(--ei-ink-rgb) / 0.28) 52%,
         transparent 82%
       ),
       linear-gradient(
         180deg,
-        rgb(var(--ei-void-rgb) / 0.05) 0%,
+        rgb(var(--ei-ink-rgb) / 0.04) 0%,
         transparent 48%,
-        rgb(var(--ei-void-rgb) / 0.18) 100%
+        rgb(var(--ei-ink-rgb) / 0.16) 100%
       );
   }
 
-
   /* ─────────────────────────────────────────────────────────
-     CTA section type
+     CTA
      ───────────────────────────────────────────────────────── */
- .ei-type-studio-slim-cta {
+
+  .ei-type-studio-slim-cta {
     font-family: var(--ei-font-editorial);
     font-size: clamp(1.65rem, 2.85vw, 2.55rem);
     line-height: 1.08;
@@ -315,294 +471,21 @@
     box-shadow: inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.04);
   }
 
-  @media (max-width: 768px) {
-     .ei-type-studio-hero {
-      font-size: clamp(2.9rem, 13vw, 4.1rem);
-      line-height: 1;
-    }
-
-
-    .ei-type-studio-manifesto,
-    .ei-type-studio-philosophy {
-      font-size: clamp(2rem, 9vw, 3rem);
-      line-height: 1.06;
-    }
-
-    .ei-type-studio-body,
-    .ei-type-studio-card-body,
-    .ei-type-studio-pillar-body,
-    .ei-type-studio-process-body,
-    .ei-type-studio-feature-body {
-      font-size: 0.95rem;
-      line-height: 1.65;
-    }
-
-   .ei-card-studio-overlay {
-      background:
-        linear-gradient(
-          180deg,
-          rgb(var(--ei-void-rgb) / 0.88) 0%,
-          rgb(var(--ei-void-rgb) / 0.62) 44%,
-          rgb(var(--ei-void-rgb) / 0.38) 100%
-        );
-    }
-  }
-}
-/* ─────────────────────────────────────────────────────────
-   Studio critique pass
-   Fixes: stronger hero impact, visual proof, less text density,
-   stronger section anchors, better mobile process rhythm.
-   ───────────────────────────────────────────────────────── */
-
-@layer components {
-  /* Fix missing-dot selectors from earlier Studio CSS */
-  .ei-type-studio-pillar-title,
-  .ei-type-studio-card-title {
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(1.45rem, 1.8vw, 1.75rem);
-    line-height: 1.12;
-    letter-spacing: -0.025em;
-    color: var(--ei-color-text-primary);
-  }
-
-  .ei-type-studio-process-title {
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(1.15rem, 1.25vw, 1.35rem);
-    line-height: 1.22;
-    letter-spacing: -0.018em;
-    color: var(--ei-color-text-primary);
-  }
-
-  /* Stronger Studio hero typography */
-  .ei-type-studio-hero {
-    font-size: clamp(2.7rem, 5.35vw, 5.15rem);
-    line-height: 0.96;
-    letter-spacing: -0.05em;
-  }
-
-  .ei-type-studio-body {
-    max-width: 43ch;
-    color: rgb(var(--ei-moonlit-rgb) / 0.78);
-  }
-
-  .ei-type-studio-hero-emphasis {
-    color: rgb(var(--ei-soft-neon-rgb) / 0.92);
-    text-shadow:
-      0 0 24px rgb(var(--ei-echo-magenta-rgb) / 0.22),
-      0 0 56px rgb(var(--ei-violet-rgb) / 0.18);
-  }
-
-  /* Hero proof board: makes Studio feel more tangible than pure abstraction */
-  .ei-studio-hero-proof-board {
-    width: min(34vw, 430px);
-    height: 260px;
-    opacity: 0.9;
-    filter: drop-shadow(0 30px 90px rgb(0 0 0 / 0.44));
-  }
-
-  .ei-studio-hero-proof-card {
-    position: absolute;
-    overflow: hidden;
-    border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.14);
-    border-radius: 24px;
-    background:
-      radial-gradient(circle at 16% 18%, rgb(var(--ei-halo-blue-rgb) / 0.14), transparent 42%),
-      radial-gradient(circle at 88% 20%, rgb(var(--ei-echo-magenta-rgb) / 0.12), transparent 44%),
-      linear-gradient(180deg, rgb(var(--ei-midnight-rgb) / 0.54), rgb(var(--ei-void-rgb) / 0.68));
-    box-shadow:
-      inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.06),
-      0 0 58px rgb(var(--ei-violet-rgb) / 0.12);
-    backdrop-filter: blur(16px);
-  }
-
-  .ei-studio-hero-proof-card::before {
-    content: "";
-    position: absolute;
-    inset: 1rem;
-    border-radius: 18px;
-    background:
-      linear-gradient(90deg, rgb(var(--ei-moonlit-rgb) / 0.10) 1px, transparent 1px),
-      linear-gradient(180deg, rgb(var(--ei-moonlit-rgb) / 0.08) 1px, transparent 1px);
-    background-size: 28px 28px;
-    opacity: 0.42;
-    mask-image: radial-gradient(ellipse at center, black 0%, transparent 78%);
-  }
-
-  .ei-studio-hero-proof-card::after {
-    content: "";
-    position: absolute;
-    right: 1.2rem;
-    bottom: 1.1rem;
-    width: 6.5rem;
-    height: 4.5rem;
-    border: 1px solid rgb(var(--ei-halo-blue-rgb) / 0.22);
-    border-radius: 999px;
-    transform: rotate(-18deg);
-    box-shadow:
-      0 0 28px rgb(var(--ei-halo-blue-rgb) / 0.12),
-      inset 0 0 24px rgb(var(--ei-violet-rgb) / 0.08);
-  }
-
-  .ei-studio-hero-proof-card span,
-  .ei-studio-hero-proof-card strong {
-    position: relative;
-    z-index: 2;
-    display: block;
-  }
-
-  .ei-studio-hero-proof-card span {
-    font-family: var(--ei-font-system, var(--ei-font-structural));
-    font-size: 0.58rem;
-    line-height: 1;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgb(var(--ei-moonlit-rgb) / 0.54);
-  }
-
-  .ei-studio-hero-proof-card strong {
-    margin-top: 0.75rem;
-    max-width: 16ch;
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(1.05rem, 1.5vw, 1.35rem);
-    font-weight: 400;
-    line-height: 1.08;
-    letter-spacing: -0.025em;
-    color: var(--ei-color-text-primary);
-  }
-
-  .ei-studio-hero-proof-card-main {
-    inset: 0 auto auto 0;
-    width: 280px;
-    height: 172px;
-    padding: 1.35rem;
-  }
-
-  .ei-studio-hero-proof-card-small {
-    right: 0;
-    bottom: 0;
-    width: 220px;
-    height: 138px;
-    padding: 1.15rem;
-  }
-
-  .ei-studio-hero-proof-lines {
-    position: absolute;
-    inset: 0;
-  }
-
-  .ei-studio-hero-proof-lines i {
-    position: absolute;
-    display: block;
-    height: 1px;
-    transform-origin: left center;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgb(var(--ei-halo-blue-rgb) / 0.55),
-      rgb(var(--ei-soft-neon-rgb) / 0.28),
-      transparent
-    );
-    box-shadow: 0 0 16px rgb(var(--ei-halo-blue-rgb) / 0.18);
-  }
-
-  .ei-studio-hero-proof-lines i:nth-child(1) {
-    top: 42%;
-    left: 43%;
-    width: 150px;
-    transform: rotate(18deg);
-  }
-
-  .ei-studio-hero-proof-lines i:nth-child(2) {
-    top: 62%;
-    left: 22%;
-    width: 210px;
-    transform: rotate(-8deg);
-  }
-
-  .ei-studio-hero-proof-lines i:nth-child(3) {
-    top: 26%;
-    left: 18%;
-    width: 110px;
-    transform: rotate(42deg);
-    opacity: 0.58;
-  }
-
-  /* More visual anchoring between Studio sections */
-  .ei-studio-section-anchor {
-    position: relative;
-  }
-
-  .ei-studio-section-anchor::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: max(1.5rem, calc((100vw - 1180px) / 2));
-    right: max(1.5rem, calc((100vw - 1180px) / 2));
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgb(var(--ei-halo-blue-rgb) / 0.28),
-      rgb(var(--ei-violet-rgb) / 0.22),
-      transparent
-    );
-    opacity: 0.86;
-  }
-
-  /* Make existing Studio cards feel more authored and less generic */
-  .ei-card-studio,
-  .ei-card.ei-card-world,
-  .ei-card.group {
-    box-shadow:
-      inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.045),
-      0 22px 90px rgb(0 0 0 / 0.28),
-      0 0 64px rgb(var(--ei-violet-rgb) / 0.055);
-  }
-
-  .ei-card.group .ei-type-studio-output {
-    color: rgb(var(--ei-moonlit-rgb) / 0.58);
-  }
-
-  .ei-card.group:hover .ei-type-studio-output {
-    color: rgb(var(--ei-halo-blue-rgb) / 0.76);
-  }
-
-  /* Better process rhythm */
-  .ei-type-studio-process-number {
-    width: 2.35rem;
-    height: 2.35rem;
-    background:
-      radial-gradient(circle at 50% 18%, rgb(var(--ei-halo-blue-rgb) / 0.12), transparent 58%),
-      rgb(var(--ei-void-rgb) / 0.58);
-  }
-
-  .ei-type-studio-process-body {
-    max-width: 25ch;
-  }
-
-  /* Featured work should act as visual proof, not just another text panel */
-  .ei-card-studio-overlay {
-    background:
-      linear-gradient(
-        90deg,
-        rgb(var(--ei-void-rgb) / 0.94) 0%,
-        rgb(var(--ei-void-rgb) / 0.70) 28%,
-        rgb(var(--ei-void-rgb) / 0.30) 52%,
-        transparent 82%
-      ),
-      linear-gradient(
-        180deg,
-        rgb(var(--ei-void-rgb) / 0.04) 0%,
-        transparent 48%,
-        rgb(var(--ei-void-rgb) / 0.16) 100%
-      );
-  }
+  /* ─────────────────────────────────────────────────────────
+     Mobile
+     ───────────────────────────────────────────────────────── */
 
   @media (max-width: 768px) {
     .ei-type-studio-hero {
       font-size: clamp(2.75rem, 12.2vw, 3.95rem);
       line-height: 0.99;
       letter-spacing: -0.048em;
+    }
+
+    .ei-type-studio-manifesto,
+    .ei-type-studio-philosophy {
+      font-size: clamp(2rem, 9vw, 3rem);
+      line-height: 1.06;
     }
 
     .ei-type-studio-body {
@@ -633,7 +516,7 @@
     }
 
     .ei-card.group {
-      min-height: 300px;
+      min-height: auto;
       padding: 1.55rem;
     }
 
@@ -645,10 +528,48 @@
       background:
         linear-gradient(
           180deg,
-          rgb(var(--ei-void-rgb) / 0.9) 0%,
-          rgb(var(--ei-void-rgb) / 0.62) 42%,
-          rgb(var(--ei-void-rgb) / 0.42) 100%
+          rgb(var(--ei-ink-rgb) / 0.88) 0%,
+          rgb(var(--ei-ink-rgb) / 0.62) 44%,
+          rgb(var(--ei-ink-rgb) / 0.38) 100%
         );
+    }
+
+    .ei-studio-page .ei-page-section-hero {
+      min-height: 88svh;
+    }
+
+    .ei-studio-page .ei-page-section-hero::after {
+      height: 10rem;
+    }
+
+    .ei-studio-philosophy-visual {
+      width: min(100%, 22rem);
+      transform: none;
+      margin-top: 2rem;
+    }
+
+    .ei-studio-philosophy-visual img {
+      height: 13.5rem;
+    }
+
+    .ei-studio-pillar-card-inner {
+      min-height: auto;
+      grid-template-rows: auto;
+      gap: 1.15rem;
+    }
+
+    .ei-studio-pillar-card-inner .ei-type-studio-card-body,
+    .ei-studio-pillar-card-inner .ei-type-studio-output,
+    .ei-studio-pillar-card-inner .ei-card-action {
+      max-width: 31ch;
+      margin-top: 0;
+    }
+
+    .ei-type-studio-process-number {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-left: 0;
+      margin-bottom: 1.15rem;
     }
   }
 
@@ -659,182 +580,6 @@
 
     .ei-type-studio-philosophy {
       font-size: clamp(1.85rem, 8vw, 2.65rem);
-    }
-
-    .ei-type-studio-process-number {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
-  }
-}/* ─────────────────────────────────────────────────────────
-   Studio second-pass polish
-   Fixes: earlier commercial clarity, cleaner hero copy zone,
-   stronger mobile rhythm, slightly reduced essay density.
-   ───────────────────────────────────────────────────────── */
-
-@layer components {
-  .ei-studio-page .ei-page-section-hero {
-    background-color: var(--ei-ink);
-  }
-
-  .ei-studio-page .ei-page-section-hero::after {
-    content: "";
-    position: absolute;
-    inset-inline: 0;
-    bottom: -1px;
-    z-index: 8;
-    height: clamp(7rem, 14vh, 13rem);
-    pointer-events: none;
-    background:
-      linear-gradient(
-        180deg,
-        transparent 0%,
-        rgb(var(--ei-ink-rgb) / 0.54) 48%,
-        var(--ei-ink) 100%
-      );
-  }
-
-  .ei-studio-page .ei-page-section-hero [aria-hidden="true"]:nth-of-type(3) {
-    opacity: 1;
-  }
-
-  .ei-studio-page .ei-page-section-hero-title,
-  .ei-studio-page .ei-type-studio-hero {
-    text-shadow:
-      0 2px 34px rgb(0 0 0 / 0.52),
-      0 0 54px rgb(var(--ei-violet-rgb) / 0.12);
-  }
-
-  .ei-studio-proof-section {
-    background:
-      radial-gradient(
-        ellipse 58% 80% at 82% 0%,
-        rgb(var(--ei-violet-rgb) / 0.075) 0%,
-        transparent 64%
-      ),
-      var(--ei-ink);
-  }
-
-  .ei-studio-proof-intro {
-    align-self: center;
-  }
-
-  .ei-type-studio-proof-heading {
-    max-width: 18ch;
-    color: var(--ei-color-text-primary);
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(1.75rem, 2.8vw, 2.65rem);
-    font-weight: 400;
-    letter-spacing: -0.035em;
-    line-height: 1.08;
-    text-wrap: balance;
-  }
-
-  .ei-studio-proof-card {
-    position: relative;
-    min-height: 10rem;
-    overflow: hidden;
-    border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.13);
-    border-radius: var(--ei-card-radius-lg, 28px);
-    background:
-      radial-gradient(
-        circle at 20% 12%,
-        rgb(var(--ei-halo-blue-rgb) / 0.1) 0%,
-        transparent 42%
-      ),
-      linear-gradient(
-        180deg,
-        rgb(var(--ei-midnight-rgb) / 0.42),
-        rgb(var(--ei-ink-rgb) / 0.68)
-      );
-    padding: clamp(1.25rem, 2.2vw, 1.65rem);
-    box-shadow:
-      inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.045),
-      0 18px 62px rgb(0 0 0 / 0.22);
-  }
-
-  .ei-studio-proof-card::after {
-    content: "";
-    position: absolute;
-    inset-inline: 1.25rem;
-    bottom: 1.1rem;
-    height: 1px;
-    background: linear-gradient(
-      90deg,
-      rgb(var(--ei-halo-blue-rgb) / 0.42),
-      rgb(var(--ei-soft-neon-rgb) / 0.18),
-      transparent
-    );
-    opacity: 0.72;
-  }
-
-  .ei-studio-proof-card span {
-    display: block;
-    color: rgb(var(--ei-moonlit-rgb) / 0.72);
-    font-family: var(--ei-font-structural);
-    font-size: 0.66rem;
-    letter-spacing: 0.16em;
-    line-height: 1.35;
-    text-transform: uppercase;
-  }
-
-  .ei-studio-proof-card p {
-    max-width: 24ch;
-    margin-top: 1rem;
-    color: rgb(var(--ei-moonlit-rgb) / 0.78);
-    font-family: var(--ei-font-structural);
-    font-size: 0.92rem;
-    line-height: 1.58;
-  }
-
-  .ei-studio-page .ei-type-studio-body {
-    line-height: 1.64;
-  }
-
-  .ei-studio-page .ei-type-studio-body + .ei-type-studio-body {
-    margin-top: 1.1rem;
-  }
-
-  @media (max-width: 767px) {
-    .ei-studio-page .ei-page-section-hero {
-      min-height: 88svh;
-    }
-
-    .ei-studio-page .ei-page-section-hero::after {
-      height: 10rem;
-    }
-
-    .ei-studio-proof-section {
-      padding-top: 2.75rem;
-      padding-bottom: 1.5rem;
-    }
-
-    .ei-type-studio-proof-heading {
-      max-width: 12ch;
-      font-size: clamp(2rem, 9vw, 2.85rem);
-    }
-
-    .ei-studio-proof-card {
-      min-height: auto;
-      padding: 1.35rem;
-    }
-
-    .ei-studio-proof-card p {
-      max-width: 30ch;
-      font-size: 0.95rem;
-      line-height: 1.56;
-    }
-
-    .ei-studio-page section {
-      scroll-margin-top: 5rem;
-    }
-
-    .ei-studio-page .ei-type-studio-body,
-    .ei-studio-page .ei-type-studio-card-body,
-    .ei-studio-page .ei-type-studio-pillar-body,
-    .ei-studio-page .ei-type-studio-process-body,
-    .ei-studio-page .ei-type-studio-feature-body {
-      line-height: 1.58;
     }
   }
 }

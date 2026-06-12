@@ -15,7 +15,7 @@ import {
 import studioHeroDesktop from "@/assets/imagery/hero/studio-hero-desktop.webp";
 import studioHeroMobile from "@/assets/imagery/hero/studio-hero-mobile.webp";
 import lumoFeaturedBg from "@/assets/imagery/sections/lumo-featured-bg.webp";
-import studioManifestoImage from "@/assets/imagery/sections/studio-manifesto.webp";
+import studioPhilosophyArtifact from "@/assets/imagery/sections/studio-philosophy-artifact.webp";
 
 import {
   driftUp,
@@ -85,7 +85,7 @@ const pillars: Array<{
     href: "/worlds",
     imageClass:
       "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
-    icon: "haloGate",
+    icon: "focusDial",
   },
   {
     number: "04",
@@ -122,20 +122,6 @@ const process = [
   },
 ] as const;
 
-const studioProof = [
-  {
-    label: "Identity systems",
-    detail: "Naming, visual language, voice, and brand architecture.",
-  },
-  {
-    label: "Web experiences",
-    detail: "Immersive websites with story, structure, and atmosphere.",
-  },
-  {
-    label: "Creative direction",
-    detail: "Art direction, references, launch language, and cohesion.",
-  },
-] as const;
 function SectionLabel({ children }: { children: string }) {
   return (
     <div className="ei-section-label-row">
@@ -147,7 +133,7 @@ function SectionLabel({ children }: { children: string }) {
 
 export function StudioPage() {
   return (
-    <PageShell atmosphere="studio" withTopSpacing={false}>
+    <PageShell atmosphere="studio" withTopSpacing={false} className="ei-studio-page">
       <Helmet>
         <title>Studio | Echo In Ink</title>
         <meta
@@ -171,48 +157,12 @@ export function StudioPage() {
         align="left"
         variant="studio"
       />
-      {/* EARLY PROOF */}
-      <Section
-        spacing="none"
-        className="ei-studio-proof-section relative z-20 pt-8 pb-2 md:pt-10 md:pb-4"
-      >
-        <Container size="xl" className="relative z-10">
-          <motion.div
-            variants={staggerContainer(STAGGER.loose, 0)}
-            initial="hidden"
-            whileInView="visible"
-            viewport={VIEWPORT.normal}
-            className="mx-auto grid max-w-[1180px] gap-4 md:grid-cols-[0.9fr_1.45fr]"
-          >
-            <motion.div variants={driftUp} className="ei-studio-proof-intro">
-              <SectionLabel>What We Make</SectionLabel>
-              <p className="ei-type-studio-proof-heading mt-5">
-                Strategy, identity, and digital atmosphere — made tangible.
-              </p>
-            </motion.div>
 
-            <motion.div
-              variants={staggerContainer(STAGGER.tight, 0)}
-              className="grid gap-3 sm:grid-cols-3 md:gap-4"
-            >
-              {studioProof.map((item) => (
-                <motion.article
-                  key={item.label}
-                  variants={driftUp}
-                  className="ei-studio-proof-card"
-                >
-                  <span>{item.label}</span>
-                  <p>{item.detail}</p>
-                </motion.article>
-              ))}
-            </motion.div>
-          </motion.div>
-        </Container>
-      </Section>
       {/* PHILOSOPHY */}
       <Section
         spacing="none"
-className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"      >
+        className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"
+      >
         <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -223,7 +173,7 @@ className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"      >
           >
             <motion.div
               variants={fadeSoft}
-              className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:-translate-y-3 md:grid-cols-[minmax(0,1.18fr)_minmax(0,1.18fr)_220px] md:items-center md:gap-12 md:px-8 md:pb-8 md:pt-12 lg:px-10 lg:pb-10 lg:pt-[4rem]"
+              className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:-translate-y-3 md:grid-cols-[minmax(0,1.05fr)_minmax(0,1.05fr)_minmax(18rem,0.82fr)] md:items-center md:gap-12 md:px-8 md:pb-8 md:pt-12 lg:px-10 lg:pb-10 lg:pt-[4rem]"
             >
               <motion.div variants={driftUp} className="relative md:-top-4">
                 <SectionLabel>Our Philosophy</SectionLabel>
@@ -265,13 +215,13 @@ className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"      >
 
               <motion.div
                 variants={fadeSoft}
-                className="relative hidden justify-self-end md:left-4 md:block"
+                className="ei-studio-philosophy-visual relative hidden justify-self-end md:block"
                 aria-hidden="true"
               >
                 <img
-                  src={studioManifestoImage}
-                  alt=""
-                  className="h-[171px] w-[198px] rounded-[28px] object-cover object-center opacity-85 mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,black_42%,transparent_76%)]"
+                  src={studioPhilosophyArtifact}
+                  alt="Philosophy artifact"
+                  className="rounded-[32px] object-cover object-center opacity-90 mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,black_56%,transparent_82%)]"
                 />
               </motion.div>
             </motion.div>
@@ -290,7 +240,7 @@ className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"      >
             className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="mb-8 text-center">
-              <SectionLabel>What We Do</SectionLabel>
+              <SectionLabel>What We Make</SectionLabel>
             </motion.div>
 
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -310,8 +260,8 @@ className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"      >
                       className="absolute inset-0 bg-[linear-gradient(180deg,rgb(var(--ei-void-rgb)/0.2),rgb(var(--ei-void-rgb)/0.88))]"
                     />
 
-                    <div className="relative z-10 flex min-h-[276px] flex-col">
-                      <div className="mb-auto">
+                    <div className="ei-studio-pillar-card-inner relative z-10">
+                      <div>
                         <span className="ei-type-studio-label">
                           {pillar.number}
                         </span>
@@ -337,7 +287,7 @@ className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"      >
                         {pillar.output}
                       </p>
 
-                      <span className="ei-card-action mt-7">
+                      <span className="ei-card-action">
                         Explore <span className="ei-card-action-arrow">→</span>
                       </span>
                     </div>
@@ -389,7 +339,7 @@ className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"      >
               >
                 <div
                   aria-hidden="true"
-                  className="pointer-events-none absolute left-0 right-0 top-[2.35rem] hidden h-px bg-[linear-gradient(90deg,transparent,rgb(var(--ei-halo-blue-rgb)/0.45),rgb(var(--ei-violet-rgb)/0.52),transparent)] md:block"
+                  className="pointer-events-none absolute left-0 right-0 top-[1.18rem] hidden h-px bg-[linear-gradient(90deg,transparent,rgb(var(--ei-halo-blue-rgb)/0.45),rgb(var(--ei-violet-rgb)/0.52),transparent)] md:block"
                 />
 
                 {process.map((step) => (
@@ -401,8 +351,6 @@ className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"      >
                     <div className="ei-type-studio-process-number">
                       {step.number}
                     </div>
-
-                    <span className="absolute left-0 top-[2.05rem] hidden h-2 w-2 rounded-full bg-[rgb(var(--ei-ice-white-rgb)/0.75)] shadow-[0_0_18px_rgb(var(--ei-violet-rgb)/0.75)] md:block" />
 
                     <h3 className="ei-type-studio-process-title mt-4">
                       {step.title}
@@ -556,3 +504,5 @@ className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"      >
     </PageShell>
   );
 }
+
+export default StudioPage;
