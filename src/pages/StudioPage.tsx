@@ -122,6 +122,20 @@ const process = [
   },
 ] as const;
 
+const studioProof = [
+  {
+    label: "Identity systems",
+    detail: "Naming, visual language, voice, and brand architecture.",
+  },
+  {
+    label: "Web experiences",
+    detail: "Immersive websites with story, structure, and atmosphere.",
+  },
+  {
+    label: "Creative direction",
+    detail: "Art direction, references, launch language, and cohesion.",
+  },
+] as const;
 function SectionLabel({ children }: { children: string }) {
   return (
     <div className="ei-section-label-row">
@@ -157,12 +171,48 @@ export function StudioPage() {
         align="left"
         variant="studio"
       />
+      {/* EARLY PROOF */}
+      <Section
+        spacing="none"
+        className="ei-studio-proof-section relative z-20 pt-8 pb-2 md:pt-10 md:pb-4"
+      >
+        <Container size="xl" className="relative z-10">
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+            className="mx-auto grid max-w-[1180px] gap-4 md:grid-cols-[0.9fr_1.45fr]"
+          >
+            <motion.div variants={driftUp} className="ei-studio-proof-intro">
+              <SectionLabel>What We Make</SectionLabel>
+              <p className="ei-type-studio-proof-heading mt-5">
+                Strategy, identity, and digital atmosphere — made tangible.
+              </p>
+            </motion.div>
 
+            <motion.div
+              variants={staggerContainer(STAGGER.tight, 0)}
+              className="grid gap-3 sm:grid-cols-3 md:gap-4"
+            >
+              {studioProof.map((item) => (
+                <motion.article
+                  key={item.label}
+                  variants={driftUp}
+                  className="ei-studio-proof-card"
+                >
+                  <span>{item.label}</span>
+                  <p>{item.detail}</p>
+                </motion.article>
+              ))}
+            </motion.div>
+          </motion.div>
+        </Container>
+      </Section>
       {/* PHILOSOPHY */}
       <Section
         spacing="none"
-        className="relative pt-12 pb-2 will-change-transform md:pt-16 md:pb-4"
-      >
+className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"      >
         <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}

@@ -666,4 +666,175 @@
       height: 2.5rem;
     }
   }
+}/* ─────────────────────────────────────────────────────────
+   Studio second-pass polish
+   Fixes: earlier commercial clarity, cleaner hero copy zone,
+   stronger mobile rhythm, slightly reduced essay density.
+   ───────────────────────────────────────────────────────── */
+
+@layer components {
+  .ei-studio-page .ei-page-section-hero {
+    background-color: var(--ei-ink);
+  }
+
+  .ei-studio-page .ei-page-section-hero::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    bottom: -1px;
+    z-index: 8;
+    height: clamp(7rem, 14vh, 13rem);
+    pointer-events: none;
+    background:
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        rgb(var(--ei-ink-rgb) / 0.54) 48%,
+        var(--ei-ink) 100%
+      );
+  }
+
+  .ei-studio-page .ei-page-section-hero [aria-hidden="true"]:nth-of-type(3) {
+    opacity: 1;
+  }
+
+  .ei-studio-page .ei-page-section-hero-title,
+  .ei-studio-page .ei-type-studio-hero {
+    text-shadow:
+      0 2px 34px rgb(0 0 0 / 0.52),
+      0 0 54px rgb(var(--ei-violet-rgb) / 0.12);
+  }
+
+  .ei-studio-proof-section {
+    background:
+      radial-gradient(
+        ellipse 58% 80% at 82% 0%,
+        rgb(var(--ei-violet-rgb) / 0.075) 0%,
+        transparent 64%
+      ),
+      var(--ei-ink);
+  }
+
+  .ei-studio-proof-intro {
+    align-self: center;
+  }
+
+  .ei-type-studio-proof-heading {
+    max-width: 18ch;
+    color: var(--ei-color-text-primary);
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.75rem, 2.8vw, 2.65rem);
+    font-weight: 400;
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+
+  .ei-studio-proof-card {
+    position: relative;
+    min-height: 10rem;
+    overflow: hidden;
+    border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.13);
+    border-radius: var(--ei-card-radius-lg, 28px);
+    background:
+      radial-gradient(
+        circle at 20% 12%,
+        rgb(var(--ei-halo-blue-rgb) / 0.1) 0%,
+        transparent 42%
+      ),
+      linear-gradient(
+        180deg,
+        rgb(var(--ei-midnight-rgb) / 0.42),
+        rgb(var(--ei-ink-rgb) / 0.68)
+      );
+    padding: clamp(1.25rem, 2.2vw, 1.65rem);
+    box-shadow:
+      inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.045),
+      0 18px 62px rgb(0 0 0 / 0.22);
+  }
+
+  .ei-studio-proof-card::after {
+    content: "";
+    position: absolute;
+    inset-inline: 1.25rem;
+    bottom: 1.1rem;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      rgb(var(--ei-halo-blue-rgb) / 0.42),
+      rgb(var(--ei-soft-neon-rgb) / 0.18),
+      transparent
+    );
+    opacity: 0.72;
+  }
+
+  .ei-studio-proof-card span {
+    display: block;
+    color: rgb(var(--ei-moonlit-rgb) / 0.72);
+    font-family: var(--ei-font-structural);
+    font-size: 0.66rem;
+    letter-spacing: 0.16em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .ei-studio-proof-card p {
+    max-width: 24ch;
+    margin-top: 1rem;
+    color: rgb(var(--ei-moonlit-rgb) / 0.78);
+    font-family: var(--ei-font-structural);
+    font-size: 0.92rem;
+    line-height: 1.58;
+  }
+
+  .ei-studio-page .ei-type-studio-body {
+    line-height: 1.64;
+  }
+
+  .ei-studio-page .ei-type-studio-body + .ei-type-studio-body {
+    margin-top: 1.1rem;
+  }
+
+  @media (max-width: 767px) {
+    .ei-studio-page .ei-page-section-hero {
+      min-height: 88svh;
+    }
+
+    .ei-studio-page .ei-page-section-hero::after {
+      height: 10rem;
+    }
+
+    .ei-studio-proof-section {
+      padding-top: 2.75rem;
+      padding-bottom: 1.5rem;
+    }
+
+    .ei-type-studio-proof-heading {
+      max-width: 12ch;
+      font-size: clamp(2rem, 9vw, 2.85rem);
+    }
+
+    .ei-studio-proof-card {
+      min-height: auto;
+      padding: 1.35rem;
+    }
+
+    .ei-studio-proof-card p {
+      max-width: 30ch;
+      font-size: 0.95rem;
+      line-height: 1.56;
+    }
+
+    .ei-studio-page section {
+      scroll-margin-top: 5rem;
+    }
+
+    .ei-studio-page .ei-type-studio-body,
+    .ei-studio-page .ei-type-studio-card-body,
+    .ei-studio-page .ei-type-studio-pillar-body,
+    .ei-studio-page .ei-type-studio-process-body,
+    .ei-studio-page .ei-type-studio-feature-body {
+      line-height: 1.58;
+    }
+  }
 }
