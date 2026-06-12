@@ -1,0 +1,97 @@
+/* ─────────────────────────────────────────────────────────
+   Contact polish pass
+   Fixes: stronger invitation, higher form contrast,
+   larger mobile fields, more CTA breathing room.
+   Image verdict: replace.
+   ───────────────────────────────────────────────────────── */
+
+@layer components {
+  .ei-contact-page .ei-page-section-hero .ei-page-section-hero-media img,
+  .ei-contact-page .ei-echo-hero-media img {
+    object-position: 70% 48%;
+    filter: saturate(0.92) brightness(0.86) contrast(1.05);
+  }
+
+  .ei-contact-page .ei-page-section-hero .ei-page-section-hero-scrim,
+  .ei-contact-page .ei-echo-hero-scrim {
+    background:
+      radial-gradient(
+        ellipse 48% 72% at 18% 48%,
+        rgb(var(--ei-ink-rgb) / 0.84) 0%,
+        rgb(var(--ei-ink-rgb) / 0.58) 46%,
+        transparent 78%
+      ),
+      linear-gradient(
+        90deg,
+        rgb(var(--ei-ink-rgb) / 0.84) 0%,
+        rgb(var(--ei-ink-rgb) / 0.56) 42%,
+        rgb(var(--ei-ink-rgb) / 0.12) 74%,
+        transparent 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgb(var(--ei-ink-rgb) / 0.1) 0%,
+        transparent 50%,
+        var(--ei-ink) 100%
+      );
+  }
+
+  .ei-contact-page .ei-page-section-hero h1,
+  .ei-contact-page .ei-echo-hero-title {
+    text-shadow:
+      0 2px 34px rgb(0 0 0 / 0.58),
+      0 0 54px rgb(var(--ei-violet-rgb) / 0.16),
+      0 0 92px rgb(var(--ei-halo-blue-rgb) / 0.08);
+  }
+
+  .ei-contact-page form {
+    gap: var(--ei-space-7);
+  }
+
+  .ei-contact-page input,
+  .ei-contact-page select,
+  .ei-contact-page textarea {
+    min-height: 3.45rem;
+    border-color: rgb(var(--ei-moonlit-rgb) / 0.16);
+    background: rgb(var(--ei-void-rgb) / 0.58);
+    color: var(--ei-color-text-primary);
+  }
+
+  .ei-contact-page textarea {
+    min-height: 11rem;
+  }
+
+  .ei-contact-page input:focus-visible,
+  .ei-contact-page select:focus-visible,
+  .ei-contact-page textarea:focus-visible {
+    border-color: rgb(var(--ei-halo-blue-rgb) / 0.42);
+    box-shadow:
+      0 0 0 1px rgb(var(--ei-halo-blue-rgb) / 0.2),
+      0 0 32px rgb(var(--ei-halo-blue-rgb) / 0.08);
+  }
+
+  @media (max-width: 767px) {
+    .ei-contact-page .ei-page-section-hero .ei-page-section-hero-media img,
+    .ei-contact-page .ei-echo-hero-media img {
+      object-position: 66% 38%;
+      filter: saturate(0.9) brightness(0.78) contrast(1.04);
+    }
+
+    .ei-contact-page input,
+    .ei-contact-page select {
+      min-height: 3.8rem;
+    }
+
+    .ei-contact-page textarea {
+      min-height: 12rem;
+    }
+
+    .ei-contact-page form {
+      gap: var(--ei-space-8);
+    }
+
+    .ei-contact-page form > div:last-child {
+      padding-top: var(--ei-space-5);
+    }
+  }
+}

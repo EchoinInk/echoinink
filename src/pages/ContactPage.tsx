@@ -125,7 +125,11 @@ export function ContactPage() {
   };
 
   return (
-    <PageShell atmosphere="default" withTopSpacing={false}>
+    <PageShell
+      atmosphere="default"
+      withTopSpacing={false}
+      className="ei-contact-page"
+    >
       <Helmet>
         <title>Contact — Echo in Ink</title>
         <meta
@@ -147,7 +151,7 @@ export function ContactPage() {
 
       <Section
         spacing="none"
-        className="relative z-20 -mt-10 overflow-hidden pb-20 md:-mt-16 md:pb-28"
+        className="relative z-20 -mt-8 overflow-hidden pb-24 md:-mt-14 md:pb-32"
       >
         <div
           aria-hidden="true"
