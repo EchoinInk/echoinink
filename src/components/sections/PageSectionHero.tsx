@@ -56,7 +56,7 @@ export function PageSectionHero({
     : "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
 
   const bodyClass = isStudio
-    ? "ei-type-studio-body max-w-[47ch] text-[var(--ei-color-text-secondary)]"
+    ? "ei-type-studio-body max-w-[43ch] text-[var(--ei-color-text-secondary)]"
     : isIntimate
       ? "ei-type-hero-description max-w-[42ch]"
       : "ei-type-hero-description max-w-[46ch]";
@@ -68,11 +68,11 @@ export function PageSectionHero({
       whileInView="visible"
       viewport={VIEWPORT.loose}
       className={`
-        relative flex min-h-[54vh] items-start overflow-hidden
+        relative flex min-h-[58vh] items-start overflow-hidden
         bg-[var(--ei-ink)]
         pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]
         ${isIntimate ? "md:min-h-[60vh]" : ""}
-        ${isStudio ? "md:min-h-[72vh] lg:min-h-[76vh]" : ""}
+        ${isStudio ? "md:min-h-[78vh] lg:min-h-[84vh]" : ""}
       `}
       aria-labelledby="editorial-hero-heading"
     >
@@ -81,8 +81,10 @@ export function PageSectionHero({
         <img
           src={mobileImage}
           alt=""
-          className={`h-full w-full object-cover object-center ${
-            isStudio ? "saturate-[0.98] brightness-[0.96] md:object-[70%_50%]" : "saturate-[0.86] md:object-[72%_50%]"
+          className={`h-full w-full object-cover ${
+            isStudio
+              ? "object-[68%_38%] saturate-[1.06] brightness-[1.02] contrast-[1.04] md:object-[73%_45%]"
+              : "object-center saturate-[0.86] md:object-[72%_50%]"
           }`}
           fetchPriority="high"
         />
@@ -94,7 +96,7 @@ export function PageSectionHero({
         style={{
           background:
             isStudio
-              ? "linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.04) 0%, rgb(var(--ei-ink-rgb) / 0.36) 100%)"
+              ? "linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.00) 0%, rgb(var(--ei-ink-rgb) / 0.22) 58%, rgb(var(--ei-ink-rgb) / 0.46) 100%)"
               : "linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.12) 0%, rgb(var(--ei-ink-rgb) / 0.46) 100%)",
         }}
       />
@@ -104,7 +106,9 @@ export function PageSectionHero({
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{
           background: isLeft
-            ? "linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-ink-rgb) / 0.16) 100%)"
+            ? isStudio
+              ? "linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.10) 0%, transparent 36%, transparent 68%, rgb(var(--ei-ink-rgb) / 0.10) 100%)"
+              : "linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-ink-rgb) / 0.16) 100%)"
             : "linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.16) 0%, transparent 56%, transparent 100%)",
         }}
       />
@@ -115,18 +119,41 @@ export function PageSectionHero({
         style={{
           background: isLeft
             ? isStudio
-              ? "radial-gradient(ellipse 52% 74% at 18% 48%, rgb(var(--ei-ink-rgb) / 0.86) 0%, rgb(var(--ei-ink-rgb) / 0.55) 44%, transparent 75%), linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink -rgb) / 0.30) 38%, transparent 68%)"
+              ? "radial-gradient(ellipse 48% 70% at 18% 48%, rgb(var(--ei-ink-rgb) / 0.88) 0%, rgb(var(--ei-ink-rgb) / 0.62) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink-rgb) / 0.26) 38%, transparent 66%)"
               : "radial-gradient(ellipse 52% 64% at 16% 46%, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink-rgb) / 0.48) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.52) 0%, transparent 58%)"
             : "radial-gradient(ellipse 52% 64% at 84% 46%, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink-rgb) / 0.48) 42%, transparent 74%), linear-gradient(270deg, rgb(var(--ei-ink-rgb) / 0.52) 0%, transparent 58%)",
         }}
       />
 
+      {isStudio ? (
+        <div
+          aria-hidden="true"
+          className="ei-studio-hero-proof-board pointer-events-none absolute right-[clamp(1.25rem,5vw,5rem)] bottom-[12vh] z-[4] hidden lg:block"
+        >
+          <div className="ei-studio-hero-proof-card ei-studio-hero-proof-card-main">
+            <span>Identity map</span>
+            <strong>Signal / Story / System</strong>
+          </div>
+
+          <div className="ei-studio-hero-proof-card ei-studio-hero-proof-card-small">
+            <span>Visual language</span>
+            <strong>12-frame direction board</strong>
+          </div>
+
+          <div className="ei-studio-hero-proof-lines">
+            <i />
+            <i />
+            <i />
+          </div>
+        </div>
+      ) : null}
+
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-0 left-0 right-0 z-[3] h-[20vh]"
+        className="pointer-events-none absolute right-0 bottom-0 left-0 z-[5] h-[24vh]"
         style={{
           background:
-            "linear-gradient(to bottom, transparent 0%, rgb(var(--ei-ink-rgb) / 0.34) 70%, var(--ei-ink) 100%)",
+            "linear-gradient(to bottom, transparent 0%, rgb(var(--ei-ink-rgb) / 0.42) 70%, var(--ei-ink) 100%)",
         }}
       />
 
@@ -134,9 +161,9 @@ export function PageSectionHero({
         size="xl"
         className="
           relative z-10 w-full
-          pt-[clamp(2.5rem,7vh,4.5rem)]
-          md:pt-[clamp(3.5rem,9vh,5.5rem)]
-          lg:pt-[clamp(4rem,10vh,6rem)]
+          pt-[clamp(2.75rem,8vh,5rem)]
+          md:pt-[clamp(4rem,10vh,6rem)]
+          lg:pt-[clamp(4.5rem,11vh,7rem)]
         "
       >
         <div className={`max-w-[680px] ${isLeft ? "" : "mx-auto text-center"}`}>
@@ -149,13 +176,11 @@ export function PageSectionHero({
           >
             <div
               className={`
-                mb-3 flex items-center gap-4 md:mb-5
+                mb-4 flex items-center gap-4 md:mb-5
                 ${isLeft ? "" : "justify-center"}
               `}
             >
-              <span className="ei-type-studio-label">
-                {eyebrow}
-              </span>
+              <span className="ei-type-studio-label">{eyebrow}</span>
 
               <div
                 className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-halo-blue-rgb)/0.45)]"
@@ -171,7 +196,8 @@ export function PageSectionHero({
               id="editorial-hero-heading"
               className={headingClass}
               style={{
-                textShadow: "0 0 48px rgb(var(--ei-violet-rgb) / 0.04)",
+                textShadow:
+                  "0 2px 28px rgb(0 0 0 / 0.42), 0 0 48px rgb(var(--ei-violet-rgb) / 0.08)",
               }}
             >
               {italicWord
@@ -192,18 +218,26 @@ export function PageSectionHero({
             {(ctaLabel && ctaHref) || (secondaryCtaLabel && secondaryCtaHref) ? (
               <motion.div
                 variants={fadeSoft}
-                className={`mt-8 flex flex-wrap items-center gap-4 md:mt-10 ${
+                className={`mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center md:mt-10 md:gap-4 ${
                   isLeft ? "" : "justify-center"
                 }`}
               >
                 {ctaLabel && ctaHref ? (
-                  <Button to={ctaHref} variant={ctaVariant} className="self-start">
+                  <Button
+                    to={ctaHref}
+                    variant={ctaVariant}
+                    className="self-stretch sm:self-start"
+                  >
                     {ctaLabel}
                   </Button>
                 ) : null}
 
                 {secondaryCtaLabel && secondaryCtaHref ? (
-                  <Button to={secondaryCtaHref} variant="secondary" className="self-start">
+                  <Button
+                    to={secondaryCtaHref}
+                    variant="secondary"
+                    className="self-stretch sm:self-start"
+                  >
                     {secondaryCtaLabel}
                     <span aria-hidden="true">→</span>
                   </Button>
