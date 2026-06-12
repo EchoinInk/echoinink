@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
-import identityHeroDesktop from "@/assets/imagery/hero/identity-hero-desktop.webp";
-import identityHeroMobile from "@/assets/imagery/hero/identity-hero-mobile.webp";
+import identityHeroDesktop from "@/assets/imagery/hero/identity-hero-orbital-system-desktop.webp";
+import identityHeroMobile from "@/assets/imagery/hero/identity-hero-orbital-system-mobile.webp";
 import { ContentFrame } from "@/components/layout/ContentFrame";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
@@ -22,7 +22,7 @@ import {
   identityPricing,
   identityProcess,
   identityTransformation,
-  identityUseCases
+  identityUseCases,
 } from "@/data/identityContent";
 import {
   blurEmergence,
@@ -30,27 +30,51 @@ import {
   fadeSoft,
   staggerContainer,
   STAGGER,
-  VIEWPORT
+  VIEWPORT,
 } from "@/lib/motion-cinematic";
 
 function scrollToProcess() {
   const processSection = document.getElementById("identity-process");
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
 
   processSection?.scrollIntoView({
     behavior: prefersReducedMotion ? "auto" : "smooth",
-    block: "start"
+    block: "start",
   });
 }
 
 function IdentityHeroSignal() {
   return (
     <div className="ei-identity-hero-signal" aria-hidden="true">
+      <span className="ei-identity-hero-glow" />
+      <span className="ei-identity-hero-axis ei-identity-hero-axis-horizontal" />
+      <span className="ei-identity-hero-axis ei-identity-hero-axis-vertical" />
+
       <span className="ei-identity-hero-ring ei-identity-hero-ring-outer" />
+      <span className="ei-identity-hero-ring ei-identity-hero-ring-middle" />
       <span className="ei-identity-hero-ring ei-identity-hero-ring-inner" />
+
+      <span className="ei-identity-hero-node ei-identity-hero-node-1" />
+      <span className="ei-identity-hero-node ei-identity-hero-node-2" />
+      <span className="ei-identity-hero-node ei-identity-hero-node-3" />
+      <span className="ei-identity-hero-node ei-identity-hero-node-4" />
+
       <span className="ei-identity-hero-core">
-        <OrbitalVisual variant="innerTide" size={96} />
+        <OrbitalVisual variant="innerTide" size={104} />
       </span>
+
+      <div className="ei-identity-hero-proof-card ei-identity-hero-proof-card-primary">
+        <span>Identity system</span>
+        <strong>Feeling → Form → World</strong>
+      </div>
+
+      <div className="ei-identity-hero-proof-card ei-identity-hero-proof-card-secondary">
+        <span>Signal map</span>
+        <strong>Palette / Voice / Atmosphere</strong>
+      </div>
+
       {identityHero.atmosphereRail.map((item, index) => (
         <span
           key={item}
@@ -65,7 +89,11 @@ function IdentityHeroSignal() {
 
 export function IdentityPage() {
   return (
-    <PageShell atmosphere="identity" withTopSpacing={false} className="ei-identity-page">
+    <PageShell
+      atmosphere="identity"
+      withTopSpacing={false}
+      className="ei-identity-page"
+    >
       <Helmet>
         <title>Atmospheric Identity Direction — Echo in Ink</title>
         <meta
@@ -101,7 +129,8 @@ export function IdentityPage() {
               variant="tertiary"
               onClick={scrollToProcess}
             >
-              {identityHero.secondaryCta.label} <span aria-hidden="true">→</span>
+              {identityHero.secondaryCta.label}{" "}
+              <span aria-hidden="true">→</span>
             </Button>
           </>
         }
@@ -114,7 +143,10 @@ export function IdentityPage() {
         contentClassName="ei-identity-hero-content"
       />
 
-      <Section spacing="none" className="ei-identity-section ei-identity-orientation">
+      <Section
+        spacing="none"
+        className="ei-identity-section ei-identity-section-anchor ei-identity-orientation"
+      >
         <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -123,10 +155,14 @@ export function IdentityPage() {
             viewport={VIEWPORT.normal}
             className="ei-identity-orientation-grid"
           >
-            <motion.div variants={driftUp} className="ei-identity-orientation-copy">
+            <motion.div
+              variants={driftUp}
+              className="ei-identity-orientation-copy"
+            >
               <SectionLabel label="Who it is for" index="02" />
               <h2>
-                For the creator who can <em>feel</em> the world, but cannot yet see it clearly.
+                For the creator who can <em>feel</em> the world, but cannot yet
+                see it clearly.
               </h2>
               <div>
                 {identityAudience.intro.map((paragraph) => (
@@ -136,8 +172,14 @@ export function IdentityPage() {
             </motion.div>
 
             <motion.div variants={fadeSoft}>
-              <EchoCard variant="index" padding="lg" className="ei-identity-use-cases">
-                <p className="ei-identity-overline">This may be the right moment if</p>
+              <EchoCard
+                variant="index"
+                padding="lg"
+                className="ei-identity-use-cases"
+              >
+                <p className="ei-identity-overline">
+                  This may be the right moment if
+                </p>
                 <ul>
                   {identityUseCases.map((item) => (
                     <li key={item}>
@@ -152,7 +194,10 @@ export function IdentityPage() {
         </ContentFrame>
       </Section>
 
-      <Section spacing="none" className="ei-identity-section ei-identity-kit">
+      <Section
+        spacing="none"
+        className="ei-identity-section ei-identity-section-anchor ei-identity-kit"
+      >
         <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -160,13 +205,16 @@ export function IdentityPage() {
             whileInView="visible"
             viewport={VIEWPORT.normal}
           >
-            <motion.div variants={driftUp} className="ei-identity-section-heading">
+            <motion.div
+              variants={driftUp}
+              className="ei-identity-section-heading"
+            >
               <SectionLabel label="What you receive" index="03" />
               <div>
                 <h2>{identityDeliverables.heading}</h2>
                 <p>
-                  A concise direction system covering palette, type, tone, visual references,
-                  usage principles, and launch guidance.
+                  A concise direction system covering palette, type, tone,
+                  visual references, usage principles, and launch guidance.
                 </p>
               </div>
             </motion.div>
@@ -209,7 +257,10 @@ export function IdentityPage() {
         </ContentFrame>
       </Section>
 
-      <Section spacing="none" className="ei-identity-section ei-identity-coherence">
+      <Section
+        spacing="none"
+        className="ei-identity-section ei-identity-section-anchor ei-identity-coherence"
+      >
         <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -217,7 +268,10 @@ export function IdentityPage() {
             whileInView="visible"
             viewport={VIEWPORT.normal}
           >
-            <motion.div variants={driftUp} className="ei-identity-section-heading">
+            <motion.div
+              variants={driftUp}
+              className="ei-identity-section-heading"
+            >
               <SectionLabel label="From signal to world" index="04" />
               <div>
                 <h2>{identityTransformation.heading}</h2>
@@ -226,7 +280,11 @@ export function IdentityPage() {
             </motion.div>
 
             <motion.div variants={fadeSoft}>
-              <EchoCard variant="offer" padding="none" className="ei-identity-coherence-panel">
+              <EchoCard
+                variant="offer"
+                padding="none"
+                className="ei-identity-coherence-panel"
+              >
                 <div className="ei-identity-signal-cloud">
                   <p>Scattered signals</p>
                   {identityTransformation.signals.map((signal) => (
@@ -266,7 +324,7 @@ export function IdentityPage() {
       <Section
         id="identity-process"
         spacing="none"
-        className="ei-identity-section ei-identity-process"
+        className="ei-identity-section ei-identity-section-anchor ei-identity-process"
       >
         <ContentFrame width="standard" gutters>
           <motion.div
@@ -275,7 +333,10 @@ export function IdentityPage() {
             whileInView="visible"
             viewport={VIEWPORT.normal}
           >
-            <motion.div variants={driftUp} className="ei-identity-section-heading">
+            <motion.div
+              variants={driftUp}
+              className="ei-identity-section-heading"
+            >
               <SectionLabel label="The process" index="05" />
               <div>
                 <h2>{identityProcess.heading}</h2>
@@ -289,21 +350,30 @@ export function IdentityPage() {
                   <span className="ei-identity-process-number">
                     {String(index + 1).padStart(2, "0")}
                   </span>
-                  <span className="ei-identity-process-dot" aria-hidden="true" />
+                  <span
+                    className="ei-identity-process-dot"
+                    aria-hidden="true"
+                  />
                   <h3>{step.title}</h3>
                   <p>{step.description}</p>
                 </motion.li>
               ))}
             </ol>
 
-            <motion.p variants={fadeSoft} className="ei-identity-process-closing">
+            <motion.p
+              variants={fadeSoft}
+              className="ei-identity-process-closing"
+            >
               {identityProcess.closing}
             </motion.p>
           </motion.div>
         </ContentFrame>
       </Section>
 
-      <Section spacing="none" className="ei-identity-section ei-identity-engagement">
+      <Section
+        spacing="none"
+        className="ei-identity-section ei-identity-section-anchor ei-identity-engagement"
+      >
         <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -311,7 +381,10 @@ export function IdentityPage() {
             whileInView="visible"
             viewport={VIEWPORT.normal}
           >
-            <motion.div variants={driftUp} className="ei-identity-section-heading">
+            <motion.div
+              variants={driftUp}
+              className="ei-identity-section-heading"
+            >
               <SectionLabel label={identityPricing.eyebrow} index="06" />
               <div>
                 <h2>{identityPricing.heading}</h2>
@@ -334,7 +407,9 @@ export function IdentityPage() {
                     <p className="ei-identity-price">
                       {tier.price} <span>{tier.currency}</span>
                     </p>
-                    <p className="ei-identity-engagement-summary">{tier.summary}</p>
+                    <p className="ei-identity-engagement-summary">
+                      {tier.summary}
+                    </p>
                     <ul>
                       {tier.features.map((feature) => (
                         <li key={feature}>{feature}</li>
@@ -350,7 +425,10 @@ export function IdentityPage() {
                 </motion.div>
               ))}
 
-              <motion.aside variants={blurEmergence} className="ei-identity-engagement-anchor">
+              <motion.aside
+                variants={blurEmergence}
+                className="ei-identity-engagement-anchor"
+              >
                 <span aria-hidden="true">✦</span>
                 <p>{identityPricing.anchor}</p>
               </motion.aside>
