@@ -2,8 +2,7 @@ import { Button } from "../ui/Button";
 
 export function HeroCTA() {
   return (
-    <div className="mt-9 flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center md:mt-12 md:gap-5">
-      <Button
+<div className="mt-9 mb-10 flex w-full flex-col items-stretch gap-3 sm:mb-12 sm:flex-row sm:items-center md:mt-12 md:mb-0 md:gap-5">      <Button
         to="/contact"
         variant="primary"
         className="w-full shadow-[0_0_42px_rgb(var(--ei-halo-blue-rgb)/0.16)] sm:w-auto"

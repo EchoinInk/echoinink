@@ -63,8 +63,7 @@ export function EmergingSystems() {
   return (
     <Section
       spacing="none"
-      className="relative overflow-hidden pt-5 pb-0 md:pt-8 md:pb-0"
-    >
+className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -110,8 +109,7 @@ export function EmergingSystems() {
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-5">
-            {systems.map((system) => (
+<div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-5">            {systems.map((system) => (
               <motion.article key={system.title} variants={driftUp}>
                 <Link
                   to={system.href}

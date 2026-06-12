@@ -53,8 +53,7 @@ export function WhatWeCreate() {
   return (
     <Section
       spacing="none"
-      className="relative overflow-hidden pt-5 pb-1 md:pt-8 md:pb-4"
-    >
+className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -88,8 +87,7 @@ export function WhatWeCreate() {
             />
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-5 lg:grid-cols-4">
-            {capabilities.map((cap) => (
+<div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-5 lg:grid-cols-4">            {capabilities.map((cap) => (
               <motion.article key={cap.title} variants={driftUp}>
                 <Link
                   to={cap.href}
