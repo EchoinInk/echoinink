@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
 import lumoStudy from "@/assets/projects/lumo-case-study.png";
-import lumoAtmosphere from "@/assets/imagery/sections/lumo-featured-bg.webp";
-import lumoAtmosphereMobile from "@/assets/imagery/sections/lumo-featured-mobile.webp";
+import lumoAtmosphere from "@/assets/imagery/hero/lumo-hero-light-horizon-desktop.webp";
+import lumoAtmosphereMobile from "@/assets/imagery/hero/lumo-hero-light-horizon-mobile.webp";
 import { CaseStudyLayout } from "@/components/layout/CaseStudyLayout";
 import { CTASection } from "@/components/sections/CTASection";
 import { EchoHero } from "@/components/sections/EchoHero";

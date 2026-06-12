@@ -28,8 +28,8 @@ import {
   type ArchiveFilter,
   type ArchiveSort,
 } from '@/data/archiveContent';
-import archiveImageDesktop from '@/assets/imagery/hero/archive-hero-desktop.webp';
-import archiveImageMobile from '@/assets/imagery/hero/archive-hero-mobile.webp';
+import archiveImageDesktop from '@/assets/imagery/hero/archive-hero-nebula-spiral-desktop.webp';
+import archiveImageMobile from '@/assets/imagery/hero/archive-hero-nebula-spiral-mobile.webp';
 import archiveEssayDesktop from '@/assets/imagery/sections/archive-essay-desktop.webp';
 import archiveEssayMobile from '@/assets/imagery/sections/archive-essay-mobile.webp';
 import {
@@ -62,6 +62,19 @@ function EmphasizedText({
     </>
   );
 }
+
+function scrollToArchiveIndex() {
+  const reduceMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)',
+  ).matches;
+
+  document.getElementById('archive-index')?.scrollIntoView({
+    behavior: reduceMotion ? 'auto' : 'smooth',
+    block: 'start',
+  });
+}
+
+const archivePathways = archiveFilters.filter((filter) => filter !== 'All');
 
 export function ArchivePage() {
   const [activeFilter, setActiveFilter] = useState<ArchiveFilter>('All');
@@ -96,13 +109,22 @@ export function ArchivePage() {
         className="ei-archive-hero"
         contentClassName="ei-archive-hero-content"
         actions={
-          <Button to="/archive/map" variant="tertiary">
-            Enter the index <span aria-hidden="true">→</span>
-          </Button>
+          <>
+            <Button onClick={scrollToArchiveIndex} variant="primary">
+              Browse the Archive <span aria-hidden="true">↓</span>
+            </Button>
+            <Button to="/archive/map" variant="tertiary">
+              Open the index <span aria-hidden="true">→</span>
+            </Button>
+          </>
         }
       />
 
-      <Section id="archive-featured" spacing="none" className="ei-archive-section ei-archive-featured-section">
+      <Section
+        id="archive-featured"
+        spacing="none"
+        className="ei-archive-section ei-archive-featured-section"
+      >
         <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -134,7 +156,7 @@ export function ArchivePage() {
 
                   <p>{archiveFeatured.excerpt}</p>
 
-                  <Button to={archiveFeatured.href} variant="tertiary">
+                  <Button to={archiveFeatured.href} variant="secondary">
                     {archiveFeatured.action} <span aria-hidden="true">→</span>
                   </Button>
                 </div>
@@ -163,11 +185,49 @@ export function ArchivePage() {
               </div>
             </motion.div>
 
+            <motion.div variants={fadeSoft} className="ei-archive-pathway-grid">
+              {archivePathways.map((pathway, index) => {
+                const entryCount = archiveIndex.filter(
+                  (entry) => entry.category === pathway,
+                ).length;
+
+                return (
+                  <EchoCard
+                    key={pathway}
+                    variant={index === 0 ? 'feature' : 'index'}
+                    padding="md"
+                    className="ei-archive-pathway-card"
+                  >
+                    <div className="ei-archive-pathway-topline">
+                      <span>{String(index + 1).padStart(2, '0')}</span>
+                      <span>
+                        {entryCount} {entryCount === 1 ? 'entry' : 'entries'}
+                      </span>
+                    </div>
+                    <strong>{pathway}</strong>
+                    <p>
+                      {pathway === 'Philosophy'
+  ? 'Long-form arguments, atmospheric theory, and the deeper logic beneath the work.'
+  : pathway === 'Notes'
+    ? 'Studio fragments, observations, and unfinished edges.'
+    : pathway === 'Worldbuilding'
+      ? 'Creative worlds, narrative systems, and the environments ideas belong inside.'
+      : pathway === 'Case Fragments'
+        ? 'Where ideas became visual, strategic, or emotional form.'
+        : pathway === 'Experiments'
+          ? 'Tests, prototypes, prompts, and partial forms still becoming useful.'
+          : 'Reusable tools, structures, and frameworks for building with more clarity.'}
+                    </p>
+                  </EchoCard>
+                );
+              })}
+            </motion.div>
+
             <motion.div variants={fadeSoft} className="ei-archive-filter-wrap">
               <FilterBar
                 filters={archiveFilters}
                 activeFilter={activeFilter}
-                onFilterChange={setActiveFilter}
+                onFilterChange={(filter) => setActiveFilter(filter as ArchiveFilter)}
                 ariaLabel="Filter archive entries by category"
                 tone="editorial"
                 className="ei-archive-filter-bar"
@@ -203,6 +263,10 @@ export function ArchivePage() {
               <SectionLabel label="Recent notes" index="04" />
               <div>
                 <h2>Shorter observations. Quiet points of return.</h2>
+                <p>
+                  Small pieces with a visible signal: fragments, questions,
+                  and working notes from the archive floor.
+                </p>
               </div>
             </motion.div>
 
@@ -245,7 +309,11 @@ export function ArchivePage() {
         </ContentFrame>
       </Section>
 
-      <Section id="archive-index" spacing="none" className="ei-archive-section ei-archive-index-section">
+      <Section
+        id="archive-index"
+        spacing="none"
+        className="ei-archive-section ei-archive-index-section"
+      >
         <ContentFrame width="standard" gutters>
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}

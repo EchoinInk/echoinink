@@ -909,3 +909,140 @@
     }
   }
 }
+/* ─────────────────────────────────────────────────────────
+   Lumo must-fix pass
+   Fixes: minor overlay readability + dedicated mobile crop.
+   Image verdict: keep desktop, use separate portrait mobile.
+   ───────────────────────────────────────────────────────── */
+
+@layer components {
+  .ei-lumo-hero .ei-echo-hero-scrim {
+    background:
+      radial-gradient(
+        ellipse 48% 72% at 16% 48%,
+        rgb(var(--ei-void-rgb) / 0.82) 0%,
+        rgb(var(--ei-void-rgb) / 0.58) 46%,
+        transparent 76%
+      ),
+      linear-gradient(
+        90deg,
+        rgb(var(--ei-void-rgb) / 0.92) 0%,
+        rgb(var(--ei-void-rgb) / 0.64) 43%,
+        rgb(var(--ei-void-rgb) / 0.1) 78%
+      ),
+      linear-gradient(
+        180deg,
+        rgb(var(--ei-void-rgb) / 0.08),
+        var(--ei-void) 100%
+      );
+  }
+
+  .ei-lumo-hero .ei-echo-hero-title {
+    text-shadow:
+      0 2px 34px rgb(0 0 0 / 0.58),
+      0 0 54px rgb(var(--ei-violet-rgb) / 0.16),
+      0 0 92px rgb(var(--ei-halo-blue-rgb) / 0.08);
+  }
+
+  .ei-lumo-hero-title-line {
+    color: rgb(var(--ei-moonlit-rgb) / 0.86);
+    text-shadow: 0 2px 24px rgb(0 0 0 / 0.42);
+  }
+
+  .ei-lumo-hero-meta dt {
+    color: rgb(var(--ei-moonlit-rgb) / 0.58);
+  }
+
+  .ei-lumo-hero-meta dd {
+    color: rgb(var(--ei-moonlit-rgb) / 0.78);
+  }
+
+  .ei-lumo-hero-specimen,
+  .ei-lumo-hero-mark {
+    background:
+      radial-gradient(
+        circle at 50% 0%,
+        rgb(var(--ei-halo-blue-rgb) / 0.08),
+        transparent 58%
+      ),
+      rgb(var(--ei-void-rgb) / 0.76);
+    border-color: rgb(var(--ei-moonlit-rgb) / 0.14);
+  }
+
+  @media (max-width: 767px) {
+    .ei-lumo-hero[data-variant="caseStudy"] {
+      min-height: 64rem !important;
+      padding-bottom: 2.75rem !important;
+      align-items: flex-start;
+    }
+
+    .ei-lumo-hero .ei-echo-hero-media img {
+      object-position: 68% 34%;
+      scale: 1;
+    }
+
+    .ei-lumo-hero .ei-echo-hero-scrim {
+      background:
+        radial-gradient(
+          ellipse 92% 58% at 24% 18%,
+          rgb(var(--ei-void-rgb) / 0.72) 0%,
+          rgb(var(--ei-void-rgb) / 0.48) 48%,
+          transparent 76%
+        ),
+        linear-gradient(
+          180deg,
+          rgb(var(--ei-void-rgb) / 0.64) 0%,
+          rgb(var(--ei-void-rgb) / 0.44) 40%,
+          rgb(var(--ei-void-rgb) / 0.84) 76%,
+          var(--ei-void) 100%
+        );
+    }
+
+    .ei-lumo-hero-content {
+      max-width: 35rem;
+    }
+
+    .ei-lumo-hero .ei-echo-hero-title {
+      max-width: 8.5ch;
+      font-size: clamp(3.85rem, 18vw, 5.65rem);
+      line-height: 0.9;
+    }
+
+    .ei-lumo-hero-title-line {
+      max-width: 25ch;
+      font-size: clamp(1.05rem, 4.5vw, 1.22rem);
+      line-height: 1.46;
+    }
+
+    .ei-lumo-hero-meta {
+      max-width: 24rem;
+      margin-top: var(--ei-space-5);
+    }
+
+    .ei-lumo-hero-artifact {
+      right: var(--ei-page-gutter);
+      bottom: 1.75rem;
+      left: var(--ei-page-gutter);
+      height: 14rem;
+      opacity: 0.92;
+    }
+  }
+
+  @media (max-width: 520px) {
+    .ei-lumo-hero[data-variant="caseStudy"] {
+      min-height: 61rem !important;
+    }
+
+    .ei-lumo-hero .ei-echo-hero-title {
+      font-size: clamp(3.35rem, 16vw, 4.6rem);
+    }
+
+    .ei-lumo-hero-title-line {
+      max-width: 23ch;
+    }
+
+    .ei-lumo-hero-artifact {
+      height: 12.5rem;
+    }
+  }
+}
