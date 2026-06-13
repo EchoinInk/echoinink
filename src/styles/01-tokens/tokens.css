@@ -239,7 +239,7 @@
    COMPONENT SEMANTICS
    ─────────────────────────────────────────────────────────────── */
 
-    --ei-card-bg: rgba(11, 13, 42, 0.64);
+    --ei-card-bg: rgba(11, 13, 42, 0.84);
     --ei-card-bg-hover: rgba(11, 13, 42, 0.88);
     --ei-card-border: rgba(227, 216, 253, 0.1);
     --ei-card-border-hover: rgba(227, 216, 253, 0.2);

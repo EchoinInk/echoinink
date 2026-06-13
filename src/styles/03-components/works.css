@@ -763,3 +763,38 @@
     }
   }
 }
+/* ─────────────────────────────────────────────────────────
+   PageSectionHero pass — Works
+   Shared hero structure; page-specific polish only.
+   ───────────────────────────────────────────────────────── */
+
+@layer components {
+  .ei-works-page {
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .ei-works-page .ei-page-section-hero-title {
+    max-width: 14ch;
+  }
+
+  .ei-works-page .ei-page-section-hero-description {
+    max-width: 44ch;
+  }
+
+  .ei-works-page .ei-page-section-hero-image {
+    object-position: 66% 52%;
+    filter: saturate(0.86) brightness(0.8) contrast(1.05);
+  }
+
+  .ei-works-page .ei-page-section-hero-copy-scrim {
+    background:
+      radial-gradient(
+        ellipse 52% 64% at 16% 46%,
+        rgb(var(--ei-ink-rgb) / 0.86) 0%,
+        rgb(var(--ei-ink-rgb) / 0.56) 42%,
+        transparent 74%
+      ),
+      linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.66) 0%, transparent 58%) !important;
+  }
+}

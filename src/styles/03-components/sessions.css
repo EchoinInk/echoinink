@@ -1066,3 +1066,52 @@
     }
   }
 }
+/* ─────────────────────────────────────────────────────────
+   PageSectionHero pass — Sessions
+   Shared hero structure; page-specific polish only.
+   ───────────────────────────────────────────────────────── */
+
+@layer components {
+  .ei-sessions-page {
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .ei-sessions-page .ei-page-section-hero {
+    min-height: 72vh;
+  }
+
+  .ei-sessions-page .ei-page-section-hero-title {
+    max-width: 13ch;
+  }
+
+  .ei-sessions-page .ei-page-section-hero-description {
+    max-width: 42ch;
+  }
+
+  .ei-sessions-page .ei-page-section-hero-image {
+    object-position: 70% 48%;
+    filter: saturate(0.9) brightness(0.84) contrast(1.04);
+  }
+
+  .ei-sessions-page .ei-page-section-hero-copy-scrim {
+    background:
+      radial-gradient(
+        ellipse 52% 64% at 16% 46%,
+        rgb(var(--ei-ink-rgb) / 0.84) 0%,
+        rgb(var(--ei-ink-rgb) / 0.56) 42%,
+        transparent 74%
+      ),
+      linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.62) 0%, transparent 60%) !important;
+  }
+
+  @media (max-width: 768px) {
+    .ei-sessions-page .ei-page-section-hero {
+      min-height: 82svh;
+    }
+
+    .ei-sessions-page .ei-page-section-hero-image {
+      object-position: 70% 40%;
+    }
+  }
+}

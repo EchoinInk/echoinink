@@ -1163,3 +1163,44 @@
     overflow: hidden;
   }
 }
+/* ─────────────────────────────────────────────────────────
+   PageSectionHero pass — Identity
+   Shared hero structure; page-specific polish only.
+   ───────────────────────────────────────────────────────── */
+
+@layer components {
+  .ei-identity-page {
+    overflow: hidden;
+    background: transparent;
+  }
+
+  .ei-identity-page .ei-page-section-hero-title {
+    max-width: 14ch;
+  }
+
+  .ei-identity-page .ei-page-section-hero-description {
+    max-width: 42ch;
+  }
+
+  .ei-identity-page .ei-page-section-hero-image {
+    object-position: 72% 50%;
+    filter: saturate(0.86) brightness(0.82) contrast(1.04);
+  }
+
+  .ei-identity-page .ei-page-section-hero-copy-scrim {
+    background:
+      radial-gradient(
+        ellipse 52% 64% at 16% 46%,
+        rgb(var(--ei-ink-rgb) / 0.82) 0%,
+        rgb(var(--ei-ink-rgb) / 0.54) 42%,
+        transparent 74%
+      ),
+      linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.58) 0%, transparent 58%) !important;
+  }
+
+  @media (max-width: 768px) {
+    .ei-identity-page .ei-page-section-hero-image {
+      object-position: 72% 40%;
+    }
+  }
+}
