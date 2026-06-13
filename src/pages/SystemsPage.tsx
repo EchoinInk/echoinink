@@ -50,7 +50,7 @@ export function SystemsPage() {
   mobileImage={systemsHeroMobile}
   imageAlt="Dark cinematic systems blueprint with luminous signal grids and modular framework lines"
   align="left"
-  variant="intimate"
+  
   ctaLabel={systemsHero.primaryCta.label}
   ctaHref={systemsHero.primaryCta.href}
   secondaryCtaLabel={systemsHero.secondaryCta.label}

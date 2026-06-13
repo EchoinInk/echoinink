@@ -100,7 +100,7 @@ export function ArchivePage() {
   mobileImage={archiveImageMobile}
   imageAlt="Dark cinematic living archive with luminous fragments, constellation threads, and nebula-like ink clouds"
   align="left"
-  variant="intimate"
+  
   ctaLabel="Browse the Archive"
   ctaHref="#archive-index"
   secondaryCtaLabel="Open the index"

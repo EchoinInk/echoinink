@@ -61,7 +61,12 @@
 
   /* ─────────────────────────────────────────────────────────
      Hero
-     Keep only a clean ink fade. No media repositioning.
+     Shared type foundation comes from:
+     - ei-type-hero-home
+     - ei-type-hero-description
+     - ei-type-kicker
+
+     These Studio classes are modifiers only.
      ───────────────────────────────────────────────────────── */
 
   .ei-studio-page .ei-page-section-hero,
@@ -70,7 +75,7 @@
   }
 
   .ei-studio-page .ei-page-section-hero-title,
-  .ei-studio-page .ei-type-studio-hero {
+  .ei-studio-page .ei-page-section-hero-title--studio {
     text-shadow:
       0 2px 34px rgb(0 0 0 / 0.52),
       0 0 54px rgb(var(--ei-violet-rgb) / 0.12);
@@ -121,20 +126,13 @@
       );
   }
 
-  /* ─────────────────────────────────────────────────────────
-     Type
-     ───────────────────────────────────────────────────────── */
-
-  .ei-type-studio-hero {
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(2.7rem, 5.35vw, 5.15rem);
-    line-height: 0.96;
-    letter-spacing: -0.05em;
-    font-weight: 400;
-    color: var(--ei-color-text-primary);
+  .ei-page-section-hero-title--studio {
+    font-size: clamp(3rem, 5.35vw, 5.05rem);
+    line-height: 0.97;
+    letter-spacing: -0.055em;
   }
 
-  .ei-type-studio-hero-emphasis {
+  .ei-page-section-hero-emphasis--studio {
     font-style: italic;
     font-weight: 400;
     color: rgb(var(--ei-soft-neon-rgb) / 0.92);
@@ -142,6 +140,25 @@
       0 0 24px rgb(var(--ei-echo-magenta-rgb) / 0.22),
       0 0 56px rgb(var(--ei-violet-rgb) / 0.18);
   }
+
+  .ei-page-section-hero-description--studio {
+    max-width: 43ch;
+    color: rgb(var(--ei-moonlit-rgb) / 0.78);
+  }
+
+  .ei-page-section-hero-kicker--studio {
+  font-family: var(--ei-font-system, var(--ei-font-structural));
+  font-size: clamp(0.625rem, 0.72vw, 0.75rem);
+  line-height: 1.4;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: rgb(var(--ei-moonlit-rgb) / 0.54);
+}
+
+  /* ─────────────────────────────────────────────────────────
+     Studio inner-section type
+     ───────────────────────────────────────────────────────── */
 
   .ei-type-studio-kicker,
   .ei-type-studio-label {
@@ -476,9 +493,9 @@
      ───────────────────────────────────────────────────────── */
 
   @media (max-width: 768px) {
-    .ei-type-studio-hero {
-      font-size: clamp(2.75rem, 12.2vw, 3.95rem);
-      line-height: 0.99;
+    .ei-page-section-hero-title--studio {
+      font-size: clamp(2.85rem, 13vw, 4.05rem);
+      line-height: 0.98;
       letter-spacing: -0.048em;
     }
 
@@ -574,10 +591,6 @@
   }
 
   @media (max-width: 480px) {
-    .ei-type-studio-hero {
-      font-size: clamp(2.55rem, 11.8vw, 3.45rem);
-    }
-
     .ei-type-studio-philosophy {
       font-size: clamp(1.85rem, 8vw, 2.65rem);
     }

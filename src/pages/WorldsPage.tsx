@@ -206,7 +206,7 @@ export function WorldsPage() {
         mobileImage={worldsHeroMobile}
         imageAlt="Dark cinematic vertical portal suggesting an immersive creative world"
         align="left"
-        variant="intimate"
+        
         ctaLabel="Enquire about your world"
         ctaHref={worldsHero.primaryCta.href}
         secondaryCtaLabel="See what worldbuilding means"

@@ -132,7 +132,7 @@ export function SessionsPage() {
   mobileImage={sessionsHeroMobile}
   imageAlt="Luminous blue-violet threshold over a dark cinematic horizon"
   align="left"
-  variant="intimate"
+  
   ctaLabel="Book a session"
   ctaHref={sessionsHero.primaryCta.href}
   secondaryCtaLabel="See what happens inside"

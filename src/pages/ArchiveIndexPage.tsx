@@ -91,7 +91,7 @@ export function ArchiveIndexPage() {
   mobileImage={archiveImageMobile}
   imageAlt="Dark cinematic archive map with floating catalogue panels and constellation index lines"
   align="left"
-  variant="intimate"
+  
   ctaLabel="Enter the index"
   ctaHref="#archive-index"
 />

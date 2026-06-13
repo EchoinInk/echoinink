@@ -81,7 +81,7 @@ export function WorksPage() {
   mobileImage={worksHeroMobile}
   imageAlt="Dark cinematic signal stream with luminous blue-violet atmosphere"
   align="left"
-  variant="intimate"
+  
   ctaLabel="View featured case study"
   ctaHref="/works/lumo"
   secondaryCtaLabel="Explore selected work"

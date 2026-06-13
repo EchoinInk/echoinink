@@ -155,8 +155,7 @@ export function StudioPage() {
         mobileImage={studioHeroMobile}
         imageAlt="Atmospheric cosmic portal in violet, blue, and magenta light"
         align="left"
-        variant="studio"
-      />
+              />
 
       {/* PHILOSOPHY */}
       <Section

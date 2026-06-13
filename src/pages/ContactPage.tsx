@@ -146,7 +146,7 @@ export function ContactPage() {
         mobileImage={contactHeroMobile}
         imageAlt="Atmospheric violet orbital sphere over a dark reflective horizon"
         align="left"
-        variant="intimate"
+        
       />
 
       <Section

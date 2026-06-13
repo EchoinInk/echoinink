@@ -24,7 +24,6 @@ interface PageSectionHeroProps {
   mobileImage: string;
   imageAlt: string;
   align?: "left" | "center";
-  variant?: "default" | "studio" | "intimate";
 }
 
 export function PageSectionHero({
@@ -41,25 +40,12 @@ export function PageSectionHero({
   mobileImage,
   imageAlt,
   align = "left",
-  variant = "default",
 }: PageSectionHeroProps) {
   const titleParts = italicWord
     ? title.split(new RegExp(`(${italicWord})`, "i"))
     : [title];
 
   const isLeft = align === "left";
-  const isIntimate = variant === "intimate";
-  const isStudio = variant === "studio";
-
-  const headingClass = isStudio
-    ? "ei-type-studio-hero max-w-[13ch] whitespace-pre-line"
-    : "ei-type-hero-home max-w-[24ch] whitespace-pre-line";
-
-  const bodyClass = isStudio
-    ? "ei-type-studio-body max-w-[43ch] text-[var(--ei-color-text-secondary)]"
-    : isIntimate
-      ? "ei-type-hero-description max-w-[42ch]"
-      : "ei-type-hero-description max-w-[46ch]";
 
   return (
     <motion.section
@@ -67,66 +53,59 @@ export function PageSectionHero({
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className={`
+      className="
+        ei-page-section-hero
         relative flex min-h-[58vh] items-start overflow-hidden
         bg-[var(--ei-ink)]
         pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]
-        ${isIntimate ? "md:min-h-[60vh]" : ""}
-        ${isStudio ? "md:min-h-[78vh] lg:min-h-[84vh]" : ""}
-      `}
+      "
       aria-labelledby="editorial-hero-heading"
     >
-      <picture className="absolute inset-0 z-0 block" aria-hidden="true">
+      <picture
+        className="ei-page-section-hero-media absolute inset-0 z-0 block"
+        aria-hidden="true"
+      >
         <source media="(min-width: 768px)" srcSet={image} />
         <img
           src={mobileImage}
           alt=""
-          className={`h-full w-full object-cover ${
-            isStudio
-              ? "object-[68%_38%] saturate-[1.06] brightness-[1.02] contrast-[1.04] md:object-[73%_45%]"
-              : "object-center saturate-[0.86] md:object-[72%_50%]"
-          }`}
+          className="ei-page-section-hero-image h-full w-full object-cover object-center saturate-[0.86] md:object-[72%_50%]"
           fetchPriority="high"
         />
       </picture>
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[1]"
+        className="ei-page-section-hero-scrim pointer-events-none absolute inset-0 z-[1]"
         style={{
           background:
-            isStudio
-              ? "linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.00) 0%, rgb(var(--ei-ink-rgb) / 0.22) 58%, rgb(var(--ei-ink-rgb) / 0.46) 100%)"
-              : "linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.12) 0%, rgb(var(--ei-ink-rgb) / 0.46) 100%)",
+            "linear-gradient(180deg, rgb(var(--ei-ink-rgb) / 0.12) 0%, rgb(var(--ei-ink-rgb) / 0.46) 100%)",
         }}
       />
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[1]"
+        className="ei-page-section-hero-side-scrim pointer-events-none absolute inset-0 z-[1]"
         style={{
           background: isLeft
-            ? isStudio
-              ? "linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.10) 0%, transparent 36%, transparent 68%, rgb(var(--ei-ink-rgb) / 0.10) 100%)"
-              : "linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-ink-rgb) / 0.16) 100%)"
+            ? "linear-gradient(90deg, transparent 0%, transparent 44%, rgb(var(--ei-ink-rgb) / 0.16) 100%)"
             : "linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.16) 0%, transparent 56%, transparent 100%)",
         }}
       />
 
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-[2]"
+        className="ei-page-section-hero-copy-scrim pointer-events-none absolute inset-0 z-[2]"
         style={{
           background: isLeft
-            ? isStudio
-              ? "radial-gradient(ellipse 48% 70% at 18% 48%, rgb(var(--ei-ink-rgb) / 0.88) 0%, rgb(var(--ei-ink-rgb) / 0.62) 42%, transparent 72%), linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink-rgb) / 0.26) 38%, transparent 66%)"
-              : "radial-gradient(ellipse 52% 64% at 16% 46%, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink-rgb) / 0.48) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.52) 0%, transparent 58%)"
+            ? "radial-gradient(ellipse 52% 64% at 16% 46%, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink-rgb) / 0.48) 42%, transparent 74%), linear-gradient(90deg, rgb(var(--ei-ink-rgb) / 0.52) 0%, transparent 58%)"
             : "radial-gradient(ellipse 52% 64% at 84% 46%, rgb(var(--ei-ink-rgb) / 0.78) 0%, rgb(var(--ei-ink-rgb) / 0.48) 42%, transparent 74%), linear-gradient(270deg, rgb(var(--ei-ink-rgb) / 0.52) 0%, transparent 58%)",
         }}
       />
+
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-0 bottom-0 left-0 z-[5] h-[24vh]"
+        className="ei-page-section-hero-bottom-fade pointer-events-none absolute right-0 bottom-0 left-0 z-[5] h-[24vh]"
         style={{
           background:
             "linear-gradient(to bottom, transparent 0%, rgb(var(--ei-ink-rgb) / 0.42) 70%, var(--ei-ink) 100%)",
@@ -136,30 +115,39 @@ export function PageSectionHero({
       <Container
         size="xl"
         className="
+          ei-page-section-hero-container
           relative z-10 w-full
           pt-[clamp(2.75rem,8vh,5rem)]
           md:pt-[clamp(4rem,10vh,6rem)]
           lg:pt-[clamp(4.5rem,11vh,7rem)]
         "
       >
-        <div className={`max-w-[680px] ${isLeft ? "" : "mx-auto text-center"}`}>
+        <div
+          className={`ei-page-section-hero-copy-wrap max-w-[680px] ${
+            isLeft ? "" : "mx-auto text-center"
+          }`}
+        >
           <motion.div
             variants={driftUp}
             className={`
+              ei-page-section-hero-copy
               max-w-[680px]
               ${isLeft ? "text-left md:pl-10 lg:pl-14" : "text-center"}
             `}
           >
             <div
               className={`
+                ei-page-section-hero-eyebrow-row
                 mb-4 flex items-center gap-4 md:mb-5
                 ${isLeft ? "" : "justify-center"}
               `}
             >
-              <span className="ei-type-studio-label">{eyebrow}</span>
+              <span className="ei-type-kicker ei-page-section-hero-eyebrow">
+                {eyebrow}
+              </span>
 
               <div
-                className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-halo-blue-rgb)/0.45)]"
+                className="ei-page-section-hero-eyebrow-rule h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-halo-blue-rgb)/0.45)]"
                 style={{
                   background:
                     "linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-halo-blue-rgb) / 0.95) 100%)",
@@ -170,7 +158,7 @@ export function PageSectionHero({
 
             <h1
               id="editorial-hero-heading"
-              className={headingClass}
+              className="ei-type-hero-home ei-page-section-hero-title max-w-[24ch] whitespace-pre-line"
               style={{
                 textShadow:
                   "0 2px 28px rgb(0 0 0 / 0.42), 0 0 48px rgb(var(--ei-violet-rgb) / 0.08)",
@@ -179,7 +167,7 @@ export function PageSectionHero({
               {italicWord
                 ? titleParts.map((part, i) =>
                     part.toLowerCase() === italicWord.toLowerCase() ? (
-                      <em key={i} className="ei-type-studio-hero-emphasis">
+                      <em key={i} className="ei-type-hero-emphasis">
                         {part}
                       </em>
                     ) : (
@@ -189,12 +177,14 @@ export function PageSectionHero({
                 : title}
             </h1>
 
-            <p className={`${bodyClass} mt-5 md:mt-6`}>{description}</p>
+            <p className="ei-type-hero-description ei-page-section-hero-description mt-5 max-w-[46ch] md:mt-6">
+              {description}
+            </p>
 
             {(ctaLabel && ctaHref) || (secondaryCtaLabel && secondaryCtaHref) ? (
               <motion.div
                 variants={fadeSoft}
-                className={`mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center md:mt-10 md:gap-4 ${
+                className={`ei-page-section-hero-actions mt-8 flex flex-col items-stretch gap-3 sm:flex-row sm:items-center md:mt-10 md:gap-4 ${
                   isLeft ? "" : "justify-center"
                 }`}
               >

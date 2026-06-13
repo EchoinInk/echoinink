@@ -69,7 +69,7 @@ export function ArchiveNotesPage() {
   mobileImage={archiveImageMobile}
   imageAlt="Dark cinematic editorial notebook scene with annotated fragments and a soft luminous ribbon"
   align="left"
-  variant="intimate"
+  
   ctaLabel="Read the latest note"
   ctaHref="#latest-note"
   secondaryCtaLabel="Work with the studio"

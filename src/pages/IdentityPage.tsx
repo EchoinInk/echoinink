@@ -72,8 +72,7 @@ I translate that feeling into visual language, rhythm, and voice."
         image={identityHeroDesktop}
         mobileImage={identityHeroMobile}
         imageAlt="Orbital violet identity system over a dark cinematic field"
-        align="left"
-        variant="intimate"
+        align="left" 
         ctaLabel="Start an identity project"
         ctaHref="/contact"
         secondaryCtaLabel="Explore sessions"
