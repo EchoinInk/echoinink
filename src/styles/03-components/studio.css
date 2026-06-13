@@ -70,14 +70,11 @@
   }
 
   .ei-studio-page .ei-page-section-hero-title {
-    max-width: 18ch;
-    font-size: clamp(3rem, 5.35vw, 5.05rem);
-    line-height: 0.97;
-    letter-spacing: -0.055em;
-    text-shadow:
-      0 2px 34px rgb(0 0 0 / 0.52),
-      0 0 54px rgb(var(--ei-violet-rgb) / 0.12);
-  }
+  max-width: 24ch;
+  text-shadow:
+    0 2px 34px rgb(0 0 0 / 0.52),
+    0 0 54px rgb(var(--ei-violet-rgb) / 0.12);
+}
 
   .ei-studio-page .ei-page-section-hero-description {
     max-width: 43ch;
@@ -460,12 +457,7 @@
      ───────────────────────────────────────────────────────── */
 
   @media (max-width: 768px) {
-    .ei-studio-page .ei-page-section-hero-title {
-      font-size: clamp(2.85rem, 13vw, 4.05rem);
-      line-height: 0.98;
-      letter-spacing: -0.048em;
-    }
-
+  
     .ei-studio-page .ei-page-section-hero-image {
       object-position: 68% 38%;
     }
