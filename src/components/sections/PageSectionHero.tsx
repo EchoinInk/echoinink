@@ -53,12 +53,11 @@ export function PageSectionHero({
       initial="hidden"
       whileInView="visible"
       viewport={VIEWPORT.loose}
-      className="
-        ei-page-section-hero
-        relative flex min-h-[58vh] items-start overflow-hidden
-        bg-[var(--ei-ink)]
-        pt-16 sm:pt-20 md:min-h-[78vh] md:pt-20 lg:min-h-[82vh]
-      "
+      className=" ei-page-section-hero
+  relative flex min-h-[620px] w-full items-start overflow-hidden
+  bg-[var(--ei-ink)]
+  md:min-h-[720px] lg:min-h-[760px]
+"
       aria-labelledby="editorial-hero-heading"
     >
       <picture
@@ -114,27 +113,22 @@ export function PageSectionHero({
 
       <Container
         size="xl"
-        className="
-          ei-page-section-hero-container
-          relative z-10 w-full
-          pt-[clamp(2.75rem,8vh,5rem)]
-          md:pt-[clamp(4rem,10vh,6rem)]
-          lg:pt-[clamp(4.5rem,11vh,7rem)]
-        "
-      >
+  className="ei-page-section-hero-container relative z-10 w-full"
+>
         <div
           className={`ei-page-section-hero-copy-wrap max-w-[680px] ${
             isLeft ? "" : "mx-auto text-center"
           }`}
         >
           <motion.div
-            variants={driftUp}
-            className={`
-              ei-page-section-hero-copy
-              max-w-[680px]
-              ${isLeft ? "text-left md:pl-10 lg:pl-14" : "text-center"}
-            `}
-          >
+  variants={driftUp}
+  className={`
+  ei-page-section-hero-copy
+  pt-36 md:pt-[135px] lg:pt-[160px]
+  ${isLeft ? "text-left md:pl-10 lg:pl-14" : "text-center"}
+`}
+>
+  <div className="ei-monogram-frame max-w-[640px] md:max-w-[620px] lg:max-w-[680px]">
             <div
               className={`
                 ei-page-section-hero-eyebrow-row
@@ -142,15 +136,13 @@ export function PageSectionHero({
                 ${isLeft ? "" : "justify-center"}
               `}
             >
-              <span className="ei-type-kicker ei-page-section-hero-eyebrow">
-                {eyebrow}
-              </span>
-
-              <div
-                className="ei-page-section-hero-eyebrow-rule h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-halo-blue-rgb)/0.45)]"
+<span className="ei-type-hero-eyebrow text-[var(--ei-color-text-secondary)]">
+  {eyebrow}
+</span>              <div
+                className="h-px w-10 shrink-0 rounded-full shadow-[0_0_14px_rgb(var(--ei-halo-blue-rgb)/0.5)]"
                 style={{
                   background:
-                    "linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-halo-blue-rgb) / 0.95) 100%)",
+                    "linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-halo-blue-rgb) / 0.98) 100%)",
                 }}
                 aria-hidden="true"
               />
@@ -161,7 +153,7 @@ export function PageSectionHero({
               className="ei-type-hero-home ei-page-section-hero-title max-w-[24ch] whitespace-pre-line"
               style={{
                 textShadow:
-                  "0 2px 28px rgb(0 0 0 / 0.42), 0 0 48px rgb(var(--ei-violet-rgb) / 0.08)",
+                  "0 2px 28px rgb(0 0 0 / 0.4), 0 0 48px rgb(var(--ei-violet-rgb) / 0.08)",
               }}
             >
               {italicWord
@@ -208,8 +200,9 @@ export function PageSectionHero({
                     <span aria-hidden="true">→</span>
                   </Button>
                 ) : null}
+                
               </motion.div>
-            ) : null}
+            ) : null}</div>
           </motion.div>
         </div>
       </Container>

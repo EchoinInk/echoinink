@@ -821,8 +821,8 @@
   .ei-type-section {
     color: var(--ei-color-text-primary);
     text-shadow:
-      0 2px 30px rgb(0 0 0 / 0.38),
-      0 0 44px rgb(var(--ei-violet-rgb) / 0.08);
+      0 2px 28px rgb(0 0 0 / 0.44),
+      0 0 54px rgb(var(--ei-violet-rgb) / 0.08);
   }
 
   p,

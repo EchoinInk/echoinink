@@ -64,76 +64,70 @@
      PageSectionHero stays variant-free; Studio differences live here.
      ───────────────────────────────────────────────────────── */
 
-  .ei-studio-page .ei-page-section-hero,
-  .ei-studio-page .ei-page-section-hero-media {
-    background-color: #080718;
-  }
-
-  .ei-studio-page .ei-page-section-hero-title {
-  max-width: 24ch;
-  text-shadow:
-    0 2px 34px rgb(0 0 0 / 0.52),
-    0 0 54px rgb(var(--ei-violet-rgb) / 0.12);
+.ei-studio-page .ei-page-section-hero,
+.ei-studio-page .ei-page-section-hero-media {
+  background-color: #080718;
 }
 
-  .ei-studio-page .ei-page-section-hero-description {
-    max-width: 43ch;
-    color: rgb(var(--ei-moonlit-rgb) / 0.78);
-  }
+.ei-studio-page .ei-page-section-hero-description {
+  max-width: 42ch;
+  color: rgb(var(--ei-moonlit-rgb) / 0.78);
+}
 
-  .ei-studio-page .ei-page-section-hero-eyebrow {
-    font-family: var(--ei-font-system, var(--ei-font-structural));
-    font-size: clamp(0.625rem, 0.72vw, 0.75rem);
+.ei-studio-page .ei-page-section-hero-eyebrow {
+   font-family: var(--ei-font-system);
+    font-size: clamp(0.625rem, 0.75vw, 0.75rem);
     line-height: 1.4;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-weight: 500;
-    color: rgb(var(--ei-moonlit-rgb) / 0.54);
+    font-weight: 400;
+    color: var(--ei-type-color-tertiary);
   }
 
-  .ei-studio-page .ei-page-section-hero-image {
-    object-position: 73% 45%;
-    filter: saturate(1.06) brightness(1.02) contrast(1.04);
-  }
+.ei-studio-page .ei-page-section-hero-image {
+  object-position: 73% 45%;
+  filter: saturate(1.06) brightness(1.02) contrast(1.04);
+}
 
-  .ei-studio-page .ei-page-section-hero-scrim {
-    opacity: 0.94;
-  }
+.ei-studio-page .ei-page-section-hero-scrim {
+  opacity: 0.94;
+}
 
-  .ei-studio-page .ei-page-section-hero-copy-scrim {
-    background:
-      radial-gradient(
-        ellipse 48% 70% at 18% 48%,
-        rgb(var(--ei-ink-rgb) / 0.88) 0%,
-        rgb(var(--ei-ink-rgb) / 0.62) 42%,
-        transparent 72%
-      ),
-      linear-gradient(
-        90deg,
-        rgb(var(--ei-ink-rgb) / 0.78) 0%,
-        rgb(var(--ei-ink-rgb) / 0.26) 38%,
-        transparent 66%
-      ) !important;
-  }
+.ei-studio-page .ei-page-section-hero-copy-scrim {
+  background:
+    radial-gradient(
+      ellipse 48% 70% at 18% 48%,
+      rgb(var(--ei-ink-rgb) / 0.88) 0%,
+      rgb(var(--ei-ink-rgb) / 0.62) 42%,
+      transparent 72%
+    ),
+    linear-gradient(
+      90deg,
+      rgb(var(--ei-ink-rgb) / 0.78) 0%,
+      rgb(var(--ei-ink-rgb) / 0.26) 38%,
+      transparent 66%
+    ) !important;
+}
 
-  .ei-studio-page .ei-page-section-hero-bottom-fade {
-    height: 24vh;
+.ei-studio-page .ei-page-section-hero-bottom-fade {
+  height: 24vh;
+}
   }
 
   /* ─────────────────────────────────────────────────────────
      Studio inner-section type
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-kicker,
+  .ei-type-studio-eyebrow,
   .ei-type-studio-label {
-    font-family: var(--ei-font-system, var(--ei-font-structural));
-    font-size: clamp(0.625rem, 0.72vw, 0.75rem);
+  font-family: var(--ei-font-system);
+    font-size: clamp(0.625rem, 0.75vw, 0.75rem);
     line-height: 1.4;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
-    font-weight: 500;
-    color: rgb(var(--ei-moonlit-rgb) / 0.54);
-  }
+    font-weight: 400;
+    color: var(--ei-type-color-tertiary);
+}
 
   .ei-type-studio-body {
     max-width: 43ch;
@@ -558,4 +552,4 @@
       font-size: clamp(1.85rem, 8vw, 2.65rem);
     }
   }
-}
+
