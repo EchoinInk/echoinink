@@ -288,11 +288,14 @@
   }
 
   /* Hero italic: subtle, but not dull */
-  .ei-type-studio-hero-emphasis {
-    font-style: italic;
-    font-weight: 400;
-    color: var(--ei-color-text-secondary);
-  }
+  .ei-type-hero-emphasis {
+  font-style: italic;
+  font-weight: 400;
+  color: rgb(var(--ei-halo-blue-rgb) / 0.9);
+  text-shadow:
+    0 0 22px rgb(var(--ei-halo-blue-rgb) / 0.16),
+    0 0 46px rgb(var(--ei-violet-rgb) / 0.1);
+}
 
   /* Important body copy */
   .ei-type-hero-description,

@@ -64,7 +64,7 @@ const pillars: Array<{
     output: "Output: identity strategy, visual language, and practical guidance.",
     href: "/identity",
     imageClass:
-      "bg-[radial-gradient(circle_at_50%_28%,rgb(var(--ei-violet-rgb)/0.22),transparent_38%),radial-gradient(circle_at_52%_62%,rgb(var(--ei-halo-blue-rgb)/0.08),transparent_54%)]",
+      "bg-[radial-gradient(circle_at_50%_28%,rgb(var(--ei-electric-blue-rgb)/0.22),transparent_38%),radial-gradient(circle_at_52%_62%,rgb(var(--ei-halo-blue-rgb)/0.08),transparent_54%)]",
     icon: "vectorLattice",
   },
   {
@@ -84,7 +84,7 @@ const pillars: Array<{
     output: "Output: positioning, messaging architecture, and a story framework.",
     href: "/worlds",
     imageClass:
-      "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-echo-magenta-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-violet-rgb)/0.16),transparent_48%)]",
+      "bg-[radial-gradient(circle_at_70%_30%,rgb(var(--ei-electric-blue-rgb)/0.18),transparent_42%),radial-gradient(circle_at_38%_68%,rgb(var(--ei-halo-blue-rgb)/0.16),transparent_48%)]",
     icon: "focusDial",
   },
   {
@@ -94,7 +94,7 @@ const pillars: Array<{
     output: "Output: art direction, reference systems, and touchpoint guidance.",
     href: "/worlds",
     imageClass:
-      "bg-[radial-gradient(circle_at_35%_30%,rgb(var(--ei-violet-rgb)/0.2),transparent_38%),radial-gradient(circle_at_75%_62%,rgb(var(--ei-soft-neon-rgb)/0.11),transparent_50%)]",
+      "bg-[radial-gradient(circle_at_35%_30%,rgb(var(--ei-halo-blue-rgb)/0.2),transparent_38%),radial-gradient(circle_at_75%_62%,rgb(var(--ei-electric-blue-rgb)/0.11),transparent_50%)]",
     icon: "innerTide",
   },
 ];
@@ -160,8 +160,7 @@ export function StudioPage() {
       {/* PHILOSOPHY */}
       <Section
         spacing="none"
-        className="relative pt-8 pb-2 will-change-transform md:pt-12 md:pb-4"
-      >
+className="relative pt-6 pb-0 will-change-transform md:pt-8 md:pb-2"      >
         <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -172,8 +171,7 @@ export function StudioPage() {
           >
             <motion.div
               variants={fadeSoft}
-              className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.12)] bg-[rgb(var(--ei-midnight-rgb)/0.28)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.04),0_0_80px_rgb(var(--ei-violet-rgb)/0.055)] md:-translate-y-3 md:grid-cols-[minmax(0,1.05fr)_minmax(0,1.05fr)_minmax(18rem,0.82fr)] md:items-center md:gap-12 md:px-8 md:pb-8 md:pt-12 lg:px-10 lg:pb-10 lg:pt-[4rem]"
-            >
+className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-void-rgb)/0.12)] p-6 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.025),0_0_72px_rgb(var(--ei-violet-rgb)/0.04)] md:-translate-y-3 md:grid-cols-[minmax(0,1.05fr)_minmax(0,1.05fr)_minmax(18rem,0.82fr)] md:items-center md:gap-10 md:px-8 md:pb-7 md:pt-9 lg:px-10 lg:pb-8 lg:pt-12"            >
               <motion.div variants={driftUp} className="relative md:-top-4">
                 <SectionLabel>Our Philosophy</SectionLabel>
 
@@ -229,74 +227,69 @@ export function StudioPage() {
       </Section>
 
       {/* WHAT WE DO */}
-      <Section spacing="none" className="relative pt-6 pb-2 md:pt-8 md:pb-4">
-        <Container size="xl" className="relative z-10">
-          <motion.div
-            variants={staggerContainer(STAGGER.loose, 0)}
-            initial="hidden"
-            whileInView="visible"
-            viewport={VIEWPORT.normal}
-            className="mx-auto max-w-[1180px]"
-          >
-            <motion.div variants={driftUp} className="mb-8 text-center">
-              <SectionLabel>What We Make</SectionLabel>
-            </motion.div>
+     <Section spacing="none" className="relative pt-6 pb-2 md:pt-8 md:pb-4">
+  <Container size="xl" className="relative z-10">
+    <motion.div
+      variants={staggerContainer(STAGGER.loose, 0)}
+      initial="hidden"
+      whileInView="visible"
+      viewport={VIEWPORT.normal}
+      className="mx-auto max-w-[1180px]"
+    >
+      <motion.div variants={driftUp} className="mb-8 text-center">
+        <SectionLabel>What We Make</SectionLabel>
+      </motion.div>
 
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
-              {pillars.map((pillar) => (
-                <motion.article key={pillar.title} variants={driftUp}>
-                  <Link
-                    to={pillar.href}
-                    className="ei-card group relative block min-h-[330px] overflow-hidden p-7 text-inherit no-underline transition-colors duration-500 lg:p-8"
-                  >
-                    <div
-                      aria-hidden="true"
-                      className={`absolute inset-0 opacity-72 transition-opacity duration-700 group-hover:opacity-95 ${pillar.imageClass}`}
-                    />
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {pillars.map((pillar) => (
+          <motion.article key={pillar.title} variants={driftUp}>
+           <Link
+  to={pillar.href}
+className="ei-card relative block h-[380px] overflow-hidden px-7 pb-7 pt-6 text-inherit no-underline transition-colors duration-500 lg:px-8 lg:pb-8 lg:pt-7">  <div
+    aria-hidden="true"
+    className={`absolute inset-0 opacity-72 transition-opacity duration-700 ${pillar.imageClass}`}
+  />
 
-                    <div
-                      aria-hidden="true"
-                      className="absolute inset-0 bg-[linear-gradient(180deg,rgb(var(--ei-void-rgb)/0.2),rgb(var(--ei-void-rgb)/0.88))]"
-                    />
+  <div
+    aria-hidden="true"
+    className="absolute inset-0 bg-[linear-gradient(180deg,rgb(var(--ei-void-rgb)/0.2),rgb(var(--ei-void-rgb)/0.88))]"
+  />
 
-                    <div className="ei-studio-pillar-card-inner relative z-10">
-                      <div>
-                        <span className="ei-type-studio-label">
-                          {pillar.number}
-                        </span>
+  <div className="ei-studio-pillar-card-inner relative z-10">
+    <div className="flex h-10 items-center">
+      <OrbitalVisual
+        variant={pillar.icon}
+        size={54}
+        className="opacity-98"
+      />
+    </div>
 
-                        <div className="mt-4 flex h-12 items-center">
-                          <OrbitalVisual
-                            variant={pillar.icon}
-                            size={64}
-                            className="opacity-98"
-                          />
-                        </div>
-                      </div>
+  <h3 className="ei-type-studio-pillar-title mt-9 min-h-[4.5rem] max-w-[12ch]b">
+  {pillar.title}
+</h3>
 
-                      <h3 className="ei-type-studio-pillar-title max-w-[12ch]">
-                        {pillar.title}
-                      </h3>
+<p className="ei-type-studio-card-body mt-4 min-h-[4.75rem] max-w-[32ch]">
+  {pillar.body}
+</p>
 
-                      <p className="ei-type-studio-card-body mt-4 max-w-[32ch]">
-                        {pillar.body}
-                      </p>
+<p className="ei-type-studio-output pt-1 mt-[1.35rem] min-h-[4.4rem]">
+  {pillar.output}
+</p>
 
-                      <p className="ei-type-studio-output mt-5">
-                        {pillar.output}
-                      </p>
-
-                      <span className="ei-card-action">
-                        Explore <span className="ei-card-action-arrow">→</span>
-                      </span>
-                    </div>
-                  </Link>
-                </motion.article>
-              ))}
-            </div>
-          </motion.div>
-        </Container>
-      </Section>
+<span className="ei-card-action group/explore pt-3">
+  Explore{" "}
+  <span className="ei-card-action-arrow transition-transform duration-300 group-hover/explore:translate-x-1">
+    →
+  </span>
+</span>
+  </div>
+</Link>
+          </motion.article>
+        ))}
+      </div>
+    </motion.div>
+  </Container>
+</Section>
 
       {/* PROCESS */}
       <Section spacing="none" className="relative pt-6 pb-2 md:pt-8 md:pb-4">
@@ -310,8 +303,7 @@ export function StudioPage() {
           >
             <motion.div
               variants={fadeSoft}
-              className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-ice-white-rgb)/0.018)] p-7 md:grid-cols-[0.9fr_1.6fr] md:gap-14 md:p-10"
-            >
+className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-void-rgb)/0.42)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.035),0_0_70px_rgb(var(--ei-halo-blue-rgb)/0.045)] md:grid-cols-[0.9fr_1.6fr] md:gap-14 md:p-10">
               <motion.div variants={driftUp}>
                 <SectionLabel>Our Process</SectionLabel>
                 <motion.h2
@@ -351,7 +343,7 @@ export function StudioPage() {
                       {step.number}
                     </div>
 
-                    <h3 className="ei-type-studio-process-title mt-4">
+                    <h3 className="ei-type-studio-process-title">
                       {step.title}
                     </h3>
 
