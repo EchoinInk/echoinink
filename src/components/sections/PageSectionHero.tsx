@@ -69,7 +69,6 @@ export function PageSectionHero({
           src={mobileImage}
           alt=""
           className="ei-page-section-hero-image h-full w-full object-cover object-center saturate-[0.86] md:object-[72%_50%]"
-          fetchPriority="high"
         />
       </picture>
 

@@ -20,7 +20,7 @@ const capabilities: Array<{
   href: string;
 }> = [
   {
-    variant: "signalBridge",
+    variant: "axiomRing",
     title: "Identity Systems",
     description:
       "Names, visual language, voice, and brand architecture shaped into a coherent world.",

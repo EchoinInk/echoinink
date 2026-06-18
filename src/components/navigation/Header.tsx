@@ -19,6 +19,9 @@ export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeMenu = () => setMenuOpen(false);
+  const isPathActive = (href: string) =>
+    pathname === href || pathname.startsWith(`${href}/`);
+  const contactActive = isPathActive("/contact");
 
   return (
     <>
@@ -54,7 +57,7 @@ export function Header() {
           <div className="hidden items-center gap-8 md:flex lg:gap-10">
             <div className="flex gap-6 lg:gap-7">
               {navItems.map((item) => {
-                const active = pathname === item.href;
+                const active = isPathActive(item.href);
 
                 return (
                   <Link
@@ -62,12 +65,12 @@ export function Header() {
                     to={item.href}
                     className={`
                       group relative pb-1.5
-                      font-structural text-[11px] font-medium uppercase tracking-[0.16em]
+                      font-structural text-[0.75rem] font-semibold uppercase tracking-[0.17em]
                       transition-colors duration-500
                       ${
                         active
-                          ? "text-[var(--ei-header-text-active)]"
-                          : "text-[var(--ei-header-text)] hover:text-[var(--ei-header-text-hover)]"
+                          ? "!text-[rgb(var(--ei-moonlit-rgb)/0.96)] [text-shadow:0_0_16px_rgb(var(--ei-halo-blue-rgb)/0.24)]"
+                          : "!text-[rgb(var(--ei-moonlit-rgb)/0.84)] hover:!text-[var(--ei-header-text-hover)] focus-visible:!text-[var(--ei-header-text-hover)]"
                       }
                     `}
                   >
@@ -82,7 +85,7 @@ export function Header() {
                         ${
                           active
                             ? "w-full opacity-100"
-                            : "w-0 opacity-0 group-hover:w-full group-hover:opacity-100"
+                            : "w-0 opacity-0 group-hover:w-full group-hover:opacity-100 group-focus-visible:w-full group-focus-visible:opacity-100"
                         }
                       `}
                     />
@@ -93,19 +96,24 @@ export function Header() {
 
             <Link
               to="/contact"
-              className="
+              className={`
                 ei-focus-rounded rounded-full
                 border border-[rgb(var(--ei-ice-white-rgb)/0.12)]
                 bg-[rgb(var(--ei-ice-white-rgb)/0.035)]
                 px-3.5 py-2
-                font-structural text-[10px] font-medium uppercase tracking-[0.18em]
-                text-[var(--ei-header-text)]
+                font-structural text-[0.68rem] font-semibold uppercase tracking-[0.19em]
                 transition-all duration-700
                 hover:border-[rgb(var(--ei-halo-blue-rgb)/0.32)]
                 hover:bg-[rgb(var(--ei-ice-white-rgb)/0.07)]
-                hover:text-[var(--ei-header-text-hover)]
+                hover:!text-[var(--ei-header-text-hover)]
                 hover:shadow-[0_0_24px_rgb(var(--ei-halo-blue-rgb)/0.12)]
-              "
+                focus-visible:!text-[var(--ei-header-text-hover)]
+                ${
+                  contactActive
+                    ? "border-[rgb(var(--ei-halo-blue-rgb)/0.34)] bg-[rgb(var(--ei-ice-white-rgb)/0.065)] !text-[rgb(var(--ei-moonlit-rgb)/0.96)] shadow-[0_0_22px_rgb(var(--ei-halo-blue-rgb)/0.12)]"
+                    : "!text-[rgb(var(--ei-moonlit-rgb)/0.84)]"
+                }
+              `}
             >
               Start a Conversation
             </Link>
@@ -185,7 +193,7 @@ export function Header() {
 
               <div className="flex flex-col">
                 {navItems.map((item, index) => {
-                  const active = pathname === item.href;
+                  const active = isPathActive(item.href);
 
                   return (
                     <motion.div

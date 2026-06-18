@@ -12,12 +12,7 @@ interface ProjectCardProps extends WorkProject {
 export function ProjectCard({
   title,
   category,
-  description,
   proofLine,
-  challenge,
-  scope,
-  output,
-  result,
   image,
   href,
   presentation,
@@ -44,38 +39,16 @@ export function ProjectCard({
       </div>
 
       <div className="ei-works-project-copy">
-        <div className="ei-works-project-meta">
-          <span>{status ?? 'Study'}</span>
-          <span>{category}</span>
-          <span>{number}</span>
-        </div>
-
-        <div>
+        <div className="ei-works-project-header">
           <h3>{title}</h3>
-          <p className="ei-works-project-proof">{proofLine}</p>
-          {presentation === 'study' ? (
-            <p className="ei-works-project-description">{description}</p>
-          ) : null}
+          <div className="ei-works-project-meta">
+            <span>{category}</span>
+            <span>{status ?? 'Study'}</span>
+            <span>{number}</span>
+          </div>
         </div>
 
-        <dl className="ei-works-project-facts">
-          <div>
-            <dt>Challenge</dt>
-            <dd>{challenge}</dd>
-          </div>
-          <div>
-            <dt>Scope</dt>
-            <dd>{scope}</dd>
-          </div>
-          <div>
-            <dt>Output</dt>
-            <dd>{output}</dd>
-          </div>
-          <div>
-            <dt>Result</dt>
-            <dd>{result}</dd>
-          </div>
-        </dl>
+        <p className="ei-works-project-proof">{proofLine}</p>
 
         <span className="ei-card-action">
           {isLinked
@@ -114,7 +87,7 @@ export function ProjectCard({
           <Link
             to={href}
             className="ei-works-project-link"
-            aria-label={`${title} — ${category}. ${description}`}
+            aria-label={`${title} — ${category}. ${proofLine}`}
           >
             {content}
           </Link>

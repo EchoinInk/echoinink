@@ -73,7 +73,7 @@ export function WorksGrid({ activeFilter, sortBy }: WorksGridProps) {
       {fragments.length > 0 ? (
         <section className="ei-works-fragments" aria-labelledby="works-fragments-heading">
           <div className="ei-works-section-heading ei-works-fragments-heading">
-            <SectionLabel label="Case fragments" index="04" />
+            <SectionLabel label="Case fragments" index="05" />
             <div>
               <h2 id="works-fragments-heading">Smaller studies, held in proportion.</h2>
               <p>

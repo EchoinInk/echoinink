@@ -30,32 +30,104 @@ import {
 
 const featuredProject = worksProjects.find((project) => project.featured);
 
-const proofValues: Array<{
+const selectedSignals = [
+  {
+    title: 'Clearer positioning',
+    description:
+      'Sharper articulation of what the product is, who it serves, and why it matters.'
+  },
+  {
+    title: 'Stronger product story',
+    description: 'Case-study narratives structured around problem, system, and outcome.'
+  },
+  {
+    title: 'Faster evaluation',
+    description:
+      'Portfolio paths designed for clients, founders, and collaborators to scan with confidence.'
+  },
+  {
+    title: 'Launch-ready systems',
+    description:
+      'Reusable visual and content patterns built for consistency beyond a single page.'
+  }
+];
+
+const lumoProofStrip = [
+  {
+    title: 'Challenge',
+    anchor: 'Create',
+    description:
+      'a coherent product identity for an emotionally supportive planning product.'
+  },
+  {
+    title: 'Solution',
+    anchor: 'Use',
+    description:
+      'atmosphere, narrative, and reusable systems to unify the brand, interface, and case-study journey.'
+  },
+  {
+    title: 'Outcome',
+    anchor: 'Make',
+    description: 'the value easier to understand, navigate, and remember.'
+  }
+];
+
+const worksProofStats = [
+  {
+    value: worksProjects.length.toString(),
+    label: 'Portfolio pieces'
+  },
+  {
+    value: worksProjects.filter((project) => project.presentation === 'study').length.toString(),
+    label: 'Study-led pieces'
+  },
+  {
+    value: worksProjects.filter((project) => project.presentation === 'fragment').length.toString(),
+    label: 'Proof fragments'
+  },
+  {
+    value: '2026',
+    label: 'Selective availability'
+  }
+];
+
+const processValues: Array<{
+  step: string;
   title: string;
   description: string;
   icon: OrbitalVariant;
   tone: 'blue' | 'violet' | 'magenta';
 }> = [
   {
-    title: 'Atmosphere',
-    description:
-      'An emotional climate that makes the work recognisable before every detail is explained.',
+    step: '01',
+    title: 'Discover',
+    description: 'Understand the market, audience, offer, and emotional territory.',
     icon: 'innerTide',
     tone: 'violet'
   },
   {
-    title: 'System',
+    step: '02',
+    title: 'Design',
     description:
-      'A coherent visual and verbal language designed to hold together across real touchpoints.',
+      'Shape the identity, interface direction, content rhythm, and visual system.',
     icon: 'vectorLattice',
     tone: 'blue'
   },
   {
-    title: 'Commercial clarity',
+    step: '03',
+    title: 'Validate',
     description:
-      'A sharper expression of value, so people can understand the offer and trust where it leads.',
+      'Pressure-test the story across real contexts, user paths, and stakeholder needs.',
     icon: 'signalBridge',
     tone: 'magenta'
+  },
+  {
+    step: '04',
+    title: 'Launch',
+    description:
+      'Deliver the assets, guidance, and reusable patterns needed to move consistently.',
+    icon: 'quietAxis',
+    tone: 'violet'
   }
 ];
 
@@ -72,21 +144,67 @@ export function WorksPage() {
           content="Selected identity systems, immersive websites, and atmospheric digital experiences by Echo In Ink."
         />
       </Helmet>
-<PageSectionHero
-  eyebrow="Selected proof"
-  title="Proof, shaped as atmosphere."
-  italicWord="atmosphere."
-  description="A curated body of identity, narrative, and digital work — showing how feeling becomes structure, and structure becomes value."
-  image={worksHeroDesktop}
-  mobileImage={worksHeroMobile}
-  imageAlt="Dark cinematic signal stream with luminous blue-violet atmosphere"
-  align="left"
-  
-  ctaLabel="View featured case study"
-  ctaHref="/works/lumo"
-  secondaryCtaLabel="Explore selected work"
-  secondaryCtaHref="#selected-works"
-/>
+      <PageSectionHero
+        eyebrow="Selected proof"
+        title="Proof, shaped as atmosphere."
+        italicWord="atmosphere."
+        description="Independent design for product identities, digital experiences, and visual systems — crafted for ambitious teams who need their value to be immediately felt."
+        image={worksHeroDesktop}
+        mobileImage={worksHeroMobile}
+        imageAlt="Dark cinematic signal stream with luminous blue-violet atmosphere"
+        align="left"
+        ctaLabel="Start a Project"
+        ctaHref="/contact"
+        secondaryCtaLabel="View Selected Work"
+        secondaryCtaHref="#selected-works"
+      />
+
+      <Section spacing="none" className="ei-works-section ei-works-signals">
+        <ContentFrame width="standard" gutters>
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+          >
+            <motion.div variants={driftUp} className="ei-works-section-heading">
+              <SectionLabel label="Selected signals" index="02" />
+              <div>
+                <h2>Evidence that the atmosphere is doing its job.</h2>
+                <p>
+                  Brand systems, product stories, and digital experiences designed to make complex
+                  value easier to trust, understand, and act on.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.dl variants={fadeSoft} className="ei-works-proof-stats">
+              {worksProofStats.map((stat) => (
+                <div key={stat.label}>
+                  <dt>{stat.value}</dt>
+                  <dd>{stat.label}</dd>
+                </div>
+              ))}
+            </motion.dl>
+
+            <div className="ei-works-signal-grid">
+              {selectedSignals.map((signal, index) => (
+                <motion.div key={signal.title} variants={driftUp}>
+                  <EchoCard
+                    variant={index === 0 ? 'proof' : 'static'}
+                    padding="lg"
+                    className="ei-works-signal-card"
+                  >
+                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <h3>{signal.title}</h3>
+                    <p>{signal.description}</p>
+                  </EchoCard>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </ContentFrame>
+      </Section>
 
       {featuredProject ? (
         <Section spacing="none" className="ei-works-section ei-works-featured">
@@ -105,7 +223,7 @@ export function WorksPage() {
                   </div>
 
                   <div className="ei-works-featured-copy">
-                    <SectionLabel label="Credibility anchor" index="02" />
+                    <SectionLabel label="Credibility anchor" index="03" />
                     <div className="ei-works-featured-meta">
                       <span>{featuredProject.status}</span>
                       <span>{featuredProject.category}</span>
@@ -114,27 +232,19 @@ export function WorksPage() {
                     <p className="ei-works-featured-outcome">{featuredProject.proofLine}</p>
                     <p className="ei-works-featured-description">{featuredProject.description}</p>
 
-                    <dl className="ei-works-featured-facts">
-                      <div>
-                        <dt>Challenge</dt>
-                        <dd>{featuredProject.challenge}</dd>
-                      </div>
-                      <div>
-                        <dt>Scope</dt>
-                        <dd>{featuredProject.scope}</dd>
-                      </div>
-                      <div>
-                        <dt>Output</dt>
-                        <dd>{featuredProject.output}</dd>
-                      </div>
-                      <div>
-                        <dt>Result</dt>
-                        <dd>{featuredProject.result}</dd>
-                      </div>
+                    <dl className="ei-works-featured-proof-strip">
+                      {lumoProofStrip.map((item) => (
+                        <div key={item.title}>
+                          <dt>{item.title}</dt>
+                          <dd>
+                            <strong>{item.anchor}</strong> {item.description}
+                          </dd>
+                        </div>
+                      ))}
                     </dl>
 
                     <Button to={featuredProject.href ?? '/works/lumo'} variant="secondary">
-                      Enter the Lumo case study <span aria-hidden="true">→</span>
+                      View case study <span aria-hidden="true">→</span>
                     </Button>
                   </div>
                 </EchoCard>
@@ -153,7 +263,7 @@ export function WorksPage() {
             viewport={VIEWPORT.normal}
           >
             <motion.div variants={driftUp} className="ei-works-section-heading">
-              <SectionLabel label="Selected works" index="03" />
+              <SectionLabel label="Selected works" index="04" />
               <div>
                 <h2>Curated by the weight of the proof.</h2>
                 <p>
@@ -188,18 +298,18 @@ export function WorksPage() {
             viewport={VIEWPORT.normal}
           >
             <motion.div variants={driftUp} className="ei-works-section-heading">
-              <SectionLabel label="What the work demonstrates" index="05" />
+              <SectionLabel label="Process framework" index="06" />
               <div>
-                <h2>Beauty is only useful when it carries meaning.</h2>
+                <h2>From atmosphere to usable system.</h2>
                 <p>
-                  The work is designed to create recognition, coherence, and a clearer path into the
-                  value behind the offer.
+                  A practical sequence for turning emotional direction into identity, interface,
+                  content, and launch-ready patterns.
                 </p>
               </div>
             </motion.div>
 
             <div className="ei-works-proof-grid">
-              {proofValues.map((value, index) => (
+              {processValues.map((value, index) => (
                 <motion.div key={value.title} variants={driftUp}>
                   <EchoCard
                     variant={index === 1 ? 'feature' : 'static'}
@@ -209,7 +319,7 @@ export function WorksPage() {
                     <IconWell size="md" tone={value.tone} orbital glow>
                       <OrbitalVisual variant={value.icon} size={42} />
                     </IconWell>
-                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <span>{value.step}</span>
                     <h3>{value.title}</h3>
                     <p>{value.description}</p>
                   </EchoCard>
@@ -242,15 +352,21 @@ export function WorksPage() {
         actions={
           <>
             <Button to="/contact" variant="primary">
-              Start a conversation
+              Start a Project
             </Button>
-            <Button to="/studio" variant="tertiary">
-              Explore the studio <span aria-hidden="true">→</span>
+            <Button to="/sessions" variant="secondary">
+              Discuss your product <span aria-hidden="true">→</span>
             </Button>
           </>
         }
         secondary={
-          <Link to="/sessions">Need clarity before a full engagement? Explore Echo Sessions.</Link>
+          <>
+            <p>
+              Currently accepting select product design, brand identity, and digital experience
+              projects for 2026.
+            </p>
+            <Link to="#selected-works">Explore the work before reaching out.</Link>
+          </>
         }
       />
     </PageShell>
