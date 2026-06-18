@@ -13,8 +13,20 @@
     border-top: 1px solid rgb(var(--ei-moonlit-rgb) / 0.075);
   }
 
+  .ei-studio-section-rhythm-tight {
+    padding-top: 1.5rem;
+    padding-bottom: 0.5rem;
+  }
+
   .ei-studio-section-anchor {
     position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .ei-studio-section-rhythm-tight {
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
   }
 
   .ei-studio-section-anchor::before {
@@ -82,21 +94,6 @@
     background-color: #080718;
   }
 
-  .ei-studio-page .ei-page-section-hero-description {
-    max-width: 42ch;
-    color: rgb(var(--ei-moonlit-rgb) / 0.78);
-  }
-
-  .ei-studio-page .ei-page-section-hero-eyebrow {
-    font-family: var(--ei-font-system);
-    font-size: clamp(0.625rem, 0.75vw, 0.75rem);
-    line-height: 1.4;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    font-weight: 400;
-    color: var(--ei-type-color-tertiary);
-  }
-
   .ei-studio-page .ei-page-section-hero-image {
     object-position: 73% 45%;
     filter: saturate(1.06) brightness(1.02) contrast(1.04);
@@ -121,15 +118,10 @@
       ) !important;
   }
 
-  .ei-studio-page .ei-page-section-hero-bottom-fade {
-    height: 24vh;
-  }
-
   /* ─────────────────────────────────────────────────────────
      Studio inner-section type
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-eyebrow,
   .ei-type-studio-label {
     font-family: var(--ei-font-system);
     font-size: clamp(0.625rem, 0.75vw, 0.75rem);
@@ -166,7 +158,6 @@
      Philosophy / manifesto
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-manifesto,
   .ei-type-studio-philosophy {
     font-family: var(--ei-font-editorial);
     font-size: clamp(1.65rem, 2.6vw, 2.55rem);
@@ -200,57 +191,9 @@
      Principles
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-principle-title {
-    font-family: var(--ei-font-system, var(--ei-font-structural));
-    font-size: 0.7rem;
-    line-height: 1.4;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 500;
-    color: rgb(var(--ei-moonlit-rgb) / 0.5);
-  }
-
-  .ei-type-studio-principle-body {
-    font-family: var(--ei-font-structural);
-    font-size: clamp(0.875rem, 0.95vw, 1rem);
-    line-height: 1.66;
-    letter-spacing: -0.003em;
-    font-weight: 400;
-    color: var(--ei-color-text-secondary);
-  }
-
   /* ─────────────────────────────────────────────────────────
      Pillar / service cards
      ───────────────────────────────────────────────────────── */
-
-  .ei-type-studio-pillar-title,
-  .ei-type-studio-card-title {
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(1.45rem, 1.8vw, 1.75rem);
-    line-height: 1.12;
-    letter-spacing: -0.025em;
-    color: var(--ei-color-text-primary);
-  }
-
-  .ei-type-studio-card-body,
-  .ei-type-studio-pillar-body,
-  .ei-type-studio-process-body,
-  .ei-type-studio-feature-body {
-    font-family: var(--ei-font-structural);
-    font-size: clamp(0.9rem, 0.95vw, 1rem);
-    line-height: 1.68;
-    letter-spacing: -0.003em;
-    color: var(--ei-color-text-secondary);
-  }
-
- .ei-type-studio-output {
-  font-size: 0.68rem;
-  line-height: 1.55;
-  letter-spacing: 0.12em;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: rgb(var(--ei-moonlit-rgb) / 0.58);
-}
 
   .ei-card-studio {
     position: relative;
@@ -307,11 +250,11 @@
       0 22px 90px rgb(0 0 0 / 0.28), 0 0 64px rgb(var(--ei-violet-rgb) / 0.055);
   }
 
-  .ei-card.group .ei-type-studio-output {
+  .ei-card.group .ei-type-meta {
     color: rgb(var(--ei-moonlit-rgb) / 0.58);
   }
 
-  .ei-card.group:hover .ei-type-studio-output {
+  .ei-card.group:hover .ei-type-meta {
     color: rgb(var(--ei-halo-blue-rgb) / 0.76);
   }
 
@@ -321,21 +264,33 @@
   flex-direction: column;
 }
 
-  .ei-studio-pillar-card-inner .ei-type-studio-pillar-title {
+  .ei-studio-pillar-card-inner .ei-type-card-title {
     align-self: start;
     max-width: 12ch;
+    font-size: clamp(1.45rem, 1.8vw, 1.75rem);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
   }
 
-  .ei-studio-pillar-card-inner .ei-type-studio-card-body {
+  .ei-studio-pillar-card-inner .ei-type-body-small {
     align-self: start;
     max-width: 30ch;
     margin-top: 0;
+    font-size: clamp(0.9rem, 0.95vw, 1rem);
+    line-height: 1.68;
+    letter-spacing: -0.003em;
+    color: var(--ei-color-text-secondary);
   }
 
-  .ei-studio-pillar-card-inner .ei-type-studio-output {
+  .ei-studio-pillar-card-inner .ei-type-meta {
     align-self: start;
     max-width: 28ch;
     margin-top: 0;
+    font-size: 0.68rem;
+    line-height: 1.55;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+    color: rgb(var(--ei-moonlit-rgb) / 0.58);
   }
 
   .ei-studio-pillar-card-inner .ei-card-action {
@@ -351,21 +306,10 @@
      Process
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-process-heading {
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(2rem, 3vw, 3rem);
-    line-height: 1.08;
-    letter-spacing: -0.035em;
-    font-weight: 400;
-    color: var(--ei-color-text-primary);
-  }
-
-  .ei-type-studio-process-title {
-    font-family: var(--ei-font-editorial);
+  .ei-studio-process-step .ei-type-card-title {
     font-size: clamp(1.15rem, 1.25vw, 1.35rem);
     line-height: 1.22;
     letter-spacing: -0.018em;
-    color: var(--ei-color-text-primary);
   }
 
   .ei-type-studio-process-number {
@@ -399,29 +343,35 @@
     display: none !important;
   }
 
-  .ei-type-studio-process-body {
+  .ei-studio-process-step .ei-type-body-small {
     max-width: 25ch;
+    font-size: clamp(0.9rem, 0.95vw, 1rem);
+    line-height: 1.68;
+    letter-spacing: -0.003em;
+    color: var(--ei-color-text-secondary);
   }
 
   /* ─────────────────────────────────────────────────────────
      Featured work
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-feature-title {
-    font-family: var(--ei-font-editorial);
+  .ei-studio-feature-copy .ei-type-feature-title {
     font-size: clamp(3.35rem, 6vw, 5.2rem);
     line-height: 0.92;
     letter-spacing: 0.02em;
-    text-transform: uppercase;
-    color: var(--ei-color-text-primary);
   }
 
-  .ei-type-studio-feature-subtitle {
-    font-family: var(--ei-font-editorial);
+  .ei-studio-feature-copy .ei-type-card-title {
     font-size: clamp(1.25rem, 1.7vw, 1.55rem);
     line-height: 1.18;
     letter-spacing: -0.025em;
-    color: var(--ei-color-text-primary);
+  }
+
+  .ei-studio-feature-copy .ei-type-body-small {
+    font-size: clamp(0.9rem, 0.95vw, 1rem);
+    line-height: 1.68;
+    letter-spacing: -0.003em;
+    color: var(--ei-color-text-secondary);
   }
 
   .ei-card-studio-overlay {
@@ -448,12 +398,10 @@
      CTA
      ───────────────────────────────────────────────────────── */
 
-  .ei-type-studio-slim-cta {
-    font-family: var(--ei-font-editorial);
+  .ei-studio-slim-cta-copy .ei-type-section-heading {
     font-size: clamp(1.65rem, 2.85vw, 2.55rem);
     line-height: 1.08;
     letter-spacing: -0.035em;
-    color: var(--ei-color-text-primary);
   }
 
   .ei-studio-slim-cta-shell {
@@ -477,36 +425,20 @@
     object-position: 68% 38%;
     } 
 
-  .ei-type-studio-manifesto,.ei-type-studio-philosophy {
+  .ei-type-studio-philosophy {
     font-size: clamp(2rem, 9vw, 3rem);
     line-height: 1.06;
     }
 
-  .ei-type-studio-body {
-    max-width: 34ch;
-    font-size: 1rem;
-    line-height: 1.68;
-    }
-
-  .ei-type-studio-body + .ei-type-studio-body {
-    margin-top: 1rem;
-    }
-
-  .ei-type-studio-card-body,
-  .ei-type-studio-pillar-body,
-  .ei-type-studio-process-body,
-  .ei-type-studio-feature-body {
-    font-size: 0.96rem;
-    line-height: 1.68;
-  }
-
-  .ei-type-studio-process-title {
+  .ei-studio-process-step .ei-type-card-title {
     margin-top: 1.1rem;
     font-size: clamp(1.25rem, 5vw, 1.55rem);
   }
 
-  .ei-type-studio-process-body {
+  .ei-studio-process-step .ei-type-body-small {
     max-width: 34ch;
+    font-size: 0.96rem;
+    line-height: 1.68;
   }
 
   .ei-card.group {
@@ -551,8 +483,8 @@
     gap: 1.15rem;
   }
 
-  .ei-studio-pillar-card-inner .ei-type-studio-card-body,
-  .ei-studio-pillar-card-inner .ei-type-studio-output,
+  .ei-studio-pillar-card-inner .ei-type-body-small,
+  .ei-studio-pillar-card-inner .ei-type-meta,
   .ei-studio-pillar-card-inner .ei-card-action {
     max-width: 31ch;
     margin-top: 0;

@@ -95,9 +95,6 @@
   .ei-worlds-section-heading p,
   .ei-worlds-definition-copy > p {
     max-width: 43rem;
-    color: var(--ei-color-text-secondary);
-    font-size: clamp(0.98rem, 1.2vw, 1.12rem);
-    line-height: 1.75;
   }
 
   .ei-worlds-section-heading h2 + p,
@@ -249,8 +246,6 @@
   .ei-worlds-need-list p {
     max-width: 36rem;
     color: var(--ei-color-text-secondary);
-    font-size: 0.95rem;
-    line-height: 1.65;
   }
 
   .ei-worlds-needs-note {
@@ -302,8 +297,6 @@
   .ei-worlds-layer-card p {
     margin-top: 1rem;
     color: var(--ei-color-text-secondary);
-    font-size: 0.92rem;
-    line-height: 1.65;
   }
 
   .ei-worlds-output-panel {
@@ -553,8 +546,6 @@
     grid-column: 3;
     max-width: 34rem;
     color: var(--ei-color-text-secondary);
-    font-size: 0.92rem;
-    line-height: 1.65;
   }
 
   .ei-worlds-closing .ei-cta-section-panel {
@@ -928,10 +919,6 @@
 
   .ei-worlds-page .ei-page-section-hero-title {
     max-width: 15ch;
-  }
-
-  .ei-worlds-page .ei-page-section-hero-description {
-    max-width: 44ch;
   }
 
   .ei-worlds-page .ei-page-section-hero-image {

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 import identityHeroDesktop from "@/assets/imagery/hero/identity-hero-orbital-system-desktop.webp";
 import identityHeroMobile from "@/assets/imagery/hero/identity-hero-orbital-system-mobile.webp";
-import { ContentFrame } from "@/components/layout/ContentFrame";
+import { Container } from "@/components/layout/Container";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
@@ -82,26 +82,26 @@ I translate that feeling into visual language, rhythm, and voice."
         spacing="none"
         className="ei-identity-section ei-identity-section-anchor ei-identity-orientation"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-identity-orientation-grid"
+            className="mx-auto max-w-[1180px] ei-identity-orientation-grid"
           >
             <motion.div
               variants={driftUp}
               className="ei-identity-orientation-copy"
             >
               <SectionLabel label="Who it is for" index="02" />
-              <h2>
+              <h2 className="ei-type-section-heading">
                 For the creator who can <em>feel</em> the world, but cannot yet
                 see it clearly.
               </h2>
               <div>
                 {identityAudience.intro.map((paragraph) => (
-                  <p key={paragraph}>{paragraph}</p>
+                  <p key={paragraph} className="ei-type-body-editorial">{paragraph}</p>
                 ))}
               </div>
             </motion.div>
@@ -126,19 +126,20 @@ I translate that feeling into visual language, rhythm, and voice."
               </EchoCard>
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
         spacing="none"
         className="ei-identity-section ei-identity-section-anchor ei-identity-kit"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
@@ -146,8 +147,8 @@ I translate that feeling into visual language, rhythm, and voice."
             >
               <SectionLabel label="What you receive" index="03" />
               <div>
-                <h2>{identityDeliverables.heading}</h2>
-                <p>
+                <h2 className="ei-type-section-heading">{identityDeliverables.heading}</h2>
+                <p className="ei-type-body-editorial">
                   A concise direction system covering palette, type, tone,
                   visual references, usage principles, and launch guidance.
                 </p>
@@ -174,7 +175,7 @@ I translate that feeling into visual language, rhythm, and voice."
                       <span>{String(index + 1).padStart(2, "0")}</span>
                     </div>
                     <h3>{item.title}</h3>
-                    <p>{item.description}</p>
+                    <p className="ei-type-body-editorial">{item.description}</p>
                     <ul>
                       {item.includes.map((include) => (
                         <li key={include}>{include}</li>
@@ -189,19 +190,20 @@ I translate that feeling into visual language, rhythm, and voice."
               {identityDeliverables.closing}
             </motion.p>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
         spacing="none"
         className="ei-identity-section ei-identity-section-anchor ei-identity-coherence"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
@@ -209,8 +211,8 @@ I translate that feeling into visual language, rhythm, and voice."
             >
               <SectionLabel label="From signal to world" index="04" />
               <div>
-                <h2>{identityTransformation.heading}</h2>
-                <p>{identityTransformation.intro}</p>
+                <h2 className="ei-type-section-heading">{identityTransformation.heading}</h2>
+                <p className="ei-type-body-editorial">{identityTransformation.intro}</p>
               </div>
             </motion.div>
 
@@ -248,12 +250,12 @@ I translate that feeling into visual language, rhythm, and voice."
                 <motion.div key={application.title} variants={driftUp}>
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <h3>{application.title}</h3>
-                  <p>{application.description}</p>
+                  <p className="ei-type-body-editorial">{application.description}</p>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
@@ -261,12 +263,13 @@ I translate that feeling into visual language, rhythm, and voice."
         spacing="none"
         className="ei-identity-section ei-identity-section-anchor ei-identity-process"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
@@ -274,8 +277,8 @@ I translate that feeling into visual language, rhythm, and voice."
             >
               <SectionLabel label="The process" index="05" />
               <div>
-                <h2>{identityProcess.heading}</h2>
-                <p>
+                <h2 className="ei-type-section-heading">{identityProcess.heading}</h2>
+                <p className="ei-type-body-editorial">
                   A deliberate progression from instinct to a direction you can
                   use.
                 </p>
@@ -293,7 +296,7 @@ I translate that feeling into visual language, rhythm, and voice."
                     aria-hidden="true"
                   />
                   <h3>{step.title}</h3>
-                  <p>{step.description}</p>
+                  <p className="ei-type-body-editorial">{step.description}</p>
                 </motion.li>
               ))}
             </ol>
@@ -305,19 +308,20 @@ I translate that feeling into visual language, rhythm, and voice."
               {identityProcess.closing}
             </motion.p>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
         spacing="none"
         className="ei-identity-section ei-identity-section-anchor ei-identity-engagement"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
@@ -325,8 +329,8 @@ I translate that feeling into visual language, rhythm, and voice."
             >
               <SectionLabel label={identityPricing.eyebrow} index="06" />
               <div>
-                <h2>{identityPricing.heading}</h2>
-                <p>{identityPricing.intro}</p>
+                <h2 className="ei-type-section-heading">{identityPricing.heading}</h2>
+                <p className="ei-type-body-editorial">{identityPricing.intro}</p>
               </div>
             </motion.div>
 
@@ -345,7 +349,7 @@ I translate that feeling into visual language, rhythm, and voice."
                     <p className="ei-identity-price">
                       {tier.price} <span>{tier.currency}</span>
                     </p>
-                    <p className="ei-identity-engagement-summary">
+                    <p className="ei-identity-engagement-summary ei-type-body-editorial">
                       {tier.summary}
                     </p>
                     <ul>
@@ -372,7 +376,7 @@ I translate that feeling into visual language, rhythm, and voice."
               </motion.aside>
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <CTASection

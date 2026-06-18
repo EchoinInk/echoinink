@@ -6,7 +6,7 @@ import archiveImageDesktop from '@/assets/imagery/hero/archive-index-hero-orbita
 import archiveImageMobile from '@/assets/imagery/hero/archive-index-hero-orbital-map-mobile.webp';
 import { ArchiveConstellation } from '@/components/archive/ArchiveConstellation';
 import { ArchiveIndexList } from '@/components/archive/ArchiveIndexList';
-import { ContentFrame } from '@/components/layout/ContentFrame';
+import { Container } from '@/components/layout/Container';
 import { PageShell } from '@/components/layout/PageShell';
 import { Section } from '@/components/layout/Section';
 import { CTASection } from '@/components/sections/CTASection';
@@ -97,16 +97,17 @@ export function ArchiveIndexPage() {
 />
 
       <Section spacing="none" className="ei-editorial-page-section ei-index-featured-section">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.normal, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-editorial-section-heading">
               <SectionLabel label="Featured entries" index="02" />
-              <h2>Three points of entry into the current field.</h2>
+              <h2 className="ei-type-editorial-heading">Three points of entry into the current field.</h2>
             </motion.div>
             <div className="ei-index-featured-grid">
               {featuredEntries.map((entry, index) => (
@@ -116,10 +117,10 @@ export function ArchiveIndexPage() {
                       <IconWell size="sm" tone={index === 2 ? 'magenta' : 'violet'} orbital>
                         <OrbitalVisual variant={entry.icon} size={24} />
                       </IconWell>
-                      <span>{entry.category} · {entry.readTime}</span>
+                      <span className="ei-type-meta">{entry.category} · {entry.readTime}</span>
                     </div>
                     <h3>{entry.title}</h3>
-                    <p>{entry.descriptor}</p>
+                    <p className="ei-type-body-editorial">{entry.descriptor}</p>
                     <Button to={entry.href} variant="tertiary">
                       Locate entry <span aria-hidden="true">→</span>
                     </Button>
@@ -128,20 +129,21 @@ export function ArchiveIndexPage() {
               ))}
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-editorial-page-section ei-index-map-section">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.normal, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-editorial-section-heading">
               <SectionLabel label="Category map" index="03" />
-              <h2>Different forms, connected by the same questions.</h2>
+              <h2 className="ei-type-editorial-heading">Different forms, connected by the same questions.</h2>
             </motion.div>
             <motion.div variants={blurEmergence} className="ei-index-category-map">
               {archiveFilters.slice(1).map((category, index) => {
@@ -151,38 +153,39 @@ export function ArchiveIndexPage() {
 
                 return (
                   <EchoCard key={category} variant="index" padding="md" className="ei-index-category">
-                    <span>{String(index + 1).padStart(2, '0')}</span>
+                    <span className="ei-type-meta">{String(index + 1).padStart(2, '0')}</span>
                     <strong>{category}</strong>
-                    <small>{entryCount} {entryCount === 1 ? 'entry' : 'entries'}</small>
+                    <small className="ei-type-meta">{entryCount} {entryCount === 1 ? 'entry' : 'entries'}</small>
                   </EchoCard>
                 );
               })}
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section id="full-index" spacing="none" className="ei-editorial-page-section">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.normal, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-archive-index-heading">
               <div className="ei-editorial-section-heading">
                 <SectionLabel label="Full index" index="04" />
-                <h2>Read across disciplines, or trace one concern.</h2>
+                <h2 className="ei-type-editorial-heading">Read across disciplines, or trace one concern.</h2>
               </div>
-              <span className="ei-archive-index-count">
+              <span className="ei-archive-index-count ei-type-meta">
                 {visibleEntries.length} {visibleEntries.length === 1 ? 'entry' : 'entries'}
               </span>
             </motion.div>
 
             <motion.div variants={fadeSoft} className="ei-index-discovery-tools">
               <label className="ei-index-search">
-                <span>Search the index</span>
+                <span className="ei-type-meta">Search the index</span>
                 <input
                   type="search"
                   value={query}
@@ -218,20 +221,22 @@ export function ArchiveIndexPage() {
               />
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-editorial-page-section ei-index-constellation-section">
-        <ContentFrame width="standard" gutters>
-          <EchoCard variant="offer" padding="none" className="ei-archive-philosophy">
-            <div className="ei-archive-philosophy-copy">
-              <SectionLabel label="Themes and constellations" index="05" tone="accent" />
-              <h2>{archivePhilosophy.title}</h2>
-              <p>{archivePhilosophy.description}</p>
-            </div>
-            <ArchiveConstellation />
-          </EchoCard>
-        </ContentFrame>
+        <Container size="xl" className="relative z-10">
+          <motion.div className="mx-auto max-w-[1180px]">
+            <EchoCard variant="offer" padding="none" className="ei-archive-philosophy">
+              <div className="ei-archive-philosophy-copy">
+                <SectionLabel label="Themes and constellations" index="05" tone="accent" />
+                <h2 className="ei-type-editorial-heading">{archivePhilosophy.title}</h2>
+                <p className="ei-type-body-editorial">{archivePhilosophy.description}</p>
+              </div>
+              <ArchiveConstellation />
+            </EchoCard>
+          </motion.div>
+        </Container>
       </Section>
 
       <CTASection

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import systemsHeroDesktop from "@/assets/imagery/hero/systems-hero-signal-grid-desktop.webp";
 import systemsHeroMobile from "@/assets/imagery/hero/systems-hero-signal-grid-mobile.webp";
 import systemsCTAImage from "@/assets/imagery/sections/cta-signal-convergence-desktop.webp";
-import { ContentFrame } from "@/components/layout/ContentFrame";
+import { Container } from "@/components/layout/Container";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
@@ -62,18 +62,19 @@ export function SystemsPage() {
         spacing="none"
         className="ei-systems-section ei-systems-section-anchor ei-systems-categories"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-systems-section-heading">
               <SectionLabel label="System architecture" index="02" />
               <div>
-                <h2>Four layers. One coherent creative ecosystem.</h2>
-                <p>
+                <h2 className="ei-type-editorial-heading">Four layers. One coherent creative ecosystem.</h2>
+                <p className="ei-type-body-editorial">
                   Start with the layer you need now, or combine them into a complete path from
                   early signal to finished world.
                 </p>
@@ -102,16 +103,16 @@ export function SystemsPage() {
 
                     <p className="ei-systems-category-layer">{category.layer}</p>
                     <h3>{category.title}</h3>
-                    <p>{category.description}</p>
+                    <p className="ei-type-body-editorial">{category.description}</p>
 
                     <dl className="ei-systems-category-facts">
                       <div>
                         <dt>Best for</dt>
-                        <dd>{category.bestFor}</dd>
+                        <dd className="ei-type-body-small">{category.bestFor}</dd>
                       </div>
                       <div>
                         <dt>Output</dt>
-                        <dd>{category.output}</dd>
+                        <dd className="ei-type-body-small">{category.output}</dd>
                       </div>
                     </dl>
 
@@ -125,7 +126,7 @@ export function SystemsPage() {
               ))}
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
@@ -133,12 +134,13 @@ export function SystemsPage() {
         spacing="none"
         className="ei-systems-section ei-systems-section-anchor ei-systems-featured-section"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={fadeSoft}>
               <EchoCard
@@ -156,18 +158,18 @@ export function SystemsPage() {
                     {featuredSystem.title}
                   </motion.h2>
 
-                  <p className="ei-systems-featured-description">
+                  <p className="ei-systems-featured-description ei-type-body-editorial">
                     {featuredSystem.description}
                   </p>
 
                   <dl className="ei-systems-featured-facts">
                     <div>
                       <dt>Best for</dt>
-                      <dd>{featuredSystem.bestFor}</dd>
+                      <dd className="ei-type-body-small">{featuredSystem.bestFor}</dd>
                     </div>
                     <div>
                       <dt>Output</dt>
-                      <dd>{featuredSystem.output}</dd>
+                      <dd className="ei-type-body-small">{featuredSystem.output}</dd>
                     </div>
                   </dl>
 
@@ -216,25 +218,26 @@ export function SystemsPage() {
               </EchoCard>
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
         spacing="none"
         className="ei-systems-section ei-systems-section-anchor ei-systems-modules"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-systems-section-heading">
               <SectionLabel label="Tools and modules" index="04" />
               <div>
-                <h2>Use one module. Build a larger system.</h2>
-                <p>
+                <h2 className="ei-type-editorial-heading">Use one module. Build a larger system.</h2>
+                <p className="ei-type-body-editorial">
                   Focused tools for a specific creative decision, designed to remain useful when
                   the work grows.
                 </p>
@@ -270,16 +273,16 @@ export function SystemsPage() {
                         </div>
 
                         <h3>{system.title}</h3>
-                        <p>{system.description}</p>
+                        <p className="ei-type-body-editorial">{system.description}</p>
 
                         <dl>
                           <div>
                             <dt>Best for</dt>
-                            <dd>{system.useCase}</dd>
+                            <dd className="ei-type-body-small">{system.useCase}</dd>
                           </div>
                           <div>
                             <dt>Output</dt>
-                            <dd>{system.output}</dd>
+                            <dd className="ei-type-body-small">{system.output}</dd>
                           </div>
                         </dl>
 
@@ -296,25 +299,26 @@ export function SystemsPage() {
               ))}
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
         spacing="none"
         className="ei-systems-section ei-systems-section-anchor ei-systems-use-cases"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-systems-section-heading">
               <SectionLabel label="Built for" index="05" />
               <div>
-                <h2>Practical support for work with depth.</h2>
-                <p>
+                <h2 className="ei-type-editorial-heading">Practical support for work with depth.</h2>
+                <p className="ei-type-body-editorial">
                   Each system helps turn an intuitive creative challenge into a clearer decision,
                   direction, or deliverable.
                 </p>
@@ -330,32 +334,33 @@ export function SystemsPage() {
                 {systemsUseCases.map((useCase) => (
                   <div key={useCase.audience} className="ei-systems-use-case-row">
                     <h3>{useCase.audience}</h3>
-                    <p>{useCase.need}</p>
+                    <p className="ei-type-body-editorial">{useCase.need}</p>
                     <span>{useCase.fit}</span>
                   </div>
                 ))}
               </EchoCard>
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
         spacing="none"
         className="ei-systems-section ei-systems-section-anchor ei-systems-pathway"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-systems-section-heading">
               <SectionLabel label="A larger pathway" index="06" />
               <div>
-                <h2>From first signal to a world people can enter.</h2>
-                <p>
+                <h2 className="ei-type-editorial-heading">From first signal to a world people can enter.</h2>
+                <p className="ei-type-body-editorial">
                   Systems can stand alone, or connect with Echo Sessions and studio work as the
                   project becomes more defined.
                 </p>
@@ -371,13 +376,13 @@ export function SystemsPage() {
                   </IconWell>
                   <div>
                     <h3>{step.title}</h3>
-                    <p>{step.description}</p>
+                    <p className="ei-type-body-editorial">{step.description}</p>
                   </div>
                 </motion.li>
               ))}
             </ol>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <CTASection

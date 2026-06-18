@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { EchoCard } from '@/components/ui/EchoCard';
 import { driftUp } from '@/lib/motion-cinematic';
 
 // ═══════════════════════════════════════════════════════════════
@@ -34,34 +35,27 @@ export function SystemCard({
   accent = 'rgb(113, 7, 234 / 0.06)',
 }: SystemCardProps) {
   return (
-    <motion.article
-  variants={driftUp}
-  className="ei-card ei-card-system"
-  data-status={status}
->
-  <div className="ei-card-content">
-    <div className="ei-card-system-header">
-      <div>
-        {category && (
-          <span className="ei-card-system-category">
-            {category}
-          </span>
-        )}
-        <h3 className="ei-type-section-structural ei-card-system-title">
-          {title}
-        </h3>
-      </div>
-      <span
-        className="ei-card-system-status"
+    <motion.div variants={driftUp}>
+      <EchoCard
+        variant="index"
+        padding="none"
+        className="ei-card-system"
         data-status={status}
+        style={{ ['--ei-system-card-accent' as string]: accent }}
       >
-        {statusLabel[status]}
-      </span>
-    </div>
-    <p className="ei-type-small ei-card-system-copy">
-      {description}
-    </p>
-  </div>
-</motion.article>
+        <div className="ei-card-content">
+          <div className="ei-card-system-header">
+            <div>
+              {category && <span className="ei-card-system-category ei-type-meta">{category}</span>}
+              <h3 className="ei-card-system-title ei-type-card-title">{title}</h3>
+            </div>
+            <span className="ei-card-system-status ei-type-meta" data-status={status}>
+              {statusLabel[status]}
+            </span>
+          </div>
+          <p className="ei-card-system-copy ei-type-body-small">{description}</p>
+        </div>
+      </EchoCard>
+    </motion.div>
   );
 }

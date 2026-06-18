@@ -7,6 +7,7 @@ import { Container } from "@/components/layout/Container";
 import { Section } from "@/components/layout/Section";
 import { PageSectionHero } from "@/components/sections/PageSectionHero";
 import { Button } from "@/components/ui/Button";
+import { EchoCard } from "@/components/ui/EchoCard";
 import {
   OrbitalVisual,
   type OrbitalVariant,
@@ -199,12 +200,12 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
                 variants={driftUp}
                 className="relative max-w-[62ch] md:-top-4"
               >
-                <p className="ei-type-studio-body text-[var(--ei-color-text-secondary)]">
+                <p className="ei-type-body max-w-[43ch] text-[var(--ei-color-text-secondary)]">
                   Design is not decoration — it is meaning made visible. Every
                   decision is rooted in understanding, shaped by emotion, and
                   refined through story.
                 </p>
-                <p className="ei-type-studio-body mt-5 text-[var(--ei-color-text-secondary)]">
+                <p className="ei-type-body mt-5 max-w-[43ch] text-[var(--ei-color-text-secondary)]">
                   We do not just build brands or websites. We build identity,
                   atmosphere, and transformation.
                 </p>
@@ -264,15 +265,15 @@ className="ei-card relative block h-[380px] overflow-hidden px-7 pb-7 pt-6 text-
       />
     </div>
 
-  <h3 className="ei-type-studio-pillar-title mt-9 min-h-[4.5rem] max-w-[12ch]b">
+  <h3 className="ei-type-card-title mt-9 min-h-[4.5rem] max-w-[12ch]b">
   {pillar.title}
 </h3>
 
-<p className="ei-type-studio-card-body mt-4 min-h-[4.75rem] max-w-[32ch]">
+<p className="ei-type-body-small mt-4 min-h-[4.75rem] max-w-[32ch]">
   {pillar.body}
 </p>
 
-<p className="ei-type-studio-output pt-1 mt-[1.35rem] min-h-[4.4rem]">
+<p className="ei-type-meta pt-1 mt-[1.35rem] min-h-[4.4rem]">
   {pillar.output}
 </p>
 
@@ -308,7 +309,7 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
                 <SectionLabel>Our Process</SectionLabel>
                 <motion.h2
                   variants={blurEmergence}
-                  className="ei-type-studio-process-heading mt-6 max-w-[15ch]"
+                  className="ei-type-section-heading mt-6 max-w-[15ch]"
                 >
                   A thoughtful journey from essence to world.
                 </motion.h2>
@@ -337,17 +338,17 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
                   <motion.article
                     key={step.number}
                     variants={driftUp}
-                    className="relative"
+                    className="ei-studio-process-step relative"
                   >
                     <div className="ei-type-studio-process-number">
                       {step.number}
                     </div>
 
-                    <h3 className="ei-type-studio-process-title">
+                    <h3 className="ei-type-card-title">
                       {step.title}
                     </h3>
 
-                    <p className="ei-type-studio-process-body mt-3 max-w-[23ch]">
+                    <p className="ei-type-body-small mt-3 max-w-[23ch]">
                       {step.body}
                     </p>
                   </motion.article>
@@ -368,54 +369,53 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
             viewport={VIEWPORT.normal}
             className="mx-auto max-w-[1180px]"
           >
-            <motion.article
-              variants={fadeSoft}
-              className="ei-card ei-card-world"
-            >
-              <Link to="/works/lumo" className="ei-card-world-link group">
-                <motion.div
-                  variants={fadeSoft}
-                  className="ei-card-world-media"
-                  aria-hidden="true"
-                >
-                  <img
-                    src={lumoFeaturedBg}
-                    alt=""
-                    className="object-[57%_50%]"
-                  />
-                </motion.div>
+            <motion.div variants={fadeSoft}>
+              <EchoCard variant="feature" padding="none" className="ei-card-world">
+                <Link to="/works/lumo" className="ei-card-world-link group">
+                  <motion.div
+                    variants={fadeSoft}
+                    className="ei-card-world-media"
+                    aria-hidden="true"
+                  >
+                    <img
+                      src={lumoFeaturedBg}
+                      alt=""
+                      className="object-[57%_50%]"
+                    />
+                  </motion.div>
 
-                <div className="ei-card-studio-overlay" aria-hidden="true" />
+                  <div className="ei-card-studio-overlay" aria-hidden="true" />
 
-                <motion.div variants={driftUp} className="ei-card-world-copy">
-                  <div>
-                    <span className="ei-type-studio-label">
-                      Featured Work
+                  <motion.div variants={driftUp} className="ei-card-world-copy">
+                    <div className="ei-studio-feature-copy">
+                      <span className="ei-type-label">
+                        Featured Work
+                      </span>
+
+                      <h2 className="ei-type-feature-title mt-8 uppercase tracking-[0.02em]">
+                        LUMO
+                      </h2>
+
+                      <p className="ei-type-card-title mt-5 max-w-[18ch]">
+                        A world built for overwhelmed humans.
+                      </p>
+
+                      <p className="ei-type-body-small mt-7 max-w-[38ch] text-[var(--ei-color-text-secondary)]">
+                        Lumo takes softness, care, and emotional regulation into
+                        an emotionally intelligent app and cinematic digital
+                        identity system — an interface shaped to calm cognitive
+                        noise through atmosphere, rhythm, and restraint.
+                      </p>
+                    </div>
+
+                    <span className="ei-card-action">
+                      View Case Study{" "}
+                      <span className="ei-card-action-arrow">→</span>
                     </span>
-
-                    <h2 className="ei-type-studio-feature-title mt-8">
-                      LUMO
-                    </h2>
-
-                    <p className="ei-type-studio-feature-subtitle mt-5 max-w-[18ch]">
-                      A world built for overwhelmed humans.
-                    </p>
-
-                    <p className="ei-type-studio-feature-body mt-7 max-w-[38ch] text-[var(--ei-color-text-secondary)]">
-                      Lumo takes softness, care, and emotional regulation into
-                      an emotionally intelligent app and cinematic digital
-                      identity system — an interface shaped to calm cognitive
-                      noise through atmosphere, rhythm, and restraint.
-                    </p>
-                  </div>
-
-                  <span className="ei-card-action">
-                    View Case Study{" "}
-                    <span className="ei-card-action-arrow">→</span>
-                  </span>
-                </motion.div>
-              </Link>
-            </motion.article>
+                  </motion.div>
+                </Link>
+              </EchoCard>
+            </motion.div>
           </motion.div>
         </Container>
       </Section>
@@ -465,12 +465,12 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
 
               <motion.div
                 variants={driftUp}
-                className="relative z-10 max-w-[42rem] md:pl-16"
+                className="ei-studio-slim-cta-copy relative z-10 max-w-[42rem] md:pl-16"
               >
-                <p className="ei-type-studio-slim-cta">
+                <p className="ei-type-section-heading">
                   Let&apos;s build something meaningful.
                 </p>
-                <p className="ei-type-studio-body-small mt-2 text-[var(--ei-color-text-secondary)]">
+                <p className="ei-type-body-small mt-2 text-[var(--ei-color-text-secondary)]">
                   Strategic design. Immersive experiences. Lasting impact.
                 </p>
               </motion.div>

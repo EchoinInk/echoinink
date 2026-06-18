@@ -128,14 +128,14 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
                     </div>
 
                     <div className="ei-card-system-main">
-                      <h3 className="ei-card-system-title">{system.title}</h3>
+                      <h3 className="ei-card-system-title ei-type-card-title">{system.title}</h3>
 
-                      <p className="ei-card-system-copy">
+                      <p className="ei-card-system-copy ei-type-body-small">
                         {system.description}
                       </p>
                     </div>
 
-                    <span className="ei-card-system-category mt-auto">
+                    <span className="ei-card-system-category ei-type-meta mt-auto">
                       {system.meta}
                     </span>
                   </div>

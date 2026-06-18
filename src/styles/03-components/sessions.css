@@ -70,12 +70,6 @@
   .ei-sessions-fit-grid h2,
   .ei-sessions-definition-copy h2 {
     margin-top: var(--ei-space-5);
-    color: var(--ei-color-text-primary);
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(2.25rem, 4.6vw, 4rem);
-    font-weight: 400;
-    letter-spacing: -0.035em;
-    line-height: 1.04;
     text-wrap: balance;
   }
 
@@ -84,10 +78,6 @@
   .ei-sessions-fit-grid > div > p {
     margin-top: var(--ei-space-5);
     max-width: 50ch;
-    color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    font-size: 1rem;
-    line-height: 1.8;
   }
 
   .ei-sessions-definition {
@@ -116,9 +106,6 @@
     max-width: 38rem;
     margin-top: var(--ei-space-6);
     gap: var(--ei-space-3);
-    color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.75;
   }
 
   .ei-sessions-definition-note {
@@ -249,8 +236,6 @@
   .ei-sessions-format-card p {
     margin-top: var(--ei-space-4);
     color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.7;
   }
 
   .ei-sessions-process {
@@ -1083,10 +1068,6 @@
 
   .ei-sessions-page .ei-page-section-hero-title {
     max-width: 13ch;
-  }
-
-  .ei-sessions-page .ei-page-section-hero-description {
-    max-width: 42ch;
   }
 
   .ei-sessions-page .ei-page-section-hero-image {

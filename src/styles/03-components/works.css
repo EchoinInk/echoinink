@@ -174,11 +174,6 @@
     flex-wrap: wrap;
     gap: var(--ei-space-3) var(--ei-space-5);
     color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.16em;
-    line-height: 1.5;
-    text-transform: uppercase;
   }
 
   .ei-works-featured-meta {
@@ -217,9 +212,6 @@
     margin-top: var(--ei-space-6);
     padding-top: var(--ei-space-5);
     border-top: 1px solid rgb(var(--ei-ice-white-rgb) / 0.08);
-    color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.75;
   }
 
   .ei-works-featured-proof-strip {
@@ -250,9 +242,6 @@
   .ei-works-featured-proof-strip dd {
     margin: var(--ei-space-2) 0 0;
     color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    font-size: 0.92rem;
-    line-height: 1.65;
   }
 
   .ei-works-featured-proof-strip dd strong {
@@ -276,22 +265,14 @@
     max-width: 48rem;
   }
 
-  .ei-works-section-heading h2 {
-    color: var(--ei-color-text-primary);
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(2.4rem, 5vw, 4.5rem);
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    line-height: 1;
+  .ei-works-section-heading .ei-type-section-heading {
+    max-width: 16ch;
     text-wrap: balance;
   }
-
+  
   .ei-works-section-heading p {
     max-width: 62ch;
     margin-top: var(--ei-space-4);
-    color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.75;
   }
 
   .ei-works-section-heading .ei-works-audience-note {
@@ -624,8 +605,6 @@
   .ei-works-signal-card p {
     margin-top: var(--ei-space-4);
     color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.7;
   }
 
   .ei-works-proof-grid {
@@ -667,15 +646,11 @@
   .ei-works-proof-card p {
     margin-top: var(--ei-space-4);
     color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.7;
   }
 
   .ei-works-proof-note {
     margin-top: var(--ei-space-7);
     color: var(--ei-color-text-tertiary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.7;
     text-align: center;
   }
 
@@ -1009,11 +984,6 @@
 
   .ei-works-page .ei-page-section-hero-title {
     max-width: 14ch;
-  }
-
-  .ei-works-page .ei-page-section-hero-description {
-    max-width: 62ch;
-    line-height: 1.75;
   }
 
   .ei-works-page .ei-page-section-hero-image {

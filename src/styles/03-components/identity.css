@@ -107,12 +107,6 @@
 
   .ei-identity-orientation-copy h2,
   .ei-identity-section-heading h2 {
-    color: var(--ei-color-text-primary);
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(2rem, 4vw, 3.4rem);
-    font-weight: 400;
-    letter-spacing: -0.035em;
-    line-height: 1.08;
     text-wrap: balance;
   }
 
@@ -124,8 +118,6 @@
   .ei-identity-orientation-copy > div:last-child {
     max-width: 48ch;
     margin-top: var(--ei-space-6);
-    color: var(--ei-color-text-secondary);
-    line-height: 1.75;
   }
 
   .ei-identity-orientation-copy p + p {
@@ -192,8 +184,6 @@
   .ei-identity-section-heading p {
     max-width: 52ch;
     margin-top: var(--ei-space-4);
-    color: var(--ei-color-text-secondary);
-    line-height: 1.7;
   }
 
   .ei-identity-kit-grid {
@@ -230,7 +220,6 @@
   .ei-identity-kit-card > p {
     max-width: 48ch;
     margin-top: var(--ei-space-3);
-    line-height: 1.65;
   }
 
   .ei-identity-kit-card ul,
@@ -406,8 +395,6 @@
   .ei-identity-process-list p {
     margin-top: var(--ei-space-3);
     color: var(--ei-color-text-secondary);
-    font-size: 0.9rem;
-    line-height: 1.65;
   }
 
   .ei-identity-process-list {
@@ -492,7 +479,6 @@
     max-width: 44ch;
     margin-top: var(--ei-space-5);
     color: var(--ei-color-text-secondary);
-    line-height: 1.65;
   }
 
   .ei-identity-engagement-card ul {
@@ -1176,10 +1162,6 @@
 
   .ei-identity-page .ei-page-section-hero-title {
     max-width: 14ch;
-  }
-
-  .ei-identity-page .ei-page-section-hero-description {
-    max-width: 42ch;
   }
 
   .ei-identity-page .ei-page-section-hero-image {

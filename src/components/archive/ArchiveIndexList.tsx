@@ -31,16 +31,16 @@ export function ArchiveIndexList({
             </IconWell>
             <span className="ei-archive-index-copy">
               <span className="ei-archive-index-title">{entry.title}</span>
-              <span className="ei-archive-index-descriptor">{entry.descriptor}</span>
+              <span className="ei-archive-index-descriptor ei-type-body-small">{entry.descriptor}</span>
             </span>
-            <span className="ei-archive-index-category">{entry.category}</span>
-            <span className="ei-archive-index-read">{entry.readTime}</span>
-            <span className="ei-archive-index-date">{entry.date}</span>
+            <span className="ei-archive-index-category ei-type-meta">{entry.category}</span>
+            <span className="ei-archive-index-read ei-type-meta">{entry.readTime}</span>
+            <span className="ei-archive-index-date ei-type-meta">{entry.date}</span>
             <span className="ei-archive-index-arrow" aria-hidden="true">→</span>
           </Link>
         ))
       ) : (
-        <p className="ei-archive-index-empty">{emptyMessage}</p>
+        <p className="ei-archive-index-empty ei-type-body">{emptyMessage}</p>
       )}
     </EchoCard>
   );

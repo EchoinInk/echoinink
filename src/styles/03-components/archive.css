@@ -114,12 +114,6 @@
     flex-wrap: wrap;
     gap: var(--ei-space-3) var(--ei-space-5);
     margin-top: var(--ei-space-7);
-    color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.18em;
-    line-height: 1.5;
-    text-transform: uppercase;
   }
 
   .ei-archive-card-meta span + span::before {
@@ -143,9 +137,6 @@
   .ei-archive-featured-copy > p {
     max-width: 42ch;
     margin-top: var(--ei-space-5);
-    color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.8;
   }
 
   .ei-archive-featured-copy .ei-btn-primary-cinematic,
@@ -164,12 +155,6 @@
 
   .ei-archive-section-heading h2,
   .ei-archive-philosophy-copy h2 {
-    color: var(--ei-color-text-primary);
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(2.4rem, 5vw, 4.75rem);
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    line-height: 1;
     text-wrap: balance;
   }
 
@@ -177,9 +162,6 @@
   .ei-archive-philosophy-copy > p {
     max-width: 54ch;
     margin-top: var(--ei-space-4);
-    color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.75;
   }
 
   .ei-archive-categories {
@@ -231,11 +213,6 @@
     justify-content: space-between;
     gap: var(--ei-space-4);
     color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.16em;
-    line-height: 1.5;
-    text-transform: uppercase;
   }
 
   .ei-archive-note-icon {
@@ -256,9 +233,6 @@
   .ei-archive-note-card > p {
     max-width: 34ch;
     margin-top: var(--ei-space-4);
-    color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.7;
   }
 
   .ei-archive-note-card > a {
@@ -277,11 +251,6 @@
   .ei-archive-index-count {
     flex: 0 0 auto;
     padding-bottom: var(--ei-space-2);
-    color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
   }
 
   .ei-archive-index-table {
@@ -330,9 +299,6 @@
     overflow: hidden;
     margin-top: var(--ei-space-2);
     color: var(--ei-color-text-tertiary);
-    font-family: var(--ei-font-copy);
-    font-size: 0.82rem;
-    line-height: 1.5;
     text-overflow: ellipsis;
     white-space: nowrap;
   }
@@ -341,11 +307,6 @@
   .ei-archive-index-read,
   .ei-archive-index-date {
     display: none;
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.15em;
-    line-height: 1.5;
-    text-transform: uppercase;
     color: var(--ei-color-text-muted);
   }
 
@@ -361,8 +322,6 @@
 
   .ei-archive-index-empty {
     padding: var(--ei-space-7);
-    color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
     text-align: center;
   }
 
@@ -794,11 +753,6 @@
     justify-content: space-between;
     gap: var(--ei-space-4);
     color: rgb(var(--ei-halo-blue-rgb) / 0.72);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.16em;
-    line-height: 1.4;
-    text-transform: uppercase;
   }
 
   .ei-archive-pathway-card strong {
@@ -821,9 +775,6 @@
     max-width: 28ch;
     margin-top: var(--ei-space-4);
     color: rgb(var(--ei-moonlit-rgb) / 0.7);
-    font-family: var(--ei-font-copy);
-    font-size: 0.88rem;
-    line-height: 1.58;
   }
 
   .ei-archive-filter-wrap {
@@ -1066,11 +1017,6 @@
   .ei-archive-page .ei-page-section-hero-title,
   .ei-index-page .ei-page-section-hero-title {
     max-width: 14ch;
-  }
-
-  .ei-archive-page .ei-page-section-hero-description,
-  .ei-index-page .ei-page-section-hero-description {
-    max-width: 44ch;
   }
 
   .ei-archive-page .ei-page-section-hero-image,

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 import { ArchiveConstellation } from '@/components/archive/ArchiveConstellation';
 import { ArchiveIndexList } from '@/components/archive/ArchiveIndexList';
-import { ContentFrame } from '@/components/layout/ContentFrame';
+import { Container } from '@/components/layout/Container';
 import { PageShell } from '@/components/layout/PageShell';
 import { Section } from '@/components/layout/Section';
 import { CTASection } from '@/components/sections/CTASection';
@@ -112,12 +112,13 @@ export function ArchivePage() {
         spacing="none"
         className="ei-archive-section ei-archive-featured-section"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={fadeSoft}>
               <EchoCard variant="feature" padding="none" className="ei-archive-featured">
@@ -129,7 +130,7 @@ export function ArchivePage() {
                 <div className="ei-archive-featured-copy">
                   <SectionLabel label={archiveFeatured.label} index="02" tone="accent" />
 
-                  <div className="ei-archive-card-meta">
+                  <div className="ei-archive-card-meta ei-type-meta">
                     <span>{archiveFeatured.category}</span>
                     <span>{archiveFeatured.readTime}</span>
                   </div>
@@ -141,7 +142,7 @@ export function ArchivePage() {
                     />
                   </motion.h2>
 
-                  <p>{archiveFeatured.excerpt}</p>
+                  <p className="ei-type-body-editorial">{archiveFeatured.excerpt}</p>
 
                   <Button to={archiveFeatured.href} variant="secondary">
                     {archiveFeatured.action} <span aria-hidden="true">→</span>
@@ -150,22 +151,23 @@ export function ArchivePage() {
               </EchoCard>
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-archive-section ei-archive-categories">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-archive-section-heading">
               <SectionLabel label="Ways into the archive" index="03" />
               <div>
-                <h2>Follow a subject, or follow the signal.</h2>
-                <p>
+                <h2 className="ei-type-editorial-heading">Follow a subject, or follow the signal.</h2>
+                <p className="ei-type-body-editorial">
                   Essays hold the longer argument. Notes and fragments keep the unfinished edges
                   visible. Case signals show where ideas became form.
                 </p>
@@ -185,14 +187,14 @@ export function ArchivePage() {
                     padding="md"
                     className="ei-archive-pathway-card"
                   >
-                    <div className="ei-archive-pathway-topline">
+                    <div className="ei-archive-pathway-topline ei-type-meta">
                       <span>{String(index + 1).padStart(2, '0')}</span>
                       <span>
                         {entryCount} {entryCount === 1 ? 'entry' : 'entries'}
                       </span>
                     </div>
                     <strong>{pathway}</strong>
-                    <p>
+                    <p className="ei-type-body-editorial">
                       {pathway === 'Philosophy'
   ? 'Long-form arguments, atmospheric theory, and the deeper logic beneath the work.'
   : pathway === 'Notes'
@@ -235,22 +237,23 @@ export function ArchivePage() {
               />
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-archive-section ei-archive-notes-section">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-archive-section-heading">
               <SectionLabel label="Recent notes" index="04" />
               <div>
-                <h2>Shorter observations. Quiet points of return.</h2>
-                <p>
+                <h2 className="ei-type-editorial-heading">Shorter observations. Quiet points of return.</h2>
+                <p className="ei-type-body-editorial">
                   Small pieces with a visible signal: fragments, questions,
                   and working notes from the archive floor.
                 </p>
@@ -261,7 +264,7 @@ export function ArchivePage() {
               {archiveNotes.map((note, index) => (
                 <motion.div key={note.title} variants={driftUp}>
                   <EchoCard variant="interactive" padding="lg" className="ei-archive-note-card">
-                    <div className="ei-archive-note-topline">
+                    <div className="ei-archive-note-topline ei-type-meta">
                       <span>{String(index + 1).padStart(2, '0')}</span>
                       <span>
                         {note.category} · {note.readTime}
@@ -283,7 +286,7 @@ export function ArchivePage() {
                     <h3>
                       <EmphasizedText text={note.title} emphasis={note.emphasis} />
                     </h3>
-                    <p>{note.excerpt}</p>
+                    <p className="ei-type-body-editorial">{note.excerpt}</p>
 
                     <Button to="/archive/notes" variant="tertiary">
                       {note.action} <span aria-hidden="true">→</span>
@@ -293,7 +296,7 @@ export function ArchivePage() {
               ))}
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
@@ -301,22 +304,23 @@ export function ArchivePage() {
         spacing="none"
         className="ei-archive-section ei-archive-index-section"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-archive-index-heading">
               <div className="ei-archive-section-heading">
                 <SectionLabel label="Archive index" index="05" />
                 <div>
-                  <h2>Ideas, arranged for discovery.</h2>
-                  <p>Read across disciplines, or trace one recurring concern through the index.</p>
+                  <h2 className="ei-type-editorial-heading">Ideas, arranged for discovery.</h2>
+                  <p className="ei-type-body-editorial">Read across disciplines, or trace one recurring concern through the index.</p>
                 </div>
               </div>
-              <span className="ei-archive-index-count">
+              <span className="ei-archive-index-count ei-type-meta">
                 {activeFilter === 'All'
                   ? `${archiveIndex.length} Entries`
                   : `${visibleEntries.length} ${visibleEntries.length === 1 ? 'Entry' : 'Entries'}`}
@@ -332,22 +336,23 @@ export function ArchivePage() {
               </Button>
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-archive-section ei-archive-philosophy-section">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <EchoCard variant="offer" padding="none" className="ei-archive-philosophy">
               <div className="ei-archive-philosophy-copy">
                 <SectionLabel label="A living constellation" index="06" tone="accent" />
-                <motion.h2 variants={blurEmergence}>{archivePhilosophy.title}</motion.h2>
-                <p>{archivePhilosophy.description}</p>
+                <motion.h2 variants={blurEmergence} className="ei-type-editorial-heading">{archivePhilosophy.title}</motion.h2>
+                <p className="ei-type-body-editorial">{archivePhilosophy.description}</p>
               </div>
 
               <motion.div variants={fadeSoft}>
@@ -355,7 +360,7 @@ export function ArchivePage() {
               </motion.div>
             </EchoCard>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <CTASection

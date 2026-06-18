@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import worksHeroDesktop from '@/assets/imagery/hero/works-hero-signal-stream-desktop.webp';
 import worksHeroMobile from '@/assets/imagery/hero/works-hero-signal-stream-mobile.webp';
 import worksCtaImage from '@/assets/imagery/sections/works-cta.webp';
-import { ContentFrame } from '@/components/layout/ContentFrame';
+import { Container } from '@/components/layout/Container';
 import { PageShell } from '@/components/layout/PageShell';
 import { Section } from '@/components/layout/Section';
 import { CTASection } from '@/components/sections/CTASection';
@@ -160,18 +160,19 @@ export function WorksPage() {
       />
 
       <Section spacing="none" className="ei-works-section ei-works-signals">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-works-section-heading">
               <SectionLabel label="Selected signals" index="02" />
               <div>
-                <h2>Evidence that the atmosphere is doing its job.</h2>
-                <p>
+                <h2 className="ei-type-section-heading">Evidence that the atmosphere is doing its job.</h2>
+                <p className="ei-type-body-editorial">
                   Brand systems, product stories, and digital experiences designed to make complex
                   value easier to trust, understand, and act on.
                 </p>
@@ -201,23 +202,24 @@ export function WorksPage() {
                   >
                     <span>{String(index + 1).padStart(2, '0')}</span>
                     <h3>{signal.title}</h3>
-                    <p>{signal.description}</p>
+                    <p className="ei-type-body-editorial">{signal.description}</p>
                   </EchoCard>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       {featuredProject ? (
         <Section spacing="none" className="ei-works-section ei-works-featured">
-          <ContentFrame width="standard" gutters>
+          <Container size="xl" className="relative z-10">
             <motion.div
               variants={staggerContainer(STAGGER.loose, 0)}
               initial="hidden"
               whileInView="visible"
               viewport={VIEWPORT.normal}
+              className="mx-auto max-w-[1180px]"
             >
               <motion.div variants={fadeSoft}>
                 <EchoCard variant="proof" padding="none" className="ei-works-featured-panel">
@@ -228,19 +230,19 @@ export function WorksPage() {
 
                   <div className="ei-works-featured-copy">
                     <SectionLabel label="Credibility anchor" index="03" />
-                    <div className="ei-works-featured-meta">
+                    <div className="ei-works-featured-meta ei-type-meta">
                       <span>{featuredProject.status}</span>
                       <span>{featuredProject.category}</span>
                     </div>
                     <motion.h2 variants={blurEmergence}>{featuredProject.title}</motion.h2>
                     <p className="ei-works-featured-outcome">{featuredProject.proofLine}</p>
-                    <p className="ei-works-featured-description">{featuredProject.description}</p>
+                    <p className="ei-works-featured-description ei-type-body-editorial">{featuredProject.description}</p>
 
                     <dl className="ei-works-featured-proof-strip">
                       {lumoProofStrip.map((item) => (
                         <div key={item.title}>
                           <dt>{item.title}</dt>
-                          <dd>
+                          <dd className="ei-type-body-small">
                             <strong>{item.anchor}</strong> {item.description}
                           </dd>
                         </div>
@@ -254,23 +256,24 @@ export function WorksPage() {
                 </EchoCard>
               </motion.div>
             </motion.div>
-          </ContentFrame>
+          </Container>
         </Section>
       ) : null}
 
       <Section id="selected-works" spacing="none" className="ei-works-section ei-works-selected">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-works-section-heading">
               <SectionLabel label="Selected works" index="04" />
               <div>
-                <h2>Curated by the weight of the proof.</h2>
-                <p>
+                <h2 className="ei-type-section-heading">Curated by the weight of the proof.</h2>
+                <p className="ei-type-body-editorial">
                   Full studies lead. Concepts and fragments follow in a quieter register, so every
                   piece is honest about what it demonstrates.
                 </p>
@@ -290,22 +293,23 @@ export function WorksPage() {
               <WorksGrid activeFilter={activeFilter} sortBy={sortBy} />
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-works-section ei-works-proof">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-works-section-heading">
               <SectionLabel label="Process framework" index="06" />
               <div>
-                <h2>From atmosphere to usable system.</h2>
-                <p>
+                <h2 className="ei-type-section-heading">From atmosphere to usable system.</h2>
+                <p className="ei-type-body-editorial">
                   A practical sequence for turning emotional direction into identity, interface,
                   content, and launch-ready patterns.
                 </p>
@@ -325,20 +329,20 @@ export function WorksPage() {
                     </IconWell>
                     <span>{value.step}</span>
                     <h3>{value.title}</h3>
-                    <p>{value.description}</p>
+                    <p className="ei-type-body-editorial">{value.description}</p>
                   </EchoCard>
                 </motion.div>
               ))}
             </div>
 
-            <motion.p variants={fadeSoft} className="ei-works-proof-note">
+            <motion.p variants={fadeSoft} className="ei-works-proof-note ei-type-body">
               Looking for the thinking behind the work?{' '}
               <Link to="/studio">
                 Explore the studio approach <span aria-hidden="true">→</span>
               </Link>
             </motion.p>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <CTASection

@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
+import { SectionLabel } from "@/components/ui/SectionLabel";
 import {
   blurEmergence,
   driftUp,
@@ -51,20 +52,11 @@ export function Philosophy() {
           whileInView="visible"
           viewport={VIEWPORT.normal}
         >
-          {/* Section eyebrow */}
           <motion.div
             variants={driftUp}
-            className="mb-6 flex items-center gap-3 md:mb-8"
+            className="mb-6 md:mb-8"
           >
-            <span className="ei-type-label">Our Philosophy</span>
-
-            <div
-              className="h-px w-10 shrink-0 rounded-full shadow-[0_0_12px_rgb(var(--ei-halo-blue-rgb)/0.75)]"
-              style={{
-                background:
-                  "linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15) 0%, rgb(var(--ei-halo-blue-rgb) / 0.95) 100%)",
-              }}
-            />
+            <SectionLabel label="Our Philosophy" />
           </motion.div>
 
           <div className="grid items-start gap-8 md:grid-cols-[2fr_3fr] md:gap-12">

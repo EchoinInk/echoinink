@@ -16,12 +16,6 @@
   }
 
   .ei-editorial-section-heading h2 {
-    color: var(--ei-color-text-primary);
-    font-family: var(--ei-font-editorial);
-    font-size: clamp(2.4rem, 5vw, 4.75rem);
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    line-height: 1;
     text-wrap: balance;
   }
 
@@ -190,10 +184,6 @@
   .ei-editorial-related-card > span,
   .ei-index-featured-topline > span {
     color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
   }
 
   .ei-editorial-related-card h3,
@@ -210,9 +200,6 @@
   .ei-editorial-related-card p,
   .ei-index-featured-card p {
     margin-top: var(--ei-space-4);
-    color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.7;
   }
 
   .ei-editorial-related-card > a,
@@ -293,11 +280,6 @@
 
   .ei-notes-featured-copy > span {
     margin-top: var(--ei-space-7);
-    color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
   }
 
   .ei-notes-featured-copy h2 {
@@ -314,9 +296,6 @@
   .ei-notes-featured-copy p {
     max-width: 40ch;
     margin-top: var(--ei-space-5);
-    color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.75;
   }
 
   .ei-notes-featured-copy > a {
@@ -340,10 +319,6 @@
   .ei-notes-row-number,
   .ei-notes-row-copy > span {
     color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
   }
 
   .ei-notes-row-copy h3 {
@@ -360,8 +335,6 @@
     max-width: 48ch;
     margin-top: var(--ei-space-4);
     color: var(--ei-color-text-secondary);
-    font-family: var(--ei-font-copy);
-    line-height: 1.75;
   }
 
   .ei-notes-thread-map,
@@ -381,10 +354,6 @@
   .ei-index-category span,
   .ei-index-category small {
     color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
   }
 
   .ei-notes-thread strong,
@@ -435,10 +404,6 @@
 
   .ei-index-search > span {
     color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
   }
 
   .ei-index-search input {
@@ -838,8 +803,6 @@
     max-width: 38ch;
     margin-top: var(--ei-space-4);
     color: rgb(var(--ei-moonlit-rgb) / 0.76);
-    font-family: var(--ei-font-copy);
-    line-height: 1.68;
   }
 
   .ei-notes-preview-card .ei-button {
@@ -853,11 +816,6 @@
     justify-content: space-between;
     gap: var(--ei-space-4);
     color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.16em;
-    line-height: 1.4;
-    text-transform: uppercase;
   }
 
   .ei-notes-list {
@@ -1356,10 +1314,6 @@
 
   .ei-notes-page .ei-page-section-hero-title {
     max-width: 14ch;
-  }
-
-  .ei-notes-page .ei-page-section-hero-description {
-    max-width: 42ch;
   }
 
   .ei-notes-page .ei-page-section-hero-image {

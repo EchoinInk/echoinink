@@ -7,7 +7,7 @@ import {
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
-import { ContentFrame } from "@/components/layout/ContentFrame";
+import { Container } from "@/components/layout/Container";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
@@ -200,12 +200,12 @@ export function BookingPage() {
       </Helmet>
 
       <Section spacing="none" className="ei-booking-intro">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             animate="visible"
-            className="ei-booking-intro-grid"
+            className="mx-auto max-w-[1180px] ei-booking-intro-grid"
           >
             <motion.div variants={driftUp}>
               <SectionLabel label="Echo Session booking" />
@@ -233,7 +233,7 @@ export function BookingPage() {
               </div>
             </motion.dl>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
@@ -241,13 +241,13 @@ export function BookingPage() {
         spacing="none"
         className="ei-booking-flow-section"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-booking-layout"
+            className="mx-auto max-w-[1180px] ei-booking-layout"
           >
             <motion.aside variants={driftUp}>
               <EchoCard
@@ -624,16 +624,17 @@ export function BookingPage() {
               </div>
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-booking-after">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.normal, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-booking-section-heading">
               <SectionLabel label="What happens next" index="01" />
@@ -662,39 +663,41 @@ export function BookingPage() {
               ))}
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-booking-preparation">
-        <ContentFrame width="standard" gutters>
-          <EchoFormPanel
-            tone="quiet"
-            splitAt="md"
-            aside={
-              <div className="ei-booking-preparation-quote">
-                <IconWell size="lg" tone="magenta" orbital glow>
-                  <OrbitalVisual variant="innerTide" size={56} />
-                </IconWell>
-                <SectionLabel label="Preparation note" rule="none" />
-                <blockquote>
-                  Arrive with the question,
-                  <br />
-                  not the answer.
-                </blockquote>
+        <Container size="xl" className="relative z-10">
+          <motion.div className="mx-auto max-w-[1180px]">
+            <EchoFormPanel
+              tone="quiet"
+              splitAt="md"
+              aside={
+                <div className="ei-booking-preparation-quote">
+                  <IconWell size="lg" tone="magenta" orbital glow>
+                    <OrbitalVisual variant="innerTide" size={56} />
+                  </IconWell>
+                  <SectionLabel label="Preparation note" rule="none" />
+                  <blockquote>
+                    Arrive with the question,
+                    <br />
+                    not the answer.
+                  </blockquote>
+                </div>
+              }
+            >
+              <div className="ei-booking-included">
+                <SectionLabel label="Included with every session" rule="none" />
+                <h2>The conversation stays useful after the room closes.</h2>
+                <ul>
+                  <li>Recorded for your private review</li>
+                  <li>Follow-up notes with the clearest signals and next steps</li>
+                  <li>A focused format designed for clarity, not performance</li>
+                </ul>
               </div>
-            }
-          >
-            <div className="ei-booking-included">
-              <SectionLabel label="Included with every session" rule="none" />
-              <h2>The conversation stays useful after the room closes.</h2>
-              <ul>
-                <li>Recorded for your private review</li>
-                <li>Follow-up notes with the clearest signals and next steps</li>
-                <li>A focused format designed for clarity, not performance</li>
-              </ul>
-            </div>
-          </EchoFormPanel>
-        </ContentFrame>
+            </EchoFormPanel>
+          </motion.div>
+        </Container>
       </Section>
 
       <CTASection

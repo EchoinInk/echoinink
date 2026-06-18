@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import archiveImageDesktop from "@/assets/imagery/hero/notes-hero-light-ribbon-desktop.webp";
 import archiveImageMobile from "@/assets/imagery/hero/notes-hero-light-ribbon-mobile.webp";
 import { ArchiveIndexList } from "@/components/archive/ArchiveIndexList";
-import { ContentFrame } from "@/components/layout/ContentFrame";
+import { Container } from "@/components/layout/Container";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
@@ -81,12 +81,13 @@ export function ArchiveNotesPage() {
         spacing="none"
         className="ei-editorial-page-section ei-notes-featured-section"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={blurEmergence}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <EchoCard
               variant="feature"
@@ -106,12 +107,12 @@ export function ArchiveNotesPage() {
               <div className="ei-notes-featured-copy">
                 <SectionLabel label="Featured note" index="02" tone="accent" />
 
-                <span>
+                <span className="ei-type-meta">
                   {archiveNotes[0].thread} · {archiveNotes[0].readTime}
                 </span>
 
                 <h2>{archiveNotes[0].title}</h2>
-                <p>{archiveNotes[0].excerpt}</p>
+                <p className="ei-type-body-editorial">{archiveNotes[0].excerpt}</p>
 
                 <Button
                   onClick={() => scrollToSection(archiveNotes[0].id)}
@@ -122,26 +123,27 @@ export function ArchiveNotesPage() {
               </div>
             </EchoCard>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
         spacing="none"
         className="ei-editorial-page-section ei-notes-preview-section"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.normal, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
               className="ei-editorial-section-heading"
             >
               <SectionLabel label="Start here" index="03" />
-              <h2>Three openings into the notebook.</h2>
+              <h2 className="ei-type-editorial-heading">Three openings into the notebook.</h2>
             </motion.div>
 
             <div className="ei-notes-preview-grid">
@@ -152,7 +154,7 @@ export function ArchiveNotesPage() {
                     padding="lg"
                     className="ei-notes-preview-card"
                   >
-                    <div className="ei-notes-preview-topline">
+                    <div className="ei-notes-preview-topline ei-type-meta">
                       <span>{String(index + 1).padStart(2, "0")}</span>
                       <span>
                         {note.thread} · {note.readTime}
@@ -160,7 +162,7 @@ export function ArchiveNotesPage() {
                     </div>
 
                     <h3>{note.title}</h3>
-                    <p>{note.excerpt}</p>
+                    <p className="ei-type-body-editorial">{note.excerpt}</p>
 
                     <Button
                       onClick={() => scrollToSection(note.id)}
@@ -173,7 +175,7 @@ export function ArchiveNotesPage() {
               ))}
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
@@ -181,19 +183,20 @@ export function ArchiveNotesPage() {
         spacing="none"
         className="ei-editorial-page-section ei-notes-recent-section"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.normal, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
               className="ei-editorial-section-heading"
             >
               <SectionLabel label="Recent notes" index="04" />
-              <h2>Small pieces with enough room to resonate.</h2>
+              <h2 className="ei-type-editorial-heading">Small pieces with enough room to resonate.</h2>
             </motion.div>
 
             <div className="ei-notes-list">
@@ -204,7 +207,7 @@ export function ArchiveNotesPage() {
                   variants={fadeSoft}
                   className="ei-notes-row"
                 >
-                  <div className="ei-notes-row-number">
+                  <div className="ei-notes-row-number ei-type-meta">
                     {String(index + 1).padStart(2, "0")}
                   </div>
 
@@ -220,36 +223,37 @@ export function ArchiveNotesPage() {
                   </IconWell>
 
                   <div className="ei-notes-row-copy">
-                    <span>
+                    <span className="ei-type-meta">
                       {note.thread} · {note.readTime}
                     </span>
                     <h3>{note.title}</h3>
-                    <p>{note.excerpt}</p>
+                    <p className="ei-type-body-editorial">{note.excerpt}</p>
                   </div>
                 </motion.article>
               ))}
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
         spacing="none"
         className="ei-editorial-page-section ei-notes-threads-section"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.normal, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
               className="ei-editorial-section-heading"
             >
               <SectionLabel label="Browse threads" index="05" />
-              <h2>Recurring questions, gathered by signal.</h2>
+              <h2 className="ei-type-editorial-heading">Recurring questions, gathered by signal.</h2>
             </motion.div>
 
             <motion.div variants={fadeSoft} className="ei-notes-thread-map">
@@ -260,30 +264,31 @@ export function ArchiveNotesPage() {
                   padding="md"
                   className="ei-notes-thread"
                 >
-                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <span className="ei-type-meta">{String(index + 1).padStart(2, "0")}</span>
                   <strong>{theme}</strong>
                 </EchoCard>
               ))}
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
         spacing="none"
         className="ei-editorial-page-section ei-notes-index-section"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.normal, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-archive-index-heading">
               <div className="ei-editorial-section-heading">
                 <SectionLabel label="Note index" index="06" />
-                <h2>Notes inside the larger archive.</h2>
+                <h2 className="ei-type-editorial-heading">Notes inside the larger archive.</h2>
               </div>
 
               <Button to="/archive/map" variant="tertiary">
@@ -295,7 +300,7 @@ export function ArchiveNotesPage() {
               <ArchiveIndexList entries={noteIndexEntries} />
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <CTASection

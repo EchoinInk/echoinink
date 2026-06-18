@@ -5,7 +5,7 @@ import sessionsHeroDesktop from "@/assets/imagery/hero/sessions-hero-luminous-th
 import sessionsHeroMobile from "@/assets/imagery/hero/sessions-hero-luminous-threshold-mobile.webp";
 import imageCTA from "@/assets/imagery/sections/sessions-cta-desktop.webp";
 import imageOffer from "@/assets/imagery/sections/sessions-offer-desktop.webp";
-import { ContentFrame } from "@/components/layout/ContentFrame";
+import { Container } from "@/components/layout/Container";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
@@ -140,12 +140,13 @@ export function SessionsPage() {
 />
 
       <Section spacing="none" className="ei-sessions-section ei-sessions-definition">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={fadeSoft}>
               <EchoCard variant="offer" padding="none" className="ei-sessions-definition-panel">
@@ -156,7 +157,7 @@ export function SessionsPage() {
                   </motion.h2>
                   <div className="ei-sessions-definition-body">
                     {sessionsOrientation.paragraphs.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
+                      <p key={paragraph} className="ei-type-body-editorial">{paragraph}</p>
                     ))}
                   </div>
                   <p className="ei-sessions-definition-note">
@@ -180,21 +181,22 @@ export function SessionsPage() {
               </EchoCard>
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-sessions-section ei-sessions-outcomes">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-sessions-section-heading">
               <SectionLabel label="Three outcomes" index="02" />
-              <h2>Leave with a direction you can trust.</h2>
-              <p>
+              <h2 className="ei-type-section-heading">Leave with a direction you can trust.</h2>
+              <p className="ei-type-body-editorial">
                 The session makes the intangible practical without flattening what gives the work
                 its meaning.
               </p>
@@ -215,13 +217,13 @@ export function SessionsPage() {
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <h3>{outcome.title}</h3>
-                    <p>{outcome.description}</p>
+                    <p className="ei-type-body-editorial">{outcome.description}</p>
                   </EchoCard>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
@@ -229,16 +231,17 @@ export function SessionsPage() {
         spacing="none"
         className="ei-sessions-section ei-sessions-process"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-sessions-section-heading">
               <SectionLabel label="Inside the session" index="03" />
-              <h2>A focused arc, with room to follow the signal.</h2>
+              <h2 className="ei-type-section-heading">A focused arc, with room to follow the signal.</h2>
             </motion.div>
 
             <ol className="ei-sessions-process-list">
@@ -249,27 +252,27 @@ export function SessionsPage() {
                   </span>
                   <span className="ei-sessions-process-dot" aria-hidden="true" />
                   <h3>{step.title}</h3>
-                  <p>{step.description}</p>
+                  <p className="ei-type-body-editorial">{step.description}</p>
                 </motion.li>
               ))}
             </ol>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-sessions-section ei-sessions-takeaways">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-sessions-takeaways-layout"
+            className="mx-auto max-w-[1180px] ei-sessions-takeaways-layout"
           >
             <motion.div variants={driftUp} className="ei-sessions-takeaways-copy">
               <SectionLabel label="What you leave with" index="04" />
-              <h2>{sessionsOutcomes.heading}</h2>
-              <p>{sessionsOutcomes.intro}</p>
+              <h2 className="ei-type-section-heading">{sessionsOutcomes.heading}</h2>
+              <p className="ei-type-body-editorial">{sessionsOutcomes.intro}</p>
               <blockquote>“{sessionsApproach.heading}”</blockquote>
             </motion.div>
 
@@ -286,24 +289,25 @@ export function SessionsPage() {
               </EchoCard>
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-sessions-section ei-sessions-fit">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp}>
               <SectionLabel label="Fit" index="05" />
             </motion.div>
             <div className="ei-sessions-fit-grid">
               <motion.div variants={driftUp}>
-                <h2>This is for you if...</h2>
-                <p>{sessionsAudience}</p>
+                <h2 className="ei-type-section-heading">This is for you if...</h2>
+                <p className="ei-type-body-editorial">{sessionsAudience}</p>
                 <ul>
                   {sessionsBring.items.slice(0, 5).map((item) => (
                     <li key={item}>{item}</li>
@@ -311,8 +315,8 @@ export function SessionsPage() {
                 </ul>
               </motion.div>
               <motion.div variants={driftUp}>
-                <h2>This is not...</h2>
-                <p>
+                <h2 className="ei-type-section-heading">This is not...</h2>
+                <p className="ei-type-body-editorial">
                   The room is intimate and directional. Its value comes from attention, reflection,
                   and honest creative decisions.
                 </p>
@@ -324,21 +328,22 @@ export function SessionsPage() {
               </motion.div>
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-sessions-section ei-sessions-formats">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-sessions-section-heading">
               <SectionLabel label="Session formats" index="06" />
-              <h2>{sessionsPricing.heading}</h2>
-              <p>
+              <h2 className="ei-type-section-heading">{sessionsPricing.heading}</h2>
+              <p className="ei-type-body-editorial">
                 Choose the depth that matches the question. Both formats are one-to-one and shaped
                 around the work you bring.
               </p>
@@ -359,7 +364,7 @@ export function SessionsPage() {
                       <span>{tier.duration}</span>
                     </div>
                     <h3>{tier.name}</h3>
-                    <p>{tier.description}</p>
+                    <p className="ei-type-body-editorial">{tier.description}</p>
                     <strong>{tier.price} NZD</strong>
                   </EchoCard>
                 </motion.div>
@@ -371,7 +376,7 @@ export function SessionsPage() {
               space to describe what you are carrying.
             </motion.p>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <CTASection

@@ -98,9 +98,9 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
                     <OrbitalVisual variant={cap.variant} size={68} />
                   </div>
 
-                  <h3 className="ei-card-title mb-3">{cap.title}</h3>
+                  <h3 className="ei-card-title ei-type-card-title mb-3">{cap.title}</h3>
 
-                  <p className="ei-card-description mb-5 flex-1 md:mb-6">
+                  <p className="ei-card-description ei-type-body-small mb-5 flex-1 md:mb-6">
                     {cap.description}
                   </p>
 

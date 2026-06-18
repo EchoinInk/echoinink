@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import worldsHeroDesktop from "@/assets/imagery/hero/worlds-hero-vertical-portal-desktop.webp";
 import worldsHeroMobile from "@/assets/imagery/hero/worlds-hero-vertical-portal-mobile.webp";
 import worldsImageDesktop from "@/assets/imagery/sections/worlds-image-1-desktop.webp";
-import { ContentFrame } from "@/components/layout/ContentFrame";
+import { Container } from "@/components/layout/Container";
 import { PageShell } from "@/components/layout/PageShell";
 import { Section } from "@/components/layout/Section";
 import { CTASection } from "@/components/sections/CTASection";
@@ -217,12 +217,13 @@ export function WorldsPage() {
         spacing="none"
         className="ei-worlds-section ei-worlds-definition"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={fadeSoft}>
               <EchoCard
@@ -236,8 +237,8 @@ export function WorldsPage() {
                     A creative service for shaping the whole environment around
                     an idea.
                   </motion.h2>
-                  <p>{worldsIntro.body}</p>
-                  <p>
+                  <p className="ei-type-body-editorial">{worldsIntro.body}</p>
+                  <p className="ei-type-body-editorial">
                     Worldbuilding aligns what the work means with how it looks,
                     speaks, moves, and meets people. The result is not a
                     collection of assets. It is a direction your team can use.
@@ -262,16 +263,17 @@ export function WorldsPage() {
               </EchoCard>
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-worlds-section ei-worlds-needs">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
@@ -283,7 +285,7 @@ export function WorldsPage() {
                   When the idea is strong, but the world around it is not yet
                   coherent.
                 </h2>
-                <p>
+                <p className="ei-type-body-editorial">
                   World Architecture is for meaningful work that needs a clearer
                   centre and a practical way to express it.
                 </p>
@@ -295,7 +297,7 @@ export function WorldsPage() {
                 <motion.li key={item.title} variants={driftUp}>
                   <span>{String(index + 1).padStart(2, "0")}</span>
                   <h3>{item.title}</h3>
-                  <p>{item.description}</p>
+                  <p className="ei-type-body-editorial">{item.description}</p>
                 </motion.li>
               ))}
             </ol>
@@ -304,7 +306,7 @@ export function WorldsPage() {
               Also suited to: {worldsUseCases.slice(0, 4).join(" · ")}.
             </motion.p>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section
@@ -312,12 +314,13 @@ export function WorldsPage() {
         spacing="none"
         className="ei-worlds-section ei-worlds-architecture"
       >
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
@@ -326,7 +329,7 @@ export function WorldsPage() {
               <SectionLabel label="What a world includes" index="04" />
               <div>
                 <h2>{worldsLayers.heading}</h2>
-                <p>
+                <p className="ei-type-body-editorial">
                   Each layer makes the offer tangible: a set of decisions,
                   principles, and directions that can guide real creative work.
                 </p>
@@ -346,7 +349,7 @@ export function WorldsPage() {
                     >
                       <span>{layer.number}</span>
                       <h3>{layer.title}</h3>
-                      <p>{layer.description}</p>
+                      <p className="ei-type-body-editorial">{layer.description}</p>
                     </EchoCard>
                   </motion.div>
                 ))}
@@ -368,7 +371,7 @@ export function WorldsPage() {
                       </li>
                     ))}
                   </ul>
-                  <p>{worldsDeliverables.note}</p>
+                  <p className="ei-type-body-editorial">{worldsDeliverables.note}</p>
                 </EchoCard>
               </motion.div>
             </div>
@@ -382,30 +385,31 @@ export function WorldsPage() {
                 <div>
                   <SectionLabel label="Selective collaboration" rule="none" />
                   <h3>{worldsPricing.heading}</h3>
-                  <p>{worldsPricing.intro[0]}</p>
+                  <p className="ei-type-body-editorial">{worldsPricing.intro[0]}</p>
                 </div>
                 <dl>
                   {worldsPricing.tiers.map((tier) => (
                     <div key={tier.name}>
                       <dt>{tier.name}</dt>
                       <dd>{tier.price}</dd>
-                      <p>{tier.description}</p>
+                      <p className="ei-type-body-editorial">{tier.description}</p>
                     </div>
                   ))}
                 </dl>
               </EchoCard>
             </motion.div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-worlds-section ei-worlds-types">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
@@ -414,7 +418,7 @@ export function WorldsPage() {
               <SectionLabel label="World types" index="05" />
               <div>
                 <h2>Different forms. The same need for coherence.</h2>
-                <p>
+                <p className="ei-type-body-editorial">
                   The engagement is shaped around what you are building, who
                   needs to enter it, and where the world must become visible.
                 </p>
@@ -441,26 +445,27 @@ export function WorldsPage() {
                       <span>{String(index + 1).padStart(2, "0")}</span>
                     </div>
                     <h3>{world.title}</h3>
-                    <p>{world.description}</p>
+                    <p className="ei-type-body-editorial">{world.description}</p>
                     <div>
                       <span>Practical outcome</span>
-                      <p>{world.outcome}</p>
+                      <p className="ei-type-body-editorial">{world.outcome}</p>
                     </div>
                   </EchoCard>
                 </motion.div>
               ))}
             </div>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <Section spacing="none" className="ei-worlds-section ei-worlds-process">
-        <ContentFrame width="standard" gutters>
+        <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
           >
             <motion.div
               variants={driftUp}
@@ -469,7 +474,7 @@ export function WorldsPage() {
               <SectionLabel label="The process" index="06" />
               <div>
                 <h2>{worldsProcess.heading}</h2>
-                <p>
+                <p className="ei-type-body-editorial">
                   The work moves from discovery to application without rushing
                   the decisions that give the world its integrity.
                 </p>
@@ -484,12 +489,12 @@ export function WorldsPage() {
                   </span>
                   <span className="ei-worlds-process-node" aria-hidden="true" />
                   <h3>{step.title}</h3>
-                  <p>{step.description}</p>
+                  <p className="ei-type-body-editorial">{step.description}</p>
                 </motion.li>
               ))}
             </ol>
           </motion.div>
-        </ContentFrame>
+        </Container>
       </Section>
 
       <CTASection

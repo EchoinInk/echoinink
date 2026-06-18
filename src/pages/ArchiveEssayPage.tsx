@@ -26,14 +26,14 @@ export function ArchiveEssayPage() {
         title="Atmosphere is information."
         subtitle="Before an audience understands what something means, they have already felt what kind of world they have entered."
         metadata={
-          <div className="ei-editorial-meta-row">
+          <div className="ei-editorial-meta-row ei-type-meta">
             <span>{archiveFeatured.category}</span>
             <span>{archiveFeatured.readTime}</span>
             <span>Echo in Ink</span>
           </div>
         }
         lead={
-          <p>
+          <p className="ei-type-body-large">
             Atmosphere is not decoration. It is the first data your audience receives.
             Before words, before identity, before logic, there is feeling.
           </p>
@@ -65,9 +65,9 @@ export function ArchiveEssayPage() {
                     {archiveNotes.map((note) => (
                       <motion.div key={note.id} variants={fadeSoft}>
                         <EchoCard variant="interactive" padding="lg" className="ei-editorial-related-card">
-                          <span>{note.thread} · {note.readTime}</span>
+                          <span className="ei-type-meta">{note.thread} · {note.readTime}</span>
                           <h3>{note.title}</h3>
-                          <p>{note.excerpt}</p>
+                          <p className="ei-type-body-editorial">{note.excerpt}</p>
                           <Button to="/archive/notes" variant="tertiary">
                             Read note <span aria-hidden="true">→</span>
                           </Button>

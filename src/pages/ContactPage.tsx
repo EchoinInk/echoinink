@@ -91,15 +91,6 @@ type ContactFieldEvent =
       };
     };
 
-function SectionLabel({ children }: { children: string }) {
-  return (
-    <div className="ei-section-label-row">
-      <span className="ei-section-label">{children}</span>
-      <span className="ei-section-label-line" />
-    </div>
-  );
-}
-
 export function ContactPage() {
   const [formState, setFormState] = useState<"idle" | "submitting" | "success">(
     "idle",

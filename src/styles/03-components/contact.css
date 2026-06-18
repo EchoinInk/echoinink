@@ -110,10 +110,6 @@
     max-width: 15ch;
   }
 
-  .ei-contact-page .ei-page-section-hero-description {
-    max-width: 42ch;
-  }
-
   .ei-contact-page .ei-page-section-hero-image {
     object-position: 70% 48%;
     filter: saturate(0.92) brightness(0.86) contrast(1.05);

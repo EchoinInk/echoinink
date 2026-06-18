@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { EchoCard } from '@/components/ui/EchoCard';
 import { DURATION, EASE_CINEMATIC, VIEWPORT } from '@/lib/motion-cinematic';
 
 export type DeliverableMotif =
@@ -88,7 +89,7 @@ export function DeliverableCard({
   index = 0,
 }: DeliverableCardProps) {
   return (
-    <motion.article
+    <motion.div
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={VIEWPORT.normal}
@@ -97,15 +98,15 @@ export function DeliverableCard({
         ease: EASE_CINEMATIC,
         delay: index * 0.06,
       }}
-      className="ei-card ei-card-soft ei-card-deliverable"
+      className="h-full"
     >
-      <MotifField motif={motif} />
-      <div className="ei-card-content">
-        <h3 className="ei-type-section text-[1.15rem] md:text-[1.25rem] text-[var(--ei-text-primary)]">
-          {title}
-        </h3>
-        <p className="mt-3 ei-type-body text-[var(--ei-text-secondary)]">{description}</p>
-      </div>
-    </motion.article>
+      <EchoCard variant="static" padding="none" className="ei-card-soft ei-card-deliverable h-full">
+        <MotifField motif={motif} />
+        <div className="ei-card-content">
+          <h3 className="ei-type-card-title">{title}</h3>
+          <p className="mt-3 ei-type-body-small">{description}</p>
+        </div>
+      </EchoCard>
+    </motion.div>
   );
 }

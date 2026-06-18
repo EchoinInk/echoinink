@@ -152,38 +152,6 @@
     padding-inline: var(--ei-gutter-mobile);
   }
 
-  /* ─────────────────────────────────────────────────────────
-   Section Labels / Eyebrow Rows
-   ───────────────────────────────────────────────────────── */
-
-.ei-section-label-row {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.ei-section-label {
-  font-family: var(--ei-font-structural);
-  font-size: 0.6875rem;
-  line-height: 1;
-  letter-spacing: 0.24em;
-  text-transform: uppercase;
-  color: var(--ei-color-text-muted);
-}
-
-.ei-section-label-line {
-  height: 1px;
-  width: 2.5rem;
-  flex-shrink: 0;
-  border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    rgb(var(--ei-midnight-rgb) / 0.15) 0%,
-    rgb(var(--ei-halo-blue-rgb) / 0.92) 100%
-  );
-  box-shadow: 0 0 12px rgb(var(--ei-halo-blue-rgb) / 0.42);
-}
-
 .ei-section-heading-row {
   display: flex;
   align-items: center;
