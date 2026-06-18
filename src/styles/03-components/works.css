@@ -59,9 +59,10 @@
   }
 
   .ei-works-featured {
+    position: relative;
     z-index: 3;
-    margin-top: clamp(-5rem, -6vw, -3rem);
-    padding-top: 0;
+    margin-top: 0;
+    padding-top: clamp(2rem, 5vw, 4rem);
   }
 
   .ei-works-featured-panel {
@@ -92,20 +93,13 @@
 
   .ei-works-featured-scrim {
     background:
-      linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.08), rgb(var(--ei-void-rgb) / 0.78)),
-      linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.64), transparent 72%);
-  }
-
-  .ei-works-featured-media > span {
-    position: absolute;
-    z-index: 1;
-    top: var(--ei-space-5);
-    left: var(--ei-space-5);
-    color: var(--ei-color-text-muted);
-    font-family: var(--ei-font-structural);
-    font-size: 0.625rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+      linear-gradient(
+        180deg,
+        transparent 0%,
+        rgb(var(--ei-void-rgb) / 0.18) 42%,
+        rgb(var(--ei-void-rgb) / 0.7) 100%
+      ),
+      linear-gradient(90deg, rgb(var(--ei-void-rgb) / 0.42), transparent 72%);
   }
 
   .ei-works-featured-copy {
@@ -553,12 +547,6 @@
       min-height: 42rem;
     }
 
-    .ei-works-featured-scrim {
-      background:
-        linear-gradient(90deg, transparent 56%, rgb(var(--ei-void-rgb) / 0.82)),
-        linear-gradient(180deg, rgb(var(--ei-void-rgb) / 0.04), rgb(var(--ei-void-rgb) / 0.54));
-    }
-
     .ei-works-featured-facts {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -647,7 +635,7 @@
     }
 
     .ei-works-featured {
-      margin-top: -1rem;
+      margin-top: 0;
     }
 
     .ei-works-featured-panel {

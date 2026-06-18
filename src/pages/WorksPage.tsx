@@ -102,7 +102,6 @@ export function WorksPage() {
                   <div className="ei-works-featured-media">
                     <img src={featuredProject.image} alt="" aria-hidden="true" />
                     <div className="ei-works-featured-scrim" aria-hidden="true" />
-                    <span>Featured case study</span>
                   </div>
 
                   <div className="ei-works-featured-copy">
