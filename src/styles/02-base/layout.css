@@ -280,7 +280,7 @@
   }
 
   .ei-section-expansive {
-    padding-block: var(--ei-section-expansive-y);
+      padding-block: var(--ei-section-expansive-y);
   }
 
   .ei-section-pause {

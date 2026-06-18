@@ -5,7 +5,7 @@
   }
 
   .ei-content-frame-standard {
-    max-width: var(--ei-content-max);
+    max-width: var(--ei-page-max);
   }
 
   .ei-content-frame-reading {
@@ -25,7 +25,7 @@
   }
 
   .ei-content-frame-gutters {
-    padding-inline: var(--ei-gutter-mobile);
+    padding-inline: 1.5rem;
   }
 
   .ei-section-label-system {
@@ -696,7 +696,7 @@
 
   @media (min-width: 768px) {
     .ei-content-frame-gutters {
-      padding-inline: var(--ei-gutter-tablet);
+      padding-inline: 2.5rem;
     }
 
     .ei-filter-bar {
@@ -729,6 +729,12 @@
     .ei-form-panel[data-split-at="md"] .ei-form-panel-aside {
       border-right: 1px solid var(--ei-color-border-hairline);
       border-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .ei-content-frame-gutters {
+      padding-inline: 4rem;
     }
   }
 

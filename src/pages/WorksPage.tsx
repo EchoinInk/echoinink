@@ -75,19 +75,19 @@ const lumoProofStrip = [
 const worksProofStats = [
   {
     value: worksProjects.length.toString(),
-    label: 'Portfolio pieces'
+    label: 'Ideas made clearer'
   },
   {
     value: worksProjects.filter((project) => project.presentation === 'study').length.toString(),
-    label: 'Study-led pieces'
+    label: 'Full story paths'
   },
   {
     value: worksProjects.filter((project) => project.presentation === 'fragment').length.toString(),
-    label: 'Proof fragments'
+    label: 'Focused proof points'
   },
   {
     value: '2026',
-    label: 'Selective availability'
+    label: 'Select project openings'
   }
 ];
 
@@ -148,7 +148,7 @@ export function WorksPage() {
         eyebrow="Selected proof"
         title="Proof, shaped as atmosphere."
         italicWord="atmosphere."
-        description="Independent design for product identities, digital experiences, and visual systems — crafted for ambitious teams who need their value to be immediately felt."
+        description="Independent designer for product identities, digital experiences, and visual systems — built to make ambitious ideas easier to understand."
         image={worksHeroDesktop}
         mobileImage={worksHeroMobile}
         imageAlt="Dark cinematic signal stream with luminous blue-violet atmosphere"
@@ -174,6 +174,10 @@ export function WorksPage() {
                 <p>
                   Brand systems, product stories, and digital experiences designed to make complex
                   value easier to trust, understand, and act on.
+                </p>
+                <p className="ei-works-audience-note">
+                  Partnering with startups, software companies, and ambitious teams seeking clarity
+                  through design.
                 </p>
               </div>
             </motion.div>

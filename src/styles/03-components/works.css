@@ -183,6 +183,7 @@
 
   .ei-works-featured-meta {
     margin-top: var(--ei-space-7);
+    color: rgb(var(--ei-moonlit-rgb) / 0.76);
   }
 
   .ei-works-featured-meta span + span::before,
@@ -193,7 +194,7 @@
   }
 
   .ei-works-featured-copy h2 {
-    margin-top: var(--ei-space-5);
+    margin-top: var(--ei-space-4);
     color: var(--ei-color-text-primary);
     font-family: var(--ei-font-editorial);
     font-size: clamp(3.5rem, 7vw, 6.5rem);
@@ -204,7 +205,7 @@
 
   .ei-works-featured-outcome {
     max-width: 26rem;
-    margin-top: var(--ei-space-5);
+    margin-top: var(--ei-space-4);
     color: rgb(var(--ei-moonlit-rgb) / 0.9);
     font-family: var(--ei-font-editorial);
     font-size: clamp(1.25rem, 2.1vw, 1.65rem);
@@ -213,7 +214,9 @@
 
   .ei-works-featured-description {
     max-width: 38rem;
-    margin-top: var(--ei-space-5);
+    margin-top: var(--ei-space-6);
+    padding-top: var(--ei-space-5);
+    border-top: 1px solid rgb(var(--ei-ice-white-rgb) / 0.08);
     color: var(--ei-color-text-secondary);
     font-family: var(--ei-font-copy);
     line-height: 1.75;
@@ -222,7 +225,7 @@
   .ei-works-featured-proof-strip {
     display: grid;
     width: 100%;
-    margin: var(--ei-space-7) 0;
+    margin: var(--ei-space-6) 0 var(--ei-space-7);
     border-block: 1px solid var(--ei-color-border-hairline);
   }
 
@@ -236,10 +239,11 @@
   }
 
   .ei-works-featured-proof-strip dt {
-    color: var(--ei-color-text-secondary);
+    color: rgb(var(--ei-halo-blue-rgb) / 0.78);
     font-family: var(--ei-font-structural);
-    font-size: 0.68rem;
+    font-size: 0.7rem;
     letter-spacing: 0.18em;
+    line-height: 1.4;
     text-transform: uppercase;
   }
 
@@ -288,6 +292,15 @@
     color: var(--ei-color-text-secondary);
     font-family: var(--ei-font-copy);
     line-height: 1.75;
+  }
+
+  .ei-works-section-heading .ei-works-audience-note {
+    max-width: 56ch;
+    margin-top: var(--ei-space-3);
+    color: rgb(var(--ei-moonlit-rgb) / 0.88);
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(1.02rem, 1.45vw, 1.18rem);
+    line-height: 1.65;
   }
 
   .ei-works-filter-wrap {

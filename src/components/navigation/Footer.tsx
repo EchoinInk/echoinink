@@ -83,7 +83,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       to={link.href}
-                      className="ei-type-footer-link font-structural text-[12px] transition-colors duration-400"
+                      className="ei-type-footer-link inline-flex min-h-9 items-center font-structural text-[13px] transition-colors duration-400"
                     >
                       {link.label}
                     </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
 
               <a
                 href="mailto:hello@echoin.ink"
-                className="ei-type-footer-link mb-1.5 block font-structural text-[12px] transition-colors duration-400"
+                className="ei-type-footer-link mb-1.5 inline-flex min-h-9 items-center font-structural text-[13px] transition-colors duration-400"
               >
                 hello@echoin.ink
               </a>
@@ -116,7 +116,7 @@ export default function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="ei-type-footer-link font-mono text-[10px] tracking-[0.14em] transition-colors duration-400"
+                    className="ei-type-footer-link inline-flex min-h-9 items-center font-mono text-[11px] tracking-[0.14em] transition-colors duration-400"
                   >
                     {s.label}
                   </a>
@@ -144,7 +144,7 @@ export default function Footer() {
 
               <Link
                 to="/systems"
-                className="ei-type-footer-link group inline-flex max-w-[34ch] items-center gap-2 font-mono text-[10px] uppercase tracking-[0.14em] transition-colors duration-400"
+                className="ei-type-footer-link group inline-flex min-h-9 max-w-[34ch] items-center gap-2 font-mono text-[11px] uppercase tracking-[0.14em] transition-colors duration-400"
               >
                 <span>Learn more about our future systems</span>
                 <span className="shrink-0 transition-transform duration-400 group-hover:translate-x-0.5">
