@@ -11,7 +11,6 @@
        Ensures padding and borders are included in element's total width/height.
        ───────────────────────────────────────────────────────── */
 
-
   *,
   *::before,
   *::after {
@@ -59,17 +58,6 @@
     --ei-space-10: 8rem;
     --ei-space-11: 12rem;
     --ei-space-12: 16rem;
-
-    /* Legacy numeric spacing aliases */
-    --ei-space-8px: 0.5rem;
-    --ei-space-12px: 0.75rem;
-    --ei-space-16: 1rem;
-    --ei-space-24: 1.5rem;
-    --ei-space-32: 2rem;
-    --ei-space-48: 3rem;
-    --ei-space-64: 4rem;
-    --ei-space-96: 6rem;
-    --ei-space-128: 8rem;
 
     /* ─────────────────────────────────────────────────────────
        Grid Gaps
