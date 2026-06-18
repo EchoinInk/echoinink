@@ -18,7 +18,7 @@ const variants: OrbitalVariant[] = [
   "threadBeacon",
 ];
 
-export default function OrbitalsSheet() {
+export function OrbitalsSheet() {
   return (
     <div className="mx-auto max-w-[1200px] p-10">
       <h1 className="mb-10 text-3xl font-semibold text-[var(--ei-color-text-primary)]">

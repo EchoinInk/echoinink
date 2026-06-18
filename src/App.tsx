@@ -20,6 +20,11 @@ const ArchiveEssayPage = lazy(() => import('@/pages/ArchiveEssayPage').then((mod
 const ArchiveNotesPage = lazy(() => import('@/pages/ArchiveNotesPage').then((module) => ({ default: module.ArchiveNotesPage })));
 const ArchiveIndexPage = lazy(() => import('@/pages/ArchiveIndexPage').then((module) => ({ default: module.ArchiveIndexPage })));
 
+const OrbitalsSheetPage = lazy(() =>
+  import('@/pages/OrbitalsPage').then((module) => ({
+    default: module.OrbitalsPage,})),
+);
+
 function AppRoutes() {
   const location = useLocation();
 
@@ -41,6 +46,7 @@ function AppRoutes() {
           <Route path="/archive/atmosphere-is-information" element={<ArchiveEssayPage />} />
           <Route path="/archive/notes" element={<ArchiveNotesPage />} />
           <Route path="/archive/map" element={<ArchiveIndexPage />} />
+              <Route path="/dev/orbitals" element={<OrbitalsPage />} />
         </Routes>
       </Suspense>
     </AnimatePresence>
