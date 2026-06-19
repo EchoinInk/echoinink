@@ -80,7 +80,7 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.normal}
-          className="mx-auto max-w-6xl"
+          className="ei-home-systems-shell mx-auto"
         >
           <motion.div
             variants={driftUp}
@@ -112,31 +112,31 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
             </Link>
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-3 xl:grid-cols-5">
+          <div className="ei-home-systems-grid grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-3 xl:grid-cols-5">
             {systems.map((system) => (
               <motion.article key={system.title} variants={driftUp}>
                 <Link
                   to={system.href}
-                  className="ei-card-system group block h-full"
+                  className="ei-card-system ei-home-systems-card group block h-full"
                   aria-label={system.title}
                 >
                   <div className="ei-card-system-glow" aria-hidden="true" />
 
                   <div className="ei-card-system-inner">
-                    <div className="mb-2 flex h-12 items-center justify-center md:mb-3 md:h-14">
+                    <div className="ei-home-systems-card-icon mb-2 flex h-12 items-center justify-center md:mb-3 md:h-14">
                       <OrbitalVisual
                         variant={system.variant}
-                        size={72}
-                        className="opacity-95 md:size-[72px]"
+                        size={60}
+                        className="opacity-95"
                       />
                     </div>
 
                     <div className="ei-card-system-main">
-                      <h3 className="ei-card-system-title ei-type-card-title">
+                      <h3 className="ei-card-system-title ei-home-systems-card-title ei-type-card-title">
                         {system.title}
                       </h3>
 
-                      <p className="ei-card-system-copy ei-type-body-small">
+                      <p className="ei-card-system-copy ei-home-systems-card-body ei-type-body-small">
                         {system.description}
                       </p>
                     </div>

@@ -70,7 +70,7 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.normal}
-          className="mx-auto max-w-6xl"
+          className="ei-home-create-shell mx-auto"
         >
           <motion.div
             variants={driftUp}
@@ -87,12 +87,12 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
             />
           </motion.div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-5 lg:grid-cols-4">
+          <div className="ei-home-create-grid grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-5 lg:grid-cols-4">
             {capabilities.map((cap) => (
               <motion.article key={cap.title} variants={driftUp}>
                 <Link
                   to={cap.href}
-                  className="ei-card ei-card-soft ei-card-interactive ei-card-capability group flex h-full flex-col motion-reduce:transform-none"
+                  className="ei-card ei-card-soft ei-card-interactive ei-card-capability ei-home-create-card group flex h-full flex-col motion-reduce:transform-none"
                   aria-label={`Explore ${cap.title}`}
                 >
                   <div className="ei-card-capability-icon mb-5 md:mb-7">
@@ -102,11 +102,11 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
                   <h3 className="ei-card-title ei-type-card-title ei-card-title-align mb-3">
                     {cap.title}
                   </h3>
-                  <p className="ei-card-description ei-type-body-small mb-5 flex-1 md:mb-6">
+                  <p className="ei-card-description ei-home-create-card-body ei-type-body-small mb-5 md:mb-6">
                     {cap.description}
                   </p>
 
-                  <span className="ei-card-action">
+                  <span className="ei-card-action ei-home-create-card-action">
                     Explore <span aria-hidden="true" className="ei-cta-arrow">→</span>
                   </span>
                 </Link>

@@ -201,6 +201,27 @@
   .ei-card-capability .ei-type-body-small {
     color: var(--ei-type-color-tertiary);
   }
+
+  .ei-home-create-shell {
+    max-width: min(100%, 78rem);
+  }
+
+  .ei-home-create-grid {
+    gap: 1.1rem;
+  }
+
+  .ei-home-create-card {
+    min-height: 220px;
+    padding: 1.25rem;
+  }
+
+  .ei-home-create-card-body {
+    margin-bottom: 0.9rem;
+  }
+
+  .ei-home-create-card-action {
+    margin-top: 0;
+  }
 /* ─────────────────────────────────────────────────────────
    Systems Card
    ───────────────────────────────────────────────────────── */
@@ -374,6 +395,40 @@ a.ei-card-system:hover .ei-card-system-category {
   border: 1px solid rgb(var(--ei-echo-magenta-rgb) / 0.24);
 }
 
+.ei-home-systems-shell {
+  max-width: min(100%, 78rem);
+}
+
+.ei-home-systems-grid {
+  gap: 0.95rem;
+}
+
+.ei-home-systems-card {
+  min-height: 146px;
+  padding: clamp(1.25rem, 2.2vw, 1.7rem) clamp(1.15rem, 2vw, 1.65rem);
+}
+
+.ei-home-systems-card-icon {
+  margin-bottom: 0.8rem;
+}
+
+.ei-home-systems-card-icon svg {
+  width: 56px;
+  height: 56px;
+}
+
+.ei-home-systems-card-title {
+  min-height: 0;
+  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  line-height: 1.16;
+}
+
+.ei-home-systems-card-body {
+  margin-top: 0.5rem;
+  font-size: clamp(0.875rem, 0.98vw, 0.9375rem);
+  line-height: 1.6;
+}
+
 .ei-system-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -384,6 +439,28 @@ a.ei-card-system:hover .ei-card-system-category {
   .ei-system-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.25rem;
+  }
+
+  .ei-home-create-grid {
+    gap: 1.15rem;
+  }
+
+  .ei-home-create-card {
+    min-height: 236px;
+    padding: 1.35rem;
+  }
+
+  .ei-home-systems-card {
+    min-height: 152px;
+  }
+
+  .ei-home-systems-card-icon svg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .ei-home-systems-card-title {
+    white-space: nowrap;
   }
 }
 

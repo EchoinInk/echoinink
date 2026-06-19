@@ -61,14 +61,18 @@
 
   .ei-section-label-system-text,
   .ei-section-label-system-index {
-    font-family: var(--ei-font-structural);
     font-size: 0.6875rem;
     line-height: 1;
     letter-spacing: 0.24em;
     text-transform: uppercase;
   }
 
+  .ei-section-label-system-text {
+    font-family: var(--ei-font-system);
+  }
+
   .ei-section-label-system-index {
+    font-family: var(--ei-font-structural);
     color: var(--ei-color-text-faint);
   }
 
