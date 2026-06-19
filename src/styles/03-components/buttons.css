@@ -10,6 +10,18 @@
     isolation: isolate;
   }
 
+  .ei-cta-arrow {
+  display: inline-block;
+  margin-left: 0.08em;
+  font-size: 1.38em;
+  line-height: 0;
+  transform: translateY(0.015em);
+  transition: transform 0.5s var(--ei-ease-soft);
+}
+
+.ei-page-section-hero-button-secondary:hover .ei-cta-arrow {
+  transform: translateX(0.12rem) translateY(0.015em);
+}
   /* Refined gradient border button */
   .ei-gradient-border-btn-refined {
     position: relative;

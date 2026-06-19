@@ -483,10 +483,13 @@
     color: var(--ei-color-text-tertiary);
   }
 
+  .ei-section-label {
+    color: var(--ei-color-text-accent-secondary);
+  }
+
   .ei-type-footer-label,
   .ei-type-footer-meta,
-  .ei-type-meta,
-  .ei-section-label {
+  .ei-type-meta {
     color: var(--ei-color-text-tertiary);
   }
 

@@ -196,8 +196,9 @@ export function PageSectionHero({
   className="ei-page-section-hero-button ei-page-section-hero-button-secondary self-stretch sm:self-start"
 >
   {secondaryCtaLabel}
-  <span aria-hidden="true">→</span>
-</Button>
+<span aria-hidden="true" className="ei-cta-arrow">
+  →
+</span></Button>
                 ) : null}
                 
               </motion.div>

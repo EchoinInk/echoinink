@@ -65,7 +65,7 @@ export function Header() {
                     to={item.href}
                     className={`
                       group relative pb-1.5
-                      font-structural text-[0.75rem] font-semibold uppercase tracking-[0.17em]
+                      font-structural text-[0.70rem] font-medium leading-none uppercase tracking-[0.17em]
                       transition-colors duration-500
                       ${
                         active
