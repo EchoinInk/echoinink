@@ -361,7 +361,7 @@ I translate that feeling into visual language, rhythm, and voice."
                       to={tier.cta.href}
                       variant={tier.featured ? "primary" : "secondary"}
                     >
-                      {tier.cta.label} <span aria-hidden="true">→</span>
+                      {tier.cta.label} <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
                     </Button>
                   </EchoCard>
                 </motion.div>
@@ -386,7 +386,7 @@ I translate that feeling into visual language, rhythm, and voice."
         body={identityClosing.subline}
         actions={
           <Button to={identityClosing.cta.href} variant="primary">
-            {identityClosing.cta.label} <span aria-hidden="true">→</span>
+            {identityClosing.cta.label} <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
           </Button>
         }
         className="ei-identity-cta"

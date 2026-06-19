@@ -145,7 +145,7 @@ export function ArchivePage() {
                   <p className="ei-type-body-editorial">{archiveFeatured.excerpt}</p>
 
                   <Button to={archiveFeatured.href} variant="secondary">
-                    {archiveFeatured.action} <span aria-hidden="true">→</span>
+                    {archiveFeatured.action} <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
                   </Button>
                 </div>
               </EchoCard>
@@ -289,7 +289,7 @@ export function ArchivePage() {
                     <p className="ei-type-body-editorial">{note.excerpt}</p>
 
                     <Button to="/archive/notes" variant="tertiary">
-                      {note.action} <span aria-hidden="true">→</span>
+                      {note.action} <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
                     </Button>
                   </EchoCard>
                 </motion.div>
@@ -332,7 +332,7 @@ export function ArchivePage() {
             </motion.div>
             <motion.div variants={fadeSoft} className="ei-archive-index-action">
               <Button to="/archive/map" variant="secondary">
-                Open the full index <span aria-hidden="true">→</span>
+                Open the full index <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
               </Button>
             </motion.div>
           </motion.div>
@@ -373,10 +373,10 @@ export function ArchivePage() {
         actions={
           <>
             <Button to="/archive/map" variant="secondary">
-              Explore the index <span aria-hidden="true">→</span>
+              Explore the index <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
             </Button>
             <Button to={archiveCta.href} variant="tertiary">
-              {archiveCta.action} <span aria-hidden="true">→</span>
+              {archiveCta.action} <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
             </Button>
           </>
         }

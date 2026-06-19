@@ -107,7 +107,7 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
                   </p>
 
                   <span className="ei-card-action ei-home-create-card-action">
-                    Explore <span aria-hidden="true" className="ei-cta-arrow">→</span>
+                    Explore <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
                   </span>
                 </Link>
               </motion.article>

@@ -122,7 +122,7 @@ export function ArchiveIndexPage() {
                     <h3>{entry.title}</h3>
                     <p className="ei-type-body-editorial">{entry.descriptor}</p>
                     <Button to={entry.href} variant="tertiary">
-                      Locate entry <span aria-hidden="true">→</span>
+                      Locate entry <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
                     </Button>
                   </EchoCard>
                 </motion.div>

@@ -56,7 +56,7 @@ export function ProjectCard({
             : presentation === 'fragment'
               ? 'Proof fragment'
               : 'Selected study'}
-          {isLinked ? <span className="ei-card-action-arrow">→</span> : null}
+          {isLinked ? <span className="ei-card-action-arrow ei-cta-arrow-right">→</span> : null}
         </span>
       </div>
     </>

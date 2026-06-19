@@ -250,7 +250,7 @@ export function WorksPage() {
                     </dl>
 
                     <Button to={featuredProject.href ?? '/works/lumo'} variant="secondary">
-                      View case study <span aria-hidden="true">→</span>
+                      View case study <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
                     </Button>
                   </div>
                 </EchoCard>
@@ -338,7 +338,7 @@ export function WorksPage() {
             <motion.p variants={fadeSoft} className="ei-works-proof-note ei-type-body">
               Looking for the thinking behind the work?{' '}
               <Link to="/studio">
-                Explore the studio approach <span aria-hidden="true">→</span>
+                Explore the studio approach <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
               </Link>
             </motion.p>
           </motion.div>
@@ -363,7 +363,7 @@ export function WorksPage() {
               Start a Project
             </Button>
             <Button to="/sessions" variant="secondary">
-              Discuss your product <span aria-hidden="true">→</span>
+              Discuss your product <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
             </Button>
           </>
         }

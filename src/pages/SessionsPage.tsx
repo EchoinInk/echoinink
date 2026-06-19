@@ -389,7 +389,7 @@ export function SessionsPage() {
         className="ei-sessions-closing"
         actions={
           <Button to={sessionsClosing.cta.href} variant="primary">
-            Book a session <span aria-hidden="true">→</span>
+            Book a session <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
           </Button>
         }
         secondary="60 or 90 minutes · Private one-to-one creative direction · NZD pricing"

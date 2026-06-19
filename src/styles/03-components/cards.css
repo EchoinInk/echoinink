@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════════
+ /* ═══════════════════════════════════════════════════════════════
    Echo in Ink — Card System
    Atmospheric card primitives for transformation, systems,
    featured worlds, projects, and reflective quote cards.
@@ -207,20 +207,29 @@
   }
 
   .ei-home-create-grid {
-    gap: 1.1rem;
+    gap: 1rem;
   }
 
   .ei-home-create-card {
-    min-height: 220px;
-    padding: 1.25rem;
+    min-height: 196px;
+    padding: 1.05rem 1.15rem;
+  }
+
+  .ei-home-create-card .ei-card-capability-icon {
+    margin-bottom: 0.85rem;
+  }
+
+  .ei-home-create-card .ei-card-title {
+    margin-bottom: 0.55rem;
   }
 
   .ei-home-create-card-body {
-    margin-bottom: 0.9rem;
+    margin-bottom: 0.55rem;
+    line-height: 1.55;
   }
 
   .ei-home-create-card-action {
-    margin-top: 0;
+    margin-top: auto;
   }
 /* ─────────────────────────────────────────────────────────
    Systems Card
@@ -400,16 +409,16 @@ a.ei-card-system:hover .ei-card-system-category {
 }
 
 .ei-home-systems-grid {
-  gap: 0.95rem;
+  gap: 0.85rem;
 }
 
 .ei-home-systems-card {
-  min-height: 146px;
-  padding: clamp(1.25rem, 2.2vw, 1.7rem) clamp(1.15rem, 2vw, 1.65rem);
+  min-height: 134px;
+  padding: clamp(1.05rem, 2vw, 1.45rem) clamp(1.05rem, 1.8vw, 1.45rem);
 }
 
 .ei-home-systems-card-icon {
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.55rem;
 }
 
 .ei-home-systems-card-icon svg {
@@ -424,9 +433,9 @@ a.ei-card-system:hover .ei-card-system-category {
 }
 
 .ei-home-systems-card-body {
-  margin-top: 0.5rem;
-  font-size: clamp(0.875rem, 0.98vw, 0.9375rem);
-  line-height: 1.6;
+  margin-top: 0.35rem;
+  font-size: clamp(0.8125rem, 0.92vw, 0.875rem);
+  line-height: 1.55;
 }
 
 .ei-system-grid {
@@ -442,16 +451,16 @@ a.ei-card-system:hover .ei-card-system-category {
   }
 
   .ei-home-create-grid {
-    gap: 1.15rem;
+    gap: 1rem;
   }
 
   .ei-home-create-card {
-    min-height: 236px;
-    padding: 1.35rem;
+    min-height: 208px;
+    padding: 1.1rem 1.2rem;
   }
 
   .ei-home-systems-card {
-    min-height: 152px;
+    min-height: 142px;
   }
 
   .ei-home-systems-card-icon svg {

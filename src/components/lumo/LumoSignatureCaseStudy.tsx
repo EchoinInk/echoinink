@@ -406,7 +406,7 @@ export function SignatureCaseStudy() {
           }
           actions={
             <Button to="#lumo-snapshot" variant="tertiary">
-              Explore the case study <span aria-hidden="true">↓</span>
+              Explore the case study <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-down">↓</span>
             </Button>
           }
           media={<HeroArtifact />}

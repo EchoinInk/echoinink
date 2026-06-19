@@ -104,7 +104,7 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
             >
               <span className="ei-home-systems-link-text">Explore All Systems</span>
               <span
-                className="ei-home-systems-link-arrow ei-cta-arrow"
+                className="ei-home-systems-link-arrow ei-cta-arrow ei-cta-arrow-right"
                 aria-hidden="true"
               >
                 →

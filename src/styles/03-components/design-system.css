@@ -80,7 +80,11 @@
     height: 1px;
     flex: 0 0 auto;
     border-radius: var(--radius-button);
-    background: linear-gradient(90deg, rgb(var(--ei-midnight-rgb) / 0.15), currentColor);
+    background: linear-gradient(
+      90deg,
+      rgb(var(--ei-midnight-rgb) / 0.15),
+      rgb(var(--ei-halo-blue-rgb) / 0.9)
+    );
     box-shadow: 0 0 12px rgb(var(--ei-halo-blue-rgb) / 0.24);
   }
 
@@ -96,7 +100,7 @@
     background: linear-gradient(
       90deg,
       rgb(var(--ei-midnight-rgb) / 0.15),
-      rgb(var(--ei-halo-blue-rgb))
+      rgb(var(--ei-halo-blue-rgb) / 0.96)
     );
     box-shadow: 0 0 12px rgb(var(--ei-halo-blue-rgb) / 0.32);
   }

@@ -12,6 +12,7 @@ import {
   OrbitalVisual,
   type OrbitalVariant,
 } from "@/components/ui/OrbitalVisual";
+import { SectionLabel } from "@/components/ui/SectionLabel";
 
 import studioHeroDesktop from "@/assets/imagery/hero/studio-hero-desktop.webp";
 import studioHeroMobile from "@/assets/imagery/hero/studio-hero-mobile.webp";
@@ -123,15 +124,6 @@ const process = [
   },
 ] as const;
 
-function SectionLabel({ children }: { children: string }) {
-  return (
-    <div className="ei-section-label-row">
-      <span className="ei-section-label">{children}</span>
-      <span className="ei-section-label-line" />
-    </div>
-  );
-}
-
 export function StudioPage() {
   return (
     <PageShell atmosphere="studio" withTopSpacing={false} className="ei-studio-page">
@@ -174,7 +166,7 @@ className="relative pt-6 pb-0 will-change-transform md:pt-8 md:pb-2"      >
               variants={fadeSoft}
 className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-void-rgb)/0.12)] p-6 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.025),0_0_72px_rgb(var(--ei-violet-rgb)/0.04)] md:-translate-y-3 md:grid-cols-[minmax(0,1.05fr)_minmax(0,1.05fr)_minmax(18rem,0.82fr)] md:items-center md:gap-10 md:px-8 md:pb-7 md:pt-9 lg:px-10 lg:pb-8 lg:pt-12"            >
               <motion.div variants={driftUp} className="relative md:-top-4">
-                <SectionLabel>Our Philosophy</SectionLabel>
+                <SectionLabel label="Our Philosophy" />
 
                 <motion.h2
                   variants={blurEmergence}
@@ -200,12 +192,12 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
                 variants={driftUp}
                 className="relative max-w-[62ch] md:-top-4"
               >
-                <p className="ei-type-body max-w-[43ch] text-[var(--ei-color-text-secondary)]">
+                <p className="ei-type-body mt-10 text-[var(--ei-color-text-secondary)]">
                   Design is not decoration — it is meaning made visible. Every
                   decision is rooted in understanding, shaped by emotion, and
                   refined through story.
                 </p>
-                <p className="ei-type-body mt-5 max-w-[43ch] text-[var(--ei-color-text-secondary)]">
+                <p className="ei-type-studio-body mt-5 text-[var(--ei-color-text-secondary)]">
                   We do not just build brands or websites. We build identity,
                   atmosphere, and transformation.
                 </p>
@@ -227,9 +219,11 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
         </Container>
       </Section>
 
-      {/* WHAT WE DO */}
-     <Section spacing="none" className="relative pt-6 pb-2 md:pt-8 md:pb-4">
-  <Container size="xl" className="relative z-10">
+      {/* WHAT WE MAKE */}
+<Section
+        spacing="none"
+className="relative pt-6 pb-0 will-change-transform md:pt-8 md:pb-2"      >
+    <Container size="xl" className="relative z-10">
     <motion.div
       variants={staggerContainer(STAGGER.loose, 0)}
       initial="hidden"
@@ -237,8 +231,8 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
       viewport={VIEWPORT.normal}
       className="mx-auto max-w-[1180px]"
     >
-      <motion.div variants={driftUp} className="mb-8 text-center">
-        <SectionLabel>What We Make</SectionLabel>
+ <motion.div variants={driftUp} className="relative md:-top-4">
+          <SectionLabel label="What We Make" />
       </motion.div>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -279,7 +273,7 @@ className="ei-card relative block h-[380px] overflow-hidden px-7 pb-7 pt-6 text-
 
 <span className="ei-card-action group/explore pt-3">
   Explore{" "}
-  <span className="ei-card-action-arrow transition-transform duration-300 group-hover/explore:translate-x-1">
+  <span className="ei-card-action-arrow ei-cta-arrow-right transition-transform duration-300 group-hover/explore:translate-x-1">
     →
   </span>
 </span>
@@ -306,7 +300,7 @@ className="ei-card relative block h-[380px] overflow-hidden px-7 pb-7 pt-6 text-
               variants={fadeSoft}
 className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-void-rgb)/0.42)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.035),0_0_70px_rgb(var(--ei-halo-blue-rgb)/0.045)] md:grid-cols-[0.9fr_1.6fr] md:gap-14 md:p-10">
               <motion.div variants={driftUp}>
-                <SectionLabel>Our Process</SectionLabel>
+                <SectionLabel label="Our Process" />
                 <motion.h2
                   variants={blurEmergence}
                   className="ei-type-section-heading mt-6 max-w-[15ch]"
@@ -320,7 +314,7 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
                     className="min-h-[42px] gap-3 px-6 py-3"
                   >
                     Our Approach
-                    <span aria-hidden="true">↓</span>
+                    <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-down">↓</span>
                   </Button>
                 </div>
               </motion.div>
@@ -410,7 +404,7 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
 
                     <span className="ei-card-action">
                       View Case Study{" "}
-                      <span className="ei-card-action-arrow">→</span>
+                      <span className="ei-card-action-arrow ei-cta-arrow-right">→</span>
                     </span>
                   </motion.div>
                 </Link>
@@ -485,7 +479,7 @@ className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var
                   className="min-h-[42px] gap-3 self-start px-6 py-3 md:self-center"
                 >
                   Start a Conversation
-                  <span aria-hidden="true">→</span>
+                  <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
                 </Button>
               </motion.div>
             </motion.div>

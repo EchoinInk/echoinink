@@ -187,7 +187,7 @@ export function SystemsPage() {
 
                   <div className="ei-systems-featured-actions">
                     <Button to={featuredSystem.cta.href} variant="secondary">
-                      {featuredSystem.cta.label} <span aria-hidden="true">→</span>
+                      {featuredSystem.cta.label} <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
                     </Button>
                     <span>{featuredSystem.format}</span>
                   </div>
@@ -289,7 +289,7 @@ export function SystemsPage() {
                         <div className="ei-systems-module-action">
                           <span>{system.price}</span>
                           <span>
-                            Explore <i aria-hidden="true">→</i>
+                            Explore <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
                           </span>
                         </div>
                       </div>
@@ -403,14 +403,14 @@ export function SystemsPage() {
               {systemsClosing.cta.label}
             </Button>
             <Button to="/sessions" variant="tertiary">
-              Start with a session <span aria-hidden="true">→</span>
+              Start with a session <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
             </Button>
           </>
         }
         secondary={
           <Link to="/contact">
             Not sure where to begin? Tell us what you are shaping{" "}
-            <span aria-hidden="true">→</span>
+            <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
           </Link>
         }
       />

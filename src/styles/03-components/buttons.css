@@ -21,15 +21,27 @@
     transition: transform 0.5s var(--ei-ease-soft);
   }
 
-  a:hover .ei-cta-arrow,
+  .ei-cta-arrow-down {
+    font-size: 1.08em;
+    transform: translateY(0.08em);
+  }
+
+  a:hover .ei-cta-arrow-right,
   a:hover .ei-card-action-arrow,
-  a:focus-visible .ei-cta-arrow,
+  a:focus-visible .ei-cta-arrow-right,
   a:focus-visible .ei-card-action-arrow,
-  button:hover .ei-cta-arrow,
+  button:hover .ei-cta-arrow-right,
   button:hover .ei-card-action-arrow,
-  button:focus-visible .ei-cta-arrow,
+  button:focus-visible .ei-cta-arrow-right,
   button:focus-visible .ei-card-action-arrow {
     transform: translateX(0.12rem) translateY(0.015em);
+  }
+
+  a:hover .ei-cta-arrow-down,
+  a:focus-visible .ei-cta-arrow-down,
+  button:hover .ei-cta-arrow-down,
+  button:focus-visible .ei-cta-arrow-down {
+    transform: translateY(0.18em);
   }
   /* Refined gradient border button */
   .ei-gradient-border-btn-refined {

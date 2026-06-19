@@ -118,7 +118,7 @@ export function ArchiveNotesPage() {
                   onClick={() => scrollToSection(archiveNotes[0].id)}
                   variant="secondary"
                 >
-                  Continue reading <span aria-hidden="true">↓</span>
+                  Continue reading <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-down">↓</span>
                 </Button>
               </div>
             </EchoCard>
@@ -168,7 +168,7 @@ export function ArchiveNotesPage() {
                       onClick={() => scrollToSection(note.id)}
                       variant="tertiary"
                     >
-                      Read note <span aria-hidden="true">↓</span>
+                      Read note <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-down">↓</span>
                     </Button>
                   </EchoCard>
                 </motion.article>
@@ -292,7 +292,7 @@ export function ArchiveNotesPage() {
               </div>
 
               <Button to="/archive/map" variant="tertiary">
-                View full index <span aria-hidden="true">→</span>
+                View full index <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
               </Button>
             </motion.div>
 

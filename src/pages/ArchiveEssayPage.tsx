@@ -69,7 +69,7 @@ export function ArchiveEssayPage() {
                           <h3>{note.title}</h3>
                           <p className="ei-type-body-editorial">{note.excerpt}</p>
                           <Button to="/archive/notes" variant="tertiary">
-                            Read note <span aria-hidden="true">→</span>
+                            Read note <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
                           </Button>
                         </EchoCard>
                       </motion.div>
