@@ -389,10 +389,10 @@
   .ei-type-philosophy-heading {
     color: var(--ei-color-text-primary);
     font-family: var(--ei-font-editorial);
-    font-size: clamp(2.35rem, 5.1vw, 4.2rem);
+    font-size: clamp(2.35rem, 4vw, 2.8125rem);
     font-weight: 400;
     letter-spacing: -0.04em;
-    line-height: 1.04;
+    line-height: 1.08;
   }
 
   .ei-type-editorial-heading {
