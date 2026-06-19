@@ -180,24 +180,24 @@ export function PageSectionHero({
                 }`}
               >
                 {ctaLabel && ctaHref ? (
-                  <Button
-                    to={ctaHref}
-                    variant={ctaVariant}
-                    className="self-stretch sm:self-start"
-                  >
-                    {ctaLabel}
-                  </Button>
+                 <Button
+  to={ctaHref}
+  variant={ctaVariant}
+  className="ei-page-section-hero-button ei-page-section-hero-button-primary self-stretch sm:self-start"
+>
+  {ctaLabel}
+</Button>
                 ) : null}
 
                 {secondaryCtaLabel && secondaryCtaHref ? (
                   <Button
-                    to={secondaryCtaHref}
-                    variant="secondary"
-                    className="self-stretch sm:self-start"
-                  >
-                    {secondaryCtaLabel}
-                    <span aria-hidden="true">→</span>
-                  </Button>
+  to={secondaryCtaHref}
+  variant="secondary"
+  className="ei-page-section-hero-button ei-page-section-hero-button-secondary self-stretch sm:self-start"
+>
+  {secondaryCtaLabel}
+  <span aria-hidden="true">→</span>
+</Button>
                 ) : null}
                 
               </motion.div>

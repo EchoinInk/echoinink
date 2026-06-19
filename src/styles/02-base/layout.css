@@ -26,6 +26,7 @@
     --ei-content-max: 1180px;
     --ei-reading-max: 680px;
     --ei-narrow-max: 520px;
+    --ei-editorial-narrow-max: 860px;
 
     /* Legacy-compatible aliases */
     --ei-page-max-width: var(--ei-page-max);
@@ -138,6 +139,34 @@
     max-width: var(--ei-narrow-max);
     margin-inline: auto;
     padding-inline: var(--ei-gutter-mobile);
+  }
+
+  /* ─────────────────────────────────────────────────────────
+     Canonical Layout Rails
+     page rail: wide panels, heroes, and CTA wrappers
+     rail: standard page sections
+     reading: articles and reflections
+     narrow: compact editorial groups
+     ───────────────────────────────────────────────────────── */
+
+  .ei-layout-page-rail {
+    width: min(100%, var(--ei-page-max));
+    margin-inline: auto;
+  }
+
+  .ei-layout-rail {
+    width: min(100%, var(--ei-content-max));
+    margin-inline: auto;
+  }
+
+  .ei-layout-reading {
+    width: min(100%, var(--ei-reading-max));
+    margin-inline: auto;
+  }
+
+  .ei-layout-narrow {
+    width: min(100%, var(--ei-editorial-narrow-max));
+    margin-inline: auto;
   }
 
 .ei-section-heading-row {

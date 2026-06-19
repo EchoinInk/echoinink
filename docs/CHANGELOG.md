@@ -1,13 +1,14 @@
 # Changelog
 
-## 2026-06-19 — Orbitals and Page Polish
+## 2026-06-19 — Orbitals and Repo Cleanup
 
 This week’s highlights:
 
 - Added a new visual Orbitals page and expanded the orbitals set to 30 total entries.
-- Standardised content framing across pages so shared layout widths and rhythm line up more consistently.
+- Standardised page rails and the typography system across the main page set for more consistent framing and rhythm.
 - Simplified shared page hero variants and tightened hero CSS overrides across the main page set.
-- Completed a round of Works and Studio polish, including proof hierarchy, card styling, header states, and page-specific cleanups.
+- Removed unused page/component scaffolds, pruned old archive and asset leftovers, and cleaned up related styling files.
+- Ran a formatting sweep across core token and typography files to keep the design system tidy.
 
 ## 2026-06-09 — Redesigned Page Registry
 

@@ -653,12 +653,12 @@
     left: 8%;
     height: 1px;
     background: linear-gradient(
-      90deg,
-      transparent,
-      var(--ei-color-border-blue) 10%,
-      var(--ei-color-border-magenta) 90%,
-      transparent
-    );
+        90deg,
+        transparent,
+        var(--ei-color-border-blue) 10%,
+        var(--ei-color-border-magenta) 90%,
+        transparent
+      );
   }
 
   .ei-systems-pathway-list li {
@@ -779,12 +779,12 @@
       width: 1px;
       height: auto;
       background: linear-gradient(
-        180deg,
-        transparent,
-        var(--ei-color-border-blue) 10%,
-        var(--ei-color-border-magenta) 90%,
-        transparent
-      );
+          180deg,
+          transparent,
+          var(--ei-color-border-blue) 10%,
+          var(--ei-color-border-magenta) 90%,
+          transparent
+        );
     }
 
     .ei-systems-pathway-list li {
@@ -911,11 +911,12 @@
     }
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    Systems critique pass
+
    Fixes: stronger systems/blueprint visual language,
    clearer section hierarchy, less mobile density.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-systems-hero .ei-echo-hero-media img {
@@ -1105,12 +1106,12 @@
     height: 1px;
     transform-origin: left center;
     background: linear-gradient(
-      90deg,
-      transparent,
-      rgb(var(--ei-halo-blue-rgb) / 0.58),
-      rgb(var(--ei-soft-neon-rgb) / 0.24),
-      transparent
-    );
+        90deg,
+        transparent,
+        rgb(var(--ei-halo-blue-rgb) / 0.58),
+        rgb(var(--ei-soft-neon-rgb) / 0.24),
+        transparent
+      );
     box-shadow: 0 0 16px rgb(var(--ei-halo-blue-rgb) / 0.16);
   }
 
@@ -1175,13 +1176,13 @@
     right: max(1.5rem, calc((100vw - 1180px) / 2));
     height: 1px;
     background: linear-gradient(
-      90deg,
-      transparent,
-      rgb(var(--ei-halo-blue-rgb) / 0.24),
-      rgb(var(--ei-violet-rgb) / 0.18),
-      rgb(var(--ei-soft-neon-rgb) / 0.12),
-      transparent
-    );
+        90deg,
+        transparent,
+        rgb(var(--ei-halo-blue-rgb) / 0.24),
+        rgb(var(--ei-violet-rgb) / 0.18),
+        rgb(var(--ei-soft-neon-rgb) / 0.12),
+        transparent
+      );
     opacity: 0.9;
   }
 
@@ -1395,10 +1396,11 @@
     }
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    PageSectionHero pass — Systems
+
    Shared hero structure; page-specific polish only.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-systems-page {

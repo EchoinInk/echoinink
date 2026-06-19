@@ -80,7 +80,8 @@
 .ei-btn-secondary-cinematic:hover {
   color: var(--ei-button-text-secondary-hover);
 }
-  /* Premium invitation button */
+  
+/* Premium invitation button */
   .ei-invitation-btn {
     position: relative;
     z-index: 1;

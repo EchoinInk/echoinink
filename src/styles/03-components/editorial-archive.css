@@ -552,13 +552,14 @@
     }
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    Notes must-fix pass
+
    Fixes: unfinished feeling, weak hero distinction,
    article previews earlier, stronger featured note,
    larger mobile hierarchy.
    Image verdict: replace.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-notes-page {
@@ -726,12 +727,12 @@
     border: 0;
     border-radius: 999px;
     background: linear-gradient(
-      180deg,
-      transparent,
-      rgb(var(--ei-halo-blue-rgb) / 0.48),
-      rgb(var(--ei-soft-neon-rgb) / 0.28),
-      transparent
-    );
+        180deg,
+        transparent,
+        rgb(var(--ei-halo-blue-rgb) / 0.48),
+        rgb(var(--ei-soft-neon-rgb) / 0.28),
+        transparent
+      );
     box-shadow: 0 0 22px rgb(var(--ei-halo-blue-rgb) / 0.2);
     transform: rotate(36deg);
   }
@@ -1003,13 +1004,14 @@
     }
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    Essay polish pass
+
    Fixes: stronger opening image, clearer chapter hierarchy,
    lighter image treatment, larger mobile reading type,
    more section breathing room.
    Image verdict: keep, lighten slightly.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-essay-page {
@@ -1138,11 +1140,11 @@
     width: min(11rem, 42vw);
     height: 1px;
     background: linear-gradient(
-      90deg,
-      rgb(var(--ei-halo-blue-rgb) / 0.36),
-      rgb(var(--ei-violet-rgb) / 0.18),
-      transparent
-    );
+        90deg,
+        rgb(var(--ei-halo-blue-rgb) / 0.36),
+        rgb(var(--ei-violet-rgb) / 0.18),
+        transparent
+      );
     box-shadow: 0 0 18px rgb(var(--ei-halo-blue-rgb) / 0.14);
   }
 
@@ -1300,10 +1302,11 @@
     }
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    PageSectionHero pass — Notes / Editorial Archive
+
    Shared hero structure; page-specific polish only.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-notes-page,

@@ -500,12 +500,12 @@
     left: 2.85rem;
     width: 1px;
     background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--ei-soft-neon-rgb) / 0.28) 8%,
-      rgb(var(--ei-violet-rgb) / 0.16) 92%,
-      transparent
-    );
+        to bottom,
+        transparent,
+        rgb(var(--ei-soft-neon-rgb) / 0.28) 8%,
+        rgb(var(--ei-violet-rgb) / 0.16) 92%,
+        transparent
+      );
   }
 
   .ei-worlds-process-list li {
@@ -672,12 +672,12 @@
       width: auto;
       height: 1px;
       background: linear-gradient(
-        to right,
-        transparent,
-        rgb(var(--ei-soft-neon-rgb) / 0.28) 8%,
-        rgb(var(--ei-violet-rgb) / 0.16) 92%,
-        transparent
-      );
+          to right,
+          transparent,
+          rgb(var(--ei-soft-neon-rgb) / 0.28) 8%,
+          rgb(var(--ei-violet-rgb) / 0.16) 92%,
+          transparent
+        );
     }
 
     .ei-worlds-process-list li {
@@ -778,12 +778,13 @@
     }
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    Worlds optional polish pass
+
    Fixes: slight headline visibility, larger mobile opening type,
    more mobile hero breathing room.
    Image verdict: keep.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-worlds-hero .ei-echo-hero-media img {
@@ -906,10 +907,11 @@
     }
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    PageSectionHero pass — Worlds
+
    Shared hero structure; page-specific polish only.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-worlds-page {

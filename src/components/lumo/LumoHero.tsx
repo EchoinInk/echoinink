@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 
-import { ContentFrame } from "@/components/layout/ContentFrame";
+import { Container } from "@/components/layout/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { cn } from "@/lib/utils";
 import { driftUp, fadeSoft, staggerContainer, STAGGER, VIEWPORT } from "@/lib/motion-cinematic";
@@ -69,28 +69,30 @@ export function LumoHero({
       {media ? <div className="ei-echo-hero-media-slot">{media}</div> : null}
       {(hasImage || media) && <div className="ei-echo-hero-scrim" aria-hidden="true" />}
 
-      <ContentFrame width="standard" gutters className="ei-echo-hero-frame">
-        <motion.div variants={driftUp} className={cn("ei-echo-hero-content", contentClassName)}>
-          {eyebrow ? (
-            <SectionLabel
-              label={eyebrow}
-              index={index}
-              align={align}
-              tone={variant === "archive" ? "accent" : "muted"}
-            />
-          ) : null}
-          <h1 id={headingId} className="ei-echo-hero-title">
-            {title}
-          </h1>
-          {kicker ? <div className="ei-echo-hero-kicker">{kicker}</div> : null}
-          {description ? <div className="ei-echo-hero-description">{description}</div> : null}
-          {actions ? (
-            <motion.div variants={fadeSoft} className="ei-echo-hero-actions">
-              {actions}
-            </motion.div>
-          ) : null}
-        </motion.div>
-      </ContentFrame>
+      <Container size="xl" className="relative z-10 ei-echo-hero-frame">
+        <div className="ei-layout-page-rail">
+          <motion.div variants={driftUp} className={cn("ei-echo-hero-content", contentClassName)}>
+            {eyebrow ? (
+              <SectionLabel
+                label={eyebrow}
+                index={index}
+                align={align}
+                tone={variant === "archive" ? "accent" : "muted"}
+              />
+            ) : null}
+            <h1 id={headingId} className="ei-echo-hero-title">
+              {title}
+            </h1>
+            {kicker ? <div className="ei-echo-hero-kicker">{kicker}</div> : null}
+            {description ? <div className="ei-echo-hero-description">{description}</div> : null}
+            {actions ? (
+              <motion.div variants={fadeSoft} className="ei-echo-hero-actions">
+                {actions}
+              </motion.div>
+            ) : null}
+          </motion.div>
+        </div>
+      </Container>
     </motion.section>
   );
 }

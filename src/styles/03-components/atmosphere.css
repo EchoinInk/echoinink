@@ -1,46 +1,48 @@
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    Atmospheric utility classes — reusable aurora, haze, and
-   glow primitives for decorative background layers.
-   ───────────────────────────────────────────────────────── */
 
-/* ═══════════════════════════════════════════════════════════════
+   glow primitives for decorative background layers.
+   ──────────────────────────────────────────────────────────────── */
+
+/* ────────────────────────────────────────────────────────────────
    Echo in Ink — Unified Atmospheric System
+
    Consistent glows, depth, and cinematic ambience
-   ═══════════════════════════════════════════════════════════════ */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
-  /* ── Legacy / Soft Atmospheric Glows ─────────────────────── */
+  /* ── Legacy / Soft Atmospheric Glows ─────────────────────────── */
   .ei-glow-violet-soft {
     background: radial-gradient(
-      ellipse 68% 60% at 35% 48%,
-      rgb(var(--ei-violet-rgb) / 0.07) 0%,
-      rgb(var(--ei-midnight-rgb) / 0.04) 50%,
-      transparent 80%
-    );
+        ellipse 68% 60% at 35% 48%,
+        rgb(var(--ei-violet-rgb) / 0.07) 0%,
+        rgb(var(--ei-midnight-rgb) / 0.04) 50%,
+        transparent 80%
+      );
     filter: blur(72px);
     mix-blend-mode: screen;
   }
 
   .ei-aurora-cyan-glow {
     background: radial-gradient(
-      ellipse 60% 66% at 58% 46%,
-      rgb(var(--ei-halo-blue-rgb) / 0.07) 0%,
-      rgb(var(--ei-midnight-rgb) / 0.035) 54%,
-      transparent 82%
-    );
+        ellipse 60% 66% at 58% 46%,
+        rgb(var(--ei-halo-blue-rgb) / 0.07) 0%,
+        rgb(var(--ei-midnight-rgb) / 0.035) 54%,
+        transparent 82%
+      );
     filter: blur(60px);
     mix-blend-mode: screen;
   }
 
-  /* ── Core Glow Primitives ──────────────────────────────────── */
+  /* ── Core Glow Primitives ────────────────────────────────────── */
   /* Ambient violet glow — primary brand atmosphere */
   .ei-glow-violet {
     background: radial-gradient(
-      ellipse 55% 50% at 50% 55%,
-      rgb(var(--ei-violet-rgb) / 0.045) 0%,
-      rgb(var(--ei-violet-rgb) / 0.022) 50%,
-      transparent 70%
-    );
+        ellipse 55% 50% at 50% 55%,
+        rgb(var(--ei-violet-rgb) / 0.045) 0%,
+        rgb(var(--ei-violet-rgb) / 0.022) 50%,
+        transparent 70%
+      );
     filter: blur(100px);
     pointer-events: none;
   }
@@ -48,11 +50,11 @@
   /* Ambient indigo glow — secondary depth */
   .ei-glow-indigo {
     background: radial-gradient(
-      ellipse 60% 55% at 45% 50%,
-      rgb(var(--ei-violet-rgb) / 0.038) 0%,
-      rgb(var(--ei-halo-blue-rgb) / 0.015) 55%,
-      transparent 75%
-    );
+        ellipse 60% 55% at 45% 50%,
+        rgb(var(--ei-violet-rgb) / 0.038) 0%,
+        rgb(var(--ei-halo-blue-rgb) / 0.015) 55%,
+        transparent 75%
+      );
     filter: blur(110px);
     pointer-events: none;
   }
@@ -60,61 +62,61 @@
   /* Soft aqua accent — sparingly used */
   .ei-glow-aqua {
     background: radial-gradient(
-      ellipse 50% 45% at 55% 48%,
-      rgb(var(--ei-halo-blue-rgb) / 0.03) 0%,
-      rgb(var(--ei-halo-blue-rgb) / 0.015) 50%,
-      transparent 70%
-    );
+        ellipse 50% 45% at 55% 48%,
+        rgb(var(--ei-halo-blue-rgb) / 0.03) 0%,
+        rgb(var(--ei-halo-blue-rgb) / 0.015) 50%,
+        transparent 70%
+      );
     filter: blur(90px);
     pointer-events: none;
   }
 
-  /* ── Depth Layers ─────────────────────────────────────────── */
+  /* ── Depth Layers ────────────────────────────────────────────── */
 
   /* Deep background vignette */
   .ei-vignette-deep {
     background: radial-gradient(
-      circle at center,
-      transparent 30%,
-      rgb(var(--ei-void-rgb) / 0.4) 100%
-    );
+        circle at center,
+        transparent 30%,
+        rgb(var(--ei-void-rgb) / 0.4) 100%
+      );
     pointer-events: none;
   }
 
   /* Soft edge vignette for sections */
   .ei-vignette-soft {
     background: radial-gradient(
-      ellipse 80% 80% at 50% 50%,
-      transparent 50%,
-      rgb(var(--ei-midnight-rgb) / 0.25) 100%
-    );
+        ellipse 80% 80% at 50% 50%,
+        transparent 50%,
+        rgb(var(--ei-midnight-rgb) / 0.25) 100%
+      );
     pointer-events: none;
   }
 
-  /* ── Section Transitions ─────────────────────────────────── */
+  /* ── Section Transitions ─────────────────────────────────────── */
 
   /* Gradient fade to next section */
   .ei-fade-to-ink {
     background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgb(var(--ei-void-rgb) / 0.5) 60%,
-      rgb(var(--ei-void-rgb) / 0.95) 100%
-    );
+        to bottom,
+        transparent 0%,
+        rgb(var(--ei-void-rgb) / 0.5) 60%,
+        rgb(var(--ei-void-rgb) / 0.95) 100%
+      );
     pointer-events: none;
   }
 
   /* Subtle top gradient for sections following hero */
   .ei-bleed-top {
     background: linear-gradient(
-      to top,
-      transparent 0%,
-      rgb(var(--ei-void-rgb) / 0.15) 100%
-    );
+        to top,
+        transparent 0%,
+        rgb(var(--ei-void-rgb) / 0.15) 100%
+      );
     pointer-events: none;
   }
 
-  /* ── Noise & Texture ──────────────────────────────────────── */
+  /* ── Noise & Texture ─────────────────────────────────────────── */
 
   /* Film grain overlay */
   .ei-grain {
@@ -125,19 +127,19 @@
     pointer-events: none;
   }
 
-  /* ── Breathing Space Atmosphere ──────────────────────────── */
+  /* ── Breathing Space Atmosphere ──────────────────────────────── */
 
   /* Minimal atmospheric pause section */
   .ei-breathing-space {
     background: radial-gradient(
-      ellipse 35% 25% at 50% 50%,
-      rgb(var(--ei-violet-rgb) / 0.015) 0%,
-      transparent 55%
-    );
+        ellipse 35% 25% at 50% 50%,
+        rgb(var(--ei-violet-rgb) / 0.015) 0%,
+        transparent 55%
+      );
     position: relative;
   }
 
-  /* ── Monogram Framing ─────────────────────────────────────── */
+  /* ── Monogram Framing ────────────────────────────────────────── */
 
   /* Sacred space around the EI monogram */
   .ei-monogram-frame {
@@ -149,17 +151,17 @@
     position: absolute;
     inset: -15%;
     background: radial-gradient(
-      ellipse 45% 40% at 50% 50%,
-      rgb(var(--ei-violet-rgb) / 0.022) 0%,
-      transparent 65%
-    );
+        ellipse 45% 40% at 50% 50%,
+        rgb(var(--ei-violet-rgb) / 0.022) 0%,
+        transparent 65%
+      );
     filter: blur(60px);
     pointer-events: none;
     z-index: -1;
   }
 }
 
-/* ── Animation Keyframes ──────────────────────────────────── */
+/* ── Animation Keyframes ─────────────────────────────────────── */
 @keyframes ei-glow-pulse {
   0%,
   100% {

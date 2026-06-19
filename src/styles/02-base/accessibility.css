@@ -1,10 +1,11 @@
-/* ═══════════════════════════════════════════════════════════════
+/* ────────────────────────────────────────────────────────────────
    Echo in Ink — Accessibility
+
    Focus visibility, reduced motion, skip links, and link clarity
-   ═══════════════════════════════════════════════════════════════ */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer base {
-  /* ── Global Focus Safety ─────────────────────────────────── */
+  /* ── Global Focus Safety ─────────────────────────────────────── */
 
   *:focus {
     outline: none;
@@ -19,14 +20,14 @@
   }
 
   a:focus-visible,
-  button:focus-visible,
-  [role="button"]:focus-visible {
-    outline: 2px solid rgb(var(--ei-halo-blue-rgb) / 0.72);
+    button:focus-visible,
+    [role="button"]:focus-visible {
+      outline: 2px solid rgb(var(--ei-halo-blue-rgb) / 0.72);
     outline-offset: 4px;
     border-radius: 2px;
   }
 
-  /* ── Reduced Motion ─────────────────────────────────────── */
+  /* ── Reduced Motion ──────────────────────────────────────────── */
 
   @media (prefers-reduced-motion: reduce) {
     html {
@@ -49,7 +50,7 @@
     }
   }
 
-  /* ── Screen Reader / Skip Link ───────────────────────────── */
+  /* ── Screen Reader / Skip Link ───────────────────────────────── */
 
   .sr-only {
     position: absolute;
@@ -90,7 +91,7 @@
 }
 
 @layer utilities {
-  /* ── Focus Utility Variants ──────────────────────────────── */
+  /* ── Focus Utility Variants ──────────────────────────────────── */
 
   .ei-focus-rounded:focus-visible,
   a.ei-focus-rounded:focus-visible,
@@ -115,7 +116,7 @@
 }
 
 @layer components {
-  /* ── Distinguished Links ─────────────────────────────────── */
+  /* ── Distinguished Links ─────────────────────────────────────── */
 
   .ei-link-distinguished {
     position: relative;
@@ -153,7 +154,6 @@
   }
 }
 
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -173,9 +173,9 @@
 
 @layer base {
   a:focus-visible,
-  button:focus-visible,
-  [role="button"]:focus-visible {
-    outline: 2px solid rgb(var(--ei-halo-blue-rgb) / 0.72);
+    button:focus-visible,
+    [role="button"]:focus-visible {
+      outline: 2px solid rgb(var(--ei-halo-blue-rgb) / 0.72);
     outline-offset: 4px;
     border-radius: 2px;
   }
@@ -283,9 +283,9 @@
   }
 
   a:focus-visible,
-  button:focus-visible,
-  [role="button"]:focus-visible {
-    outline: 2px solid rgb(var(--ei-halo-blue-rgb) / 0.72);
+    button:focus-visible,
+    [role="button"]:focus-visible {
+      outline: 2px solid rgb(var(--ei-halo-blue-rgb) / 0.72);
     outline-offset: 4px;
     border-radius: 2px;
   }

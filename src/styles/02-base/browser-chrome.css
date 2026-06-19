@@ -1,10 +1,11 @@
-/* ═══════════════════════════════════════════════════════════════
+/* ────────────────────────────────────────────────────────────────
    Echo in Ink — Browser Chrome + Micro Polish
+
    Scrollbar, selection, overscroll, and interaction refinement
-   ═══════════════════════════════════════════════════════════════ */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer base {
-  /* ── Scrollbar Treatment ─────────────────────────────────── */
+  /* ── Scrollbar Treatment ─────────────────────────────────────── */
 
   /* Webkit scrollbars (Chrome, Safari, Edge) */
   ::-webkit-scrollbar {
@@ -32,7 +33,7 @@
     scrollbar-color: rgb(var(--ei-ice-white-rgb) / 0.08) transparent;
   }
 
-  /* ── Text Selection ───────────────────────────────────────── */
+  /* ── Text Selection ──────────────────────────────────────────── */
   ::selection {
     background: rgb(var(--ei-halo-blue-rgb) / 0.26);
     color: var(--ei-color-text-primary);
@@ -43,11 +44,11 @@
     color: var(--ei-color-text-primary);
   }
 
-  /* ── Tap Highlight (Mobile) ───────────────────────────────── */
+  /* ── Tap Highlight (Mobile) ──────────────────────────────────── */
   * {
     -webkit-tap-highlight-color: rgb(var(--ei-halo-blue-rgb) / 0.16);
   }
-  /* ── Overscroll Behavior ─────────────────────────────────── */
+  /* ── Overscroll Behavior ─────────────────────────────────────── */
   html {
     overscroll-behavior-y: none;
   }
@@ -56,7 +57,7 @@
     overscroll-behavior-y: auto;
   }
 
-  /* ── Viewport + Background Flash Prevention ───────────────── */
+  /* ── Viewport + Background Flash Prevention ──────────────────── */
   html {
     background-color: var(--ei-color-background-html);
   }
@@ -65,7 +66,7 @@
     background-color: var(--ei-color-background-body);
     min-height: 100vh;
   }
-  /* ── Smooth Image Loading ────────────────────────────────── */
+  /* ── Smooth Image Loading ────────────────────────────────────── */
   img {
     opacity: 1;
     transition: opacity 0.4s cubic-bezier(0.22, 1, 0.36, 1);
@@ -75,7 +76,7 @@
     opacity: 0;
   }
 
-  /* ── Prevent Layout Shift ────────────────────────────────── */
+  /* ── Prevent Layout Shift ────────────────────────────────────── */
   img,
   video {
     max-width: 100%;
@@ -83,27 +84,27 @@
     display: block;
   }
 
-  /* ── Input Autofill Smoothing ─────────────────────────────── */
+  /* ── Input Autofill Smoothing ────────────────────────────────── */
   input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  textarea:-webkit-autofill,
-  textarea:-webkit-autofill:hover,
-  textarea:-webkit-autofill:focus,
-  select:-webkit-autofill,
-  select:-webkit-autofill:hover,
-  select:-webkit-autofill:focus {
-    transition: background-color 1000000s ease-in-out 0s;
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      transition: background-color 1000000s ease-in-out 0s;
     -webkit-text-fill-color: var(--ei-color-text-secondary) !important;
     caret-color: var(--ei-color-text-secondary);
   }
 
-  /* ── iOS Momentum Scrolling ───────────────────────────────── */
+  /* ── iOS Momentum Scrolling ──────────────────────────────────── */
   .touch-scroll {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* ── Disable Text Selection on UI Elements ────────────────── */
+  /* ── Disable Text Selection on UI Elements ───────────────────── */
   .no-select {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -111,14 +112,14 @@
     user-select: none;
   }
 
-  /* ── Smooth Scrolling with Reduced Motion Respect ─────────── */
+  /* ── Smooth Scrolling with Reduced Motion Respect ────────────── */
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
     }
   }
 
-  /* ── Mobile Browser Chrome ────────────────────────────────── */
+  /* ── Mobile Browser Chrome ───────────────────────────────────── */
   @supports (-webkit-touch-callout: none) {
     /* iOS-specific adjustments */
     html {
@@ -130,7 +131,7 @@
     }
   }
 
-  /* ── Print Styles ─────────────────────────────────────────── */
+  /* ── Print Styles ────────────────────────────────────────────── */
   @media print {
     html {
       background: white;

@@ -21,14 +21,14 @@ const systems: Array<{
   href: string;
 }> = [
   {
-    variant: "vectorLattice",
+    variant: "echoSpiral",
     title: "Identity Canvas",
     description: "Map essence, audience tension, tone, and emotional position.",
     meta: "Framework",
     href: "/systems",
   },
   {
-    variant: "prismMirror",
+    variant: "mirrorOrbit",
     title: "Founder Reflection",
     description: "Clarify what you are building, why it matters, and what changes next.",
     meta: "Reflective Tool",
@@ -43,7 +43,7 @@ const systems: Array<{
     href: "/systems",
   },
   {
-    variant: "chorusCore",
+    variant: "luminousSpine",
     title: "Identity GPT",
     description:
       "A guided AI companion for voice, positioning, and creative direction.",
@@ -51,7 +51,7 @@ const systems: Array<{
     href: "/systems",
   },
   {
-    variant: "haloGate",
+    variant: "prismAnchor",
     title: "Atmosphere UI Kit",
     description: "Cinematic interface components for expressive digital worlds.",
     meta: "UI System",
@@ -84,7 +84,7 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
         >
           <motion.div
             variants={driftUp}
-            className="mb-7 flex items-start justify-between gap-5 md:mb-10 md:items-center"
+            className="mb-4 flex items-start justify-between gap-3 md:mb-6 md:items-center"
           >
             <div className="flex items-center gap-3">
               <span className="ei-type-label">Our Systems</span>
@@ -98,15 +98,15 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
               />
             </div>
 
-            <Link
-              to="/systems"
-              className="ei-link-subtle group inline-flex items-center gap-2 text-right text-[0.7rem] tracking-[0.14em] uppercase md:text-[0.75rem]"
-            >
-              Explore All Systems
-              <span className="transition-transform duration-500 group-hover:translate-x-1">
-                →
-              </span>
-            </Link>
+           <Link
+  to="/systems"
+  className="ei-home-systems-link group mt-5 inline-flex items-center gap-2 text-right text-[0.6rem] tracking-[0.13em] uppercase md:mt-6 md:text-[0.64rem]"
+>
+  <span className="ei-home-systems-link-text">Explore All Systems</span>
+  <span className="ei-home-systems-link-arrow" aria-hidden="true">
+    →
+  </span>
+</Link>
           </motion.div>
 
 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-5">            {systems.map((system) => (
@@ -122,8 +122,8 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
                     <div className="mb-2 flex h-12 items-center justify-center md:mb-3 md:h-14">
                       <OrbitalVisual
                         variant={system.variant}
-                        size={50}
-                        className="opacity-95 md:size-[52px]"
+                        size={72}
+                        className="opacity-95 md:size-[72px]"
                       />
                     </div>
 

@@ -15,11 +15,11 @@
     inset: 0 0 auto;
     height: 1px;
     background: linear-gradient(
-      90deg,
-      transparent,
-      var(--ei-color-border-hairline),
-      transparent
-    );
+        90deg,
+        transparent,
+        var(--ei-color-border-hairline),
+        transparent
+      );
   }
 
   .ei-identity-hero {
@@ -326,12 +326,12 @@
     right: -36%;
     height: 1px;
     background: linear-gradient(
-      90deg,
-      transparent,
-      rgb(var(--ei-halo-blue-rgb) / 0.46),
-      rgb(var(--ei-soft-neon-rgb) / 0.4),
-      transparent
-    );
+        90deg,
+        transparent,
+        rgb(var(--ei-halo-blue-rgb) / 0.46),
+        rgb(var(--ei-soft-neon-rgb) / 0.4),
+        transparent
+      );
   }
 
   .ei-identity-world-output {
@@ -670,12 +670,12 @@
     width: 1px;
     height: auto;
     background: linear-gradient(
-      180deg,
-      transparent,
-      rgb(var(--ei-halo-blue-rgb) / 0.46),
-      rgb(var(--ei-soft-neon-rgb) / 0.4),
-      transparent
-    );
+        180deg,
+        transparent,
+        rgb(var(--ei-halo-blue-rgb) / 0.46),
+        rgb(var(--ei-soft-neon-rgb) / 0.4),
+        transparent
+      );
   }
 
   .ei-identity-world-output {
@@ -743,11 +743,12 @@
     flex-direction: column;
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    Identity critique pass
+
    Fixes: hero too dark, weak first-screen hierarchy,
    typography-only feeling, mobile readability.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
 
@@ -868,12 +869,12 @@
     top: 50%;
     left: 50%;
     background: linear-gradient(
-      90deg,
-      transparent,
-      rgb(var(--ei-halo-blue-rgb) / 0.34),
-      rgb(var(--ei-soft-neon-rgb) / 0.18),
-      transparent
-    );
+        90deg,
+        transparent,
+        rgb(var(--ei-halo-blue-rgb) / 0.34),
+        rgb(var(--ei-soft-neon-rgb) / 0.18),
+        transparent
+      );
     transform-origin: center;
   }
 
@@ -887,12 +888,12 @@
     width: 1px;
     height: 112%;
     background: linear-gradient(
-      180deg,
-      transparent,
-      rgb(var(--ei-halo-blue-rgb) / 0.28),
-      rgb(var(--ei-soft-neon-rgb) / 0.18),
-      transparent
-    );
+        180deg,
+        transparent,
+        rgb(var(--ei-halo-blue-rgb) / 0.28),
+        rgb(var(--ei-soft-neon-rgb) / 0.18),
+        transparent
+      );
     transform: translate(-50%, -50%) rotate(-8deg);
   }
 
@@ -1003,12 +1004,12 @@
     right: max(1.5rem, calc((100vw - 1180px) / 2));
     height: 1px;
     background: linear-gradient(
-      90deg,
-      transparent,
-      rgb(var(--ei-halo-blue-rgb) / 0.24),
-      rgb(var(--ei-soft-neon-rgb) / 0.14),
-      transparent
-    );
+        90deg,
+        transparent,
+        rgb(var(--ei-halo-blue-rgb) / 0.24),
+        rgb(var(--ei-soft-neon-rgb) / 0.14),
+        transparent
+      );
     opacity: 0.9;
   }
 
@@ -1149,10 +1150,11 @@
     overflow: hidden;
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    PageSectionHero pass — Identity
+
    Shared hero structure; page-specific polish only.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-identity-page {

@@ -1,10 +1,11 @@
-/* ═══════════════════════════════════════════════════════════════
+/* ────────────────────────────────────────────────────────────────
    Echo in Ink — Luxury Form System
+
    Intimate, editorial, calm form styling
-   ═══════════════════════════════════════════════════════════════ */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
-  /* ── Form Labels ─────────────────────────────────────────── */
+  /* ── Form Labels ─────────────────────────────────────────────── */
   .ei-form-label {
     font-family: var(--ei-font-structural);
     font-size: 0.625rem;
@@ -16,7 +17,7 @@
     transition: color 0.4s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
-  /* ── Form Inputs ──────────────────────────────────────────── */
+  /* ── Form Inputs ─────────────────────────────────────────────── */
   .ei-form-input,
   .ei-form-textarea,
   .ei-form-select {
@@ -91,7 +92,7 @@
     color: var(--ei-color-text-tertiary);
   }
 
-  /* ── Select Specific ─────────────────────────────────────── */
+  /* ── Select Specific ─────────────────────────────────────────── */
   .ei-form-select {
     cursor: pointer;
     background-image: linear-gradient(
@@ -116,14 +117,14 @@
     padding: 0.5rem;
   }
 
-  /* ── Textarea Specific ───────────────────────────────────── */
+  /* ── Textarea Specific ───────────────────────────────────────── */
   .ei-form-textarea {
     resize: vertical;
     min-height: 120px;
     line-height: 1.8;
   }
 
-  /* ── Submit Button ───────────────────────────────────────── */
+  /* ── Submit Button ───────────────────────────────────────────── */
   .ei-form-submit {
     font-family: var(--ei-font-structural);
     font-size: 0.6875rem;
@@ -161,7 +162,7 @@
     cursor: not-allowed;
   }
 
-  /* ── Validation States ───────────────────────────────────── */
+  /* ── Validation States ───────────────────────────────────────── */
   .ei-form-input:invalid:not(:placeholder-shown),
   .ei-form-textarea:invalid:not(:placeholder-shown) {
     border-color: rgb(var(--ei-echo-magenta-rgb) / 0.2);
@@ -172,7 +173,7 @@
     border-color: rgb(var(--ei-violet-rgb) / 0.15);
   }
 
-  /* ── Autofill Styling ────────────────────────────────────── */
+  /* ── Autofill Styling ────────────────────────────────────────── */
   .ei-form-input:-webkit-autofill,
   .ei-form-input:-webkit-autofill:hover,
   .ei-form-input:-webkit-autofill:focus {

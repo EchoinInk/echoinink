@@ -806,6 +806,10 @@
     background-color: var(--ei-ink);
   }
 
+  .ei-page-section-hero-button {
+  min-height: 3rem;
+}
+
   .ei-page-section-hero img,
   .ei-lumo-hero img {
     background-color: var(--ei-ink);
@@ -856,9 +860,9 @@
     color: rgb(var(--ei-moonlit-rgb) / 0.62);
   }
 
-  a:not(.ei-button):not(.ei-btn-primary-cinematic):not(.ei-btn-secondary-cinematic) {
-    color: rgb(var(--ei-moonlit-rgb) / 0.9);
-  }
+ a:not(.ei-button):not(.ei-btn-primary-cinematic):not(.ei-btn-secondary-cinematic):not(.ei-home-systems-link) {
+  color: rgb(var(--ei-moonlit-rgb) / 0.9);
+}
 
   a:not(.ei-button):not(.ei-btn-primary-cinematic):not(.ei-btn-secondary-cinematic):hover {
     color: var(--ei-color-text-primary);

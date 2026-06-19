@@ -19,10 +19,10 @@
     height: 28rem;
     pointer-events: none;
     background: radial-gradient(
-      ellipse at center,
-      rgb(var(--ei-violet-rgb) / 0.045),
-      transparent 68%
-    );
+        ellipse at center,
+        rgb(var(--ei-violet-rgb) / 0.045),
+        transparent 68%
+      );
     filter: blur(72px);
   }
 
@@ -132,11 +132,11 @@
   .ei-lumo-hero-orbit::after {
     inset: 34%;
     background: radial-gradient(
-      circle,
-      var(--ei-color-text-primary) 0%,
-      rgb(var(--ei-violet-rgb) / 0.66) 8%,
-      transparent 48%
-    );
+        circle,
+        var(--ei-color-text-primary) 0%,
+        rgb(var(--ei-violet-rgb) / 0.66) 8%,
+        transparent 48%
+      );
     box-shadow: 0 0 60px rgb(var(--ei-violet-rgb) / 0.55);
   }
 
@@ -909,11 +909,12 @@
     }
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    Lumo must-fix pass
+
    Fixes: minor overlay readability + dedicated mobile crop.
    Image verdict: keep desktop, use separate portrait mobile.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-lumo-hero .ei-echo-hero-scrim {

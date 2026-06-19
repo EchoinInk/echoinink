@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 
-import { ContentFrame } from "@/components/layout/ContentFrame";
+import { Container } from "@/components/layout/Container";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { cn } from "@/lib/utils";
 import { driftUp, fadeSoft, staggerContainer, STAGGER, VIEWPORT } from "@/lib/motion-cinematic";
@@ -43,25 +43,27 @@ export function CTASection({
       data-variant={variant}
       aria-labelledby={headingId}
     >
-      <ContentFrame width="standard" gutters>
-        <div className="ei-cta-section-panel">
-          {image ? <img className="ei-cta-section-image" src={image} alt={imageAlt} /> : null}
-          {image ? <div className="ei-cta-section-scrim" aria-hidden="true" /> : null}
-          <motion.div variants={driftUp} className="ei-cta-section-copy">
-            {eyebrow ? (
-              <SectionLabel label={eyebrow} align={variant === "slim" ? "left" : "center"} />
-            ) : null}
-            <h2 id={headingId} className="ei-cta-section-heading">
-              {heading}
-            </h2>
-            {body ? <div className="ei-cta-section-body">{body}</div> : null}
-            <motion.div variants={fadeSoft} className="ei-cta-section-actions">
-              {actions}
+      <Container size="xl" className="relative z-10">
+        <div className="ei-layout-page-rail">
+          <div className="ei-cta-section-panel">
+            {image ? <img className="ei-cta-section-image" src={image} alt={imageAlt} /> : null}
+            {image ? <div className="ei-cta-section-scrim" aria-hidden="true" /> : null}
+            <motion.div variants={driftUp} className="ei-cta-section-copy">
+              {eyebrow ? (
+                <SectionLabel label={eyebrow} align={variant === "slim" ? "left" : "center"} />
+              ) : null}
+              <h2 id={headingId} className="ei-cta-section-heading">
+                {heading}
+              </h2>
+              {body ? <div className="ei-cta-section-body">{body}</div> : null}
+              <motion.div variants={fadeSoft} className="ei-cta-section-actions">
+                {actions}
+              </motion.div>
+              {secondary ? <div className="ei-cta-section-secondary">{secondary}</div> : null}
             </motion.div>
-            {secondary ? <div className="ei-cta-section-secondary">{secondary}</div> : null}
-          </motion.div>
+          </div>
         </div>
-      </ContentFrame>
+      </Container>
     </motion.section>
   );
 }

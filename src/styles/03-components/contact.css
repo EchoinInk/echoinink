@@ -1,9 +1,10 @@
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    Contact polish pass
+
    Fixes: stronger invitation, higher form contrast,
    larger mobile fields, more CTA breathing room.
    Image verdict: replace.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-contact-page .ei-page-section-hero .ei-page-section-hero-media img,
@@ -95,10 +96,11 @@
     }
   }
 }
-/* ─────────────────────────────────────────────────────────
+/* ────────────────────────────────────────────────────────────────
    PageSectionHero pass — Contact
+
    Shared hero structure; page-specific polish only.
-   ───────────────────────────────────────────────────────── */
+   ──────────────────────────────────────────────────────────────── */
 
 @layer components {
   .ei-contact-page {
