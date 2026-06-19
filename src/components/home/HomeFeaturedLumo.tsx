@@ -65,7 +65,7 @@ className="relative overflow-hidden pt-8 pb-4 md:pt-8 md:pb-4"    >
         }}
       />
 
-      <Container className="relative">
+      <Container className="relative z-10">
         <motion.div
           ref={sectionRef}
           initial="hidden"

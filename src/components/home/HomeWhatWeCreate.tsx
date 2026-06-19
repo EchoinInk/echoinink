@@ -70,7 +70,7 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.normal}
-          className="ei-home-create-shell mx-auto"
+          className="mx-auto max-w-6xl"
         >
           <motion.div
             variants={driftUp}

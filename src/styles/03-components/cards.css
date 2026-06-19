@@ -211,25 +211,26 @@
   }
 
   .ei-home-create-card {
-    min-height: 196px;
-    padding: 1.05rem 1.15rem;
+    min-height: 186px;
+    padding: 0.95rem 1.05rem;
   }
 
   .ei-home-create-card .ei-card-capability-icon {
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.7rem;
   }
 
   .ei-home-create-card .ei-card-title {
-    margin-bottom: 0.55rem;
+    margin-bottom: 0.45rem;
   }
 
-  .ei-home-create-card-body {
-    margin-bottom: 0.55rem;
-    line-height: 1.55;
+  .ei-home-create-card .ei-home-create-card-body {
+    margin-bottom: 0.45rem;
+    line-height: 1.5;
   }
 
-  .ei-home-create-card-action {
+  .ei-home-create-card .ei-home-create-card-action {
     margin-top: auto;
+    padding-top: 0.1rem;
   }
 /* ─────────────────────────────────────────────────────────
    Systems Card
@@ -409,12 +410,12 @@ a.ei-card-system:hover .ei-card-system-category {
 }
 
 .ei-home-systems-grid {
-  gap: 0.85rem;
+  gap: 0.8rem;
 }
 
 .ei-home-systems-card {
   min-height: 134px;
-  padding: clamp(1.05rem, 2vw, 1.45rem) clamp(1.05rem, 1.8vw, 1.45rem);
+  padding: clamp(1rem, 1.9vw, 1.38rem) clamp(1rem, 1.75vw, 1.38rem);
 }
 
 .ei-home-systems-card-icon {
@@ -428,14 +429,14 @@ a.ei-card-system:hover .ei-card-system-category {
 
 .ei-home-systems-card-title {
   min-height: 0;
-  font-size: clamp(1rem, 1.2vw, 1.125rem);
+  font-size: clamp(0.98rem, 1.15vw, 1.1rem);
   line-height: 1.16;
 }
 
 .ei-home-systems-card-body {
-  margin-top: 0.35rem;
-  font-size: clamp(0.8125rem, 0.92vw, 0.875rem);
-  line-height: 1.55;
+  margin-top: 0.32rem;
+  font-size: clamp(0.75rem, 0.84vw, 0.8125rem);
+  line-height: 1.5;
 }
 
 .ei-system-grid {
@@ -455,12 +456,12 @@ a.ei-card-system:hover .ei-card-system-category {
   }
 
   .ei-home-create-card {
-    min-height: 208px;
-    padding: 1.1rem 1.2rem;
+    min-height: 198px;
+    padding: 1rem 1.1rem;
   }
 
   .ei-home-systems-card {
-    min-height: 142px;
+    min-height: 140px;
   }
 
   .ei-home-systems-card-icon svg {

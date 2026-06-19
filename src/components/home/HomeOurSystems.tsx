@@ -63,7 +63,7 @@ export function EmergingSystems() {
   return (
     <Section
       spacing="none"
-className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
+className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -74,17 +74,17 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
         }}
       />
 
-      <Container>
+      <Container className="relative z-10">
         <motion.div
           variants={staggerContainer(STAGGER.loose, 0)}
           initial="hidden"
           whileInView="visible"
           viewport={VIEWPORT.normal}
-          className="ei-home-systems-shell mx-auto"
+          className="mx-auto max-w-6xl"
         >
           <motion.div
             variants={driftUp}
-            className="mb-4 flex items-start justify-between gap-3 md:mb-6 md:items-center"
+            className="mb-7 flex flex-wrap items-center justify-between gap-4 md:mb-10"
           >
             <div className="flex items-center gap-3">
               <span className="ei-type-label">Our Systems</span>
@@ -100,7 +100,7 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
 
             <Link
               to="/systems"
-              className="ei-home-systems-link group mt-5 inline-flex items-center gap-2 text-right text-[0.6rem] tracking-[0.13em] uppercase md:mt-6 md:text-[0.64rem]"
+              className="ei-home-systems-link group inline-flex shrink-0 items-center gap-2 text-right text-[0.6rem] tracking-[0.13em] uppercase md:text-[0.64rem]"
             >
               <span className="ei-home-systems-link-text">Explore All Systems</span>
               <span

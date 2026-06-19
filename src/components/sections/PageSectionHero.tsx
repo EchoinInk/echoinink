@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 
 import { Container } from "@/components/layout/Container";
@@ -15,10 +16,10 @@ interface PageSectionHeroProps {
   title: string;
   italicWord?: string;
   description: string;
-  ctaLabel?: string;
+  ctaLabel?: ReactNode;
   ctaHref?: string;
   ctaVariant?: "primary" | "secondary" | "tertiary";
-  secondaryCtaLabel?: string;
+  secondaryCtaLabel?: ReactNode;
   secondaryCtaHref?: string;
   image: string;
   mobileImage: string;

@@ -1,6 +1,7 @@
-import { useState, type ChangeEvent, type FormEvent } from "react";
+import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
+import { useSearchParams } from "react-router-dom";
 
 import { PageShell } from "@/components/layout/PageShell";
 import { Container } from "@/components/layout/Container";
@@ -26,12 +27,22 @@ import {
 } from "@/lib/motion-cinematic";
 
 const explorationOptions = [
+  "Project Inquiry",
   "Creative Direction",
   "Identity Systems",
   "Experimental Design",
   "Studio Collaboration",
   "Something Else",
 ];
+
+function getPreselectedInquiry(inquiry: string | null) {
+  switch (inquiry?.trim().toLowerCase()) {
+    case "project":
+      return "Project Inquiry";
+    default:
+      return "";
+  }
+}
 
 const serviceRows: Array<{
   title: string;
@@ -92,6 +103,7 @@ type ContactFieldEvent =
     };
 
 export function ContactPage() {
+  const [searchParams] = useSearchParams();
   const [formState, setFormState] = useState<"idle" | "submitting" | "success">(
     "idle",
   );
@@ -101,6 +113,20 @@ export function ContactPage() {
     exploration: "",
     message: "",
   });
+
+  useEffect(() => {
+    const preselectedInquiry = getPreselectedInquiry(searchParams.get("inquiry"));
+
+    if (!preselectedInquiry) {
+      return;
+    }
+
+    setFormData((prev) =>
+      prev.exploration === preselectedInquiry
+        ? prev
+        : { ...prev, exploration: preselectedInquiry },
+    );
+  }, [searchParams]);
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();

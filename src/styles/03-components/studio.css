@@ -13,6 +13,10 @@
     border-top: 1px solid rgb(var(--ei-moonlit-rgb) / 0.075);
   }
 
+  .ei-studio-major-section {
+    padding-top: var(--ei-section-standard-top);
+  }
+
   .ei-studio-section-rhythm-tight {
     padding-top: 1.5rem;
     padding-bottom: 0.5rem;
@@ -323,19 +327,19 @@
     margin-left: -0.4rem;
     margin-bottom: 0.85rem;
     border-radius: 999px;
-    border: 1px solid rgb(var(--ei-violet-rgb) / 0.32);
+    border: 1px solid rgb(var(--ei-electric-blue-rgb) / 0.22);
     background: radial-gradient(
         circle at 50% 18%,
-        rgb(var(--ei-halo-blue-rgb) / 0.12),
-        transparent 58%
+        rgb(var(--ei-soft-neon-rgb) / 0.32),
+        transparent 68%
       ),
-      rgb(var(--ei-ink-rgb) / 0.72);
+      rgb(var(--ei-void-rgb) / 0.32);
     font-family: var(--ei-font-system, var(--ei-font-structural));
     font-size: 0.6875rem;
     line-height: 1;
     letter-spacing: 0.08em;
     font-weight: 500;
-    color: rgb(var(--ei-moonlit-rgb) / 0.72);
+    color: rgb(var(--ei-moonlit-rgb) / 0.92);
     box-shadow: inset 0 1px 0 rgb(var(--ei-ice-white-rgb) / 0.045),
       0 0 22px rgb(var(--ei-violet-rgb) / 0.18);
   }
