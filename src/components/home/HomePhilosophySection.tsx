@@ -56,7 +56,10 @@ export function Philosophy() {
             variants={driftUp}
             className="mb-6 md:mb-8"
           >
-            <SectionLabel label="Our Philosophy" />
+            <SectionLabel
+              label="Our Philosophy"
+              className="ei-home-philosophy-label"
+            />
           </motion.div>
 
           <div className="grid items-start gap-8 md:grid-cols-[2fr_3fr] md:gap-12">
@@ -104,20 +107,24 @@ export function Philosophy() {
                   <div className="mb-3" aria-hidden="true">
                     <span className="relative inline-block h-3 w-3">
                       <span
-                        className="absolute left-1/2 top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full"
+                        className="absolute left-1/2 top-1/2 h-[0.34rem] w-[0.34rem] -translate-x-1/2 -translate-y-1/2 rounded-full"
                         style={{
                           background: fragment.accent
                             ? "var(--ei-halo-blue)"
-                            : "rgb(var(--ei-violet-rgb) / 0.45)",
+                            : "rgb(var(--ei-violet-rgb) / 0.62)",
                         }}
                       />
 
                       <span
-                        className="absolute inset-0 rounded-full blur-sm"
+                        className="absolute inset-[0.1rem] rounded-full"
                         style={{
                           background: fragment.accent
-                            ? "rgb(var(--ei-halo-blue-rgb) / 0.3)"
-                            : "rgb(var(--ei-ice-white-rgb) / 0.2)",
+                            ? "rgb(var(--ei-halo-blue-rgb) / 0.22)"
+                            : "rgb(var(--ei-ice-white-rgb) / 0.08)",
+                          boxShadow: fragment.accent
+                            ? "0 0 10px rgb(var(--ei-halo-blue-rgb) / 0.28)"
+                            : "0 0 5px rgb(var(--ei-ice-white-rgb) / 0.08)",
+                          opacity: fragment.accent ? 0.9 : 0.72,
                         }}
                       />
                     </span>

@@ -124,14 +124,14 @@ export function CtaOrbitalBackground() {
 
         {/* centre signal diamond */}
         <path
-          d="M800 128L838 166L800 204L762 166Z"
+          d="M828 118L866 156L828 194L790 156Z"
           stroke="rgb(var(--ei-halo-blue-rgb))"
           strokeOpacity="0.34"
           strokeWidth="1"
         />
 
         <path
-          d="M800 142L824 166L800 190L776 166Z"
+          d="M828 132L852 156L828 180L804 156Z"
           stroke="rgb(var(--ei-soft-neon-rgb))"
           strokeOpacity="0.28"
           strokeWidth="0.9"

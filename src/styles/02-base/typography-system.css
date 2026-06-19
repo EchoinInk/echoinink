@@ -386,6 +386,15 @@
     line-height: 1.08;
   }
 
+  .ei-type-philosophy-heading {
+    color: var(--ei-color-text-primary);
+    font-family: var(--ei-font-editorial);
+    font-size: clamp(2.35rem, 5.1vw, 4.2rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 1.04;
+  }
+
   .ei-type-editorial-heading {
     color: var(--ei-color-text-primary);
     font-family: var(--ei-font-editorial);
@@ -834,10 +843,6 @@
     color: var(--ei-color-text-accent);
   }
 
-  .ei-home-systems-link:hover .ei-home-systems-link-arrow,
-  .ei-home-systems-link:focus-visible .ei-home-systems-link-arrow {
-    transform: translateX(0.25rem);
-  }
 }
 
 /* ────────────────────────────────────────────────────────────────

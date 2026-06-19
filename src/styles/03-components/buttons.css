@@ -10,18 +10,27 @@
     isolation: isolate;
   }
 
-  .ei-cta-arrow {
-  display: inline-block;
-  margin-left: 0.08em;
-  font-size: 1.38em;
-  line-height: 0;
-  transform: translateY(0.015em);
-  transition: transform 0.5s var(--ei-ease-soft);
-}
+  .ei-cta-arrow,
+  .ei-card-action-arrow {
+    display: inline-block;
+    margin-left: 0.08em;
+    font-size: 1.28em;
+    line-height: 0;
+    color: currentColor;
+    transform: translateY(0.015em);
+    transition: transform 0.5s var(--ei-ease-soft);
+  }
 
-.ei-page-section-hero-button-secondary:hover .ei-cta-arrow {
-  transform: translateX(0.12rem) translateY(0.015em);
-}
+  a:hover .ei-cta-arrow,
+  a:hover .ei-card-action-arrow,
+  a:focus-visible .ei-cta-arrow,
+  a:focus-visible .ei-card-action-arrow,
+  button:hover .ei-cta-arrow,
+  button:hover .ei-card-action-arrow,
+  button:focus-visible .ei-cta-arrow,
+  button:focus-visible .ei-card-action-arrow {
+    transform: translateX(0.12rem) translateY(0.015em);
+  }
   /* Refined gradient border button */
   .ei-gradient-border-btn-refined {
     position: relative;
@@ -78,20 +87,20 @@
   }
 
   .ei-btn-primary-cinematic {
-  color: var(--ei-button-text-primary);
-}
+    color: var(--ei-button-text-primary);
+  }
 
-.ei-btn-primary-cinematic:hover {
-  color: var(--ei-button-text-primary-hover);
-}
+  .ei-btn-primary-cinematic:hover {
+    color: var(--ei-button-text-primary-hover);
+  }
 
-.ei-btn-secondary-cinematic {
-  color: var(--ei-button-text-secondary);
-}
+  .ei-btn-secondary-cinematic {
+    color: var(--ei-button-text-secondary);
+  }
 
-.ei-btn-secondary-cinematic:hover {
-  color: var(--ei-button-text-secondary-hover);
-}
+  .ei-btn-secondary-cinematic:hover {
+    color: var(--ei-button-text-secondary-hover);
+  }
   
 /* Premium invitation button */
   .ei-invitation-btn {

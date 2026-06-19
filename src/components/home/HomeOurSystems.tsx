@@ -98,18 +98,22 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
               />
             </div>
 
-           <Link
-  to="/systems"
-  className="ei-home-systems-link group mt-5 inline-flex items-center gap-2 text-right text-[0.6rem] tracking-[0.13em] uppercase md:mt-6 md:text-[0.64rem]"
->
-  <span className="ei-home-systems-link-text">Explore All Systems</span>
-  <span className="ei-home-systems-link-arrow" aria-hidden="true">
-    →
-  </span>
-</Link>
+            <Link
+              to="/systems"
+              className="ei-home-systems-link group mt-5 inline-flex items-center gap-2 text-right text-[0.6rem] tracking-[0.13em] uppercase md:mt-6 md:text-[0.64rem]"
+            >
+              <span className="ei-home-systems-link-text">Explore All Systems</span>
+              <span
+                className="ei-home-systems-link-arrow ei-cta-arrow"
+                aria-hidden="true"
+              >
+                →
+              </span>
+            </Link>
           </motion.div>
 
-<div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-5">            {systems.map((system) => (
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4 lg:grid-cols-3 xl:grid-cols-5">
+            {systems.map((system) => (
               <motion.article key={system.title} variants={driftUp}>
                 <Link
                   to={system.href}
@@ -128,7 +132,9 @@ className="relative overflow-hidden pt-8 pb-2 md:pt-8 md:pb-0"    >
                     </div>
 
                     <div className="ei-card-system-main">
-                      <h3 className="ei-card-system-title ei-type-card-title">{system.title}</h3>
+                      <h3 className="ei-card-system-title ei-type-card-title">
+                        {system.title}
+                      </h3>
 
                       <p className="ei-card-system-copy ei-type-body-small">
                         {system.description}

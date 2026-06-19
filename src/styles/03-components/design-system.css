@@ -88,6 +88,15 @@
     width: clamp(4rem, 9vw, 7rem);
   }
 
+  .ei-home-philosophy-label .ei-section-label-system-rule {
+    background: linear-gradient(
+      90deg,
+      rgb(var(--ei-midnight-rgb) / 0.15),
+      rgb(var(--ei-halo-blue-rgb))
+    );
+    box-shadow: 0 0 12px rgb(var(--ei-halo-blue-rgb) / 0.32);
+  }
+
   .ei-echo-card {
     position: relative;
     overflow: hidden;
