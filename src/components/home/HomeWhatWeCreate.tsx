@@ -23,28 +23,28 @@ const capabilities: Array<{
     variant: "axiomRing",
     title: "Identity Systems",
     description:
-      "Names, visual language, voice, and brand architecture shaped into a coherent world.",
+      "Identity systems that clarify ambition, shape recognition, and hold together over time.",
     href: "/identity",
   },
   {
     variant: "focusDial",
     title: "Atmospheric Websites",
     description:
-      "Digital spaces with cinematic structure, editorial rhythm, and conversion clarity.",
+      "Digital spaces with cinematic structure, editorial rhythm, and clearer paths into the offer.",
     href: "/worlds",
   },
   {
     variant: "innerTide",
     title: "Narrative Direction",
     description:
-      "Messaging, story logic, and positioning that make the work easier to understand.",
+      "Messaging and story systems that translate complex work into something people can follow and trust.",
     href: "/sessions",
   },
   {
     variant: "quietAxis",
     title: "Creative Systems",
     description:
-      "Reusable frameworks, prompts, and direction kits for building with consistency.",
+      "Reusable frameworks and direction kits that keep the world coherent as it grows.",
     href: "/systems",
   },
 ];

@@ -25,9 +25,9 @@ import {
 
 const disciplines = [
   "Identity System",
-  "Narrative Architecture",
-  "Interface Direction",
+  "Digital Experience",
   "Emotional UX",
+  "Interface Direction",
 ];
 
 export function LumoCaseStudyTeaser() {
@@ -177,9 +177,9 @@ className="relative overflow-hidden pt-8 pb-4 md:pt-8 md:pb-4"    >
                         tracking-[-0.004em]
                       "
                     >
-                      An emotionally intelligent app shaped by an identity system
-                      built to calm cognitive noise through atmosphere, rhythm,
-                      and restraint.
+                      An emotionally supportive companion app concept shaped to
+                      reduce cognitive load through calm planning, emotional
+                      safety, and a coherent digital atmosphere.
                     </motion.p>
                   </motion.div>
 

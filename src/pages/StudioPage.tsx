@@ -139,7 +139,7 @@ export function StudioPage() {
         eyebrow="Studio"
         title={"High-touch work.\nMeaningful worlds."}
         italicWord="worlds"
-        description="We partner with founders, artists, and cultural projects to design identity systems and immersive experiences that move people."
+        description="We partner with founders, artists, and cultural projects to design identity systems, digital experiences, and narrative direction that make meaningful work feel coherent and distinct."
         ctaLabel={
           <>
             Let&apos;s Build Your World{" "}
@@ -338,7 +338,7 @@ export function StudioPage() {
                     variant="secondary"
                     className="min-h-[42px] gap-3 px-6 py-3"
                   >
-                    Our Approach
+                    See How We Work
                     <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-down">↓</span>
                   </Button>
                 </div>
@@ -494,7 +494,7 @@ export function StudioPage() {
                   Let&apos;s build your world.
                 </h2>
                 <p className="mx-auto mt-3 max-w-[60ch] text-[15px] leading-[1.8] tracking-[-0.006em] text-[var(--ei-color-text-secondary)] md:text-[16px]">
-                  Through strategy, story, and identity systems designed to feel unmistakably yours.
+                  Through strategy, story, and identity systems that give ambitious work clarity, coherence, and a world to live in.
                 </p>
               </motion.div>
 

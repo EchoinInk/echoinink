@@ -12,6 +12,7 @@ interface ProjectCardProps extends WorkProject {
 export function ProjectCard({
   title,
   category,
+  disciplines,
   proofLine,
   image,
   href,
@@ -40,21 +41,24 @@ export function ProjectCard({
 
       <div className="ei-works-project-copy">
         <div className="ei-works-project-header">
-          <h3>{title}</h3>
           <div className="ei-works-project-meta">
-            <span>{category}</span>
             <span>{status ?? 'Study'}</span>
             <span>{number}</span>
           </div>
+          <h3>{title}</h3>
+          <p className="ei-works-project-category">{category}</p>
         </div>
 
+        <p className="ei-works-project-disciplines ei-type-meta">
+          {disciplines.join(' · ')}
+        </p>
         <p className="ei-works-project-proof">{proofLine}</p>
 
         <span className="ei-card-action">
           {isLinked
             ? 'View case study'
             : presentation === 'fragment'
-              ? 'Proof fragment'
+              ? 'Concept preview'
               : 'Selected study'}
           {isLinked ? <span className="ei-card-action-arrow ei-cta-arrow-right">→</span> : null}
         </span>
@@ -87,7 +91,7 @@ export function ProjectCard({
           <Link
             to={href}
             className="ei-works-project-link"
-            aria-label={`${title} — ${category}. ${proofLine}`}
+            aria-label={`${title} — ${category}. ${disciplines.join(', ')}. ${proofLine}`}
           >
             {content}
           </Link>

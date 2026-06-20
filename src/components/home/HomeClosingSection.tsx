@@ -87,7 +87,8 @@ export function ClosingSection() {
           }}
           className="mx-auto mb-6 max-w-[40ch] font-[var(--ei-font-copy)] text-[15px] leading-[1.8] tracking-[-0.006em] text-[var(--ei-type-color-secondary)] md:mb-8 md:text-[16px]"
         >
-          Let's build something meaningful — atmospheric, resonant, and impossible to forget.
+          Identity, story, and digital systems for meaningful work that needs
+          to feel clear, coherent, and distinct.
         </motion.p>
 
         <motion.div

@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 import worksHeroDesktop from '@/assets/imagery/hero/works-hero-signal-stream-desktop.webp';
 import worksHeroMobile from '@/assets/imagery/hero/works-hero-signal-stream-mobile.webp';
-import worksCtaImage from '@/assets/imagery/sections/works-cta.webp';
 import { Container } from '@/components/layout/Container';
 import { PageShell } from '@/components/layout/PageShell';
 import { Section } from '@/components/layout/Section';
@@ -32,25 +31,32 @@ const featuredProject = worksProjects.find((project) => project.featured);
 
 const selectedSignals = [
   {
-    title: 'Clearer positioning',
+    title: 'Identity Systems',
     description:
-      'Sharper articulation of what the product is, who it serves, and why it matters.'
+      'Distinct foundations for ambitious work that needs to be understood, trusted, and remembered.'
   },
   {
-    title: 'Stronger product story',
+    title: 'Narrative Frameworks',
     description: 'Case-study narratives structured around problem, system, and outcome.'
   },
   {
-    title: 'Faster evaluation',
+    title: 'Digital Experiences',
     description:
-      'Portfolio paths designed for clients, founders, and collaborators to scan with confidence.'
+      'Editorial digital environments designed to make complex offers feel clearer and more usable.'
   },
   {
-    title: 'Launch-ready systems',
+    title: 'Living Design Systems',
     description:
-      'Reusable visual and content patterns built for consistency beyond a single page.'
+      'Reusable visual and content patterns built to carry clarity forward over time.'
   }
 ];
+
+const vortexTestimonial = {
+  quote:
+    'Echo in Ink has changed the way we think about our entire digital presence. They didn’t just give us a new identity — they gave us clarity. The system Aly built feels precise, intelligent, and unmistakably aligned with who we are. Every interaction now carries this quiet confidence and sense of momentum. It’s the first time our brand has truly felt like a reflection of our ambition.',
+  name: 'Forrest Reynolds',
+  title: 'Managing Director, The Vortex Group'
+} as const;
 
 const lumoProofStrip = [
   {
@@ -72,25 +78,6 @@ const lumoProofStrip = [
   }
 ];
 
-const worksProofStats = [
-  {
-    value: worksProjects.length.toString(),
-    label: 'Ideas made clearer'
-  },
-  {
-    value: worksProjects.filter((project) => project.presentation === 'study').length.toString(),
-    label: 'Full story paths'
-  },
-  {
-    value: worksProjects.filter((project) => project.presentation === 'fragment').length.toString(),
-    label: 'Focused proof points'
-  },
-  {
-    value: '2026',
-    label: 'Select project openings'
-  }
-];
-
 const processValues: Array<{
   step: string;
   title: string;
@@ -100,32 +87,32 @@ const processValues: Array<{
 }> = [
   {
     step: '01',
-    title: 'Discover',
-    description: 'Understand the market, audience, offer, and emotional territory.',
+    title: 'Observe',
+    description: 'Understand the market, audience, offer, and pressures shaping the work.',
     icon: 'innerTide',
     tone: 'violet'
   },
   {
     step: '02',
-    title: 'Design',
+    title: 'Distill',
     description:
-      'Shape the identity, interface direction, content rhythm, and visual system.',
+      'Clarify the positioning, narrative, and trust signals people need to follow.',
     icon: 'vectorLattice',
     tone: 'blue'
   },
   {
     step: '03',
-    title: 'Validate',
+    title: 'Shape',
     description:
-      'Pressure-test the story across real contexts, user paths, and stakeholder needs.',
+      'Translate the direction into identity, interface structure, and a coherent system.',
     icon: 'signalBridge',
     tone: 'magenta'
   },
   {
     step: '04',
-    title: 'Launch',
+    title: 'Embody',
     description:
-      'Deliver the assets, guidance, and reusable patterns needed to move consistently.',
+      'Deliver the assets, guidance, and launch-ready patterns needed to carry it forward.',
     icon: 'quietAxis',
     tone: 'violet'
   }
@@ -148,14 +135,14 @@ export function WorksPage() {
         eyebrow="Selected proof"
         title="Proof, shaped as atmosphere."
         italicWord="atmosphere."
-        description="Independent designer for product identities, digital experiences, and visual systems — built to make ambitious ideas easier to understand."
+        description="Identity systems, digital experiences, and visual worlds built to make ambitious ideas easier to understand, trust, and act on."
         image={worksHeroDesktop}
         mobileImage={worksHeroMobile}
         imageAlt="Dark cinematic signal stream with luminous blue-violet atmosphere"
         align="left"
         ctaLabel="Start a Project"
         ctaHref="/contact"
-        secondaryCtaLabel="View Selected Work"
+        secondaryCtaLabel="Explore Selected Work"
         secondaryCtaHref="#selected-works"
       />
 
@@ -172,25 +159,25 @@ export function WorksPage() {
               <SectionLabel label="Selected signals" index="02" />
               <div>
                 <h2 className="ei-type-section-heading">Evidence that the atmosphere is doing its job.</h2>
-                <p className="ei-type-body-editorial">
+                <p className="ei-type-studio-body">
                   Brand systems, product stories, and digital experiences designed to make complex
                   value easier to trust, understand, and act on.
                 </p>
-                <p className="ei-works-audience-note">
+                <p className="ei-type-studio-body ei-works-audience-note">
                   Partnering with startups, software companies, and ambitious teams seeking clarity
                   through design.
                 </p>
               </div>
             </motion.div>
 
-            <motion.dl variants={fadeSoft} className="ei-works-proof-stats">
-              {worksProofStats.map((stat) => (
-                <div key={stat.label}>
-                  <dt>{stat.value}</dt>
-                  <dd>{stat.label}</dd>
-                </div>
-              ))}
-            </motion.dl>
+            <motion.div variants={fadeSoft} className="ei-works-proof-stats" role="note">
+              <p className="ei-works-proof-framing">
+                Distinct systems for work that needs to be understood, trusted, and remembered.
+              </p>
+              <p className="ei-works-proof-availability">
+                Select 2026 project availability for identity, digital experience, and system work.
+              </p>
+            </motion.div>
 
             <div className="ei-works-signal-grid">
               {selectedSignals.map((signal, index) => (
@@ -202,7 +189,7 @@ export function WorksPage() {
                   >
                     <span>{String(index + 1).padStart(2, '0')}</span>
                     <h3>{signal.title}</h3>
-                    <p className="ei-type-body-editorial">{signal.description}</p>
+                    <p className="ei-type-body-small">{signal.description}</p>
                   </EchoCard>
                 </motion.div>
               ))}
@@ -235,8 +222,13 @@ export function WorksPage() {
                       <span>{featuredProject.category}</span>
                     </div>
                     <motion.h2 variants={blurEmergence}>{featuredProject.title}</motion.h2>
+                    <p className="ei-works-featured-disciplines ei-type-meta">
+                      {featuredProject.disciplines.join(' · ')}
+                    </p>
                     <p className="ei-works-featured-outcome">{featuredProject.proofLine}</p>
-                    <p className="ei-works-featured-description ei-type-body-editorial">{featuredProject.description}</p>
+                    <p className="ei-works-featured-description ei-type-studio-body">
+                      {featuredProject.description}
+                    </p>
 
                     <dl className="ei-works-featured-proof-strip">
                       {lumoProofStrip.map((item) => (
@@ -260,6 +252,39 @@ export function WorksPage() {
         </Section>
       ) : null}
 
+      <Section spacing="none" className="ei-works-section ei-works-testimonial">
+        <Container size="xl" className="relative z-10">
+          <motion.div
+            variants={staggerContainer(STAGGER.loose, 0)}
+            initial="hidden"
+            whileInView="visible"
+            viewport={VIEWPORT.normal}
+            className="mx-auto max-w-[1180px]"
+          >
+            <motion.div variants={fadeSoft} className="ei-works-testimonial-panel">
+              <motion.div variants={driftUp}>
+                <SectionLabel label="Client reflection" index="04" />
+              </motion.div>
+
+              <motion.figure variants={driftUp} className="ei-works-testimonial-figure">
+                <blockquote className="ei-works-testimonial-quote ei-type-quote">
+                  “Echo in Ink has changed the way we think about our entire digital presence.
+                  They didn’t just give us a new identity — they <span>gave us clarity</span>.
+                  The system Aly built feels precise, intelligent, and unmistakably aligned with
+                  who we are. Every interaction now carries this quiet confidence and sense of
+                  momentum. It’s the first time our brand has truly felt like a{' '}
+                  <span>reflection of our ambition</span>.”
+                </blockquote>
+                <figcaption className="ei-works-testimonial-attribution">
+                  <span>{vortexTestimonial.name}</span>
+                  <span>{vortexTestimonial.title}</span>
+                </figcaption>
+              </motion.figure>
+            </motion.div>
+          </motion.div>
+        </Container>
+      </Section>
+
       <Section id="selected-works" spacing="none" className="ei-works-section ei-works-selected">
         <Container size="xl" className="relative z-10">
           <motion.div
@@ -270,12 +295,12 @@ export function WorksPage() {
             className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-works-section-heading">
-              <SectionLabel label="Selected works" index="04" />
+              <SectionLabel label="Selected works" index="05" />
               <div>
                 <h2 className="ei-type-section-heading">Curated by the weight of the proof.</h2>
-                <p className="ei-type-body-editorial">
-                  Full studies lead. Concepts and fragments follow in a quieter register, so every
-                  piece is honest about what it demonstrates.
+                <p className="ei-type-studio-body">
+                  Full case studies lead. Concepts and fragments follow in a quieter register, so
+                  every piece stays honest about what it demonstrates and why it mattered.
                 </p>
               </div>
             </motion.div>
@@ -306,10 +331,10 @@ export function WorksPage() {
             className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-works-section-heading">
-              <SectionLabel label="Process framework" index="06" />
+              <SectionLabel label="Process framework" index="07" />
               <div>
                 <h2 className="ei-type-section-heading">From atmosphere to usable system.</h2>
-                <p className="ei-type-body-editorial">
+                <p className="ei-type-studio-body">
                   A practical sequence for turning emotional direction into identity, interface,
                   content, and launch-ready patterns.
                 </p>
@@ -329,7 +354,7 @@ export function WorksPage() {
                     </IconWell>
                     <span>{value.step}</span>
                     <h3>{value.title}</h3>
-                    <p className="ei-type-body-editorial">{value.description}</p>
+                    <p className="ei-type-body-small">{value.description}</p>
                   </EchoCard>
                 </motion.div>
               ))}
@@ -346,35 +371,19 @@ export function WorksPage() {
       </Section>
 
       <CTASection
-        variant="imagePanel"
+        variant="editorialInvitation"
         eyebrow="Begin a project"
         heading={
           <>
             Make the value <em>felt.</em>
           </>
         }
-        body="Bring the idea, tension, or ambition. We will shape the atmosphere, system, and expression around what it needs to become."
-        image={worksCtaImage}
-        imageAlt=""
+        body="If you are building something meaningful, let’s give it the clarity, shape, and presence it deserves."
         className="ei-works-closing"
         actions={
-          <>
-            <Button to="/contact" variant="primary">
-              Start a Project
-            </Button>
-            <Button to="/sessions" variant="secondary">
-              Discuss your product <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
-            </Button>
-          </>
-        }
-        secondary={
-          <>
-            <p>
-              Currently accepting select product design, brand identity, and digital experience
-              projects for 2026.
-            </p>
-            <Link to="#selected-works">Explore the work before reaching out.</Link>
-          </>
+          <Button to="/contact" variant="primary">
+            Start a Conversation
+          </Button>
         }
       />
     </PageShell>

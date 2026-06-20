@@ -16,7 +16,7 @@ export function HeroCTA() {
         variant="secondary"
         className="ei-page-section-hero-button ei-page-section-hero-button-secondary self-stretch sm:self-start"
       >
-        Explore our Process
+        Explore Selected Work
         <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">
           →
         </span>

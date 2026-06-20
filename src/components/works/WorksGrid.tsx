@@ -73,10 +73,12 @@ export function WorksGrid({ activeFilter, sortBy }: WorksGridProps) {
       {fragments.length > 0 ? (
         <section className="ei-works-fragments" aria-labelledby="works-fragments-heading">
           <div className="ei-works-section-heading ei-works-fragments-heading">
-            <SectionLabel label="Case fragments" index="05" />
+            <SectionLabel label="Case fragments" index="06" />
             <div>
-              <h2 id="works-fragments-heading">Smaller studies, held in proportion.</h2>
-              <p>
+              <h2 id="works-fragments-heading" className="ei-type-section-heading">
+                Smaller studies, held in proportion.
+              </h2>
+              <p className="ei-type-studio-body">
                 Concepts and system fragments that show the thinking without asking them to carry
                 the weight of a full case study.
               </p>
