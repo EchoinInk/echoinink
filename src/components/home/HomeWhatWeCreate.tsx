@@ -18,6 +18,7 @@ const capabilities: Array<{
   title: string;
   description: string;
   href: string;
+  tone: "halo" | "violet" | "magenta" | "ice";
 }> = [
   {
     variant: "axiomRing",
@@ -25,27 +26,31 @@ const capabilities: Array<{
     description:
       "Identity systems that clarify ambition, shape recognition, and hold together over time.",
     href: "/identity",
+    tone: "halo",
+  },
+  {
+    variant: "memoryComet",
+    title: "Digital Expressions",
+    description:
+      "Digital spaces shaped to make meaning usable, distinct, and easier to trust.",
+    href: "/worlds",
+    tone: "violet",
   },
   {
     variant: "focusDial",
-    title: "Atmospheric Websites",
+    title: "Narrative Frameworks",
     description:
-      "Digital spaces with cinematic structure, editorial rhythm, and clearer paths into the offer.",
-    href: "/worlds",
-  },
-  {
-    variant: "innerTide",
-    title: "Narrative Direction",
-    description:
-      "Messaging and story systems that translate complex work into something people can follow and trust.",
+      "Story and positioning systems that help complex work become easier to follow.",
     href: "/sessions",
+    tone: "magenta",
   },
   {
     variant: "quietAxis",
-    title: "Creative Systems",
+    title: "Living Design Systems",
     description:
-      "Reusable frameworks and direction kits that keep the world coherent as it grows.",
+      "Reusable structures and direction kits that keep the world coherent as it grows.",
     href: "/systems",
+    tone: "ice",
   },
 ];
 
@@ -53,7 +58,8 @@ export function WhatWeCreate() {
   return (
     <Section
       spacing="none"
-className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
+      className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -87,14 +93,17 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
             />
           </motion.div>
 
-          <div className="ei-home-create-grid grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-5 lg:grid-cols-4">
+          <div className="ei-home-create-grid grid grid-cols-1 gap-5 sm:grid-cols-2 md:gap-5 xl:grid-cols-4">
             {capabilities.map((cap) => (
               <motion.article key={cap.title} variants={driftUp}>
                 <Link
                   to={cap.href}
                   className="ei-card ei-card-soft ei-card-interactive ei-card-capability ei-home-create-card group flex h-full flex-col motion-reduce:transform-none"
+                  data-tone={cap.tone}
                   aria-label={`Explore ${cap.title}`}
                 >
+                  <span className="ei-home-create-card-orbit" aria-hidden="true" />
+                  <span className="ei-home-create-card-signal" aria-hidden="true" />
                   <div className="ei-card-capability-icon mb-5 md:mb-7">
                     <OrbitalVisual variant={cap.variant} size={68} />
                   </div>
@@ -107,7 +116,13 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
                   </p>
 
                   <span className="ei-card-action ei-home-create-card-action">
-                    Explore <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
+                    Explore{" "}
+                    <span
+                      aria-hidden="true"
+                      className="ei-cta-arrow ei-cta-arrow-right"
+                    >
+                      →
+                    </span>
                   </span>
                 </Link>
               </motion.article>

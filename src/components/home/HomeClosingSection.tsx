@@ -57,7 +57,7 @@ export function ClosingSection() {
           transition={{ duration: DURATION.slow, ease: EASE_LUXURY }}
           className="ei-type-label mb-3 block md:mb-4"
         >
-          Begin
+          A clear next step
         </motion.span>
 
         <motion.h2
@@ -72,7 +72,7 @@ export function ClosingSection() {
           }}
           className="ei-type-section mb-3 md:mb-4"
         >
-          Ready to translate your world?
+          Ready to make the value felt?
         </motion.h2>
 
         <motion.p
@@ -87,8 +87,8 @@ export function ClosingSection() {
           }}
           className="mx-auto mb-6 max-w-[40ch] font-[var(--ei-font-copy)] text-[15px] leading-[1.8] tracking-[-0.006em] text-[var(--ei-type-color-secondary)] md:mb-8 md:text-[16px]"
         >
-          Identity, story, and digital systems for meaningful work that needs
-          to feel clear, coherent, and distinct.
+          Bring the challenge, the ambition, or the idea still looking for its
+          shape. We will build the system around it.
         </motion.p>
 
         <motion.div
@@ -100,9 +100,13 @@ export function ClosingSection() {
             ease: EASE_LUXURY,
             delay: 0.15,
           }}
+          className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
         >
-          <Button to="/contact" variant="primary">
-            Start a Conversation
+          <Button to="/contact?inquiry=project" variant="primary">
+            Start a project
+          </Button>
+          <Button to="/booking" variant="secondary">
+            Book an introduction
           </Button>
         </motion.div>
       </motion.div>

@@ -23,6 +23,14 @@ import {
   DURATION,
 } from "@/lib/motion-cinematic";
 
+const testimonial = {
+  pull: "They gave us clarity.",
+  quote:
+    "Echo in Ink has changed the way we think about our entire digital presence. They didn’t just give us a new identity — they gave us clarity. The system Aly built feels precise, intelligent, and unmistakably aligned with who we are. Every interaction now carries this quiet confidence and sense of momentum. It’s the first time our brand has truly felt like a reflection of our ambition.",
+  name: "Forrest Reynolds",
+  title: "Managing Director, The Vortex Group",
+} as const;
+
 const disciplines = [
   "Identity System",
   "Digital Experience",
@@ -54,7 +62,8 @@ export function LumoCaseStudyTeaser() {
   return (
     <Section
       spacing="none"
-className="relative overflow-hidden pt-8 pb-4 md:pt-8 md:pb-4"    >
+      className="relative overflow-hidden pt-8 pb-4 md:pt-8 md:pb-4"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -184,9 +193,7 @@ className="relative overflow-hidden pt-8 pb-4 md:pt-8 md:pb-4"    >
                   </motion.div>
 
                   <motion.div variants={driftUp}>
-                    <span
-                      className="ei-card-action"
-                    >
+                    <span className="ei-card-action">
                       View Case Study{" "}
                       <span className="inline-block transition-transform duration-500 group-hover:translate-x-0.5">
                         →
@@ -216,6 +223,19 @@ className="relative overflow-hidden pt-8 pb-4 md:pt-8 md:pb-4"    >
               </span>
             ))}
           </motion.div>
+
+          <motion.figure variants={driftUp} className="ei-home-lumo-proof">
+            <figcaption className="ei-home-lumo-proof-pull">
+              {testimonial.pull}
+            </figcaption>
+            <blockquote className="ei-home-lumo-proof-quote">
+              “{testimonial.quote}”
+            </blockquote>
+            <div className="ei-home-lumo-proof-attribution">
+              <span>{testimonial.name}</span>
+              <span>{testimonial.title}</span>
+            </div>
+          </motion.figure>
         </motion.div>
       </Container>
     </Section>

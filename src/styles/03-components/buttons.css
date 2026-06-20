@@ -279,6 +279,17 @@
   box-shadow: none;
 }
 
+@media (max-width: 389px) {
+  .ei-home-hero-actions {
+    gap: 0.75rem;
+  }
+
+  .ei-home-hero-actions .ei-page-section-hero-button-primary,
+  .ei-home-hero-actions .ei-page-section-hero-button-secondary {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .ei-btn-primary-cinematic,
   .ei-btn-secondary-cinematic {

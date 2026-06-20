@@ -1,11 +1,13 @@
-import { Helmet } from 'react-helmet-async';
-import { PageShell } from '@/components/layout/PageShell';
-import { Hero } from '@/components/home/HomeHero';
-import { Philosophy } from '@/components/home/HomePhilosophySection';
-import { WhatWeCreate } from '@/components/home/HomeWhatWeCreate';
-import { LumoCaseStudyTeaser } from '@/components/home/HomeFeaturedLumo';
-import { EmergingSystems } from '@/components/home/HomeOurSystems';
-import { ClosingSection } from '@/components/home/HomeClosingSection';
+import { Helmet } from "react-helmet-async";
+
+import { ClosingSection } from "@/components/home/HomeClosingSection";
+import { LumoCaseStudyTeaser } from "@/components/home/HomeFeaturedLumo";
+import { Hero } from "@/components/home/HomeHero";
+import { Philosophy } from "@/components/home/HomePhilosophySection";
+import { HomeProofStrip } from "@/components/home/HomeProofStrip";
+import { EmergingSystems } from "@/components/home/HomeOurSystems";
+import { WhatWeCreate } from "@/components/home/HomeWhatWeCreate";
+import { PageShell } from "@/components/layout/PageShell";
 
 export function HomePage() {
   return (
@@ -21,6 +23,9 @@ export function HomePage() {
       {/* ── HERO — Cinematic world entry ─────────────────────── */}
       <Hero />
 
+      {/* ── PROOF STRIP — Early evidence without metrics ─────── */}
+      <HomeProofStrip />
+
       {/* ── PHILOSOPHY — Atmospheric worldview ───────────────── */}
       <Philosophy />
 
@@ -35,9 +40,6 @@ export function HomePage() {
 
       {/* ── CLOSING CTA — Ecosystem invitation ───────────────── */}
       <ClosingSection />
-
-      {/* ── REMOVED FOOTER AS IN  — 4-column atmospheric epilogue ───────────── */}
-      
     </PageShell>
   );
 }

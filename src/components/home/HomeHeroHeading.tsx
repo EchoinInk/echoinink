@@ -41,8 +41,8 @@ export function HeroHeading() {
         variants={heroReveal}
         className="ei-type-hero-description mt-6 max-w-[46ch] text-[1rem] leading-[1.82] text-[var(--ei-color-text-secondary)] md:text-[1.02rem]"
       >
-        We shape identities, stories, and digital systems that make meaningful
-        work easier to understand, trust, and remember.
+        Echo in Ink builds identity systems, digital experiences, and
+        expressive worlds for brands ready to become unmistakable.
       </motion.p>
     </div>
   );
