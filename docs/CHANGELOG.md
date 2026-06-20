@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-06-20 — Studio and Shared Style Polish
+
+This week’s highlights:
+
+- Updated the Studio page with cinematic production polish and tighter shared rail alignment.
+- Simplified shared hero, card, and button styling across the main page set for more consistent framing.
+- Refined page-level styles across Home, Studio, Works, Systems, Sessions, Identity, Archive, and Contact.
+- Ran a formatting sweep across core token and typography files to keep the design system tidy.
+
 ## 2026-06-19 — Orbitals and Repo Cleanup
 
 This week’s highlights:

@@ -166,7 +166,7 @@ export function StudioPage() {
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-layout-page-rail"
+            className="mx-auto max-w-6xl"
           >
             <motion.div
               variants={fadeSoft}
@@ -228,9 +228,17 @@ export function StudioPage() {
 
       {/* WHAT WE MAKE */}
       <Section
-        spacing="none"
-        className="ei-studio-major-section relative pb-0 will-change-transform"
-      >
+      spacing="none"
+className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
+   <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 60% 40% at 50% 30%, rgb(var(--ei-violet-rgb) / 0.025) 0%, transparent 60%)",
+          filter: "blur(60px)",
+        }}
+      />
         <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
