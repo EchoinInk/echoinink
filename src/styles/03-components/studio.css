@@ -14,7 +14,13 @@
   }
 
   .ei-studio-major-section {
-    padding-top: var(--ei-section-standard-top);
+    padding-top: 2rem;
+  }
+
+  .ei-studio-content-rail {
+    width: min(100%, var(--ei-content-max));
+    max-width: var(--ei-content-max);
+    margin-inline: auto;
   }
 
   .ei-studio-section-rhythm-tight {

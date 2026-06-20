@@ -166,18 +166,20 @@ export function StudioPage() {
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="mx-auto max-w-6xl"
+            className="ei-studio-content-rail"
           >
+            <motion.div variants={driftUp} className="relative">
+              <SectionLabel label="Our Philosophy" />
+            </motion.div>
+
             <motion.div
               variants={fadeSoft}
-              className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-void-rgb)/0.12)] p-6 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.025),0_0_72px_rgb(var(--ei-violet-rgb)/0.04)] md:-translate-y-3 md:grid-cols-[minmax(0,1.05fr)_minmax(0,1.05fr)_minmax(18rem,0.82fr)] md:items-center md:gap-10 md:px-8 md:pb-7 md:pt-9 lg:px-10 lg:pb-8 lg:pt-12"
+              className="mt-8 grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-void-rgb)/0.12)] p-6 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.025),0_0_72px_rgb(var(--ei-violet-rgb)/0.04)] md:-translate-y-3 md:grid-cols-[minmax(0,1.05fr)_minmax(0,1.05fr)_minmax(18rem,0.82fr)] md:items-center md:gap-10 md:px-8 md:pb-7 md:pt-9 lg:px-10 lg:pb-8 lg:pt-12"
             >
               <motion.div variants={driftUp} className="relative">
-                <SectionLabel label="Our Philosophy" />
-
                 <motion.h2
                   variants={blurEmergence}
-                  className="ei-type-studio-philosophy mt-6 max-w-[18ch] whitespace-pre-line"
+                  className="ei-type-studio-philosophy max-w-[18ch] whitespace-pre-line"
                 >
                   {"We design with\n"}
                   <em className="ei-type-studio-philosophy-emphasis">
@@ -199,7 +201,7 @@ export function StudioPage() {
                 variants={driftUp}
                 className="relative max-w-[62ch] md:-top-4"
               >
-                <p className="ei-type-body mt-10 text-[var(--ei-color-text-secondary)]">
+                <p className="ei-type-body mt-16 text-[var(--ei-color-text-secondary)]">
                   Design is not decoration — it is meaning made visible. Every
                   decision is rooted in understanding, shaped by emotion, and
                   refined through story.
@@ -227,9 +229,10 @@ export function StudioPage() {
       </Section>
 
       {/* WHAT WE MAKE */}
-      <Section
-      spacing="none"
-className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
+     <Section
+        spacing="none"
+        className="ei-studio-major-section relative pb-0 will-change-transform"
+      >
    <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0"
@@ -245,7 +248,7 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-layout-page-rail"
+            className="ei-studio-content-rail"
           >
             <motion.div variants={driftUp} className="relative">
               <SectionLabel label="What We Make" />
@@ -312,17 +315,20 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-layout-page-rail"
+            className="ei-studio-content-rail"
           >
+            <motion.div variants={driftUp} className="relative">
+              <SectionLabel label="Our Process" />
+            </motion.div>
+
             <motion.div
               variants={fadeSoft}
-              className="grid gap-10 rounded-[var(--ei-card-radius-xl)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-void-rgb)/0.42)] p-7 shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.035),0_0_70px_rgb(var(--ei-halo-blue-rgb)/0.045)] md:grid-cols-[0.9fr_1.6fr] md:gap-14 md:p-10"
+              className="mt-8 grid gap-10 py-2 md:grid-cols-[0.9fr_1.6fr] md:gap-14 md:py-3"
             >
               <motion.div variants={driftUp}>
-                <SectionLabel label="Our Process" />
                 <motion.h2
                   variants={blurEmergence}
-                  className="ei-type-section-heading mt-6 max-w-[15ch]"
+                  className="ei-type-section-heading max-w-[15ch]"
                 >
                   A thoughtful journey from essence to world.
                 </motion.h2>
@@ -380,9 +386,13 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-layout-page-rail"
+            className="ei-studio-content-rail"
           >
-            <motion.div variants={fadeSoft}>
+            <motion.div variants={driftUp} className="relative">
+              <SectionLabel label="Featured Work" />
+            </motion.div>
+
+            <motion.div variants={fadeSoft} className="mt-8">
               <EchoCard variant="feature" padding="none" className="ei-card-world">
                 <Link to="/works/lumo" className="ei-card-world-link group">
                   <motion.div
@@ -401,11 +411,7 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
 
                   <motion.div variants={driftUp} className="ei-card-world-copy">
                     <div className="ei-studio-feature-copy">
-                      <span className="ei-type-label">
-                        Featured Work
-                      </span>
-
-                      <h2 className="ei-type-feature-title mt-8 uppercase tracking-[0.02em]">
+                      <h2 className="ei-type-feature-title uppercase tracking-[0.02em]">
                         LUMO
                       </h2>
 
@@ -444,11 +450,15 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
             initial="hidden"
             whileInView="visible"
             viewport={VIEWPORT.normal}
-            className="ei-layout-page-rail"
+            className="ei-studio-content-rail"
           >
+            <motion.div variants={driftUp} className="relative">
+              <SectionLabel label="BEGIN" />
+            </motion.div>
+
             <motion.div
               variants={fadeSoft}
-              className="relative flex flex-col items-center gap-6 overflow-hidden rounded-[var(--ei-card-radius-lg)] border border-[rgb(var(--ei-moonlit-rgb)/0.16)] bg-[linear-gradient(100deg,rgb(var(--ei-midnight-rgb)/0.64),rgb(var(--ei-void-rgb)/0.9)_58%,rgb(var(--ei-violet-rgb)/0.13))] px-7 py-8 text-center shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.045),0_0_76px_rgb(var(--ei-violet-rgb)/0.075)] md:px-10"
+              className="relative mt-8 flex flex-col items-center gap-6 overflow-hidden rounded-[var(--ei-card-radius-lg)] border border-[rgb(var(--ei-moonlit-rgb)/0.16)] bg-[linear-gradient(100deg,rgb(var(--ei-midnight-rgb)/0.64),rgb(var(--ei-void-rgb)/0.9)_58%,rgb(var(--ei-violet-rgb)/0.13))] px-7 py-8 text-center shadow-[inset_0_1px_0_rgb(var(--ei-ice-white-rgb)/0.045),0_0_76px_rgb(var(--ei-violet-rgb)/0.075)] md:px-10"
             >
               <div
                 aria-hidden="true"
@@ -480,11 +490,10 @@ className="relative overflow-hidden pt-10 pb-4 md:pt-8 md:pb-4"    >
                 variants={driftUp}
                 className="ei-studio-slim-cta-copy relative z-10 max-w-[40rem]"
               >
-                <SectionLabel label="BEGIN" align="center" />
-                <h2 className="ei-type-section-heading mt-6">
+                <h2 className="ei-type-section-heading">
                   Let&apos;s build your world.
                 </h2>
-                <p className="mx-auto mt-3 max-w-[34ch] text-[15px] leading-[1.8] tracking-[-0.006em] text-[var(--ei-color-text-secondary)] md:text-[16px]">
+                <p className="mx-auto mt-3 max-w-[60ch] text-[15px] leading-[1.8] tracking-[-0.006em] text-[var(--ei-color-text-secondary)] md:text-[16px]">
                   Through strategy, story, and identity systems designed to feel unmistakably yours.
                 </p>
               </motion.div>
