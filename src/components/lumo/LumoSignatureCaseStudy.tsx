@@ -1,9 +1,10 @@
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 import heroDesktop from "@/assets/imagery/hero/lumo-page-hero-desktop.webp";
-import heroMobile from "@/assets/imagery/hero/lumo-page-hero-mobile.webp";
 import atmosphereDesktop from "@/assets/imagery/hero/lumo-hero-light-horizon-desktop.webp";
+import monogram from "@/assets/brand/monogram/monogram-balanced.png";
 import celebrationCloud from "@/assets/projects/lumo/lumo-clouds/lumo-celebrationcloud.png";
 import connectedCloud from "@/assets/projects/lumo/lumo-clouds/lumo-connectedcloud.png";
 import focusCloud from "@/assets/projects/lumo/lumo-clouds/lumo-focuscloud.png";
@@ -16,123 +17,140 @@ import smilingCloud from "@/assets/projects/lumo/lumo-clouds/lumo-smilingcloud.p
 import thinkingCloud from "@/assets/projects/lumo/lumo-clouds/lumo-thinkingcloud.png";
 import thumbsUpCloud from "@/assets/projects/lumo/lumo-clouds/lumo-thumbsupcloud.png";
 import youTriedCloud from "@/assets/projects/lumo/lumo-clouds/lumo-youtriedcloud.png";
-import { Container } from "@/components/layout/Container";
-import { LumoHero } from "@/components/lumo/LumoHero";
-import { Button } from "@/components/ui/Button";
-import { SectionLabel } from "@/components/ui/SectionLabel";
-import {
-  blurEmergence,
-  driftUp,
-  fadeSoft,
-  staggerContainer,
-  STAGGER,
-  VIEWPORT,
-} from "@/lib/motion-cinematic";
+import { blurEmergence, driftUp, fadeSoft, staggerContainer, STAGGER, VIEWPORT } from "@/lib/motion-cinematic";
 
-const metadata = ["Identity System", "UX/UI Design", "Narrative Architecture"];
-
-const principles = [
-  {
-    title: "Reduce Overwhelm",
-    body: "Simpler choices, clear pacing, and calm grouping keep the next step visible.",
-    image: overwhelmedCloud,
-    alt: "Lumo cloud looking overwhelmed",
-  },
-  {
-    title: "Support Focus",
-    body: "Important actions rise gently to the surface without asking for constant attention.",
-    image: focusCloud,
-    alt: "Lumo focus cloud",
-  },
-  {
-    title: "Build Momentum",
-    body: "Small progress moments feel real, encouraging, and easy to return to.",
-    image: growingCloud,
-    alt: "Lumo cloud with growth sprout",
-  },
-  {
-    title: "Encourage Self-Kindness",
-    body: "The system avoids shame loops and makes room for rest, resets, and trying again.",
-    image: thumbsUpCloud,
-    alt: "Lumo cloud giving a thumbs up",
-  },
+const railItems = [
+  { id: "hero", index: "01", label: "Hero" },
+  { id: "introduction", index: "02", label: "Introduction" },
+  { id: "overview", index: "03", label: "Overview" },
+  { id: "system", index: "04", label: "Challenge / Outcome" },
+  { id: "minds", index: "05", label: "Designing for Neurodivergent Minds" },
+  { id: "character-system", index: "06", label: "Character System" },
+  { id: "product-screens", index: "07", label: "Product Screens" },
+  { id: "identity-system", index: "08", label: "Identity System" },
+  { id: "ecosystem", index: "09", label: "Ecosystem" },
+  { id: "testimonial", index: "10", label: "Testimonial" },
+  { id: "final-outcome", index: "11", label: "Final Outcome" },
 ];
 
-const characterSystem = [
+const overviewScreens = ["Start", "Dashboard", "Tasks", "Calendar", "Habits", "Budget", "Wellness"];
+
+const storyRows = [
   {
-    name: "Celebration Cloud",
-    role: "Marks progress with warmth and energy.",
-    image: celebrationCloud,
-    alt: "Lumo celebration cloud",
+    label: "Challenge",
+    body: "Traditional productivity apps often feel overwhelming, rigid, and shame-inducing for neurodivergent users.",
+    image: puzzleCloud,
+    alt: "Lumo puzzle mascot symbol",
   },
   {
-    name: "Focus Cloud",
-    role: "Helps attention stay with one kind next step.",
-    image: focusCloud,
-    alt: "Lumo focus cloud",
-  },
-  {
-    name: "Reminder Cloud",
-    role: "Offers gentle prompts without pressure.",
+    label: "Outcome",
+    body: "Lumo delivers a calming, flexible, and encouraging experience that builds habits and momentum gently.",
     image: gentleReminderCloud,
     alt: "Lumo gentle reminder cloud",
   },
   {
-    name: "Planning Cloud",
-    role: "Makes structure feel friendly and reachable.",
-    image: thinkingCloud,
-    alt: "Lumo thinking cloud",
-  },
-  {
-    name: "Support Cloud",
-    role: "Holds space when the day feels heavy.",
-    image: connectedCloud,
-    alt: "Lumo connected support cloud",
-  },
-  {
-    name: "Try Again Cloud",
-    role: "Turns resets into part of the rhythm.",
-    image: youTriedCloud,
-    alt: "Lumo you tried cloud",
+    label: "System",
+    body: "A cohesive design system with a friendly character, soft visual language, and accessible, customizable UI.",
+    image: growingCloud,
+    alt: "Lumo growing cloud",
   },
 ];
 
-const experienceFlow = [
-  "Daily focus",
-  "Tasks",
-  "Calendar",
-  "Habits",
-  "Meals",
-  "Budget",
-  "Wellbeing",
-];
-
-const outcomeCards = [
+const principles = [
   {
-    title: "Clearer Daily Focus",
-    body: "A gentler way to decide what matters now.",
+    title: "Reduce Overwhelm",
+    body: "Clear hierarchy, simple flows, and fewer competing demands.",
+    image: overwhelmedCloud,
+    alt: "Lumo overwhelmed cloud being supported",
   },
   {
-    title: "Gentle Habit Support",
-    body: "Routines designed for consistency without pressure.",
+    title: "Gentle Reminders",
+    body: "Helpful nudges that empower, not pressure.",
+    image: gentleReminderCloud,
+    alt: "Lumo reminder cloud with a note",
   },
   {
-    title: "Reduced Cognitive Load",
-    body: "Less visual demand, fewer decisions, and calmer hierarchy.",
+    title: "Celebrate Progress",
+    body: "Small wins matter. Visual feedback builds confidence.",
+    image: celebrationCloud,
+    alt: "Lumo cloud celebrating progress",
   },
   {
-    title: "A More Compassionate System",
-    body: "Progress language that leaves room for real life.",
+    title: "Flexible & Personal",
+    body: "Customizable routines and UI choices for changing needs.",
+    image: growingCloud,
+    alt: "Lumo cloud with a sprout",
   },
 ];
 
-function Reveal({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) {
+const characterSystem = [
+  { name: "Happy", image: smilingCloud, alt: "Happy Lumo cloud" },
+  { name: "Supportive", image: connectedCloud, alt: "Supportive Lumo cloud" },
+  { name: "Focused", image: focusCloud, alt: "Focused Lumo cloud" },
+  { name: "Reminding", image: gentleReminderCloud, alt: "Reminder Lumo cloud" },
+  { name: "Growing", image: growingCloud, alt: "Growing Lumo cloud" },
+  { name: "Curious", image: thinkingCloud, alt: "Curious thinking Lumo cloud" },
+];
+
+const productScreens = [
+  { title: "Dashboard", tone: "dashboard", details: ["Tasks 18", "Habits 7", "Budget $420"] },
+  { title: "Task List", tone: "tasks", details: ["Take meds", "Deep work", "Tidy up"] },
+  { title: "Habit Log", tone: "habits", details: ["Water", "Meals", "Movement"] },
+  { title: "Weekly Planner", tone: "planner", details: ["May", "Focus block", "Laundry"] },
+  { title: "Meal Planning", tone: "meals", details: ["Breakfast", "Lunch", "Dinner"] },
+  { title: "Budget Tracker", tone: "budget", details: ["Groceries", "Rent", "General"] },
+];
+
+const swatches = [
+  { name: "Lumo Violet", value: "#6d5dfc" },
+  { name: "Halo Blue", value: "var(--ei-halo-blue)" },
+  { name: "Echo Magenta", value: "var(--ei-echo-magenta)" },
+  { name: "Warm Gold", value: "#ffb45c" },
+  { name: "Soft Mint", value: "#63d5b4" },
+  { name: "Deep Ink", value: "var(--ei-ink)" },
+  { name: "Moonlit", value: "var(--ei-moonlit)" },
+  { name: "Ice White", value: "var(--ei-ice-white)" },
+];
+
+const outcomes = [
+  "Calmer Planning",
+  "Flexible Routines",
+  "Supportive Nudges",
+  "Designed for Real Life",
+  "Built for Neurodivergent Minds",
+];
+
+function useActiveSection() {
+  const [activeId, setActiveId] = useState(railItems[0].id);
+
+  useEffect(() => {
+    const sections = railItems
+      .map((item) => document.getElementById(item.id))
+      .filter((section): section is HTMLElement => Boolean(section));
+
+    if (!sections.length) return undefined;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible?.target.id) {
+          setActiveId(visible.target.id);
+        }
+      },
+      { rootMargin: "-24% 0px -58% 0px", threshold: [0.12, 0.24, 0.42] },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
+
+  return activeId;
+}
+
+function Reveal({ children, className }: { children: ReactNode; className?: string }) {
   return (
     <motion.div
       variants={staggerContainer(STAGGER.normal, 0)}
@@ -146,427 +164,394 @@ function Reveal({
   );
 }
 
-function StorySection({
-  index,
-  label,
-  title,
-  intro,
-  children,
-  className,
-}: {
-  index: string;
-  label: string;
-  title: ReactNode;
-  intro?: ReactNode;
-  children: ReactNode;
-  className?: string;
-}) {
+function LumoRail({ activeId }: { activeId: string }) {
   return (
-    <section className={className} aria-labelledby={`lumo-section-${index}`}>
-      <Container size="xl">
-        <Reveal className="ei-lumo-story-shell">
-          <motion.div variants={driftUp} className="ei-lumo-story-heading">
-            <SectionLabel label={label} index={index} />
-            <h2 id={`lumo-section-${index}`} className="ei-lumo-section-title">
-              {title}
-            </h2>
-            {intro ? <div className="ei-lumo-section-intro">{intro}</div> : null}
-          </motion.div>
-          {children}
-        </Reveal>
-      </Container>
-    </section>
+    <aside className="ei-lumo-rail" aria-label="Lumo case study navigation">
+      <Link to="/" className="ei-lumo-rail-brand" aria-label="Echo in Ink home">
+        <img src={monogram} alt="" aria-hidden="true" />
+        <span>echo in ink</span>
+      </Link>
+      <div className="ei-lumo-rail-project">
+        <span>Case Study</span>
+        <a href="#hero" aria-current={activeId === "hero" ? "page" : undefined}>
+          <i aria-hidden="true">✦</i>
+          Lumo
+        </a>
+      </div>
+      <nav>
+        {railItems.map((item) => (
+          <a
+            key={item.id}
+            href={`#${item.id}`}
+            className={activeId === item.id ? "is-active" : undefined}
+            aria-current={activeId === item.id ? "true" : undefined}
+          >
+            <span>{item.index}</span>
+            {item.label}
+          </a>
+        ))}
+      </nav>
+      <div className="ei-lumo-rail-footer">
+        <a href="#product-screens">View Project ↗</a>
+        <small>© 2024 Echo in Ink<br />All rights reserved.</small>
+        <span aria-hidden="true">✦</span>
+      </div>
+    </aside>
   );
 }
 
-function SparkMark({ label }: { label?: string }) {
-  return (
-    <span className="ei-lumo-spark-mark" aria-hidden={label ? undefined : true}>
-      {label ? <span>{label}</span> : null}
-    </span>
-  );
-}
+function LumoMobileNav({ activeId }: { activeId: string }) {
+  const current = railItems.find((item) => item.id === activeId) ?? railItems[0];
 
-function HeroClouds() {
   return (
-    <div className="ei-lumo-hero-clouds" aria-hidden="true">
-      <img src={smilingCloud} alt="" />
-      <span className="ei-lumo-hero-orbit ei-lumo-hero-orbit-one" />
-      <span className="ei-lumo-hero-orbit ei-lumo-hero-orbit-two" />
+    <div className="ei-lumo-mobile-nav">
+      <Link to="/" className="ei-lumo-mobile-brand" aria-label="Echo in Ink home">
+        <img src={monogram} alt="" aria-hidden="true" />
+        <span>Lumo case study</span>
+      </Link>
+      <details>
+        <summary>
+          <span>{current.index}</span>
+          {current.label}
+        </summary>
+        <nav aria-label="Lumo case study sections">
+          {railItems.map((item) => (
+            <a key={item.id} href={`#${item.id}`}>
+              <span>{item.index}</span>
+              {item.label}
+            </a>
+          ))}
+        </nav>
+      </details>
     </div>
   );
 }
 
-function ScreenArtifact({ title, index }: { title: string; index: number }) {
+function SectionKicker({ index, label }: { index?: string; label: string }) {
   return (
-    <article className="ei-lumo-screen-artifact">
-      <div className="ei-lumo-screen-topline">
-        <span>Lumo</span>
-        <i />
+    <p className="ei-lumo-section-kicker">
+      {index ? <span>{index}</span> : null}
+      {label}
+    </p>
+  );
+}
+
+function LumoPanel({
+  id,
+  index,
+  label,
+  children,
+  className = "",
+}: {
+  id: string;
+  index: string;
+  label: string;
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <section id={id} className={`ei-lumo-panel ${className}`} aria-labelledby={`${id}-heading`}>
+      <Reveal>
+        <SectionKicker index={index} label={label} />
+        {children}
+      </Reveal>
+    </section>
+  );
+}
+
+function LumoHeroPanel() {
+  return (
+    <section id="hero" className="ei-lumo-dashboard-hero" aria-labelledby="lumo-hero-heading">
+      <div className="ei-lumo-stars" aria-hidden="true">
+        <span />
+        <span />
+        <span />
+        <span />
+        <span />
+      </div>
+      <Reveal className="ei-lumo-hero-grid">
+        <motion.div variants={driftUp} className="ei-lumo-hero-copy">
+          <Link to="/" className="ei-lumo-hero-brand" aria-label="Echo in Ink home">
+            <img src={monogram} alt="" aria-hidden="true" />
+            <span>echo in ink</span>
+          </Link>
+          <SectionKicker index="" label="Case Study" />
+          <h1 id="lumo-hero-heading">Lumo</h1>
+          <h2>A world built for overwhelmed humans.</h2>
+          <p>
+            Lumo is an ADHD life planner that turns emotionally supportive planning into a calm,
+            clear, and intelligent experience.
+          </p>
+          <div className="ei-lumo-hero-meta-grid" aria-label="Lumo project metadata">
+            <div>
+              <span>Role</span>
+              <p>Product Design, Art Direction</p>
+            </div>
+            <div>
+              <span>Year</span>
+              <p>2024</p>
+            </div>
+            <div>
+              <span>Duration</span>
+              <p>10 weeks</p>
+            </div>
+          </div>
+        </motion.div>
+        <motion.figure variants={blurEmergence} className="ei-lumo-hero-art">
+          <img
+            src={heroDesktop}
+            alt="Lumo product world with mobile screens, purple cloud mascot, stars, and supportive planning UI"
+          />
+        </motion.figure>
+      </Reveal>
+    </section>
+  );
+}
+
+function ScreenArtifact({ title, tone, details, compact = false }: { title: string; tone: string; details: string[]; compact?: boolean }) {
+  return (
+    <article className={`ei-lumo-screen-artifact is-${tone} ${compact ? "is-compact" : ""}`}>
+      <div className="ei-lumo-screen-chrome">
+        <span>9:41</span>
+        <i aria-hidden="true" />
       </div>
       <h3>{title}</h3>
       <div className="ei-lumo-screen-body" aria-hidden="true">
-        <span />
-        <span />
-        <span />
-        <span />
+        {details.map((detail) => (
+          <span key={detail}>{detail}</span>
+        ))}
       </div>
-      <div className="ei-lumo-screen-footer">
-        <span>{String(index + 1).padStart(2, "0")}</span>
-        <SparkMark />
+      <div className="ei-lumo-screen-tabbar" aria-hidden="true">
+        <span />
+        <span />
+        <span />
       </div>
     </article>
   );
 }
 
-function LumoIntroSection() {
+function IntroductionOverview() {
   return (
-    <section className="ei-lumo-intro" aria-labelledby="lumo-section-01">
-      <Container size="xl">
-        <Reveal className="ei-lumo-intro-panel">
-          <motion.div variants={driftUp} className="ei-lumo-intro-copy">
-            <SectionLabel label="Introduction" index="01" />
-            <h2 id="lumo-section-01" className="ei-lumo-section-title">
-              Focus your light. Achieve more.
-            </h2>
+    <div className="ei-lumo-intro-overview-grid">
+      <LumoPanel id="introduction" index="02" label="Lumo Introduction" className="ei-lumo-intro-panel">
+        <div className="ei-lumo-intro-layout">
+          <div>
+            <h2 id="introduction-heading">Lumo is more than a planner.</h2>
             <p>
-              Lumo helps overwhelmed people organise life gently, turning everyday
-              planning into a softer system of focus, routines, reminders, and care.
+              It is a supportive companion that helps neurodivergent minds plan, focus, and
+              follow through without guilt.
             </p>
-            <dl className="ei-lumo-principle-list">
-              <div>
-                <dt>Calm first</dt>
-                <dd>Every interaction lowers pressure before it asks for action.</dd>
-              </div>
-              <div>
-                <dt>One next step</dt>
-                <dd>Structure is present, but never louder than the person using it.</dd>
-              </div>
-            </dl>
-          </motion.div>
-          <motion.div variants={blurEmergence} className="ei-lumo-intro-mascot">
-            <img src={smilingCloud} alt="Smiling Lumo cloud mascot" />
-          </motion.div>
-          <motion.blockquote variants={fadeSoft} className="ei-lumo-intro-quote">
-            Lumo is not just a planner. It is a calm companion that helps you focus,
-            stay kind to yourself, and make real progress.
-          </motion.blockquote>
-        </Reveal>
-      </Container>
-    </section>
+            <div className="ei-lumo-pill-row" aria-label="Lumo qualities">
+              <span>ADHD Friendly</span>
+              <span>Empathetic</span>
+              <span>Simple</span>
+              <span>Customizable</span>
+            </div>
+          </div>
+          <img src={connectedCloud} alt="Lumo cloud mascot holding a heart" />
+        </div>
+      </LumoPanel>
+
+      <LumoPanel id="overview" index="03" label="Full Product Overview" className="ei-lumo-overview-panel">
+        <div className="ei-lumo-overview-board" aria-label="Lumo product overview sequence">
+          {overviewScreens.map((screen, index) => (
+            <ScreenArtifact
+              key={screen}
+              title={screen}
+              tone={productScreens[index % productScreens.length].tone}
+              details={productScreens[index % productScreens.length].details}
+              compact
+            />
+          ))}
+        </div>
+      </LumoPanel>
+    </div>
   );
 }
 
-function LumoOverviewSection() {
+function StorySystemPanel() {
   return (
-    <StorySection
-      index="02"
-      label="Product overview"
-      title="Everything in one gentle system."
-      intro="The product story is built around a complete support ecosystem: daily clarity, practical routines, emotional safety, and low-friction progress."
-      className="ei-lumo-overview"
-    >
-      <motion.div variants={blurEmergence} className="ei-lumo-product-board">
-        <div className="ei-lumo-board-copy">
-          <span>Experience map</span>
-          <p>
-            Existing final screenshots are not present in this repo, so this board
-            uses an asset-ready presentation with the available Lumo atmosphere and
-            product narrative structure.
-          </p>
-        </div>
-        <div className="ei-lumo-board-visual">
-          <picture>
-            <img src={atmosphereDesktop} alt="Lumo blue violet atmospheric product world" />
-          </picture>
-          <div className="ei-lumo-board-screens" aria-label="Lumo product areas">
-            {experienceFlow.slice(0, 5).map((item, index) => (
-              <ScreenArtifact key={item} title={item} index={index} />
+    <LumoPanel id="system" index="03" label="Challenge / Outcome / System" className="ei-lumo-system-panel">
+      <div className="ei-lumo-story-rows">
+        {storyRows.map((item) => (
+          <article key={item.label}>
+            <img src={item.image} alt={item.alt} />
+            <div>
+              <h2>{item.label}</h2>
+              <p>{item.body}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </LumoPanel>
+  );
+}
+
+function MindsPanel() {
+  return (
+    <LumoPanel id="minds" index="04" label="Designing for Neurodivergent Minds" className="ei-lumo-minds-panel">
+      <div className="ei-lumo-card-grid">
+        {principles.map((principle) => (
+          <article key={principle.title}>
+            <img src={principle.image} alt={principle.alt} />
+            <h2>{principle.title}</h2>
+            <p>{principle.body}</p>
+          </article>
+        ))}
+      </div>
+    </LumoPanel>
+  );
+}
+
+function CharacterPanel() {
+  return (
+    <LumoPanel id="character-system" index="05" label="Character System" className="ei-lumo-character-panel">
+      <div className="ei-lumo-character-row">
+        {characterSystem.map((character) => (
+          <figure key={character.name}>
+            <img src={character.image} alt={character.alt} />
+            <figcaption>{character.name}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </LumoPanel>
+  );
+}
+
+function ProductGalleryPanel() {
+  return (
+    <LumoPanel id="product-screens" index="06" label="Selected Screens" className="ei-lumo-product-panel">
+      <div className="ei-lumo-product-gallery" aria-label="Lumo product screen gallery">
+        {productScreens.map((screen) => (
+          <ScreenArtifact key={screen.title} title={screen.title} tone={screen.tone} details={screen.details} />
+        ))}
+      </div>
+    </LumoPanel>
+  );
+}
+
+function IdentityPanel() {
+  return (
+    <LumoPanel id="identity-system" index="07" label="Identity System" className="ei-lumo-identity-panel">
+      <div className="ei-lumo-identity-board">
+        <article className="ei-lumo-brand-card">
+          <span className="ei-lumo-spark-mark" aria-hidden="true" />
+          <h2>Lumo</h2>
+          <p>Focus. Plan. Do. Feel good.</p>
+          <div aria-label="Icon and spark mark samples">
+            <i />
+            <i />
+            <i />
+          </div>
+        </article>
+        <article className="ei-lumo-palette-card">
+          <h2>Colour Palette</h2>
+          <div>
+            {swatches.map((swatch) => (
+              <span key={swatch.name}>
+                <i />
+                <b>{swatch.name}</b>
+                <small>{swatch.value}</small>
+              </span>
             ))}
           </div>
-        </div>
-      </motion.div>
-    </StorySection>
-  );
-}
-
-function LumoNarrativeSystem() {
-  const items = [
-    {
-      title: "The Challenge",
-      body: "Traditional planning tools can be dense, demanding, and cognitively draining, especially when life already feels full.",
-      image: puzzleCloud,
-    },
-    {
-      title: "The Outcome",
-      body: "Lumo reframes planning as gentle support: clear enough to guide, soft enough to return to.",
-      image: gentleReminderCloud,
-    },
-    {
-      title: "The System",
-      body: "Clarity, routines, emotional safety, and low-friction progress work together as one calm product world.",
-      image: growingCloud,
-    },
-  ];
-
-  return (
-    <StorySection
-      index="03"
-      label="Challenge · Outcome · System"
-      title="Planning, rebuilt as support."
-      className="ei-lumo-narrative"
-    >
-      <motion.div variants={staggerContainer(STAGGER.tight, 0.08)} className="ei-lumo-narrative-panel">
-        {items.map((item) => (
-          <motion.article key={item.title} variants={driftUp}>
-            <img src={item.image} alt="" aria-hidden="true" />
-            <h3>{item.title}</h3>
-            <p>{item.body}</p>
-          </motion.article>
-        ))}
-      </motion.div>
-    </StorySection>
-  );
-}
-
-function LumoPrinciplesSection() {
-  return (
-    <StorySection
-      index="04"
-      label="Designing for neurodivergent minds"
-      title="Built with empathy. Backed by intention."
-      intro="The design direction treats accessibility as atmosphere, pacing, copy, hierarchy, and emotional permission working together."
-      className="ei-lumo-principles"
-    >
-      <motion.div variants={staggerContainer(STAGGER.tight, 0.08)} className="ei-lumo-principles-grid">
-        {principles.map((principle) => (
-          <motion.article key={principle.title} variants={driftUp}>
-            <img src={principle.image} alt={principle.alt} />
-            <h3>{principle.title}</h3>
-            <p>{principle.body}</p>
-          </motion.article>
-        ))}
-      </motion.div>
-    </StorySection>
-  );
-}
-
-function LumoCharacterSystem() {
-  return (
-    <StorySection
-      index="05"
-      label="Character system"
-      title="A little cloud. A big difference."
-      intro="The cloud character gives Lumo emotional warmth, recognisable feedback, and a softer way to guide people through the product."
-      className="ei-lumo-characters"
-    >
-      <motion.div variants={staggerContainer(STAGGER.tight, 0.08)} className="ei-lumo-character-rail">
-        {characterSystem.map((character) => (
-          <motion.figure key={character.name} variants={driftUp}>
-            <img src={character.image} alt={character.alt} />
-            <figcaption>
-              <span>{character.name}</span>
-              <p>{character.role}</p>
-            </figcaption>
-          </motion.figure>
-        ))}
-      </motion.div>
-    </StorySection>
-  );
-}
-
-function LumoProductGallery() {
-  return (
-    <StorySection
-      index="06"
-      label="Product experience"
-      title="Made for real life. Not perfect days."
-      intro="The product flow is organized around everyday recovery: start small, regain context, make one useful move, and return without shame."
-      className="ei-lumo-experience"
-    >
-      <motion.div variants={fadeSoft} className="ei-lumo-gallery-scroll" aria-label="Lumo product experience areas">
-        {experienceFlow.map((item, index) => (
-          <ScreenArtifact key={item} title={item} index={index} />
-        ))}
-      </motion.div>
-    </StorySection>
-  );
-}
-
-function LumoIdentitySystem() {
-  const swatches = ["Sky Blue", "Bright Indigo", "Violet", "Magenta", "Coral", "Lime", "Ink", "Mist"];
-
-  return (
-    <StorySection
-      index="07"
-      label="Identity system"
-      title="A new spark of clarity."
-      intro="No finished logo asset exists in the repo, so this section presents the available typographic identity direction, color logic, and sparkle motif as a production-ready system frame."
-      className="ei-lumo-identity"
-    >
-      <motion.div variants={blurEmergence} className="ei-lumo-identity-board">
-        <div className="ei-lumo-wordmark-panel">
-          <SparkMark />
-          <strong>Lumo</strong>
-          <span>Focus your light. Achieve more.</span>
-        </div>
-        <div className="ei-lumo-type-panel">
-          <span>Aa</span>
+        </article>
+        <article className="ei-lumo-type-card">
+          <h2>Typography</h2>
           <strong>Aa</strong>
-          <p>Fraunces editorial warmth with clean structural product rhythm.</p>
-        </div>
-        <div className="ei-lumo-swatch-panel" aria-label="Lumo color atmosphere">
-          {swatches.map((swatch) => (
-            <span key={swatch} title={swatch} />
-          ))}
-        </div>
-        <div className="ei-lumo-icon-panel" aria-label="Lumo app icon treatments">
-          <SparkMark />
-          <SparkMark />
-          <SparkMark />
-        </div>
-      </motion.div>
-    </StorySection>
+          <p>Editorial warmth paired with a clean product rhythm for readable, emotionally safe UI.</p>
+          <dl>
+            <div><dt>Headings</dt><dd>Editorial</dd></div>
+            <div><dt>Interface</dt><dd>Structural</dd></div>
+            <div><dt>Body</dt><dd>System Sans</dd></div>
+          </dl>
+        </article>
+      </div>
+    </LumoPanel>
   );
 }
 
-function LumoEcosystemSection() {
+function EcosystemPanel() {
   return (
-    <StorySection
-      index="08"
-      label="Ecosystem"
-      title="All pieces working together in harmony."
-      intro="The complete world combines atmosphere, characters, product rhythm, copy, and brand details without turning the page into a noisy collage."
-      className="ei-lumo-ecosystem"
-    >
-      <motion.div variants={blurEmergence} className="ei-lumo-ecosystem-collage">
-        <img className="ei-lumo-ecosystem-atmosphere" src={atmosphereDesktop} alt="" aria-hidden="true" />
-        <img className="ei-lumo-ecosystem-cloud cloud-one" src={smilingCloud} alt="Smiling Lumo cloud mascot" />
-        <img className="ei-lumo-ecosystem-cloud cloud-two" src={restingCloud} alt="Resting Lumo cloud mascot" />
-        <img className="ei-lumo-ecosystem-cloud cloud-three" src={celebrationCloud} alt="Celebrating Lumo cloud mascot" />
-        <div className="ei-lumo-ecosystem-screens" aria-label="Lumo ecosystem elements">
-          {experienceFlow.slice(0, 4).map((item, index) => (
-            <ScreenArtifact key={item} title={item} index={index} />
-          ))}
+    <LumoPanel id="ecosystem" index="08" label="Ecosystem" className="ei-lumo-ecosystem-panel">
+      <div className="ei-lumo-ecosystem-stage">
+        <img className="ei-lumo-ecosystem-bg" src={atmosphereDesktop} alt="" aria-hidden="true" />
+        <img className="ei-lumo-ecosystem-cloud" src={smilingCloud} alt="Smiling Lumo cloud mascot" />
+        <span className="ei-lumo-ecosystem-app" aria-label="Lumo spark app icon" />
+        <ScreenArtifact title="Focus Session" tone="planner" details={["Breathe", "Plan", "Begin"]} compact />
+        <div className="ei-lumo-watch" aria-label="Lumo wearable concept">
+          <span />
         </div>
-      </motion.div>
-    </StorySection>
+        <img className="ei-lumo-ecosystem-plant" src={growingCloud} alt="Lumo growth mascot" />
+      </div>
+    </LumoPanel>
   );
 }
 
-function LumoQuoteSection() {
+function TestimonialPanel() {
   return (
-    <StorySection
-      index="09"
-      label="Design intent"
-      title="A calmer way back to yourself."
-      className="ei-lumo-quote"
-    >
-      <motion.div variants={blurEmergence} className="ei-lumo-quote-panel">
+    <LumoPanel id="testimonial" index="09" label="Testimonial" className="ei-lumo-testimonial-panel">
+      <div className="ei-lumo-testimonial-layout">
         <blockquote>
-          Lumo should feel like the moment the room gets quieter: the next step is
-          still there, but it no longer feels like a demand.
+          Lumo should feel like the moment the room gets quieter: the next step is still there,
+          but it no longer feels like a demand.
         </blockquote>
         <div>
           <span>Experience principle</span>
-          <p>No fabricated testimonial is used. This statement describes the intended product feeling.</p>
+          <p>No fabricated testimonial or attribution is used. This statement preserves the existing product-intent meaning.</p>
         </div>
-        <img src={gentleReminderCloud} alt="Gentle reminder Lumo cloud" />
-      </motion.div>
-    </StorySection>
+        <img src={thumbsUpCloud} alt="Supportive Lumo cloud mascot" />
+      </div>
+    </LumoPanel>
   );
 }
 
-function LumoOutcomeSection() {
+function OutcomePanel() {
   return (
-    <StorySection
-      index="10"
-      label="Final outcome"
-      title="Lumo turns planning into a supportive ecosystem."
-      intro="Because no verified metrics are present in the repo, the outcome is expressed as qualitative product value rather than invented numbers."
-      className="ei-lumo-outcome"
-    >
-      <motion.div variants={staggerContainer(STAGGER.tight, 0.08)} className="ei-lumo-outcome-grid">
-        {outcomeCards.map((card) => (
-          <motion.article key={card.title} variants={driftUp}>
-            <SparkMark />
-            <h3>{card.title}</h3>
-            <p>{card.body}</p>
-          </motion.article>
-        ))}
-      </motion.div>
-    </StorySection>
-  );
-}
-
-function LumoClosingCTA() {
-  return (
-    <section className="ei-lumo-closing" aria-labelledby="lumo-section-11">
-      <Container size="xl">
-        <Reveal className="ei-lumo-closing-panel">
-          <motion.div variants={driftUp}>
-            <SectionLabel label="Ready to build with" index="11" />
-            <h2 id="lumo-section-11" className="ei-lumo-section-title">
-              Every world starts with a spark.
-            </h2>
-            <p>Let us create something meaningful together.</p>
-          </motion.div>
-          <motion.div variants={fadeSoft} className="ei-lumo-closing-action">
-            <Button to="/contact" variant="primary">
-              Start a Conversation <span aria-hidden="true" className="ei-cta-arrow">→</span>
-            </Button>
-          </motion.div>
-        </Reveal>
-      </Container>
-    </section>
+    <LumoPanel id="final-outcome" index="10" label="The Impact" className="ei-lumo-outcome-panel">
+      <div className="ei-lumo-outcome-layout">
+        <div className="ei-lumo-outcomes" aria-label="Qualitative Lumo outcomes">
+          {outcomes.map((outcome) => (
+            <article key={outcome}>
+              <span>{outcome}</span>
+            </article>
+          ))}
+        </div>
+        <img src={restingCloud} alt="Resting celebratory Lumo cloud mascot" />
+      </div>
+    </LumoPanel>
   );
 }
 
 export function SignatureCaseStudy() {
+  const activeId = useActiveSection();
+
   return (
     <article className="ei-lumo-case-study">
-      <header>
-        <LumoHero
-          variant="caseStudy"
-          eyebrow="Case study"
-          title="Lumo"
-          description="A luminous identity and digital experience shaped around clarity, emotional safety, and coherent expression for overwhelmed humans."
-          kicker={
-            <>
-              <p className="ei-lumo-hero-title-line">A world built for overwhelmed humans.</p>
-              <ul className="ei-lumo-hero-meta" aria-label="Lumo project scope">
-                {metadata.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </>
-          }
-          actions={
-            <Button to="#lumo-section-01" variant="tertiary">
-              Case study overview <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-down">↓</span>
-            </Button>
-          }
-          media={<HeroClouds />}
-          backgroundImage={heroDesktop}
-          mobileBackgroundImage={heroMobile}
-          imageAlt=""
-          headingId="lumo-hero-heading"
-          className="ei-lumo-hero"
-          contentClassName="ei-lumo-hero-content"
-        />
-      </header>
-
-      <LumoIntroSection />
-      <LumoOverviewSection />
-      <LumoNarrativeSystem />
-      <LumoPrinciplesSection />
-      <LumoCharacterSystem />
-      <LumoProductGallery />
-      <LumoIdentitySystem />
-      <LumoEcosystemSection />
-      <LumoQuoteSection />
-      <LumoOutcomeSection />
-      <LumoClosingCTA />
+      <LumoRail activeId={activeId} />
+      <main className="ei-lumo-main" aria-label="Lumo case study content">
+        <LumoMobileNav activeId={activeId} />
+        <LumoHeroPanel />
+        <div className="ei-lumo-panel-stack">
+          <IntroductionOverview />
+          <div className="ei-lumo-two-column">
+            <StorySystemPanel />
+            <MindsPanel />
+          </div>
+          <div className="ei-lumo-two-column ei-lumo-two-column-balanced">
+            <CharacterPanel />
+            <ProductGalleryPanel />
+          </div>
+          <div className="ei-lumo-two-column ei-lumo-two-column-balanced">
+            <IdentityPanel />
+            <EcosystemPanel />
+          </div>
+          <div className="ei-lumo-two-column ei-lumo-two-column-balanced">
+            <TestimonialPanel />
+            <OutcomePanel />
+          </div>
+        </div>
+      </main>
     </article>
   );
 }

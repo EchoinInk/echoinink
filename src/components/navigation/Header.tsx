@@ -18,6 +18,10 @@ export function Header() {
   const { pathname } = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  if (pathname === "/works/lumo") {
+    return null;
+  }
+
   const closeMenu = () => setMenuOpen(false);
   const isPathActive = (href: string) =>
     pathname === href || pathname.startsWith(`${href}/`);
