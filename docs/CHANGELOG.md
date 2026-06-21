@@ -1,13 +1,13 @@
 # Changelog
 
-## 2026-06-20 — Studio and Shared Style Polish
+## 2026-06-21 — Lumo and Homepage Polish
 
 This week’s highlights:
 
-- Updated the Studio page with cinematic production polish and tighter shared rail alignment.
-- Simplified shared hero, card, and button styling across the main page set for more consistent framing.
-- Refined page-level styles across Home, Studio, Works, Systems, Sessions, Identity, Archive, and Contact.
-- Ran a formatting sweep across core token and typography files to keep the design system tidy.
+- Updated the Lumo case study with cinematic production polish and a long-form numbered story structure.
+- Refined the Home page with clearer proof hierarchy, an early proof strip, and stronger service-card distinction.
+- Updated the Works page with tighter proof sequencing, an editorial testimonial, and a calmer closing CTA.
+- Updated the Studio page with unified section rails and aligned editorial section structures.
 
 ## 2026-06-19 — Orbitals and Repo Cleanup
 
