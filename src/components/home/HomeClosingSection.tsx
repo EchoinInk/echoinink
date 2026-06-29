@@ -103,10 +103,10 @@ export function ClosingSection() {
           className="flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center"
         >
           <Button to="/contact?inquiry=project" variant="primary">
-            Start a project
+            Start a conversation
           </Button>
-          <Button to="/booking" variant="secondary">
-            Book an introduction
+          <Button to="/works" variant="secondary">
+            Explore selected work
           </Button>
         </motion.div>
       </motion.div>

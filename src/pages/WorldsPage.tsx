@@ -202,15 +202,16 @@ export function WorldsPage() {
         title="Build the world your work belongs to."
         italicWord="world"
         description={worldsHero.description}
+        offerAnchor="Narrative architecture, identity direction, and immersive digital presence for brands and cultural projects becoming more distinct."
         image={worldsHeroDesktop}
         mobileImage={worldsHeroMobile}
         imageAlt="Dark cinematic vertical portal suggesting an immersive creative world"
         align="left"
-        
-        ctaLabel="Enquire about your world"
-        ctaHref={worldsHero.primaryCta.href}
-        secondaryCtaLabel="See what worldbuilding means"
-        secondaryCtaHref="#worldbuilding-definition"
+
+        ctaLabel="Discuss a world"
+        ctaHref="/contact?inquiry=project"
+        secondaryCtaLabel="Explore selected work"
+        secondaryCtaHref="/works"
       />
 
       <Section
@@ -512,7 +513,7 @@ export function WorldsPage() {
         headingId="worlds-closing-heading"
         actions={
           <Button to={worldsClosing.cta.href} variant="primary">
-            Enquire about World Architecture
+            Discuss a world
           </Button>
         }
         secondary={

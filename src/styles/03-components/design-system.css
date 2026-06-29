@@ -859,6 +859,34 @@
     color: rgb(var(--ei-moonlit-rgb) / 0.8);
   }
 
+  .ei-page-offer-anchor {
+    display: grid;
+    gap: 0.8rem;
+    max-width: 44ch;
+  }
+
+  .ei-page-offer-anchor-rule {
+    width: 3.25rem;
+    height: 1px;
+    border-radius: 999px;
+    background:
+      linear-gradient(
+        90deg,
+        rgb(var(--ei-midnight-rgb) / 0.15) 0%,
+        rgb(var(--ei-halo-blue-rgb) / 0.7) 100%
+      );
+    box-shadow: 0 0 18px rgb(var(--ei-halo-blue-rgb) / 0.14);
+  }
+
+  .ei-page-offer-anchor-text {
+    color: rgb(var(--ei-moonlit-rgb) / 0.9);
+    font-family: var(--ei-font-copy);
+    font-size: clamp(0.95rem, 1.08vw, 1.05rem);
+    line-height: 1.68;
+    letter-spacing: -0.006em;
+    text-wrap: balance;
+  }
+
   .ei-type-studio-body-small,
   small,
   figcaption,
@@ -921,6 +949,19 @@
     .ei-type-studio-body,
     .ei-page-section-hero-description {
       color: rgb(var(--ei-moonlit-rgb) / 0.84);
+    }
+
+    .ei-page-offer-anchor {
+      gap: 0.7rem;
+    }
+
+    .ei-page-offer-anchor-rule {
+      width: 2.75rem;
+    }
+
+    .ei-page-offer-anchor-text {
+      font-size: 0.95rem;
+      line-height: 1.72;
     }
 
     .ei-type-studio-body-small,

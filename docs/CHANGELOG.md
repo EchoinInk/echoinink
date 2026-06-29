@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-06-24 — Audit Notes and Repo Docs
+
+This week’s highlights:
+
+- Added a refreshed README with the current project stack, local development, build, and contact-form notes.
+- Produced a new design inconsistencies report to capture source-verified review risks and intentional exceptions.
+- Reworked the design system audit and added a concise audit-priorities brief for future reviews.
+
 ## 2026-06-21 — Lumo and Homepage Polish
 
 This week’s highlights:

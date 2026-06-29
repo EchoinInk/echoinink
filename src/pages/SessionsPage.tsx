@@ -128,15 +128,16 @@ export function SessionsPage() {
   eyebrow="Echo Sessions"
   title="Clarity before expression."
   description={sessionsHero.body[0]}
+  offerAnchor="A focused creative-direction session for founders and teams who need clarity before committing to a larger build."
   image={sessionsHeroDesktop}
   mobileImage={sessionsHeroMobile}
   imageAlt="Luminous blue-violet threshold over a dark cinematic horizon"
   align="left"
   
-  ctaLabel="Book a session"
+  ctaLabel="Request a session"
   ctaHref={sessionsHero.primaryCta.href}
-  secondaryCtaLabel="See what happens inside"
-  secondaryCtaHref="#inside-the-session"
+  secondaryCtaLabel="Explore the studio"
+  secondaryCtaHref="/studio"
 />
 
       <Section spacing="none" className="ei-sessions-section ei-sessions-definition">
@@ -372,8 +373,8 @@ export function SessionsPage() {
             </div>
 
             <motion.p variants={fadeSoft} className="ei-sessions-format-note">
-              Unsure which format fits? Start with the 60-minute session. The contact form gives you
-              space to describe what you are carrying.
+              Unsure which format fits? Start with the 60-minute session. The request form gives you
+              space to describe what you are carrying before a time is suggested.
             </motion.p>
           </motion.div>
         </Container>
@@ -381,7 +382,7 @@ export function SessionsPage() {
 
       <CTASection
         variant="imagePanel"
-        eyebrow="Book an Echo Session"
+        eyebrow="Request an Echo Session"
         heading={sessionsClosing.heading}
         body={sessionsClosing.subline}
         image={imageCTA}
@@ -389,7 +390,7 @@ export function SessionsPage() {
         className="ei-sessions-closing"
         actions={
           <Button to={sessionsClosing.cta.href} variant="primary">
-            Book a session <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
+            Request a session <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
           </Button>
         }
         secondary="60 or 90 minutes · Private one-to-one creative direction · NZD pricing"

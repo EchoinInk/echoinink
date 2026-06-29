@@ -17,6 +17,9 @@ import smilingCloud from "@/assets/projects/lumo/lumo-clouds/lumo-smilingcloud.p
 import thinkingCloud from "@/assets/projects/lumo/lumo-clouds/lumo-thinkingcloud.png";
 import thumbsUpCloud from "@/assets/projects/lumo/lumo-clouds/lumo-thumbsupcloud.png";
 import youTriedCloud from "@/assets/projects/lumo/lumo-clouds/lumo-youtriedcloud.png";
+import { CTASection } from "@/components/sections/CTASection";
+import { Button } from "@/components/ui/Button";
+import { ProjectContext } from "@/components/works/ProjectContext";
 import { blurEmergence, driftUp, fadeSoft, staggerContainer, STAGGER, VIEWPORT } from "@/lib/motion-cinematic";
 
 const railItems = [
@@ -29,8 +32,8 @@ const railItems = [
   { id: "product-screens", index: "07", label: "Product Screens" },
   { id: "identity-system", index: "08", label: "Identity System" },
   { id: "ecosystem", index: "09", label: "Ecosystem" },
-  { id: "testimonial", index: "10", label: "Testimonial" },
-  { id: "final-outcome", index: "11", label: "Final Outcome" },
+  { id: "experience-principle", index: "10", label: "Experience Principle" },
+  { id: "final-outcome", index: "11", label: "Concept Direction" },
 ];
 
 const overviewScreens = ["Start", "Dashboard", "Tasks", "Calendar", "Habits", "Budget", "Wellness"];
@@ -43,8 +46,8 @@ const storyRows = [
     alt: "Lumo puzzle mascot symbol",
   },
   {
-    label: "Outcome",
-    body: "Lumo delivers a calming, flexible, and encouraging experience that builds habits and momentum gently.",
+    label: "Design intent",
+    body: "Lumo is shaped as a calming, flexible, and encouraging product concept that builds habits and momentum gently.",
     image: gentleReminderCloud,
     alt: "Lumo gentle reminder cloud",
   },
@@ -120,6 +123,31 @@ const outcomes = [
   "Built for Neurodivergent Minds",
 ];
 
+const lumoProjectContext = {
+  status: "Independent product concept",
+  scope: "Identity direction, interface concept, visual system",
+  type: "Prototype case study",
+} as const;
+
+const lumoEvidence = [
+  {
+    title: "Product challenge",
+    body: "Make planning feel less rigid, less punitive, and easier to return to after overwhelm.",
+  },
+  {
+    title: "Design intent",
+    body: "Use softness, hierarchy, and a companion character system to make the next step feel approachable.",
+  },
+  {
+    title: "Accessibility considerations",
+    body: "Reduce cognitive load through simple flows, legible interface rhythm, gentle reminders, and flexible routines.",
+  },
+  {
+    title: "Concept boundary",
+    body: "This page does not claim a launched product, clinical validation, user research, or accessibility testing.",
+  },
+] as const;
+
 function useActiveSection() {
   const [activeId, setActiveId] = useState(railItems[0].id);
 
@@ -172,7 +200,7 @@ function LumoRail({ activeId }: { activeId: string }) {
         <span>echo in ink</span>
       </Link>
       <div className="ei-lumo-rail-project">
-        <span>Case Study</span>
+        <span>Selected Work</span>
         <a href="#hero" aria-current={activeId === "hero" ? "page" : undefined}>
           <i aria-hidden="true">✦</i>
           Lumo
@@ -207,7 +235,7 @@ function LumoMobileNav({ activeId }: { activeId: string }) {
     <div className="ei-lumo-mobile-nav">
       <Link to="/" className="ei-lumo-mobile-brand" aria-label="Echo in Ink home">
         <img src={monogram} alt="" aria-hidden="true" />
-        <span>Lumo case study</span>
+        <span>Lumo selected work</span>
       </Link>
       <details>
         <summary>
@@ -275,27 +303,14 @@ function LumoHeroPanel() {
             <img src={monogram} alt="" aria-hidden="true" />
             <span>echo in ink</span>
           </Link>
-          <SectionKicker index="" label="Case Study" />
+          <SectionKicker index="" label="Selected Work" />
           <h1 id="lumo-hero-heading">Lumo</h1>
           <h2>A world built for overwhelmed humans.</h2>
           <p>
-            Lumo is an ADHD life planner that turns emotionally supportive planning into a calm,
-            clear, and intelligent experience.
+            Lumo is an ADHD life-planner concept that turns emotionally supportive planning into
+            a calm, clear, and intelligent product world.
           </p>
-          <div className="ei-lumo-hero-meta-grid" aria-label="Lumo project metadata">
-            <div>
-              <span>Role</span>
-              <p>Product Design, Art Direction</p>
-            </div>
-            <div>
-              <span>Year</span>
-              <p>2024</p>
-            </div>
-            <div>
-              <span>Duration</span>
-              <p>10 weeks</p>
-            </div>
-          </div>
+          <ProjectContext context={lumoProjectContext} className="ei-lumo-hero-context" />
         </motion.div>
         <motion.figure variants={blurEmergence} className="ei-lumo-hero-art">
           <img
@@ -303,6 +318,61 @@ function LumoHeroPanel() {
             alt="Lumo product world with mobile screens, purple cloud mascot, stars, and supportive planning UI"
           />
         </motion.figure>
+      </Reveal>
+    </section>
+  );
+}
+
+function LumoEvidencePanel() {
+  return (
+    <section className="ei-lumo-evidence-panel" aria-labelledby="lumo-evidence-heading">
+      <Reveal className="ei-lumo-evidence-shell">
+        <motion.div variants={driftUp} className="ei-lumo-evidence-copy">
+          <SectionKicker index="" label="Project context" />
+          <h2 id="lumo-evidence-heading">What this case study proves, and what it does not claim.</h2>
+          <p>
+            The page is presented as independent product-world exploration: identity, interface
+            direction, emotional UX, and a prototype-level experience system.
+          </p>
+        </motion.div>
+
+        <motion.div variants={fadeSoft} className="ei-lumo-evidence-list">
+          {lumoEvidence.map((item) => (
+            <article key={item.title}>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
+            </article>
+          ))}
+        </motion.div>
+      </Reveal>
+    </section>
+  );
+}
+
+function StudioBridgePanel() {
+  return (
+    <section className="ei-lumo-studio-bridge" aria-labelledby="lumo-studio-bridge-heading">
+      <Reveal className="ei-lumo-studio-bridge-shell">
+        <motion.div variants={driftUp} className="ei-lumo-studio-bridge-copy">
+          <SectionKicker index="" label="Selected Work" />
+          <h2 id="lumo-studio-bridge-heading">
+            Lumo sits inside Echo in Ink&apos;s selected work in identity, product atmosphere,
+            and digital experience.
+          </h2>
+          <p>
+            It shows how the studio carries emotional clarity, interface direction, and
+            atmosphere into a product world without flattening its softness.
+          </p>
+        </motion.div>
+
+        <motion.div variants={fadeSoft} className="ei-lumo-studio-bridge-link">
+          <Link to="/works">
+            Return to selected work{" "}
+            <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">
+              →
+            </span>
+          </Link>
+        </motion.div>
       </Reveal>
     </section>
   );
@@ -338,8 +408,8 @@ function IntroductionOverview() {
           <div>
             <h2 id="introduction-heading">Lumo is more than a planner.</h2>
             <p>
-              It is a supportive companion that helps neurodivergent minds plan, focus, and
-              follow through without guilt.
+              It is a supportive companion concept for helping neurodivergent minds plan, focus,
+              and follow through without guilt.
             </p>
             <div className="ei-lumo-pill-row" aria-label="Lumo qualities">
               <span>ADHD Friendly</span>
@@ -488,9 +558,9 @@ function EcosystemPanel() {
   );
 }
 
-function TestimonialPanel() {
+function ExperiencePrinciplePanel() {
   return (
-    <LumoPanel id="testimonial" index="09" label="Testimonial" className="ei-lumo-testimonial-panel">
+    <LumoPanel id="experience-principle" index="09" label="Experience Principle" className="ei-lumo-testimonial-panel">
       <div className="ei-lumo-testimonial-layout">
         <blockquote>
           Lumo should feel like the moment the room gets quieter: the next step is still there,
@@ -498,7 +568,7 @@ function TestimonialPanel() {
         </blockquote>
         <div>
           <span>Experience principle</span>
-          <p>No fabricated testimonial or attribution is used. This statement preserves the existing product-intent meaning.</p>
+          <p>This is an internal design principle, not a testimonial or user-research quote.</p>
         </div>
         <img src={thumbsUpCloud} alt="Supportive Lumo cloud mascot" />
       </div>
@@ -508,7 +578,7 @@ function TestimonialPanel() {
 
 function OutcomePanel() {
   return (
-    <LumoPanel id="final-outcome" index="10" label="The Impact" className="ei-lumo-outcome-panel">
+    <LumoPanel id="final-outcome" index="10" label="Concept Direction" className="ei-lumo-outcome-panel">
       <div className="ei-lumo-outcome-layout">
         <div className="ei-lumo-outcomes" aria-label="Qualitative Lumo outcomes">
           {outcomes.map((outcome) => (
@@ -523,6 +593,36 @@ function OutcomePanel() {
   );
 }
 
+function LumoStudioCTA() {
+  return (
+    <CTASection
+      variant="editorialInvitation"
+      eyebrow="Continue with Echo in Ink"
+      heading={
+        <>
+          Bring the next product or studio world into <em>focus.</em>
+        </>
+      }
+      body="Lumo is one example of how identity, atmosphere, and digital experience can move together when the work needs clarity people can feel."
+      className="ei-lumo-studio-cta"
+      headingId="lumo-studio-cta-heading"
+      actions={
+        <>
+          <Button to="/contact?inquiry=project" variant="primary">
+            Discuss a project
+          </Button>
+          <Button to="/works" variant="secondary">
+            Return to selected work{" "}
+            <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">
+              →
+            </span>
+          </Button>
+        </>
+      }
+    />
+  );
+}
+
 export function SignatureCaseStudy() {
   const activeId = useActiveSection();
 
@@ -532,6 +632,8 @@ export function SignatureCaseStudy() {
       <main className="ei-lumo-main" aria-label="Lumo case study content">
         <LumoMobileNav activeId={activeId} />
         <LumoHeroPanel />
+        <LumoEvidencePanel />
+        <StudioBridgePanel />
         <div className="ei-lumo-panel-stack">
           <IntroductionOverview />
           <div className="ei-lumo-two-column">
@@ -547,10 +649,11 @@ export function SignatureCaseStudy() {
             <EcosystemPanel />
           </div>
           <div className="ei-lumo-two-column ei-lumo-two-column-balanced">
-            <TestimonialPanel />
+            <ExperiencePrinciplePanel />
             <OutcomePanel />
           </div>
         </div>
+        <LumoStudioCTA />
       </main>
     </article>
   );

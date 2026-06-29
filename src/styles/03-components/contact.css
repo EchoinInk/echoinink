@@ -49,6 +49,29 @@
     gap: var(--ei-space-7);
   }
 
+  .ei-contact-form-status {
+    border: 1px solid rgb(var(--ei-moonlit-rgb) / 0.1);
+    border-radius: var(--ei-card-radius-md);
+    background: rgb(var(--ei-void-rgb) / 0.42);
+    padding: 1rem 1.05rem;
+  }
+
+  .ei-contact-form-status[data-state="submitting"] {
+    border-color: rgb(var(--ei-halo-blue-rgb) / 0.24);
+  }
+
+  .ei-contact-form-status[data-state="error"] {
+    border-color: rgb(var(--ei-echo-magenta-rgb) / 0.28);
+  }
+
+  .ei-contact-honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
   .ei-contact-page input,
   .ei-contact-page select,
   .ei-contact-page textarea {
@@ -93,6 +116,10 @@
 
     .ei-contact-page form > div:last-child {
       padding-top: var(--ei-space-5);
+    }
+
+    .ei-contact-form-status {
+      padding: 1rem;
     }
   }
 }

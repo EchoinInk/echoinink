@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
 
 import { EchoCard } from '@/components/ui/EchoCard';
+import { ProjectContext } from '@/components/works/ProjectContext';
 import type { WorkProject } from '@/data/worksProjects';
 import { DURATION, EASE_CINEMATIC, VIEWPORT } from '@/lib/motion-cinematic';
 
@@ -17,7 +18,7 @@ export function ProjectCard({
   image,
   href,
   presentation,
-  status,
+  context,
   index = 0
 }: ProjectCardProps) {
   const prefersReducedMotion = useReducedMotion();
@@ -42,12 +43,14 @@ export function ProjectCard({
       <div className="ei-works-project-copy">
         <div className="ei-works-project-header">
           <div className="ei-works-project-meta">
-            <span>{status ?? 'Study'}</span>
+            <span>{context?.status ?? 'Selected study'}</span>
             <span>{number}</span>
           </div>
           <h3>{title}</h3>
           <p className="ei-works-project-category">{category}</p>
         </div>
+
+        <ProjectContext context={context} compact className="ei-works-project-context" />
 
         <p className="ei-works-project-disciplines ei-type-meta">
           {disciplines.join(' · ')}
@@ -85,13 +88,13 @@ export function ProjectCard({
         padding="none"
         className="ei-works-project-card"
         data-presentation={presentation}
-        aria-label={!isLinked ? `${title} — ${status ?? category}` : undefined}
+        aria-label={!isLinked ? `${title} — ${context?.status ?? category}` : undefined}
       >
         {href ? (
           <Link
             to={href}
             className="ei-works-project-link"
-            aria-label={`${title} — ${category}. ${disciplines.join(', ')}. ${proofLine}`}
+            aria-label={`${title} — ${context?.status ?? category}. ${disciplines.join(', ')}. ${proofLine}`}
           >
             {content}
           </Link>

@@ -5,6 +5,7 @@ import { LumoCaseStudyTeaser } from "@/components/home/HomeFeaturedLumo";
 import { Hero } from "@/components/home/HomeHero";
 import { Philosophy } from "@/components/home/HomePhilosophySection";
 import { HomeProofStrip } from "@/components/home/HomeProofStrip";
+import { HomeStartHere } from "@/components/home/HomeStartHere";
 import { EmergingSystems } from "@/components/home/HomeOurSystems";
 import { WhatWeCreate } from "@/components/home/HomeWhatWeCreate";
 import { PageShell } from "@/components/layout/PageShell";
@@ -25,6 +26,9 @@ export function HomePage() {
 
       {/* ── PROOF STRIP — Early evidence without metrics ─────── */}
       <HomeProofStrip />
+
+      {/* ── START HERE — Practical decision point ────────────── */}
+      <HomeStartHere />
 
       {/* ── PHILOSOPHY — Atmospheric worldview ───────────────── */}
       <Philosophy />

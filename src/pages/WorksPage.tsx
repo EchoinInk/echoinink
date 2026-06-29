@@ -15,6 +15,7 @@ import { EchoCard } from '@/components/ui/EchoCard';
 import { IconWell } from '@/components/ui/IconWell';
 import { OrbitalVisual, type OrbitalVariant } from '@/components/ui/OrbitalVisual';
 import { SectionLabel } from '@/components/ui/SectionLabel';
+import { ProjectContext } from '@/components/works/ProjectContext';
 import { WorkFilterBar } from '@/components/works/WorkFilterBar';
 import { WorksGrid } from '@/components/works/WorksGrid';
 import { worksProjects, type WorkFilter, type WorkSort } from '@/data/worksProjects';
@@ -136,14 +137,15 @@ export function WorksPage() {
         title="Proof, shaped as atmosphere."
         italicWord="atmosphere."
         description="Identity systems, digital experiences, and visual worlds built to make ambitious ideas easier to understand, trust, and act on."
+        offerAnchor="Selected identity, product, and digital-experience work shaped to make ambitious ideas clearer, calmer, and more distinct."
         image={worksHeroDesktop}
         mobileImage={worksHeroMobile}
         imageAlt="Dark cinematic signal stream with luminous blue-violet atmosphere"
         align="left"
-        ctaLabel="Start a Project"
-        ctaHref="/contact"
-        secondaryCtaLabel="Explore Selected Work"
-        secondaryCtaHref="#selected-works"
+        ctaLabel="Discuss a project"
+        ctaHref="/contact?inquiry=project"
+        secondaryCtaLabel="Explore systems"
+        secondaryCtaHref="/systems"
       />
 
       <Section spacing="none" className="ei-works-section ei-works-signals">
@@ -218,9 +220,14 @@ export function WorksPage() {
                   <div className="ei-works-featured-copy">
                     <SectionLabel label="Credibility anchor" index="03" />
                     <div className="ei-works-featured-meta ei-type-meta">
-                      <span>{featuredProject.status}</span>
+                      <span>{featuredProject.context?.status ?? 'Selected study'}</span>
                       <span>{featuredProject.category}</span>
                     </div>
+                    <ProjectContext
+                      context={featuredProject.context}
+                      compact
+                      className="ei-works-featured-context"
+                    />
                     <motion.h2 variants={blurEmergence}>{featuredProject.title}</motion.h2>
                     <p className="ei-works-featured-disciplines ei-type-meta">
                       {featuredProject.disciplines.join(' · ')}
@@ -331,7 +338,7 @@ export function WorksPage() {
             className="mx-auto max-w-[1180px]"
           >
             <motion.div variants={driftUp} className="ei-works-section-heading">
-              <SectionLabel label="Process framework" index="07" />
+              <SectionLabel label="Process framework" index="08" />
               <div>
                 <h2 className="ei-type-section-heading">From atmosphere to usable system.</h2>
                 <p className="ei-type-studio-body">
@@ -382,7 +389,7 @@ export function WorksPage() {
         className="ei-works-closing"
         actions={
           <Button to="/contact" variant="primary">
-            Start a Conversation
+            Discuss a project
           </Button>
         }
       />

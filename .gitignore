@@ -17,8 +17,10 @@ dist-ssr
 build
 
 # Environment
+.env
+.env.*
+!.env.example
 *.local
-.env.local
 
 # Testing
 coverage

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { PageOfferAnchor } from "@/components/sections/PageOfferAnchor";
 import { heroReveal } from "@/lib/motion-cinematic";
 
 export function HeroHeading() {
@@ -32,17 +33,17 @@ export function HeroHeading() {
         {"Designing the worlds your work lives in."}
       </h1>
 
-      <p className="ei-type-hero-kicker mt-6 max-w-[42ch] text-[1rem] text-[var(--ei-color-text-secondary)] md:text-[1.02rem]">
-        Identity systems, digital experiences, narrative architecture, and
-        atmosphere design.
-      </p>
+      <PageOfferAnchor className="mt-6">
+        Identity, digital atmosphere, and creative systems for brands and
+        projects becoming more distinct.
+      </PageOfferAnchor>
 
       <motion.p
         variants={heroReveal}
         className="ei-type-hero-description mt-6 max-w-[46ch] text-[1rem] leading-[1.82] text-[var(--ei-color-text-secondary)] md:text-[1.02rem]"
       >
-        Echo in Ink builds identity systems, digital experiences, and
-        expressive worlds for brands ready to become unmistakable.
+        Echo in Ink helps founders, artists, and teams turn emerging identity,
+        digital experience, and atmosphere into a coherent public world.
       </motion.p>
     </div>
   );

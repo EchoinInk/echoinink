@@ -46,15 +46,16 @@ export function SystemsPage() {
   title="Atmosphere, made usable."
   italicWord="usable."
   description={systemsHero.description}
+  offerAnchor="Reusable design frameworks and decision tools for teams building products, platforms, and brands with more clarity."
   image={systemsHeroDesktop}
   mobileImage={systemsHeroMobile}
   imageAlt="Dark cinematic systems blueprint with luminous signal grids and modular framework lines"
   align="left"
-  
-  ctaLabel={systemsHero.primaryCta.label}
-  ctaHref={systemsHero.primaryCta.href}
-  secondaryCtaLabel={systemsHero.secondaryCta.label}
-  secondaryCtaHref={systemsHero.secondaryCta.href}
+
+  ctaLabel="Explore a system"
+  ctaHref="#featured-system"
+  secondaryCtaLabel="Start a conversation"
+  secondaryCtaHref="/contact?inquiry=project"
 />
 
       <Section

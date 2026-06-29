@@ -8,7 +8,8 @@ Protect the dark cinematic editorial identity. Prioritise refinement, cohesion, 
 
 ## Page status
 
-### Near-final pages
+### Near final pages
+
 - Home
 - Studio
 - Contact
@@ -17,12 +18,14 @@ Protect the dark cinematic editorial identity. Prioritise refinement, cohesion, 
 These should be reviewed as polished, launch-oriented experiences. Identify only meaningful issues that affect clarity, premium feel, conversion, accessibility, responsive quality, or visual cohesion.
 
 ### Final-stage pages
+
 - Identity
 - Booking
 
 These are close, but may need final hierarchy, spacing, CTA, flow, or mobile refinement.
 
 ### First-draft pages
+
 - Sessions
 - Systems
 - Archive

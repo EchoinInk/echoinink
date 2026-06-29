@@ -1,4 +1,11 @@
-import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
+import {
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ChangeEvent,
+  type FormEvent,
+} from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { useSearchParams } from "react-router-dom";
@@ -25,6 +32,17 @@ import {
   STAGGER,
   VIEWPORT,
 } from "@/lib/motion-cinematic";
+import {
+  CONTACT_DIRECT_EMAIL,
+  CONTACT_ERROR_MESSAGE,
+  CONTACT_SUCCESS_MESSAGE,
+  ContactSubmissionError,
+  createEmptyContactFormData,
+  submitContactForm,
+  validateContactForm,
+  type ContactFieldErrors,
+  type ContactFormState,
+} from "@/lib/contactForm";
 
 const explorationOptions = [
   "Project Inquiry",
@@ -104,15 +122,18 @@ type ContactFieldEvent =
 
 export function ContactPage() {
   const [searchParams] = useSearchParams();
-  const [formState, setFormState] = useState<"idle" | "submitting" | "success">(
-    "idle",
+  const [formState, setFormState] = useState<ContactFormState>("idle");
+  const [formData, setFormData] = useState(() => createEmptyContactFormData());
+  const [fieldErrors, setFieldErrors] = useState<ContactFieldErrors>({});
+  const [statusMessage, setStatusMessage] = useState("");
+  const [announcement, setAnnouncement] = useState("");
+  const statusRef = useRef<HTMLDivElement | null>(null);
+  const successRef = useRef<HTMLDivElement | null>(null);
+
+  const hasFieldErrors = useMemo(
+    () => Object.values(fieldErrors).some(Boolean),
+    [fieldErrors],
   );
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    exploration: "",
-    message: "",
-  });
 
   useEffect(() => {
     const preselectedInquiry = getPreselectedInquiry(searchParams.get("inquiry"));
@@ -128,17 +149,87 @@ export function ContactPage() {
     );
   }, [searchParams]);
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    setFormState("submitting");
+  useEffect(() => {
+    if (formState === "success") {
+      successRef.current?.focus();
+      return;
+    }
 
-    window.setTimeout(() => {
+    if (formState === "error") {
+      statusRef.current?.focus();
+    }
+  }, [formState]);
+
+  const focusFirstInvalidField = (errors: ContactFieldErrors) => {
+    const firstField = ["name", "email", "projectUrl", "message"].find(
+      (field) => errors[field as keyof ContactFieldErrors],
+    );
+
+    if (!firstField) {
+      return;
+    }
+
+    document.getElementById(firstField)?.focus();
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const nextFieldErrors = validateContactForm(formData);
+
+    if (Object.keys(nextFieldErrors).length > 0) {
+      setFieldErrors(nextFieldErrors);
+      setFormState("idle");
+      setStatusMessage("Please check the highlighted fields and try again.");
+      setAnnouncement("Please check the highlighted fields and try again.");
+      focusFirstInvalidField(nextFieldErrors);
+      return;
+    }
+
+    setFormState("submitting");
+    setFieldErrors({});
+    setStatusMessage("");
+    setAnnouncement("Sending your message.");
+
+    try {
+      await submitContactForm(formData);
       setFormState("success");
-    }, 1200);
+      setStatusMessage(CONTACT_SUCCESS_MESSAGE);
+      setAnnouncement(CONTACT_SUCCESS_MESSAGE);
+    } catch (error) {
+      const submissionError =
+        error instanceof ContactSubmissionError
+          ? error
+          : new ContactSubmissionError(CONTACT_ERROR_MESSAGE);
+
+      setFormState("error");
+      setFieldErrors(submissionError.fieldErrors ?? {});
+      setStatusMessage(submissionError.message);
+      setAnnouncement(submissionError.message);
+
+      if (submissionError.fieldErrors) {
+        focusFirstInvalidField(submissionError.fieldErrors);
+      }
+    }
   };
 
   const handleChange = (e: ContactFieldEvent) => {
-    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value } = e.target;
+
+    setFormData((prev) => ({ ...prev, [name]: value }));
+    setFieldErrors((prev) => {
+      if (!prev[name as keyof ContactFieldErrors]) {
+        return prev;
+      }
+
+      const nextErrors = { ...prev };
+      delete nextErrors[name as keyof ContactFieldErrors];
+      return nextErrors;
+    });
+
+    if (formState === "error") {
+      setFormState("idle");
+      setStatusMessage("");
+    }
   };
 
   return (
@@ -159,14 +250,19 @@ export function ContactPage() {
         eyebrow="START A CONVERSATION"
         title="Begin with what you're trying to make real."
         description="Tell me what you're building, what's changing, or what you can't quite name yet. I'll meet you in the middle of it."
+        offerAnchor="A direct enquiry for identity, digital experience, systems, or worldbuilding work that needs clarity before it grows."
+        ctaLabel="Send an enquiry"
+        ctaHref="#contact-form"
+        secondaryCtaLabel="Explore selected work"
+        secondaryCtaHref="/works"
         image={contactHeroDesktop}
         mobileImage={contactHeroMobile}
         imageAlt="Atmospheric violet orbital sphere over a dark reflective horizon"
         align="left"
-        
       />
 
       <Section
+        id="contact-form"
         spacing="none"
         className="relative z-20 -mt-8 overflow-hidden pb-24 md:-mt-14 md:pb-32"
       >
@@ -256,16 +352,74 @@ export function ContactPage() {
 
                 <div className="relative z-10">
                   {formState === "success" ? (
-                    <div className="flex min-h-[430px] flex-col items-center justify-center rounded-[var(--ei-card-radius-lg)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-ice-white-rgb)/0.018)] px-8 py-16 text-center">
+                    <div
+                      ref={successRef}
+                      tabIndex={-1}
+                      role="status"
+                      aria-live="polite"
+                      className="flex min-h-[430px] flex-col items-center justify-center rounded-[var(--ei-card-radius-lg)] border border-[rgb(var(--ei-moonlit-rgb)/0.1)] bg-[rgb(var(--ei-ice-white-rgb)/0.018)] px-8 py-16 text-center"
+                    >
                       <p className="ei-type-section max-w-[14ch]">
-                        Thank you. Your message has been received.
+                        Thank you. Your message is on its way.
                       </p>
                       <p className="ei-type-studio-body mt-6 max-w-[360px] text-[var(--ei-color-text-secondary)]">
-                        I will be in touch shortly with a considered response.
+                        Echo in Ink will reply within two working days.
                       </p>
                     </div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-8">
+                    <form
+                      onSubmit={handleSubmit}
+                      noValidate
+                      aria-busy={formState === "submitting"}
+                      className="space-y-8"
+                    >
+                      <p className="ei-type-studio-body max-w-[40ch] text-[var(--ei-color-text-secondary)]">
+                        Tell us what you are building. Echo in Ink will reply
+                        personally within two working days.
+                      </p>
+
+                      <div
+                        ref={statusRef}
+                        tabIndex={-1}
+                        className="ei-contact-form-status"
+                        data-state={
+                          formState === "submitting"
+                            ? "submitting"
+                            : formState === "error" || hasFieldErrors
+                              ? "error"
+                              : "idle"
+                        }
+                        role={
+                          formState === "error" || hasFieldErrors
+                            ? "alert"
+                            : "status"
+                        }
+                        aria-live={
+                          formState === "error" || hasFieldErrors
+                            ? "assertive"
+                            : "polite"
+                        }
+                      >
+                        <p className="ei-type-studio-body-small">
+                          {formState === "submitting"
+                            ? "Sending your message..."
+                            : statusMessage || "Fields marked * are required."}
+                        </p>
+
+                        {(formState === "error" || hasFieldErrors) && (
+                          <a
+                            href={`mailto:${CONTACT_DIRECT_EMAIL}`}
+                            className="ei-link-distinguished mt-3 inline-flex items-center text-[0.75rem] uppercase tracking-[0.16em] text-[var(--ei-color-text-primary)]"
+                          >
+                            Email directly
+                          </a>
+                        )}
+                      </div>
+
+                      <p className="sr-only" aria-live="polite">
+                        {announcement}
+                      </p>
+
                       <div className="grid gap-6 md:grid-cols-2">
                         <EchoFormField
                           type="text"
@@ -274,7 +428,10 @@ export function ContactPage() {
                           label="Name"
                           value={formData.name}
                           onChange={handleChange}
+                          error={fieldErrors.name}
                           required
+                          autoComplete="name"
+                          disabled={formState === "submitting"}
                           placeholder="Your name"
                         />
 
@@ -285,7 +442,11 @@ export function ContactPage() {
                           label="Email"
                           value={formData.email}
                           onChange={handleChange}
+                          error={fieldErrors.email}
                           required
+                          autoComplete="email"
+                          inputMode="email"
+                          disabled={formState === "submitting"}
                           placeholder="your@email.com"
                         />
                       </div>
@@ -298,6 +459,22 @@ export function ContactPage() {
                         onChange={handleChange}
                         options={explorationOptions}
                         placeholder="Select an option"
+                        disabled={formState === "submitting"}
+                      />
+
+                      <EchoFormField
+                        type="url"
+                        id="projectUrl"
+                        name="projectUrl"
+                        label="Project URL"
+                        value={formData.projectUrl}
+                        onChange={handleChange}
+                        error={fieldErrors.projectUrl}
+                        hint="Optional, if something already exists online."
+                        autoComplete="url"
+                        inputMode="url"
+                        disabled={formState === "submitting"}
+                        placeholder="https://your-project.com"
                       />
 
                       <EchoTextarea
@@ -306,9 +483,26 @@ export function ContactPage() {
                         label="Tell me about what you are trying to express"
                         value={formData.message}
                         onChange={handleChange}
+                        error={fieldErrors.message}
                         rows={6}
+                        required
+                        disabled={formState === "submitting"}
                         placeholder="Describe your project, your questions, or what feels unclear..."
                       />
+
+                      <div className="ei-contact-honeypot" aria-hidden="true">
+                        <EchoFormField
+                          type="text"
+                          id="company"
+                          name="company"
+                          label="Company"
+                          value={formData.company}
+                          onChange={handleChange}
+                          autoComplete="off"
+                          tabIndex={-1}
+                          placeholder=""
+                        />
+                      </div>
 
                       <div className="flex flex-col gap-6 pt-2 sm:flex-row sm:items-center">
                         <Button
@@ -319,7 +513,9 @@ export function ContactPage() {
                         >
                           {formState === "submitting"
                             ? "Sending..."
-                            : "Send Message"}
+                            : formState === "error"
+                              ? "Try Again"
+                              : "Send enquiry"}
                         </Button>
 
                         <div className="ei-type-studio-body-small flex max-w-[300px] items-start gap-3 text-[var(--ei-color-text-tertiary)]">

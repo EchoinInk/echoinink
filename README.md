@@ -1,8 +1,8 @@
-Echo in Ink
+# Echo in Ink
 
 A cinematic, atmospheric creative studio website built with React, TypeScript, Vite, Tailwind CSS, layered CSS, and Framer Motion.
 
-Live site: https://echoin.ink
+Live site: <https://echoin.ink>
 
 Echo in Ink is designed as a premium authored studio experience for immersive brand worlds, identity systems, digital atmospheres, creative systems, and emotionally intelligent product concepts.
 
@@ -49,6 +49,18 @@ npm run typecheck
 npm run lint
 npm run build
 
+Contact form delivery
+
+The Contact page submits to the first-party `/api/contact` endpoint. The included function forwards validated enquiries to Resend without exposing secrets in the client bundle.
+
+Required environment variables:
+
+* `RESEND_API_KEY`
+* `CONTACT_FROM_EMAIL` — use a sender address on a domain verified in Resend
+* `CONTACT_TO_EMAIL` — optional override for the receiving inbox; defaults to `hello@echoin.ink`
+
+If you deploy somewhere other than Vercel, map `POST /api/contact` to the logic in `api/contact.ts` or port `src/lib/contactServer.ts` into your host’s serverless/runtime entrypoint.
+
 Project structure
 
 src/
@@ -79,19 +91,20 @@ src/
 └── types/                  # Shared TypeScript types
 public/                     # Public assets, favicons, fonts, static imagery
 
-Key routes
+## Key routes
 
-Route	Purpose
-/	Studio landing page
-/studio	Studio positioning, process, and services
-/works	Selected projects and creative explorations
-/works/lumo	Bespoke Lumo case study
-/systems	Creative systems and structured offerings
-/worlds	Worldbuilding and immersive experience direction
-/identity	Identity direction and visual systems
-/sessions	Creative-direction sessions
-/archive	Essays, notes, and editorial material
-/contact	Enquiry route
+### Route Purpose
+
+/Studio landing page
+/studio Studio positioning, process, and services
+/works Selected projects and creative explorations
+/works/lumo Bespoke Lumo case study
+/systems Creative systems and structured offerings
+/worlds Worldbuilding and immersive experience direction
+/identity Identity direction and visual systems
+/sessions Creative-direction sessions
+/archive Essays, notes, and editorial material
+/contact Enquiry route
 
 Design system
 

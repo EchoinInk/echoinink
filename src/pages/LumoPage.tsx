@@ -4,7 +4,7 @@ import { SignatureCaseStudy } from '@/components/lumo/LumoSignatureCaseStudy';
 
 export function LumoPage() {
   return (
-    <PageShell atmosphere="works" withTopSpacing={false} withFooter={false} className="ei-lumo-page">
+    <PageShell atmosphere="works" withTopSpacing={false} className="ei-lumo-page">
       <Helmet>
         <title>Lumo — Echo in Ink</title>
         <meta

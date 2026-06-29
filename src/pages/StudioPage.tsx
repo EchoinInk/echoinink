@@ -140,15 +140,11 @@ export function StudioPage() {
         title={"High-touch work.\nMeaningful worlds."}
         italicWord="worlds"
         description="We partner with founders, artists, and cultural projects to design identity systems, digital experiences, and narrative direction that make meaningful work feel coherent and distinct."
-        ctaLabel={
-          <>
-            Let&apos;s Build Your World{" "}
-            <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">
-              →
-            </span>
-          </>
-        }
+        offerAnchor="A selective creative studio for identity, digital experience, and worldbuilding work that needs depth and usable structure."
+        ctaLabel="Discuss a project"
         ctaHref="/contact?inquiry=project"
+        secondaryCtaLabel="Explore how we work"
+        secondaryCtaHref="#studio-process"
         image={studioHeroDesktop}
         mobileImage={studioHeroMobile}
         imageAlt="Atmospheric cosmic portal in violet, blue, and magenta light"
@@ -308,7 +304,7 @@ export function StudioPage() {
       </Section>
 
       {/* PROCESS */}
-      <Section spacing="none" className="ei-studio-major-section relative pb-2 md:pb-4">
+      <Section id="studio-process" spacing="none" className="ei-studio-major-section relative pb-2 md:pb-4">
         <Container size="xl" className="relative z-10">
           <motion.div
             variants={staggerContainer(STAGGER.loose, 0)}
@@ -506,7 +502,7 @@ export function StudioPage() {
                   to="/contact"
                   variant="primary"
                 >
-                  Start a Conversation{" "}
+                  Discuss a project{" "}
                   <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">
                     →
                   </span>

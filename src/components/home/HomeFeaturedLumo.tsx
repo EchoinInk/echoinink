@@ -13,6 +13,7 @@ import lumoinkdriftMobile from "@/assets/imagery/sections/lumo-featured-mobile.w
 import { Section } from "@/components/layout/Section";
 import { Container } from "@/components/layout/Container";
 import { EchoCard } from "@/components/ui/EchoCard";
+import { ProjectContext } from "@/components/works/ProjectContext";
 import {
   blurEmergence,
   driftUp,
@@ -37,6 +38,12 @@ const disciplines = [
   "Emotional UX",
   "Interface Direction",
 ];
+
+const lumoContext = {
+  status: "Independent product concept",
+  scope: "Identity direction, interface concept, visual system",
+  type: "Prototype case study",
+} as const;
 
 export function LumoCaseStudyTeaser() {
   const prefersReduced = useReducedMotion();
@@ -190,11 +197,19 @@ export function LumoCaseStudyTeaser() {
                       reduce cognitive load through calm planning, emotional
                       safety, and a coherent digital atmosphere.
                     </motion.p>
+
+                    <motion.div variants={orchestratedReveal(2, 3)}>
+                      <ProjectContext
+                        context={lumoContext}
+                        compact
+                        className="ei-card-world-context"
+                      />
+                    </motion.div>
                   </motion.div>
 
                   <motion.div variants={driftUp}>
                     <span className="ei-card-action">
-                      View Case Study{" "}
+                      View prototype case study{" "}
                       <span className="inline-block transition-transform duration-500 group-hover:translate-x-0.5">
                         →
                       </span>

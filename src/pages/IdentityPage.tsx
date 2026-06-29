@@ -69,14 +69,15 @@ export function IdentityPage() {
 Identity begins as a feeling — an atmosphere waiting to be understood, shaped, and expressed.
 
 I translate that feeling into visual language, rhythm, and voice."
+        offerAnchor="Identity direction, visual language, and digital foundations for teams becoming more recognisable and more coherent."
         image={identityHeroDesktop}
         mobileImage={identityHeroMobile}
         imageAlt="Orbital violet identity system over a dark cinematic field"
         align="left" 
-        ctaLabel="Start an identity project"
-        ctaHref="/contact"
-        secondaryCtaLabel="Explore sessions"
-        secondaryCtaHref="/sessions"
+        ctaLabel="Discuss identity direction"
+        ctaHref="/contact?inquiry=project"
+        secondaryCtaLabel="View selected work"
+        secondaryCtaHref="/works"
       />
       <Section
         spacing="none"
@@ -386,7 +387,7 @@ I translate that feeling into visual language, rhythm, and voice."
         body={identityClosing.subline}
         actions={
           <Button to={identityClosing.cta.href} variant="primary">
-            {identityClosing.cta.label} <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
+            Discuss identity direction <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">→</span>
           </Button>
         }
         className="ei-identity-cta"

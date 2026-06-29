@@ -44,7 +44,13 @@ export function WorksGrid({ activeFilter, sortBy }: WorksGridProps) {
   }, [activeFilter, sortBy]);
 
   const selectedProjects = visibleProjects.filter((project) => project.presentation === 'study');
-  const fragments = visibleProjects.filter((project) => project.presentation === 'fragment');
+  const explorations = visibleProjects.filter(
+    (project) =>
+      project.presentation === 'fragment' && project.context?.status !== 'Internal system experiment'
+  );
+  const systemExperiments = visibleProjects.filter(
+    (project) => project.context?.status === 'Internal system experiment'
+  );
 
   if (visibleProjects.length === 0) {
     return (
@@ -70,27 +76,54 @@ export function WorksGrid({ activeFilter, sortBy }: WorksGridProps) {
         </div>
       ) : null}
 
-      {fragments.length > 0 ? (
-        <section className="ei-works-fragments" aria-labelledby="works-fragments-heading">
+      {explorations.length > 0 ? (
+        <section className="ei-works-fragments" aria-labelledby="works-explorations-heading">
           <div className="ei-works-section-heading ei-works-fragments-heading">
-            <SectionLabel label="Case fragments" index="06" />
+            <SectionLabel label="Explorations and concepts" index="06" />
             <div>
-              <h2 id="works-fragments-heading" className="ei-type-section-heading">
-                Smaller studies, held in proportion.
+              <h2 id="works-explorations-heading" className="ei-type-section-heading">
+                Concept work, held in proportion.
               </h2>
               <p className="ei-type-studio-body">
-                Concepts and system fragments that show the thinking without asking them to carry
-                the weight of a full case study.
+                Independent studies that show direction, atmosphere, and system thinking without
+                presenting themselves as commissioned case studies.
               </p>
             </div>
           </div>
 
           <div className="ei-works-fragment-list">
-            {fragments.map((project, index) => (
+            {explorations.map((project, index) => (
               <ProjectCard
                 key={project.title}
                 {...project}
                 index={selectedProjects.length + index + 1}
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {systemExperiments.length > 0 ? (
+        <section className="ei-works-fragments" aria-labelledby="works-system-experiments-heading">
+          <div className="ei-works-section-heading ei-works-fragments-heading">
+            <SectionLabel label="Systems and experiments" index="07" />
+            <div>
+              <h2 id="works-system-experiments-heading" className="ei-type-section-heading">
+                Internal systems, shown as systems.
+              </h2>
+              <p className="ei-type-studio-body">
+                Prototype-level interface thinking, labelled clearly as system experimentation
+                rather than client delivery.
+              </p>
+            </div>
+          </div>
+
+          <div className="ei-works-fragment-list">
+            {systemExperiments.map((project, index) => (
+              <ProjectCard
+                key={project.title}
+                {...project}
+                index={selectedProjects.length + explorations.length + index + 1}
               />
             ))}
           </div>

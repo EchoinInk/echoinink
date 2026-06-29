@@ -34,6 +34,7 @@ export function EchoTextarea({
         required={required}
         aria-invalid={error ? true : undefined}
         aria-describedby={descriptionId}
+        aria-errormessage={error ? descriptionId : undefined}
         className={cn("ei-form-textarea", className)}
         {...props}
       />

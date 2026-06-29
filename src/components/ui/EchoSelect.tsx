@@ -156,6 +156,7 @@ export function EchoSelect({
             : undefined
         }
         aria-describedby={descriptionId}
+        aria-errormessage={error ? descriptionId : undefined}
         aria-invalid={error ? true : undefined}
         aria-required={required || undefined}
         disabled={disabled}

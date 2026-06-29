@@ -1,9 +1,4 @@
-import {
-  useMemo,
-  useState,
-  type ChangeEvent,
-  type FormEvent,
-} from "react";
+import { useState, type ChangeEvent, type FormEvent } from "react";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 
@@ -15,7 +10,6 @@ import { Button } from "@/components/ui/Button";
 import { EchoCard } from "@/components/ui/EchoCard";
 import { EchoFormField } from "@/components/ui/EchoFormField";
 import { EchoFormPanel } from "@/components/ui/EchoFormPanel";
-import { EchoSelect } from "@/components/ui/EchoSelect";
 import { EchoTextarea } from "@/components/ui/EchoTextarea";
 import { IconWell } from "@/components/ui/IconWell";
 import {
@@ -23,6 +17,10 @@ import {
   type OrbitalVariant,
 } from "@/components/ui/OrbitalVisual";
 import { SectionLabel } from "@/components/ui/SectionLabel";
+import {
+  StudioInquirySubmitError,
+  submitStudioInquiry,
+} from "@/lib/studioInquiry";
 import {
   blurEmergence,
   driftUp,
@@ -32,49 +30,68 @@ import {
   VIEWPORT,
 } from "@/lib/motion-cinematic";
 
-const steps = ["Session", "Time", "Details", "Confirm"] as const;
-
-const timeSlots = ["9:30 am", "11:00 am", "1:30 pm", "3:00 pm"];
-
-const contextOptions = [
-  "Naming or language",
-  "Identity direction",
-  "Website or experience",
-  "Offer or positioning",
-  "Worldbuilding",
-  "Something still taking shape",
-];
+const steps = ["Session", "Timing", "Details", "Review"] as const;
 
 const sessionFacts = [
   { label: "Duration", value: "60 minutes" },
+  { label: "Price", value: "$120-$150 NZD" },
   { label: "Format", value: "Private video session" },
-  { label: "Recording", value: "Included for review" },
-  { label: "Follow-up", value: "Written clarity notes" },
+  { label: "Reply", value: "Available times sent after review" },
 ];
 
-const afterBooking: Array<{
+const practicalInformation: Array<{
+  title: string;
+  description: string;
+}> = [
+  {
+    title: "Timezone handling",
+    description:
+      "Share the timezone you actually work in. Echo in Ink replies with options in your timezone and in New Zealand time.",
+  },
+  {
+    title: "What happens next",
+    description:
+      "Requests are reviewed before any time is suggested. A reply includes available times and a recommended next step.",
+  },
+  {
+    title: "Changes to a confirmed room",
+    description:
+      "Rescheduling is handled once a time is agreed. Twenty-four hours' notice is appreciated when plans need to move.",
+  },
+  {
+    title: "Recording and consent",
+    description:
+      "A recording is only made when everyone in the room agrees in advance. Nothing is recorded by default.",
+  },
+];
+
+const afterRequest: Array<{
   title: string;
   description: string;
   icon: OrbitalVariant;
 }> = [
   {
-    title: "Confirm",
-    description: "Your time and session details are gathered in one clear note.",
+    title: "Request",
+    description:
+      "You send the week, timezone, and context that would make the session useful.",
     icon: "haloGate",
   },
   {
-    title: "Prepare",
-    description: "Bring the question, tension, or fragment that needs attention.",
+    title: "Review",
+    description:
+      "Echo in Ink reads the request and checks whether the room fits the question you are bringing.",
     icon: "threadBeacon",
   },
   {
-    title: "Session",
-    description: "We listen for the pattern and shape a direction you can trust.",
+    title: "Reply",
+    description:
+      "You receive available times and a suggested next step, in your timezone and in New Zealand time.",
     icon: "focusDial",
   },
   {
-    title: "Follow-up",
-    description: "You receive the recording and a concise set of clarity notes.",
+    title: "Confirm",
+    description:
+      "A session is only confirmed after a real time is offered and you choose to accept it.",
     icon: "signalBridge",
   },
 ];
@@ -82,10 +99,14 @@ const afterBooking: Array<{
 type BookingFormData = {
   name: string;
   email: string;
+  preferredWeek: string;
+  timezone: string;
+  topic: string;
   context: string;
-  project: string;
-  notes: string;
+  contactMethod: string;
 };
+
+type BookingFieldName = keyof BookingFormData;
 
 type BookingFieldEvent =
   | ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -96,93 +117,261 @@ type BookingFieldEvent =
       };
     };
 
-function getUpcomingWeekdays(count: number) {
-  const days: Date[] = [];
-  const cursor = new Date();
-  cursor.setHours(12, 0, 0, 0);
+type BookingStatus =
+  | "idle"
+  | "submitting"
+  | "validation-error"
+  | "request-sent"
+  | "request-failed";
 
-  while (days.length < count) {
-    cursor.setDate(cursor.getDate() + 1);
-    const weekday = cursor.getDay();
+type BookingErrors = Partial<Record<BookingFieldName, string>>;
 
-    if (weekday !== 0 && weekday !== 6) {
-      days.push(new Date(cursor));
+const stepFieldMap: Array<BookingFieldName[]> = [
+  [],
+  ["preferredWeek", "timezone"],
+  ["name", "email", "topic", "context"],
+  [],
+];
+
+function scrollToBookingFlow() {
+  document
+    .getElementById("booking-flow")
+    ?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
+function validateEmail(email: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+}
+
+function getFieldError(
+  field: BookingFieldName,
+  value: string,
+): string | undefined {
+  const trimmed = value.trim();
+
+  switch (field) {
+    case "name":
+      return trimmed ? undefined : "Enter the name the reply should come back to.";
+    case "email":
+      if (!trimmed) {
+        return "Enter the email address for the session reply.";
+      }
+
+      return validateEmail(trimmed)
+        ? undefined
+        : "Enter a valid email address.";
+    case "preferredWeek":
+      return trimmed
+        ? undefined
+        : "Name the week that feels most workable, or say that you are flexible.";
+    case "timezone":
+      return trimmed
+        ? undefined
+        : "Add the timezone you want the reply to use.";
+    case "topic":
+      return trimmed ? undefined : "Add a short session topic.";
+    case "context":
+      return trimmed
+        ? undefined
+        : "Add a short context note so the request has enough shape.";
+    case "contactMethod":
+      return undefined;
+    default:
+      return undefined;
+  }
+}
+
+function findFirstInvalidStep(errors: BookingErrors) {
+  const invalidFieldNames = new Set<BookingFieldName>(
+    Object.keys(errors) as BookingFieldName[],
+  );
+
+  const invalidStep = stepFieldMap.findIndex((fields) =>
+    fields.some((field) => invalidFieldNames.has(field)),
+  );
+
+  return invalidStep > 0 ? invalidStep : 0;
+}
+
+function getSubmissionErrorMessage(error: unknown) {
+  if (error instanceof StudioInquirySubmitError) {
+    if (error.code === "not_configured") {
+      return "Session request delivery is not configured yet on this site. Please email hello@echoin.ink while the request endpoint is being connected.";
+    }
+
+    if (error.code === "server") {
+      return "The session request service did not accept the request. Please try again, or email hello@echoin.ink if the problem continues.";
     }
   }
 
-  return days;
-}
-
-function formatDay(date: Date) {
-  return new Intl.DateTimeFormat("en-NZ", {
-    weekday: "short",
-    day: "numeric",
-    month: "short",
-  }).format(date);
-}
-
-function formatLongDate(date: Date) {
-  return new Intl.DateTimeFormat("en-NZ", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  }).format(date);
+  return "The session request could not be sent right now. Please try again, or email hello@echoin.ink if you need a fallback.";
 }
 
 export function BookingPage() {
-  const availableDays = useMemo(() => getUpcomingWeekdays(5), []);
   const [activeStep, setActiveStep] = useState(0);
-  const [selectedDay, setSelectedDay] = useState<Date | null>(null);
-  const [selectedTime, setSelectedTime] = useState("");
-  const [isConfirmed, setIsConfirmed] = useState(false);
+  const [status, setStatus] = useState<BookingStatus>("idle");
+  const [submitMessage, setSubmitMessage] = useState("");
   const [formData, setFormData] = useState<BookingFormData>({
     name: "",
     email: "",
+    preferredWeek: "",
+    timezone: "",
+    topic: "",
     context: "",
-    project: "",
-    notes: "",
+    contactMethod: "",
   });
+  const [errors, setErrors] = useState<BookingErrors>({});
 
-  const selectedDateLabel = selectedDay ? formatLongDate(selectedDay) : "";
-  const hasDetails = Boolean(
-    formData.name.trim() &&
-      formData.email.trim() &&
-      formData.context &&
-      formData.project.trim(),
-  );
+  const isLocked = status === "submitting" || status === "request-sent";
 
-  function handleChange(event: BookingFieldEvent) {
+  function setFieldValue(name: BookingFieldName, value: string) {
     setFormData((current) => ({
       ...current,
-      [event.target.name]: event.target.value,
+      [name]: value,
     }));
+
+    setErrors((current) => {
+      if (!current[name]) {
+        return current;
+      }
+
+      const next = { ...current };
+      delete next[name];
+      return next;
+    });
+
+    if (status === "validation-error" || status === "request-failed") {
+      setStatus("idle");
+      setSubmitMessage("");
+    }
   }
 
-  function advanceStep() {
-    setActiveStep((current) => Math.min(current + 1, steps.length - 1));
+  function handleChange(event: BookingFieldEvent) {
+    setFieldValue(event.target.name as BookingFieldName, event.target.value);
   }
 
   function returnToStep(step: number) {
+    if (isLocked) {
+      return;
+    }
+
     setActiveStep(step);
-    document
-      .getElementById("booking-flow")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    scrollToBookingFlow();
+  }
+
+  function validateFields(fieldNames: BookingFieldName[]) {
+    const nextErrors: BookingErrors = {};
+
+    fieldNames.forEach((fieldName) => {
+      const error = getFieldError(fieldName, formData[fieldName]);
+
+      if (error) {
+        nextErrors[fieldName] = error;
+      }
+    });
+
+    setErrors((current) => ({
+      ...current,
+      ...nextErrors,
+    }));
+
+    return nextErrors;
+  }
+
+  function validateAllFields() {
+    const nextErrors: BookingErrors = {};
+
+    (Object.keys(formData) as BookingFieldName[]).forEach((fieldName) => {
+      const error = getFieldError(fieldName, formData[fieldName]);
+
+      if (error) {
+        nextErrors[fieldName] = error;
+      }
+    });
+
+    setErrors(nextErrors);
+    return nextErrors;
+  }
+
+  function handleTimingSubmit(event: FormEvent) {
+    event.preventDefault();
+
+    const nextErrors = validateFields(["preferredWeek", "timezone"]);
+
+    if (Object.keys(nextErrors).length > 0) {
+      setStatus("validation-error");
+      setSubmitMessage("Please correct the highlighted timing details.");
+      return;
+    }
+
+    setStatus("idle");
+    setSubmitMessage("");
+    setActiveStep(2);
+    scrollToBookingFlow();
   }
 
   function handleDetailsSubmit(event: FormEvent) {
     event.preventDefault();
 
-    if (hasDetails) {
-      advanceStep();
+    const nextErrors = validateFields(["name", "email", "topic", "context"]);
+
+    if (Object.keys(nextErrors).length > 0) {
+      setStatus("validation-error");
+      setSubmitMessage("Please correct the highlighted request details.");
+      return;
     }
+
+    setStatus("idle");
+    setSubmitMessage("");
+    setActiveStep(3);
+    scrollToBookingFlow();
   }
 
-  function handlePrototypeConfirmation() {
-    setIsConfirmed(true);
-    document
-      .getElementById("booking-flow")
-      ?.scrollIntoView({ behavior: "smooth", block: "start" });
+  async function handleRequestSubmit(event: FormEvent) {
+    event.preventDefault();
+
+    const nextErrors = validateAllFields();
+
+    if (Object.keys(nextErrors).length > 0) {
+      const invalidStep = findFirstInvalidStep(nextErrors);
+      setStatus("validation-error");
+      setSubmitMessage("Please correct the highlighted fields before sending your request.");
+      setActiveStep(invalidStep);
+      scrollToBookingFlow();
+      return;
+    }
+
+    setStatus("submitting");
+    setSubmitMessage("");
+
+    try {
+      await submitStudioInquiry({
+        kind: "session-request",
+        page: "booking",
+        name: formData.name.trim(),
+        email: formData.email.trim(),
+        details: {
+          session: "Echo Session",
+          duration: "60 minutes",
+          price: "$120-$150 NZD",
+          preferredWeek: formData.preferredWeek.trim(),
+          timezone: formData.timezone.trim(),
+          sessionTopic: formData.topic.trim(),
+          context: formData.context.trim(),
+          preferredContactMethod:
+            formData.contactMethod.trim() || "Email reply is fine",
+        },
+      });
+
+      setStatus("request-sent");
+      setSubmitMessage("");
+      setActiveStep(3);
+      scrollToBookingFlow();
+    } catch (error) {
+      setStatus("request-failed");
+      setSubmitMessage(getSubmissionErrorMessage(error));
+      scrollToBookingFlow();
+    }
   }
 
   return (
@@ -192,10 +381,10 @@ export function BookingPage() {
       className="ei-booking-page"
     >
       <Helmet>
-        <title>Book an Echo Session — Echo in Ink</title>
+        <title>Request an Echo Session — Echo in Ink</title>
         <meta
           name="description"
-          content="Choose a time for a private Echo Session: a calm, one-to-one creative direction room for clearer language, identity, and next steps."
+          content="Send a considered Echo Session request with your preferred week, timezone, and context. Echo in Ink replies with available times and the clearest next step."
         />
       </Helmet>
 
@@ -208,28 +397,29 @@ export function BookingPage() {
             className="mx-auto max-w-[1180px] ei-booking-intro-grid"
           >
             <motion.div variants={driftUp}>
-              <SectionLabel label="Echo Session booking" />
+              <SectionLabel label="Echo Session request" />
               <motion.h1 variants={blurEmergence}>
-                Choose a time to clarify the signal.
+                Request a quieter room for the real question.
               </motion.h1>
               <motion.p variants={fadeSoft}>
-                A private working session for the idea, question, or creative
-                direction that needs a quieter room.
+                Share the week, timezone, and context that would make the
+                session useful. Echo in Ink replies with available times and a
+                suggested next step.
               </motion.p>
             </motion.div>
 
             <motion.dl variants={fadeSoft} className="ei-booking-meta">
               <div>
-                <dt>Duration</dt>
-                <dd>60 minutes</dd>
+                <dt>Format</dt>
+                <dd>Session request, not instant booking</dd>
               </div>
               <div>
-                <dt>Session</dt>
-                <dd>Recorded for review</dd>
+                <dt>Price</dt>
+                <dd>$120-$150 NZD for 60 minutes</dd>
               </div>
               <div>
-                <dt>Afterward</dt>
-                <dd>Follow-up notes included</dd>
+                <dt>Reply</dt>
+                <dd>Available times arrive after review</dd>
               </div>
             </motion.dl>
           </motion.div>
@@ -258,13 +448,15 @@ export function BookingPage() {
                 <IconWell size="lg" tone="violet" orbital glow>
                   <OrbitalVisual variant="synthesisStar" size={56} />
                 </IconWell>
+
                 <span className="ei-booking-summary-kicker">
                   One-to-one creative direction
                 </span>
                 <h2>Echo Session</h2>
                 <p>
                   For founders, artists, writers, and makers who need clearer
-                  language, structure, or emotional direction.
+                  language, structure, or emotional direction before the next
+                  public move.
                 </p>
 
                 <dl>
@@ -280,8 +472,21 @@ export function BookingPage() {
                   <span>Best for</span>
                   <p>
                     A live project, unresolved creative question, naming
-                    decision, or direction that feels difficult to articulate.
+                    decision, or direction that still feels difficult to
+                    articulate.
                   </p>
+                </div>
+
+                <div className="ei-booking-practical">
+                  <span>Before you send</span>
+                  <ul className="ei-booking-practical-list">
+                    {practicalInformation.map((item) => (
+                      <li key={item.title}>
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </EchoCard>
             </motion.aside>
@@ -294,17 +499,19 @@ export function BookingPage() {
                       key={step}
                       data-active={activeStep === index ? "true" : "false"}
                       data-complete={
-                        activeStep > index || isConfirmed ? "true" : "false"
+                        activeStep > index || status === "request-sent"
+                          ? "true"
+                          : "false"
                       }
                     >
                       <button
                         type="button"
                         onClick={() =>
-                          index < activeStep && !isConfirmed
+                          index <= activeStep && !isLocked
                             ? returnToStep(index)
                             : undefined
                         }
-                        disabled={index > activeStep || isConfirmed}
+                        disabled={index > activeStep || isLocked}
                         aria-current={activeStep === index ? "step" : undefined}
                       >
                         <span>{String(index + 1).padStart(2, "0")}</span>
@@ -316,47 +523,80 @@ export function BookingPage() {
               </nav>
 
               <div className="ei-booking-step-region" aria-live="polite">
-                {isConfirmed ? (
+                {status === "request-sent" ? (
                   <div className="ei-booking-confirmed">
                     <IconWell size="lg" tone="blue" orbital glow>
                       <OrbitalVisual variant="haloGate" size={56} />
                     </IconWell>
-                    <SectionLabel
-                      label="Prototype confirmation"
-                      align="center"
-                      rule="none"
-                    />
-                    <h2>Your session is held in the signal.</h2>
+                    <SectionLabel label="Request sent" align="center" rule="none" />
+                    <h2>Your session request is on its way.</h2>
                     <p>
-                      This front-end preview has saved nothing and has not sent
-                      an email. Once scheduling is connected, this state will
-                      confirm the booking and deliver the preparation note.
+                      Echo in Ink will reply with available times and a
+                      suggested next step.
+                    </p>
+                    <p className="ei-booking-confirmed-caption">
+                      No time is confirmed yet. Confirmation only happens after
+                      a real time is offered and accepted.
                     </p>
                     <div className="ei-booking-confirmed-summary">
-                      <span>{selectedDateLabel}</span>
-                      <strong>{selectedTime} · Auckland time</strong>
+                      <span>{formData.preferredWeek}</span>
+                      <strong>{formData.timezone}</strong>
                     </div>
                     <Button
                       type="button"
                       variant="secondary"
                       onClick={() => {
-                        setIsConfirmed(false);
+                        setStatus("idle");
                         setActiveStep(0);
+                        setSubmitMessage("");
+                        setErrors({});
                       }}
                     >
-                      Start again
+                      Send another request
                     </Button>
                   </div>
                 ) : (
                   <>
+                    {submitMessage ? (
+                      <div
+                        className="ei-booking-status"
+                        data-state={
+                          status === "request-failed" ||
+                          status === "validation-error"
+                            ? "error"
+                            : "info"
+                        }
+                        role={
+                          status === "request-failed" ||
+                          status === "validation-error"
+                            ? "alert"
+                            : "status"
+                        }
+                      >
+                        <p>
+                          {submitMessage.includes("hello@echoin.ink") ? (
+                            <>
+                              {submitMessage.split("hello@echoin.ink")[0]}
+                              <a href="mailto:hello@echoin.ink">
+                                hello@echoin.ink
+                              </a>
+                              {submitMessage.split("hello@echoin.ink")[1]}
+                            </>
+                          ) : (
+                            submitMessage
+                          )}
+                        </p>
+                      </div>
+                    ) : null}
+
                     {activeStep === 0 ? (
                       <div className="ei-booking-step">
                         <SectionLabel label="Step one" rule="none" />
-                        <h2>Begin with the focused session.</h2>
+                        <h2>Begin with a request, not a placeholder booking.</h2>
                         <p>
-                          The 60-minute Echo Session is the clearest starting
-                          point. The conversation follows the work you bring,
-                          without requiring a polished brief.
+                          This page does not hold a slot or simulate a calendar.
+                          It sends a real request with the practical details
+                          needed to suggest a workable time.
                         </p>
 
                         <button
@@ -367,14 +607,22 @@ export function BookingPage() {
                         >
                           <span>
                             <strong>Echo Session</strong>
-                            <small>60 minutes · Private video room</small>
+                            <small>
+                              60 minutes · Private video room · $120-$150 NZD
+                            </small>
                           </span>
-                          <span>Selected</span>
+                          <span>Request flow</span>
                         </button>
 
                         <div className="ei-booking-step-actions">
-                          <Button type="button" onClick={advanceStep}>
-                            Choose a time
+                          <Button
+                            type="button"
+                            onClick={() => {
+                              setActiveStep(1);
+                              scrollToBookingFlow();
+                            }}
+                          >
+                            Continue with request
                           </Button>
                         </div>
                       </div>
@@ -383,104 +631,84 @@ export function BookingPage() {
                     {activeStep === 1 ? (
                       <div className="ei-booking-step">
                         <SectionLabel label="Step two" rule="none" />
-                        <h2>Find a calm point in the week.</h2>
+                        <h2>Name the week and timezone that make sense.</h2>
                         <p>
-                          Preview availability is shown in Auckland time. Live
-                          availability will replace these sample slots when the
-                          scheduling service is connected.
+                          Share a preferred week and the timezone you want the
+                          reply to use. If your schedule is flexible, say so in
+                          the week field.
                         </p>
 
-                        <div className="ei-booking-time-layout">
-                          <div>
-                            <span className="ei-booking-field-label">
-                              Available days
-                            </span>
-                            <div className="ei-booking-day-grid">
-                              {availableDays.map((day) => {
-                                const isSelected =
-                                  selectedDay?.toDateString() ===
-                                  day.toDateString();
+                        <form
+                          onSubmit={handleTimingSubmit}
+                          className="ei-booking-details-form"
+                          noValidate
+                        >
+                          <EchoFormField
+                            type="text"
+                            id="booking-preferred-week"
+                            name="preferredWeek"
+                            label="Preferred week"
+                            value={formData.preferredWeek}
+                            onChange={handleChange}
+                            required
+                            error={errors.preferredWeek}
+                            placeholder="Week of 6 July, or Flexible"
+                            hint="This is a preference, not a confirmed booking."
+                          />
 
-                                return (
-                                  <button
-                                    key={day.toISOString()}
-                                    type="button"
-                                    aria-pressed={isSelected}
-                                    data-selected={
-                                      isSelected ? "true" : "false"
-                                    }
-                                    onClick={() => {
-                                      setSelectedDay(day);
-                                      setSelectedTime("");
-                                    }}
-                                  >
-                                    {formatDay(day)}
-                                  </button>
-                                );
-                              })}
-                            </div>
+                          <div className="ei-booking-form-row">
+                            <EchoFormField
+                              type="text"
+                              id="booking-timezone"
+                              name="timezone"
+                              label="Timezone"
+                              value={formData.timezone}
+                              onChange={handleChange}
+                              required
+                              error={errors.timezone}
+                              placeholder="America/Los_Angeles"
+                              hint="Reply times are shared in your timezone and New Zealand time."
+                            />
+
+                            <EchoFormField
+                              type="text"
+                              id="booking-contact-method"
+                              name="contactMethod"
+                              label="Preferred contact method"
+                              value={formData.contactMethod}
+                              onChange={handleChange}
+                              placeholder="Email reply is standard; note anything else if helpful"
+                              hint="Optional."
+                            />
                           </div>
 
-                          <div>
-                            <span className="ei-booking-field-label">
-                              Available times
-                            </span>
-                            {selectedDay ? (
-                              <div className="ei-booking-slot-grid">
-                                {timeSlots.map((time) => (
-                                  <button
-                                    key={time}
-                                    type="button"
-                                    aria-pressed={selectedTime === time}
-                                    data-selected={
-                                      selectedTime === time ? "true" : "false"
-                                    }
-                                    onClick={() => setSelectedTime(time)}
-                                  >
-                                    {time}
-                                  </button>
-                                ))}
-                              </div>
-                            ) : (
-                              <div className="ei-booking-empty-slots">
-                                Choose a day to reveal its sample times.
-                              </div>
-                            )}
+                          <div className="ei-booking-step-actions">
+                            <Button
+                              type="button"
+                              variant="tertiary"
+                              onClick={() => returnToStep(0)}
+                            >
+                              Back
+                            </Button>
+                            <Button type="submit">Add your details</Button>
                           </div>
-                        </div>
-
-                        <div className="ei-booking-step-actions">
-                          <Button
-                            type="button"
-                            variant="tertiary"
-                            onClick={() => returnToStep(0)}
-                          >
-                            Back
-                          </Button>
-                          <Button
-                            type="button"
-                            disabled={!selectedDay || !selectedTime}
-                            onClick={advanceStep}
-                          >
-                            Add your details
-                          </Button>
-                        </div>
+                        </form>
                       </div>
                     ) : null}
 
                     {activeStep === 2 ? (
                       <div className="ei-booking-step">
                         <SectionLabel label="Step three" rule="none" />
-                        <h2>Tell me what is arriving with you.</h2>
+                        <h2>Give the request enough shape to be useful.</h2>
                         <p>
-                          A little context makes the room more useful. Fragments
-                          are welcome; you do not need to solve the question
-                          before the session.
+                          A short topic and a little context are enough. You do
+                          not need a polished brief before asking for the room.
                         </p>
 
                         <form
                           onSubmit={handleDetailsSubmit}
                           className="ei-booking-details-form"
+                          noValidate
                         >
                           <div className="ei-booking-form-row">
                             <EchoFormField
@@ -491,6 +719,7 @@ export function BookingPage() {
                               value={formData.name}
                               onChange={handleChange}
                               required
+                              error={errors.name}
                               autoComplete="name"
                               placeholder="Your name"
                             />
@@ -502,42 +731,35 @@ export function BookingPage() {
                               value={formData.email}
                               onChange={handleChange}
                               required
+                              error={errors.email}
                               autoComplete="email"
                               placeholder="your@email.com"
                             />
                           </div>
 
-                          <EchoSelect
-                            id="booking-context"
-                            name="context"
-                            label="What would you like to clarify?"
-                            value={formData.context}
-                            onChange={handleChange}
-                            options={contextOptions}
-                            placeholder="Choose the closest signal"
-                            required
-                          />
-
                           <EchoFormField
                             type="text"
-                            id="booking-project"
-                            name="project"
-                            label="Project or context"
-                            value={formData.project}
+                            id="booking-topic"
+                            name="topic"
+                            label="Session topic"
+                            value={formData.topic}
                             onChange={handleChange}
                             required
-                            placeholder="A short name or description"
+                            error={errors.topic}
+                            placeholder="Naming direction, offer clarity, website structure..."
                           />
 
                           <EchoTextarea
-                            id="booking-notes"
-                            name="notes"
-                            label="Question, tension, or useful notes"
-                            value={formData.notes}
+                            id="booking-context"
+                            name="context"
+                            label="Short context"
+                            value={formData.context}
                             onChange={handleChange}
                             rows={5}
+                            required
+                            error={errors.context}
                             placeholder="What feels unresolved, alive, or difficult to name?"
-                            hint="Optional. References and preparation material can be shared after booking."
+                            hint="A few lines are enough."
                           />
 
                           <div className="ei-booking-step-actions">
@@ -548,34 +770,36 @@ export function BookingPage() {
                             >
                               Back
                             </Button>
-                            <Button type="submit" disabled={!hasDetails}>
-                              Review booking
-                            </Button>
+                            <Button type="submit">Review request</Button>
                           </div>
                         </form>
                       </div>
                     ) : null}
 
                     {activeStep === 3 ? (
-                      <div className="ei-booking-step">
+                      <form
+                        onSubmit={handleRequestSubmit}
+                        className="ei-booking-step"
+                        noValidate
+                      >
                         <SectionLabel label="Step four" rule="none" />
-                        <h2>Review the shape of the session.</h2>
+                        <h2>Review the request before you send it.</h2>
                         <p>
-                          Nothing is charged or sent from this prototype. This
-                          is the final review state that a scheduling
-                          integration can later submit.
+                          Sending this request does not confirm a booking. It
+                          asks Echo in Ink to reply with real available times
+                          and the clearest next step.
                         </p>
 
                         <dl className="ei-booking-review">
                           <div>
                             <dt>Session</dt>
-                            <dd>Echo Session · 60 minutes</dd>
+                            <dd>Echo Session · 60 minutes · $120-$150 NZD</dd>
                           </div>
                           <div>
-                            <dt>Time</dt>
+                            <dt>Week</dt>
                             <dd>
-                              {selectedDateLabel}
-                              <span>{selectedTime} · Auckland time</span>
+                              {formData.preferredWeek}
+                              <span>{formData.timezone}</span>
                             </dd>
                           </div>
                           <div>
@@ -586,19 +810,24 @@ export function BookingPage() {
                             </dd>
                           </div>
                           <div>
-                            <dt>Focus</dt>
+                            <dt>Topic</dt>
                             <dd>
-                              {formData.context}
-                              <span>{formData.project}</span>
+                              {formData.topic}
+                              <span>{formData.context}</span>
                             </dd>
+                          </div>
+                          <div>
+                            <dt>Reply by</dt>
+                            <dd>{formData.contactMethod || "Email reply is fine"}</dd>
                           </div>
                         </dl>
 
                         <div className="ei-booking-prototype-note">
                           <OrbitalVisual variant="haloGate" size={26} />
                           <p>
-                            Prototype only: confirming below does not reserve a
-                            real time, process payment, or send email.
+                            Nothing is confirmed until a real time is offered
+                            and accepted. Recording only happens by prior
+                            consent.
                           </p>
                         </div>
 
@@ -610,14 +839,15 @@ export function BookingPage() {
                           >
                             Edit details
                           </Button>
-                          <Button
-                            type="button"
-                            onClick={handlePrototypeConfirmation}
-                          >
-                            Preview confirmation
+                          <Button type="submit" disabled={status === "submitting"}>
+                            {status === "submitting"
+                              ? "Sending request..."
+                              : status === "request-failed"
+                                ? "Try again"
+                                : "Send request"}
                           </Button>
                         </div>
-                      </div>
+                      </form>
                     ) : null}
                   </>
                 )}
@@ -638,11 +868,11 @@ export function BookingPage() {
           >
             <motion.div variants={driftUp} className="ei-booking-section-heading">
               <SectionLabel label="What happens next" index="01" />
-              <h2>A considered path from booking to clarity.</h2>
+              <h2>A considered path from request to confirmed room.</h2>
             </motion.div>
 
             <div className="ei-booking-after-grid">
-              {afterBooking.map((item, index) => (
+              {afterRequest.map((item, index) => (
                 <motion.div key={item.title} variants={driftUp}>
                   <EchoCard
                     variant="index"
@@ -687,12 +917,12 @@ export function BookingPage() {
               }
             >
               <div className="ei-booking-included">
-                <SectionLabel label="Included with every session" rule="none" />
+                <SectionLabel label="Once the room is confirmed" rule="none" />
                 <h2>The conversation stays useful after the room closes.</h2>
                 <ul>
-                  <li>Recorded for your private review</li>
-                  <li>Follow-up notes with the clearest signals and next steps</li>
-                  <li>A focused format designed for clarity, not performance</li>
+                  <li>Available times are confirmed in writing before the session exists</li>
+                  <li>Recording only happens if everyone agrees in advance</li>
+                  <li>Follow-up notes carry the clearest signals and next steps</li>
                 </ul>
               </div>
             </EchoFormPanel>
@@ -702,9 +932,9 @@ export function BookingPage() {
 
       <CTASection
         variant="editorialInvitation"
-        eyebrow="Before you choose"
+        eyebrow="Before you send"
         heading="Need more context on the room?"
-        body="Explore the full Echo Sessions offer, process, and fit before returning to book."
+        body="Explore the full Echo Sessions offer, process, and fit before returning to request a session."
         actions={
           <Button to="/sessions" variant="secondary">
             View Echo Sessions

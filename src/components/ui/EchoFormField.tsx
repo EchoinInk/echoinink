@@ -34,6 +34,7 @@ export function EchoFormField({
         required={required}
         aria-invalid={error ? true : undefined}
         aria-describedby={descriptionId}
+        aria-errormessage={error ? descriptionId : undefined}
         className={cn("ei-form-input", className)}
         {...props}
       />

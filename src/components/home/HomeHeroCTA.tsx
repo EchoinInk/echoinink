@@ -8,7 +8,7 @@ export function HeroCTA() {
         variant="primary"
         className="ei-page-section-hero-button ei-page-section-hero-button-primary self-stretch sm:self-start"
       >
-        Start a project
+        Start a conversation
       </Button>
 
       <Button
@@ -16,7 +16,7 @@ export function HeroCTA() {
         variant="secondary"
         className="ei-page-section-hero-button ei-page-section-hero-button-secondary self-stretch sm:self-start"
       >
-        Explore Selected Work
+        Explore selected work
         <span aria-hidden="true" className="ei-cta-arrow ei-cta-arrow-right">
           →
         </span>

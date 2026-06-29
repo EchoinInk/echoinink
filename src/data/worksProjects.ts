@@ -13,10 +13,18 @@ export type ProjectTag =
   | 'UI Systems';
 
 export type ProjectStatus =
-  | 'Case Study'
-  | 'Identity Concept'
-  | 'Concept Prototype'
-  | 'System Prototype';
+  | 'Commissioned'
+  | 'Independent concept'
+  | 'Independent product concept'
+  | 'Prototype'
+  | 'Exploratory study'
+  | 'Internal system experiment';
+
+export interface ProjectContext {
+  status?: ProjectStatus;
+  scope?: string;
+  type?: string;
+}
 
 export interface WorkProject {
   title: string;
@@ -33,7 +41,7 @@ export interface WorkProject {
   tags: ProjectTag[];
   presentation: ProjectPresentation;
   featured?: boolean;
-  status?: ProjectStatus;
+  context?: ProjectContext;
 }
 
 export const worksProjects: WorkProject[] = [
@@ -54,7 +62,11 @@ export const worksProjects: WorkProject[] = [
     tags: ['Identity Systems', 'Digital Experiences'],
     presentation: 'study',
     featured: true,
-    status: 'Case Study',
+    context: {
+      status: 'Independent product concept',
+      scope: 'Identity direction, interface concept, visual system',
+      type: 'Prototype case study',
+    },
   },
   {
     title: 'Aurora Payments',
@@ -71,7 +83,11 @@ export const worksProjects: WorkProject[] = [
     image: auroraImage,
     tags: ['Identity Systems'],
     presentation: 'study',
-    status: 'Identity Concept',
+    context: {
+      status: 'Independent concept',
+      scope: 'Identity concept and visual direction',
+      type: 'Exploratory study',
+    },
   },
   {
     title: 'Obsidian',
@@ -88,7 +104,11 @@ export const worksProjects: WorkProject[] = [
     image: obsidianImage,
     tags: ['Digital Experiences'],
     presentation: 'study',
-    status: 'Concept Prototype',
+    context: {
+      status: 'Prototype',
+      scope: 'Brand experience concept and web direction',
+      type: 'Independent concept',
+    },
   },
   {
     title: 'Verde',
@@ -105,7 +125,11 @@ export const worksProjects: WorkProject[] = [
     image: verdeImage,
     tags: ['Identity Systems'],
     presentation: 'fragment',
-    status: 'Concept Prototype',
+    context: {
+      status: 'Exploratory study',
+      scope: 'Brand identity concept',
+      type: 'Independent concept',
+    },
   },
   {
     title: 'Nexus Design System',
@@ -122,7 +146,11 @@ export const worksProjects: WorkProject[] = [
     image: nexusImage,
     tags: ['UI Systems'],
     presentation: 'fragment',
-    status: 'System Prototype',
+    context: {
+      status: 'Internal system experiment',
+      scope: 'UI system prototype',
+      type: 'Prototype',
+    },
   },
 ];
 

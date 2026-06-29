@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { motion } from "framer-motion";
 
 import { Container } from "@/components/layout/Container";
+import { PageOfferAnchor } from "@/components/sections/PageOfferAnchor";
 import { Button } from "@/components/ui/Button";
 import {
   driftUp,
@@ -16,6 +17,7 @@ interface PageSectionHeroProps {
   title: string;
   italicWord?: string;
   description: string;
+  offerAnchor?: ReactNode;
   ctaLabel?: ReactNode;
   ctaHref?: string;
   ctaVariant?: "primary" | "secondary" | "tertiary";
@@ -32,6 +34,7 @@ export function PageSectionHero({
   title,
   italicWord,
   description,
+  offerAnchor,
   ctaLabel,
   ctaHref,
   ctaVariant = "primary",
@@ -172,6 +175,12 @@ export function PageSectionHero({
             <p className="ei-type-hero-description ei-page-section-hero-description mt-5 max-w-[46ch] md:mt-6">
               {description}
             </p>
+
+            {offerAnchor ? (
+              <PageOfferAnchor align={align} className="mt-6 md:mt-7">
+                {offerAnchor}
+              </PageOfferAnchor>
+            ) : null}
 
             {(ctaLabel && ctaHref) || (secondaryCtaLabel && secondaryCtaHref) ? (
               <motion.div
