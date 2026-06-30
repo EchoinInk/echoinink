@@ -195,11 +195,7 @@ function findFirstInvalidStep(errors: BookingErrors) {
 
 function getSubmissionErrorMessage(error: unknown) {
   if (error instanceof StudioInquirySubmitError) {
-    if (error.code === "not_configured") {
-      return "Session request delivery is not configured yet on this site. Please email hello@echoin.ink while the request endpoint is being connected.";
-    }
-
-    if (error.code === "server") {
+    if (error.code === "server" || error.code === "validation") {
       return "The session request service did not accept the request. Please try again, or email hello@echoin.ink if the problem continues.";
     }
   }

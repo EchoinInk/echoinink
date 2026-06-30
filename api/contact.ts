@@ -1,7 +1,9 @@
 import { handleContactRequest } from "../src/lib/contactServer.ts";
 
-export default {
-  async fetch(request: Request) {
-    return handleContactRequest(request);
-  },
+export const config = {
+  runtime: "edge",
 };
+
+export default function handler(request: Request) {
+  return handleContactRequest(request);
+}

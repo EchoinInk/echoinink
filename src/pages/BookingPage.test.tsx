@@ -70,9 +70,6 @@ async function moveToReviewStep() {
 
 describe("BookingPage", () => {
   beforeEach(() => {
-    (
-      import.meta.env as Record<string, string | undefined>
-    ).VITE_STUDIO_INQUIRY_ENDPOINT = "https://forms.example.test/inquiries";
     vi.stubGlobal("fetch", vi.fn());
   });
 
@@ -105,8 +102,22 @@ describe("BookingPage", () => {
     const fetchMock = vi.mocked(fetch);
 
     fetchMock
-      .mockResolvedValueOnce(new Response("failed", { status: 503 }))
-      .mockResolvedValueOnce(new Response(null, { status: 200 }));
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify({ ok: false }), {
+          status: 503,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }),
+      )
+      .mockResolvedValueOnce(
+        new Response(JSON.stringify({ ok: true }), {
+          status: 200,
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }),
+      );
 
     renderBookingPage();
     await moveToReviewStep();
@@ -129,5 +140,20 @@ describe("BookingPage", () => {
       ),
     ).toBeInTheDocument();
     expect(fetchMock).toHaveBeenCalledTimes(2);
+
+    const [url, init] = fetchMock.mock.calls[1];
+    expect(url).toBe("/api/contact");
+    expect(init).toMatchObject({
+      method: "POST",
+      headers: expect.objectContaining({
+        "Content-Type": "application/json",
+      }),
+    });
+
+    const body = JSON.parse(init?.body as string);
+    expect(body.exploration).toBe("Echo Session Request");
+    expect(body.message).toContain("preferredWeek: Week of 6 July");
+    expect(body.message).toContain("timezone: America/Los_Angeles");
+    expect(body.message).toContain("sessionTopic: Naming direction");
   });
 });

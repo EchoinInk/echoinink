@@ -910,7 +910,7 @@
 }
 
   a:not(.ei-button):not(.ei-btn-primary-cinematic):not(.ei-btn-secondary-cinematic):hover {
-    color: var(--ei-color-text-primary);
+    color: var(--ei-color-text-accent);
   }
 
   .ei-card,

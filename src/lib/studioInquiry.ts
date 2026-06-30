@@ -1,3 +1,9 @@
+import {
+  ContactSubmissionError,
+  createEmptyContactFormData,
+  submitContactForm,
+} from "./contactForm";
+
 export type StudioInquiryPayload = {
   kind: "contact" | "session-request";
   page: string;
@@ -7,54 +13,66 @@ export type StudioInquiryPayload = {
 };
 
 export class StudioInquirySubmitError extends Error {
-  code: "not_configured" | "network" | "server";
+  code: "network" | "server" | "validation";
+  fieldErrors?: ContactSubmissionError["fieldErrors"];
 
   constructor(
-    code: "not_configured" | "network" | "server",
+    code: "network" | "server" | "validation",
     message: string,
+    fieldErrors?: ContactSubmissionError["fieldErrors"],
   ) {
     super(message);
     this.name = "StudioInquirySubmitError";
     this.code = code;
+    this.fieldErrors = fieldErrors;
   }
 }
 
-export async function submitStudioInquiry(payload: StudioInquiryPayload) {
-  const endpoint = import.meta.env.VITE_STUDIO_INQUIRY_ENDPOINT?.trim();
+function buildStudioInquiryMessage(payload: StudioInquiryPayload) {
+  const detailLines = Object.entries(payload.details).map(
+    ([label, value]) => `${label}: ${value || "Not specified"}`,
+  );
 
-  if (!endpoint) {
-    throw new StudioInquirySubmitError(
-      "not_configured",
-      "VITE_STUDIO_INQUIRY_ENDPOINT is not configured.",
-    );
-  }
+  return [
+    payload.kind === "session-request"
+      ? "Echo Session request"
+      : "Studio enquiry",
+    "",
+    ...detailLines,
+    "",
+    `Submitted from: ${payload.page}`,
+  ].join("\n");
+}
 
-  let response: Response;
-
+export async function submitStudioInquiry(
+  payload: StudioInquiryPayload,
+  options: { fetchImpl?: typeof fetch } = {},
+) {
   try {
-    response = await fetch(endpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        ...payload,
-        submittedAt: new Date().toISOString(),
-        path: window.location.pathname,
+    await submitContactForm(
+      createEmptyContactFormData({
+        name: payload.name,
+        email: payload.email,
+        exploration:
+          payload.kind === "session-request"
+            ? "Echo Session Request"
+            : "Project Inquiry",
+        message: buildStudioInquiryMessage(payload),
       }),
-    });
-  } catch {
+      options,
+    );
+  } catch (error) {
+    if (error instanceof ContactSubmissionError) {
+      throw new StudioInquirySubmitError(
+        error.fieldErrors ? "validation" : "server",
+        error.message,
+        error.fieldErrors,
+      );
+    }
+
     throw new StudioInquirySubmitError(
       "network",
-      "The inquiry request could not reach the configured endpoint.",
-    );
-  }
-
-  if (!response.ok) {
-    throw new StudioInquirySubmitError(
-      "server",
-      "The inquiry endpoint rejected the request.",
+      "The inquiry request could not reach the contact endpoint.",
     );
   }
 }
